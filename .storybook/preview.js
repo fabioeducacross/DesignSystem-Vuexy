@@ -23,6 +23,21 @@ const preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: [
+          '📚 Getting Started',
+          'Foundations',
+          ['Colors', 'Typography', 'Spacing'],
+          'Atoms',
+          'Molecules',
+          'Organisms',
+          'Templates',
+          'Pages',
+          '*',
+        ],
+      },
+    },
   },
   decorators: [
     (Story) => {
