@@ -41,13 +41,15 @@ Storybook will start on [http://localhost:6006](http://localhost:6006)
 
 #### Step 1: Add Template to Repository
 
-The template needs to be added to the repository first. See detailed instructions:
-- **📋 How to Add Template**: [`agent_helpers/COMO_ADICIONAR_TEMPLATE.md`](agent_helpers/COMO_ADICIONAR_TEMPLATE.md)
+The template needs to be added to the repository first:
+- **📋 Complete Guide**: [`VUEXY_TEMPLATE_GUIDE.md`](VUEXY_TEMPLATE_GUIDE.md) ⭐ **START HERE**
+- **Directory**: Place template in [`vuexy-template-source/html-version/`](vuexy-template-source/)
+- **How to Add**: [`agent_helpers/COMO_ADICIONAR_TEMPLATE.md`](agent_helpers/COMO_ADICIONAR_TEMPLATE.md)
 
 #### Step 2: Run Integration
 
 ```bash
-# After template is added to repository
+# After template is added to vuexy-template-source/html-version/
 npm run integrate-vuexy ./vuexy-template-source/html-version
 
 # Or if template is in a different location
@@ -57,7 +59,8 @@ npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
 **Template Information**:
 - Version: v10.9.0
 - Source: `themeforest-lV6WYTyr-vuexy-vuejs-html-laravel-admin-dashboard-template/vuexy-admin-v10.9.0`
-- Complete integration guide: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
+- Complete guide: [`VUEXY_TEMPLATE_GUIDE.md`](VUEXY_TEMPLATE_GUIDE.md)
+- Integration details: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
 - Quick start: [`agent_helpers/QUICK_START.md`](agent_helpers/QUICK_START.md)
 
 ### Building Storybook

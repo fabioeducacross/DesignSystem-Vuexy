@@ -39,5 +39,7 @@ temp/
 dist/
 build/
 
-# Vuexy template source (too large for Git)
-vuexy-template-source/
+# Vuexy template source (large files excluded, structure tracked)
+vuexy-template-source/html-version/**
+!vuexy-template-source/html-version/.gitkeep
+!vuexy-template-source/README.md

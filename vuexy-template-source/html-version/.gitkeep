@@ -1,0 +1,8 @@
+# This directory will contain the Vuexy HTML template files
+# Add your template files here following the structure:
+# - css/
+# - fonts/
+# - vendors/
+# - js/
+# - images/
+# - *.html
