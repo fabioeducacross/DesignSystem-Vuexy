@@ -1,0 +1,3 @@
+css/core.css
+css/theme-default.css
+css/demo.css

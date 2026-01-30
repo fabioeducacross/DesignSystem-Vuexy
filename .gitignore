@@ -38,3 +38,6 @@ temp/
 # Build outputs
 dist/
 build/
+
+# Vuexy template source (too large for Git)
+vuexy-template-source/

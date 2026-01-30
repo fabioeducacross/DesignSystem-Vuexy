@@ -1,11 +1,18 @@
 /** @type { import('@storybook/html').Preview } */
 
-// Load Vuexy CSS
+// Load Vuexy CSS - Real template assets integrated!
 if (typeof window !== 'undefined') {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = '/vuexy/css/vuexy-theme.css';
-  document.head.appendChild(link);
+  const cssFiles = [
+    '/vuexy/css/core.css',
+    // Add more CSS files as needed for specific components
+  ];
+
+  cssFiles.forEach(href => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+  });
 }
 
 const preview = {
