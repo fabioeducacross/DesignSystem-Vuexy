@@ -144,9 +144,9 @@
 ### **Forms** (Formulários complexos)
 | Componente | Fonte HTML/CSS | Prioridade | Status | Pasta Stories |
 |------------|----------------|------------|--------|---------------|
-| Wizard/Stepper | wizard-ex-checkout.css | P1 | TODO | `organisms/forms/Wizard.stories.js` |
+| Wizard/Stepper | wizard-ex-checkout.css | P1 | ✅ DONE | `organisms/forms/Wizard.stories.js` |
 | **Form Validation** ✅ | vendors/@form-validation | P0 | ✅ DONE | `organisms/forms/FormValidation.stories.js` |
-| WYSIWYG Editor | vendors/quill | P2 | TODO | `organisms/forms/WysiwygEditor.stories.js` |
+| WYSIWYG Editor | vendors/quill | P2 | ✅ DONE | `organisms/forms/WysiwygEditor.stories.js` |
 
 ### **Productivity** (Produtividade)
 | Componente | Fonte HTML/CSS | Prioridade | Status | Pasta Stories |
@@ -162,16 +162,16 @@
 | Componente | Fonte HTML/CSS | Prioridade | Status | Pasta Stories |
 |------------|----------------|------------|--------|---------------|
 | Chat Interface | app-chat.css | P1 | ✅ DONE | `organisms/apps/ChatInterface.stories.js` |
-| Email List | app-email.css | P2 | TODO | `organisms/apps/EmailList.stories.js` |
-| Kanban Board | app-kanban.css | P2 | TODO | `organisms/apps/KanbanBoard.stories.js` |
-| Invoice | app-invoice.css | P2 | TODO | `organisms/apps/Invoice.stories.js` |
+| Email List | app-email.css | P2 | ✅ DONE | `organisms/apps/EmailList.stories.js` |
+| Kanban Board | app-kanban.css | P2 | ✅ DONE | `organisms/apps/KanbanBoard.stories.js` |
+| Invoice | app-invoice.css | P2 | ✅ DONE | `organisms/apps/Invoice.stories.js` |
 
 ### **Charts** (Gráficos)
 | Componente | Fonte HTML/CSS | Prioridade | Status | Pasta Stories |
 |------------|----------------|------------|--------|---------------|
-| Line Chart | vendors/apex-charts | P2 | TODO | `organisms/charts/LineChart.stories.js` |
-| Bar Chart | vendors/apex-charts | P2 | TODO | `organisms/charts/BarChart.stories.js` |
-| Pie Chart | vendors/apex-charts | P2 | TODO | `organisms/charts/PieChart.stories.js` |
+| Line Chart | vendors/apex-charts | P2 | ✅ DONE | `organisms/charts/LineChart.stories.js` |
+| Bar Chart | vendors/apex-charts | P2 | ✅ DONE | `organisms/charts/BarChart.stories.js` |
+| Pie Chart | vendors/apex-charts | P2 | ✅ DONE | `organisms/charts/PieChart.stories.js` |
 
 ---
 
@@ -194,7 +194,7 @@
 ### **Misc** (Outros)
 | Template | Fonte CSS | Prioridade | Status | Pasta Stories |
 |----------|-----------|------------|--------|---------------|
-| Error 404 | page-misc.css | P2 | TODO | `templates/misc/Error404.stories.js` |
+| Error 404 | page-misc.css | P2 | ✅ DONE | `templates/misc/Error404.stories.js` |
 | FAQ Page | page-faq.css | P1 | ✅ DONE | `templates/misc/FAQ.stories.js` |
 | Dashboard Layout | app-logistics-dashboard.css | P0 | TODO | `templates/layout/DashboardLayout.stories.js` |
 
