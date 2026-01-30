@@ -1,0 +1,23 @@
+{
+  "name": "designsystem-vuexy",
+  "version": "1.0.0",
+  "description": "Design System based on Vuexy theme with Storybook",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.15",
+    "@storybook/html": "^8.6.15",
+    "@storybook/html-vite": "^8.6.15",
+    "@storybook/test": "^8.6.15",
+    "storybook": "^8.6.15"
+  }
+}
