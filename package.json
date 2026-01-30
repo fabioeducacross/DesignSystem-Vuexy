@@ -6,6 +6,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "integrate-vuexy": "bash scripts/integrate-vuexy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -35,6 +35,23 @@ npm run storybook
 
 Storybook will start on [http://localhost:6006](http://localhost:6006)
 
+### Integrating Vuexy Template v10.9.0
+
+**Important**: This project currently uses placeholder CSS. To integrate the actual Vuexy template:
+
+```bash
+# Option 1: Using the integration script (recommended)
+npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
+
+# Option 2: Manual integration
+# See detailed guide: agent_helpers/INTEGRACAO_VUEXY.md
+```
+
+**Template Information**:
+- Version: v10.9.0
+- Source: `themeforest-lV6WYTyr-vuexy-vuejs-html-laravel-admin-dashboard-template/vuexy-admin-v10.9.0`
+- See complete integration guide: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
+
 ### Building Storybook
 
 ```bash
@@ -160,17 +177,69 @@ The Vuexy theme is loaded in `.storybook/preview.js` and applied globally to all
 - Light gray background
 - Consistent padding
 
-## 🚧 Roadmap
+## 🚧 Vuexy Template Integration
 
-### When Vuexy Template is Available
+### Current Status
 
-Once the actual Vuexy HTML template is added to the repository:
+This project is **ready for Vuexy template integration**. Currently using placeholder CSS with Vuexy color palette.
 
-1. Replace placeholder CSS with actual Vuexy CSS files
-2. Copy all Vuexy assets (fonts, vendors, JavaScript)
-3. Update preview.js to load CSS in the correct order
-4. Enhance component markup to match exact Vuexy HTML structure
-5. Add more components from the template
+### Template Information
+
+- **Version**: v10.9.0
+- **Source**: `themeforest-lV6WYTyr-vuexy-vuejs-html-laravel-admin-dashboard-template/vuexy-admin-v10.9.0`
+- **Type**: VueJS + HTML + Laravel Admin Dashboard Template
+
+### Integration Steps
+
+#### Quick Start (Automated)
+
+```bash
+# Run the integration script
+npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
+```
+
+#### Manual Integration
+
+See the comprehensive guide: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
+
+The guide includes:
+- Step-by-step instructions
+- Template structure analysis
+- CSS loading configuration
+- Component markup updates
+- Troubleshooting tips
+- Validation checklist
+
+### What Will Change After Integration
+
+1. ✅ **CSS**: Real Vuexy CSS replaces placeholder
+2. ✅ **Fonts**: Montserrat, Feather Icons, Font Awesome
+3. ✅ **Components**: Enhanced with exact Vuexy markup
+4. ✅ **Visual Fidelity**: 100% match with Vuexy theme
+5. ✅ **JavaScript**: Vuexy behaviors and interactions
+
+### Files Ready for Integration
+
+```
+packages/vuexy_theme/public/vuexy/
+├── css/          ← Replace with Vuexy CSS
+├── fonts/        ← Add Vuexy fonts
+├── vendors/      ← Add Vuexy vendors
+├── js/           ← Add Vuexy JavaScript
+└── images/       ← Add Vuexy images
+```
+
+### Post-Integration Tasks
+
+After successful integration:
+
+1. [ ] Update `.storybook/preview.js` with correct CSS order
+2. [ ] Verify all 26 stories render correctly
+3. [ ] Check for 404 errors in browser console
+4. [ ] Validate font loading
+5. [ ] Update component stories with real Vuexy markup
+6. [ ] Add screenshots to documentation
+7. [ ] Run full QA validation (see `agent_helpers/validacao.md`)
 
 ## 📄 License
 
