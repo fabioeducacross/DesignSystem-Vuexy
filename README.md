@@ -39,18 +39,26 @@ Storybook will start on [http://localhost:6006](http://localhost:6006)
 
 **Important**: This project currently uses placeholder CSS. To integrate the actual Vuexy template:
 
-```bash
-# Option 1: Using the integration script (recommended)
-npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
+#### Step 1: Add Template to Repository
 
-# Option 2: Manual integration
-# See detailed guide: agent_helpers/INTEGRACAO_VUEXY.md
+The template needs to be added to the repository first. See detailed instructions:
+- **📋 How to Add Template**: [`agent_helpers/COMO_ADICIONAR_TEMPLATE.md`](agent_helpers/COMO_ADICIONAR_TEMPLATE.md)
+
+#### Step 2: Run Integration
+
+```bash
+# After template is added to repository
+npm run integrate-vuexy ./vuexy-template-source/html-version
+
+# Or if template is in a different location
+npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
 ```
 
 **Template Information**:
 - Version: v10.9.0
 - Source: `themeforest-lV6WYTyr-vuexy-vuejs-html-laravel-admin-dashboard-template/vuexy-admin-v10.9.0`
-- See complete integration guide: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
+- Complete integration guide: [`agent_helpers/INTEGRACAO_VUEXY.md`](agent_helpers/INTEGRACAO_VUEXY.md)
+- Quick start: [`agent_helpers/QUICK_START.md`](agent_helpers/QUICK_START.md)
 
 ### Building Storybook
 
