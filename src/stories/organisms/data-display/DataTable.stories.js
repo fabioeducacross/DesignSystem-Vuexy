@@ -560,29 +560,29 @@ Implementação oficial usando DataTables do Vuexy:
       
       users.push({
         id: i,
-        name: \`\${firstName} \${lastName}\`,
-        email: \`\${firstName.toLowerCase()}.\${lastName.toLowerCase()}@empresa.com\`,
+        name: firstName + ' ' + lastName,
+        email: firstName.toLowerCase() + '.' + lastName.toLowerCase() + '@empresa.com',
         department: dept,
         status: status,
-        salary: \`R$ \${salary}\`
+        salary: 'R$ ' + salary
       });
     }
     
     // Generate table rows
-    const tableRows = users.map(user => \`
+    const tableRows = users.map(user => `
       <tr>
-        <td>\${user.id}</td>
-        <td>\${user.name}</td>
-        <td>\${user.email}</td>
-        <td>\${user.department}</td>
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.department}</td>
         <td>
-          <span class="badge bg-label-\${user.status === 'Ativo' ? 'success' : user.status === 'Inativo' ? 'danger' : 'warning'}">
-            \${user.status}
+          <span class="badge bg-label-${user.status === 'Ativo' ? 'success' : user.status === 'Inativo' ? 'danger' : 'warning'}">
+            ${user.status}
           </span>
         </td>
-        <td>\${user.salary}</td>
+        <td>${user.salary}</td>
       </tr>
-    \`).join('');
+    `).join('');
     
     // Initialize DataTable after render
     setTimeout(() => {
@@ -634,7 +634,7 @@ Implementação oficial usando DataTables do Vuexy:
       }
     }, 100);
 
-    return \`
+    return `
       <style>
         table.dataTable thead th {
           border-bottom: 2px solid #ddd;
@@ -713,6 +713,6 @@ Implementação oficial usando DataTables do Vuexy:
           </ul>
         </div>
       </div>
-    \`;
+    `;
   }
 };

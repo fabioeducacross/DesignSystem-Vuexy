@@ -253,7 +253,7 @@ export const Overview = () => `
     </div>
     <div class="offcanvas-body">
       <div class="d-flex mb-3 pb-3 border-bottom">
-        <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/products/1.png" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
         <div class="flex-grow-1">
           <h6 class="mb-1">Product Name</h6>
           <small class="text-muted">Size: M</small>
@@ -267,7 +267,7 @@ export const Overview = () => `
       </div>
       
       <div class="d-flex mb-3 pb-3 border-bottom">
-        <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/products/2.png" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
         <div class="flex-grow-1">
           <h6 class="mb-1">Another Product</h6>
           <small class="text-muted">Color: Blue</small>

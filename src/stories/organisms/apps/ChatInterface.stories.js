@@ -87,7 +87,7 @@ const createChatInterface = ({ showSidebar = true }) => {
         <div class="p-3 border-bottom">
           <div class="d-flex align-items-center mb-3">
             <div class="flex-shrink-0 position-relative me-3">
-              <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                    alt="Avatar" 
                    class="rounded-circle"
                    style="width: 40px; height: 40px;">
@@ -116,7 +116,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <li class="chat-contact-list-item active">
               <div class="d-flex align-items-start p-3">
                 <div class="flex-shrink-0 position-relative me-3">
-                  <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
                        style="width: 40px; height: 40px;">
@@ -139,7 +139,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <li class="chat-contact-list-item">
               <div class="d-flex align-items-start p-3">
                 <div class="flex-shrink-0 position-relative me-3">
-                  <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/3.png" 
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
                        style="width: 40px; height: 40px;">
@@ -160,7 +160,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <li class="chat-contact-list-item">
               <div class="d-flex align-items-start p-3">
                 <div class="flex-shrink-0 position-relative me-3">
-                  <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/4.png" 
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff4c51'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3ERP%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
                        style="width: 40px; height: 40px;">
@@ -193,7 +193,7 @@ const createChatInterface = ({ showSidebar = true }) => {
         <div class="p-3 border-bottom">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0 position-relative me-3">
-              <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                    alt="Avatar" 
                    class="rounded-circle"
                    style="width: 40px; height: 40px;">
@@ -230,7 +230,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <!-- Received Message -->
             <div class="chat-message-received mb-3">
               <div class="d-flex align-items-start">
-                <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
                      class="rounded-circle me-2"
                      style="width: 32px; height: 32px;">
@@ -252,7 +252,7 @@ const createChatInterface = ({ showSidebar = true }) => {
                   </div>
                   <small class="text-muted me-2">10:29 AM</small>
                 </div>
-                <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
                      class="rounded-circle ms-2"
                      style="width: 32px; height: 32px;">
@@ -262,7 +262,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <!-- Received Message -->
             <div class="chat-message-received mb-3">
               <div class="d-flex align-items-start">
-                <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
                      class="rounded-circle me-2"
                      style="width: 32px; height: 32px;">
@@ -278,7 +278,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <!-- Typing Indicator -->
             <div class="chat-message-received">
               <div class="d-flex align-items-start">
-                <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
                      class="rounded-circle me-2"
                      style="width: 32px; height: 32px;">
@@ -435,7 +435,7 @@ export const Interactive = () => {
       <div class="card">
         <div class="card-header d-flex align-items-center">
           <div class="avatar avatar-sm me-3">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/1.png" alt="User" class="rounded-circle">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="User" class="rounded-circle">
           </div>
           <div>
             <h6 class="mb-0">John Doe</h6>
@@ -446,7 +446,7 @@ export const Interactive = () => {
           <div class="mb-3">
             <div class="d-flex">
               <div class="avatar avatar-sm me-2">
-                <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/2.png" alt="Me" class="rounded-circle">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" alt="Me" class="rounded-circle">
               </div>
               <div class="flex-grow-1">
                 <div class="bg-light p-2 rounded">
@@ -466,7 +466,7 @@ export const Interactive = () => {
               if (msg) {
                 const chat = document.getElementById('chatMessages-${containerId}');
                 const time = new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
-                const html = '<div class=\'mb-3\'><div class=\'d-flex flex-row-reverse\'><div class=\'avatar avatar-sm ms-2\'><img src=\'https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/2.png\' class=\'rounded-circle\'></div><div class=\'flex-grow-1 text-end\'><div class=\'bg-primary text-white p-2 rounded d-inline-block\' style=\'max-width: 70%\'><p class=\'mb-0\'>' + msg + '</p></div><div><small class=\'text-muted\'>' + time + '</small></div></div></div></div>';
+                const html = '<div class=\'mb-3\'><div class=\'d-flex flex-row-reverse\'><div class=\'avatar avatar-sm ms-2\'><img src=\'data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E\' class=\'rounded-circle\'></div><div class=\'flex-grow-1 text-end\'><div class=\'bg-primary text-white p-2 rounded d-inline-block\' style=\'max-width: 70%\'><p class=\'mb-0\'>' + msg + '</p></div><div><small class=\'text-muted\'>' + time + '</small></div></div></div></div>';
                 chat.insertAdjacentHTML('beforeend', html);
                 chat.scrollTop = chat.scrollHeight;
                 input.value = '';

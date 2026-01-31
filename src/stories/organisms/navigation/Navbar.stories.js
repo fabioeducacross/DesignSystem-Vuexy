@@ -89,7 +89,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
     <li class="nav-item navbar-dropdown dropdown-user dropdown">
       <a class="nav-link dropdown-toggle hide-arrow" href="#" onclick="this.nextElementSibling.classList.toggle('show'); return false;">
         <div class="avatar avatar-online">
-          <img src="/vuexy/img/avatars/1.png" alt="${userName}" class="w-px-40 h-auto rounded-circle">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="${userName}" class="w-px-40 h-auto rounded-circle">
         </div>
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
@@ -98,7 +98,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
             <div class="d-flex">
               <div class="flex-shrink-0 me-3">
                 <div class="avatar avatar-online">
-                  <img src="/vuexy/img/avatars/1.png" alt="${userName}" class="w-px-40 h-auto rounded-circle">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="${userName}" class="w-px-40 h-auto rounded-circle">
                 </div>
               </div>
               <div class="flex-grow-1">
@@ -291,7 +291,7 @@ export const Interactive = () => {
             <li class="nav-item navbar-dropdown dropdown" data-dropdown="user">
               <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0)" data-toggle="user">
                 <div class="avatar avatar-online">
-                  <img src="/vuexy/img/avatars/1.png" alt="John Doe" class="w-px-40 h-auto rounded-circle">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="John Doe" class="w-px-40 h-auto rounded-circle">
                 </div>
               </a>
               <ul class="dropdown-menu dropdown-menu-end" data-menu="user">
@@ -300,7 +300,7 @@ export const Interactive = () => {
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
-                          <img src="/vuexy/img/avatars/1.png" alt="John Doe" class="w-px-40 h-auto rounded-circle">
+                          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="John Doe" class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">

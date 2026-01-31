@@ -121,7 +121,7 @@ const createDashboard = ({
         <li class="nav-item navbar-dropdown dropdown-user">
           <a class="nav-link" href="#">
             <div class="avatar avatar-online">
-              <img src="/vuexy/img/avatars/1.png" alt="User" class="w-px-40 h-auto rounded-circle">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="User" class="w-px-40 h-auto rounded-circle">
             </div>
           </a>
         </li>

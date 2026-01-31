@@ -83,7 +83,7 @@ const createForgotPasswordPage = ({ variant = 'card', showSuccess = false }) => 
     ${hasIllustration ? `
     <div class="d-none d-lg-flex col-lg-7 p-0">
       <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-        <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/illustrations/auth-forgot-password-illustration-light.png" 
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect width='500' height='500' fill='%23f5f5f9'/%3E%3Ccircle cx='250' cy='200' r='75' fill='%23e7e7ff'/%3E%3Crect x='175' y='275' width='150' height='175' rx='12' fill='%23e7e7ff'/%3E%3Ctext x='50%25' y='90%25' font-family='Arial' font-size='20' fill='%23696cff' text-anchor='middle'%3EForgot%3C/text%3E%3C/svg%3E" 
              alt="auth-forgot-password-cover" 
              class="img-fluid">
       </div>

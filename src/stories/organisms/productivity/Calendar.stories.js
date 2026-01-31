@@ -565,7 +565,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             } else {
               const start = event.start.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
               const end = event.end ? event.end.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '';
-              modalTime.textContent = end ? \`\${start} - \${end}\` : start;
+              modalTime.textContent = end ? (start + ' - ' + end) : start;
             }
             
             deleteBtn.onclick = () => {

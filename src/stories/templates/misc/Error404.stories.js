@@ -105,7 +105,7 @@ const createError404Page = ({ withSearch = false }) => {
       
       <!-- Illustration -->
       <div class="mt-4">
-        <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/illustrations/page-misc-error-light.png" 
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23f5f5f9'/%3E%3Ctext x='50%25' y='40%25' font-family='Arial' font-size='120' fill='%23e7e7ff' text-anchor='middle'%3E404%3C/text%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='24' fill='%2399a1b7' text-anchor='middle'%3EPage Not Found%3C/text%3E%3C/svg%3E" 
              alt="page-misc-error-light" 
              width="500" 
              class="img-fluid"
@@ -217,7 +217,7 @@ export const Interactive = () => {
           <a href="#" class="btn btn-primary">Back to Home</a>
           
           <div class="mt-4">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/illustrations/page-misc-error-light.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23f5f5f9'/%3E%3Ctext x='50%25' y='40%25' font-family='Arial' font-size='120' fill='%23e7e7ff' text-anchor='middle'%3E404%3C/text%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='24' fill='%2399a1b7' text-anchor='middle'%3EPage Not Found%3C/text%3E%3C/svg%3E" 
                  alt="page-misc-error-light" 
                  class="img-fluid" 
                  style="max-width: 500px;">

@@ -84,7 +84,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
         <div class="card mb-4">
           <div class="card-body">
             <div class="d-flex align-items-start align-items-sm-center gap-4">
-              <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                    alt="user-avatar" 
                    class="d-block rounded" 
                    height="100" 
@@ -557,7 +557,7 @@ export const Interactive = () => {
           </div>
           
           <div class="d-flex align-items-center gap-3">
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                  class="rounded" width="100" height="100" alt="avatar">
             <div class="flex-grow-1">
               <h4 class="mb-1">John Doe</h4>

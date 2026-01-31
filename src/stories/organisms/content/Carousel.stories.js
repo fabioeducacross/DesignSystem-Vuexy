@@ -95,13 +95,13 @@ const createCarousel = ({ controls = true, indicators = true, fade = false }) =>
   ${indicatorsHtml}
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Slide 1">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 1">
     </div>
     <div class="carousel-item">
-      <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Slide 2">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 2">
     </div>
     <div class="carousel-item">
-      <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Slide 3">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 3">
     </div>
   </div>
   ${controlsHtml}
@@ -158,13 +158,13 @@ export const Overview = () => {
         </div>
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Slide 1">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 1">
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Slide 2">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 2">
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Slide 3">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" onclick="${defaultNav.prev}">
@@ -188,21 +188,21 @@ export const Overview = () => {
         </div>
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="First slide">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Second slide">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>Some representative placeholder content for the second slide.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Third slide">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
               <p>Some representative placeholder content for the third slide.</p>
@@ -225,13 +225,13 @@ export const Overview = () => {
       <div id="carouselFade" class="carousel slide carousel-fade">
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Fade 1">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Fade 1">
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Fade 2">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Fade 2">
           </div>
           <div class="carousel-item">
-            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Fade 3">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Fade 3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" onclick="${fadeNav.prev}">
@@ -258,7 +258,7 @@ export const Overview = () => {
             <div class="card">
               <div class="card-body text-center py-5">
                 <div class="avatar avatar-lg mx-auto mb-3">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
                 </div>
                 <p class="mb-3 fs-5">"This product has completely transformed how we work. Highly recommend to anyone looking for a solution."</p>
                 <h6 class="mb-0">John Doe</h6>
@@ -277,7 +277,7 @@ export const Overview = () => {
             <div class="card">
               <div class="card-body text-center py-5">
                 <div class="avatar avatar-lg mx-auto mb-3">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/2.png" alt="Avatar" class="rounded-circle">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
                 </div>
                 <p class="mb-3 fs-5">"Outstanding quality and excellent customer service. Worth every penny!"</p>
                 <h6 class="mb-0">Jane Smith</h6>
@@ -296,7 +296,7 @@ export const Overview = () => {
             <div class="card">
               <div class="card-body text-center py-5">
                 <div class="avatar avatar-lg mx-auto mb-3">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/3.png" alt="Avatar" class="rounded-circle">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
                 </div>
                 <p class="mb-3 fs-5">"Best investment we've made this year. The team loves it!"</p>
                 <h6 class="mb-0">Mike Johnson</h6>
@@ -330,13 +330,13 @@ export const Overview = () => {
           <div id="carouselProduct" class="carousel slide">
             <div class="carousel-inner rounded">
               <div class="carousel-item active">
-                <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Product 1">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Product 1">
               </div>
               <div class="carousel-item">
-                <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Product 2">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Product 2">
               </div>
               <div class="carousel-item">
-                <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Product 3">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Product 3">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" onclick="${productNav.prev}">
@@ -352,13 +352,13 @@ export const Overview = () => {
         <div class="col-md-4">
           <div class="d-grid gap-2">
             <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(0)}">
-              <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="w-100 rounded" alt="Thumb 1">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="w-100 rounded" alt="Thumb 1">
             </button>
             <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(1)}">
-              <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="w-100 rounded" alt="Thumb 2">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="w-100 rounded" alt="Thumb 2">
             </button>
             <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(2)}">
-              <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="w-100 rounded" alt="Thumb 3">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="w-100 rounded" alt="Thumb 3">
             </button>
           </div>
         </div>
@@ -418,21 +418,21 @@ export const Interactive = {
               <!-- Carousel Images -->
               <div id="carouselContainer" style="overflow: hidden; position: relative; height: 400px;">
                 <div class="carousel-slide active" style="position: absolute; width: 100%; height: 100%; transition: opacity 0.5s ease;">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Slide 1" style="object-fit: cover; height: 100%;">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 1%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 1" style="object-fit: cover; height: 100%;">
                   <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
                     <h5>First Slide</h5>
                     <p>Amazing product showcase</p>
                   </div>
                 </div>
                 <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Slide 2" style="object-fit: cover; height: 100%;">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2356ca00;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2371dd37;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 2%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 2" style="object-fit: cover; height: 100%;">
                   <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
                     <h5>Second Slide</h5>
                     <p>Beautiful design elements</p>
                   </div>
                 </div>
                 <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
-                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Slide 3" style="object-fit: cover; height: 100%;">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffb400;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffc107;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dy='.35em'%3ESlide 3%3C/text%3E%3C/svg%3E" class="d-block w-100" alt="Slide 3" style="object-fit: cover; height: 100%;">
                   <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
                     <h5>Third Slide</h5>
                     <p>Modern interface components</p>
