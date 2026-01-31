@@ -147,3 +147,59 @@ WithIcons.args = {
     { label: 'Annual Report', active: true, icon: 'bx bx-data' }
   ]
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h5>Interactive Breadcrumb Demo</h5>
+        <p class="text-muted">Navigate through the trail</p>
+        
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" id="breadcrumbList">
+            <li class="breadcrumb-item"><a href="#" onclick="event.preventDefault(); navigate(0);">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="event.preventDefault(); navigate(1);">Library</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="event.preventDefault(); navigate(2);">Documents</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+          </ol>
+        </nav>
+        
+        <div class="alert alert-info">Depth: <strong id="depth">4</strong> levels</div>
+        
+        <script>
+          const items = ['Home', 'Library', 'Documents', 'Current Page'];
+          let currentDepth = 3;
+          
+          function navigate(index) {
+            currentDepth = index;
+            const breadcrumb = document.getElementById('breadcrumbList');
+            breadcrumb.innerHTML = '';
+            
+            for (let i = 0; i <= currentDepth; i++) {
+              const li = document.createElement('li');
+              li.className = 'breadcrumb-item';
+              
+              if (i === currentDepth) {
+                li.classList.add('active');
+                li.setAttribute('aria-current', 'page');
+                li.textContent = items[i];
+              } else {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = items[i];
+                a.onclick = (e) => { e.preventDefault(); navigate(i); };
+                li.appendChild(a);
+              }
+              
+              breadcrumb.appendChild(li);
+            }
+            
+            document.getElementById('depth').textContent = currentDepth + 1;
+          }
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

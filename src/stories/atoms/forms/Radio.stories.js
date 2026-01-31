@@ -145,6 +145,45 @@ Default.args = {
   id: 'radio-default'
 };
 
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 400px;">
+        <h5>Interactive Radio Group Demo</h5>
+        <p class="text-muted">Select an option (radio group behavior)</p>
+        
+        <div class="d-flex flex-column gap-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="interactiveRadio" id="radio-opt1" checked>
+            <label class="form-check-label" for="radio-opt1">Option 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="interactiveRadio" id="radio-opt2">
+            <label class="form-check-label" for="radio-opt2">Option 2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="interactiveRadio" id="radio-opt3">
+            <label class="form-check-label" for="radio-opt3">Option 3</label>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-3" id="selection">Selected: Option 1</div>
+        
+        <script>
+          document.querySelectorAll('input[name="interactiveRadio"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+              const label = e.target.nextElementSibling.textContent;
+              document.getElementById('selection').textContent = 'Selected: ' + label;
+            });
+          });
+        </script>
+        
+        <small class="d-block mt-2 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};
+
 export const Checked = Template.bind({});
 Checked.args = {
   ...Default.args,

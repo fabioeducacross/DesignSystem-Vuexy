@@ -222,3 +222,67 @@ Disabled.args = {
   ...Default.args,
   disabled: true
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 500px;">
+        <h5>Interactive File Upload Demo</h5>
+        <p class="text-muted">Simulate file selection</p>
+        
+        <label class="form-label" for="fileInput">Choose file</label>
+        <input type="file" class="form-control" id="fileInput" accept="image/*">
+        
+        <div class="mt-3 p-3 border rounded" id="preview" style="display:none;">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bx bx-file fs-4 text-primary"></i>
+              <div>
+                <div class="fw-medium" id="fileName">No file</div>
+                <small class="text-muted" id="fileSize">0 KB</small>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-outline-danger" onclick="clearFile()">
+              <i class="bx bx-x"></i>
+            </button>
+          </div>
+        </div>
+        
+        <button class="btn btn-primary btn-sm mt-3" onclick="simulateFile()">
+          Simulate File Selection
+        </button>
+        
+        <script>
+          const input = document.getElementById('fileInput');
+          const preview = document.getElementById('preview');
+          const fileName = document.getElementById('fileName');
+          const fileSize = document.getElementById('fileSize');
+          
+          input.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+              const file = e.target.files[0];
+              fileName.textContent = file.name;
+              fileSize.textContent = (file.size / 1024).toFixed(2) + ' KB';
+              preview.style.display = 'block';
+            }
+          });
+          
+          function simulateFile() {
+            fileName.textContent = 'example-image.jpg';
+            fileSize.textContent = '245.67 KB';
+            preview.style.display = 'block';
+          }
+          
+          function clearFile() {
+            input.value = '';
+            preview.style.display = 'none';
+            fileName.textContent = 'No file';
+            fileSize.textContent = '0 KB';
+          }
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

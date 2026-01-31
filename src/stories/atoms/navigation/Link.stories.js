@@ -18,3 +18,42 @@ const Template = (args) => `<div>${createLink(args)}</div><hr/><details><summary
 export const Overview = () => `<div class="d-flex flex-column gap-2">${['primary','secondary','success','danger','warning','info','dark'].map(c => createLink({text: c, color: c})).join('\n')}</div>`;
 export const Default = Template.bind({});
 Default.args = { href: '#', text: 'Link Text', color: 'primary' };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h5>Interactive Link Demo</h5>
+        <p class="text-muted">Toggle visited state</p>
+        
+        <style>
+          #interactiveLink.visited { 
+            color: #6f42c1 !important; 
+            text-decoration: underline;
+          }
+        </style>
+        
+        <div class="mb-3">
+          <a href="#" class="link-primary" id="interactiveLink" onclick="event.preventDefault();">Visit this link</a>
+          <span class="badge bg-secondary ms-2" id="visitBadge">Not visited</span>
+        </div>
+        
+        <button class="btn btn-outline-primary btn-sm" onclick="
+          const link = document.getElementById('interactiveLink');
+          const badge = document.getElementById('visitBadge');
+          if (link.classList.contains('visited')) {
+            link.classList.remove('visited');
+            badge.textContent = 'Not visited';
+            badge.className = 'badge bg-secondary ms-2';
+          } else {
+            link.classList.add('visited');
+            badge.textContent = 'Visited';
+            badge.className = 'badge bg-success ms-2';
+          }
+        ">Toggle Visited State</button>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

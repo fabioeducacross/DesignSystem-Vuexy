@@ -192,3 +192,64 @@ WithValue.args = {
   value: 75,
   showValue: true
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 500px;">
+        <h5>Interactive Range Slider Demo</h5>
+        <p class="text-muted">Real-time value display</p>
+        
+        <label class="form-label">Volume Control</label>
+        <input type="range" class="form-range" id="volumeSlider" min="0" max="100" value="50">
+        
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <div class="text-muted">
+            <i class="bx bx-volume-low"></i> 0
+          </div>
+          <div class="text-center">
+            <div class="badge bg-primary fs-5" id="valueDisplay">50</div>
+            <div class="small text-muted">Current Value</div>
+          </div>
+          <div class="text-muted">
+            100 <i class="bx bx-volume-full"></i>
+          </div>
+        </div>
+        
+        <div class="progress mt-3" style="height: 10px;">
+          <div class="progress-bar" id="progressBar" style="width: 50%"></div>
+        </div>
+        
+        <div class="mt-3">
+          <small class="text-muted">Status: <span id="status">Medium</span></small>
+        </div>
+        
+        <script>
+          const slider = document.getElementById('volumeSlider');
+          const display = document.getElementById('valueDisplay');
+          const progress = document.getElementById('progressBar');
+          const status = document.getElementById('status');
+          
+          slider.addEventListener('input', (e) => {
+            const value = e.target.value;
+            display.textContent = value;
+            progress.style.width = value + '%';
+            
+            if (value < 30) {
+              status.textContent = 'Low';
+              progress.className = 'progress-bar bg-success';
+            } else if (value < 70) {
+              status.textContent = 'Medium';
+              progress.className = 'progress-bar bg-warning';
+            } else {
+              status.textContent = 'High';
+              progress.className = 'progress-bar bg-danger';
+            }
+          });
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

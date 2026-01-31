@@ -363,3 +363,82 @@ export const StatesDemo = {
     }
   }
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 600px;">
+        <h5>Interactive Search Demo</h5>
+        <p class="text-muted">Search with clear button</p>
+        
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bx bx-search"></i>
+          </span>
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search items..." 
+            id="searchInput"
+          />
+          <button class="btn btn-outline-secondary" id="clearBtn" style="display:none;" onclick="clearSearch()">
+            <i class="bx bx-x"></i>
+          </button>
+          <button class="btn btn-primary" onclick="performSearch()">
+            Search
+          </button>
+        </div>
+        
+        <div class="mt-3" id="results" style="display:none;">
+          <div class="alert alert-info">
+            <strong>Results for:</strong> <span id="query"></span>
+          </div>
+          <ul class="list-group" id="resultsList"></ul>
+        </div>
+        
+        <script>
+          const input = document.getElementById('searchInput');
+          const clearBtn = document.getElementById('clearBtn');
+          const results = document.getElementById('results');
+          const query = document.getElementById('query');
+          const resultsList = document.getElementById('resultsList');
+          
+          input.addEventListener('input', (e) => {
+            clearBtn.style.display = e.target.value ? 'block' : 'none';
+          });
+          
+          function performSearch() {
+            const searchTerm = input.value;
+            if (!searchTerm) return;
+            
+            query.textContent = searchTerm;
+            results.style.display = 'block';
+            
+            const mockResults = [
+              'Result 1 matching "' + searchTerm + '"',
+              'Result 2 matching "' + searchTerm + '"',
+              'Result 3 matching "' + searchTerm + '"'
+            ];
+            
+            resultsList.innerHTML = mockResults.map(r => 
+              '<li class="list-group-item">' + r + '</li>'
+            ).join('');
+          }
+          
+          function clearSearch() {
+            input.value = '';
+            clearBtn.style.display = 'none';
+            results.style.display = 'none';
+            input.focus();
+          }
+          
+          input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+          });
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

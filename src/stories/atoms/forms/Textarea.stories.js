@@ -143,3 +143,57 @@ WithCounter.args = {
   value: 'Textarea with character counter',
   placeholder: 'Max 200 characters'
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 500px;">
+        <h5>Interactive Textarea Demo</h5>
+        <p class="text-muted">Real-time character counter</p>
+        
+        <label class="form-label" for="interactiveTextarea">Message (max 200 chars)</label>
+        <textarea 
+          class="form-control" 
+          id="interactiveTextarea" 
+          rows="4" 
+          maxlength="200"
+          placeholder="Start typing..."
+        ></textarea>
+        
+        <div class="d-flex justify-content-between mt-2">
+          <small class="text-muted">Characters: <span id="charCount">0</span>/200</small>
+          <small class="text-muted">Remaining: <span id="remaining">200</span></small>
+        </div>
+        
+        <div class="progress mt-2" style="height: 5px;">
+          <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+        
+        <script>
+          const textarea = document.getElementById('interactiveTextarea');
+          const charCount = document.getElementById('charCount');
+          const remaining = document.getElementById('remaining');
+          const progressBar = document.getElementById('progressBar');
+          
+          textarea.addEventListener('input', (e) => {
+            const length = e.target.value.length;
+            const percent = (length / 200) * 100;
+            charCount.textContent = length;
+            remaining.textContent = 200 - length;
+            progressBar.style.width = percent + '%';
+            
+            if (percent > 80) {
+              progressBar.className = 'progress-bar bg-danger';
+            } else if (percent > 50) {
+              progressBar.className = 'progress-bar bg-warning';
+            } else {
+              progressBar.className = 'progress-bar bg-primary';
+            }
+          });
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

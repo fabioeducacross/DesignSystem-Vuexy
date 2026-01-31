@@ -131,3 +131,31 @@ Small.args = {
   size: 'small',
   htmlFor: 'input-small'
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 400px;">
+        <h5>Interactive Label Demo</h5>
+        <p class="text-muted">Toggle required indicator</p>
+        
+        <label class="form-label" for="interactive-input" id="labelEl">
+          Field Name
+        </label>
+        <input type="text" class="form-control" id="interactive-input" placeholder="Enter value">
+        
+        <button class="btn btn-outline-primary btn-sm mt-3" onclick="
+          const label = document.getElementById('labelEl');
+          const asterisk = label.querySelector('.text-danger');
+          if (asterisk) {
+            asterisk.remove();
+          } else {
+            label.innerHTML += ' <span class=\"text-danger\">*</span>';
+          }
+        ">Toggle Required *</button>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

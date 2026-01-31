@@ -23,3 +23,36 @@ const Template = (args) => `${createInputGroup(args)}<hr/><details><summary><str
 export const Overview = () => `<div class="d-flex flex-column gap-3" style="max-width:400px">${createInputGroup({prepend:'@', placeholder:'Username'})}${createInputGroup({append:'.com', placeholder:'Website'})}${createInputGroup({prepend:'$', append:'.00', placeholder:'0.00'})}</div>`;
 export const Default = Template.bind({});
 Default.args = { prepend: '@', append: '', placeholder: 'Username' };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 500px;">
+        <h5>Interactive InputGroup Demo</h5>
+        <p class="text-muted">Click addon to focus input</p>
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text" onclick="document.getElementById('inp1').focus()" style="cursor:pointer;">
+            <i class="bx bx-user"></i>
+          </span>
+          <input type="text" class="form-control" id="inp1" placeholder="Username">
+        </div>
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text" onclick="document.getElementById('inp2').focus()" style="cursor:pointer;">$</span>
+          <input type="number" class="form-control" id="inp2" placeholder="0.00">
+          <span class="input-group-text">.00</span>
+        </div>
+        
+        <div class="input-group">
+          <input type="text" class="form-control" id="inp3" placeholder="Search...">
+          <button class="btn btn-primary" onclick="alert('Searching: ' + document.getElementById('inp3').value)">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

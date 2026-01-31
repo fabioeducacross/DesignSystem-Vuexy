@@ -303,3 +303,57 @@ Horizontal.args = {
   ...Default.args,
   horizontal: true
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 500px;">
+        <h5>Interactive List Group Demo</h5>
+        <p class="text-muted">Click items to toggle active state</p>
+        
+        <div class="list-group" id="listGroup">
+          <button type="button" class="list-group-item list-group-item-action active" onclick="toggleActive(this)">
+            <div class="d-flex justify-content-between align-items-center">
+              <span><i class="bx bx-home me-2"></i>Dashboard</span>
+              <span class="badge bg-primary rounded-pill">5</span>
+            </div>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
+            <div class="d-flex justify-content-between align-items-center">
+              <span><i class="bx bx-inbox me-2"></i>Inbox</span>
+              <span class="badge bg-primary rounded-pill">12</span>
+            </div>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
+            <div class="d-flex justify-content-between align-items-center">
+              <span><i class="bx bx-user me-2"></i>Profile</span>
+              <span class="badge bg-primary rounded-pill">3</span>
+            </div>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
+            <div class="d-flex justify-content-between align-items-center">
+              <span><i class="bx bx-cog me-2"></i>Settings</span>
+            </div>
+          </button>
+        </div>
+        
+        <div class="alert alert-info mt-3" id="selectedItem">Selected: Dashboard</div>
+        
+        <script>
+          function toggleActive(element) {
+            document.querySelectorAll('#listGroup .list-group-item').forEach(item => {
+              item.classList.remove('active');
+            });
+            
+            element.classList.add('active');
+            
+            const text = element.querySelector('span').textContent.trim();
+            document.getElementById('selectedItem').textContent = 'Selected: ' + text;
+          }
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};

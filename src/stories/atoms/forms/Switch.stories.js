@@ -145,3 +145,38 @@ Disabled.args = {
   label: 'Disabled Switch',
   id: 'switch-disabled'
 };
+
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 400px;">
+        <h5>Interactive Switch Demo</h5>
+        <p class="text-muted">Toggle switch on/off</p>
+        
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="interactiveSwitch">
+          <label class="form-check-label" for="interactiveSwitch">Enable notifications</label>
+        </div>
+        
+        <div class="alert mt-3" id="statusAlert" style="display:none;"></div>
+        
+        <script>
+          const switchEl = document.getElementById('interactiveSwitch');
+          const alert = document.getElementById('statusAlert');
+          switchEl.addEventListener('change', (e) => {
+            alert.style.display = 'block';
+            if (e.target.checked) {
+              alert.className = 'alert alert-success mt-3';
+              alert.textContent = '✓ Notifications enabled';
+            } else {
+              alert.className = 'alert alert-secondary mt-3';
+              alert.textContent = 'Notifications disabled';
+            }
+          });
+        </script>
+        
+        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
+      </div>
+    `;
+  }
+};
