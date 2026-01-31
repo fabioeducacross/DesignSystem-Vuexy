@@ -313,3 +313,489 @@ Inline.args = {
   enableTime: false,
   inline: true
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Flatpickr Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Datepicker com Flatpickr Real
+
+Implementação oficial usando Flatpickr do Vuexy:
+
+- ✅ **Date Picker** - seleção de data única
+- ✅ **Range Picker** - seleção de período (início/fim)
+- ✅ **Time Picker** - seleção de hora
+- ✅ **DateTime Picker** - data + hora juntos
+- ✅ **Inline Calendar** - calendário sempre visível
+- ✅ **Locale pt-BR** - formatação brasileira
+- ✅ **Min/Max dates** - restrições de data
+- ✅ **Disable dates** - desabilitar datas específicas
+
+**Casos de uso:**
+- Formulários de reserva
+- Filtros de data
+- Agendamento de eventos
+- Campos de data de nascimento
+- Seleção de período de relatórios
+
+### Como testar:
+1. Clique nos inputs para abrir calendário
+2. Navegue entre meses com setas
+3. Teste range picker (selecione 2 datas)
+4. Teste time picker (ajuste hora/minuto)
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined') {
+        // Load CSS
+        if (!document.querySelector('link[href*="flatpickr.css"]')) {
+          return new Promise((resolve, reject) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '/vuexy/vendors/libs/flatpickr/flatpickr.css';
+            link.onload = () => {
+              // Load JS after CSS
+              if (!window.flatpickr) {
+                const script = document.createElement('script');
+                script.src = '/vuexy/vendors/libs/flatpickr/flatpickr.js';
+                script.onload = () => {
+                  console.log('✅ Flatpickr CSS + JS carregados');
+                  resolve({ flatpickrLoaded: true });
+                };
+                script.onerror = () => reject(new Error('Failed to load Flatpickr JS'));
+                document.head.appendChild(script);
+              } else {
+                resolve({ flatpickrLoaded: true });
+              }
+            };
+            link.onerror = () => reject(new Error('Failed to load Flatpickr CSS'));
+            document.head.appendChild(link);
+          });
+        }
+        return { flatpickrLoaded: true };
+      }
+      return {};
+    }
+  ],
+  render: () => {
+    // Initialize Flatpickr after render
+    setTimeout(() => {
+      if (window.flatpickr) {
+        // 1. Basic Date Picker
+        window.flatpickr("#datepicker-basic", {
+          dateFormat: "d/m/Y",
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          },
+          defaultDate: new Date()
+        });
+
+        // 2. Range Picker
+        window.flatpickr("#datepicker-range", {
+          mode: "range",
+          dateFormat: "d/m/Y",
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+            rangeSeparator: ' até '
+          }
+        });
+
+        // 3. Time Picker
+        window.flatpickr("#datepicker-time", {
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+          time_24hr: true,
+          defaultDate: "14:30"
+        });
+
+        // 4. DateTime Picker
+        window.flatpickr("#datepicker-datetime", {
+          enableTime: true,
+          dateFormat: "d/m/Y H:i",
+          time_24hr: true,
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          },
+          defaultDate: new Date()
+        });
+
+        // 5. Inline Calendar
+        window.flatpickr("#datepicker-inline", {
+          inline: true,
+          dateFormat: "d/m/Y",
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          },
+          defaultDate: new Date(),
+          onChange: function(selectedDates, dateStr) {
+            document.getElementById('inline-result').textContent = dateStr;
+          }
+        });
+
+        // 6. With Min/Max
+        const today = new Date();
+        const maxDate = new Date();
+        maxDate.setMonth(maxDate.getMonth() + 3);
+        
+        window.flatpickr("#datepicker-minmax", {
+          dateFormat: "d/m/Y",
+          minDate: today,
+          maxDate: maxDate,
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          }
+        });
+
+        // 7. Disable Weekends
+        window.flatpickr("#datepicker-noweekends", {
+          dateFormat: "d/m/Y",
+          disable: [
+            function(date) {
+              return (date.getDay() === 0 || date.getDay() === 6);
+            }
+          ],
+          locale: {
+            firstDayOfWeek: 0,
+            weekdays: {
+              shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+              longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          }
+        });
+
+        console.log('✅ Flatpickr inicializado em todos os campos');
+      }
+    }, 100);
+
+    return `
+      <div style="padding: 30px;">
+        <h5 class="mb-4">Datepickers Interativos com Flatpickr</h5>
+        
+        <div class="row g-4">
+          <!-- 1. Basic Date Picker -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar me-2 text-primary"></i>
+                  Date Picker Básico
+                </h6>
+                <p class="text-muted small">Seleção de data única</p>
+                <div class="mb-3">
+                  <label class="form-label">Selecione uma data</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-basic"
+                    placeholder="dd/mm/aaaa"
+                    readonly
+                  >
+                  <small class="text-muted">Formato: DD/MM/YYYY</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Range Picker -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar-event me-2 text-success"></i>
+                  Range Picker
+                </h6>
+                <p class="text-muted small">Selecione período (início e fim)</p>
+                <div class="mb-3">
+                  <label class="form-label">Selecione o período</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-range"
+                    placeholder="dd/mm/aaaa até dd/mm/aaaa"
+                    readonly
+                  >
+                  <small class="text-muted">Clique para selecionar data inicial e final</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Time Picker -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-clock me-2 text-info"></i>
+                  Time Picker
+                </h6>
+                <p class="text-muted small">Seleção de hora</p>
+                <div class="mb-3">
+                  <label class="form-label">Selecione a hora</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-time"
+                    placeholder="HH:mm"
+                    readonly
+                  >
+                  <small class="text-muted">Formato 24 horas</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. DateTime Picker -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar-time me-2 text-warning"></i>
+                  DateTime Picker
+                </h6>
+                <p class="text-muted small">Data + hora juntos</p>
+                <div class="mb-3">
+                  <label class="form-label">Agendamento</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-datetime"
+                    placeholder="dd/mm/aaaa HH:mm"
+                    readonly
+                  >
+                  <small class="text-muted">Selecione data e hora do agendamento</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Inline Calendar -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar-month me-2 text-danger"></i>
+                  Inline Calendar
+                </h6>
+                <p class="text-muted small">Calendário sempre visível</p>
+                <input type="text" id="datepicker-inline" style="display:none;">
+                <div class="alert alert-primary mt-3">
+                  <strong>Selecionado:</strong> <span id="inline-result">Nenhuma data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Min/Max Dates -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar-check me-2 text-purple"></i>
+                  Com Restrições
+                </h6>
+                <p class="text-muted small">Apenas próximos 3 meses</p>
+                <div class="mb-3">
+                  <label class="form-label">Data de reserva</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-minmax"
+                    placeholder="dd/mm/aaaa"
+                    readonly
+                  >
+                  <small class="text-muted">Min: Hoje | Max: +3 meses</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Disable Weekends -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-calendar-minus me-2 text-secondary"></i>
+                  Sem Fins de Semana
+                </h6>
+                <p class="text-muted small">Apenas dias úteis</p>
+                <div class="mb-3">
+                  <label class="form-label">Data de entrega</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="datepicker-noweekends"
+                    placeholder="dd/mm/aaaa"
+                    readonly
+                  >
+                  <small class="text-muted">Sábados e domingos desabilitados</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case: Formulário de Reserva -->
+          <div class="col-12">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h6 class="card-title">
+                  <i class="ti ti-forms me-2 text-primary"></i>
+                  Exemplo: Formulário de Reserva de Hotel
+                </h6>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label">Check-in</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="checkin"
+                      placeholder="dd/mm/aaaa"
+                      readonly
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Check-out</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="checkout"
+                      placeholder="dd/mm/aaaa"
+                      readonly
+                    >
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Hóspedes</label>
+                    <select class="form-select">
+                      <option>1 pessoa</option>
+                      <option>2 pessoas</option>
+                      <option>3 pessoas</option>
+                      <option>4+ pessoas</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary">
+                      <i class="ti ti-search me-2"></i>
+                      Buscar Disponibilidade
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Date Picker:</strong> Clique no input, navegue pelos meses, selecione uma data</li>
+            <li><strong>Range Picker:</strong> Selecione data inicial, depois final (mostra "até")</li>
+            <li><strong>Time Picker:</strong> Ajuste hora e minuto com controles</li>
+            <li><strong>DateTime:</strong> Combine data + hora no mesmo picker</li>
+            <li><strong>Inline:</strong> Calendário sempre visível, sem popup</li>
+            <li><strong>Restrições:</strong> Tente selecionar datas fora do range permitido</li>
+            <li><strong>Sem Fins de Semana:</strong> Note que sáb/dom aparecem desabilitados</li>
+            <li><strong>Locale pt-BR:</strong> Nomes dos meses/dias em português, formato DD/MM/YYYY</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};
+
+// Initialize check-in/check-out dependency
+setTimeout(() => {
+  if (window.flatpickr) {
+    const checkinFp = window.flatpickr("#checkin", {
+      dateFormat: "d/m/Y",
+      minDate: "today",
+      locale: {
+        firstDayOfWeek: 0,
+        weekdays: {
+          shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+          longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+        },
+        months: {
+          shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+          longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        },
+      },
+      onChange: function(selectedDates) {
+        if (selectedDates.length > 0) {
+          const minCheckout = new Date(selectedDates[0]);
+          minCheckout.setDate(minCheckout.getDate() + 1);
+          checkoutFp.set('minDate', minCheckout);
+        }
+      }
+    });
+
+    const checkoutFp = window.flatpickr("#checkout", {
+      dateFormat: "d/m/Y",
+      minDate: "today",
+      locale: {
+        firstDayOfWeek: 0,
+        weekdays: {
+          shorthand: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+          longhand: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+        },
+        months: {
+          shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+          longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        },
+      }
+    });
+  }
+}, 150);

@@ -374,3 +374,432 @@ DayView.args = {
   view: 'day',
   withSidebar: true
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - FullCalendar Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Calendar com FullCalendar Real
+
+Implementação oficial usando FullCalendar do Vuexy:
+
+- ✅ **Month View** - visualização mensal completa
+- ✅ **Week View** - visualização semanal com horas
+- ✅ **Day View** - visualização diária detalhada
+- ✅ **List View** - lista de eventos  
+- ✅ **Drag & Drop** - arraste eventos entre datas
+- ✅ **Resize Events** - redimensione duração
+- ✅ **Add/Edit/Delete** - gerencie eventos
+- ✅ **Categories** - cores por categoria
+- ✅ **All-day Events** - eventos de dia inteiro
+
+**Casos de uso:**
+- Sistema de agendamento
+- Calendário de eventos
+- Dashboard de compromissos
+- Reserva de recursos
+- Planejamento de projetos
+
+### Como testar:
+1. Navegue entre views (Month/Week/Day/List)
+2. Clique em uma data vazia para criar evento
+3. Clique em um evento para ver detalhes
+4. Arraste eventos entre datas
+5. Redimensione eventos (nas bordas)
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined') {
+        // Load CSS
+        if (!document.querySelector('link[href*="fullcalendar.css"]')) {
+          return new Promise((resolve, reject) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '/vuexy/vendors/libs/fullcalendar/fullcalendar.css';
+            link.onload = () => {
+              // Load JS after CSS
+              if (!window.FullCalendar) {
+                const script = document.createElement('script');
+                script.src = '/vuexy/vendors/libs/fullcalendar/fullcalendar.js';
+                script.onload = () => {
+                  console.log('✅ FullCalendar CSS + JS carregados');
+                  resolve({ fullcalendarLoaded: true });
+                };
+                script.onerror = () => reject(new Error('Failed to load FullCalendar JS'));
+                document.head.appendChild(script);
+              } else {
+                resolve({ fullcalendarLoaded: true });
+              }
+            };
+            link.onerror = () => reject(new Error('Failed to load FullCalendar CSS'));
+            document.head.appendChild(link);
+          });
+        }
+        return { fullcalendarLoaded: true };
+      }
+      return {};
+    }
+  ],
+  render: () => {
+    // Initialize FullCalendar after render
+    setTimeout(() => {
+      if (window.FullCalendar) {
+        const calendarEl = document.getElementById('fullcalendar-interactive');
+        
+        // Sample events
+        const events = [
+          {
+            id: '1',
+            title: 'Reunião de Projeto',
+            start: new Date(new Date().setHours(10, 0, 0)),
+            end: new Date(new Date().setHours(11, 30, 0)),
+            backgroundColor: '#7367f0',
+            borderColor: '#7367f0',
+            extendedProps: { category: 'Reunião' }
+          },
+          {
+            id: '2',
+            title: 'Almoço com Cliente',
+            start: new Date(new Date().setHours(12, 30, 0)),
+            end: new Date(new Date().setHours(14, 0, 0)),
+            backgroundColor: '#28c76f',
+            borderColor: '#28c76f',
+            extendedProps: { category: 'Cliente' }
+          },
+          {
+            id: '3',
+            title: 'Apresentação Q1',
+            start: new Date(new Date().setDate(new Date().getDate() + 1)),
+            allDay: true,
+            backgroundColor: '#ea5455',
+            borderColor: '#ea5455',
+            extendedProps: { category: 'Importante' }
+          },
+          {
+            id: '4',
+            title: 'Code Review',
+            start: new Date(new Date().setDate(new Date().getDate() + 2)),
+            start: new Date(new Date(new Date().setDate(new Date().getDate() + 2)).setHours(15, 0, 0)),
+            end: new Date(new Date(new Date().setDate(new Date().getDate() + 2)).setHours(16, 0, 0)),
+            backgroundColor: '#ff9f43',
+            borderColor: '#ff9f43',
+            extendedProps: { category: 'Desenvolvimento' }
+          },
+          {
+            id: '5',
+            title: 'Workshop',
+            start: new Date(new Date().setDate(new Date().getDate() + 3)),
+            allDay: true,
+            backgroundColor: '#00cfe8',
+            borderColor: '#00cfe8',
+            extendedProps: { category: 'Treinamento' }
+          },
+          {
+            id: '6',
+            title: 'Sprint Planning',
+            start: new Date(new Date().setDate(new Date().getDate() + 5)),
+            start: new Date(new Date(new Date().setDate(new Date().getDate() + 5)).setHours(9, 0, 0)),
+            end: new Date(new Date(new Date().setDate(new Date().getDate() + 5)).setHours(11, 0, 0)),
+            backgroundColor: '#7367f0',
+            borderColor: '#7367f0',
+            extendedProps: { category: 'Reunião' }
+          },
+          {
+            id: '7',
+            title: 'Deploy Produção',
+            start: new Date(new Date().setDate(new Date().getDate() + 7)),
+            allDay: true,
+            backgroundColor: '#ea5455',
+            borderColor: '#ea5455',
+            extendedProps: { category: 'Importante' }
+          }
+        ];
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          locale: 'pt-br',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+          },
+          buttonText: {
+            today: 'Hoje',
+            month: 'Mês',
+            week: 'Semana',
+            day: 'Dia',
+            list: 'Lista'
+          },
+          editable: true,
+          droppable: true,
+          eventResizableFromStart: true,
+          dayMaxEvents: true,
+          navLinks: true,
+          height: 'auto',
+          events: events,
+          
+          // Event click - show details
+          eventClick: function(info) {
+            const event = info.event;
+            const modal = document.getElementById('event-modal');
+            const modalTitle = document.getElementById('modal-event-title');
+            const modalCategory = document.getElementById('modal-event-category');
+            const modalTime = document.getElementById('modal-event-time');
+            const deleteBtn = document.getElementById('modal-delete-btn');
+            
+            modalTitle.textContent = event.title;
+            modalCategory.textContent = event.extendedProps.category || 'Sem categoria';
+            
+            if (event.allDay) {
+              modalTime.textContent = 'Dia inteiro';
+            } else {
+              const start = event.start.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+              const end = event.end ? event.end.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '';
+              modalTime.textContent = end ? \`\${start} - \${end}\` : start;
+            }
+            
+            deleteBtn.onclick = () => {
+              if (confirm('Deseja excluir este evento?')) {
+                event.remove();
+                modal.style.display = 'none';
+              }
+            };
+            
+            modal.style.display = 'block';
+          },
+          
+          // Date click - create new event
+          dateClick: function(info) {
+            const title = prompt('Título do evento:');
+            if (title) {
+              const colors = ['#7367f0', '#28c76f', '#ea5455', '#ff9f43', '#00cfe8'];
+              const randomColor = colors[Math.floor(Math.random() * colors.length)];
+              
+              calendar.addEvent({
+                title: title,
+                start: info.date,
+                allDay: info.allDay,
+                backgroundColor: randomColor,
+                borderColor: randomColor
+              });
+            }
+          },
+          
+          // Event drag/resize
+          eventDrop: function(info) {
+            console.log('Evento movido:', info.event.title);
+          },
+          
+          eventResize: function(info) {
+            console.log('Evento redimensionado:', info.event.title);
+          }
+        });
+
+        calendar.render();
+        
+        // Modal close handlers
+        document.getElementById('modal-close-btn').onclick = () => {
+          document.getElementById('event-modal').style.display = 'none';
+        };
+        
+        document.getElementById('event-modal').onclick = (e) => {
+          if (e.target.id === 'event-modal') {
+            document.getElementById('event-modal').style.display = 'none';
+          }
+        };
+        
+        console.log('✅ FullCalendar inicializado com', events.length, 'eventos');
+      }
+    }, 100);
+
+    return `
+      <style>
+        #fullcalendar-interactive {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .fc {
+          font-size: 14px;
+        }
+        .fc-event {
+          cursor: pointer;
+        }
+        #event-modal {
+          display: none;
+          position: fixed;
+          z-index: 9999;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.4);
+        }
+        #event-modal-content {
+          background-color: #fff;
+          margin: 10% auto;
+          padding: 0;
+          border-radius: 8px;
+          width: 90%;
+          max-width: 500px;
+          box-shadow: 0 4px 24px 0 rgba(34,41,47,0.1);
+        }
+      </style>
+      
+      <div style="padding: 30px;">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">
+                <i class="ti ti-calendar-event me-2 text-primary"></i>
+                Calendar Interativo com FullCalendar
+              </h5>
+              <div class="d-flex gap-2">
+                <span class="badge bg-label-primary">
+                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  Reunião
+                </span>
+                <span class="badge bg-label-success">
+                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  Cliente
+                </span>
+                <span class="badge bg-label-danger">
+                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  Importante
+                </span>
+                <span class="badge bg-label-warning">
+                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  Dev
+                </span>
+                <span class="badge bg-label-info">
+                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  Treinamento
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-body">
+            <div id="fullcalendar-interactive"></div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Views:</strong> Alterne entre Mês, Semana, Dia, Lista usando os botões</li>
+            <li><strong>Navegação:</strong> Use setas ← → para navegar entre períodos, "Hoje" para voltar</li>
+            <li><strong>Criar Evento:</strong> Clique em uma data vazia (aparecerá prompt)</li>
+            <li><strong>Ver Detalhes:</strong> Clique em um evento existente (abre modal)</li>
+            <li><strong>Drag & Drop:</strong> Arraste eventos para outras datas/horas</li>
+            <li><strong>Redimensionar:</strong> Nas views Week/Day, arraste as bordas superior/inferior do evento</li>
+            <li><strong>Excluir:</strong> Clique no evento → botão "Excluir Evento"</li>
+            <li><strong>All-day vs Timed:</strong> Eventos no topo (ex: Workshop) são dia inteiro, com hora ficam no grid</li>
+            <li><strong>Cores:</strong> Cada categoria tem cor diferente para fácil identificação</li>
+            <li><strong>Responsive:</strong> Funciona em mobile com touch (arraste com dedo)</li>
+          </ul>
+        </div>
+        
+        <div class="row g-3 mt-2">
+          <div class="col-md-4">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h6 class="text-primary mb-2">
+                  <i class="ti ti-click me-1"></i>
+                  Interações
+                </h6>
+                <ul class="list-unstyled small mb-0">
+                  <li>• Click em data: criar evento</li>
+                  <li>• Click em evento: detalhes</li>
+                  <li>• Drag: mover evento</li>
+                  <li>• Resize: alterar duração</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-success">
+              <div class="card-body">
+                <h6 class="text-success mb-2">
+                  <i class="ti ti-layout me-1"></i>
+                  Views Disponíveis
+                </h6>
+                <ul class="list-unstyled small mb-0">
+                  <li>• Month: visão mensal</li>
+                  <li>• Week: semana com horas</li>
+                  <li>• Day: dia detalhado</li>
+                  <li>• List: lista de eventos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-info">
+              <div class="card-body">
+                <h6 class="text-info mb-2">
+                  <i class="ti ti-palette me-1"></i>
+                  Categorias
+                </h6>
+                <ul class="list-unstyled small mb-0">
+                  <li>• 🔵 Reunião</li>
+                  <li>• 🟢 Cliente</li>
+                  <li>• 🔴 Importante</li>
+                  <li>• 🟠 Desenvolvimento</li>
+                  <li>• 🔵 Treinamento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Event Details Modal -->
+      <div id="event-modal">
+        <div id="event-modal-content">
+          <div class="card mb-0">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Detalhes do Evento</h5>
+              <button type="button" class="btn-close" id="modal-close-btn"></button>
+            </div>
+            <div class="card-body">
+              <h6 id="modal-event-title" class="mb-3"></h6>
+              <div class="mb-2">
+                <small class="text-muted">Categoria:</small>
+                <span id="modal-event-category" class="badge bg-label-primary ms-2"></span>
+              </div>
+              <div class="mb-3">
+                <small class="text-muted">Horário:</small>
+                <span id="modal-event-time" class="ms-2"></span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-primary" id="modal-close-btn-footer">Fechar</button>
+                <button class="btn btn-sm btn-danger" id="modal-delete-btn">Excluir Evento</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+};
+
+// Footer close button
+setTimeout(() => {
+  const footerCloseBtn = document.getElementById('modal-close-btn-footer');
+  if (footerCloseBtn) {
+    footerCloseBtn.onclick = () => {
+      document.getElementById('event-modal').style.display = 'none';
+    };
+  }
+}, 150);
