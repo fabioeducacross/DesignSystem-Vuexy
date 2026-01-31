@@ -497,21 +497,22 @@ export const Interactive = {
           currentSlide = index;
         }
         
-        function nextSlide() {
+        // Expor funções no escopo global para onclick handlers
+        window.nextSlide = function() {
           const next = (currentSlide + 1) % slides.length;
           showSlide(next);
-        }
+        };
         
-        function prevSlide() {
+        window.prevSlide = function() {
           const prev = (currentSlide - 1 + slides.length) % slides.length;
           showSlide(prev);
-        }
+        };
         
-        function goToSlide(index) {
+        window.goToSlide = function(index) {
           showSlide(index);
-        }
+        };
         
-        function toggleAutoplay() {
+        window.toggleAutoplay = function() {
           const btn = document.getElementById('autoplayBtn');
           if (autoplayInterval) {
             clearInterval(autoplayInterval);
@@ -520,17 +521,17 @@ export const Interactive = {
             btn.classList.remove('btn-primary');
             btn.classList.add('btn-outline-primary');
           } else {
-            autoplayInterval = setInterval(nextSlide, 3000);
+            autoplayInterval = setInterval(window.nextSlide, 3000);
             btn.innerHTML = '<i class="ri-pause-fill"></i> Pause';
             btn.classList.remove('btn-outline-primary');
             btn.classList.add('btn-primary');
           }
-        }
+        };
         
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') prevSlide();
-          if (e.key === 'ArrowRight') nextSlide();
+          if (e.key === 'ArrowLeft') window.prevSlide();
+          if (e.key === 'ArrowRight') window.nextSlide();
         });
       </script>
     `;
