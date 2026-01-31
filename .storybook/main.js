@@ -12,7 +12,7 @@ const config = {
   },
   staticDirs: [
     '../packages/vuexy_theme/public',
-    { from: './.storybook/public', to: '/' }
+    { from: '../.storybook/public', to: '/' }
   ],
 };
 export default config;
