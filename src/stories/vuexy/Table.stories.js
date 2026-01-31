@@ -344,3 +344,90 @@ export const InCard = {
     },
   },
 };
+
+// Interactive Demo
+export const Interactive = {
+  render: () => {
+    const containerId = 'table-interactive-' + Math.random().toString(36).substr(2, 9);
+    
+    return `
+      <div id="${containerId}" style="max-width: 900px;">
+        <div class="alert alert-info mb-4">
+          <i class="bx bx-info-circle me-2"></i>
+          <strong>Interactive Demo:</strong> Click on rows to highlight, or click column headers to sort.
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title mb-0">Sortable Table</h4>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover" id="demoTable-${containerId}">
+              <thead>
+                <tr>
+                  <th style="cursor: pointer;" onclick="
+                    const tbody = document.querySelector('#demoTable-${containerId} tbody');
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    rows.sort((a, b) => parseInt(a.cells[0].textContent) - parseInt(b.cells[0].textContent));
+                    rows.forEach(row => tbody.appendChild(row));
+                  ">ID ↕</th>
+                  <th style="cursor: pointer;" onclick="
+                    const tbody = document.querySelector('#demoTable-${containerId} tbody');
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    rows.sort((a, b) => a.cells[1].textContent.localeCompare(b.cells[1].textContent));
+                    rows.forEach(row => tbody.appendChild(row));
+                  ">Name ↕</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th style="cursor: pointer;" onclick="
+                    const tbody = document.querySelector('#demoTable-${containerId} tbody');
+                    const rows = Array.from(tbody.querySelectorAll('tr'));
+                    rows.sort((a, b) => a.cells[4].textContent.localeCompare(b.cells[4].textContent));
+                    rows.forEach(row => tbody.appendChild(row));
+                  ">Status ↕</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onclick="this.classList.toggle('table-active');" style="cursor: pointer;">
+                  <td>3</td>
+                  <td>Alice Cooper</td>
+                  <td>alice@example.com</td>
+                  <td>User</td>
+                  <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr onclick="this.classList.toggle('table-active');" style="cursor: pointer;">
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>john@example.com</td>
+                  <td>Admin</td>
+                  <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr onclick="this.classList.toggle('table-active');" style="cursor: pointer;">
+                  <td>4</td>
+                  <td>Bob Johnson</td>
+                  <td>bob@example.com</td>
+                  <td>User</td>
+                  <td><span class="badge bg-secondary">Inactive</span></td>
+                </tr>
+                <tr onclick="this.classList.toggle('table-active');" style="cursor: pointer;">
+                  <td>2</td>
+                  <td>Jane Smith</td>
+                  <td>jane@example.com</td>
+                  <td>Manager</td>
+                  <td><span class="badge bg-success">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Interactive sortable table with clickable rows.',
+      },
+    },
+  },
+};

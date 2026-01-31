@@ -392,3 +392,78 @@ export const Overdue = Template.bind({});
 Overdue.args = {
   status: 'overdue'
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'invoice-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="max-width: 800px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Change invoice status using the buttons.
+      </div>
+      
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Invoice #INV-2024-001</h5>
+          <span id="statusBadge-${containerId}" class="badge bg-success">Paid</span>
+        </div>
+        <div class="card-body">
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <p class="mb-1"><strong>Client:</strong> Acme Corporation</p>
+              <p class="mb-1"><strong>Date:</strong> January 31, 2026</p>
+              <p class="mb-0"><strong>Due Date:</strong> February 15, 2026</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <h3 class="mb-0">$5,250.00</h3>
+              <small class="text-muted">Total Amount</small>
+            </div>
+          </div>
+          
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th class="text-end">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web Design Services</td>
+                <td class="text-end">$3,500.00</td>
+              </tr>
+              <tr>
+                <td>Development Services</td>
+                <td class="text-end">$1,500.00</td>
+              </tr>
+              <tr>
+                <td>Consulting</td>
+                <td class="text-end">$250.00</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="mt-4 pt-3 border-top">
+            <p class="mb-3"><strong>Change Status:</strong></p>
+            <div class="btn-group" role="group">
+              <button class="btn btn-outline-success" onclick="
+                document.getElementById('statusBadge-${containerId}').className = 'badge bg-success';
+                document.getElementById('statusBadge-${containerId}').textContent = 'Paid';
+              ">Paid</button>
+              <button class="btn btn-outline-warning" onclick="
+                document.getElementById('statusBadge-${containerId}').className = 'badge bg-warning';
+                document.getElementById('statusBadge-${containerId}').textContent = 'Pending';
+              ">Pending</button>
+              <button class="btn btn-outline-danger" onclick="
+                document.getElementById('statusBadge-${containerId}').className = 'badge bg-danger';
+                document.getElementById('statusBadge-${containerId}').textContent = 'Overdue';
+              ">Overdue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
