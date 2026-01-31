@@ -421,3 +421,102 @@ export const NoSearch = Template.bind({});
 NoSearch.args = {
   withSearch: false
 };
+
+// Interactive Story (accordion controlled state)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="container py-5">
+        <h3 class="mb-4">Interactive FAQ Accordion</h3>
+        
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="faq1">
+              <button class="accordion-button collapsed" type="button" onclick="toggleAccordion('collapse1', this)">
+                How do I get started?
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" style="display: none;">
+              <div class="accordion-body">
+                Getting started is easy! Simply sign up for an account, verify your email, and you'll be ready to go. Check out our Quick Start guide for step-by-step instructions.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="faq2">
+              <button class="accordion-button collapsed" type="button" onclick="toggleAccordion('collapse2', this)">
+                What payment methods do you accept?
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" style="display: none;">
+              <div class="accordion-body">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise plans.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="faq3">
+              <button class="accordion-button collapsed" type="button" onclick="toggleAccordion('collapse3', this)">
+                Is my data secure?
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" style="display: none;">
+              <div class="accordion-body">
+                Yes! We use industry-standard encryption (SSL/TLS) for all data transmission and storage. Your data is backed up daily and stored in secure data centers with 24/7 monitoring.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="faq4">
+              <button class="accordion-button collapsed" type="button" onclick="toggleAccordion('collapse4', this)">
+                Can I cancel my subscription anytime?
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" style="display: none;">
+              <div class="accordion-body">
+                Absolutely! You can cancel your subscription at any time from your account settings. No questions asked, and no cancellation fees.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          function toggleAccordion(collapseId, button) {
+            const collapse = document.getElementById(collapseId);
+            const isExpanded = collapse.style.display === 'block';
+            
+            // Close all others
+            document.querySelectorAll('.accordion-collapse').forEach(item => {
+              item.style.display = 'none';
+              item.classList.remove('show');
+            });
+            document.querySelectorAll('.accordion-button').forEach(btn => {
+              btn.classList.add('collapsed');
+            });
+            
+            // Toggle clicked
+            if (!isExpanded) {
+              collapse.style.display = 'block';
+              collapse.classList.add('show');
+              button.classList.remove('collapsed');
+            }
+          }
+        </script>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive accordion using controlled state (no Bootstrap JS required)
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com accordion funcional usando state controlado (classes/display). Clique para expandir/recolher.'
+      }
+    }
+  }
+};

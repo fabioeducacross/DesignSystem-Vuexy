@@ -295,3 +295,82 @@ Vertical.args = {
   ...Default.args,
   vertical: true
 };
+
+// Interactive Story (state controlado)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h6 class="mb-3">Interactive Button Groups</h6>
+        
+        <!-- Demo 1: Toggle Selection -->
+        <div class="mb-4">
+          <h6 class="mb-2">Toggle Selection</h6>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" onclick="this.classList.toggle('btn-primary'); this.classList.toggle('btn-outline-primary');">Bold</button>
+            <button type="button" class="btn btn-outline-primary" onclick="this.classList.toggle('btn-primary'); this.classList.toggle('btn-outline-primary');">Italic</button>
+            <button type="button" class="btn btn-outline-primary" onclick="this.classList.toggle('btn-primary'); this.classList.toggle('btn-outline-primary');">Underline</button>
+          </div>
+        </div>
+        
+        <!-- Demo 2: Radio-style -->
+        <div class="mb-4">
+          <h6 class="mb-2">View Mode (Radio)</h6>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" onclick="
+              this.parentElement.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline-primary');
+              });
+              this.classList.remove('btn-outline-primary');
+              this.classList.add('btn-primary');
+            "><i class="ri-list-check"></i> List</button>
+            <button type="button" class="btn btn-outline-primary" onclick="
+              this.parentElement.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline-primary');
+              });
+              this.classList.remove('btn-outline-primary');
+              this.classList.add('btn-primary');
+            "><i class="ri-grid-fill"></i> Grid</button>
+            <button type="button" class="btn btn-outline-primary" onclick="
+              this.parentElement.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline-primary');
+              });
+              this.classList.remove('btn-outline-primary');
+              this.classList.add('btn-primary');
+            "><i class="ri-map-pin-fill"></i> Map</button>
+          </div>
+        </div>
+        
+        <!-- Demo 3: Counter -->
+        <div class="mb-4">
+          <h6 class="mb-2">Counter</h6>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-primary" onclick="
+              const span = document.getElementById('counter-value');
+              span.textContent = parseInt(span.textContent) - 1;
+            "><i class="ri-subtract-line"></i></button>
+            <button type="button" class="btn btn-outline-primary" disabled><span id="counter-value">0</span></button>
+            <button type="button" class="btn btn-outline-primary" onclick="
+              const span = document.getElementById('counter-value');
+              span.textContent = parseInt(span.textContent) + 1;
+            "><i class="ri-add-line"></i></button>
+          </div>
+        </div>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive demo via controlled state (no Bootstrap JS required)
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com button groups funcionais usando state controlado (classes). Clique para alternar estados.'
+      }
+    }
+  }
+};

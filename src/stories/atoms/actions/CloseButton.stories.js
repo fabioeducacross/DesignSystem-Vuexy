@@ -144,3 +144,63 @@ Disabled.args = {
   ...Default.args,
   disabled: true
 };
+
+// Interactive Story (state controlado)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h6 class="mb-3">Interactive Demos</h6>
+        
+        <!-- Demo 1: Remove Alert -->
+        <div class="mb-4">
+          <div id="alert-demo" class="alert alert-primary d-flex justify-content-between align-items-center" role="alert">
+            This alert can be closed
+            <button type="button" class="btn-close" aria-label="Close" onclick="document.getElementById('alert-demo').remove()"></button>
+          </div>
+        </div>
+        
+        <!-- Demo 2: Close Card -->
+        <div id="card-demo" class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Closeable Card</h6>
+            <button type="button" class="btn-close" aria-label="Close" onclick="document.getElementById('card-demo').remove()"></button>
+          </div>
+          <div class="card-body">
+            Click the X button to remove this card
+          </div>
+        </div>
+        
+        <!-- Demo 3: Remove Tags -->
+        <div class="mt-4">
+          <h6 class="mb-2">Removable Tags</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-primary d-flex align-items-center gap-2">
+              Design
+              <button type="button" class="btn-close btn-close-white" style="font-size: 0.6rem; padding: 0;" aria-label="Remove" onclick="this.parentElement.remove()"></button>
+            </span>
+            <span class="badge bg-success d-flex align-items-center gap-2">
+              Frontend
+              <button type="button" class="btn-close btn-close-white" style="font-size: 0.6rem; padding: 0;" aria-label="Remove" onclick="this.parentElement.remove()"></button>
+            </span>
+            <span class="badge bg-info d-flex align-items-center gap-2">
+              Backend
+              <button type="button" class="btn-close btn-close-white" style="font-size: 0.6rem; padding: 0;" aria-label="Remove" onclick="this.parentElement.remove()"></button>
+            </span>
+          </div>
+        </div>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive demo via Storybook state (no Bootstrap JS required)
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com close buttons funcionais usando state controlado (classes/DOM). Clique no X para remover elementos.'
+      }
+    }
+  }
+};

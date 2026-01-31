@@ -1,0 +1,508 @@
+{
+  "stories": [
+    {
+      "file": "GettingStarted.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "datatables",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "atoms/actions/Button.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/actions/CloseButton.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "atoms/actions/IconButton.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/data-display/Avatar.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/feedback/Badge.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Checkbox.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/FileUpload.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/HelpText.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Input.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Label.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Radio.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Range.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Select.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "select2",
+      "recommendation": "loader"
+    },
+    {
+      "file": "atoms/forms/Switch.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/forms/Textarea.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "atoms/navigation/Link.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "foundations/Colors.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "foundations/Spacing.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "foundations/Typography.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/actions/ButtonGroup.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "molecules/content/ListGroup.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/feedback/Notification.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "molecules/feedback/ProgressBar.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/forms/Datepicker.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "flatpickr",
+      "recommendation": "loader"
+    },
+    {
+      "file": "molecules/forms/FormGroup.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/forms/InputGroup.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/forms/SearchField.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/forms/TagInput.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "tagify",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "molecules/navigation/Breadcrumb.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/navigation/Dropdown.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/navigation/PaginationItem.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/navigation/Stepper.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "bs-stepper",
+      "recommendation": "loader"
+    },
+    {
+      "file": "molecules/overlays/Popover.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/overlays/Tooltip.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/surfaces/Alert.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/surfaces/Card.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "molecules/surfaces/Toast.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/apps/ChatInterface.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/apps/EmailList.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/apps/Invoice.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/apps/KanbanBoard.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/charts/BarChart.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "apexcharts",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "organisms/charts/LineChart.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "apexcharts",
+      "recommendation": "loader"
+    },
+    {
+      "file": "organisms/charts/PieChart.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "apexcharts",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "organisms/commerce/PricingTable.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/content/Accordion.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/content/Carousel.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "organisms/content/Timeline.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/data-display/DataTable.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "datatables",
+      "recommendation": "loader"
+    },
+    {
+      "file": "organisms/data-display/Pagination.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/feedback/Modal.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/forms/FormValidation.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/forms/Wizard.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "bs-stepper",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "organisms/forms/WysiwygEditor.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "quill",
+      "recommendation": "loader"
+    },
+    {
+      "file": "organisms/navigation/Navbar.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/navigation/Offcanvas.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/navigation/Sidebar.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/navigation/Tabs.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "organisms/productivity/Calendar.stories.js",
+      "interactive": "yes",
+      "bootstrapJS": "yes",
+      "vendor": "fullcalendar",
+      "recommendation": "loader"
+    },
+    {
+      "file": "templates/application-layouts/Dashboard.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "apexcharts",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "templates/auth/ForgotPassword.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "templates/auth/Login.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "templates/auth/Register.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "templates/misc/Error404.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "templates/misc/FAQ.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "templates/user/Profile.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "yes",
+      "vendor": "none",
+      "recommendation": "simulate"
+    },
+    {
+      "file": "templates/user/UserView.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "vuexy/Button.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "vuexy/Card.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "vuexy/Input.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    },
+    {
+      "file": "vuexy/Table.stories.js",
+      "interactive": "no",
+      "bootstrapJS": "no",
+      "vendor": "none",
+      "recommendation": "ok"
+    }
+  ]
+}

@@ -368,3 +368,168 @@ export const SemiDonut = Template.bind({});
 SemiDonut.args = {
   variant: 'semi-donut'
 };
+
+// Interactive Story (ApexCharts real)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Interactive Donut Chart</h5>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-sm btn-outline-primary active" onclick="updatePieData('devices')">Devices</button>
+              <button type="button" class="btn btn-sm btn-outline-primary" onclick="updatePieData('traffic')">Traffic</button>
+              <button type="button" class="btn btn-sm btn-outline-primary" onclick="updatePieData('sales')">Sales</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="interactivePieChart" style="min-height: 350px;"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  play: async ({ canvasElement }) => {
+    // Load ApexCharts dynamically
+    if (typeof window.ApexCharts === 'undefined') {
+      await new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = '/vuexy/vendors/libs/apex-charts/apexcharts.js';
+        script.onload = () => {
+          console.log('✅ ApexCharts loaded for PieChart Interactive');
+          resolve();
+        };
+        script.onerror = () => {
+          console.error('❌ Failed to load ApexCharts');
+          reject();
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    // Chart datasets
+    const datasets = {
+      devices: {
+        labels: ['Desktop', 'Mobile', 'Tablet', 'Other'],
+        series: [44, 25, 18, 13],
+        title: 'Device Distribution'
+      },
+      traffic: {
+        labels: ['Organic', 'Direct', 'Referral', 'Social', 'Email'],
+        series: [35, 28, 20, 12, 5],
+        title: 'Traffic Sources'
+      },
+      sales: {
+        labels: ['Product A', 'Product B', 'Product C', 'Product D'],
+        series: [40, 30, 20, 10],
+        title: 'Sales by Product'
+      }
+    };
+
+    // Chart options
+    const options = {
+      series: datasets.devices.series,
+      chart: {
+        type: 'donut',
+        height: 350
+      },
+      labels: datasets.devices.labels,
+      colors: ['#696cff', '#28c76f', '#ff9f43', '#ea5455', '#00cfe8'],
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center'
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val) {
+          return val.toFixed(1) + '%';
+        }
+      },
+      plotOptions: {
+        pie: {
+          donut: {
+            size: '65%',
+            labels: {
+              show: true,
+              name: {
+                show: true,
+                fontSize: '18px',
+                fontWeight: 600,
+                offsetY: -10
+              },
+              value: {
+                show: true,
+                fontSize: '32px',
+                fontWeight: 700,
+                color: '#566a7f',
+                offsetY: 10,
+                formatter: function (val) {
+                  return val + '%';
+                }
+              },
+              total: {
+                show: true,
+                label: datasets.devices.title,
+                fontSize: '14px',
+                color: '#a5acb8',
+                formatter: function (w) {
+                  return '100%';
+                }
+              }
+            }
+          }
+        }
+      },
+      tooltip: {
+        y: {
+          formatter: function (value) {
+            return value + '%';
+          }
+        }
+      }
+    };
+
+    // Create chart
+    const chartElement = canvasElement.querySelector('#interactivePieChart');
+    if (chartElement) {
+      const chart = new window.ApexCharts(chartElement, options);
+      chart.render();
+
+      // Update function
+      window.updatePieData = function(datasetName) {
+        const data = datasets[datasetName];
+        chart.updateOptions({
+          labels: data.labels,
+          plotOptions: {
+            pie: {
+              donut: {
+                labels: {
+                  total: {
+                    label: data.title
+                  }
+                }
+              }
+            }
+          }
+        });
+        chart.updateSeries(data.series);
+
+        // Update button states
+        const buttons = canvasElement.querySelectorAll('.btn-group button');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = Array.from(buttons).find(btn => 
+          btn.textContent.toLowerCase().includes(datasetName)
+        );
+        if (activeBtn) activeBtn.classList.add('active');
+      };
+    }
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com ApexCharts real (Donut). Clique nos botões para alternar entre diferentes datasets.'
+      }
+    }
+  }
+};

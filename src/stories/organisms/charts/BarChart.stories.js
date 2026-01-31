@@ -323,3 +323,144 @@ export const Stacked = Template.bind({});
 Stacked.args = {
   variant: 'stacked'
 };
+
+// Interactive Story (ApexCharts real)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Interactive Bar Chart</h5>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-sm btn-outline-primary active" onclick="updateChart('monthly')">Monthly</button>
+              <button type="button" class="btn btn-sm btn-outline-primary" onclick="updateChart('quarterly')">Quarterly</button>
+              <button type="button" class="btn btn-sm btn-outline-primary" onclick="updateChart('yearly')">Yearly</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="interactiveBarChart" style="min-height: 350px;"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  play: async ({ canvasElement }) => {
+    // Load ApexCharts dynamically
+    if (typeof window.ApexCharts === 'undefined') {
+      await new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = '/vuexy/vendors/libs/apex-charts/apexcharts.js';
+        script.onload = () => {
+          console.log('✅ ApexCharts loaded for BarChart Interactive');
+          resolve();
+        };
+        script.onerror = () => {
+          console.error('❌ Failed to load ApexCharts');
+          reject();
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    // Chart data
+    const datasets = {
+      monthly: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        data: [44000, 55000, 57000, 56000, 61000, 58000, 63000, 60000, 66000, 70000, 68000, 72000]
+      },
+      quarterly: {
+        categories: ['Q1', 'Q2', 'Q3', 'Q4'],
+        data: [156000, 175000, 189000, 210000]
+      },
+      yearly: {
+        categories: ['2020', '2021', '2022', '2023', '2024'],
+        data: [520000, 680000, 730000, 750000, 820000]
+      }
+    };
+
+    // Chart options
+    const options = {
+      series: [{
+        name: 'Sales',
+        data: datasets.monthly.data
+      }],
+      chart: {
+        type: 'bar',
+        height: 350,
+        toolbar: {
+          show: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 8,
+          dataLabels: {
+            position: 'top',
+          },
+        }
+      },
+      colors: ['#696cff'],
+      dataLabels: {
+        enabled: false
+      },
+      xaxis: {
+        categories: datasets.monthly.categories,
+        position: 'bottom'
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return '$' + (value / 1000) + 'k';
+          }
+        }
+      },
+      grid: {
+        borderColor: '#f0f2f8',
+      },
+      tooltip: {
+        y: {
+          formatter: function (value) {
+            return '$' + value.toLocaleString();
+          }
+        }
+      }
+    };
+
+    // Create chart
+    const chartElement = canvasElement.querySelector('#interactiveBarChart');
+    if (chartElement) {
+      const chart = new window.ApexCharts(chartElement, options);
+      chart.render();
+
+      // Update function
+      window.updateChart = function(period) {
+        const data = datasets[period];
+        chart.updateOptions({
+          xaxis: {
+            categories: data.categories
+          }
+        });
+        chart.updateSeries([{
+          name: 'Sales',
+          data: data.data
+        }]);
+
+        // Update button states
+        const buttons = canvasElement.querySelectorAll('.btn-group button');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = Array.from(buttons).find(btn => 
+          btn.textContent.toLowerCase().includes(period.replace('ly', ''))
+        );
+        if (activeBtn) activeBtn.classList.add('active');
+      };
+    }
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com ApexCharts real. Clique nos botões para alternar entre visualizações mensal, trimestral e anual.'
+      }
+    }
+  }
+};

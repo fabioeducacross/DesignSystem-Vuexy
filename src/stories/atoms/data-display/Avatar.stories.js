@@ -151,3 +151,85 @@ Sizes.args = {
   size: 'xl',
   initials: 'XL'
 };
+
+// Interactive Story (state controlado)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h6 class="mb-3">Interactive Demos</h6>
+        
+        <!-- Demo 1: Toggle Avatar Type -->
+        <div class="mb-4">
+          <h6 class="mb-2">Toggle Avatar Type (Click to switch)</h6>
+          <div id="avatar-toggle" class="avatar" style="cursor: pointer;" onclick="
+            const content = this.querySelector('.avatar-initial, img');
+            if (content.tagName === 'SPAN') {
+              this.innerHTML = '<img src=&quot;https://via.placeholder.com/100&quot; alt=&quot;User&quot; class=&quot;rounded&quot;>';
+            } else {
+              this.innerHTML = '<span class=&quot;avatar-initial rounded bg-label-primary&quot;>JD</span>';
+            }
+          ">
+            <span class="avatar-initial rounded bg-label-primary">JD</span>
+          </div>
+        </div>
+        
+        <!-- Demo 2: Avatar Size Selector -->
+        <div class="mb-4">
+          <h6 class="mb-2">Size Selector</h6>
+          <div class="btn-group mb-3" role="group">
+            <button class="btn btn-sm btn-outline-primary" onclick="
+              const avatar = document.getElementById('size-avatar');
+              avatar.className = 'avatar avatar-xs';
+            ">XS</button>
+            <button class="btn btn-sm btn-outline-primary" onclick="
+              const avatar = document.getElementById('size-avatar');
+              avatar.className = 'avatar avatar-sm';
+            ">SM</button>
+            <button class="btn btn-sm btn-outline-primary active" onclick="
+              const avatar = document.getElementById('size-avatar');
+              avatar.className = 'avatar';
+            ">MD</button>
+            <button class="btn btn-sm btn-outline-primary" onclick="
+              const avatar = document.getElementById('size-avatar');
+              avatar.className = 'avatar avatar-lg';
+            ">LG</button>
+            <button class="btn btn-sm btn-outline-primary" onclick="
+              const avatar = document.getElementById('size-avatar');
+              avatar.className = 'avatar avatar-xl';
+            ">XL</button>
+          </div>
+          <div id="size-avatar" class="avatar">
+            <span class="avatar-initial rounded bg-label-success">AB</span>
+          </div>
+        </div>
+        
+        <!-- Demo 3: Color Cycle -->
+        <div class="mb-4">
+          <h6 class="mb-2">Color Cycle (Click to change)</h6>
+          <div class="avatar" style="cursor: pointer;" onclick="
+            const colors = ['primary', 'success', 'danger', 'warning', 'info', 'secondary'];
+            const span = this.querySelector('.avatar-initial');
+            const currentClass = span.className.match(/bg-label-(\\w+)/)[1];
+            const currentIndex = colors.indexOf(currentClass);
+            const nextColor = colors[(currentIndex + 1) % colors.length];
+            span.className = 'avatar-initial rounded bg-label-' + nextColor;
+          ">
+            <span class="avatar-initial rounded bg-label-primary">CC</span>
+          </div>
+        </div>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive demo via Storybook state (no external dependencies)
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com avatares funcionais usando state controlado (classes/DOM). Clique para alternar estados.'
+      }
+    }
+  }
+};

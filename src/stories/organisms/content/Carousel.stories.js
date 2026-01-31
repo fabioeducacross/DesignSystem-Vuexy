@@ -383,3 +383,146 @@ FadeTransition.args = {
   indicators: true,
   fade: true
 };
+
+// Interactive Story (controlled state, sem Bootstrap JS)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4" style="max-width: 800px;">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Interactive Carousel (Controlled)</h6>
+            <button id="autoplayBtn" class="btn btn-sm btn-outline-primary" onclick="toggleAutoplay()">
+              <i class="ri-play-fill"></i> Autoplay
+            </button>
+          </div>
+          <div class="card-body p-0">
+            <div class="position-relative">
+              <!-- Carousel Images -->
+              <div id="carouselContainer" style="overflow: hidden; position: relative; height: 400px;">
+                <div class="carousel-slide active" style="position: absolute; width: 100%; height: 100%; transition: opacity 0.5s ease;">
+                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Slide 1" style="object-fit: cover; height: 100%;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
+                    <h5>First Slide</h5>
+                    <p>Amazing product showcase</p>
+                  </div>
+                </div>
+                <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="d-block w-100" alt="Slide 2" style="object-fit: cover; height: 100%;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
+                    <h5>Second Slide</h5>
+                    <p>Beautiful design elements</p>
+                  </div>
+                </div>
+                <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                  <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Slide 3" style="object-fit: cover; height: 100%;">
+                  <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px;">
+                    <h5>Third Slide</h5>
+                    <p>Modern interface components</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Controls -->
+              <button class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-2" onclick="prevSlide()" style="z-index: 10;">
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-2" onclick="nextSlide()" style="z-index: 10;">
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+              
+              <!-- Indicators -->
+              <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3" style="z-index: 10;">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-sm btn-primary" onclick="goToSlide(0)">1</button>
+                  <button class="btn btn-sm btn-outline-primary" onclick="goToSlide(1)">2</button>
+                  <button class="btn btn-sm btn-outline-primary" onclick="goToSlide(2)">3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="text-muted mt-3 small">
+          <i class="ri-information-line"></i> Interactive demo via controlled state (no Bootstrap JS required)
+        </p>
+      </div>
+      
+      <script>
+        let currentSlide = 0;
+        let autoplayInterval = null;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.btn-group button');
+        
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.style.opacity = '1';
+              slide.style.zIndex = '1';
+              slide.classList.add('active');
+            } else {
+              slide.style.opacity = '0';
+              slide.style.zIndex = '0';
+              slide.classList.remove('active');
+            }
+          });
+          
+          indicators.forEach((btn, i) => {
+            if (i === index) {
+              btn.classList.remove('btn-outline-primary');
+              btn.classList.add('btn-primary');
+            } else {
+              btn.classList.remove('btn-primary');
+              btn.classList.add('btn-outline-primary');
+            }
+          });
+          
+          currentSlide = index;
+        }
+        
+        function nextSlide() {
+          const next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        }
+        
+        function prevSlide() {
+          const prev = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prev);
+        }
+        
+        function goToSlide(index) {
+          showSlide(index);
+        }
+        
+        function toggleAutoplay() {
+          const btn = document.getElementById('autoplayBtn');
+          if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+            btn.innerHTML = '<i class="ri-play-fill"></i> Autoplay';
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-outline-primary');
+          } else {
+            autoplayInterval = setInterval(nextSlide, 3000);
+            btn.innerHTML = '<i class="ri-pause-fill"></i> Pause';
+            btn.classList.remove('btn-outline-primary');
+            btn.classList.add('btn-primary');
+          }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') prevSlide();
+          if (e.key === 'ArrowRight') nextSlide();
+        });
+      </script>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com controle de estado manual (sem Bootstrap JS). Use setas do teclado, botões de navegação ou indicadores para navegar. Autoplay opcional.'
+      }
+    }
+  }
+};

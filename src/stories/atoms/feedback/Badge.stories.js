@@ -152,3 +152,83 @@ Pill.args = {
   shape: 'pill',
   label: 'Pill Badge'
 };
+
+// Interactive Story (state controlado)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h6 class="mb-3">Interactive Demos</h6>
+        
+        <!-- Demo 1: Toggle Badge Type -->
+        <div class="mb-4">
+          <h6 class="mb-2">Toggle Type (Solid/Light)</h6>
+          <span id="toggle-badge" class="badge bg-primary">Click me!</span>
+          <script>
+            (function() {
+              const badge = document.getElementById('toggle-badge');
+              let isSolid = true;
+              badge.style.cursor = 'pointer';
+              badge.onclick = function() {
+                if (isSolid) {
+                  this.className = 'badge bg-label-primary';
+                  this.textContent = 'Light Badge';
+                } else {
+                  this.className = 'badge bg-primary';
+                  this.textContent = 'Solid Badge';
+                }
+                isSolid = !isSolid;
+              };
+            })();
+          </script>
+        </div>
+        
+        <!-- Demo 2: Status Counter -->
+        <div class="mb-4">
+          <h6 class="mb-2">Notification Counter</h6>
+          <button class="btn btn-primary position-relative" onclick="
+            const counter = document.getElementById('notification-counter');
+            let count = parseInt(counter.textContent) + 1;
+            counter.textContent = count;
+            if (count > 99) counter.textContent = '99+';
+          ">
+            Inbox
+            <span id="notification-counter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              5
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+        </div>
+        
+        <!-- Demo 3: Status Tags -->
+        <div class="mb-4">
+          <h6 class="mb-2">Toggle Status</h6>
+          <span id="status-badge" class="badge bg-success" style="cursor: pointer;" onclick="
+            const statuses = [
+              {label: 'Active', variant: 'success'},
+              {label: 'Pending', variant: 'warning'},
+              {label: 'Inactive', variant: 'secondary'}
+            ];
+            const currentIndex = parseInt(this.dataset.index || '0');
+            const nextIndex = (currentIndex + 1) % statuses.length;
+            const next = statuses[nextIndex];
+            this.className = 'badge bg-' + next.variant;
+            this.textContent = next.label;
+            this.dataset.index = nextIndex;
+          " data-index="0">Active</span>
+        </div>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive demo via Storybook state (no external dependencies)
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com badges funcionais usando state controlado (classes). Clique para alternar estados.'
+      }
+    }
+  }
+};

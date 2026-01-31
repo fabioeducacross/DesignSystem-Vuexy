@@ -362,3 +362,89 @@ Error.args = {
   variant: 'danger',
   withAction: false
 };
+
+// Interactive Story (controlled state)
+export const Interactive = {
+  render: () => {
+    return `
+      <div class="p-4">
+        <h6 class="mb-3">Interactive Notifications</h6>
+        
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-success" onclick="showNotification('success', 'Success!', 'Operation completed successfully.')">Show Success</button>
+          <button class="btn btn-danger" onclick="showNotification('danger', 'Error!', 'Something went wrong.')">Show Error</button>
+          <button class="btn btn-warning" onclick="showNotification('warning', 'Warning!', 'Please review your input.')">Show Warning</button>
+          <button class="btn btn-info" onclick="showNotification('info', 'Info', 'New message received.')">Show Info</button>
+        </div>
+        
+        <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 1080; min-width: 300px;"></div>
+        
+        <script>
+          let notificationId = 0;
+          
+          function showNotification(variant, title, message) {
+            const container = document.getElementById('notification-container');
+            const id = 'notification-' + (notificationId++);
+            
+            const icons = {
+              success: 'ri-checkbox-circle-line',
+              danger: 'ri-close-circle-line',
+              warning: 'ri-error-warning-line',
+              info: 'ri-information-line'
+            };
+            
+            const notification = document.createElement('div');
+            notification.id = id;
+            notification.className = 'toast align-items-center text-white bg-' + variant + ' border-0 mb-2';
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            notification.setAttribute('aria-atomic', 'true');
+            notification.style.opacity = '0';
+            notification.style.transition = 'opacity 0.3s';
+            
+            notification.innerHTML = `
+              <div class="d-flex">
+                <div class="toast-body">
+                  <i class="${icons[variant]} me-2"></i>
+                  <strong>${title}</strong> ${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="dismissNotification('${id}')" aria-label="Close"></button>
+              </div>
+            `;
+            
+            container.appendChild(notification);
+            
+            // Fade in
+            setTimeout(() => {
+              notification.style.opacity = '1';
+            }, 10);
+            
+            // Auto dismiss after 5s
+            setTimeout(() => {
+              dismissNotification(id);
+            }, 5000);
+          }
+          
+          function dismissNotification(id) {
+            const notification = document.getElementById(id);
+            if (notification) {
+              notification.style.opacity = '0';
+              setTimeout(() => notification.remove(), 300);
+            }
+          }
+        </script>
+        
+        <p class="text-muted mt-4 small">
+          <i class="ri-information-line"></i> Interactive demo with auto-dismiss (5s). Click buttons to show notifications.
+        </p>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Demo interativo com notificações funcionais usando state controlado. Auto-dismiss após 5 segundos.'
+      }
+    }
+  }
+};
