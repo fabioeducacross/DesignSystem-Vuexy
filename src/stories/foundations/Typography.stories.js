@@ -282,3 +282,42 @@ export const LineHeight = {
     </div>
   `,
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'typography-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="padding: 2rem; max-width: 800px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Adjust font scale using controls below.
+      </div>
+      
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Font Scale Control</h5>
+          <div class="mb-3">
+            <label class="form-label">Base Font Size:</label>
+            <select class="form-select" style="max-width: 200px;" onchange="document.getElementById('demoContent-${containerId}').style.fontSize = this.value;">
+              <option value="14px">Small (14px)</option>
+              <option value="16px" selected>Default (16px)</option>
+              <option value="18px">Large (18px)</option>
+              <option value="20px">Extra Large (20px)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div id="demoContent-${containerId}" class="card">
+        <div class="card-body">
+          <h1>Heading 1 Sample</h1>
+          <h2>Heading 2 Sample</h2>
+          <h3>Heading 3 Sample</h3>
+          <p>This is a paragraph demonstrating body text. Notice how all typography scales proportionally when you change the base font size above.</p>
+          <small class="text-muted">Small text example</small>
+        </div>
+      </div>
+    </div>
+  `;
+};

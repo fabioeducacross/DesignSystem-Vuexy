@@ -160,3 +160,47 @@ FormatExample.args = {
   text: 'Format: (XX) XXXXX-XXXX',
   icon: 'bx-phone'
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'helptext-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="max-width: 500px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Select help text type to see different variations.
+      </div>
+      
+      <div class="card mb-4">
+        <div class="card-body">
+          <label class="form-label">Help Text Type:</label>
+          <select class="form-select" onchange="
+            const helpTexts = {
+              info: '<div class=\\'form-text text-muted\\'><i class=\\'bx bx-info-circle me-1\\'></i>Use format: name@example.com</div>',
+              warning: '<div class=\\'form-text text-warning\\'><i class=\\'bx bx-error me-1\\'></i>Password must be at least 8 characters</div>',
+              success: '<div class=\\'form-text text-success\\'><i class=\\'bx bx-check-circle me-1\\'></i>Valid format!</div>',
+              error: '<div class=\\'form-text text-danger\\'><i class=\\'bx bx-x-circle me-1\\'></i>This field is required</div>'
+            };
+            document.getElementById('helpDemo-${containerId}').innerHTML = helpTexts[this.value];
+          ">
+            <option value="info">Info (Default)</option>
+            <option value="warning">Warning</option>
+            <option value="success">Success</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter email">
+          <div id="helpDemo-${containerId}" class="form-text text-muted">
+            <i class="bx bx-info-circle me-1"></i>Use format: name@example.com
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
