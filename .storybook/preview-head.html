@@ -46,3 +46,158 @@
 <!-- Quill (required for WYSIWYG editor) -->
 <link rel="stylesheet" href="/vuexy/vendors/libs/quill/editor.css">
 <script src="/vuexy/vendors/libs/quill/quill.js"></script>
+
+<!-- Custom Storybook Styles -->
+<style>
+  /* Melhor apresentação dos componentes */
+  .storybook-component-wrapper {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  /* Código mais legível */
+  .sbdocs-wrapper code,
+  .sbdocs-wrapper pre {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    background-color: #F8F9FA;
+    border: 1px solid #E7E7E8;
+    border-radius: 6px;
+  }
+  
+  .sbdocs-wrapper pre {
+    padding: 1.25rem;
+    overflow-x: auto;
+    max-height: 600px;
+  }
+  
+  .sbdocs-wrapper code {
+    padding: 0.2rem 0.4rem;
+  }
+  
+  /* Melhor espaçamento na documentação */
+  .sbdocs-wrapper .sbdocs-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sbdocs-wrapper h1, 
+  .sbdocs-wrapper h2, 
+  .sbdocs-wrapper h3 {
+    color: #2F2B3D;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sbdocs-wrapper h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #7367F0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .sbdocs-wrapper h2 {
+    font-size: 1.875rem;
+    color: #7367F0;
+  }
+  
+  .sbdocs-wrapper h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Tabelas de props mais limpas */
+  .sbdocs-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .sbdocs-wrapper table thead {
+    background: #7367F0;
+    color: white;
+  }
+  
+  .sbdocs-wrapper table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .sbdocs-wrapper table td {
+    padding: 1rem;
+    border-top: 1px solid #E7E7E8;
+  }
+  
+  .sbdocs-wrapper table tbody tr:hover {
+    background-color: #F8F9FA;
+  }
+  
+  /* Melhor apresentação de controles */
+  .sbdocs-wrapper .docblock-argstable {
+    margin: 2rem 0;
+  }
+  
+  /* Canvas mais limpo */
+  #storybook-root {
+    padding: 0 !important;
+  }
+  
+  /* Botão "Show code" mais visível */
+  button[title="Show code"] {
+    background: #7367F0 !important;
+    color: white !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 500 !important;
+  }
+  
+  button[title="Show code"]:hover {
+    background: #5E59D7 !important;
+  }
+  
+  /* Melhor apresentação de badges */
+  .sbdocs-wrapper .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Alertas mais bonitos */
+  .sbdocs-wrapper .alert {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid;
+  }
+  
+  .sbdocs-wrapper .alert-info {
+    border-left-color: #00BAD1;
+    background-color: #E7F6F8;
+  }
+  
+  .sbdocs-wrapper .alert-warning {
+    border-left-color: #FFB400;
+    background-color: #FFF8E7;
+  }
+  
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Melhor foco para acessibilidade */
+  *:focus-visible {
+    outline: 2px solid #7367F0;
+    outline-offset: 2px;
+  }
+</style>

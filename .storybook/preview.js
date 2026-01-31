@@ -22,6 +22,8 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      expanded: true, // Expande controles por padrão
+      sort: 'requiredFirst', // Mostra campos obrigatórios primeiro
     },
     backgrounds: {
       default: 'light',
@@ -44,6 +46,37 @@ const preview = {
         },
       ],
     },
+    // Melhor layout para código
+    docs: {
+      source: {
+        type: 'code',
+        language: 'html',
+        format: true,
+        excludeDecorators: true,
+      },
+      canvas: {
+        sourceState: 'shown', // Mostra código por padrão no Canvas
+      },
+    },
+    // Layout melhorado
+    layout: 'padded', // Adiciona padding automático
+    // Viewport responsivo
+    viewport: {
+      viewports: {
+        mobile: {
+          name: 'Mobile',
+          styles: { width: '375px', height: '667px' },
+        },
+        tablet: {
+          name: 'Tablet',
+          styles: { width: '768px', height: '1024px' },
+        },
+        desktop: {
+          name: 'Desktop',
+          styles: { width: '1440px', height: '900px' },
+        },
+      },
+    },
     options: {
       storySort: {
         order: [
@@ -61,20 +94,56 @@ const preview = {
     },
   },
   decorators: [
-    (Story) => {
+    (Story, context) => {
       const wrapper = document.createElement('div');
-      wrapper.style.minHeight = '100vh';
-      wrapper.style.padding = '2rem';
-      wrapper.style.backgroundColor = '#F8F8F8';
-      wrapper.className = 'vuexy-wrapper';
+      
+      // Não aplicar decorator em páginas/templates completos
+      const isFullPage = context.title.includes('Templates') || 
+                         context.title.includes('Pages') ||
+                         context.name === 'Interactive';
+      
+      if (isFullPage) {
+        // Para páginas completas, retorna sem wrapper
+        const story = Story();
+        if (typeof story === 'string') {
+          const container = document.createElement('div');
+          container.innerHTML = story;
+          return container;
+        }
+        return story;
+      }
+      
+      // Para componentes, adiciona container estilizado
+      wrapper.style.cssText = `
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+        background-color: #FAFAFA;
+        border-radius: 8px;
+      `;
+      wrapper.className = 'storybook-component-wrapper';
+      
+      // Container interno para o componente
+      const innerContainer = document.createElement('div');
+      innerContainer.style.cssText = `
+        width: 100%;
+        max-width: 1200px;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      `;
       
       const story = Story();
       if (typeof story === 'string') {
-        wrapper.innerHTML = story;
+        innerContainer.innerHTML = story;
       } else {
-        wrapper.appendChild(story);
+        innerContainer.appendChild(story);
       }
       
+      wrapper.appendChild(innerContainer);
       return wrapper;
     },
   ],
