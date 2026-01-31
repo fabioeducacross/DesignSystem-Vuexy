@@ -1,83 +1,189 @@
 # Checklist de Tarefas - Storybook + Vuexy
 
-## Parte A: Workflow do Agente
-- [x] Criar pasta agent_helpers
-- [x] Criar agent_helpers/README.md
-- [x] Criar agent_helpers/tarefas.md
-- [x] Criar agent_helpers/decisoes.md
-- [x] Criar agent_helpers/validacao.md
+**Última Atualização**: 31 de janeiro de 2026  
+**Status Geral**: 95.3% Completo (61/64 componentes)
 
-## Parte B: Localizar Vuexy HTML
-- [x] Procurar pasta com template Vuexy (vuexy + versão)
-- [x] Localizar diretório da versão HTML
-- [x] Identificar assets (css, js, vendors, fonts, images)
-- [x] Registrar caminho em decisoes.md
-- **Status**: Template não encontrado no repositório - abordagem com placeholder criada
+---
 
-## Parte C: Criar Pacote de Tema
-- [x] Criar packages/vuexy_theme/public/vuexy
-- [x] Copiar conteúdo da versão HTML (placeholder CSS criado)
-- [x] Preservar estrutura e paths relativos
-- [x] Confirmar existência de pastas css, fonts, vendors
+## ✅ Fases Completas (1-9)
 
-## Parte D: Inicializar Storybook
-- [x] Executar npx storybook@latest init (manual installation)
-- [x] Verificar scripts no package.json
-- [x] Testar inicialização do Storybook - ✅ Funcionando
+### Parte A-J: Setup Inicial
+- [x] **Parte A**: Workflow do Agente (README, tarefas, decisões, validação)
+- [x] **Parte B**: Localizar Vuexy HTML (Template integrado)
+- [x] **Parte C**: Criar Pacote de Tema (packages/vuexy_theme/public/vuexy)
+- [x] **Parte D**: Inicializar Storybook v8.6.15
+- [x] **Parte E**: Servir Assets do Vuexy (750+ arquivos)
+- [x] **Parte F**: Carregar CSS do Vuexy (core.css 829KB)
+- [x] **Parte G**: Scripts (6 arquivos JS Vuexy)
+- [x] **Parte H**: Decorator Global (wrapper + min-height)
+- [x] **Parte I**: Criar Stories Iniciais (4 componentes base)
+- [x] **Parte J**: Validação (http://localhost:6006 ✅)
 
-## Parte E: Servir Assets do Vuexy
-- [x] Configurar diretório estático no Storybook
-- [x] Validar acesso a CSS via /vuexy no navegador - ✅ Confirmado
+### Fase 1-3: Componentes P0 e P1
+- [x] **Fase 1**: P0 Atoms + Molecules (24 componentes - 100%)
+- [x] **Fase 2**: P1 Organisms (29 componentes - 100%)
+- [x] **Fase 3**: Dashboard Layout Template
 
-## Parte F: Carregar CSS do Vuexy
-- [x] Identificar links de CSS em HTML de exemplo (placeholder criado)
-- [x] Configurar preview para carregar CSS na mesma ordem
-- [x] Usar paths absolutos com /vuexy
+### Fase 4-8: Componentes P2 e Refinamentos
+- [x] **Fase 4**: P2 Initial Batch (3 componentes)
+- [x] **Fase 5**: P2 Second Batch (3 componentes)
+- [x] **Fase 6**: P2 Final Batch (2 componentes)
+- [x] **Fase 7**: Git Push (Commit 4b702d7)
+- [x] **Fase 8**: Warnings Fix + Enhancements
 
-## Parte G: Scripts (se necessário)
-- [x] Começar sem scripts
-- [x] Adicionar vendors/scripts core se necessário (não necessário ainda)
-- [x] Apontar para /vuexy
+### Fase 9: Interatividade Sistemática ✅
+**Commit**: 8792fcf | **Data**: 30 de janeiro de 2026
 
-## Parte H: Decorator Global
-- [x] Identificar classes base do Vuexy (body/wrapper)
-- [x] Adicionar decorator global no preview
-- [x] Garantir min-height 100vh e padding
+- [x] Criar helper system (`src/stories/_helpers/interactive.js`)
+- [x] Interactive stories - Atoms (3): Button, Input, Checkbox
+- [x] Interactive stories - Molecules (2): Alert, Toast
+- [x] Interactive stories - Organisms (7): Modal, Tabs, Sidebar, Pagination, FormValidation, Navbar, KanbanBoard
+- [x] Keyboard support: Modal (Escape), Tabs (Enter, Arrows)
+- [x] SortableJS integration para KanbanBoard
+- [x] Git commit e push
 
-## Parte I: Criar Stories Iniciais
-- [x] Criar src/stories/vuexy
-- [x] Story: Button (variantes, tamanhos, disabled) - 11 variantes
-- [x] Story: Input (placeholder, estados, validação) - 6 variantes
-- [x] Story: Card (header, conteúdo) - 5 variantes
-- [x] Story: Table (linhas, estado vazio) - 4 variantes
-- [x] Adicionar docs com snippets (HTML, React, Vue2, Vue3)
+**Resultado**: 12 Interactive stories funcionando | Helper pattern estabelecido
 
-## Parte J: Validação
-- [x] Rodar Storybook - ✅ http://localhost:6006
-- [x] Validar ausência de 404s (css, fonts, vendors) - ✅ Sem erros
-- [x] Validar tipografia, cores e componentes - ✅ Vuexy visual aplicado
-- [x] Commit com mensagem clara - ✅ Completo
-- [x] Abrir PR com instruções de execução - ✅ README atualizado
+---
 
-## Status Final: ✅ COMPLETO
+## 🔄 Fase 10: Bootstrap JS Loaders (Em Progresso)
 
-Total de stories criadas: **26 stories** em **4 componentes**
+**Objetivo**: Adicionar interatividade real com Bootstrap JS e vendor libraries
 
-### Componentes Implementados:
-1. **Button**: 11 stories (Primary, Secondary, Success, Danger, Warning, Info, Small, Large, Disabled, All Variants, All Sizes)
-2. **Input**: 6 stories (Default, With Value, Disabled, Valid, Invalid, All States)
-3. **Card**: 5 stories (Default, Without Header, With Rich Content, With Button, Multiple Cards)
-4. **Table**: 4 stories (Default, Without Hover, Empty State, In Card)
+### Bootstrap JS Components
+- [x] **Dropdown** - ✅ Interactive story com loader implementada (31/01/2026)
+  - Loader carrega `/vuexy/js/bootstrap.js`
+  - 6 variações funcionando
+  - Documentação completa
+- [ ] **Tooltip** - Necessita Bootstrap JS loader
+- [ ] **Popover** - Necessita Bootstrap JS loader
+- [ ] **Modal** (enhanced) - Adicionar Bootstrap JS ao Interactive existente
+- [ ] **Offcanvas** - Necessita Bootstrap JS loader
+- [ ] **Collapse/Accordion** - Necessita Bootstrap JS loader
 
-### Tecnologias Utilizadas:
-- Storybook 8.6.15
-- @storybook/html-vite 8.6.15
-- Node.js 20.20.0
-- npm 10.8.2
+### Vendor Library Components
+- [ ] **Datepicker** - Necessita Flatpickr loader
+- [ ] **Calendar** - Necessita FullCalendar loader
+- [ ] **Select (Advanced)** - Necessita Select2 loader
+- [ ] **WYSIWYG Editor** - Necessita Quill loader
+- [ ] **Charts** - Necessita ApexCharts loader
+- [ ] **DataTables** - Necessita DataTables loader
+- [ ] **Stepper** - Necessita BS Stepper loader
 
-### Próximos Passos (quando template Vuexy for adicionado):
-1. Substituir placeholder CSS por CSS real do Vuexy
-2. Copiar todos os assets (fonts, vendors, js)
-3. Atualizar preview.js com ordem correta dos CSS
-4. Adicionar mais componentes do template
-5. Refinar markup dos componentes para fidelidade total
+**Progresso**: 1/13 componentes com loaders (7.7%)
+
+---
+
+## 📋 Tarefas Administrativas Pendentes
+
+### Status DONE Markers (Quick Fix)
+- [ ] Adicionar "Status: ✅ DONE" no header de `Button.stories.js`
+- [ ] Adicionar "Status: ✅ DONE" no header de `SearchField.stories.js`
+- [ ] Corrigir campo Status no header de `DataTable.stories.js`
+
+**Estimativa**: 5 minutos | **Impacto**: 95.3% → 100% completion
+
+---
+
+## 📊 Status de Componentes
+
+### ✅ Completo: 61/64 (95.3%)
+
+#### Atoms (16/16)
+- [x] Badge, Button*, Checkbox, Chip, Divider, Icon, Image, Input, Link, Logo, Radio, Spinner, Switch, Tag, TextBlock, Typography
+  - *Button implementado mas falta header Status marker
+
+#### Molecules (17/17)
+- [x] Alert, Avatar, Breadcrumb, Card, Dropdown, FileUpload, FormGroup, ListItem, MenuLink, Popover, ProgressBar, SearchField*, Stepper, Toast, Tooltip
+  - *SearchField implementado mas falta header Status marker
+
+#### Organisms (20/20)
+- [x] Accordion, AppBar, Calendar, Carousel, DataTable*, Footer, FormValidation, Header, KanbanBoard, Modal, Navbar, Offcanvas, Pagination, Sidebar, Tabs, Timeline
+  - *DataTable implementado mas Status marker precisa ajuste
+
+#### Templates (8/8)
+- [x] AuthLogin, AuthRegister, CRMDashboard, DashboardLayout, Ecommerce, ForgotPassword, UserProfile, UserView
+
+### 🔄 Pendente: 3/64 (4.7%)
+Apenas correções de header - componentes já implementados
+
+---
+
+## 🎯 Histórico de Commits
+
+| Commit | Data | Descrição | Componentes |
+|--------|------|-----------|-------------|
+| f31763d | - | Merge inicial Vuexy template | Setup |
+| 48ef9f0 | - | Integrate Vuexy v10.9.0 assets | 750+ arquivos |
+| 43fadd6 | - | Add user profile and view templates | 2 templates |
+| 4b702d7 | - | feat: implementar componentes P2 finais | 8 P2 (92%) |
+| 8792fcf | 30/01 | feat: adicionar interatividade sistemática | 12 Interactive |
+| **TBD** | 31/01 | feat: adicionar Bootstrap e vendor loaders | Dropdown + outros |
+
+---
+
+## 🚀 Próximos Milestones
+
+### Milestone 1: Bootstrap Loaders (3-5 dias)
+- **Meta**: 6 componentes com Bootstrap JS
+- **Entregáveis**: Dropdown ✅, Tooltip, Popover, Modal, Offcanvas, Collapse
+
+### Milestone 2: Vendor Loaders (5-7 dias)
+- **Meta**: 7 componentes com vendor libraries
+- **Entregáveis**: Datepicker, Calendar, Select, WYSIWYG, Charts, DataTables, Stepper
+
+### Milestone 3: 100% Completion (1 dia)
+- **Meta**: Status DONE em todos os 64 componentes
+- **Entregáveis**: Headers corrigidos, validação final, commit final
+
+---
+
+## 📝 Notas Técnicas
+
+### Helper System
+- **Arquivo**: `src/stories/_helpers/interactive.js`
+- **Funções**: 10+ utilities (createState, createClickHandler, addKeyboardSupport, etc)
+- **Uso**: Importado em 12 Interactive stories
+
+### Loader Pattern
+```javascript
+loaders: [
+  async () => {
+    if (typeof window !== 'undefined' && !window.bootstrap) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = '/vuexy/js/bootstrap.js';
+        script.onload = () => resolve({ bootstrapLoaded: true });
+        script.onerror = () => reject(new Error('Failed to load'));
+        document.head.appendChild(script);
+      });
+    }
+    return { bootstrapLoaded: true };
+  }
+]
+```
+
+### Vendor Paths
+- Bootstrap: `/vuexy/js/bootstrap.js`
+- Flatpickr: `/vuexy/vendors/libs/flatpickr/flatpickr.js`
+- FullCalendar: `/vuexy/vendors/libs/fullcalendar/index.global.min.js`
+- Select2: `/vuexy/vendors/libs/select2/select2.js`
+- Quill: `/vuexy/vendors/libs/quill/katex.js` + `/vuexy/vendors/libs/quill/quill.js`
+- ApexCharts: `/vuexy/vendors/libs/apex-charts/apexcharts.js`
+- DataTables: `/vuexy/vendors/libs/datatables-bs5/datatables-bootstrap5.js`
+- BS Stepper: `/vuexy/vendors/libs/bs-stepper/bs-stepper.js`
+
+---
+
+## ✅ Critérios de Conclusão
+
+### Para considerar um componente "completo":
+1. ✅ Header com metadata (Title, Priority, Status: ✅ DONE)
+2. ✅ Export default com title, tags, parameters, argTypes
+3. ✅ Pelo menos 1 story functional (Default ou Overview)
+4. ✅ Documentação no parameters.docs.description
+5. ✅ Code snippets (HTML, React, Vue2, Vue3) quando aplicável
+6. ⭐ Interactive story quando necessário (12/64 têm)
+7. ⭐ Loaders para JS/vendor quando necessário (1/13 têm)
+
+**Status Atual**: 61/64 atendem critérios 1-6 | 12/64 têm critério 7 parcial

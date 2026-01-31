@@ -1,3 +1,13 @@
+/**
+ * SearchField - Molecule (Forms)
+ * 
+ * Source: packages/vuexy_theme/public/vuexy/css/core.css (.input-group, .form-control)
+ * Priority: P1 (Important)
+ * Status: ✅ DONE
+ * 
+ * Campo de busca com botão integrado.
+ */
+
 import { createOverviewGrid, generateSnippetDocs } from '../../_helpers/snippets';
 
 export default {

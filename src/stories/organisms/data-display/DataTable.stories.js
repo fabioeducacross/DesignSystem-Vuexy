@@ -1,3 +1,13 @@
+/**
+ * DataTable - Organism (Data Display)
+ * 
+ * Source: packages/vuexy_theme/public/vuexy/css/core.css (.table, .table-*)
+ * Priority: P1 (Important)
+ * Status: ✅ DONE
+ * 
+ * Tabela de dados com paginação, ordenação e filtros.
+ */
+
 export default {
   title: 'Organisms/Data Display/DataTable',
   tags: ['autodocs'],

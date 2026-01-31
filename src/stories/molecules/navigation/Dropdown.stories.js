@@ -312,3 +312,186 @@ LargeSize.args = {
   ...Default.args,
   size: 'lg'
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Bootstrap JS Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Dropdown com Bootstrap JS Real
+
+Esta story carrega o **Bootstrap JS real** do Vuexy para demonstrar a interatividade completa:
+
+- ✅ Click no botão abre/fecha o menu
+- ✅ Click fora fecha o menu
+- ✅ Navegação por teclado (Tab, Enter, Esc)
+- ✅ Multiple dropdowns funcionando independentemente
+- ✅ Split buttons com ação principal
+
+**Nota:** Esta é a implementação oficial do Vuexy usando \`/vuexy/js/bootstrap.js\`
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      // Carregar Bootstrap JS do Vuexy
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado com sucesso');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => {
+            console.error('❌ Falha ao carregar Bootstrap JS');
+            reject(new Error('Failed to load Bootstrap JS'));
+          };
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    return `
+      <div style="padding: 30px;">
+        <h5 class="mb-4">Dropdowns Interativos com Bootstrap JS</h5>
+        
+        <div class="row g-4">
+          <!-- Dropdown Básico -->
+          <div class="col-md-6">
+            <h6>Dropdown Básico</h6>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Primary Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Categoria 1</h6></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><h6 class="dropdown-header">Categoria 2</h6></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Dropdown com Ícones -->
+          <div class="col-md-6">
+            <h6>Dropdown com Ícones</h6>
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ti ti-settings me-1"></i> Settings
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-user me-2"></i>Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-settings me-2"></i>Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-credit-card me-2"></i>Billing</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class="ti ti-logout me-2"></i>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Split Button -->
+          <div class="col-md-6">
+            <h6>Split Button</h6>
+            <div class="btn-group">
+              <button type="button" class="btn btn-info">Primary Action</button>
+              <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Dropdown Right Aligned -->
+          <div class="col-md-6">
+            <h6>Right Aligned</h6>
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Right Aligned
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Dropdown com Estados -->
+          <div class="col-md-6">
+            <h6>Dropdown com Active/Disabled</h6>
+            <div class="dropdown">
+              <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Status Options
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0);">Active item</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);">Regular item</a></li>
+                <li><a class="dropdown-item disabled" href="javascript:void(0);">Disabled item</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Dropdown Sizes -->
+          <div class="col-md-6">
+            <h6>Tamanhos</h6>
+            <div class="d-flex gap-2 align-items-center">
+              <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Small
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                </ul>
+              </div>
+              
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Default
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                </ul>
+              </div>
+              
+              <div class="dropdown">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Large
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4" role="alert">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li>Clique nos botões para abrir/fechar os menus</li>
+            <li>Clique fora do menu para fechá-lo</li>
+            <li>Use Tab para navegar entre botões</li>
+            <li>Pressione Enter para abrir o dropdown focado</li>
+            <li>Use Escape para fechar dropdowns abertos</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};

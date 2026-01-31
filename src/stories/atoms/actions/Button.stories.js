@@ -1,3 +1,13 @@
+/**
+ * Button - Atom (Action)
+ * 
+ * Source: packages/vuexy_theme/public/vuexy/css/core.css (.btn, .btn-*)
+ * Priority: P0 (Critical)
+ * Status: ✅ DONE
+ * 
+ * Botão com múltiplas variantes e estados.
+ */
+
 import { createOverviewGrid, generateSnippetDocs } from '../../_helpers/snippets';
 
 export default {
