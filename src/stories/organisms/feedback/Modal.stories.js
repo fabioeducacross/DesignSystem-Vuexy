@@ -381,3 +381,270 @@ Interactive.parameters = {
     }
   }
 };
+
+/**
+ * ====================================
+ * INTERACTIVE BOOTSTRAP - Bootstrap JS Real
+ * ====================================
+ */
+
+export const InteractiveBootstrap = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Modal com Bootstrap JS Real
+
+Implementação oficial usando Bootstrap JS do Vuexy:
+
+- ✅ **Open/Close** com animações suaves do Bootstrap
+- ✅ **Backdrop** com blur e dismiss on click
+- ✅ **Escape key** para fechar
+- ✅ **Focus management** automático
+- ✅ **Body scroll lock** quando modal aberto
+- ✅ **Múltiplos tamanhos** (sm, default, lg, xl, fullscreen)
+- ✅ **Stacked modals** suportado
+
+**Comparação:** Esta story usa Bootstrap JS oficial vs a "Interactive" que usa JavaScript custom.
+
+### Como testar:
+1. Clique nos botões para abrir modals
+2. Pressione Escape para fechar
+3. Clique no backdrop para fechar
+4. Teste os diferentes tamanhos
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado para Modal');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => reject(new Error('Failed to load Bootstrap JS'));
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    return `
+      <div style="padding: 30px;">
+        <h5 class="mb-4">Modals com Bootstrap JS</h5>
+        
+        <!-- Trigger Buttons -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalBasic">
+              <i class="ti ti-square me-1"></i> Default Modal
+            </button>
+          </div>
+          
+          <div class="col-md-4">
+            <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalLarge">
+              <i class="ti ti-square me-1"></i> Large Modal
+            </button>
+          </div>
+          
+          <div class="col-md-4">
+            <button type="button" class="btn btn-warning w-100" data-bs-toggle="modal" data-bs-target="#modalSmall">
+              <i class="ti ti-square me-1"></i> Small Modal
+            </button>
+          </div>
+          
+          <div class="col-md-4">
+            <button type="button" class="btn btn-info w-100" data-bs-toggle="modal" data-bs-target="#modalCentered">
+              <i class="ti ti-align-center me-1"></i> Centered
+            </button>
+          </div>
+          
+          <div class="col-md-4">
+            <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#modalScrollable">
+              <i class="ti ti-scroll me-1"></i> Scrollable
+            </button>
+          </div>
+          
+          <div class="col-md-4">
+            <button type="button" class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalFullscreen">
+              <i class="ti ti-maximize me-1"></i> Fullscreen
+            </button>
+          </div>
+        </div>
+        
+        <!-- Modal 1: Basic -->
+        <div class="modal fade" id="modalBasic" tabindex="-1" aria-labelledby="modalBasicLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalBasicLabel">Default Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Este é um modal padrão do Bootstrap. Ele tem largura de 500px e pode conter qualquer conteúdo.</p>
+                <p class="mb-0">Você pode fechá-lo clicando no X, no backdrop, ou pressionando Escape.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal 2: Large -->
+        <div class="modal fade" id="modalLarge" tabindex="-1" aria-labelledby="modalLargeLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalLargeLabel">Large Modal (800px)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h6>Coluna 1</h6>
+                    <p>Modals largos são perfeitos para formulários complexos ou conteúdo que precisa de mais espaço horizontal.</p>
+                    <ul>
+                      <li>Largura: 800px</li>
+                      <li>Classe: .modal-lg</li>
+                      <li>Ideal para formulários</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Coluna 2</h6>
+                    <p>Você pode usar o grid do Bootstrap dentro dos modals para criar layouts complexos.</p>
+                    <div class="alert alert-info mb-0">
+                      <strong>Dica:</strong> Use .modal-xl para 1140px
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal 3: Small -->
+        <div class="modal fade" id="modalSmall" tabindex="-1" aria-labelledby="modalSmallLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header bg-warning">
+                <h5 class="modal-title" id="modalSmallLabel">Small Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="mb-2"><strong>Confirmar ação?</strong></p>
+                <p class="mb-0 text-muted">Modals pequenos (300px) são ideais para confirmações simples.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-label-secondary" data-bs-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-sm btn-warning">Sim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal 4: Centered -->
+        <div class="modal fade" id="modalCentered" tabindex="-1" aria-labelledby="modalCenteredLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="modalCenteredLabel">Vertically Centered</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center py-4">
+                <i class="ti ti-info-circle" style="font-size: 48px; color: var(--bs-info);"></i>
+                <h6 class="mt-3">Modal Centralizado</h6>
+                <p class="mb-0">Este modal está centralizado verticalmente na tela usando .modal-dialog-centered</p>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Entendi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal 5: Scrollable -->
+        <div class="modal fade" id="modalScrollable" tabindex="-1" aria-labelledby="modalScrollableLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="modalScrollableLabel">Scrollable Modal</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Este modal tem conteúdo scrollável quando o conteúdo excede a altura máxima.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal 6: Fullscreen -->
+        <div class="modal fade" id="modalFullscreen" tabindex="-1" aria-labelledby="modalFullscreenLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="modalFullscreenLabel">Fullscreen Modal</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center py-5">
+                      <i class="ti ti-maximize" style="font-size: 64px;"></i>
+                      <h3 class="mt-3">Modal Fullscreen</h3>
+                      <p class="lead">Este modal ocupa toda a tela do navegador</p>
+                      <p>Ideal para formulários complexos, editores, ou visualizações que precisam de máximo espaço.</p>
+                      <div class="alert alert-dark mt-4">
+                        <strong>Breakpoint variants:</strong>
+                        <ul class="mb-0">
+                          <li>.modal-fullscreen-sm-down - Fullscreen em telas < 576px</li>
+                          <li>.modal-fullscreen-md-down - Fullscreen em telas < 768px</li>
+                          <li>.modal-fullscreen-lg-down - Fullscreen em telas < 992px</li>
+                          <li>.modal-fullscreen-xl-down - Fullscreen em telas < 1200px</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar Fullscreen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Abrir:</strong> Clique nos botões para abrir diferentes modals</li>
+            <li><strong>Fechar:</strong> Use X, backdrop (click fora), ou Escape key</li>
+            <li><strong>Focus:</strong> Note como o foco vai automaticamente para o modal</li>
+            <li><strong>Scroll:</strong> O body da página trava quando modal está aberto</li>
+            <li><strong>Tamanhos:</strong> Teste todos os 6 tipos de modals</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};
