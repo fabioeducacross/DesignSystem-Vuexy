@@ -68,7 +68,7 @@ export const AllLibraries = {
         <!-- Tabler Icons -->
         <div style="padding: 2rem; background: #f8f7fa; border-radius: 12px; border-left: 4px solid #28c76f;">
           <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-            <i class="ti ti-brand-tabler" style="font-size: 2rem; color: #28c76f;"></i>
+            <i class="ti tabler-brand-tabler" style="font-size: 2rem; color: #28c76f;"></i>
             <div>
               <h3 style="margin: 0;">Tabler Icons (Iconify)</h3>
               <p style="margin: 0; color: #6c757d; font-size: 0.875rem;">Local • 5000+ ícones • Design minimalista</p>
@@ -78,12 +78,12 @@ export const AllLibraries = {
             Biblioteca massiva com ícones de alta qualidade, estilo outline consistente.
           </p>
           <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;i class="ti ti-heart"&gt;&lt;/i&gt;</code>
+            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;i class="ti tabler-heart"&gt;&lt;/i&gt;</code>
             <div style="display: flex; gap: 0.5rem; font-size: 1.5rem; color: #28c76f;">
-              <i class="ti ti-heart"></i>
-              <i class="ti ti-star"></i>
-              <i class="ti ti-circle-check"></i>
-              <i class="ti ti-info-circle"></i>
+              <i class="ti tabler-heart"></i>
+              <i class="ti tabler-star"></i>
+              <i class="ti tabler-circle-check"></i>
+              <i class="ti tabler-info-circle"></i>
             </div>
           </div>
         </div>
@@ -252,19 +252,19 @@ export const InButtons = {
       
       <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-primary">
-          <i class="ti ti-plus me-1"></i>
+          <i class="ti tabler-plus me-1"></i>
           Adicionar
         </button>
         <button class="btn btn-success">
-          <i class="ti ti-check me-1"></i>
+          <i class="ti tabler-check me-1"></i>
           Confirmar
         </button>
         <button class="btn btn-danger">
-          <i class="ti ti-trash me-1"></i>
+          <i class="ti tabler-trash me-1"></i>
           Deletar
         </button>
         <button class="btn btn-secondary">
-          <i class="ti ti-download me-1"></i>
+          <i class="ti tabler-download me-1"></i>
           Download
         </button>
       </div>
@@ -272,23 +272,23 @@ export const InButtons = {
       <h6 class="mb-3">Icon-only buttons</h6>
       <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-primary btn-icon">
-          <i class="ti ti-pencil"></i>
+          <i class="ti tabler-pencil"></i>
         </button>
         <button class="btn btn-success btn-icon">
-          <i class="ti ti-check"></i>
+          <i class="ti tabler-check"></i>
         </button>
         <button class="btn btn-danger btn-icon">
-          <i class="ti ti-trash"></i>
+          <i class="ti tabler-trash"></i>
         </button>
         <button class="btn btn-secondary btn-icon">
-          <i class="ti ti-dots-vertical"></i>
+          <i class="ti tabler-dots-vertical"></i>
         </button>
       </div>
 
       <div class="alert alert-secondary">
         <strong>Código:</strong>
         <pre class="mb-0 mt-2"><code>&lt;button class="btn btn-primary"&gt;
-  &lt;i class="ti ti-plus me-1"&gt;&lt;/i&gt;
+  &lt;i class="ti tabler-plus me-1"&gt;&lt;/i&gt;
   Adicionar
 &lt;/button&gt;</code></pre>
       </div>
@@ -298,12 +298,12 @@ export const InButtons = {
     docs: {
       source: {
         code: `<button class="btn btn-primary">
-  <i class="ti ti-plus me-1"></i>
+  <i class="ti tabler-plus me-1"></i>
   Adicionar
 </button>
 
 <button class="btn btn-icon btn-primary">
-  <i class="ti ti-pencil"></i>
+  <i class="ti tabler-pencil"></i>
 </button>`
       }
     }
