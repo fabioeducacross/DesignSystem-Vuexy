@@ -59,15 +59,6 @@ const preview = {
         ],
       },
     },
-    docs: {
-      theme: {
-        brandTitle: 'Educacross Design System',
-        brandUrl: 'https://educacross.com',
-        colorPrimary: '#7367f0',
-        colorSecondary: '#00bad1',
-        fontBase: '"Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      },
-    },
   },
   decorators: [
     (Story) => {
