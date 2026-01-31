@@ -252,19 +252,19 @@ export const InButtons = {
       
       <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-primary">
-          <i class="bi bi-plus me-1"></i>
+          <i class="bx bx-plus me-1"></i>
           Adicionar
         </button>
         <button class="btn btn-success">
-          <i class="bi bi-check me-1"></i>
+          <i class="bx bx-check me-1"></i>
           Confirmar
         </button>
         <button class="btn btn-danger">
-          <i class="bi bi-trash me-1"></i>
+          <i class="bx bx-trash me-1"></i>
           Deletar
         </button>
         <button class="btn btn-secondary">
-          <i class="bi bi-download me-1"></i>
+          <i class="bx bx-download me-1"></i>
           Download
         </button>
       </div>
@@ -272,28 +272,42 @@ export const InButtons = {
       <h6 class="mb-3">Icon-only buttons</h6>
       <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-primary btn-icon">
-          <i class="bi bi-pencil"></i>
+          <i class="bx bx-pencil"></i>
         </button>
         <button class="btn btn-success btn-icon">
-          <i class="bi bi-check"></i>
+          <i class="bx bx-check"></i>
         </button>
         <button class="btn btn-danger btn-icon">
-          <i class="bi bi-trash"></i>
+          <i class="bx bx-trash"></i>
         </button>
         <button class="btn btn-secondary btn-icon">
-          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bx bx-dots-vertical-rounded"></i>
         </button>
       </div>
 
       <div class="alert alert-secondary">
         <strong>Código:</strong>
         <pre class="mb-0 mt-2"><code>&lt;button class="btn btn-primary"&gt;
-  &lt;i class="bi bi-plus me-1"&gt;&lt;/i&gt;
+  &lt;i class="bx bx-plus me-1"&gt;&lt;/i&gt;
   Adicionar
 &lt;/button&gt;</code></pre>
       </div>
     </div>
   `,
+  parameters: {
+    docs: {
+      source: {
+        code: `<button class="btn btn-primary">
+  <i class="bx bx-plus me-1"></i>
+  Adicionar
+</button>
+
+<button class="btn btn-icon btn-primary">
+  <i class="bx bx-pencil"></i>
+</button>`
+      }
+    }
+  }
 };
 
 export const InInputGroups = {
