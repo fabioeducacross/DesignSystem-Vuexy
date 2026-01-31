@@ -186,7 +186,7 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
               <i class="bx bx-star"></i>
             </button>
             
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
                  class="rounded-circle me-3"
                  style="width: 40px; height: 40px;">
@@ -220,7 +220,7 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
               <i class="bx bxs-star text-warning"></i>
             </button>
             
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
                  class="rounded-circle me-3"
                  style="width: 40px; height: 40px;">
@@ -253,7 +253,7 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
               <i class="bx bx-star"></i>
             </button>
             
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/3.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
                  class="rounded-circle me-3"
                  style="width: 40px; height: 40px;">
@@ -287,7 +287,7 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
               <i class="bx bx-star"></i>
             </button>
             
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/4.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff4c51'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3ERP%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
                  class="rounded-circle me-3"
                  style="width: 40px; height: 40px;">

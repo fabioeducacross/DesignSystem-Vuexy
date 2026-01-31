@@ -533,7 +533,7 @@ Implementação oficial usando BS Stepper do Vuexy:
           const address = document.getElementById('input-address').value;
           const city = document.getElementById('input-city').value;
           
-          alert(\`Cadastro completo!\\n\\nNome: \${name}\\nEmail: \${email}\\nEndereço: \${address}\\nCidade: \${city}\`);
+          alert('Cadastro completo!\n\nNome: ' + name + '\nEmail: ' + email + '\nEndereço: ' + address + '\nCidade: ' + city);
         });
         
         // Previous buttons
@@ -554,11 +554,11 @@ Implementação oficial usando BS Stepper do Vuexy:
           btn.addEventListener('click', () => stepperNonLinear.previous());
         });
         
-        console.log('✅ BS Stepper: 2 instâncias inicializadas');
+        console.log('BS Stepper: 2 instancias inicializadas');
       }
     }, 100);
 
-    return \`
+    return `
       <style>
         .bs-stepper-header {
           padding: 1rem;
@@ -805,6 +805,6 @@ Implementação oficial usando BS Stepper do Vuexy:
           </ul>
         </div>
       </div>
-    \`;
+    `;
   }
 };

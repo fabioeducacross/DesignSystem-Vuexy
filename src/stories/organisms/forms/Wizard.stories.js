@@ -116,7 +116,7 @@ const createWizard = ({ currentStep = 1 }) => {
               <!-- Product Item -->
               <div class="col-12">
                 <div class="d-flex align-items-center border rounded p-3">
-                  <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/products/1.png" 
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" 
                        alt="Product" 
                        class="me-3"
                        style="width: 80px; height: 80px; object-fit: cover;">
@@ -142,7 +142,7 @@ const createWizard = ({ currentStep = 1 }) => {
               
               <div class="col-12">
                 <div class="d-flex align-items-center border rounded p-3">
-                  <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/products/2.png" 
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" 
                        alt="Product" 
                        class="me-3"
                        style="width: 80px; height: 80px; object-fit: cover;">

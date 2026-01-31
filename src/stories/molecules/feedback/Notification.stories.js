@@ -402,15 +402,14 @@ export const Interactive = {
             notification.style.opacity = '0';
             notification.style.transition = 'opacity 0.3s';
             
-            notification.innerHTML = `
-              <div class="d-flex">
-                <div class="toast-body">
-                  <i class="${icons[variant]} me-2"></i>
-                  <strong>${title}</strong> ${message}
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="dismissNotification('${id}')" aria-label="Close"></button>
-              </div>
-            `;
+            notification.innerHTML = 
+              '<div class="d-flex">' +
+                '<div class="toast-body">' +
+                  '<i class="' + icons[variant] + ' me-2"></i>' +
+                  '<strong>' + title + '</strong> ' + message +
+                '</div>' +
+                '<button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="dismissNotification(\'' + id + '\')" aria-label="Close"></button>' +
+              '</div>';
             
             container.appendChild(notification);
             

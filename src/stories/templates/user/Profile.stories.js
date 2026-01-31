@@ -75,7 +75,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
   <div class="card mb-4">
     <div class="position-relative">
       <!-- Cover Photo -->
-      <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/pages/profile-banner.png" 
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='300'%3E%3Cdefs%3E%3ClinearGradient id='profGrad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23696cff;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238e92fd;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='300' fill='url(%23profGrad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dy='.35em'%3EProfile Banner%3C/text%3E%3C/svg%3E" 
            class="card-img-top" 
            alt="user-cover" 
            style="height: 250px; object-fit: cover;">
@@ -92,7 +92,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
       <div class="d-flex align-items-start flex-column flex-md-row">
         <!-- Avatar -->
         <div class="position-relative mb-3 mb-md-0">
-          <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                alt="user-avatar" 
                class="rounded border border-4 border-white"
                style="width: 120px; height: 120px; margin-top: -60px;">
@@ -308,7 +308,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
               <ul class="list-group list-group-timeline list-group-timeline-primary">
                 <li class="list-group-item list-group-timeline-primary">
                   <div class="d-flex align-items-start">
-                    <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
                          class="rounded-circle me-3"
                          style="width: 40px; height: 40px;">
@@ -321,7 +321,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                 
                 <li class="list-group-item list-group-timeline-primary">
                   <div class="d-flex align-items-start">
-                    <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
                          class="rounded-circle me-3"
                          style="width: 40px; height: 40px;">
@@ -339,7 +339,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                 
                 <li class="list-group-item list-group-timeline-primary">
                   <div class="d-flex align-items-start">
-                    <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
                          class="rounded-circle me-3"
                          style="width: 40px; height: 40px;">
@@ -376,7 +376,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="d-flex align-items-center">
-                    <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/2.png" 
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
                          class="rounded-circle me-3"
                          style="width: 50px; height: 50px;">
@@ -390,7 +390,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                 
                 <div class="col-md-6">
                   <div class="d-flex align-items-center">
-                    <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/3.png" 
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
                          class="rounded-circle me-3"
                          style="width: 50px; height: 50px;">
@@ -489,7 +489,7 @@ export const Interactive = () => {
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-items-center mb-4">
-            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                  class="rounded-circle me-3" width="80" height="80" alt="avatar">
             <div class="flex-grow-1">
               <h4 class="mb-1">John Doe</h4>
