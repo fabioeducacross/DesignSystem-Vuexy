@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Ícones Tabler</title>
+  <link rel="stylesheet" href="http://localhost:6006/vuexy/fonts/iconify-icons.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+    .icon-test {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: white;
+      margin: 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .icon-test i {
+      font-size: 2rem;
+    }
+    .label {
+      color: #666;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teste de Ícones Tabler</h1>
+  
+  <h2>Teste 1: Classe .ti + .tabler-heart</h2>
+  <div class="icon-test">
+    <i class="ti tabler-heart" style="color: red;"></i>
+    <span class="label">ti tabler-heart</span>
+  </div>
+  
+  <h2>Teste 2: Classe .ti + .tabler-star</h2>
+  <div class="icon-test">
+    <i class="ti tabler-star" style="color: gold;"></i>
+    <span class="label">ti tabler-star</span>
+  </div>
+  
+  <h2>Teste 3: Classe .ti + .tabler-plus</h2>
+  <div class="icon-test">
+    <i class="ti tabler-plus" style="color: green;"></i>
+    <span class="label">ti tabler-plus</span>
+  </div>
+  
+  <h2>Teste 4: Classe .ti + .tabler-check</h2>
+  <div class="icon-test">
+    <i class="ti tabler-check" style="color: blue;"></i>
+    <span class="label">ti tabler-check</span>
+  </div>
+
+  <hr style="margin: 2rem 0;">
+  
+  <h2>Debug Info</h2>
+  <pre id="debug"></pre>
+
+  <script>
+    window.addEventListener('load', () => {
+      const icon = document.querySelector('.ti.tabler-heart');
+      const styles = window.getComputedStyle(icon);
+      const debug = document.getElementById('debug');
+      
+      debug.textContent = `
+Display: ${styles.display}
+Width: ${styles.width}
+Height: ${styles.height}
+Background-color: ${styles.backgroundColor}
+Mask-image: ${styles.maskImage || styles.webkitMaskImage}
+--svg variable: ${styles.getPropertyValue('--svg')}
+      `.trim();
+    });
+  </script>
+</body>
+</html>

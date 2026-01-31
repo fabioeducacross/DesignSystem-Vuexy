@@ -363,7 +363,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                     data-bs-placement="top"
                     data-bs-title="Top Popover"
                     data-bs-content="Este popover está posicionado no topo. Clique fora para fechar.">
-              <i class="ti ti-arrow-up"></i> Top
+              <i class="ti tabler-arrow-up"></i> Top
             </button>
             
             <button type="button" class="btn btn-secondary" 
@@ -371,7 +371,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                     data-bs-placement="right"
                     data-bs-title="Right Popover"
                     data-bs-content="Este popover está à direita. O posicionamento se ajusta automaticamente nas bordas.">
-              <i class="ti ti-arrow-right"></i> Right
+              <i class="ti tabler-arrow-right"></i> Right
             </button>
             
             <button type="button" class="btn btn-success" 
@@ -379,7 +379,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                     data-bs-placement="bottom"
                     data-bs-title="Bottom Popover"
                     data-bs-content="Popover embaixo do botão. Perfeito para informações adicionais.">
-              <i class="ti ti-arrow-down"></i> Bottom
+              <i class="ti tabler-arrow-down"></i> Bottom
             </button>
             
             <button type="button" class="btn btn-danger" 
@@ -387,7 +387,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                     data-bs-placement="left"
                     data-bs-title="Left Popover"
                     data-bs-content="Este popover aparece à esquerda do elemento trigger.">
-              <i class="ti ti-arrow-left"></i> Left
+              <i class="ti tabler-arrow-left"></i> Left
             </button>
           </div>
         </div>
@@ -400,28 +400,28 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                     data-bs-toggle="popover" 
                     data-bs-title="ℹ️ Ajuda"
                     data-bs-content="Use popovers para fornecer contexto ou ajuda adicional aos usuários sem poluir a interface.">
-              <i class="ti ti-help-circle me-1"></i> Help
+              <i class="ti tabler-help-circle me-1"></i> Help
             </button>
             
             <button type="button" class="btn btn-outline-success" 
                     data-bs-toggle="popover" 
                     data-bs-title="✅ Dica"
                     data-bs-content="Popovers são ideais para dicas (hints) que aparecem sob demanda, sem ocupar espaço permanentemente.">
-              <i class="ti ti-bulb me-1"></i> Tips
+              <i class="ti tabler-bulb me-1"></i> Tips
             </button>
             
             <button type="button" class="btn btn-outline-warning" 
                     data-bs-toggle="popover" 
                     data-bs-title="⚠️ Atenção"
                     data-bs-content="Use popovers para avisos ou informações importantes que o usuário deve ler antes de continuar.">
-              <i class="ti ti-alert-triangle me-1"></i> Warning
+              <i class="ti tabler-alert-triangle me-1"></i> Warning
             </button>
             
             <button type="button" class="btn btn-outline-secondary" 
                     data-bs-toggle="popover" 
                     data-bs-title="📋 Detalhes"
                     data-bs-content="Popovers podem mostrar informações detalhadas sobre um item sem navegar para outra página.">
-              <i class="ti ti-info-circle me-1"></i> Details
+              <i class="ti tabler-info-circle me-1"></i> Details
             </button>
           </div>
         </div>
@@ -434,7 +434,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                   data-bs-placement="bottom"
                   data-bs-title="📖 Informações do Produto"
                   data-bs-content="Este produto possui múltiplas características: disponível em 5 cores diferentes, 3 tamanhos (P, M, G), entrega grátis para compras acima de R$ 100, garantia de 12 meses, e suporte técnico 24/7. Aproveite 15% de desconto na primeira compra!">
-            <i class="ti ti-shopping-cart me-1"></i> Ver Detalhes
+            <i class="ti tabler-shopping-cart me-1"></i> Ver Detalhes
           </button>
         </div>
         
@@ -446,7 +446,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                   data-bs-html="true"
                   data-bs-title="<strong>🎨 Formatação HTML</strong>"
                   data-bs-content="<ul class='mb-0 ps-3'><li><strong>Bold text</strong></li><li><em>Italic text</em></li><li><u>Underlined text</u></li><li><code>Code snippet</code></li></ul>">
-            <i class="ti ti-code me-1"></i> HTML Content
+            <i class="ti tabler-code me-1"></i> HTML Content
           </button>
         </div>
         
@@ -458,7 +458,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                   data-bs-trigger="hover"
                   data-bs-title="Hover Popover"
                   data-bs-content="Este popover aparece ao passar o mouse e desaparece quando você sai. Similar a um tooltip, mas com mais conteúdo.">
-            <i class="ti ti-cursor me-1"></i> Hover Me
+            <i class="ti tabler-cursor me-1"></i> Hover Me
           </button>
         </div>
         
@@ -471,7 +471,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                   tabindex="0"
                   data-bs-title="🔒 Dismissible"
                   data-bs-content="Este popover fecha automaticamente quando você clica fora ou pressiona Tab. Perfeito para formulários e validações.">
-            <i class="ti ti-click me-1"></i> Click & Dismiss
+            <i class="ti tabler-click me-1"></i> Click & Dismiss
           </button>
         </div>
         
@@ -488,7 +488,7 @@ Demonstra popovers funcionando com Bootstrap JS do Vuexy:
                           data-bs-placement="right"
                           data-bs-title="ℹ️ Informações Adicionais"
                           data-bs-content="Este produto está disponível em múltiplas cores e tamanhos. Frete grátis para compras acima de R$ 100. Garantia de 30 dias.">
-                    <i class="ti ti-info-circle"></i>
+                    <i class="ti tabler-info-circle"></i>
                   </button>
                 </h5>
                 <p class="card-text">

@@ -358,7 +358,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-search me-2 text-primary"></i>
+                  <i class="ti tabler-search me-2 text-primary"></i>
                   Search/Filter
                 </h6>
                 <p class="text-muted small">Digite para filtrar opções</p>
@@ -391,7 +391,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-checkbox me-2 text-success"></i>
+                  <i class="ti tabler-checkbox me-2 text-success"></i>
                   Multi-select
                 </h6>
                 <p class="text-muted small">Selecione múltiplas opções</p>
@@ -416,7 +416,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-tag me-2 text-info"></i>
+                  <i class="ti tabler-tag me-2 text-info"></i>
                   Tags Mode
                 </h6>
                 <p class="text-muted small">Crie novas opções dinamicamente</p>
@@ -437,7 +437,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-folder me-2 text-warning"></i>
+                  <i class="ti tabler-folder me-2 text-warning"></i>
                   Com Grupos
                 </h6>
                 <p class="text-muted small">Opções organizadas em grupos</p>
@@ -471,7 +471,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-lock me-2 text-danger"></i>
+                  <i class="ti tabler-lock me-2 text-danger"></i>
                   Opções Desabilitadas
                 </h6>
                 <p class="text-muted small">Algumas opções não podem ser selecionadas</p>
@@ -493,7 +493,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-palette me-2 text-purple"></i>
+                  <i class="ti tabler-palette me-2 text-purple"></i>
                   Template Customizado
                 </h6>
                 <p class="text-muted small">Opções com ícones</p>
@@ -516,7 +516,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-cloud-search me-2 text-primary"></i>
+                  <i class="ti tabler-cloud-search me-2 text-primary"></i>
                   Ajax Search (Simulado)
                 </h6>
                 <p class="text-muted">Busca usuários conforme você digita</p>
@@ -534,7 +534,7 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card bg-label-secondary">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti ti-forms me-2"></i>
+                  <i class="ti tabler-forms me-2"></i>
                   Exemplo: Configuração de Permissões
                 </h6>
                 <div class="row g-3">
@@ -557,7 +557,7 @@ Implementação oficial usando Select2 do Vuexy:
                   </div>
                   <div class="col-12">
                     <button class="btn btn-primary">
-                      <i class="ti ti-check me-2"></i>
+                      <i class="ti tabler-check me-2"></i>
                       Salvar Permissões
                     </button>
                   </div>

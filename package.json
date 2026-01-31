@@ -6,6 +6,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "serve-storybook": "http-server storybook-static -p 6006",
     "integrate-vuexy": "bash scripts/integrate-vuexy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,11 +14,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.6.15",
-    "@storybook/addon-interactions": "^8.6.15",
+    "@storybook/addon-essentials": "8.6.15",
+    "@storybook/addon-interactions": "8.6.15",
     "@storybook/addon-links": "^8.6.15",
     "@storybook/html": "^8.6.15",
     "@storybook/html-vite": "^8.6.15",
+    "bootstrap-icons": "^1.13.1",
     "storybook": "^8.6.15"
   },
   "dependencies": {

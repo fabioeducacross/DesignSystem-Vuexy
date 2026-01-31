@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Final - Ícones</title>
+  <link rel="stylesheet" href="http://localhost:6006/vuexy/fonts/iconify-icons.css">
+  <link rel="stylesheet" href="http://localhost:6006/vuexy/fonts/fontawesome.css">
+  <style>
+    body { padding: 2rem; font-family: Arial; background: #f5f5f5; }
+    .test { padding: 2rem; margin: 1rem 0; background: white; border-radius: 8px; }
+    .test h3 { margin-top: 0; color: #333; }
+    .icon-row { display: flex; gap: 2rem; align-items: center; margin: 1rem 0; }
+    .icon-row i { font-size: 3rem; }
+    .icon-row code { background: #f0f0f0; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>🔬 Teste Comparativo de Ícones</h1>
+  
+  <div class="test">
+    <h3>✅ Font Awesome (funcionando)</h3>
+    <div class="icon-row">
+      <i class="fa-solid fa-heart" style="color: red;"></i>
+      <code>class="fa-solid fa-heart"</code>
+      <span class="success">← Este deve aparecer!</span>
+    </div>
+    <div class="icon-row">
+      <i class="fa-solid fa-star" style="color: gold;"></i>
+      <code>class="fa-solid fa-star"</code>
+      <span class="success">← Este deve aparecer!</span>
+    </div>
+  </div>
+
+  <div class="test">
+    <h3>❓ Tabler Icons (testando)</h3>
+    <div class="icon-row">
+      <i class="ti tabler-heart" style="color: red;"></i>
+      <code>class="ti tabler-heart"</code>
+      <span class="error">← Aparece?</span>
+    </div>
+    <div class="icon-row">
+      <i class="ti tabler-star" style="color: gold;"></i>
+      <code>class="ti tabler-star"</code>
+      <span class="error">← Aparece?</span>
+    </div>
+  </div>
+
+  <div class="test">
+    <h3>🔍 Debug Info</h3>
+    <div id="debug"></div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const tablerIcon = document.querySelector('.ti.tabler-heart');
+      const faIcon = document.querySelector('.fa-solid.fa-heart');
+      const debug = document.getElementById('debug');
+      
+      const tablerStyles = window.getComputedStyle(tablerIcon);
+      const faStyles = window.getComputedStyle(faIcon);
+      
+      debug.innerHTML = `
+        <h4>Tabler Icon (.ti .tabler-heart):</h4>
+        <pre>
+display: ${tablerStyles.display}
+width: ${tablerStyles.width}
+height: ${tablerStyles.height}
+background-color: ${tablerStyles.backgroundColor}
+mask-image: ${tablerStyles.maskImage || 'N/A'}
+-webkit-mask-image: ${tablerStyles.webkitMaskImage || 'N/A'}
+--svg: ${tablerStyles.getPropertyValue('--svg') || 'N/A'}
+        </pre>
+        
+        <h4>Font Awesome Icon (.fa-solid .fa-heart):</h4>
+        <pre>
+display: ${faStyles.display}
+font-family: ${faStyles.fontFamily}
+content (via :before): Check no DevTools
+        </pre>
+      `;
+    });
+  </script>
+</body>
+</html>

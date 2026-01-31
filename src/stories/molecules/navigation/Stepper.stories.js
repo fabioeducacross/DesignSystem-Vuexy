@@ -582,7 +582,7 @@ Implementação oficial usando BS Stepper do Vuexy:
       
       <div style="padding: 30px;">
         <h5 class="mb-4">
-          <i class="ti ti-stairs me-2 text-primary"></i>
+          <i class="ti tabler-stairs me-2 text-primary"></i>
           Stepper Interativo com BS Stepper
         </h5>
         
@@ -590,7 +590,7 @@ Implementação oficial usando BS Stepper do Vuexy:
         <div class="card mb-4">
           <div class="card-header">
             <h6 class="mb-0">
-              <i class="ti ti-lock me-2"></i>
+              <i class="ti tabler-lock me-2"></i>
               Linear Mode (com validação)
             </h6>
           </div>
@@ -600,7 +600,7 @@ Implementação oficial usando BS Stepper do Vuexy:
                 <div class="step" data-target="#step-1">
                   <button type="button" class="step-trigger">
                     <span class="bs-stepper-circle">
-                      <i class="ti ti-user"></i>
+                      <i class="ti tabler-user"></i>
                     </span>
                     <span class="bs-stepper-label">
                       <span class="bs-stepper-title">Dados Pessoais</span>
@@ -612,7 +612,7 @@ Implementação oficial usando BS Stepper do Vuexy:
                 <div class="step" data-target="#step-2">
                   <button type="button" class="step-trigger">
                     <span class="bs-stepper-circle">
-                      <i class="ti ti-home"></i>
+                      <i class="ti tabler-home"></i>
                     </span>
                     <span class="bs-stepper-label">
                       <span class="bs-stepper-title">Endereço</span>
@@ -624,7 +624,7 @@ Implementação oficial usando BS Stepper do Vuexy:
                 <div class="step" data-target="#step-3">
                   <button type="button" class="step-trigger">
                     <span class="bs-stepper-circle">
-                      <i class="ti ti-check"></i>
+                      <i class="ti tabler-check"></i>
                     </span>
                     <span class="bs-stepper-label">
                       <span class="bs-stepper-title">Confirmação</span>
@@ -648,7 +648,7 @@ Implementação oficial usando BS Stepper do Vuexy:
                   </div>
                   <div class="mt-3">
                     <button class="btn btn-primary" id="btn-next-1">
-                      Próximo <i class="ti ti-arrow-right ms-1"></i>
+                      Próximo <i class="ti tabler-arrow-right ms-1"></i>
                     </button>
                   </div>
                 </div>
@@ -670,26 +670,26 @@ Implementação oficial usando BS Stepper do Vuexy:
                   </div>
                   <div class="mt-3">
                     <button class="btn btn-outline-secondary me-2" id="btn-prev-2">
-                      <i class="ti ti-arrow-left me-1"></i> Voltar
+                      <i class="ti tabler-arrow-left me-1"></i> Voltar
                     </button>
                     <button class="btn btn-primary" id="btn-next-2">
-                      Próximo <i class="ti ti-arrow-right ms-1"></i>
+                      Próximo <i class="ti tabler-arrow-right ms-1"></i>
                     </button>
                   </div>
                 </div>
                 <div id="step-3" class="content">
                   <h6 class="mb-3">Etapa 3: Confirmação</h6>
                   <div class="alert alert-success">
-                    <i class="ti ti-circle-check me-2"></i>
+                    <i class="ti tabler-circle-check me-2"></i>
                     Todas as informações foram preenchidas!
                   </div>
                   <p>Revise seus dados e clique em "Finalizar" para concluir o cadastro.</p>
                   <div class="mt-3">
                     <button class="btn btn-outline-secondary me-2" id="btn-prev-3">
-                      <i class="ti ti-arrow-left me-1"></i> Voltar
+                      <i class="ti tabler-arrow-left me-1"></i> Voltar
                     </button>
                     <button class="btn btn-success" id="btn-submit">
-                      <i class="ti ti-check me-1"></i> Finalizar
+                      <i class="ti tabler-check me-1"></i> Finalizar
                     </button>
                   </div>
                 </div>
@@ -702,7 +702,7 @@ Implementação oficial usando BS Stepper do Vuexy:
         <div class="card">
           <div class="card-header">
             <h6 class="mb-0">
-              <i class="ti ti-arrow-bounce me-2"></i>
+              <i class="ti tabler-arrow-bounce me-2"></i>
               Non-linear Mode (navegação livre)
             </h6>
           </div>

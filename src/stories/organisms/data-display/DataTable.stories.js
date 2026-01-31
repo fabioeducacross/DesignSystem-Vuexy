@@ -643,7 +643,7 @@ Implementação oficial usando DataTables do Vuexy:
       
       <div style="padding: 30px;">
         <h5 class="mb-4">
-          <i class="ti ti-table me-2 text-primary"></i>
+          <i class="ti tabler-table me-2 text-primary"></i>
           DataTable Avançado com jQuery DataTables
         </h5>
         

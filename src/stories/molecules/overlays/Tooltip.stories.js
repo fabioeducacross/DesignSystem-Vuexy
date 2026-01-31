@@ -300,28 +300,28 @@ Demonstra tooltips funcionando com Bootstrap JS do Vuexy:
                     data-bs-toggle="tooltip" 
                     data-bs-placement="top" 
                     title="Tooltip no topo">
-              <i class="ti ti-arrow-up"></i> Top
+              <i class="ti tabler-arrow-up"></i> Top
             </button>
             
             <button type="button" class="btn btn-secondary" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right" 
                     title="Tooltip à direita">
-              <i class="ti ti-arrow-right"></i> Right
+              <i class="ti tabler-arrow-right"></i> Right
             </button>
             
             <button type="button" class="btn btn-success" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="bottom" 
                     title="Tooltip embaixo">
-              <i class="ti ti-arrow-down"></i> Bottom
+              <i class="ti tabler-arrow-down"></i> Bottom
             </button>
             
             <button type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="left" 
                     title="Tooltip à esquerda">
-              <i class="ti ti-arrow-left"></i> Left
+              <i class="ti tabler-arrow-left"></i> Left
             </button>
           </div>
         </div>
@@ -375,31 +375,31 @@ Demonstra tooltips funcionando com Bootstrap JS do Vuexy:
             <button type="button" class="btn btn-icon btn-outline-primary" 
                     data-bs-toggle="tooltip" 
                     title="Editar">
-              <i class="ti ti-edit"></i>
+              <i class="ti tabler-edit"></i>
             </button>
             
             <button type="button" class="btn btn-icon btn-outline-danger" 
                     data-bs-toggle="tooltip" 
                     title="Excluir">
-              <i class="ti ti-trash"></i>
+              <i class="ti tabler-trash"></i>
             </button>
             
             <button type="button" class="btn btn-icon btn-outline-info" 
                     data-bs-toggle="tooltip" 
                     title="Informações">
-              <i class="ti ti-info-circle"></i>
+              <i class="ti tabler-info-circle"></i>
             </button>
             
             <button type="button" class="btn btn-icon btn-outline-success" 
                     data-bs-toggle="tooltip" 
                     title="Download">
-              <i class="ti ti-download"></i>
+              <i class="ti tabler-download"></i>
             </button>
             
             <button type="button" class="btn btn-icon btn-outline-secondary" 
                     data-bs-toggle="tooltip" 
                     title="Configurações">
-              <i class="ti ti-settings"></i>
+              <i class="ti tabler-settings"></i>
             </button>
           </div>
         </div>

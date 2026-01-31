@@ -442,37 +442,37 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="row g-3 mb-4">
           <div class="col-md-4">
             <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalBasic">
-              <i class="ti ti-square me-1"></i> Default Modal
+              <i class="ti tabler-square me-1"></i> Default Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalLarge">
-              <i class="ti ti-square me-1"></i> Large Modal
+              <i class="ti tabler-square me-1"></i> Large Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-warning w-100" data-bs-toggle="modal" data-bs-target="#modalSmall">
-              <i class="ti ti-square me-1"></i> Small Modal
+              <i class="ti tabler-square me-1"></i> Small Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-info w-100" data-bs-toggle="modal" data-bs-target="#modalCentered">
-              <i class="ti ti-align-center me-1"></i> Centered
+              <i class="ti tabler-align-center me-1"></i> Centered
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#modalScrollable">
-              <i class="ti ti-scroll me-1"></i> Scrollable
+              <i class="ti tabler-scroll me-1"></i> Scrollable
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalFullscreen">
-              <i class="ti ti-maximize me-1"></i> Fullscreen
+              <i class="ti tabler-maximize me-1"></i> Fullscreen
             </button>
           </div>
         </div>
@@ -562,7 +562,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text-center py-4">
-                <i class="ti ti-info-circle" style="font-size: 48px; color: var(--bs-info);"></i>
+                <i class="ti tabler-info-circle" style="font-size: 48px; color: var(--bs-info);"></i>
                 <h6 class="mt-3">Modal Centralizado</h6>
                 <p class="mb-0">Este modal está centralizado verticalmente na tela usando .modal-dialog-centered</p>
               </div>
@@ -610,7 +610,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-12 text-center py-5">
-                      <i class="ti ti-maximize" style="font-size: 64px;"></i>
+                      <i class="ti tabler-maximize" style="font-size: 64px;"></i>
                       <h3 class="mt-3">Modal Fullscreen</h3>
                       <p class="lead">Este modal ocupa toda a tela do navegador</p>
                       <p>Ideal para formulários complexos, editores, ou visualizações que precisam de máximo espaço.</p>

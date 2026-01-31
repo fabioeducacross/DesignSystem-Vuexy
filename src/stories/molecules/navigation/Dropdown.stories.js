@@ -389,14 +389,14 @@ Esta story carrega o **Bootstrap JS real** do Vuexy para demonstrar a interativi
             <h6>Dropdown com Ícones</h6>
             <div class="dropdown">
               <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="ti ti-settings me-1"></i> Settings
+                <i class="ti tabler-settings me-1"></i> Settings
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-user me-2"></i>Profile</a></li>
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-settings me-2"></i>Settings</a></li>
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-credit-card me-2"></i>Billing</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-user me-2"></i>Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-settings me-2"></i>Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-credit-card me-2"></i>Billing</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class="ti ti-logout me-2"></i>Logout</a></li>
+                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class="ti tabler-logout me-2"></i>Logout</a></li>
               </ul>
             </div>
           </div>

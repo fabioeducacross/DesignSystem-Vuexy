@@ -490,7 +490,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    <i class="ti ti-help me-2"></i>
+                    <i class="ti tabler-help me-2"></i>
                     Como faço meu pedido?
                   </button>
                 </h2>
@@ -511,7 +511,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    <i class="ti ti-truck me-2"></i>
+                    <i class="ti tabler-truck me-2"></i>
                     Quais são as opções de entrega?
                   </button>
                 </h2>
@@ -529,7 +529,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    <i class="ti ti-credit-card me-2"></i>
+                    <i class="ti tabler-credit-card me-2"></i>
                     Quais formas de pagamento aceitam?
                   </button>
                 </h2>
@@ -538,22 +538,22 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                     <div class="row g-2">
                       <div class="col-6">
                         <div class="bg-label-primary p-2 rounded text-center">
-                          <i class="ti ti-credit-card"></i> Cartões
+                          <i class="ti tabler-credit-card"></i> Cartões
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="bg-label-success p-2 rounded text-center">
-                          <i class="ti ti-brand-paypal"></i> PayPal
+                          <i class="ti tabler-brand-paypal"></i> PayPal
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="bg-label-info p-2 rounded text-center">
-                          <i class="ti ti-qrcode"></i> Pix
+                          <i class="ti tabler-qrcode"></i> Pix
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="bg-label-warning p-2 rounded text-center">
-                          <i class="ti ti-barcode"></i> Boleto
+                          <i class="ti tabler-barcode"></i> Boleto
                         </div>
                       </div>
                     </div>
@@ -564,7 +564,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                    <i class="ti ti-rotate-clockwise me-2"></i>
+                    <i class="ti tabler-rotate-clockwise me-2"></i>
                     Como funciona a política de devolução?
                   </button>
                 </h2>
@@ -594,7 +594,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#settings1">
-                    <i class="ti ti-user me-2"></i>
+                    <i class="ti tabler-user me-2"></i>
                     Perfil
                   </button>
                 </h2>
@@ -616,7 +616,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings2">
-                    <i class="ti ti-bell me-2"></i>
+                    <i class="ti tabler-bell me-2"></i>
                     Notificações
                   </button>
                 </h2>
@@ -641,7 +641,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings3">
-                    <i class="ti ti-lock me-2"></i>
+                    <i class="ti tabler-lock me-2"></i>
                     Privacidade
                   </button>
                 </h2>
@@ -666,20 +666,20 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings4">
-                    <i class="ti ti-shield me-2"></i>
+                    <i class="ti tabler-shield me-2"></i>
                     Segurança
                   </button>
                 </h2>
                 <div id="settings4" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <button class="btn btn-sm btn-outline-primary w-100 mb-2">
-                      <i class="ti ti-key me-1"></i> Alterar Senha
+                      <i class="ti tabler-key me-1"></i> Alterar Senha
                     </button>
                     <button class="btn btn-sm btn-outline-success w-100 mb-2">
-                      <i class="ti ti-device-mobile me-1"></i> Autenticação 2FA
+                      <i class="ti tabler-device-mobile me-1"></i> Autenticação 2FA
                     </button>
                     <button class="btn btn-sm btn-outline-danger w-100">
-                      <i class="ti ti-logout me-1"></i> Sair de todos dispositivos
+                      <i class="ti tabler-logout me-1"></i> Sair de todos dispositivos
                     </button>
                   </div>
                 </div>
@@ -697,7 +697,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#docs1">
-                    <i class="ti ti-book me-2"></i>
+                    <i class="ti tabler-book me-2"></i>
                     Introdução
                   </button>
                 </h2>
@@ -715,7 +715,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docs2">
-                    <i class="ti ti-code me-2"></i>
+                    <i class="ti tabler-code me-2"></i>
                     API Reference
                   </button>
                 </h2>
@@ -736,7 +736,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docs3">
-                    <i class="ti ti-puzzle me-2"></i>
+                    <i class="ti tabler-puzzle me-2"></i>
                     Exemplos
                   </button>
                 </h2>
@@ -746,17 +746,17 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                     <ul class="list-group">
                       <li class="list-group-item">
                         <a href="javascript:void(0);" class="text-decoration-none">
-                          <i class="ti ti-file-code me-2"></i>Exemplo 1: Setup Básico
+                          <i class="ti tabler-file-code me-2"></i>Exemplo 1: Setup Básico
                         </a>
                       </li>
                       <li class="list-group-item">
                         <a href="javascript:void(0);" class="text-decoration-none">
-                          <i class="ti ti-file-code me-2"></i>Exemplo 2: Autenticação
+                          <i class="ti tabler-file-code me-2"></i>Exemplo 2: Autenticação
                         </a>
                       </li>
                       <li class="list-group-item">
                         <a href="javascript:void(0);" class="text-decoration-none">
-                          <i class="ti ti-file-code me-2"></i>Exemplo 3: CRUD Operations
+                          <i class="ti tabler-file-code me-2"></i>Exemplo 3: CRUD Operations
                         </a>
                       </li>
                     </ul>

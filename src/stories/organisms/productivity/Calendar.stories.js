@@ -660,28 +660,28 @@ Implementação oficial usando FullCalendar do Vuexy:
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <h5 class="mb-0">
-                <i class="ti ti-calendar-event me-2 text-primary"></i>
+                <i class="ti tabler-calendar-event me-2 text-primary"></i>
                 Calendar Interativo com FullCalendar
               </h5>
               <div class="d-flex gap-2">
                 <span class="badge bg-label-primary">
-                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
                   Reunião
                 </span>
                 <span class="badge bg-label-success">
-                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
                   Cliente
                 </span>
                 <span class="badge bg-label-danger">
-                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
                   Importante
                 </span>
                 <span class="badge bg-label-warning">
-                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
                   Dev
                 </span>
                 <span class="badge bg-label-info">
-                  <i class="ti ti-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
                   Treinamento
                 </span>
               </div>
@@ -716,7 +716,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="text-primary mb-2">
-                  <i class="ti ti-click me-1"></i>
+                  <i class="ti tabler-click me-1"></i>
                   Interações
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -732,7 +732,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-success">
               <div class="card-body">
                 <h6 class="text-success mb-2">
-                  <i class="ti ti-layout me-1"></i>
+                  <i class="ti tabler-layout me-1"></i>
                   Views Disponíveis
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -748,7 +748,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-info">
               <div class="card-body">
                 <h6 class="text-info mb-2">
-                  <i class="ti ti-palette me-1"></i>
+                  <i class="ti tabler-palette me-1"></i>
                   Categorias
                 </h6>
                 <ul class="list-unstyled small mb-0">

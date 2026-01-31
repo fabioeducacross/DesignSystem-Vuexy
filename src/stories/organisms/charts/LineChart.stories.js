@@ -615,7 +615,7 @@ Implementação oficial usando ApexCharts do Vuexy:
     return `
       <div style="padding: 30px;">
         <h5 class="mb-4">
-          <i class="ti ti-chart-line me-2 text-primary"></i>
+          <i class="ti tabler-chart-line me-2 text-primary"></i>
           Charts Interativos com ApexCharts
         </h5>
         
@@ -625,7 +625,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-trending-up me-2 text-primary"></i>
+                  <i class="ti tabler-trending-up me-2 text-primary"></i>
                   Line Chart - Tendência de Vendas
                 </h6>
               </div>
@@ -641,7 +641,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-chart-bar me-2 text-success"></i>
+                  <i class="ti tabler-chart-bar me-2 text-success"></i>
                   Bar Chart - Receita Mensal
                 </h6>
               </div>
@@ -657,7 +657,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-chart-pie me-2 text-warning"></i>
+                  <i class="ti tabler-chart-pie me-2 text-warning"></i>
                   Pie Chart - Distribuição de Produtos
                 </h6>
               </div>
@@ -673,7 +673,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-chart-donut me-2 text-danger"></i>
+                  <i class="ti tabler-chart-donut me-2 text-danger"></i>
                   Donut Chart - Status de Usuários
                 </h6>
               </div>
@@ -689,7 +689,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-chart-area-line me-2 text-info"></i>
+                  <i class="ti tabler-chart-area-line me-2 text-info"></i>
                   Area Chart - Volume de Tráfego
                 </h6>
               </div>
@@ -705,7 +705,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-chart-dots me-2 text-purple"></i>
+                  <i class="ti tabler-chart-dots me-2 text-purple"></i>
                   Mixed Chart - Vendas & Receita
                 </h6>
               </div>
@@ -723,7 +723,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="text-primary mb-2">
-                  <i class="ti ti-cursor-text me-1"></i>
+                  <i class="ti tabler-cursor-text me-1"></i>
                   Interatividade
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -738,7 +738,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card border-success">
               <div class="card-body">
                 <h6 class="text-success mb-2">
-                  <i class="ti ti-device-mobile me-1"></i>
+                  <i class="ti tabler-device-mobile me-1"></i>
                   Responsive
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -753,7 +753,7 @@ Implementação oficial usando ApexCharts do Vuexy:
             <div class="card border-info">
               <div class="card-body">
                 <h6 class="text-info mb-2">
-                  <i class="ti ti-sparkles me-1"></i>
+                  <i class="ti tabler-sparkles me-1"></i>
                   Animações
                 </h6>
                 <ul class="list-unstyled small mb-0">

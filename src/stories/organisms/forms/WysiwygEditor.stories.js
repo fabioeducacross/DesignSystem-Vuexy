@@ -515,7 +515,7 @@ Implementação oficial usando Quill do Vuexy:
       
       <div style="padding: 30px;">
         <h5 class="mb-4">
-          <i class="ti ti-text me-2 text-primary"></i>
+          <i class="ti tabler-text me-2 text-primary"></i>
           WYSIWYG Editor com Quill
         </h5>
         
@@ -525,16 +525,16 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card">
               <div class="card-header d-flex justify-content-between align-items-center">
                 <h6 class="mb-0">
-                  <i class="ti ti-edit me-2"></i>
+                  <i class="ti tabler-edit me-2"></i>
                   Editor Completo
                 </h6>
                 <div class="d-flex gap-2">
                   <span class="badge bg-label-primary">
-                    <i class="ti ti-letter-a me-1"></i>
+                    <i class="ti tabler-letter-a me-1"></i>
                     <span id="char-count">0</span> caracteres
                   </span>
                   <span class="badge bg-label-success">
-                    <i class="ti ti-book me-1"></i>
+                    <i class="ti tabler-book me-1"></i>
                     <span id="word-count">0</span> palavras
                   </span>
                 </div>
@@ -543,11 +543,11 @@ Implementação oficial usando Quill do Vuexy:
                 <div id="editor-full"></div>
                 <div class="mt-3">
                   <button class="btn btn-sm btn-primary" id="get-html-btn">
-                    <i class="ti ti-code me-1"></i>
+                    <i class="ti tabler-code me-1"></i>
                     Ver HTML
                   </button>
                   <button class="btn btn-sm btn-outline-secondary" onclick="window.Quill && document.querySelector('#editor-full').querySelector('.ql-editor').innerHTML = ''">
-                    <i class="ti ti-trash me-1"></i>
+                    <i class="ti tabler-trash me-1"></i>
                     Limpar
                   </button>
                 </div>
@@ -560,7 +560,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-layout-navbar me-2"></i>
+                  <i class="ti tabler-layout-navbar me-2"></i>
                   Toolbar Essencial
                 </h6>
               </div>
@@ -576,7 +576,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card">
               <div class="card-header">
                 <h6 class="mb-0">
-                  <i class="ti ti-bubble me-2"></i>
+                  <i class="ti tabler-bubble me-2"></i>
                   Tema Bubble (Inline)
                 </h6>
               </div>
@@ -592,7 +592,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="text-primary mb-2">
-                  <i class="ti ti-article me-1"></i>
+                  <i class="ti tabler-article me-1"></i>
                   Blog Post
                 </h6>
                 <p class="small mb-0">Editor completo com todas as opções de formatação, imagens, links e código.</p>
@@ -604,7 +604,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card border-success">
               <div class="card-body">
                 <h6 class="text-success mb-2">
-                  <i class="ti ti-message me-1"></i>
+                  <i class="ti tabler-message me-1"></i>
                   Comentários
                 </h6>
                 <p class="small mb-0">Toolbar essencial para permitir formatação básica sem exageros.</p>
@@ -616,7 +616,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card border-info">
               <div class="card-body">
                 <h6 class="text-info mb-2">
-                  <i class="ti ti-pencil me-1"></i>
+                  <i class="ti tabler-pencil me-1"></i>
                   Edição Inline
                 </h6>
                 <p class="small mb-0">Tema bubble para edição discreta sem toolbar fixa.</p>
@@ -629,7 +629,7 @@ Implementação oficial usando Quill do Vuexy:
             <div class="card bg-label-secondary">
               <div class="card-body">
                 <h6 class="mb-3">
-                  <i class="ti ti-sparkles me-2"></i>
+                  <i class="ti tabler-sparkles me-2"></i>
                   Funcionalidades do Quill
                 </h6>
                 <div class="row g-3">
@@ -700,7 +700,7 @@ Implementação oficial usando Quill do Vuexy:
               <p class="text-muted small">Este é o HTML gerado pelo editor:</p>
               <pre id="html-code"></pre>
               <button class="btn btn-sm btn-primary mt-2" onclick="navigator.clipboard.writeText(document.getElementById('html-code').textContent); alert('HTML copiado!')">
-                <i class="ti ti-copy me-1"></i>
+                <i class="ti tabler-copy me-1"></i>
                 Copiar HTML
               </button>
             </div>
