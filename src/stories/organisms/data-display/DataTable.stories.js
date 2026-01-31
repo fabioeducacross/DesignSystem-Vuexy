@@ -455,3 +455,264 @@ export const Compact = {
     }
   }
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - DataTables Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### DataTable com jQuery DataTables
+
+Implementação oficial usando DataTables do Vuexy:
+
+- ✅ **Search** - busca global em todas as colunas
+- ✅ **Sort** - ordenação por coluna (asc/desc)
+- ✅ **Pagination** - navegação por páginas
+- ✅ **Page Length** - escolher itens por página (10/25/50/100)
+- ✅ **Info** - mostra "Exibindo X de Y registros"
+- ✅ **Responsive** - adapta colunas em mobile
+- ✅ **Column Search** - busca individual por coluna
+
+**Casos de uso:**
+- Listagem de usuários
+- Relatórios de vendas
+- Inventário de produtos
+- Logs do sistema
+- Qualquer dataset grande
+
+### Como testar:
+1. Digite no Search para filtrar
+2. Clique nos headers para ordenar
+3. Teste paginação
+4. Use busca por coluna
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined') {
+        // Load jQuery first
+        if (!window.jQuery) {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = '/vuexy/vendors/libs/jquery/jquery.js';
+            script.onload = () => {
+              console.log('✅ jQuery carregado');
+              resolve();
+            };
+            script.onerror = () => reject(new Error('Failed to load jQuery'));
+            document.head.appendChild(script);
+          });
+        }
+        
+        // Load DataTables CSS
+        if (!document.querySelector('link[href*="datatables"]')) {
+          await new Promise((resolve, reject) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '/vuexy/vendors/libs/datatables-bs5/datatables.bootstrap5.css';
+            link.onload = () => resolve();
+            link.onerror = () => reject(new Error('Failed to load DataTables CSS'));
+            document.head.appendChild(link);
+          });
+        }
+        
+        // Load DataTables JS
+        if (!window.jQuery.fn.DataTable) {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = '/vuexy/vendors/libs/datatables-bs5/datatables-bootstrap5.js';
+            script.onload = () => {
+              console.log('✅ DataTables CSS + JS carregados');
+              resolve();
+            };
+            script.onerror = () => reject(new Error('Failed to load DataTables JS'));
+            document.head.appendChild(script);
+          });
+        }
+        
+        return { datatablesLoaded: true };
+      }
+      return {};
+    }
+  ],
+  render: () => {
+    // Sample data - 50 users
+    const users = [];
+    const firstNames = ['João', 'Maria', 'Pedro', 'Ana', 'Carlos', 'Juliana', 'Lucas', 'Fernanda', 'Rafael', 'Camila'];
+    const lastNames = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Costa', 'Ferreira', 'Rodrigues', 'Almeida'];
+    const departments = ['TI', 'Vendas', 'Marketing', 'RH', 'Financeiro'];
+    const statuses = ['Ativo', 'Inativo', 'Férias'];
+    
+    for (let i = 1; i <= 50; i++) {
+      const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+      const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+      const dept = departments[Math.floor(Math.random() * departments.length)];
+      const status = statuses[Math.floor(Math.random() * statuses.length)];
+      const salary = (3000 + Math.floor(Math.random() * 12000)).toLocaleString('pt-BR');
+      
+      users.push({
+        id: i,
+        name: \`\${firstName} \${lastName}\`,
+        email: \`\${firstName.toLowerCase()}.\${lastName.toLowerCase()}@empresa.com\`,
+        department: dept,
+        status: status,
+        salary: \`R$ \${salary}\`
+      });
+    }
+    
+    // Generate table rows
+    const tableRows = users.map(user => \`
+      <tr>
+        <td>\${user.id}</td>
+        <td>\${user.name}</td>
+        <td>\${user.email}</td>
+        <td>\${user.department}</td>
+        <td>
+          <span class="badge bg-label-\${user.status === 'Ativo' ? 'success' : user.status === 'Inativo' ? 'danger' : 'warning'}">
+            \${user.status}
+          </span>
+        </td>
+        <td>\${user.salary}</td>
+      </tr>
+    \`).join('');
+    
+    // Initialize DataTable after render
+    setTimeout(() => {
+      if (window.jQuery && window.jQuery.fn.DataTable) {
+        const $ = window.jQuery;
+        
+        $('#datatable-main').DataTable({
+          pageLength: 10,
+          lengthMenu: [[10, 25, 50], [10, 25, 50]],
+          language: {
+            search: 'Buscar:',
+            lengthMenu: 'Exibir _MENU_ por página',
+            info: 'Mostrando _START_ a _END_ de _TOTAL_',
+            paginate: {
+              previous: 'Anterior',
+              next: 'Próxima'
+            }
+          },
+          order: [[0, 'asc']]
+        });
+        
+        // Column search table
+        $('#datatable-column-search thead tr').clone(true).appendTo('#datatable-column-search thead');
+        $('#datatable-column-search thead tr:eq(1) th').each(function(i) {
+          $(this).html('<input type="text" class="form-control form-control-sm" placeholder="Buscar..." />');
+          
+          $('input', this).on('keyup change', function() {
+            if (table.column(i).search() !== this.value) {
+              table.column(i).search(this.value).draw();
+            }
+          });
+        });
+        
+        const table = $('#datatable-column-search').DataTable({
+          pageLength: 5,
+          orderCellsTop: true,
+          language: {
+            search: 'Buscar:',
+            lengthMenu: 'Exibir _MENU_',
+            info: '_START_-_END_ de _TOTAL_',
+            paginate: {
+              previous: '←',
+              next: '→'
+            }
+          }
+        });
+        
+        console.log('✅ DataTables: 50 usuários');
+      }
+    }, 100);
+
+    return \`
+      <style>
+        table.dataTable thead th {
+          border-bottom: 2px solid #ddd;
+        }
+      </style>
+      
+      <div style="padding: 30px;">
+        <h5 class="mb-4">
+          <i class="ti ti-table me-2 text-primary"></i>
+          DataTable Avançado com jQuery DataTables
+        </h5>
+        
+        <!-- Main DataTable -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h6 class="mb-0">Listagem de Colaboradores (50 registros)</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover" id="datatable-main">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Departamento</th>
+                    <th>Status</th>
+                    <th>Salário</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  \${tableRows}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Column Search -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h6 class="mb-0">Com Busca por Coluna</h6>
+          </div>
+          <div class="card-body">
+            <p class="text-muted small">Digite nos campos abaixo dos headers</p>
+            <div class="table-responsive">
+              <table class="table table-bordered" id="datatable-column-search">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Departamento</th>
+                    <th>Status</th>
+                    <th>Salário</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  \${tableRows}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Search:</strong> Campo "Buscar" no topo - busca em todas as colunas</li>
+            <li><strong>Sort:</strong> Clique nos headers - alterna asc/desc</li>
+            <li><strong>Pagination:</strong> Use botões "Anterior/Próxima"</li>
+            <li><strong>Page Length:</strong> Escolha 10/25/50 registros por página</li>
+            <li><strong>Column Search:</strong> Segunda tabela - filtro individual por coluna</li>
+            <li><strong>Badges:</strong> Status com cores (Ativo=verde, Inativo=vermelho)</li>
+            <li><strong>Locale pt-BR:</strong> Mensagens em português</li>
+          </ul>
+        </div>
+      </div>
+    \`;
+  }
+};
