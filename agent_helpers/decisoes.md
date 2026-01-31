@@ -154,3 +154,96 @@ Quando o template Vuexy for adicionado:
 
 **Exemplo**: [Input.stories.js](../src/stories/atoms/forms/Input.stories.js)
 
+
+---
+
+### Decisão 7: Solução para Instabilidade do Vite Dev Server
+**Data**: 2026-01-31
+**Contexto**: O Storybook dev server (Vite) estava crashando imediatamente após iniciar, causando erros `ERR_CONNECTION_RESET` e `ERR_CONNECTION_REFUSED` em todos os recursos (CSS, JS, fonts).
+
+**Sintomas Identificados**:
+- Servidor inicia normalmente ("Storybook 8.6.15 started")
+- Imediatamente termina com "Command exited with code 1"
+- Todos os recursos falham: `iconify-icons.css`, `fullcalendar.css`, `datatables-bs5.css`, `jquery.js`, `bootstrap.js`, etc.
+- Problema persiste independente da porta (6006 ou 6007)
+- Problema NÃO é causado por erros de código (build estático funciona)
+
+**Decisão**: Usar build estático + servidor HTTP Python quando o dev server falhar
+
+**Solução Passo a Passo**:
+```powershell
+# 1. Fazer build estático do Storybook
+npx storybook build
+
+# 2. Servir com Python (já instalado no Windows)
+cd storybook-static
+python -m http.server 6006
+
+# 3. Acessar: http://localhost:6006/
+```
+
+**Alternativa com http-server (se instalado)**:
+```powershell
+npm install -g http-server
+npm run serve-storybook  # script adicionado ao package.json
+```
+
+**Script npm adicionado ao package.json**:
+```json
+"serve-storybook": "http-server storybook-static -p 6006"
+```
+
+**Desvantagens da Solução**:
+- Sem hot-reload (mudanças requerem rebuild)
+- Rebuild leva ~15-30 segundos
+
+**Para atualizar após mudanças**:
+```powershell
+npx storybook build  # rebuilda
+# Depois recarregue o navegador (F5)
+```
+
+**Quando Usar Esta Solução**:
+1. Quando `npm run storybook` inicia mas termina imediatamente (exit code 1)
+2. Quando há múltiplos erros `ERR_CONNECTION_RESET` ou `ERR_CONNECTION_REFUSED`
+3. Quando o problema persiste após limpar cache (`.storybook-cache`, `node_modules/.vite`)
+4. Quando `npx storybook build` funciona mas `dev` não
+
+**Investigação Futura**:
+- Verificar conflitos de porta com outros processos
+- Atualizar para Storybook 10.x (versão atual: 8.6.15)
+- Verificar compatibilidade Node.js
+- Investigar logs detalhados com `npx storybook dev -p 6006 --debug`
+
+**Impacto**: Solução permite continuar trabalhando enquanto o problema do dev server não é resolvido permanentemente.
+
+---
+
+### Decisão 8: Ícones Tabler - Formato Correto das Classes
+**Data**: 2026-01-31
+**Contexto**: Ícones Tabler não apareciam no Storybook
+
+**Problema**: Documentação comum sugere `ti ti-heart`, mas o CSS do Vuexy usa formato diferente.
+
+**Análise do CSS** (`iconify-icons.css`):
+- 1 classe base: `.ti` (define font-family e mask-image)
+- 742 classes específicas: `.tabler-*` (define a variável `--svg` com o ícone)
+- Técnica: SVG via `mask-image: var(--svg)`
+
+**Formato CORRETO**:
+```html
+<i class="ti tabler-heart"></i>
+<i class="ti tabler-plus"></i>
+<i class="ti tabler-star"></i>
+```
+
+**Formato INCORRETO** (não funciona):
+```html
+<i class="ti ti-heart"></i>  <!-- ERRADO! -->
+```
+
+**Decisão**: Usar sempre `ti tabler-NOME` para ícones Tabler no projeto
+
+**Impacto**: Commit e44f694 corrigiu 17 instâncias em Icons.stories.js
+
+---
