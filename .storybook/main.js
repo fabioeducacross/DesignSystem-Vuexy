@@ -10,6 +10,9 @@ const config = {
     name: '@storybook/html-vite',
     options: {},
   },
-  staticDirs: ['../packages/vuexy_theme/public'],
+  staticDirs: [
+    '../packages/vuexy_theme/public',
+    { from: './.storybook/public', to: '/' }
+  ],
 };
 export default config;
