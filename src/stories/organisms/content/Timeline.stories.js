@@ -408,3 +408,77 @@ export const Info = Template.bind({});
 Info.args = {
   variant: 'info'
 };
+
+export const Interactive = () => {
+  return `
+    <div class="card" style="max-width: 700px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title mb-3">📋 Activity Timeline</h5>
+        
+        <div class="btn-group mb-4" role="group">
+          <button class="btn btn-sm btn-primary active" onclick="
+            document.querySelectorAll('.timeline-item').forEach(item => item.style.display = 'block');
+            document.querySelectorAll('.btn-group button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          ">All</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="
+            document.querySelectorAll('.timeline-item').forEach(item => {
+              item.style.display = item.classList.contains('type-order') ? 'block' : 'none';
+            });
+            document.querySelectorAll('.btn-group button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          ">📦 Orders</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="
+            document.querySelectorAll('.timeline-item').forEach(item => {
+              item.style.display = item.classList.contains('type-payment') ? 'block' : 'none';
+            });
+            document.querySelectorAll('.btn-group button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          ">💳 Payments</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="
+            document.querySelectorAll('.timeline-item').forEach(item => {
+              item.style.display = item.classList.contains('type-comment') ? 'block' : 'none';
+            });
+            document.querySelectorAll('.btn-group button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          ">💬 Comments</button>
+        </div>
+        
+        <ul class="list-group list-group-timeline list-group-timeline-primary">
+          <li class="list-group-item timeline-item type-order">
+            <span class="fw-medium">📦 Order Placed</span>
+            <p class="mb-0 text-muted">New order #1234 received</p>
+            <small class="text-muted">2 hours ago</small>
+          </li>
+          <li class="list-group-item timeline-item type-payment">
+            <span class="fw-medium">💳 Payment Confirmed</span>
+            <p class="mb-0 text-muted">Payment of $250 processed</p>
+            <small class="text-muted">3 hours ago</small>
+          </li>
+          <li class="list-group-item timeline-item type-comment">
+            <span class="fw-medium">💬 New Comment</span>
+            <p class="mb-0 text-muted">Customer left a review</p>
+            <small class="text-muted">5 hours ago</small>
+          </li>
+          <li class="list-group-item timeline-item type-order">
+            <span class="fw-medium">📦 Order Shipped</span>
+            <p class="mb-0 text-muted">Package dispatched to customer</p>
+            <small class="text-muted">1 day ago</small>
+          </li>
+          <li class="list-group-item timeline-item type-payment">
+            <span class="fw-medium">💳 Refund Issued</span>
+            <p class="mb-0 text-muted">Refund of $50 processed</p>
+            <small class="text-muted">2 days ago</small>
+          </li>
+        </ul>
+        
+        <button class="btn btn-sm btn-outline-primary mt-3 w-100" onclick="
+          const newItem = document.createElement('li');
+          newItem.className = 'list-group-item timeline-item type-comment';
+          newItem.innerHTML = '<span class=\"fw-medium\">✨ New Activity</span><p class=\"mb-0 text-muted\">Just added</p><small class=\"text-muted\">Just now</small>';
+          document.querySelector('.list-group-timeline').insertBefore(newItem, document.querySelector('.list-group-timeline').firstChild);
+        ">➕ Add New Activity</button>
+      </div>
+    </div>
+  `;
+};

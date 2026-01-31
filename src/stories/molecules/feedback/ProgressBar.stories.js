@@ -303,3 +303,100 @@ LargeHeight.args = {
   height: 'lg',
   showLabel: true
 };
+
+export const Interactive = () => {
+  return `
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title mb-4">📊 Interactive Progress Bar</h5>
+        
+        <div class="mb-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span>Upload Progress</span>
+            <span id="progress-value">0%</span>
+          </div>
+          <div class="progress" style="height: 20px;">
+            <div id="progress-bar" class="progress-bar bg-primary" style="width: 0%" 
+                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              0%
+            </div>
+          </div>
+        </div>
+        
+        <div class="d-flex gap-2 mb-4">
+          <button class="btn btn-primary" onclick="
+            let current = parseInt(document.getElementById('progress-bar').style.width);
+            if (current < 100) {
+              current = Math.min(100, current + 10);
+              const bar = document.getElementById('progress-bar');
+              bar.style.width = current + '%';
+              bar.textContent = current + '%';
+              bar.setAttribute('aria-valuenow', current);
+              document.getElementById('progress-value').textContent = current + '%';
+              
+              if (current >= 100) {
+                bar.className = 'progress-bar bg-success';
+                document.getElementById('status-message').textContent = '✅ Complete!';
+                document.getElementById('status-message').className = 'alert alert-success mt-3';
+              } else if (current >= 75) {
+                bar.className = 'progress-bar bg-info';
+              } else if (current >= 50) {
+                bar.className = 'progress-bar bg-warning';
+              }
+            }
+          ">➕ Increase (+10%)</button>
+          
+          <button class="btn btn-secondary" onclick="
+            let current = parseInt(document.getElementById('progress-bar').style.width);
+            if (current > 0) {
+              current = Math.max(0, current - 10);
+              const bar = document.getElementById('progress-bar');
+              bar.style.width = current + '%';
+              bar.textContent = current + '%';
+              bar.setAttribute('aria-valuenow', current);
+              document.getElementById('progress-value').textContent = current + '%';
+              bar.className = 'progress-bar bg-primary';
+              document.getElementById('status-message').textContent = '';
+              document.getElementById('status-message').className = 'alert alert-info mt-3 d-none';
+            }
+          ">➖ Decrease (-10%)</button>
+          
+          <button class="btn btn-success" onclick="
+            let target = 100;
+            let current = 0;
+            const bar = document.getElementById('progress-bar');
+            const interval = setInterval(() => {
+              current += 2;
+              bar.style.width = current + '%';
+              bar.textContent = current + '%';
+              bar.setAttribute('aria-valuenow', current);
+              document.getElementById('progress-value').textContent = current + '%';
+              
+              if (current >= 50) bar.className = 'progress-bar bg-warning';
+              if (current >= 75) bar.className = 'progress-bar bg-info';
+              if (current >= 100) {
+                bar.className = 'progress-bar bg-success';
+                document.getElementById('status-message').textContent = '🎉 Animation Complete!';
+                document.getElementById('status-message').className = 'alert alert-success mt-3';
+                clearInterval(interval);
+              }
+            }, 50);
+          ">🎬 Animate</button>
+          
+          <button class="btn btn-outline-danger" onclick="
+            const bar = document.getElementById('progress-bar');
+            bar.style.width = '0%';
+            bar.textContent = '0%';
+            bar.className = 'progress-bar bg-primary';
+            bar.setAttribute('aria-valuenow', 0);
+            document.getElementById('progress-value').textContent = '0%';
+            document.getElementById('status-message').textContent = '';
+            document.getElementById('status-message').className = 'alert alert-info mt-3 d-none';
+          ">🔄 Reset</button>
+        </div>
+        
+        <div id="status-message" class="alert alert-info mt-3 d-none"></div>
+      </div>
+    </div>
+  `;
+};

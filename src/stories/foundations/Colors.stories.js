@@ -269,3 +269,60 @@ export const UsageExamples = {
     </div>
   `,
 };
+
+export const Interactive = {
+  render: () => `
+    <div style="padding: 2rem; max-width: 900px;">
+      <h2 style="margin-bottom: 2rem;">🎨 Interactive Color Palette</h2>
+      
+      <div id="color-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        ${Object.entries({
+          primary: '#5f61e6',
+          secondary: '#8592a3',
+          success: '#56ca00',
+          danger: '#ff4c51',
+          warning: '#ffb400',
+          info: '#16b1ff',
+          dark: '#4b4b4b',
+          light: '#f8f8f8'
+        }).map(([name, hex]) => `
+          <div style="border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s;"
+               onmouseover="this.style.transform = 'scale(1.05)'"
+               onmouseout="this.style.transform = 'scale(1)'"
+               onclick="
+                 navigator.clipboard.writeText('${hex}');
+                 const toast = document.getElementById('color-toast');
+                 const toastText = document.getElementById('toast-text');
+                 toastText.textContent = '✅ Copied ${hex}';
+                 toast.style.display = 'block';
+                 setTimeout(() => toast.style.display = 'none', 2000);
+               ">
+            <div style="background: ${hex}; height: 120px; position: relative;">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem; background: rgba(0,0,0,0.5); color: white; font-weight: 600;">
+                ${hex}
+              </div>
+            </div>
+            <div style="padding: 1rem; background: white;">
+              <h5 style="margin: 0 0 0.5rem 0; font-size: 1rem; text-transform: capitalize;">${name}</h5>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <code style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: #f8f8f8; border-radius: 4px;">.text-${name}</code>
+                <code style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: #f8f8f8; border-radius: 4px;">.bg-${name}</code>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      
+      <div id="color-toast" style="position: fixed; top: 20px; right: 20px; display: none; z-index: 9999;">
+        <div class="alert alert-success" style="box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+          <i class="bx bx-check-circle me-2"></i>
+          <span id="toast-text"></span>
+        </div>
+      </div>
+      
+      <div class="alert alert-info mt-4">
+        <strong>💡 Tip:</strong> Click any color to copy its hex code to clipboard!
+      </div>
+    </div>
+  `,
+};

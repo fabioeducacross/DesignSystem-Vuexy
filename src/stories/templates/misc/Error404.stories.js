@@ -170,3 +170,70 @@ export const WithSearch = Template.bind({});
 WithSearch.args = {
   withSearch: true
 };
+
+export const Interactive = () => {
+  return `
+    <div class="misc-wrapper">
+      <div class="misc-inner p-2 p-sm-3">
+        <div class="w-100 text-center">
+          <h1 class="mb-2" style="font-size: 6rem; font-weight: 800; color: #696cff;">404</h1>
+          <h3 class="mb-2">Page Not Found ⚠️</h3>
+          <p class="text-muted mb-4">Oops! The requested URL was not found on this server.</p>
+          
+          <div class="d-flex justify-content-center mb-4">
+            <div class="input-group" style="max-width: 500px;">
+              <input type="text" id="search-input" class="form-control" placeholder="Search for pages...">
+              <button class="btn btn-primary" onclick="
+                const query = document.getElementById('search-input').value;
+                const results = document.getElementById('search-results');
+                const suggestions = [
+                  { title: 'Dashboard', url: '/dashboard', icon: 'bx-home-circle' },
+                  { title: 'User Profile', url: '/profile', icon: 'bx-user' },
+                  { title: 'Settings', url: '/settings', icon: 'bx-cog' },
+                  { title: 'Help Center', url: '/help', icon: 'bx-help-circle' }
+                ];
+                
+                if (query.length > 0) {
+                  const filtered = suggestions.filter(s => 
+                    s.title.toLowerCase().includes(query.toLowerCase())
+                  );
+                  
+                  if (filtered.length > 0) {
+                    results.innerHTML = '<div class=\"alert alert-info mt-3\"><strong>🔍 Search Results:</strong><ul class=\"mb-0 mt-2 text-start\">' + 
+                      filtered.map(s => '<li><i class=\"bx ' + s.icon + '\"></i> <a href=\"#\">' + s.title + '</a></li>').join('') + 
+                      '</ul></div>';
+                  } else {
+                    results.innerHTML = '<div class=\"alert alert-warning mt-3\">⚠️ No results found for \"' + query + '\"</div>';
+                  }
+                } else {
+                  results.innerHTML = '';
+                }
+              "><i class="bx bx-search"></i></button>
+            </div>
+          </div>
+          
+          <div id="search-results"></div>
+          
+          <a href="#" class="btn btn-primary">Back to Home</a>
+          
+          <div class="mt-4">
+            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/illustrations/page-misc-error-light.png" 
+                 alt="page-misc-error-light" 
+                 class="img-fluid" 
+                 style="max-width: 500px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+    .misc-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(180deg, rgba(105, 108, 255, 0.08) 0%, rgba(105, 108, 255, 0) 100%);
+    }
+    </style>
+  `;
+};

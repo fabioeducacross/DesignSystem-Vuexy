@@ -454,3 +454,93 @@ StatsOnly.args = {
   showStats: true,
   showCharts: false
 };
+
+export const Interactive = () => {
+  return `
+    <div id="interactive-dashboard">
+      <div class="mb-3 d-flex gap-2">
+        <button class="btn btn-primary" onclick="
+          const container = document.getElementById('interactive-dashboard');
+          const chartsSection = container.querySelector('.charts-section');
+          const isHidden = chartsSection.style.display === 'none';
+          chartsSection.style.display = isHidden ? 'block' : 'none';
+          this.textContent = isHidden ? '📊 Hide Charts' : '📊 Show Charts';
+        ">📊 Hide Charts</button>
+        <button class="btn btn-success" onclick="
+          const container = document.getElementById('interactive-dashboard');
+          const stats = container.querySelectorAll('.stats-value');
+          stats.forEach(stat => {
+            const current = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
+            const random = Math.floor(Math.random() * 1000) + 1;
+            stat.textContent = stat.textContent.includes('$') ? '$' + random + 'k' : random.toString();
+          });
+          const badge = container.querySelector('.refresh-badge');
+          badge.style.display = 'inline';
+          setTimeout(() => badge.style.display = 'none', 2000);
+        ">🔄 Refresh Data <span class="badge bg-light text-dark refresh-badge" style="display:none;">Updated!</span></button>
+        <button class="btn btn-outline-secondary" onclick="
+          const container = document.getElementById('interactive-dashboard');
+          const widgets = container.querySelectorAll('.widget-card');
+          widgets.forEach((w, i) => {
+            setTimeout(() => {
+              w.style.transform = 'scale(1.05)';
+              setTimeout(() => w.style.transform = 'scale(1)', 200);
+            }, i * 100);
+          });
+        ">✨ Animate Widgets</button>
+      </div>
+      
+      <!-- Stats Cards -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card widget-card" style="transition: transform 0.2s;">
+            <div class="card-body">
+              <p class="text-muted mb-1">Total Users</p>
+              <h4 class="mb-0 stats-value">21,459</h4>
+              <small class="text-success">↑ +18%</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card widget-card" style="transition: transform 0.2s;">
+            <div class="card-body">
+              <p class="text-muted mb-1">Revenue</p>
+              <h4 class="mb-0 stats-value">$42.5k</h4>
+              <small class="text-success">↑ +24%</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card widget-card" style="transition: transform 0.2s;">
+            <div class="card-body">
+              <p class="text-muted mb-1">Active Projects</p>
+              <h4 class="mb-0 stats-value">74</h4>
+              <small class="text-danger">↓ -8%</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card widget-card" style="transition: transform 0.2s;">
+            <div class="card-body">
+              <p class="text-muted mb-1">Sessions</p>
+              <h4 class="mb-0 stats-value">1,890</h4>
+              <small class="text-success">↑ +12%</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Charts Section -->
+      <div class="charts-section">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">📈 Revenue Chart</h5>
+            <div class="bg-light rounded p-4" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+              <p class="text-muted mb-0">Chart Data Visualization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

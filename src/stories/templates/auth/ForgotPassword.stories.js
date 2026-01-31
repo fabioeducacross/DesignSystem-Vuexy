@@ -271,3 +271,74 @@ BasicLayout.args = {
   variant: 'basic',
   showSuccess: false
 };
+
+export const Interactive = () => {
+  return `
+    <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body p-4">
+              <h3 class="mb-2 text-center">Forgot Password? 🔒</h3>
+              <p class="text-muted text-center mb-4">Enter your email and we'll send you instructions</p>
+              
+              <div id="form-section">
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" id="email-input" class="form-control" placeholder="Enter your email">
+                  <div id="email-feedback" class="mt-2" style="display: none;"></div>
+                </div>
+                
+                <button class="btn btn-primary w-100 mb-3" onclick="
+                  const email = document.getElementById('email-input').value;
+                  const feedback = document.getElementById('email-feedback');
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  
+                  if (!email) {
+                    feedback.style.display = 'block';
+                    feedback.className = 'alert alert-danger py-2';
+                    feedback.textContent = '⚠️ Email is required';
+                    return;
+                  }
+                  
+                  if (!emailRegex.test(email)) {
+                    feedback.style.display = 'block';
+                    feedback.className = 'alert alert-warning py-2';
+                    feedback.textContent = '⚠️ Please enter a valid email';
+                    return;
+                  }
+                  
+                  feedback.style.display = 'block';
+                  feedback.className = 'alert alert-success py-2';
+                  feedback.textContent = '✅ Valid! Sending reset link...';
+                  
+                  setTimeout(() => {
+                    document.getElementById('form-section').style.display = 'none';
+                    document.getElementById('success-section').style.display = 'block';
+                  }, 1500);
+                ">Send Reset Link</button>
+                
+                <div class="text-center">
+                  <a href="#" class="text-muted"><i class="bx bx-chevron-left"></i> Back to login</a>
+                </div>
+              </div>
+              
+              <div id="success-section" style="display: none;" class="text-center">
+                <div class="mb-4">
+                  <i class="bx bx-envelope" style="font-size: 4rem; color: #56ca00;"></i>
+                </div>
+                <h5 class="mb-2">Check your email! ✉️</h5>
+                <p class="text-muted">We've sent a password reset link to your email address.</p>
+                <button class="btn btn-outline-secondary mt-3" onclick="
+                  document.getElementById('form-section').style.display = 'block';
+                  document.getElementById('success-section').style.display = 'none';
+                  document.getElementById('email-feedback').style.display = 'none';
+                ">Send Again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

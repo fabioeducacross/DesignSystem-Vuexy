@@ -190,3 +190,135 @@ export const Primary = {
     </div>
   `,
 };
+
+export const InteractiveWizard = {
+  render: () => `
+    <div style="padding: 2rem; max-width: 900px; margin: 0 auto;">
+      <h1 style="font-size: 2rem; margin-bottom: 1rem; color: #5f61e6;">🧙‍♂️ Getting Started - Step by Step</h1>
+      
+      <div id="wizard-container">
+        <!-- Progress Bar -->
+        <div class="mb-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-muted">Step <span id="current-step">1</span> of 4</span>
+            <span class="text-muted"><span id="progress-percent">0</span>%</span>
+          </div>
+          <div class="progress" style="height: 8px;">
+            <div id="progress-bar" class="progress-bar bg-primary" style="width: 0%"></div>
+          </div>
+        </div>
+        
+        <!-- Step 1: Welcome -->
+        <div id="step-1" class="wizard-step">
+          <h3>👋 Welcome to Vuexy Design System!</h3>
+          <p class="lead">This wizard will guide you through the key concepts.</p>
+          <div class="alert alert-info">
+            <strong>💡 Tip:</strong> This system uses Atomic Design methodology
+          </div>
+        </div>
+        
+        <!-- Step 2: Atomic Design -->
+        <div id="step-2" class="wizard-step" style="display: none;">
+          <h3>🧬 Understanding Atomic Design</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5>⚛️ Atoms</h5>
+                  <p class="small">Basic building blocks like buttons, inputs</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5>🔬 Molecules</h5>
+                  <p class="small">Simple combinations of atoms</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5>🧪 Organisms</h5>
+                  <p class="small">Complex UI sections</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5>📐 Templates</h5>
+                  <p class="small">Page layouts and structures</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 3: Components -->
+        <div id="step-3" class="wizard-step" style="display: none;">
+          <h3>🎨 Exploring Components</h3>
+          <p>Navigate through the sidebar to explore:</p>
+          <ul class="list-group">
+            <li class="list-group-item">✅ Foundations (Colors, Typography, Spacing)</li>
+            <li class="list-group-item">✅ Atoms (17 components)</li>
+            <li class="list-group-item">✅ Molecules (18 components)</li>
+            <li class="list-group-item">✅ Organisms (22 components)</li>
+            <li class="list-group-item">✅ Templates (8 layouts)</li>
+          </ul>
+        </div>
+        
+        <!-- Step 4: Done -->
+        <div id="step-4" class="wizard-step" style="display: none;">
+          <h3>🎉 You're All Set!</h3>
+          <div class="text-center py-4">
+            <div class="mb-3">
+              <i class="bx bx-check-circle" style="font-size: 5rem; color: #56ca00;"></i>
+            </div>
+            <p class="lead">Start exploring the design system!</p>
+            <a href="#" class="btn btn-primary">Browse Components</a>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="d-flex justify-content-between mt-4">
+          <button id="btn-prev" class="btn btn-outline-secondary" onclick="
+            const current = parseInt(document.getElementById('current-step').textContent);
+            if (current > 1) {
+              document.getElementById('step-' + current).style.display = 'none';
+              document.getElementById('step-' + (current - 1)).style.display = 'block';
+              document.getElementById('current-step').textContent = current - 1;
+              const progress = ((current - 2) / 3) * 100;
+              document.getElementById('progress-bar').style.width = progress + '%';
+              document.getElementById('progress-percent').textContent = Math.round(progress);
+              document.getElementById('btn-next').textContent = '➡️ Next';
+              document.getElementById('btn-next').className = 'btn btn-primary';
+              if (current - 1 === 1) {
+                document.getElementById('btn-prev').disabled = true;
+              }
+            }
+          " disabled>⬅️ Previous</button>
+          <button id="btn-next" class="btn btn-primary" onclick="
+            const current = parseInt(document.getElementById('current-step').textContent);
+            if (current < 4) {
+              document.getElementById('step-' + current).style.display = 'none';
+              document.getElementById('step-' + (current + 1)).style.display = 'block';
+              document.getElementById('current-step').textContent = current + 1;
+              const progress = (current / 3) * 100;
+              document.getElementById('progress-bar').style.width = progress + '%';
+              document.getElementById('progress-percent').textContent = Math.round(progress);
+              document.getElementById('btn-prev').disabled = false;
+              if (current + 1 === 4) {
+                this.textContent = '✅ Finish';
+                this.className = 'btn btn-success';
+              }
+            } else {
+              alert('🎉 Tutorial completed! Happy coding!');
+            }
+          ">➡️ Next</button>
+        </div>
+      </div>
+    </div>
+  `,
+};

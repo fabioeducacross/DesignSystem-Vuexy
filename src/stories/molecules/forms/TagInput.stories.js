@@ -293,3 +293,71 @@ Secondary.args = {
   size: 'default',
   variant: 'secondary'
 };
+
+export const Interactive = () => {
+  return `
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title mb-3">🏷️ Interactive Tag Input</h5>
+        
+        <div class="mb-3">
+          <label class="form-label">Skills</label>
+          <div id="tag-container" class="form-control d-flex flex-wrap gap-2 align-items-center" style="min-height: 50px; cursor: text;">
+            <span class="badge bg-primary d-inline-flex align-items-center gap-1">
+              JavaScript
+              <button type="button" class="btn-close btn-close-white" style="width: 0.75em; height: 0.75em;" onclick="this.parentElement.remove();"></button>
+            </span>
+            <span class="badge bg-primary d-inline-flex align-items-center gap-1">
+              React
+              <button type="button" class="btn-close btn-close-white" style="width: 0.75em; height: 0.75em;" onclick="this.parentElement.remove();"></button>
+            </span>
+            <input type="text" id="tag-input" class="border-0 flex-grow-1" placeholder="Type and press Enter..." 
+                   style="outline: none; min-width: 150px; background: transparent;"
+                   onkeypress="
+                     if (event.key === 'Enter' && this.value.trim()) {
+                       const tag = document.createElement('span');
+                       tag.className = 'badge bg-primary d-inline-flex align-items-center gap-1';
+                       tag.innerHTML = this.value.trim() + 
+                         '<button type=\"button\" class=\"btn-close btn-close-white\" style=\"width: 0.75em; height: 0.75em;\" onclick=\"this.parentElement.remove(); updateCount();\"></button>';
+                       this.parentElement.insertBefore(tag, this);
+                       this.value = '';
+                       updateCount();
+                       event.preventDefault();
+                     }
+                   ">
+          </div>
+          <small class="form-text text-muted">
+            <span id="tag-count">2</span> tags added. Press Enter or comma to add.
+          </small>
+        </div>
+        
+        <button class="btn btn-sm btn-outline-danger" onclick="
+          const tags = document.querySelectorAll('#tag-container .badge');
+          tags.forEach(t => t.remove());
+          updateCount();
+        ">🗑️ Clear All Tags</button>
+        
+        <button class="btn btn-sm btn-outline-success ms-2" onclick="
+          const presets = ['Vue.js', 'TypeScript', 'Node.js'];
+          const container = document.getElementById('tag-container');
+          const input = document.getElementById('tag-input');
+          presets.forEach(preset => {
+            const tag = document.createElement('span');
+            tag.className = 'badge bg-success d-inline-flex align-items-center gap-1';
+            tag.innerHTML = preset + 
+              '<button type=\"button\" class=\"btn-close btn-close-white\" style=\"width: 0.75em; height: 0.75em;\" onclick=\"this.parentElement.remove(); updateCount();\"></button>';
+            container.insertBefore(tag, input);
+          });
+          updateCount();
+        ">➕ Add Preset Tags</button>
+      </div>
+    </div>
+    
+    <script>
+      function updateCount() {
+        const count = document.querySelectorAll('#tag-container .badge').length;
+        document.getElementById('tag-count').textContent = count;
+      }
+    </script>
+  `;
+};

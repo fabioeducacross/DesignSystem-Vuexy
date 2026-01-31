@@ -559,3 +559,133 @@ export const ReviewStep = Template.bind({});
 ReviewStep.args = {
   currentStep: 4
 };
+
+export const Interactive = () => {
+  return `
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <div class="card-body">
+        <h4 class="mb-4">📦 Checkout Wizard</h4>
+        
+        <!-- Stepper Header -->
+        <div class="bs-stepper-header mb-4">
+          <div id="step-indicator-1" class="step active d-flex align-items-center">
+            <button class="btn btn-sm btn-primary rounded-circle" style="width: 40px; height: 40px;">1</button>
+            <div class="ms-2">
+              <strong>Cart</strong>
+              <small class="d-block text-muted">Review items</small>
+            </div>
+          </div>
+          <div class="mx-3">—</div>
+          <div id="step-indicator-2" class="step d-flex align-items-center">
+            <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">2</button>
+            <div class="ms-2">
+              <strong>Address</strong>
+              <small class="d-block text-muted">Delivery</small>
+            </div>
+          </div>
+          <div class="mx-3">—</div>
+          <div id="step-indicator-3" class="step d-flex align-items-center">
+            <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">3</button>
+            <div class="ms-2">
+              <strong>Payment</strong>
+              <small class="d-block text-muted">Method</small>
+            </div>
+          </div>
+          <div class="mx-3">—</div>
+          <div id="step-indicator-4" class="step d-flex align-items-center">
+            <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">4</button>
+            <div class="ms-2">
+              <strong>Review</strong>
+              <small class="d-block text-muted">Confirm</small>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step Content -->
+        <div id="step-content-1" class="step-content">
+          <h5>🛒 Shopping Cart</h5>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Product 1</span>
+              <span>$29.99</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Product 2</span>
+              <span>$49.99</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div id="step-content-2" class="step-content" style="display: none;">
+          <h5>📍 Delivery Address</h5>
+          <div class="mb-2">
+            <input type="text" class="form-control" placeholder="Street Address" value="123 Main St">
+          </div>
+          <div class="row">
+            <div class="col"><input type="text" class="form-control" placeholder="City" value="San Francisco"></div>
+            <div class="col"><input type="text" class="form-control" placeholder="ZIP" value="94102"></div>
+          </div>
+        </div>
+        
+        <div id="step-content-3" class="step-content" style="display: none;">
+          <h5>💳 Payment Method</h5>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="payment" id="card" checked>
+            <label class="form-check-label" for="card">Credit Card</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="paypal">
+            <label class="form-check-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+        
+        <div id="step-content-4" class="step-content" style="display: none;">
+          <h5>✅ Order Summary</h5>
+          <div class="alert alert-success">Ready to place your order!</div>
+          <p><strong>Total:</strong> $79.98</p>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="d-flex justify-content-between mt-4">
+          <button id="btn-prev" class="btn btn-outline-secondary" onclick="
+            let current = parseInt(document.getElementById('step-indicator-1').classList.contains('active') ? '1' : 
+                                   document.getElementById('step-indicator-2').classList.contains('active') ? '2' : 
+                                   document.getElementById('step-indicator-3').classList.contains('active') ? '3' : '4');
+            if (current > 1) {
+              document.getElementById('step-content-' + current).style.display = 'none';
+              document.getElementById('step-indicator-' + current).classList.remove('active');
+              document.getElementById('step-indicator-' + current).querySelector('button').className = 'btn btn-sm btn-outline-secondary rounded-circle';
+              current--;
+              document.getElementById('step-content-' + current).style.display = 'block';
+              document.getElementById('step-indicator-' + current).classList.add('active');
+              document.getElementById('step-indicator-' + current).querySelector('button').className = 'btn btn-sm btn-primary rounded-circle';
+              document.getElementById('btn-next').textContent = '➡️ Next';
+              document.getElementById('btn-next').className = 'btn btn-primary';
+            }
+          ">⬅️ Previous</button>
+          <button id="btn-next" class="btn btn-primary" onclick="
+            let current = parseInt(document.getElementById('step-indicator-1').classList.contains('active') ? '1' : 
+                                   document.getElementById('step-indicator-2').classList.contains('active') ? '2' : 
+                                   document.getElementById('step-indicator-3').classList.contains('active') ? '3' : '4');
+            if (current < 4) {
+              document.getElementById('step-content-' + current).style.display = 'none';
+              document.getElementById('step-indicator-' + current).classList.remove('active');
+              document.getElementById('step-indicator-' + current).querySelector('button').className = 'btn btn-sm btn-success rounded-circle';
+              document.getElementById('step-indicator-' + current).querySelector('button').innerHTML = '✓';
+              current++;
+              document.getElementById('step-content-' + current).style.display = 'block';
+              document.getElementById('step-indicator-' + current).classList.add('active');
+              document.getElementById('step-indicator-' + current).querySelector('button').className = 'btn btn-sm btn-primary rounded-circle';
+              if (current === 4) {
+                this.textContent = '✅ Place Order';
+                this.className = 'btn btn-success';
+              }
+            } else {
+              alert('🎉 Order placed successfully!');
+            }
+          ">➡️ Next</button>
+        </div>
+      </div>
+    </div>
+  `;
+};

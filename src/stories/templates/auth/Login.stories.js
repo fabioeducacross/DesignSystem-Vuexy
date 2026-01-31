@@ -305,3 +305,64 @@ NoSocialLogin.args = {
   withSocial: false,
   variant: 'card'
 };
+
+export const Interactive = () => {
+  return `
+    <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body p-4">
+              <h3 class="mb-4 text-center">Login</h3>
+              
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" value="john@example.com">
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <div class="input-group">
+                  <input type="password" id="password-input" class="form-control" placeholder="Enter password" value="password123">
+                  <button class="btn btn-outline-secondary" type="button" onclick="
+                    const input = document.getElementById('password-input');
+                    const icon = this.querySelector('i');
+                    if (input.type === 'password') {
+                      input.type = 'text';
+                      icon.className = 'bx bx-hide';
+                      this.innerHTML = '<i class=\"bx bx-hide\"></i>';
+                    } else {
+                      input.type = 'password';
+                      icon.className = 'bx bx-show';
+                      this.innerHTML = '<i class=\"bx bx-show\"></i>';
+                    }
+                  "><i class="bx bx-show"></i></button>
+                </div>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember-me">
+                <label class="form-check-label" for="remember-me">Remember me</label>
+                <span class="ms-2 badge bg-success" id="remember-badge" style="display: none;">✓ Enabled</span>
+              </div>
+              
+              <button class="btn btn-primary w-100 mb-3" onclick="
+                const badge = document.getElementById('remember-badge');
+                const checkbox = document.getElementById('remember-me');
+                if (checkbox.checked) {
+                  badge.style.display = 'inline';
+                  setTimeout(() => badge.style.display = 'none', 2000);
+                }
+                alert('Login demo - Remember me: ' + (checkbox.checked ? 'ON' : 'OFF'));
+              ">Sign In</button>
+              
+              <div class="text-center">
+                <a href="#" class="text-muted">Forgot password?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

@@ -512,3 +512,132 @@ export const SuspendedUser = Template.bind({});
 SuspendedUser.args = {
   userStatus: 'suspended'
 };
+
+export const Interactive = () => {
+  return `
+    <div class="content-wrapper p-4">
+      <!-- User Header Card -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="d-flex gap-3 mb-3">
+            <button class="btn btn-sm btn-primary" onclick="
+              const tabs = document.querySelectorAll('.user-tab');
+              tabs.forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              document.querySelector('.tab-overview').style.display = 'block';
+              document.querySelector('.tab-activity').style.display = 'none';
+              document.querySelector('.tab-security').style.display = 'none';
+            " class="user-tab active">📊 Overview</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="
+              const tabs = document.querySelectorAll('.user-tab');
+              tabs.forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              document.querySelector('.tab-overview').style.display = 'none';
+              document.querySelector('.tab-activity').style.display = 'block';
+              document.querySelector('.tab-security').style.display = 'none';
+            " class="user-tab">📝 Activity</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="
+              const tabs = document.querySelectorAll('.user-tab');
+              tabs.forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              document.querySelector('.tab-overview').style.display = 'none';
+              document.querySelector('.tab-activity').style.display = 'none';
+              document.querySelector('.tab-security').style.display = 'block';
+            " class="user-tab">🔒 Security</button>
+            <button class="btn btn-sm btn-success ms-auto" onclick="
+              const isEdit = this.textContent.includes('Cancel');
+              this.textContent = isEdit ? '✏️ Edit User' : '❌ Cancel';
+              this.className = isEdit ? 'btn btn-sm btn-success ms-auto' : 'btn btn-sm btn-danger ms-auto';
+              const inputs = document.querySelectorAll('.editable-input');
+              inputs.forEach(i => {
+                i.disabled = isEdit;
+                i.style.background = isEdit ? 'transparent' : '#fff3cd';
+              });
+            ">✏️ Edit User</button>
+          </div>
+          
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                 class="rounded" width="100" height="100" alt="avatar">
+            <div class="flex-grow-1">
+              <h4 class="mb-1">John Doe</h4>
+              <span class="badge bg-success">Active</span>
+              <span class="badge bg-label-primary ms-2">Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tab: Overview -->
+      <div class="tab-overview">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">User Information</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control editable-input" value="John Doe" disabled>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control editable-input" value="john@example.com" disabled>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control editable-input" value="+1 234 567 8900" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Statistics</h5>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Orders</span>
+                  <strong>234</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Revenue</span>
+                  <strong>$12,450</strong>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Last Login</span>
+                  <strong>2 hours ago</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tab: Activity -->
+      <div class="tab-activity" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Recent Activity</h5>
+            <ul class="list-group">
+              <li class="list-group-item">✅ Placed order #1234 - 2 hours ago</li>
+              <li class="list-group-item">💬 Left a review - 5 hours ago</li>
+              <li class="list-group-item">🛍️ Added items to cart - 1 day ago</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tab: Security -->
+      <div class="tab-security" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Security Settings</h5>
+            <button class="btn btn-warning mb-2 w-100">Reset Password</button>
+            <button class="btn btn-danger w-100">Suspend Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

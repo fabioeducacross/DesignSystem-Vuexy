@@ -412,3 +412,77 @@ export const UsageExamples = {
     </div>
   `,
 };
+
+export const Interactive = {
+  render: () => `
+    <div style="padding: 2rem; max-width: 900px;">
+      <h2 style="margin-bottom: 2rem;">📏 Interactive Spacing Demo</h2>
+      
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Adjust Spacing</h5>
+          
+          <div class="mb-3">
+            <label class="form-label">Padding: <strong id="padding-value">3</strong></label>
+            <input type="range" class="form-range" min="0" max="5" value="3" 
+                   oninput="
+                     document.getElementById('demo-box').className = 'bg-primary text-white rounded p-' + this.value;
+                     document.getElementById('padding-value').textContent = this.value;
+                     document.getElementById('padding-code').textContent = '.p-' + this.value;
+                   ">
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label">Margin: <strong id="margin-value">3</strong></label>
+            <input type="range" class="form-range" min="0" max="5" value="3" 
+                   oninput="
+                     document.getElementById('demo-box').className = 'bg-primary text-white rounded p-3 m-' + this.value;
+                     document.getElementById('margin-value').textContent = this.value;
+                     document.getElementById('margin-code').textContent = '.m-' + this.value;
+                   ">
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px;">
+        <div id="demo-box" class="bg-primary text-white rounded p-3">
+          <strong>Demo Box</strong>
+          <p class="mb-0">Adjust the sliders above to see spacing changes in real-time</p>
+        </div>
+      </div>
+      
+      <div class="alert alert-info mt-4">
+        <strong>Current Classes:</strong>
+        <code id="padding-code">.p-3</code>
+        <code id="margin-code" class="ms-2">.m-3</code>
+      </div>
+      
+      <div class="mt-4">
+        <h5>Quick Examples</h5>
+        <div class="d-flex gap-3 flex-wrap">
+          <button class="btn btn-sm btn-outline-primary" onclick="
+            document.getElementById('demo-box').className = 'bg-primary text-white rounded p-1';
+            document.querySelector('input[type=range]').value = 1;
+            document.getElementById('padding-value').textContent = '1';
+            document.getElementById('padding-code').textContent = '.p-1';
+          ">Small Padding</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="
+            document.getElementById('demo-box').className = 'bg-primary text-white rounded p-5';
+            document.querySelector('input[type=range]').value = 5;
+            document.getElementById('padding-value').textContent = '5';
+            document.getElementById('padding-code').textContent = '.p-5';
+          ">Large Padding</button>
+          <button class="btn btn-sm btn-outline-secondary" onclick="
+            document.getElementById('demo-box').className = 'bg-primary text-white rounded p-3 m-0';
+            document.querySelectorAll('input[type=range]')[0].value = 3;
+            document.querySelectorAll('input[type=range]')[1].value = 0;
+            document.getElementById('padding-value').textContent = '3';
+            document.getElementById('margin-value').textContent = '0';
+            document.getElementById('padding-code').textContent = '.p-3';
+            document.getElementById('margin-code').textContent = '.m-0';
+          ">Reset</button>
+        </div>
+      </div>
+    </div>
+  `,
+};

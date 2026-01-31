@@ -301,3 +301,72 @@ NoSocialLogin.args = {
   withSocial: false,
   variant: 'card'
 };
+
+export const Interactive = () => {
+  return `
+    <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body p-4">
+              <h3 class="mb-4 text-center">Register</h3>
+              
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter username">
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" id="reg-password" class="form-control" placeholder="Enter password" oninput="
+                  const pwd = this.value;
+                  const meter = document.getElementById('strength-meter');
+                  const text = document.getElementById('strength-text');
+                  let strength = 0;
+                  if (pwd.length >= 8) strength++;
+                  if (/[A-Z]/.test(pwd)) strength++;
+                  if (/[0-9]/.test(pwd)) strength++;
+                  if (/[^A-Za-z0-9]/.test(pwd)) strength++;
+                  
+                  const colors = ['danger', 'warning', 'info', 'success'];
+                  const labels = ['Weak', 'Fair', 'Good', 'Strong'];
+                  const width = (strength * 25);
+                  
+                  meter.className = 'progress-bar bg-' + (colors[strength - 1] || 'secondary');
+                  meter.style.width = width + '%';
+                  text.textContent = pwd.length > 0 ? labels[strength - 1] || 'Too Short' : '';
+                  text.className = 'small text-' + (colors[strength - 1] || 'muted');
+                ">
+                <div class="progress mt-2" style="height: 5px;">
+                  <div id="strength-meter" class="progress-bar" style="width: 0%"></div>
+                </div>
+                <small id="strength-text" class="text-muted"></small>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms-check">
+                <label class="form-check-label" for="terms-check">
+                  I agree to <a href="#">terms & conditions</a>
+                </label>
+              </div>
+              
+              <button class="btn btn-primary w-100" onclick="
+                const terms = document.getElementById('terms-check');
+                if (!terms.checked) {
+                  alert('⚠️ Please accept terms & conditions');
+                  return;
+                }
+                alert('✅ Registration successful!');
+              ">Create Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

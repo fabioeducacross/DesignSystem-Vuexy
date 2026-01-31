@@ -438,3 +438,85 @@ export const EditMode = Template.bind({});
 EditMode.args = {
   viewMode: 'edit'
 };
+
+export const Interactive = () => {
+  return `
+    <div id="interactive-profile">
+      <div class="mb-3 d-flex gap-2">
+        <button class="btn btn-primary" onclick="
+          const container = document.getElementById('interactive-profile');
+          const editBtn = container.querySelector('.edit-toggle');
+          const isEdit = editBtn.textContent.includes('Cancel');
+          editBtn.textContent = isEdit ? '✏️ Edit Profile' : '❌ Cancel Edit';
+          editBtn.className = isEdit ? 'btn btn-primary edit-toggle' : 'btn btn-danger edit-toggle';
+          const inputs = container.querySelectorAll('.editable-field');
+          inputs.forEach(input => {
+            input.disabled = isEdit;
+            input.style.background = isEdit ? 'transparent' : '#fff3cd';
+          });
+        ">✏️ Edit Profile</button>
+        <button class="btn btn-outline-secondary tab-about" onclick="
+          const tabs = document.querySelectorAll('.profile-tab');
+          tabs.forEach(t => t.classList.remove('active'));
+          document.querySelector('.tab-about').classList.add('active');
+          document.querySelector('.tab-content-about').style.display = 'block';
+          document.querySelector('.tab-content-activity').style.display = 'none';
+        ">📝 About</button>
+        <button class="btn btn-outline-secondary tab-activity profile-tab" onclick="
+          const tabs = document.querySelectorAll('.profile-tab');
+          tabs.forEach(t => t.classList.remove('active'));
+          document.querySelector('.tab-activity').classList.add('active');
+          document.querySelector('.tab-content-about').style.display = 'none';
+          document.querySelector('.tab-content-activity').style.display = 'block';
+        ">📊 Activity</button>
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-4">
+            <img src="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/img/avatars/1.png" 
+                 class="rounded-circle me-3" width="80" height="80" alt="avatar">
+            <div class="flex-grow-1">
+              <h4 class="mb-1">John Doe</h4>
+              <p class="text-muted mb-0">Full Stack Developer</p>
+            </div>
+            <button class="btn btn-primary edit-toggle">✏️ Edit Profile</button>
+          </div>
+          
+          <!-- Tab Content: About -->
+          <div class="tab-content-about">
+            <h5 class="mb-3">About</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control editable-field" value="John Doe" disabled>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control editable-field" value="john@example.com" disabled>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control editable-field" value="+1 234 567 8900" disabled>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control editable-field" value="San Francisco, CA" disabled>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tab Content: Activity -->
+          <div class="tab-content-activity" style="display: none;">
+            <h5 class="mb-3">Recent Activity</h5>
+            <ul class="list-group">
+              <li class="list-group-item">✅ Completed project milestone - 2 hours ago</li>
+              <li class="list-group-item">💬 Commented on issue #123 - 5 hours ago</li>
+              <li class="list-group-item">🎉 Joined the team - 1 day ago</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
