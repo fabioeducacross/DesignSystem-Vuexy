@@ -267,16 +267,7 @@ const createBarChart = ({ variant = 'vertical' }) => {
     <h5 class="mb-0">
       ${variant === 'vertical' ? 'Monthly Sales' : variant === 'horizontal' ? 'Revenue by Product' : 'Sales by Channel'}
     </h5>
-    <div class="dropdown">
-      <button class="btn btn-sm btn-label-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        2024
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">2024</a></li>
-        <li><a class="dropdown-item" href="#">2023</a></li>
-        <li><a class="dropdown-item" href="#">2022</a></li>
-      </ul>
-    </div>
+    <div class="text-muted small">2024</div>
   </div>
   <div class="card-body">
     ${charts[variant]}

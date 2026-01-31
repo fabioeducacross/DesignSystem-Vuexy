@@ -115,15 +115,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-danger">Bug</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Fix login authentication</h6>
           <p class="text-muted small mb-3">Users unable to login with OAuth</p>
@@ -148,15 +142,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-info">Feature</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Add dark mode</h6>
           <p class="text-muted small mb-3">Implement theme switcher</p>
@@ -181,15 +169,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-primary">Enhancement</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Improve dashboard performance</h6>
           <div class="mb-3">
@@ -219,15 +201,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-success">Documentation</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Update API docs</h6>
           <p class="text-muted small mb-3">Add examples for new endpoints</p>
@@ -249,15 +225,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card border-start border-3 border-info">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-warning">In Progress</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Redesign landing page</h6>
           <div class="mb-3">
@@ -295,15 +265,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-info">Feature</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">Email notifications</h6>
           <p class="text-muted small mb-3">Ready for testing</p>
@@ -325,15 +289,9 @@ const createKanbanBoard = ({ columns = 4 }) => {
         <div class="kanban-card opacity-75">
           <div class="d-flex justify-content-between align-items-start mb-2">
             <span class="badge bg-label-success">Feature</span>
-            <div class="dropdown">
-              <button class="btn btn-sm btn-icon" type="button" data-bs-toggle="dropdown">
-                <i class="bx bx-dots-vertical-rounded"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
-            </div>
+            <button class="btn btn-sm btn-icon" type="button">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
           </div>
           <h6 class="mb-2">User profile settings</h6>
           <p class="text-muted small mb-3">Completed and deployed</p>

@@ -273,3 +273,92 @@ FourColumns.args = {
   columns: 4,
   period: 'monthly'
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'pricing-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="max-width: 1200px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Click on "Select Plan" buttons to see selection feedback.
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card" id="basic-${containerId}">
+            <div class="card-body text-center">
+              <h5 class="card-title">Basic</h5>
+              <div class="my-4">
+                <h2 class="mb-0">$9<small class="text-muted">/mo</small></h2>
+              </div>
+              <ul class="list-unstyled text-start mb-4">
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>10 Projects</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>5GB Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Email Support</li>
+              </ul>
+              <button class="btn btn-outline-primary w-100" onclick="
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .btn').forEach(b => { b.classList.remove('btn-primary'); b.classList.add('btn-outline-primary'); b.textContent = 'Select Plan'; });
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('btn-primary');
+                this.textContent = '✓ Selected';
+                this.closest('.card').classList.add('border-primary');
+              ">Select Plan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-primary" id="pro-${containerId}">
+            <div class="card-body text-center">
+              <span class="badge bg-primary mb-2">Popular</span>
+              <h5 class="card-title">Professional</h5>
+              <div class="my-4">
+                <h2 class="mb-0">$29<small class="text-muted">/mo</small></h2>
+              </div>
+              <ul class="list-unstyled text-start mb-4">
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Unlimited Projects</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>50GB Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Priority Support</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Advanced Features</li>
+              </ul>
+              <button class="btn btn-primary w-100" onclick="
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .btn').forEach(b => { b.classList.remove('btn-primary'); b.classList.add('btn-outline-primary'); b.textContent = 'Select Plan'; });
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('btn-primary');
+                this.textContent = '✓ Selected';
+                this.closest('.card').classList.add('border-primary');
+              ">✓ Selected</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" id="enterprise-${containerId}">
+            <div class="card-body text-center">
+              <h5 class="card-title">Enterprise</h5>
+              <div class="my-4">
+                <h2 class="mb-0">$99<small class="text-muted">/mo</small></h2>
+              </div>
+              <ul class="list-unstyled text-start mb-4">
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Everything in Pro</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Unlimited Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>24/7 Support</li>
+                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Custom Solutions</li>
+              </ul>
+              <button class="btn btn-outline-primary w-100" onclick="
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));
+                document.querySelectorAll('[id*=\"pricing-interactive\"] .btn').forEach(b => { b.classList.remove('btn-primary'); b.classList.add('btn-outline-primary'); b.textContent = 'Select Plan'; });
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('btn-primary');
+                this.textContent = '✓ Selected';
+                this.closest('.card').classList.add('border-primary');
+              ">Select Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

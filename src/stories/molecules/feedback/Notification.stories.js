@@ -114,14 +114,14 @@ const createNotification = ({ position = 'top-right', variant = 'success', withA
       <i class="bx ${icons[variant]} me-2"></i>
       <strong class="me-auto">${titles[variant]}</strong>
       <small>just now</small>
-      <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast"></button>
+      <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
     </div>
     <div class="toast-body text-white">
       Your action has been completed successfully.
       ${withAction ? `
       <div class="mt-2 pt-2 border-top border-white-50">
         <button type="button" class="btn btn-sm btn-light me-2">View</button>
-        <button type="button" class="btn btn-sm btn-outline-light" data-bs-dismiss="toast">Dismiss</button>
+        <button type="button" class="btn btn-sm btn-outline-light" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)">Dismiss</button>
       </div>
       ` : ''}
     </div>

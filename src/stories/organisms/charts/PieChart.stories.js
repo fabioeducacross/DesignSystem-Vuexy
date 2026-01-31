@@ -312,16 +312,7 @@ const createPieChart = ({ variant = 'pie' }) => {
     <h5 class="mb-0">
       ${variant === 'pie' ? 'Device Usage' : variant === 'donut' ? 'Traffic Sources' : 'Project Progress'}
     </h5>
-    <div class="dropdown">
-      <button class="btn btn-sm btn-label-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Last 30 Days
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
-        <li><a class="dropdown-item" href="#">Last 90 Days</a></li>
-        <li><a class="dropdown-item" href="#">Last Year</a></li>
-      </ul>
-    </div>
+    <div class="text-muted small">Last 30 Days</div>
   </div>
   <div class="card-body">
     ${charts[variant]}

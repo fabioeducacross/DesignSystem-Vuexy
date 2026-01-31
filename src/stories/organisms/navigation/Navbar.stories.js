@@ -87,7 +87,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
   
   const userMenuHtml = showUserMenu ? `
     <li class="nav-item navbar-dropdown dropdown-user dropdown">
-      <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
+      <a class="nav-link dropdown-toggle hide-arrow" href="#" onclick="this.nextElementSibling.classList.toggle('show'); return false;">
         <div class="avatar avatar-online">
           <img src="/vuexy/img/avatars/1.png" alt="${userName}" class="w-px-40 h-auto rounded-circle">
         </div>
@@ -120,7 +120,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
   <div class="container-fluid">
     <a class="navbar-brand" href="#">${brandText}</a>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" onclick="const nav = document.getElementById('navbarNav'); nav.classList.toggle('show')" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
@@ -129,7 +129,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
       
       <ul class="navbar-nav flex-row align-items-center ms-auto">
         <li class="nav-item navbar-dropdown dropdown-notifications me-3">
-          <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown" aria-label="Notifications">
+          <a class="nav-link dropdown-toggle hide-arrow" href="#" onclick="this.nextElementSibling.classList.toggle('show'); return false;" aria-label="Notifications">
             <i class="bx bx-bell bx-sm"></i>
             ${notificationBadge}
           </a>

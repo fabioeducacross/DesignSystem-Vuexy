@@ -460,3 +460,61 @@ export const Draft = Template.bind({});
 Draft.args = {
   selectedFolder: 'draft'
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'email-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="max-width: 800px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Click on emails to mark as read/unread.
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">Inbox (3)</h5>
+        </div>
+        <div class="list-group list-group-flush">
+          <a href="javascript:void(0)" class="list-group-item list-group-item-action" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
+            <div class="d-flex align-items-center">
+              <span class="badge bg-primary me-2">New</span>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Project Update</h6>
+                  <small class="text-muted">5 mins ago</small>
+                </div>
+                <p class="mb-0 text-muted">The new features are ready for review...</p>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-group-item list-group-item-action" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
+            <div class="d-flex align-items-center">
+              <span class="badge bg-primary me-2">New</span>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Meeting Reminder</h6>
+                  <small class="text-muted">1 hour ago</small>
+                </div>
+                <p class="mb-0 text-muted">Don't forget the team meeting at 3 PM...</p>
+              </div>
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-light" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
+            <div class="d-flex align-items-center">
+              <span class="badge bg-primary me-2 d-none">New</span>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="mb-1">Weekly Report</h6>
+                  <small class="text-muted">Yesterday</small>
+                </div>
+                <p class="mb-0 text-muted">Here's your weekly summary...</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+};

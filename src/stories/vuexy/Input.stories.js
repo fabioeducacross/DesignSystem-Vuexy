@@ -193,3 +193,68 @@ export const AllStates = {
     },
   },
 };
+
+// Interactive Demo
+export const Interactive = {
+  render: () => {
+    const containerId = 'input-interactive-' + Math.random().toString(36).substr(2, 9);
+    
+    return `
+      <div id="${containerId}" style="max-width: 400px;">
+        <div class="alert alert-info mb-4">
+          <i class="bx bx-info-circle me-2"></i>
+          <strong>Interactive Demo:</strong> Type in the input to see character count and validation.
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label">Username (3-20 characters)</label>
+          <input 
+            type="text" 
+            id="demoInput-${containerId}" 
+            class="form-control" 
+            placeholder="Enter username"
+            oninput="
+              const input = this;
+              const count = document.getElementById('charCount-${containerId}');
+              const feedback = document.getElementById('feedback-${containerId}');
+              const len = input.value.length;
+              
+              count.textContent = len + '/20';
+              count.className = len > 20 ? 'text-danger' : len >= 3 ? 'text-success' : 'text-muted';
+              
+              input.classList.remove('is-valid', 'is-invalid');
+              
+              if (len === 0) {
+                feedback.textContent = '';
+              } else if (len < 3) {
+                input.classList.add('is-invalid');
+                feedback.textContent = 'Too short (min 3 characters)';
+                feedback.className = 'invalid-feedback d-block';
+              } else if (len > 20) {
+                input.classList.add('is-invalid');
+                feedback.textContent = 'Too long (max 20 characters)';
+                feedback.className = 'invalid-feedback d-block';
+              } else {
+                input.classList.add('is-valid');
+                feedback.textContent = 'Looks good!';
+                feedback.className = 'valid-feedback d-block';
+              }
+            "
+            maxlength="25"
+          />
+          <div class="d-flex justify-content-between mt-1">
+            <div id="feedback-${containerId}"></div>
+            <small id="charCount-${containerId}" class="text-muted">0/20</small>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Interactive input with live character count and validation feedback.',
+      },
+    },
+  },
+};

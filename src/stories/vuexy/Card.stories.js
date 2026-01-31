@@ -236,3 +236,52 @@ export const MultipleCards = {
     },
   },
 };
+
+// Interactive Demo
+export const Interactive = {
+  render: () => {
+    const containerId = 'card-interactive-' + Math.random().toString(36).substr(2, 9);
+    
+    return `
+      <div id="${containerId}" style="max-width: 500px;">
+        <div class="alert alert-info mb-4">
+          <i class="bx bx-info-circle me-2"></i>
+          <strong>Interactive Demo:</strong> Click the header to expand/collapse the card content.
+        </div>
+        
+        <div class="card">
+          <div class="card-header" style="cursor: pointer;" onclick="
+            const content = document.getElementById('cardContent-${containerId}');
+            const icon = this.querySelector('i');
+            content.classList.toggle('d-none');
+            icon.classList.toggle('bx-chevron-down');
+            icon.classList.toggle('bx-chevron-up');
+          ">
+            <div class="d-flex justify-content-between align-items-center">
+              <h4 class="card-title mb-0">Collapsible Card</h4>
+              <i class="bx bx-chevron-up"></i>
+            </div>
+          </div>
+          <div id="cardContent-${containerId}" class="card-body">
+            <p class="mb-3">This is the card content. Click the header to collapse/expand this section.</p>
+            <p class="mb-3">You can put any content here:</p>
+            <ul>
+              <li>Lists</li>
+              <li>Paragraphs</li>
+              <li>Images</li>
+              <li>Any HTML elements</li>
+            </ul>
+            <button class="btn btn-primary mt-2">Action Button</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Interactive collapsible card with expand/collapse functionality.',
+      },
+    },
+  },
+};

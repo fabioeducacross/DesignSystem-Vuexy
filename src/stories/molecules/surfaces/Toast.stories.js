@@ -77,7 +77,7 @@ const createToast = ({ variant = 'success', title = 'Notification', message = ''
     ${iconHtml}
     <strong class="me-auto">${title}</strong>
     <small class="text-white-50">just now</small>
-    <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
   </div>
   <div class="toast-body">
     ${message}
@@ -233,7 +233,7 @@ export const Interactive = () => {
           <i class="${icon} me-2"></i>
           <strong class="me-auto">${title}</strong>
           <small class="text-white-50">just now</small>
-          <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
         </div>
         <div class="toast-body ${variantClass}">
           ${message}

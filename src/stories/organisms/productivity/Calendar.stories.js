@@ -84,7 +84,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
     <!-- Sidebar -->
     <div class="col-lg-3 col-md-4 app-calendar-sidebar border-end">
       <div class="p-4">
-        <button class="btn btn-primary w-100 mb-4" data-bs-toggle="modal" data-bs-target="#addEventModal">
+        <button class="btn btn-primary w-100 mb-4" onclick="alert('Add Event - Use Modal component (PERMITIDO) para funcionalidade real')">
           <i class="bx bx-plus me-1"></i>
           Add Event
         </button>

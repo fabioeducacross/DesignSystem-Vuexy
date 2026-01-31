@@ -107,56 +107,30 @@ const Template = (args) => {
     <hr class="my-5" />
     
     <h6>Code Snippets</h6>
-    <div class="accordion" id="snippetAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#htmlSnippet">
-            HTML
-          </button>
-        </h2>
-        <div id="htmlSnippet" class="accordion-collapse collapse show" data-bs-parent="#snippetAccordion">
-          <div class="accordion-body">
-            <pre><code>${formatHtmlSnippet(markup).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-          </div>
-        </div>
+    <details open>
+      <summary class="btn btn-sm btn-outline-secondary mb-2">HTML</summary>
+      <div>
+        <pre><code>${formatHtmlSnippet(markup).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reactSnippet">
-            React
-          </button>
-        </h2>
-        <div id="reactSnippet" class="accordion-collapse collapse" data-bs-parent="#snippetAccordion">
-          <div class="accordion-body">
-            <pre><code>${formatReactSnippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-          </div>
-        </div>
+    </details>
+    <details>
+      <summary class="btn btn-sm btn-outline-secondary mb-2">React</summary>
+      <div>
+        <pre><code>${formatReactSnippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vue2Snippet">
-            Vue 2
-          </button>
-        </h2>
-        <div id="vue2Snippet" class="accordion-collapse collapse" data-bs-parent="#snippetAccordion">
-          <div class="accordion-body">
-            <pre><code>${formatVue2Snippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-          </div>
-        </div>
+    </details>
+    <details>
+      <summary class="btn btn-sm btn-outline-secondary mb-2">Vue 2</summary>
+      <div>
+        <pre><code>${formatVue2Snippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vue3Snippet">
-            Vue 3
-          </button>
-        </h2>
-        <div id="vue3Snippet" class="accordion-collapse collapse" data-bs-parent="#snippetAccordion">
-          <div class="accordion-body">
-            <pre><code>${formatVue3Snippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-          </div>
-        </div>
+    </details>
+    <details>
+      <summary class="btn btn-sm btn-outline-secondary mb-2">Vue 3</summary>
+      <div>
+        <pre><code>${formatVue3Snippet(markup, 'Input').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
       </div>
-    </div>
+    </details>
   `;
 };
 

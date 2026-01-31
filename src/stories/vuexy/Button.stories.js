@@ -239,3 +239,64 @@ export const AllSizes = {
     },
   },
 };
+
+// Interactive Demo
+export const Interactive = {
+  render: () => {
+    const containerId = 'btn-interactive-' + Math.random().toString(36).substr(2, 9);
+    
+    return `
+      <div id="${containerId}">
+        <div class="alert alert-info mb-4">
+          <i class="bx bx-info-circle me-2"></i>
+          <strong>Interactive Demo:</strong> Select variant and size to see button changes.
+        </div>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Variant:</label>
+                <select class="form-select" id="variant-${containerId}" onchange="
+                  const btn = document.getElementById('demoBtn-${containerId}');
+                  btn.className = 'btn btn-' + this.value + ' ' + btn.className.split(' ').find(c => c.includes('btn-'))?.replace('btn-', '').split('-')[1] || '';
+                  if (btn.className.includes('undefined')) btn.className = 'btn btn-' + this.value;
+                ">
+                  <option value="primary">Primary</option>
+                  <option value="secondary">Secondary</option>
+                  <option value="success">Success</option>
+                  <option value="danger">Danger</option>
+                  <option value="warning">Warning</option>
+                  <option value="info">Info</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Size:</label>
+                <select class="form-select" id="size-${containerId}" onchange="
+                  const btn = document.getElementById('demoBtn-${containerId}');
+                  btn.classList.remove('btn-sm', 'btn-lg');
+                  if (this.value !== 'md') btn.classList.add('btn-' + this.value);
+                ">
+                  <option value="sm">Small</option>
+                  <option value="md" selected>Medium</option>
+                  <option value="lg">Large</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <button id="demoBtn-${containerId}" class="btn btn-primary">Click Me!</button>
+        </div>
+      </div>
+    `;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Interactive button with variant and size controls.',
+      },
+    },
+  },
+};

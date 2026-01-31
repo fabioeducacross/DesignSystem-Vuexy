@@ -268,17 +268,32 @@ const createProfilePage = ({ viewMode = 'view' }) => {
       <!-- Tabs -->
       <ul class="nav nav-pills mb-3" role="tablist">
         <li class="nav-item">
-          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#activity">
+          <button class="nav-link active" onclick="
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
+            document.getElementById('activity').classList.add('show', 'active');
+          ">
             <i class="bx bx-rss me-1"></i> Activity
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#posts">
+          <button class="nav-link" onclick="
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
+            document.getElementById('posts').classList.add('show', 'active');
+          ">
             <i class="bx bx-file me-1"></i> Posts
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#connections">
+          <button class="nav-link" onclick="
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
+            document.getElementById('connections').classList.add('show', 'active');
+          ">
             <i class="bx bx-user me-1"></i> Connections
           </button>
         </li>

@@ -420,3 +420,63 @@ export const ChatOnly = Template.bind({});
 ChatOnly.args = {
   showSidebar: false
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'chat-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <div id="${containerId}" style="max-width: 600px;">
+      <div class="alert alert-info mb-4">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Type a message and click send to see it appear in the chat.
+      </div>
+      
+      <div class="card">
+        <div class="card-header d-flex align-items-center">
+          <div class="avatar avatar-sm me-3">
+            <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/1.png" alt="User" class="rounded-circle">
+          </div>
+          <div>
+            <h6 class="mb-0">John Doe</h6>
+            <small class="text-success">Online</small>
+          </div>
+        </div>
+        <div class="card-body" id="chatMessages-${containerId}" style="height: 300px; overflow-y: auto;">
+          <div class="mb-3">
+            <div class="d-flex">
+              <div class="avatar avatar-sm me-2">
+                <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/2.png" alt="Me" class="rounded-circle">
+              </div>
+              <div class="flex-grow-1">
+                <div class="bg-light p-2 rounded">
+                  <p class="mb-0">Hello! How can I help you?</p>
+                </div>
+                <small class="text-muted">10:30 AM</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="input-group">
+            <input type="text" id="messageInput-${containerId}" class="form-control" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') document.getElementById('sendBtn-${containerId}').click();">
+            <button class="btn btn-primary" id="sendBtn-${containerId}" onclick="
+              const input = document.getElementById('messageInput-${containerId}');
+              const msg = input.value.trim();
+              if (msg) {
+                const chat = document.getElementById('chatMessages-${containerId}');
+                const time = new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
+                const html = '<div class=\'mb-3\'><div class=\'d-flex flex-row-reverse\'><div class=\'avatar avatar-sm ms-2\'><img src=\'https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/avatars/2.png\' class=\'rounded-circle\'></div><div class=\'flex-grow-1 text-end\'><div class=\'bg-primary text-white p-2 rounded d-inline-block\' style=\'max-width: 70%\'><p class=\'mb-0\'>' + msg + '</p></div><div><small class=\'text-muted\'>' + time + '</small></div></div></div></div>';
+                chat.insertAdjacentHTML('beforeend', html);
+                chat.scrollTop = chat.scrollHeight;
+                input.value = '';
+              }
+            ">
+              <i class="bx bx-send"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};

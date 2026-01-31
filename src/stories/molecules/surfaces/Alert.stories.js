@@ -123,7 +123,7 @@ const createAlert = ({ variant = 'primary', title = '', message = '', dismissibl
   const iconHtml = icon ? `<i class="${icon} me-2"></i>` : '';
   const titleHtml = title ? `<h5 class="alert-heading mb-1">${title}</h5>` : '';
   const closeBtn = dismissible
-    ? '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
+    ? '<button type="button" class="btn-close" onclick="this.parentElement.remove()" aria-label="Close"></button>'
     : '';
 
   return `<div class="${classes}" role="alert">
@@ -291,7 +291,7 @@ export const Interactive = () => {
       alert.innerHTML = `
         <i class="bx ${icons[variant]} me-2"></i>
         <strong>${title}</strong> ${message}
-        ${dismissible ? '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' : ''}
+        ${dismissible ? '<button type="button" class="btn-close" onclick="this.parentElement.remove()" aria-label="Close"></button>' : ''}
       `;
       
       alertContainer.appendChild(alert);

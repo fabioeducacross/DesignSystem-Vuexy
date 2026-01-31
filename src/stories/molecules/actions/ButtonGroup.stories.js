@@ -231,20 +231,15 @@ export const Overview = () => `
     </div>
     
     <div class="col-12 mt-5">
-      <h5>Com Dropdown</h5>
+      <h5>Com Dropdown (Dropdown PERMITIDO - usar Dropdown component)</h5>
       <div class="btn-group" role="group">
         <button type="button" class="btn btn-primary">Action</button>
         <button type="button" class="btn btn-primary">Another</button>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Another link</a></li>
-          </ul>
+          <button type="button" class="btn btn-primary">More</button>
         </div>
       </div>
+      <div class="alert alert-info mt-3"><small>Note: Para dropdown real, use o componente Dropdown separado (PERMITIDO)</small></div>
     </div>
     
     <div class="col-12 mt-5">

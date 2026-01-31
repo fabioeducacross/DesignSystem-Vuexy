@@ -148,8 +148,12 @@ const createTabs = ({ activeTab = 'home', style = 'tabs', alignment = 'top' }) =
       <li class="nav-item" role="presentation">
         <button class="nav-link ${isActive ? 'active' : ''}" 
                 id="${tab.id}-tab" 
-                data-bs-toggle="tab" 
-                data-bs-target="#${tab.id}" 
+                onclick="
+                  document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+                  this.classList.add('active');
+                  document.querySelectorAll('.tab-pane').forEach(el => {el.classList.remove('show', 'active')});
+                  document.getElementById('${tab.id}').classList.add('show', 'active');
+                "
                 type="button" 
                 role="tab" 
                 aria-controls="${tab.id}" 
