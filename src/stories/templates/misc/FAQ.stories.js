@@ -153,12 +153,11 @@ const createFAQPage = ({ withSearch = true }) => {
             <h2 class="accordion-header">
               <button class="accordion-button" 
                       type="button" 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#faq-1">
+                      onclick="const target = document.getElementById('faq-1'); target.classList.toggle('show'); this.classList.toggle('collapsed');">
                 How do I create an account?
               </button>
             </h2>
-            <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionGettingStarted">
+            <div id="faq-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 Creating an account is simple! Click the "Sign Up" button in the top right corner, 
                 fill in your email address and create a password. You'll receive a confirmation 
@@ -171,12 +170,11 @@ const createFAQPage = ({ withSearch = true }) => {
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" 
                       type="button" 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#faq-2">
+                      onclick="const target = document.getElementById('faq-2'); target.classList.toggle('show'); this.classList.toggle('collapsed');">
                 What features are included in the free plan?
               </button>
             </h2>
-            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGettingStarted">
+            <div id="faq-2" class="accordion-collapse collapse">
               <div class="accordion-body">
                 The free plan includes basic features such as:
                 <ul class="mt-2">
@@ -193,12 +191,11 @@ const createFAQPage = ({ withSearch = true }) => {
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" 
                       type="button" 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#faq-3">
+                      onclick="const target = document.getElementById('faq-3'); target.classList.toggle('show'); this.classList.toggle('collapsed');">
                 How do I upgrade my account?
               </button>
             </h2>
-            <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGettingStarted">
+            <div id="faq-3" class="accordion-collapse collapse">
               <div class="accordion-body">
                 You can upgrade your account at any time by going to Settings > Billing and 
                 selecting a plan that fits your needs. Payment is processed securely through Stripe.
@@ -216,12 +213,11 @@ const createFAQPage = ({ withSearch = true }) => {
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" 
                       type="button" 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#faq-4">
+                      onclick="const target = document.getElementById('faq-4'); target.classList.toggle('show'); this.classList.toggle('collapsed');">
                 How do I change my password?
               </button>
             </h2>
-            <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionAccount">
+            <div id="faq-4" class="accordion-collapse collapse">
               <div class="accordion-body">
                 Go to Settings > Security and click "Change Password". You'll need to enter 
                 your current password and then your new password twice to confirm.
@@ -233,12 +229,11 @@ const createFAQPage = ({ withSearch = true }) => {
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" 
                       type="button" 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#faq-5">
+                      onclick="const target = document.getElementById('faq-5'); target.classList.toggle('show'); this.classList.toggle('collapsed');">
                 Can I cancel my subscription anytime?
               </button>
             </h2>
-            <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionAccount">
+            <div id="faq-5" class="accordion-collapse collapse">
               <div class="accordion-body">
                 Yes! You can cancel your subscription at any time. Your account will remain 
                 active until the end of your current billing period, and you won't be charged again.

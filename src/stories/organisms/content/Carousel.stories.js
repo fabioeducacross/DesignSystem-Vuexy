@@ -77,16 +77,16 @@ Componente de slideshow para percorrer elementos (imagens ou conteúdo).
 const createCarousel = ({ controls = true, indicators = true, fade = false }) => {
   const fadeClass = fade ? 'carousel-fade' : '';
   const indicatorsHtml = indicators ? `<div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true"></button>
-    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+    <button type="button" onclick="const carousel = this.closest('.carousel'); carousel.querySelector('.carousel-item.active').classList.remove('active'); carousel.querySelectorAll('.carousel-item')[0].classList.add('active'); this.closest('.carousel-indicators').querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');" class="active" aria-current="true"></button>
+    <button type="button" onclick="const carousel = this.closest('.carousel'); carousel.querySelector('.carousel-item.active').classList.remove('active'); carousel.querySelectorAll('.carousel-item')[1].classList.add('active'); this.closest('.carousel-indicators').querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');"></button>
+    <button type="button" onclick="const carousel = this.closest('.carousel'); carousel.querySelector('.carousel-item.active').classList.remove('active'); carousel.querySelectorAll('.carousel-item')[2].classList.add('active'); this.closest('.carousel-indicators').querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');"></button>
   </div>` : '';
   
-  const controlsHtml = controls ? `<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  const controlsHtml = controls ? `<button class="carousel-control-prev" type="button" onclick="const carousel = this.closest('.carousel'); const items = carousel.querySelectorAll('.carousel-item'); const current = carousel.querySelector('.carousel-item.active'); const currentIdx = Array.from(items).indexOf(current); current.classList.remove('active'); items[(currentIdx - 1 + items.length) % items.length].classList.add('active');">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" onclick="const carousel = this.closest('.carousel'); const items = carousel.querySelectorAll('.carousel-item'); const current = carousel.querySelector('.carousel-item.active'); const currentIdx = Array.from(items).indexOf(current); current.classList.remove('active'); items[(currentIdx + 1) % items.length].classList.add('active');">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>` : '';
@@ -130,15 +130,31 @@ const Template = (args) => {
   `;
 };
 
-export const Overview = () => `
+export const Overview = () => {
+  // Helper function to create carousel navigation handlers
+  const createCarouselNavigation = (carouselId) => {
+    return {
+      prev: `const carousel = document.getElementById('${carouselId}'); const items = carousel.querySelectorAll('.carousel-item'); const current = carousel.querySelector('.carousel-item.active'); const currentIdx = Array.from(items).indexOf(current); current.classList.remove('active'); items[(currentIdx - 1 + items.length) % items.length].classList.add('active');`,
+      next: `const carousel = document.getElementById('${carouselId}'); const items = carousel.querySelectorAll('.carousel-item'); const current = carousel.querySelector('.carousel-item.active'); const currentIdx = Array.from(items).indexOf(current); current.classList.remove('active'); items[(currentIdx + 1) % items.length].classList.add('active');`,
+      indicator: (index) => `const carousel = document.getElementById('${carouselId}'); carousel.querySelector('.carousel-item.active').classList.remove('active'); carousel.querySelectorAll('.carousel-item')[${index}].classList.add('active'); this.closest('.carousel-indicators').querySelectorAll('button').forEach(b => b.classList.remove('active')); this.classList.add('active');`
+    };
+  };
+  
+  const defaultNav = createCarouselNavigation('carouselDefault');
+  const captionsNav = createCarouselNavigation('carouselCaptions');
+  const fadeNav = createCarouselNavigation('carouselFade');
+  const testimonialsNav = createCarouselNavigation('carouselTestimonials');
+  const productNav = createCarouselNavigation('carouselProduct');
+  
+  return `
   <div class="row g-4">
     <div class="col-12">
       <h5>Default Carousel</h5>
-      <div id="carouselDefault" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselDefault" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselDefault" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#carouselDefault" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#carouselDefault" data-bs-slide-to="2"></button>
+          <button type="button" onclick="${defaultNav.indicator(0)}" class="active" aria-current="true"></button>
+          <button type="button" onclick="${defaultNav.indicator(1)}"></button>
+          <button type="button" onclick="${defaultNav.indicator(2)}"></button>
         </div>
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
@@ -151,11 +167,11 @@ export const Overview = () => `
             <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Slide 3">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDefault" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" onclick="${defaultNav.prev}">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselDefault" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" onclick="${defaultNav.next}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -164,11 +180,11 @@ export const Overview = () => `
     
     <div class="col-12 mt-5">
       <h5>With Captions</h5>
-      <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselCaptions" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2"></button>
+          <button type="button" onclick="${captionsNav.indicator(0)}" class="active"></button>
+          <button type="button" onclick="${captionsNav.indicator(1)}"></button>
+          <button type="button" onclick="${captionsNav.indicator(2)}"></button>
         </div>
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
@@ -193,11 +209,11 @@ export const Overview = () => `
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" onclick="${captionsNav.prev}">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" onclick="${captionsNav.next}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -206,7 +222,7 @@ export const Overview = () => `
     
     <div class="col-12 mt-5">
       <h5>Fade Transition</h5>
-      <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div id="carouselFade" class="carousel slide carousel-fade">
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
             <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Fade 1">
@@ -218,11 +234,11 @@ export const Overview = () => `
             <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Fade 3">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" onclick="${fadeNav.prev}">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" onclick="${fadeNav.next}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -231,11 +247,11 @@ export const Overview = () => `
     
     <div class="col-12 mt-5">
       <h5>Testimonials Carousel</h5>
-      <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselTestimonials" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#carouselTestimonials" data-bs-slide-to="2"></button>
+          <button type="button" onclick="${testimonialsNav.indicator(0)}" class="active"></button>
+          <button type="button" onclick="${testimonialsNav.indicator(1)}"></button>
+          <button type="button" onclick="${testimonialsNav.indicator(2)}"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -296,11 +312,11 @@ export const Overview = () => `
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" onclick="${testimonialsNav.prev}">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" onclick="${testimonialsNav.next}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -311,7 +327,7 @@ export const Overview = () => `
       <h5>Product Gallery</h5>
       <div class="row">
         <div class="col-md-8">
-          <div id="carouselProduct" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselProduct" class="carousel slide">
             <div class="carousel-inner rounded">
               <div class="carousel-item active">
                 <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="d-block w-100" alt="Product 1">
@@ -323,11 +339,11 @@ export const Overview = () => `
                 <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="d-block w-100" alt="Product 3">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" onclick="${productNav.prev}">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" onclick="${productNav.next}">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -335,13 +351,13 @@ export const Overview = () => `
         </div>
         <div class="col-md-4">
           <div class="d-grid gap-2">
-            <button class="btn btn-sm btn-outline-secondary" data-bs-target="#carouselProduct" data-bs-slide-to="0">
+            <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(0)}">
               <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-1.png" class="w-100 rounded" alt="Thumb 1">
             </button>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-target="#carouselProduct" data-bs-slide-to="1">
+            <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(1)}">
               <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-2.png" class="w-100 rounded" alt="Thumb 2">
             </button>
-            <button class="btn btn-sm btn-outline-secondary" data-bs-target="#carouselProduct" data-bs-slide-to="2">
+            <button class="btn btn-sm btn-outline-secondary" onclick="${productNav.indicator(2)}">
               <img src="https://demos.themeselection.com/materio-bootstrap-html-admin-template/assets/img/pages/card-advance-3.png" class="w-100 rounded" alt="Thumb 3">
             </button>
           </div>
@@ -352,9 +368,10 @@ export const Overview = () => `
   
   <div class="alert alert-info mt-5">
     <i class="bx bx-info-circle me-2"></i>
-    <strong>JavaScript Required:</strong> Carousel requires Bootstrap JavaScript. Auto-rotation starts with <code>data-bs-ride="carousel"</code>.
+    <strong>State-Controlled Carousel:</strong> This carousel uses onclick handlers and classes toggle (no Bootstrap JS). All navigation is controlled via JavaScript state management.
   </div>
 `;
+};
 
 export const Default = Template.bind({});
 Default.args = {
