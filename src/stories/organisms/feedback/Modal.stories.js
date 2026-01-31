@@ -270,3 +270,114 @@ NoFooter.args = {
   showFooter: false,
   title: 'Modal Without Footer'
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'modal-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}">
+      <button class="btn btn-primary" data-action="open-modal">
+        <i class="bx bx-plus me-1"></i> Open Modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" data-modal-element tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Interactive Modal</h5>
+              <button type="button" class="btn-close" data-action="close-modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>This is an interactive modal demo. You can:</p>
+              <ul>
+                <li>Click the "Open Modal" button to open</li>
+                <li>Click the X button to close</li>
+                <li>Click the "Close" button to close</li>
+                <li>Click outside the modal to close (backdrop is dismissible)</li>
+              </ul>
+              <div class="alert alert-primary mt-3" role="alert">
+                <div class="alert-body">
+                  <i class="bx bx-info-circle me-2"></i>
+                  All interactions are handled via Storybook state without external scripts.
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-label-secondary" data-action="close-modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Backdrop -->
+      <div class="modal-backdrop fade" data-modal-backdrop style="display: none;"></div>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const openBtn = container.querySelector('[data-action="open-modal"]');
+    const closeButtons = container.querySelectorAll('[data-action="close-modal"]');
+    const modal = container.querySelector('[data-modal-element]');
+    const backdrop = container.querySelector('[data-modal-backdrop]');
+    
+    const openModal = () => {
+      modal.style.display = 'block';
+      backdrop.style.display = 'block';
+      
+      setTimeout(() => {
+        modal.classList.add('show');
+        backdrop.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+      }, 10);
+    };
+    
+    const closeModal = () => {
+      modal.classList.remove('show');
+      backdrop.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      
+      setTimeout(() => {
+        modal.style.display = 'none';
+        backdrop.style.display = 'none';
+      }, 300);
+    };
+    
+    openBtn.addEventListener('click', openModal);
+    
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', closeModal);
+    });
+    
+    // Click outside to close (dismissible)
+    backdrop.addEventListener('click', closeModal);
+    
+    // Keyboard support: Escape to close
+    const handleKeydown = (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeydown);
+    
+    // Cleanup
+    container._cleanup = () => {
+      document.removeEventListener('keydown', handleKeydown);
+    };
+  }, 100);
+  
+  return markup;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: 'Interactive modal with open/close functionality, dismissible backdrop, and **Escape key** support for closing.'
+    }
+  }
+};

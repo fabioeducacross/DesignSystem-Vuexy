@@ -19,5 +19,8 @@
     "@storybook/html": "^8.6.15",
     "@storybook/html-vite": "^8.6.15",
     "storybook": "^8.6.15"
+  },
+  "dependencies": {
+    "sortablejs": "^1.15.6"
   }
 }

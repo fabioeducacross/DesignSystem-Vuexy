@@ -311,3 +311,118 @@ DarkTheme.args = {
   ...Expanded.args,
   theme: 'dark'
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'sidebar-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}" style="height: 500px; border: 1px solid #ddd; position: relative;">
+      <aside class="menu menu-vertical" style="width: 260px; height: 100%; overflow-y: auto;">
+        <div class="app-brand p-3">
+          <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
+          <button class="btn btn-sm btn-icon ms-auto" data-action="toggle" style="position: absolute; right: 10px;">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+        </div>
+        
+        <ul class="menu-inner py-1">
+          ${menuItems.map(item => `
+            <li class="menu-item ${item.id === 'dashboard' ? 'active' : ''}" data-item-id="${item.id}">
+              <a href="javascript:void(0);" class="menu-link ${item.children ? 'menu-toggle' : ''}" ${item.children ? 'data-has-submenu="true"' : ''}>
+                <i class="menu-icon tf-icons bx ${item.icon}"></i>
+                <div class="menu-text">${item.label}</div>
+                ${item.badge ? `<div class="badge bg-${item.badge.color} rounded-pill ms-auto">${item.badge.text}</div>` : ''}
+              </a>
+              ${item.children ? `
+                <ul class="menu-sub" style="display: none;">
+                  ${item.children.map(child => `
+                    <li class="menu-item" data-item-id="${child.id}">
+                      <a href="javascript:void(0);" class="menu-link">
+                        <div class="menu-text">${child.label}</div>
+                      </a>
+                    </li>`).join('')}
+                </ul>` : ''}
+            </li>`).join('')}
+        </ul>
+      </aside>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const menu = container.querySelector('.menu');
+    const toggleBtn = container.querySelector('[data-action="toggle"]');
+    const menuItems = container.querySelectorAll('.menu-item');
+    const menuLinks = container.querySelectorAll('.menu-link');
+    
+    let isCollapsed = false;
+    
+    // Toggle collapsed state
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        isCollapsed = !isCollapsed;
+        const icon = toggleBtn.querySelector('i');
+        
+        if (isCollapsed) {
+          menu.style.width = '80px';
+          icon.classList.remove('bx-chevron-left');
+          icon.classList.add('bx-chevron-right');
+          container.querySelectorAll('.menu-text').forEach(el => el.style.display = 'none');
+          container.querySelectorAll('.badge').forEach(el => el.style.display = 'none');
+          container.querySelectorAll('.menu-sub').forEach(el => el.style.display = 'none');
+        } else {
+          menu.style.width = '260px';
+          icon.classList.remove('bx-chevron-right');
+          icon.classList.add('bx-chevron-left');
+          container.querySelectorAll('.menu-text').forEach(el => el.style.display = '');
+          container.querySelectorAll('.badge').forEach(el => el.style.display = '');
+        }
+      });
+    }
+    
+    // Handle menu item clicks
+    menuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const menuItem = link.closest('.menu-item');
+        const hasSubmenu = link.hasAttribute('data-has-submenu');
+        
+        if (hasSubmenu && !isCollapsed) {
+          // Toggle submenu
+          e.preventDefault();
+          const submenu = menuItem.querySelector('.menu-sub');
+          if (submenu) {
+            const isOpen = submenu.style.display !== 'none';
+            submenu.style.display = isOpen ? 'none' : 'block';
+            link.classList.toggle('open', !isOpen);
+          }
+        } else if (!hasSubmenu) {
+          // Set active item
+          menuItems.forEach(item => item.classList.remove('active'));
+          menuItem.classList.add('active');
+        }
+      });
+    });
+  }, 100);
+  
+  return `
+    ${markup}
+    <div class="alert alert-info mt-3">
+      <strong>Interactive demo:</strong> 
+      <ul class="mb-0">
+        <li>Click the chevron button to toggle collapsed/expanded state</li>
+        <li>Click menu items to set active state</li>
+        <li>Click items with submenus to expand/collapse (only when expanded)</li>
+      </ul>
+    </div>
+  `;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: 'Interactive sidebar demo with toggle, active states, and submenu expansion.'
+    }
+  }
+};

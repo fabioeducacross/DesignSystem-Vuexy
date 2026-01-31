@@ -215,3 +215,149 @@ Dismissible.args = {
   dismissible: true,
   icon: 'bx bx-error'
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'alert-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}" style="max-width: 800px;">
+      <div class="alert alert-info mb-3">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Click buttons to trigger different alerts. Dismissible alerts can be closed.
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Alert Triggers</h5>
+          
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-success btn-sm" data-alert="success">
+              <i class="bx bx-check me-1"></i> Show Success
+            </button>
+            <button class="btn btn-danger btn-sm" data-alert="error">
+              <i class="bx bx-x me-1"></i> Show Error
+            </button>
+            <button class="btn btn-warning btn-sm" data-alert="warning">
+              <i class="bx bx-error me-1"></i> Show Warning
+            </button>
+            <button class="btn btn-info btn-sm" data-alert="info">
+              <i class="bx bx-info-circle me-1"></i> Show Info
+            </button>
+            <button class="btn btn-secondary btn-sm" data-alert="auto">
+              <i class="bx bx-time me-1"></i> Auto-close (3s)
+            </button>
+          </div>
+          
+          <div id="alert-container-${containerId}" class="d-flex flex-column gap-2">
+            <!-- Alerts will be inserted here -->
+          </div>
+          
+          <div class="mt-3">
+            <small class="text-muted">Alerts shown: <span id="count-${containerId}" class="badge bg-primary">0</span></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const alertContainer = container.querySelector(`#alert-container-${containerId}`);
+    const countBadge = container.querySelector(`#count-${containerId}`);
+    const buttons = container.querySelectorAll('[data-alert]');
+    
+    let alertCount = 0;
+    
+    const createAlertElement = (variant, title, message, dismissible = true, autoClose = false) => {
+      alertCount++;
+      countBadge.textContent = alertCount;
+      
+      const alertId = 'alert-' + Math.random().toString(36).substr(2, 9);
+      const icons = {
+        success: 'bx-check-circle',
+        error: 'bx-x-circle',
+        warning: 'bx-error',
+        info: 'bx-info-circle'
+      };
+      
+      const alert = document.createElement('div');
+      alert.className = `alert alert-${variant} alert-dismissible fade show`;
+      alert.id = alertId;
+      alert.setAttribute('role', 'alert');
+      
+      alert.innerHTML = `
+        <i class="bx ${icons[variant]} me-2"></i>
+        <strong>${title}</strong> ${message}
+        ${dismissible ? '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' : ''}
+      `;
+      
+      alertContainer.appendChild(alert);
+      
+      // Dismiss handler
+      if (dismissible) {
+        const closeBtn = alert.querySelector('.btn-close');
+        closeBtn.addEventListener('click', () => {
+          alert.classList.remove('show');
+          setTimeout(() => alert.remove(), 300);
+        });
+      }
+      
+      // Auto-close
+      if (autoClose) {
+        setTimeout(() => {
+          alert.classList.remove('show');
+          setTimeout(() => alert.remove(), 300);
+        }, 3000);
+      }
+    };
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const alertType = e.currentTarget.getAttribute('data-alert');
+        
+        switch(alertType) {
+          case 'success':
+            createAlertElement('success', 'Success!', 'Operation completed successfully.');
+            break;
+          case 'error':
+            createAlertElement('danger', 'Error!', 'Something went wrong. Please try again.');
+            break;
+          case 'warning':
+            createAlertElement('warning', 'Warning!', 'Please review your information before proceeding.');
+            break;
+          case 'info':
+            createAlertElement('info', 'Info:', 'Here\'s some helpful information for you.');
+            break;
+          case 'auto':
+            createAlertElement('secondary', 'Auto-close', 'This alert will close automatically in 3 seconds.', true, true);
+            break;
+        }
+      });
+    });
+    
+  }, 100);
+  
+  return markup;
+};
+
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: `
+**Interactive Demo:** Demonstração de alerts dinâmicos com dismiss e auto-close.
+
+Funcionalidades:
+- Botões para disparar diferentes tipos de alerts
+- Dismiss manual clicando no X
+- Auto-close após 3 segundos (opção)
+- Contador de alerts exibidos
+- Animação de fade out
+
+**Uso típico:** Feedback de ações do usuário (salvar, deletar, atualizar).
+      `
+    }
+  }
+};

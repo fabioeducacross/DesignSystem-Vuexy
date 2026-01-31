@@ -266,3 +266,122 @@ VerticalLeft.args = {
   alignment: 'left',
   activeTab: 'messages'
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'tabs-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}">
+      <ul class="nav nav-tabs" role="tablist">
+        ${tabsData.map((tab, idx) => `
+          <li class="nav-item" role="presentation">
+            <button class="nav-link ${idx === 0 ? 'active' : ''} ${tab.id === 'settings' ? 'disabled' : ''}" 
+                    data-tab-id="${tab.id}"
+                    type="button" 
+                    role="tab"
+                    ${tab.id === 'settings' ? 'disabled' : ''}>
+              <i class="bx ${tab.icon} me-1"></i> ${tab.label}
+              ${tab.id === 'settings' ? '<small class="ms-1 text-muted">(disabled)</small>' : ''}
+            </button>
+          </li>`).join('')}
+      </ul>
+      <div class="tab-content mt-3">
+        ${tabsData.map((tab, idx) => `
+          <div class="tab-pane fade ${idx === 0 ? 'show active' : ''}" 
+               data-tab-pane="${tab.id}">
+            <div class="p-3">
+              ${tab.content}
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const buttons = container.querySelectorAll('.nav-link:not(.disabled)');
+    const panes = container.querySelectorAll('.tab-pane');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab-id');
+        
+        // Remove active de todos os buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        // Adiciona active ao clicado
+        button.classList.add('active');
+        
+        // Remove active/show de todos os panes
+        panes.forEach(pane => {
+          pane.classList.remove('show', 'active');
+        });
+        
+        // Adiciona active/show ao pane correspondente
+        const targetPane = container.querySelector(`[data-tab-pane="${tabId}"]`);
+        if (targetPane) {
+          targetPane.classList.add('show', 'active');
+        }
+      });
+      
+      // Keyboard support: Enter to activate
+      button.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          button.click();
+        }
+      });
+    });
+    
+    // Arrow keys navigation
+    const handleKeydown = (e) => {
+      if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+      
+      const activeButton = container.querySelector('.nav-link.active');
+      if (!activeButton) return;
+      
+      const buttonsArray = Array.from(buttons);
+      const currentIndex = buttonsArray.indexOf(activeButton);
+      
+      let nextIndex;
+      if (e.key === 'ArrowLeft') {
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : buttonsArray.length - 1;
+      } else {
+        nextIndex = currentIndex < buttonsArray.length - 1 ? currentIndex + 1 : 0;
+      }
+      
+      e.preventDefault();
+      buttonsArray[nextIndex].focus();
+      buttonsArray[nextIndex].click();
+    };
+    
+    document.addEventListener('keydown', handleKeydown);
+    
+    // Cleanup
+    container._cleanup = () => {
+      document.removeEventListener('keydown', handleKeydown);
+    };
+  }, 100);
+  
+  return `
+    ${markup}
+    <div class="alert alert-info mt-3">
+      <strong>Interactive demo:</strong> Click on tabs to switch content. Note that the "Settings" tab is disabled and cannot be clicked.
+    </div>
+  `;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: `Interactive tabs with full keyboard support:
+- **Click**: Switch tabs with mouse
+- **Enter**: Activate focused tab
+- **Arrow Left/Right**: Navigate between tabs
+- **Disabled tabs**: Cannot be activated
+
+Keyboard navigation enhances accessibility for keyboard-only users.`
+    }
+  }
+};

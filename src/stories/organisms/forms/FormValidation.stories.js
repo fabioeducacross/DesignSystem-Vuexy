@@ -314,3 +314,140 @@ Submitting.args = {
   ...Valid.args,
   submitDisabled: true
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'form-validation-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}">
+      <form novalidate>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-4">User Registration</h5>
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="firstName">First Name *</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide your first name.</div>
+              </div>
+              
+              <div class="col-md-6">
+                <label class="form-label" for="lastName">Last Name *</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide your last name.</div>
+              </div>
+              
+              <div class="col-12">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="john.doe@example.com" required>
+                <div class="valid-feedback">Email is valid!</div>
+                <div class="invalid-feedback">Please provide a valid email (must contain @).</div>
+              </div>
+              
+              <div class="col-12">
+                <label class="form-label" for="password">Password *</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required minlength="8">
+                <div class="valid-feedback">Strong password!</div>
+                <div class="invalid-feedback">Password must be at least 8 characters.</div>
+              </div>
+              
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                  <label class="form-check-label" for="terms">
+                    I agree to terms and conditions *
+                  </label>
+                  <div class="valid-feedback">Thank you!</div>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-label-secondary ms-2" data-action="reset">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+      <div class="alert alert-secondary mt-3" data-status-message>
+        Fill the form and click Submit to validate
+      </div>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const form = container.querySelector('form');
+    const firstName = form.querySelector('#firstName');
+    const lastName = form.querySelector('#lastName');
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+    const terms = form.querySelector('#terms');
+    const resetBtn = container.querySelector('[data-action="reset"]');
+    const statusMessage = container.querySelector('[data-status-message]');
+    
+    const validateField = (field) => {
+      let isValid = false;
+      
+      if (field.type === 'checkbox') {
+        isValid = field.checked;
+      } else if (field.name === 'email') {
+        isValid = field.value.includes('@') && field.value.length > 3;
+      } else if (field.name === 'password') {
+        isValid = field.value.length >= 8;
+      } else {
+        isValid = field.value.trim().length > 0;
+      }
+      
+      field.classList.remove('is-valid', 'is-invalid');
+      field.classList.add(isValid ? 'is-valid' : 'is-invalid');
+      
+      return isValid;
+    };
+    
+    const validateForm = () => {
+      const fields = [firstName, lastName, email, password, terms];
+      const results = fields.map(validateField);
+      return results.every(result => result === true);
+    };
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const isValid = validateForm();
+      
+      if (isValid) {
+        statusMessage.className = 'alert alert-success mt-3';
+        statusMessage.innerHTML = '<i class="bx bx-check-circle me-2"></i><strong>Success!</strong> All fields are valid. Form would be submitted.';
+      } else {
+        statusMessage.className = 'alert alert-danger mt-3';
+        statusMessage.innerHTML = '<i class="bx bx-error-circle me-2"></i><strong>Error!</strong> Please fix the invalid fields above.';
+      }
+    });
+    
+    resetBtn.addEventListener('click', () => {
+      form.reset();
+      const fields = form.querySelectorAll('.form-control, .form-check-input');
+      fields.forEach(field => field.classList.remove('is-valid', 'is-invalid'));
+      statusMessage.className = 'alert alert-secondary mt-3';
+      statusMessage.textContent = 'Fill the form and click Submit to validate';
+    });
+  }, 100);
+  
+  return markup;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: 'Interactive form validation demo. Submit the form to trigger validation. Rules: First/Last name required, Email must contain @, Password min 8 chars, Terms must be checked.'
+    }
+  }
+};

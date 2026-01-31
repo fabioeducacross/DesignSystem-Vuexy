@@ -218,3 +218,173 @@ WithNotifications.args = {
   ...Default.args,
   notificationCount: 12
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'navbar-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <nav id="${containerId}" class="navbar navbar-expand-lg navbar-light bg-navbar-theme">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="javascript:void(0)">Vuexy</a>
+        
+        <!-- Search -->
+        <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ms-3">
+          <input type="text" class="form-control search-input" placeholder="Search..." aria-label="Search">
+          <i class="bx bx-search"></i>
+        </div>
+        
+        <!-- Spacer -->
+        <div class="navbar-nav-right d-flex align-items-center ms-auto" id="navbar-collapse">
+          <ul class="navbar-nav flex-row align-items-center">
+            
+            <!-- Notifications -->
+            <li class="nav-item navbar-dropdown dropdown" data-dropdown="notifications">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0)" data-toggle="notifications">
+                <i class="bx bx-bell bx-sm"></i>
+                <span class="badge rounded-pill badge-notifications bg-danger">5</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" data-menu="notifications">
+                <li>
+                  <div class="dropdown-header d-flex align-items-center py-3">
+                    <h5 class="text-body mb-0 me-auto">Notifications</h5>
+                    <a href="javascript:void(0)" class="dropdown-notifications-all text-body"><i class="bx fs-4 bx-envelope-open"></i></a>
+                  </div>
+                </li>
+                <li>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar">
+                            <span class="avatar-initial rounded-circle bg-label-primary"><i class="bx bx-cart"></i></span>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-1">New order received! 🎉</h6>
+                          <p class="mb-0 small">You have 5 new orders</p>
+                          <small class="text-muted">2 minutes ago</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar">
+                            <span class="avatar-initial rounded-circle bg-label-success"><i class="bx bx-user"></i></span>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-1">New user registered</h6>
+                          <p class="mb-0 small">John Doe joined</p>
+                          <small class="text-muted">1 hour ago</small>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- User -->
+            <li class="nav-item navbar-dropdown dropdown" data-dropdown="user">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0)" data-toggle="user">
+                <div class="avatar avatar-online">
+                  <img src="/vuexy/img/avatars/1.png" alt="John Doe" class="w-px-40 h-auto rounded-circle">
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" data-menu="user">
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="avatar avatar-online">
+                          <img src="/vuexy/img/avatars/1.png" alt="John Doe" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <span class="fw-medium d-block">John Doe</span>
+                        <small class="text-muted">Admin</small>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="bx bx-user me-2"></i>
+                    <span class="align-middle">My Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="bx bx-cog me-2"></i>
+                    <span class="align-middle">Settings</span>
+                  </a>
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="bx bx-power-off me-2"></i>
+                    <span class="align-middle">Log Out</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  `;
+  
+  setTimeout(() => {
+    const navbar = document.getElementById(containerId);
+    if (!navbar) return;
+    
+    const dropdowns = navbar.querySelectorAll('[data-dropdown]');
+    
+    dropdowns.forEach(dropdown => {
+      const toggle = dropdown.querySelector('[data-toggle]');
+      const menu = dropdown.querySelector('[data-menu]');
+      
+      if (!toggle || !menu) return;
+      
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Fecha outros dropdowns
+        dropdowns.forEach(other => {
+          if (other !== dropdown) {
+            const otherMenu = other.querySelector('[data-menu]');
+            if (otherMenu) {
+              otherMenu.classList.remove('show');
+              other.classList.remove('show');
+            }
+          }
+        });
+        
+        // Toggle atual
+        const isOpen = menu.classList.contains('show');
+        menu.classList.toggle('show', !isOpen);
+        dropdown.classList.toggle('show', !isOpen);
+      });
+    });
+    
+    // Close dropdowns when clicking outside (não implementado conforme requisitos)
+  }, 100);
+  
+  return `
+    ${markup}
+    <div class="alert alert-info mt-3">
+      <strong>Interactive demo:</strong> Click on the notification bell or user avatar to toggle their respective dropdown menus.
+    </div>
+  `;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: 'Interactive navbar demo with working notification and user menu dropdowns.'
+    }
+  }
+};

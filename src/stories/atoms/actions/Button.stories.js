@@ -325,3 +325,171 @@ export const AllVariants = {
     }
   }
 };
+
+// Interactive Demo
+export const Interactive = () => {
+  const containerId = 'button-interactive-' + Math.random().toString(36).substr(2, 9);
+  
+  const markup = `
+    <div id="${containerId}" style="max-width: 600px;">
+      <div class="alert alert-info mb-3">
+        <i class="bx bx-info-circle me-2"></i>
+        <strong>Interactive Demo:</strong> Click buttons to see actions. Count updates on each click.
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Button Actions</h5>
+          <p class="text-muted">Click counter: <span id="click-count-${containerId}" class="badge bg-primary">0</span></p>
+          
+          <div class="d-flex flex-column gap-3">
+            <!-- Primary Actions -->
+            <div>
+              <h6>Primary Actions</h6>
+              <div class="d-flex gap-2 flex-wrap">
+                <button type="button" class="btn btn-primary" data-action="save">
+                  <i class="bx bx-save me-1"></i> Save
+                </button>
+                <button type="button" class="btn btn-success" data-action="submit">
+                  <i class="bx bx-check me-1"></i> Submit
+                </button>
+                <button type="button" class="btn btn-danger" data-action="delete">
+                  <i class="bx bx-trash me-1"></i> Delete
+                </button>
+              </div>
+            </div>
+            
+            <!-- Secondary Actions -->
+            <div>
+              <h6>Secondary Actions</h6>
+              <div class="d-flex gap-2 flex-wrap">
+                <button type="button" class="btn btn-outline-primary" data-action="edit">
+                  <i class="bx bx-edit me-1"></i> Edit
+                </button>
+                <button type="button" class="btn btn-outline-secondary" data-action="cancel">
+                  Cancel
+                </button>
+              </div>
+            </div>
+            
+            <!-- Toggle State -->
+            <div>
+              <h6>Toggle State</h6>
+              <button type="button" class="btn btn-outline-info" data-action="toggle" id="toggle-btn-${containerId}">
+                <i class="bx bx-heart me-1"></i> Like
+              </button>
+            </div>
+            
+            <!-- Disabled State -->
+            <div>
+              <h6>Disabled State</h6>
+              <button type="button" class="btn btn-primary" disabled>
+                <i class="bx bx-loader-alt bx-spin me-1"></i> Loading...
+              </button>
+            </div>
+          </div>
+          
+          <div class="mt-3" id="log-${containerId}" style="max-height: 150px; overflow-y: auto; font-size: 0.85rem; background: #f8f9fa; padding: 10px; border-radius: 4px;">
+            <div class="text-muted">Action log:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    let clickCount = 0;
+    let isLiked = false;
+    
+    const countBadge = document.getElementById(`click-count-${containerId}`);
+    const toggleBtn = document.getElementById(`toggle-btn-${containerId}`);
+    const logContainer = document.getElementById(`log-${containerId}`);
+    
+    const addLog = (message, type = 'info') => {
+      const timestamp = new Date().toLocaleTimeString();
+      const colorClass = {
+        'info': 'text-info',
+        'success': 'text-success',
+        'danger': 'text-danger',
+        'warning': 'text-warning'
+      }[type] || 'text-muted';
+      
+      const logEntry = document.createElement('div');
+      logEntry.className = colorClass;
+      logEntry.innerHTML = `<small>[${timestamp}] ${message}</small>`;
+      logContainer.appendChild(logEntry);
+      logContainer.scrollTop = logContainer.scrollHeight;
+    };
+    
+    // Attach click handlers to all buttons
+    const buttons = container.querySelectorAll('button[data-action]');
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const action = e.currentTarget.getAttribute('data-action');
+        
+        // Update counter
+        clickCount++;
+        countBadge.textContent = clickCount;
+        
+        // Handle specific actions
+        switch(action) {
+          case 'save':
+            addLog('💾 Save action triggered', 'success');
+            break;
+          case 'submit':
+            addLog('✅ Submit action triggered', 'success');
+            break;
+          case 'delete':
+            addLog('🗑️ Delete action triggered (confirmation required)', 'danger');
+            break;
+          case 'edit':
+            addLog('✏️ Edit action triggered', 'info');
+            break;
+          case 'cancel':
+            addLog('❌ Cancel action triggered', 'warning');
+            break;
+          case 'toggle':
+            isLiked = !isLiked;
+            if (isLiked) {
+              toggleBtn.classList.remove('btn-outline-info');
+              toggleBtn.classList.add('btn-info');
+              toggleBtn.innerHTML = '<i class="bx bxs-heart me-1"></i> Liked';
+              addLog('❤️ Liked', 'success');
+            } else {
+              toggleBtn.classList.remove('btn-info');
+              toggleBtn.classList.add('btn-outline-info');
+              toggleBtn.innerHTML = '<i class="bx bx-heart me-1"></i> Like';
+              addLog('🤍 Unliked', 'info');
+            }
+            break;
+        }
+      });
+    });
+    
+    addLog('Interactive demo ready! Click any button.', 'info');
+  }, 100);
+  
+  return markup;
+};
+
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: `
+**Interactive Demo:** Demonstração completa de interatividade com botões.
+
+Funcionalidades:
+- Click counter atualiza em tempo real
+- Diferentes ações com feedback visual
+- Toggle state (like/unlike)
+- Action log com timestamp
+- Disabled state para loading
+
+**Nota:** Esta é uma demonstração de interatividade local no Storybook. Em produção, os handlers seriam conectados à lógica da aplicação.
+      `
+    }
+  }
+};

@@ -283,3 +283,129 @@ ManyPages.args = {
   showFirstLast: true,
   maxVisible: 7
 };
+
+// ============ INTERACTIVE DEMO ============
+export const Interactive = () => {
+  const containerId = 'pagination-interactive-' + Math.random().toString(36).substr(2, 9);
+  const totalPages = 15;
+  
+  const renderPagination = (currentPage) => {
+    const pages = generatePageNumbers(currentPage, totalPages, 7);
+    const showEllipsisStart = pages[0] > 1;
+    const showEllipsisEnd = pages[pages.length - 1] < totalPages;
+    
+    return `
+      <nav aria-label="Page navigation">
+        <ul class="pagination" data-pagination>
+          <!-- First -->
+          <li class="page-item ${currentPage === 1 ? 'disabled' : ''}" data-page="first">
+            <a class="page-link" href="javascript:void(0)">
+              <i class="tf-icon bx bx-chevrons-left"></i>
+            </a>
+          </li>
+          
+          <!-- Previous -->
+          <li class="page-item ${currentPage === 1 ? 'disabled' : ''}" data-page="prev">
+            <a class="page-link" href="javascript:void(0)">
+              <i class="tf-icon bx bx-chevron-left"></i>
+            </a>
+          </li>
+          
+          <!-- Ellipsis Start -->
+          ${showEllipsisStart ? `
+            <li class="page-item disabled">
+              <span class="page-link">...</span>
+            </li>` : ''}
+          
+          <!-- Pages -->
+          ${pages.map(page => `
+            <li class="page-item ${page === currentPage ? 'active' : ''}" data-page="${page}">
+              <a class="page-link" href="javascript:void(0)">${page}</a>
+            </li>`).join('')}
+          
+          <!-- Ellipsis End -->
+          ${showEllipsisEnd ? `
+            <li class="page-item disabled">
+              <span class="page-link">...</span>
+            </li>` : ''}
+          
+          <!-- Next -->
+          <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}" data-page="next">
+            <a class="page-link" href="javascript:void(0)">
+              <i class="tf-icon bx bx-chevron-right"></i>
+            </a>
+          </li>
+          
+          <!-- Last -->
+          <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}" data-page="last">
+            <a class="page-link" href="javascript:void(0)">
+              <i class="tf-icon bx bx-chevrons-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="mt-3">
+        <span class="badge bg-primary">Current Page: ${currentPage} of ${totalPages}</span>
+      </div>
+    `;
+  };
+  
+  const markup = `<div id="${containerId}">${renderPagination(1)}</div>`;
+  
+  setTimeout(() => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    let currentPage = 1;
+    
+    const updatePagination = (newPage) => {
+      if (newPage < 1 || newPage > totalPages) return;
+      currentPage = newPage;
+      container.innerHTML = renderPagination(currentPage);
+      attachListeners();
+    };
+    
+    const attachListeners = () => {
+      const items = container.querySelectorAll('.page-item:not(.disabled)');
+      
+      items.forEach(item => {
+        const link = item.querySelector('.page-link');
+        if (!link) return;
+        
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const pageAttr = item.getAttribute('data-page');
+          
+          if (pageAttr === 'first') {
+            updatePagination(1);
+          } else if (pageAttr === 'prev') {
+            updatePagination(currentPage - 1);
+          } else if (pageAttr === 'next') {
+            updatePagination(currentPage + 1);
+          } else if (pageAttr === 'last') {
+            updatePagination(totalPages);
+          } else {
+            updatePagination(parseInt(pageAttr));
+          }
+        });
+      });
+    };
+    
+    attachListeners();
+  }, 100);
+  
+  return `
+    ${markup}
+    <div class="alert alert-info mt-3">
+      <strong>Interactive demo:</strong> Click on page numbers or navigation buttons. First/Previous are disabled on page 1, Next/Last are disabled on page ${totalPages}.
+    </div>
+  `;
+};
+Interactive.parameters = {
+  docs: {
+    description: {
+      story: 'Interactive pagination demo with working page navigation and boundary limits.'
+    }
+  }
+};
