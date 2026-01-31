@@ -23,12 +23,33 @@ const preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: 'light',
+      values: [
+        {
+          name: 'light',
+          value: '#F8F8F8',
+        },
+        {
+          name: 'white',
+          value: '#FFFFFF',
+        },
+        {
+          name: 'dark',
+          value: '#2F2B3D',
+        },
+        {
+          name: 'primary',
+          value: '#7367f0',
+        },
+      ],
+    },
     options: {
       storySort: {
         order: [
           '📚 Getting Started',
           'Foundations',
-          ['Colors', 'Typography', 'Spacing'],
+          ['Colors', 'Typography', 'Icons', 'Images', 'Spacing'],
           'Atoms',
           'Molecules',
           'Organisms',
@@ -36,6 +57,15 @@ const preview = {
           'Pages',
           '*',
         ],
+      },
+    },
+    docs: {
+      theme: {
+        brandTitle: 'Educacross Design System',
+        brandUrl: 'https://educacross.com',
+        colorPrimary: '#7367f0',
+        colorSecondary: '#00bad1',
+        fontBase: '"Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       },
     },
   },
