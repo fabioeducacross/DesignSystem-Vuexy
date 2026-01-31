@@ -410,3 +410,407 @@ WithScroll.args = {
   backdrop: true,
   scroll: true
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Bootstrap JS Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Offcanvas com Bootstrap JS Real
+
+Implementação oficial usando Bootstrap JS do Vuexy:
+
+- ✅ **4 Posicionamentos** (start/left, end/right, top, bottom)
+- ✅ **Slide in/out** com animações suaves
+- ✅ **Backdrop** com blur e dismiss on click
+- ✅ **Escape key** para fechar
+- ✅ **Body scroll lock** quando offcanvas aberto
+- ✅ **Focus trap** para acessibilidade
+- ✅ **Scroll interno** quando conteúdo excede altura
+
+**Casos de uso:**
+- Menu lateral mobile
+- Carrinho de compras
+- Filtros de pesquisa
+- Painel de notificações
+
+### Como testar:
+1. Clique nos botões para abrir offcanvas
+2. Use Escape para fechar
+3. Clique no backdrop para fechar
+4. Teste os 4 posicionamentos diferentes
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado para Offcanvas');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => reject(new Error('Failed to load Bootstrap JS'));
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    return `
+      <div style="padding: 30px;">
+        <h5 class="mb-4">Offcanvas Interativos com Bootstrap JS</h5>
+        
+        <!-- Trigger Buttons -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-3">
+            <button class="btn btn-primary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart">
+              <i class="ti ti-arrow-left me-1"></i> Start (Left)
+            </button>
+          </div>
+          
+          <div class="col-md-3">
+            <button class="btn btn-success w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd">
+              <i class="ti ti-arrow-right me-1"></i> End (Right)
+            </button>
+          </div>
+          
+          <div class="col-md-3">
+            <button class="btn btn-info w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
+              <i class="ti ti-arrow-up me-1"></i> Top
+            </button>
+          </div>
+          
+          <div class="col-md-3">
+            <button class="btn btn-warning w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+              <i class="ti ti-arrow-down me-1"></i> Bottom
+            </button>
+          </div>
+        </div>
+        
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+              <i class="ti ti-shopping-cart me-1"></i> Carrinho de Compras
+            </button>
+          </div>
+          
+          <div class="col-md-6">
+            <button class="btn btn-outline-primary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters">
+              <i class="ti ti-filter me-1"></i> Filtros Avançados
+            </button>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 1: Start (Left) -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasStartLabel">
+              <i class="ti ti-menu-2 me-2"></i> Menu Lateral
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="mb-3">
+              <h6>Navegação</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti ti-home me-2"></i>Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti ti-users me-2"></i>Usuários</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti ti-settings me-2"></i>Configurações</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti ti-file me-2"></i>Relatórios</a></li>
+              </ul>
+            </div>
+            
+            <hr>
+            
+            <div>
+              <h6>Perfil</h6>
+              <div class="d-flex align-items-center mb-2">
+                <div class="avatar me-2">
+                  <span class="avatar-initial rounded-circle bg-label-primary">JD</span>
+                </div>
+                <div>
+                  <h6 class="mb-0">João Silva</h6>
+                  <small class="text-muted">joao@example.com</small>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-label-danger w-100 mt-2">
+                <i class="ti ti-logout me-1"></i> Sair
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 2: End (Right) -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasEndLabel">
+              <i class="ti ti-bell me-2"></i> Notificações
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <div class="list-group list-group-flush">
+              <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h6 class="mb-1">Nova mensagem</h6>
+                  <small class="text-primary">Agora</small>
+                </div>
+                <p class="mb-1">Você recebeu uma nova mensagem de Maria.</p>
+              </a>
+              
+              <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h6 class="mb-1">Atualização do sistema</h6>
+                  <small class="text-muted">2h atrás</small>
+                </div>
+                <p class="mb-1">Nova versão disponível: v2.4.0</p>
+              </a>
+              
+              <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h6 class="mb-1">Backup concluído</h6>
+                  <small class="text-muted">5h atrás</small>
+                </div>
+                <p class="mb-1">Backup automático realizado com sucesso.</p>
+              </a>
+            </div>
+            
+            <div class="p-3">
+              <button class="btn btn-primary w-100">Ver todas notificações</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 3: Top -->
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 250px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel">
+              <i class="ti ti-info-circle me-2"></i> Informações do Sistema
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card bg-primary text-white">
+                  <div class="card-body text-center">
+                    <i class="ti ti-users" style="font-size: 32px;"></i>
+                    <h4 class="mt-2 mb-0">1,234</h4>
+                    <small>Usuários</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card bg-success text-white">
+                  <div class="card-body text-center">
+                    <i class="ti ti-shopping-cart" style="font-size: 32px;"></i>
+                    <h4 class="mt-2 mb-0">567</h4>
+                    <small>Vendas</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card bg-warning text-white">
+                  <div class="card-body text-center">
+                    <i class="ti ti-clock" style="font-size: 32px;"></i>
+                    <h4 class="mt-2 mb-0">89</h4>
+                    <small>Pendentes</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card bg-info text-white">
+                  <div class="card-body text-center">
+                    <i class="ti ti-chart-line" style="font-size: 32px;"></i>
+                    <h4 class="mt-2 mb-0">92%</h4>
+                    <small>Performance</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 4: Bottom -->
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: 300px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+              <i class="ti ti-cookie me-2"></i> Política de Cookies
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com nossa política de privacidade.</p>
+            <p class="mb-3">Você pode gerenciar suas preferências de cookies a qualquer momento nas configurações.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary" data-bs-dismiss="offcanvas">Aceitar Todos</button>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Aceitar Necessários</button>
+              <button class="btn btn-label-secondary">Configurar</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 5: Carrinho de Compras -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel" style="width: 400px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">
+              <i class="ti ti-shopping-cart me-2"></i> Carrinho (3)
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item">
+                <div class="d-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <div class="bg-label-primary rounded" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                      <i class="ti ti-device-laptop" style="font-size: 32px;"></i>
+                    </div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1">Laptop HP 15"</h6>
+                    <small class="text-muted">Intel i5, 8GB RAM</small>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                      <div class="input-group" style="width: 100px;">
+                        <button class="btn btn-sm btn-outline-secondary">-</button>
+                        <input type="text" class="form-control form-control-sm text-center" value="1" readonly>
+                        <button class="btn btn-sm btn-outline-secondary">+</button>
+                      </div>
+                      <strong class="text-primary">R$ 2.499</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="list-group-item">
+                <div class="d-flex gap-3">
+                  <div class="flex-shrink-0">
+                    <div class="bg-label-success rounded" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                      <i class="ti ti-headphones" style="font-size: 32px;"></i>
+                    </div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1">Headset Gamer</h6>
+                    <small class="text-muted">RGB, Surround 7.1</small>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                      <div class="input-group" style="width: 100px;">
+                        <button class="btn btn-sm btn-outline-secondary">-</button>
+                        <input type="text" class="form-control form-control-sm text-center" value="2" readonly>
+                        <button class="btn btn-sm btn-outline-secondary">+</button>
+                      </div>
+                      <strong class="text-primary">R$ 399</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-3 border-top">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal:</span>
+                <strong>R$ 3.297</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Frete:</span>
+                <strong class="text-success">Grátis</strong>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between mb-3">
+                <strong>Total:</strong>
+                <strong class="text-primary" style="font-size: 1.25rem;">R$ 3.297</strong>
+              </div>
+              <button class="btn btn-primary w-100 mb-2">
+                <i class="ti ti-credit-card me-1"></i> Finalizar Compra
+              </button>
+              <button class="btn btn-label-secondary w-100" data-bs-dismiss="offcanvas">
+                Continuar Comprando
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Offcanvas 6: Filtros -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasFiltersLabel">
+              <i class="ti ti-filter me-2"></i> Filtros Avançados
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="mb-4">
+              <h6>Categoria</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat1" checked>
+                <label class="form-check-label" for="cat1">Eletrônicos (234)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat2">
+                <label class="form-check-label" for="cat2">Roupas (567)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cat3">
+                <label class="form-check-label" for="cat3">Livros (123)</label>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <h6>Faixa de Preço</h6>
+              <div class="row g-2">
+                <div class="col-6">
+                  <input type="number" class="form-control form-control-sm" placeholder="Min" value="0">
+                </div>
+                <div class="col-6">
+                  <input type="number" class="form-control form-control-sm" placeholder="Max" value="5000">
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <h6>Avaliação</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating" id="rating5" checked>
+                <label class="form-check-label" for="rating5">
+                  ⭐⭐⭐⭐⭐ 5 estrelas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating" id="rating4">
+                <label class="form-check-label" for="rating4">
+                  ⭐⭐⭐⭐ 4+ estrelas
+                </label>
+              </div>
+            </div>
+            
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1">Aplicar Filtros</button>
+              <button class="btn btn-label-secondary">Limpar</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Posicionamentos:</strong> Teste os 4 lados (left, right, top, bottom)</li>
+            <li><strong>Fechar:</strong> Use X, backdrop (click fora), ou Escape key</li>
+            <li><strong>Casos de Uso:</strong> Carrinho e Filtros simulam aplicações reais</li>
+            <li><strong>Scroll:</strong> Body trava quando offcanvas está aberto</li>
+            <li><strong>Conteúdo Rico:</strong> Cards, listas, formulários todos funcionam</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};

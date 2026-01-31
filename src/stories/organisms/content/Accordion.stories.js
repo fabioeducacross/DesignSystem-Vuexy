@@ -421,3 +421,364 @@ AlwaysOpen.args = {
   flush: false,
   alwaysOpen: true
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Bootstrap JS Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Accordion com Bootstrap JS Real
+
+Implementação oficial usando Bootstrap JS do Vuexy:
+
+- ✅ **Expand/Collapse** com animações suaves
+- ✅ **Single mode** - apenas um item aberto por vez (padrão)
+- ✅ **Always open mode** - múltiplos itens abertos
+- ✅ **Flush variant** - sem bordas
+- ✅ **Ícones dinâmicos** que rotacionam
+- ✅ **Keyboard navigation** (Tab, Enter, Space)
+
+**Casos de uso:**
+- FAQs
+- Documentação
+- Menus de navegação
+- Configurações/preferências
+
+### Como testar:
+1. Clique nos headers para expand/collapse
+2. Note as animações suaves
+3. Teste single vs always open mode
+4. Use teclado (Tab + Enter)
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado para Accordion');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => reject(new Error('Failed to load Bootstrap JS'));
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    return `
+      <div style="padding: 30px;">
+        <h5 class="mb-4">Accordions Interativos com Bootstrap JS</h5>
+        
+        <!-- Accordion 1: FAQ Single Mode -->
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h6>FAQ - Single Mode</h6>
+            <p class="text-muted small">Apenas um item aberto por vez</p>
+            <div class="accordion" id="accordionFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    <i class="ti ti-help me-2"></i>
+                    Como faço meu pedido?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">
+                    <p class="mb-2">Para fazer um pedido, siga estes passos:</p>
+                    <ol class="mb-0">
+                      <li>Navegue pelos produtos</li>
+                      <li>Adicione itens ao carrinho</li>
+                      <li>Clique em "Finalizar Compra"</li>
+                      <li>Preencha suas informações</li>
+                      <li>Confirme o pagamento</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    <i class="ti ti-truck me-2"></i>
+                    Quais são as opções de entrega?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li><strong>Padrão:</strong> 5-7 dias úteis (Grátis acima de R$ 100)</li>
+                      <li><strong>Expressa:</strong> 2-3 dias úteis (R$ 25)</li>
+                      <li><strong>Sedex:</strong> 1-2 dias úteis (R$ 40)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    <i class="ti ti-credit-card me-2"></i>
+                    Quais formas de pagamento aceitam?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="bg-label-primary p-2 rounded text-center">
+                          <i class="ti ti-credit-card"></i> Cartões
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="bg-label-success p-2 rounded text-center">
+                          <i class="ti ti-brand-paypal"></i> PayPal
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="bg-label-info p-2 rounded text-center">
+                          <i class="ti ti-qrcode"></i> Pix
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="bg-label-warning p-2 rounded text-center">
+                          <i class="ti ti-barcode"></i> Boleto
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    <i class="ti ti-rotate-clockwise me-2"></i>
+                    Como funciona a política de devolução?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">
+                    <div class="alert alert-info mb-2">
+                      <strong>📦 30 dias para devolução</strong>
+                    </div>
+                    <p class="mb-2">Você tem 30 dias a partir da data de entrega para solicitar devolução ou troca. O produto deve estar:</p>
+                    <ul class="mb-0">
+                      <li>Em sua embalagem original</li>
+                      <li>Sem sinais de uso</li>
+                      <li>Com todos os acessórios</li>
+                      <li>Com nota fiscal</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Accordion 2: Always Open Mode -->
+          <div class="col-lg-6">
+            <h6>Configurações - Always Open</h6>
+            <p class="text-muted small">Múltiplos itens podem estar abertos</p>
+            <div class="accordion" id="accordionSettings">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#settings1">
+                    <i class="ti ti-user me-2"></i>
+                    Perfil
+                  </button>
+                </h2>
+                <div id="settings1" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label class="form-label">Nome Completo</label>
+                      <input type="text" class="form-control" value="João Silva">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" value="joao@example.com">
+                    </div>
+                    <button class="btn btn-sm btn-primary">Salvar</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings2">
+                    <i class="ti ti-bell me-2"></i>
+                    Notificações
+                  </button>
+                </h2>
+                <div id="settings2" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="form-check form-switch mb-2">
+                      <input class="form-check-input" type="checkbox" id="notif1" checked>
+                      <label class="form-check-label" for="notif1">Email de novidades</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                      <input class="form-check-input" type="checkbox" id="notif2" checked>
+                      <label class="form-check-label" for="notif2">Notificações push</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="notif3">
+                      <label class="form-check-label" for="notif3">SMS</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings3">
+                    <i class="ti ti-lock me-2"></i>
+                    Privacidade
+                  </button>
+                </h2>
+                <div id="settings3" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="priv1" checked>
+                      <label class="form-check-label" for="priv1">Perfil público</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" id="priv2">
+                      <label class="form-check-label" for="priv2">Permitir mensagens de desconhecidos</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="priv3" checked>
+                      <label class="form-check-label" for="priv3">Ocultar email</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings4">
+                    <i class="ti ti-shield me-2"></i>
+                    Segurança
+                  </button>
+                </h2>
+                <div id="settings4" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <button class="btn btn-sm btn-outline-primary w-100 mb-2">
+                      <i class="ti ti-key me-1"></i> Alterar Senha
+                    </button>
+                    <button class="btn btn-sm btn-outline-success w-100 mb-2">
+                      <i class="ti ti-device-mobile me-1"></i> Autenticação 2FA
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger w-100">
+                      <i class="ti ti-logout me-1"></i> Sair de todos dispositivos
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Accordion 3: Flush Variant -->
+        <div class="row g-4 mt-1">
+          <div class="col-12">
+            <h6>Documentação - Flush Variant</h6>
+            <p class="text-muted small">Sem bordas laterais</p>
+            <div class="accordion accordion-flush" id="accordionDocs">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#docs1">
+                    <i class="ti ti-book me-2"></i>
+                    Introdução
+                  </button>
+                </h2>
+                <div id="docs1" class="accordion-collapse collapse show" data-bs-parent="#accordionDocs">
+                  <div class="accordion-body">
+                    <p>Bem-vindo à documentação oficial. Aqui você encontrará tudo que precisa para começar a usar nosso produto.</p>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-sm btn-primary">Começar Agora</button>
+                      <button class="btn btn-sm btn-outline-secondary">Ver Tutorial</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docs2">
+                    <i class="ti ti-code me-2"></i>
+                    API Reference
+                  </button>
+                </h2>
+                <div id="docs2" class="accordion-collapse collapse" data-bs-parent="#accordionDocs">
+                  <div class="accordion-body">
+                    <div class="bg-dark text-white p-3 rounded">
+                      <code>
+                        GET /api/v1/users<br>
+                        POST /api/v1/users<br>
+                        PUT /api/v1/users/:id<br>
+                        DELETE /api/v1/users/:id
+                      </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#docs3">
+                    <i class="ti ti-puzzle me-2"></i>
+                    Exemplos
+                  </button>
+                </h2>
+                <div id="docs3" class="accordion-collapse collapse" data-bs-parent="#accordionDocs">
+                  <div class="accordion-body">
+                    <p class="mb-2">Veja exemplos práticos de implementação:</p>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a href="javascript:void(0);" class="text-decoration-none">
+                          <i class="ti ti-file-code me-2"></i>Exemplo 1: Setup Básico
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="javascript:void(0);" class="text-decoration-none">
+                          <i class="ti ti-file-code me-2"></i>Exemplo 2: Autenticação
+                        </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="javascript:void(0);" class="text-decoration-none">
+                          <i class="ti ti-file-code me-2"></i>Exemplo 3: CRUD Operations
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Single Mode (FAQ):</strong> Apenas um item aberto - outros fecham automaticamente</li>
+            <li><strong>Always Open (Configurações):</strong> Múltiplos itens podem estar abertos</li>
+            <li><strong>Flush (Documentação):</strong> Variante sem bordas laterais</li>
+            <li><strong>Animações:</strong> Note as transições suaves ao expand/collapse</li>
+            <li><strong>Teclado:</strong> Use Tab para navegar e Enter/Space para abrir/fechar</li>
+            <li><strong>Conteúdo Rico:</strong> Formulários, listas, cards - tudo funciona dentro do accordion</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};
