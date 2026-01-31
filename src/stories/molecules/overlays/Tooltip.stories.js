@@ -231,3 +231,200 @@ OnClick.args = {
   text: 'Click tooltip',
   trigger: 'click'
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Bootstrap JS Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Tooltips com Bootstrap JS Real
+
+Demonstra tooltips funcionando com Bootstrap JS do Vuexy:
+
+- ✅ **Hover** mostra tooltip automaticamente
+- ✅ **Focus** mostra tooltip (acessibilidade via teclado)
+- ✅ **4 Posicionamentos** (top, right, bottom, left) com ajuste automático
+- ✅ **Multiple tooltips** na mesma página
+- ✅ **HTML content** suportado
+
+**Nota:** Esta implementação usa \`/vuexy/js/bootstrap.js\` oficial do Vuexy.
+
+### Como testar:
+1. Passe o mouse sobre os botões para ver tooltips
+2. Use Tab para navegar e ver tooltips no focus
+3. Observe o posicionamento automático
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado para Tooltip');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => reject(new Error('Failed to load Bootstrap JS'));
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    setTimeout(() => {
+      if (typeof bootstrap !== 'undefined') {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+      }
+    }, 100);
+    
+    return `
+      <div style="padding: 60px 20px;">
+        <h5 class="text-center mb-4">Tooltips Interativos com Bootstrap JS</h5>
+        
+        <!-- Posicionamentos -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Posicionamento</h6>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button type="button" class="btn btn-primary" 
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="top" 
+                    title="Tooltip no topo">
+              <i class="ti ti-arrow-up"></i> Top
+            </button>
+            
+            <button type="button" class="btn btn-secondary" 
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="right" 
+                    title="Tooltip à direita">
+              <i class="ti ti-arrow-right"></i> Right
+            </button>
+            
+            <button type="button" class="btn btn-success" 
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="bottom" 
+                    title="Tooltip embaixo">
+              <i class="ti ti-arrow-down"></i> Bottom
+            </button>
+            
+            <button type="button" class="btn btn-danger" 
+                    data-bs-toggle="tooltip" 
+                    data-bs-placement="left" 
+                    title="Tooltip à esquerda">
+              <i class="ti ti-arrow-left"></i> Left
+            </button>
+          </div>
+        </div>
+        
+        <!-- Variantes de Cor -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Variantes de Botão</h6>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <button type="button" class="btn btn-primary" 
+                    data-bs-toggle="tooltip" 
+                    title="Primary tooltip">
+              Primary
+            </button>
+            
+            <button type="button" class="btn btn-success" 
+                    data-bs-toggle="tooltip" 
+                    title="Success tooltip">
+              Success
+            </button>
+            
+            <button type="button" class="btn btn-warning" 
+                    data-bs-toggle="tooltip" 
+                    title="Warning tooltip">
+              Warning
+            </button>
+            
+            <button type="button" class="btn btn-danger" 
+                    data-bs-toggle="tooltip" 
+                    title="Danger tooltip">
+              Danger
+            </button>
+            
+            <button type="button" class="btn btn-info" 
+                    data-bs-toggle="tooltip" 
+                    title="Info tooltip">
+              Info
+            </button>
+            
+            <button type="button" class="btn btn-dark" 
+                    data-bs-toggle="tooltip" 
+                    title="Dark tooltip">
+              Dark
+            </button>
+          </div>
+        </div>
+        
+        <!-- Ícones com Tooltip -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Ícones com Tooltip</h6>
+          <div class="d-flex gap-3 justify-content-center">
+            <button type="button" class="btn btn-icon btn-outline-primary" 
+                    data-bs-toggle="tooltip" 
+                    title="Editar">
+              <i class="ti ti-edit"></i>
+            </button>
+            
+            <button type="button" class="btn btn-icon btn-outline-danger" 
+                    data-bs-toggle="tooltip" 
+                    title="Excluir">
+              <i class="ti ti-trash"></i>
+            </button>
+            
+            <button type="button" class="btn btn-icon btn-outline-info" 
+                    data-bs-toggle="tooltip" 
+                    title="Informações">
+              <i class="ti ti-info-circle"></i>
+            </button>
+            
+            <button type="button" class="btn btn-icon btn-outline-success" 
+                    data-bs-toggle="tooltip" 
+                    title="Download">
+              <i class="ti ti-download"></i>
+            </button>
+            
+            <button type="button" class="btn btn-icon btn-outline-secondary" 
+                    data-bs-toggle="tooltip" 
+                    title="Configurações">
+              <i class="ti ti-settings"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- HTML Content -->
+        <div class="text-center mb-4">
+          <h6 class="mb-3">Tooltip com HTML</h6>
+          <button type="button" class="btn btn-primary" 
+                  data-bs-toggle="tooltip" 
+                  data-bs-html="true"
+                  title="<strong>Bold text</strong><br><em>Italic text</em><br><u>Underlined</u>">
+            HTML Tooltip
+          </button>
+        </div>
+        
+        <div class="alert alert-info" role="alert">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Mouse:</strong> Passe o mouse sobre os botões para ver os tooltips</li>
+            <li><strong>Teclado:</strong> Use Tab para navegar e ver tooltips aparecerem no focus</li>
+            <li><strong>Posicionamento:</strong> Observe como os tooltips se ajustam automaticamente quando próximos às bordas</li>
+            <li><strong>HTML:</strong> O último botão mostra que tooltips suportam conteúdo HTML</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};

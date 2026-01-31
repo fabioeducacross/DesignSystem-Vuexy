@@ -290,3 +290,237 @@ Dismissible.args = {
   content: 'Click outside or press ESC to close',
   trigger: 'focus'
 };
+
+/**
+ * ====================================
+ * INTERACTIVE STORY - Bootstrap JS Real
+ * ====================================
+ */
+
+export const Interactive = {
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Popovers com Bootstrap JS Real
+
+Demonstra popovers funcionando com Bootstrap JS do Vuexy:
+
+- ✅ **Click** para abrir/fechar popover
+- ✅ **Dismiss on next click** - fecha ao clicar fora
+- ✅ **4 Posicionamentos** (top, right, bottom, left) com ajuste automático
+- ✅ **Title + Content** ricos
+- ✅ **HTML content** suportado
+- ✅ **Hover trigger** opcional
+- ✅ **Multiple popovers** na mesma página
+
+**Nota:** Esta implementação usa \`/vuexy/js/bootstrap.js\` oficial do Vuexy com Popper.js integrado.
+
+### Como testar:
+1. Clique nos botões para abrir popovers
+2. Clique fora ou no botão novamente para fechar
+3. Teste os diferentes posicionamentos
+4. Observe o ajuste automático nas bordas
+        `
+      }
+    }
+  },
+  loaders: [
+    async () => {
+      if (typeof window !== 'undefined' && !window.bootstrap) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = '/vuexy/js/bootstrap.js';
+          script.onload = () => {
+            console.log('✅ Bootstrap JS carregado para Popover');
+            resolve({ bootstrapLoaded: true });
+          };
+          script.onerror = () => reject(new Error('Failed to load Bootstrap JS'));
+          document.head.appendChild(script);
+        });
+      }
+      return { bootstrapLoaded: true };
+    }
+  ],
+  render: () => {
+    setTimeout(() => {
+      if (typeof bootstrap !== 'undefined') {
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+      }
+    }, 100);
+    
+    return `
+      <div style="padding: 80px 20px;">
+        <h5 class="text-center mb-4">Popovers Interativos com Bootstrap JS</h5>
+        
+        <!-- Posicionamentos -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Posicionamento (Click para abrir)</h6>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button type="button" class="btn btn-primary" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="top"
+                    data-bs-title="Top Popover"
+                    data-bs-content="Este popover está posicionado no topo. Clique fora para fechar.">
+              <i class="ti ti-arrow-up"></i> Top
+            </button>
+            
+            <button type="button" class="btn btn-secondary" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="right"
+                    data-bs-title="Right Popover"
+                    data-bs-content="Este popover está à direita. O posicionamento se ajusta automaticamente nas bordas.">
+              <i class="ti ti-arrow-right"></i> Right
+            </button>
+            
+            <button type="button" class="btn btn-success" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="bottom"
+                    data-bs-title="Bottom Popover"
+                    data-bs-content="Popover embaixo do botão. Perfeito para informações adicionais.">
+              <i class="ti ti-arrow-down"></i> Bottom
+            </button>
+            
+            <button type="button" class="btn btn-danger" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="left"
+                    data-bs-title="Left Popover"
+                    data-bs-content="Este popover aparece à esquerda do elemento trigger.">
+              <i class="ti ti-arrow-left"></i> Left
+            </button>
+          </div>
+        </div>
+        
+        <!-- Variantes de Uso -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Casos de Uso Comuns</h6>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button type="button" class="btn btn-outline-info" 
+                    data-bs-toggle="popover" 
+                    data-bs-title="ℹ️ Ajuda"
+                    data-bs-content="Use popovers para fornecer contexto ou ajuda adicional aos usuários sem poluir a interface.">
+              <i class="ti ti-help-circle me-1"></i> Help
+            </button>
+            
+            <button type="button" class="btn btn-outline-success" 
+                    data-bs-toggle="popover" 
+                    data-bs-title="✅ Dica"
+                    data-bs-content="Popovers são ideais para dicas (hints) que aparecem sob demanda, sem ocupar espaço permanentemente.">
+              <i class="ti ti-bulb me-1"></i> Tips
+            </button>
+            
+            <button type="button" class="btn btn-outline-warning" 
+                    data-bs-toggle="popover" 
+                    data-bs-title="⚠️ Atenção"
+                    data-bs-content="Use popovers para avisos ou informações importantes que o usuário deve ler antes de continuar.">
+              <i class="ti ti-alert-triangle me-1"></i> Warning
+            </button>
+            
+            <button type="button" class="btn btn-outline-secondary" 
+                    data-bs-toggle="popover" 
+                    data-bs-title="📋 Detalhes"
+                    data-bs-content="Popovers podem mostrar informações detalhadas sobre um item sem navegar para outra página.">
+              <i class="ti ti-info-circle me-1"></i> Details
+            </button>
+          </div>
+        </div>
+        
+        <!-- Conteúdo Rico -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Popover com Conteúdo Extenso</h6>
+          <button type="button" class="btn btn-primary" 
+                  data-bs-toggle="popover" 
+                  data-bs-placement="bottom"
+                  data-bs-title="📖 Informações do Produto"
+                  data-bs-content="Este produto possui múltiplas características: disponível em 5 cores diferentes, 3 tamanhos (P, M, G), entrega grátis para compras acima de R$ 100, garantia de 12 meses, e suporte técnico 24/7. Aproveite 15% de desconto na primeira compra!">
+            <i class="ti ti-shopping-cart me-1"></i> Ver Detalhes
+          </button>
+        </div>
+        
+        <!-- HTML Content -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Popover com HTML</h6>
+          <button type="button" class="btn btn-info" 
+                  data-bs-toggle="popover" 
+                  data-bs-html="true"
+                  data-bs-title="<strong>🎨 Formatação HTML</strong>"
+                  data-bs-content="<ul class='mb-0 ps-3'><li><strong>Bold text</strong></li><li><em>Italic text</em></li><li><u>Underlined text</u></li><li><code>Code snippet</code></li></ul>">
+            <i class="ti ti-code me-1"></i> HTML Content
+          </button>
+        </div>
+        
+        <!-- Hover Trigger -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Trigger no Hover (passa o mouse)</h6>
+          <button type="button" class="btn btn-outline-primary" 
+                  data-bs-toggle="popover" 
+                  data-bs-trigger="hover"
+                  data-bs-title="Hover Popover"
+                  data-bs-content="Este popover aparece ao passar o mouse e desaparece quando você sai. Similar a um tooltip, mas com mais conteúdo.">
+            <i class="ti ti-cursor me-1"></i> Hover Me
+          </button>
+        </div>
+        
+        <!-- Focus Trigger (Dismissible) -->
+        <div class="text-center mb-5">
+          <h6 class="mb-3">Dismissible (Fecha ao perder foco)</h6>
+          <button type="button" class="btn btn-outline-danger" 
+                  data-bs-toggle="popover" 
+                  data-bs-trigger="focus"
+                  tabindex="0"
+                  data-bs-title="🔒 Dismissible"
+                  data-bs-content="Este popover fecha automaticamente quando você clica fora ou pressiona Tab. Perfeito para formulários e validações.">
+            <i class="ti ti-click me-1"></i> Click & Dismiss
+          </button>
+        </div>
+        
+        <!-- Em Card -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <h6 class="text-center mb-3">Popover em Card</h6>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  Product Information
+                  <button type="button" class="btn btn-sm btn-icon btn-label-info ms-2" 
+                          data-bs-toggle="popover" 
+                          data-bs-placement="right"
+                          data-bs-title="ℹ️ Informações Adicionais"
+                          data-bs-content="Este produto está disponível em múltiplas cores e tamanhos. Frete grátis para compras acima de R$ 100. Garantia de 30 dias.">
+                    <i class="ti ti-info-circle"></i>
+                  </button>
+                </h5>
+                <p class="card-text">
+                  Clique no ícone de informação para ver mais detalhes sobre este produto.
+                </p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary btn-sm">Comprar</button>
+                  <button class="btn btn-outline-secondary btn-sm" 
+                          data-bs-toggle="popover" 
+                          data-bs-placement="top"
+                          data-bs-title="💰 Preço"
+                          data-bs-content="R$ 299,90 à vista ou 12x de R$ 29,99 sem juros">
+                    Ver Preço
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info" role="alert">
+          <strong>💡 Teste a interatividade:</strong>
+          <ul class="mb-0 mt-2">
+            <li><strong>Click:</strong> Clique nos botões para abrir os popovers</li>
+            <li><strong>Dismiss:</strong> Clique fora do popover ou no botão novamente para fechar</li>
+            <li><strong>Hover:</strong> O botão "Hover Me" mostra popover ao passar o mouse</li>
+            <li><strong>Focus:</strong> O botão "Dismissible" fecha automaticamente ao perder foco</li>
+            <li><strong>Posicionamento:</strong> Observe como os popovers se ajustam automaticamente</li>
+            <li><strong>HTML:</strong> Popovers suportam formatação HTML rica</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+};
