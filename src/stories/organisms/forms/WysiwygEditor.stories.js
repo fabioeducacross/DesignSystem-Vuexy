@@ -239,7 +239,7 @@ function example() {
 
 <div class="alert alert-info mt-4">
   <strong>Quill Editor Required:</strong> This component requires Quill library. Include:
-  <pre class="mb-0 mt-2"><code>&lt;link href="vendors/libs/quill/quill.snow.css" rel="stylesheet"&gt;
+  <pre class="mb-0 mt-2"><code>&lt;link href="vendors/libs/quill/editor.css" rel="stylesheet"&gt;
 &lt;script src="vendors/libs/quill/quill.js"&gt;&lt;/script&gt;</code></pre>
 </div>`;
 };
