@@ -355,5 +355,31 @@ export const Interactive = {
         <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
       </div>
     `;
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    <div class="d-flex justify-content-between align-items-center">
+      <span><i class="bx bx-home me-2"></i>Dashboard</span>
+      <span class="badge bg-primary rounded-pill">5</span>
+    </div>
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">
+    <div class="d-flex justify-content-between align-items-center">
+      <span><i class="bx bx-inbox me-2"></i>Inbox</span>
+      <span class="badge bg-primary rounded-pill">12</span>
+    </div>
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">
+    <div class="d-flex justify-content-between align-items-center">
+      <span><i class="bx bx-user me-2"></i>Profile</span>
+      <span class="badge bg-primary rounded-pill">3</span>
+    </div>
+  </button>
+</div>`
+      }
+    }
   }
 };

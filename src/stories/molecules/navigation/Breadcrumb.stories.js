@@ -201,5 +201,19 @@ export const Interactive = {
         <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
       </div>
     `;
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item"><a href="#">Documents</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+  </ol>
+</nav>`
+      }
+    }
   }
 };

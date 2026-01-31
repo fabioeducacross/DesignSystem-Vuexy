@@ -365,6 +365,21 @@ export const Interactive = {
     docs: {
       description: {
         story: 'Demo interativo com button groups funcionais usando state controlado (classes). Clique para alternar estados.'
+      },
+      source: {
+        code: `<!-- Toggle Selection -->
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-primary">Bold</button>
+  <button type="button" class="btn btn-outline-primary">Italic</button>
+  <button type="button" class="btn btn-outline-primary">Underline</button>
+</div>
+
+<!-- Radio Style -->
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-primary"><i class="ri-list-check"></i> List</button>
+  <button type="button" class="btn btn-outline-primary"><i class="ri-grid-fill"></i> Grid</button>
+  <button type="button" class="btn btn-outline-primary"><i class="ri-map-pin-fill"></i> Map</button>
+</div>`
       }
     }
   }

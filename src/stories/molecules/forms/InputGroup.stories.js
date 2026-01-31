@@ -26,6 +26,26 @@ Default.args = { prepend: '@', append: '', placeholder: 'Username' };
 
 export const Interactive = {
   render: () => {
+    const code = `<div class="input-group mb-3">
+  <span class="input-group-text">
+    <i class="bx bx-user"></i>
+  </span>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <input type="number" class="form-control" placeholder="0.00">
+  <span class="input-group-text">.00</span>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search...">
+  <button class="btn btn-primary">
+    <i class="bx bx-search"></i>
+  </button>
+</div>`;
+    
     return `
       <div class="p-4" style="max-width: 500px;">
         <h5>Interactive InputGroup Demo</h5>
@@ -54,5 +74,30 @@ export const Interactive = {
         <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
       </div>
     `;
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<div class="input-group mb-3">
+  <span class="input-group-text">
+    <i class="bx bx-user"></i>
+  </span>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <input type="number" class="form-control" placeholder="0.00">
+  <span class="input-group-text">.00</span>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search...">
+  <button class="btn btn-primary">
+    <i class="bx bx-search"></i>
+  </button>
+</div>`
+      }
+    }
   }
 };
