@@ -1,0 +1,182 @@
+/* Vuexy Theme CSS - Placeholder
+ * This file will be replaced with actual Vuexy CSS once the template is available
+ */
+
+:root {
+  /* Vuexy Color Variables - Placeholder */
+  --primary: #7367F0;
+  --secondary: #82868B;
+  --success: #28C76F;
+  --danger: #EA5455;
+  --warning: #FF9F43;
+  --info: #00CFE8;
+  --light: #F6F6F6;
+  --dark: #4B4B4B;
+}
+
+/* Basic Typography */
+body {
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 1rem;
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+/* Button Styles - Placeholder */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.358rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #5E50EE;
+  box-shadow: 0 4px 24px 0 rgba(115, 103, 240, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--warning);
+  color: white;
+}
+
+.btn-info {
+  background-color: var(--info);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.857rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.14rem;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Card Styles - Placeholder */
+.card {
+  background-color: white;
+  border-radius: 0.428rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #EBE9F1;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.285rem;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Input Styles - Placeholder */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.571rem 1rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--dark);
+  background-color: white;
+  border: 1px solid #D8D6DE;
+  border-radius: 0.357rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: var(--dark);
+  background-color: white;
+  border-color: var(--primary);
+  outline: 0;
+  box-shadow: 0 3px 10px 0 rgba(34, 41, 47, 0.1);
+}
+
+.form-control:disabled {
+  background-color: #EFEFEF;
+  opacity: 1;
+}
+
+.form-control.is-valid {
+  border-color: var(--success);
+}
+
+.form-control.is-invalid {
+  border-color: var(--danger);
+}
+
+/* Table Styles - Placeholder */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.72rem;
+  vertical-align: top;
+  border-top: 1px solid #EBE9F1;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #EBE9F1;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.857rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #EBE9F1;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(115, 103, 240, 0.05);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--secondary);
+}
