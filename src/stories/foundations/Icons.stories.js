@@ -3,10 +3,127 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Sistema de iconografia usando Bootstrap Icons. Compatível com todos os componentes do Design System.',
+        component: 'Sistema de iconografia do Vuexy com 4 bibliotecas: Bootstrap Icons, Font Awesome 6.7.2, Tabler Icons (5000+), e Flag Icons.',
       },
     },
   },
+};
+
+// Story mostrando todas as bibliotecas disponíveis
+export const AllLibraries = {
+  render: () => `
+    <div style="padding: 2rem;">
+      <h1 style="margin-bottom: 1rem;">Bibliotecas de Ícones do Vuexy</h1>
+      <p style="color: #6c757d; margin-bottom: 3rem;">
+        O tema Vuexy inclui 4 bibliotecas de ícones completas, todas carregadas localmente (exceto Bootstrap Icons via CDN).
+      </p>
+      
+      <div style="display: grid; gap: 2rem;">
+        <!-- Bootstrap Icons -->
+        <div style="padding: 2rem; background: #f8f7fa; border-radius: 12px; border-left: 4px solid #7367f0;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <i class="bi bi-bootstrap" style="font-size: 2rem; color: #7367f0;"></i>
+            <div>
+              <h3 style="margin: 0;">Bootstrap Icons</h3>
+              <p style="margin: 0; color: #6c757d; font-size: 0.875rem;">Via CDN • 2000+ ícones • Recomendado</p>
+            </div>
+          </div>
+          <p style="color: #6c757d; margin-bottom: 1rem;">
+            Biblioteca oficial do Bootstrap com ícones modernos e simples. <strong>Preferida para o Design System.</strong>
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;i class="bi bi-heart"&gt;&lt;/i&gt;</code>
+            <div style="display: flex; gap: 0.5rem; font-size: 1.5rem;">
+              <i class="bi bi-heart-fill" style="color: #ff4c51;"></i>
+              <i class="bi bi-star-fill" style="color: #ff9f43;"></i>
+              <i class="bi bi-check-circle-fill" style="color: #28c76f;"></i>
+              <i class="bi bi-info-circle-fill" style="color: #00bad1;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Font Awesome -->
+        <div style="padding: 2rem; background: #f8f7fa; border-radius: 12px; border-left: 4px solid #00bad1;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <i class="fa-brands fa-font-awesome" style="font-size: 2rem; color: #00bad1;"></i>
+            <div>
+              <h3 style="margin: 0;">Font Awesome 6.7.2</h3>
+              <p style="margin: 0; color: #6c757d; font-size: 0.875rem;">Local • 2000+ ícones • Solid, Regular, Brands</p>
+            </div>
+          </div>
+          <p style="color: #6c757d; margin-bottom: 1rem;">
+            Biblioteca completa incluindo ícones de marcas (brands). Versão gratuita local.
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt;</code>
+            <div style="display: flex; gap: 0.5rem; font-size: 1.5rem;">
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-twitter" style="color: #1da1f2;"></i>
+              <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
+              <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabler Icons -->
+        <div style="padding: 2rem; background: #f8f7fa; border-radius: 12px; border-left: 4px solid #28c76f;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <i class="ti ti-brand-tabler" style="font-size: 2rem; color: #28c76f;"></i>
+            <div>
+              <h3 style="margin: 0;">Tabler Icons (Iconify)</h3>
+              <p style="margin: 0; color: #6c757d; font-size: 0.875rem;">Local • 5000+ ícones • Design minimalista</p>
+            </div>
+          </div>
+          <p style="color: #6c757d; margin-bottom: 1rem;">
+            Biblioteca massiva com ícones de alta qualidade, estilo outline consistente.
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;i class="ti ti-heart"&gt;&lt;/i&gt;</code>
+            <div style="display: flex; gap: 0.5rem; font-size: 1.5rem; color: #28c76f;">
+              <i class="ti ti-heart"></i>
+              <i class="ti ti-star"></i>
+              <i class="ti ti-circle-check"></i>
+              <i class="ti ti-info-circle"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flag Icons -->
+        <div style="padding: 2rem; background: #f8f7fa; border-radius: 12px; border-left: 4px solid #ff9f43;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <span class="fi fi-br" style="font-size: 2rem;"></span>
+            <div>
+              <h3 style="margin: 0;">Flag Icons</h3>
+              <p style="margin: 0; color: #6c757d; font-size: 0.875rem;">Local • 250+ bandeiras • Países e regiões</p>
+            </div>
+          </div>
+          <p style="color: #6c757d; margin-bottom: 1rem;">
+            Bandeiras de todos os países em formato vetorial (1x1 e 4x3).
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <code style="background: white; padding: 0.5rem 1rem; border-radius: 6px;">&lt;span class="fi fi-br"&gt;&lt;/span&gt;</code>
+            <div style="display: flex; gap: 0.5rem; font-size: 1.5rem;">
+              <span class="fi fi-br"></span>
+              <span class="fi fi-us"></span>
+              <span class="fi fi-gb"></span>
+              <span class="fi fi-fr"></span>
+              <span class="fi fi-de"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; padding: 1.5rem; background: #e9e7fd; border-radius: 12px;">
+        <h4 style="margin-bottom: 1rem;">📌 Recomendação de Uso</h4>
+        <ul style="line-height: 1.8;">
+          <li><strong>Bootstrap Icons:</strong> Use como padrão para UI do Design System (consistência)</li>
+          <li><strong>Font Awesome:</strong> Use para ícones de marcas (social media, logos)</li>
+          <li><strong>Tabler Icons:</strong> Use quando precisar de ícones específicos não disponíveis no Bootstrap</li>
+          <li><strong>Flag Icons:</strong> Use apenas para seletores de país/idioma</li>
+        </ul>
+      </div>
+    </div>
+  `,
 };
 
 // Bootstrap Icons mais comuns

@@ -7,6 +7,104 @@ export default {
   },
 };
 
+export const FontFamily = {
+  render: () => `
+    <div style="padding: 2rem; max-width: 800px;">
+      <h2 style="margin-bottom: 2rem;">Font Family</h2>
+      
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div style="padding: 1.5rem; background: #f8f7fa; border-radius: 8px; border-left: 4px solid #7367f0;">
+          <div style="font-weight: 600; margin-bottom: 1rem; color: #2f2b3d;">
+            Sans Serif (Padrão)
+          </div>
+          <code style="display: block; background: white; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; overflow-x: auto; font-size: 0.875rem;">
+--bs-font-sans-serif: "Public Sans", -apple-system, blinkmacsystemfont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+          </code>
+          <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          </p>
+          <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">
+            abcdefghijklmnopqrstuvwxyz
+          </p>
+          <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">
+            0123456789 !@#$%&*()
+          </p>
+          <p style="margin-top: 1rem; color: #6c757d;">
+            Public Sans é a fonte principal do Vuexy, usada para todo o conteúdo de UI. 
+            É uma fonte sans-serif moderna, legível e otimizada para interfaces digitais.
+          </p>
+        </div>
+        
+        <div style="padding: 1.5rem; background: #f8f7fa; border-radius: 8px; border-left: 4px solid #6c757d;">
+          <div style="font-weight: 600; margin-bottom: 1rem; color: #2f2b3d;">
+            Monospace (Código)
+          </div>
+          <code style="display: block; background: white; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; overflow-x: auto; font-size: 0.875rem;">
+--bs-font-monospace: "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+          </code>
+          <p style="font-family: var(--bs-font-monospace); font-size: 1rem; margin-bottom: 0.5rem;">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          </p>
+          <p style="font-family: var(--bs-font-monospace); font-size: 1rem; margin-bottom: 0.5rem;">
+            abcdefghijklmnopqrstuvwxyz
+          </p>
+          <p style="font-family: var(--bs-font-monospace); font-size: 1rem; margin-bottom: 0.5rem;">
+            0123456789 !@#$%&*()
+          </p>
+          <p style="margin-top: 1rem; color: #6c757d;">
+            Fonte monospace usada para código, snippets e elementos técnicos.
+            Cada caractere tem a mesma largura, facilitando a leitura de código.
+          </p>
+        </div>
+        
+        <div style="padding: 1.5rem; background: #e9e7fd; border-radius: 8px;">
+          <h5 style="margin-bottom: 1rem; color: #2f2b3d;">📌 Uso no Código</h5>
+          <div style="background: white; padding: 1rem; border-radius: 4px; font-family: var(--bs-font-monospace); font-size: 0.875rem;">
+            <div style="color: #6c757d;">/* CSS */</div>
+            <div style="color: #2f2b3d; margin-top: 0.5rem;">
+              font-family: var(--bs-font-sans-serif);
+            </div>
+            <div style="color: #2f2b3d;">
+              font-family: var(--bs-font-monospace);
+            </div>
+            
+            <div style="color: #6c757d; margin-top: 1rem;">/* Classes Bootstrap */</div>
+            <div style="color: #2f2b3d; margin-top: 0.5rem;">
+              &lt;p class="font-monospace"&gt;Código&lt;/p&gt;
+            </div>
+          </div>
+        </div>
+        
+        <div style="padding: 1.5rem; background: #ddf6e8; border-radius: 8px;">
+          <h5 style="margin-bottom: 1rem; color: #2f2b3d;">✨ Pesos Disponíveis</h5>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div>
+              <div style="font-weight: 300; font-size: 1.25rem;">Light (300)</div>
+              <code style="font-size: 0.75rem; color: #6c757d;">font-weight: 300;</code>
+            </div>
+            <div>
+              <div style="font-weight: 400; font-size: 1.25rem;">Regular (400)</div>
+              <code style="font-size: 0.75rem; color: #6c757d;">font-weight: 400;</code>
+            </div>
+            <div>
+              <div style="font-weight: 500; font-size: 1.25rem;">Medium (500)</div>
+              <code style="font-size: 0.75rem; color: #6c757d;">font-weight: 500;</code>
+            </div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.25rem;">Semibold (600)</div>
+              <code style="font-size: 0.75rem; color: #6c757d;">font-weight: 600;</code>
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 1.25rem;">Bold (700)</div>
+              <code style="font-size: 0.75rem; color: #6c757d;">font-weight: 700;</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
 export const Headings = {
   render: () => `
     <div style="padding: 2rem; max-width: 800px;">
