@@ -201,14 +201,24 @@ class TemplateConverter:
         html = re.sub(r'<slot\s*/>', '<div class="slot-placeholder"></div>', html)
         html = re.sub(r'<slot[^>]*>[^<]*</slot>', '<div class="slot-placeholder"></div>', html)
         
-        # Converte interpolação {{ }} para texto estático
-        html = re.sub(r'\{\{\s*\w+\.?\w*\s*\}\}', 'Sample Text', html)
+        # IMPORTANTE: Remove TODA a interpolação Vue {{ ... }} (incluindo expressões complexas)
+        # Isso evita erros de sintaxe no JavaScript do Storybook
+        html = re.sub(r'\{\{[^}]*\}\}', 'Sample Text', html)
+        
+        # Remove template literals JavaScript dentro de atributos
+        html = re.sub(r'`[^`]*\$\{[^}]*\}[^`]*`', '""', html)
         
         # Remove componentes Vue personalizados (substitui por div)
         # Mantém classes e outros atributos
         
         # Remove referências a $t (i18n)
         html = re.sub(r"\$t\(['\"][^'\"]+['\"]\)", 'Texto', html)
+        
+        # Escapa backticks restantes para evitar conflito com template literals JS
+        html = html.replace('`', "'")
+        
+        # Remove expressões ternárias órfãs
+        html = re.sub(r'\?\s*[\'"][^\']*[\'"]\s*:\s*[\'"][^\']*[\'"]', '', html)
         
         return html
     
