@@ -1,174 +1,419 @@
 /**
- * ZipLoading - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
+ * ZipLoading Component - Pixel Perfect from educacross-frontoffice
+ *
  * @component ZipLoading
- * @source educacross-frontoffice\src\components\modal\ZipLoading.vue
- * @generated 2026-02-01T20:35:36.033526
- * 
- * Props: None
- * Slots: None
- * Emits: close
+ * @category Educacross Components V2
+ * @status PIXEL-PERFECT
+ * @source educacross-frontoffice/src/components/modal/ZipLoading.vue
+ * @since 2.0.0
  */
 
 export default {
-  title: 'Educacross V2/ZipLoading',
+  title: 'Educacross Components V2/Feedback/ZipLoading',
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
     docs: {
       description: {
         component: `
-## ZipLoading
+## ZipLoading - Loading de Exportação Educacross (Pixel Perfect)
 
-Componente extraído pixel-perfect do frontoffice Educacross.
+Componente extraído diretamente de \`educacross-frontoffice/src/components/modal/ZipLoading.vue\`.
 
-### Props
-- Nenhuma prop definida
+Exibe progresso de geração de arquivos (PDFs, boletins, relatórios).
 
-### Slots
-- Nenhum slot definido
+### Props do Componente Real
+
+| Prop | Tipo | Default | Descrição |
+|------|------|---------|-----------|
+| \`name\` | String | '' | Nome do arquivo sendo gerado |
+| \`masculine\` | Boolean | false | Gênero para concordância |
+| \`isReport\` | Boolean | false | Se é um boletim |
 
 ### Events
-- **close**
-        `
-      }
-    }
-  }
+
+- \`@close\` - Emitido quando o download é concluído
+
+### Estados
+
+1. **Processando** - Barra de progresso animando
+2. **Concluído** - Download pronto, opção de tentar novamente
+
+### Integração
+
+O componente usa Vuex para obter o percentual:
+\`store.getters.GET_ADMIN_PDF_LOAD_PERCENT\`
+        `,
+      },
+    },
+  },
 };
 
-// Estilos inline do componente
-const componentStyles = `
+// CSS do ZipLoading extraído do frontoffice
+const zipLoadingStyles = `
+<style>
+  /* === ZipLoading - CSS Pixel Perfect do Frontoffice === */
+  
+  :root {
+    --primary: #6e63e8;
+    --success: #28c76f;
+    --text-color: #5e5873;
+  }
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+  .working {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-color);
+    padding: 2rem;
+  }
 
+  .working img {
+    max-width: 200px;
+    height: auto;
+  }
 
-.working {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  color: #5e5873;
-
-  .title {
+  .working .title {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-
-    &:first-letter {
-      text-transform: uppercase;
-    }
-
     margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 
-  .subtitle {
+  .working .title::first-letter {
+    text-transform: uppercase;
+  }
+
+  .working .subtitle {
     font-size: 21px;
     font-weight: 500;
-
     text-align: center;
-
     margin-top: 24px;
+    margin-bottom: 0;
+    color: #6c6c6c;
   }
 
-  .tryAgain {
-    color: #6e63e8;
+  .working .tryAgain {
+    color: var(--primary);
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  .working .tryAgain:hover {
+    text-decoration: none;
   }
 
   .progress-container {
     width: 50%;
     text-align: center;
+    margin-top: 2rem;
+  }
 
-    @media (max-width: 425px) {
+  @media (max-width: 425px) {
+    .progress-container {
       width: 100%;
     }
-
-    .title {
-      font-size: 21px;
-      font-weight: 500;
-      color: #28c76f;
-
-      margin-bottom: 1rem;
-    }
   }
-}
+
+  .progress-container .title {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--success);
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  /* Progress bar */
+  .progress-bar-container {
+    height: 12px;
+    background-color: #ebe9f1;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background-color: var(--success);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+  }
+
+  /* Spinner */
+  .loading-spinner {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid rgba(40, 199, 111, 0.3);
+    border-top-color: var(--success);
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+    margin-top: 0.5rem;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Placeholder image */
+  .placeholder-img {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: #c0c0c0;
+  }
+
+  .placeholder-img.done {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    color: var(--success);
+  }
+</style>
 `;
 
-// Template base
-const baseTemplate = `
-<div>
-    <div class="working">
-      <img src="@/assets/images/pdf-progress/working.png" alt="" />
-      <div>
+/**
+ * Processing - Estado processando
+ */
+export const Processing = {
+  render: () => `
+    ${zipLoadingStyles}
+    <div class="p-4">
+      <div class="working">
+        <div class="placeholder-img">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <p class="title">Estamos preparando os relatórios</p>
+        <p class="subtitle">
+          Assim que o processamento acabar, o download será iniciado automaticamente
+        </p>
+        <div class="progress-container">
+          <span class="title">35% dos arquivos prontos...</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 35%;"></div>
+          </div>
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * ProcessingReports - Processando boletins
+ */
+export const ProcessingReports = {
+  render: () => `
+    ${zipLoadingStyles}
+    <div class="p-4">
+      <div class="working">
+        <div class="placeholder-img">
+          <span class="material-symbols-outlined">folder_zip</span>
+        </div>
         <p class="title">Os boletins estão sendo preparados.</p>
         <p class="subtitle">
           Assim que o processamento acabar, os boletins serão baixados automaticamente.
         </p>
-      </div>
-      <div>
-        <p class="title">Estamos preparando Sample Text</p>
-        <p class="subtitle">
-          Assim que o processamento acabar, o download será iniciado automaticamente
-        </p>
-      </div>
-      <div class="progress-container">
-        <span class="title">Sample Text% dos arquivos prontos...</span>
-        <b-progress value="" max="" variant="success" height="12px" />
-        <b-spinner small />
+        <div class="progress-container">
+          <span class="title">68% dos arquivos prontos...</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 68%;"></div>
+          </div>
+          <div class="loading-spinner"></div>
+        </div>
       </div>
     </div>
-    <div class="working">
-      <img src="@/assets/images/pdf-progress/done.png" alt="" />
-      <p class="title">Os boletins estão prontos!</p>
-      <p class="title">
-        Sample Text estão Sample Text!
-      </p>
-      <p class="subtitle">
-        Se o download não iniciou automaticamente,
-        <span class="tryAgain"> clique aqui</span>
-      </p>
-      <div class="progress-container">
-        <span class="title">100% dos arquivos prontos!</span>
-        <b-progress value="" max="" variant="success" height="12px" />
-      </div>
-    </div>
-  </div>
-`;
-
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
+  `,
 };
 
+/**
+ * Completed - Estado concluído
+ */
+export const Completed = {
+  render: () => `
+    ${zipLoadingStyles}
+    <div class="p-4">
+      <div class="working">
+        <div class="placeholder-img done">
+          <span class="material-symbols-outlined">check_circle</span>
+        </div>
+        <p class="title">Os relatórios estão prontos!</p>
+        <p class="subtitle">
+          Se o download não iniciou automaticamente,
+          <span class="tryAgain">clique aqui</span>
+        </p>
+        <div class="progress-container">
+          <span class="title">100% dos arquivos prontos!</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
 
+/**
+ * CompletedReports - Boletins prontos
+ */
+export const CompletedReports = {
+  render: () => `
+    ${zipLoadingStyles}
+    <div class="p-4">
+      <div class="working">
+        <div class="placeholder-img done">
+          <span class="material-symbols-outlined">task</span>
+        </div>
+        <p class="title">Os boletins estão prontos!</p>
+        <p class="subtitle">
+          Se o download não iniciou automaticamente,
+          <span class="tryAgain">clique aqui</span>
+        </p>
+        <div class="progress-container">
+          <span class="title">100% dos arquivos prontos!</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * AllProgressStates - Todos os estados de progresso
+ */
+export const AllProgressStates = {
+  render: () => `
+    ${zipLoadingStyles}
+    <style>
+      .progress-demo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+      .progress-item {
+        background: white;
+        border: 1px solid #ebe9f1;
+        border-radius: 0.428rem;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .progress-item .label {
+        font-weight: 500;
+        color: #5e5873;
+        margin-bottom: 0.75rem;
+      }
+    </style>
+    <div class="p-4">
+      <div class="progress-demo">
+        <div class="progress-item">
+          <div class="label">0% - Iniciando</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+          <div class="loading-spinner" style="margin: 0 auto;"></div>
+        </div>
+        <div class="progress-item">
+          <div class="label">25% - Processando</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 25%;"></div>
+          </div>
+          <div class="loading-spinner" style="margin: 0 auto;"></div>
+        </div>
+        <div class="progress-item">
+          <div class="label">50% - Metade</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 50%;"></div>
+          </div>
+          <div class="loading-spinner" style="margin: 0 auto;"></div>
+        </div>
+        <div class="progress-item">
+          <div class="label">75% - Quase lá</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 75%;"></div>
+          </div>
+          <div class="loading-spinner" style="margin: 0 auto;"></div>
+        </div>
+        <div class="progress-item">
+          <div class="label" style="color: #28c76f;">100% - Concluído!</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 100%;"></div>
+          </div>
+          <span class="material-symbols-outlined" style="color: #28c76f; font-size: 24px; margin-top: 0.5rem;">check_circle</span>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * InModal - Dentro de um modal
+ */
+export const InModal = {
+  render: () => `
+    ${zipLoadingStyles}
+    <style>
+      .modal-demo {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 0.428rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .modal-header {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #ebe9f1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-header h5 {
+        margin: 0;
+        font-weight: 500;
+        color: #5e5873;
+      }
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #6c6c6c;
+      }
+      .modal-body {
+        padding: 0;
+      }
+    </style>
+    <div class="p-4" style="background: rgba(0,0,0,0.5);">
+      <div class="modal-demo">
+        <div class="modal-header">
+          <h5>Gerando Relatórios</h5>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="working" style="padding: 2rem;">
+            <div class="placeholder-img">
+              <span class="material-symbols-outlined">description</span>
+            </div>
+            <p class="title" style="font-size: 22px;">Estamos preparando os certificados</p>
+            <p class="subtitle" style="font-size: 16px;">
+              Assim que o processamento acabar, o download será iniciado automaticamente
+            </p>
+            <div class="progress-container" style="width: 80%;">
+              <span class="title" style="font-size: 16px;">45% dos arquivos prontos...</span>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 45%;"></div>
+              </div>
+              <div class="loading-spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};

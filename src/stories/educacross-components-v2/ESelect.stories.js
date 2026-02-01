@@ -1,350 +1,786 @@
 /**
- * ESelect - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
+ * ESelect Component - Pixel Perfect from educacross-frontoffice
+ *
  * @component ESelect
- * @source educacross-frontoffice\src\components\selects\ESelect.vue
- * @generated 2026-02-01T20:35:35.833171
- * 
- * Props: None
- * Slots: noOptions, allOptionsLabel
- * Emits: input, nextPage, change, close, input:page, clear, closeModal
+ * @category Educacross Components V2
+ * @status PIXEL-PERFECT
+ * @source educacross-frontoffice/src/components/selects/ESelect.vue
+ * @since 2.0.0
  */
 
 export default {
-  title: 'Educacross V2/ESelect',
+  title: 'Educacross Components V2/Forms/ESelect',
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
     docs: {
       description: {
         component: `
-## ESelect
+## ESelect - Select Customizado Educacross (Pixel Perfect)
 
-Componente extraído pixel-perfect do frontoffice Educacross.
+Componente extraído diretamente de \`educacross-frontoffice/src/components/selects/ESelect.vue\`.
 
-### Props
-- Nenhuma prop definida
+### Props do Componente Real
 
-### Slots
-- **noOptions**
-- **allOptionsLabel**
+| Prop | Tipo | Default | Descrição |
+|------|------|---------|-----------|
+| \`value\` | String/Number/Object/Array | null | Valor selecionado |
+| \`options\` | Array | required | Lista de opções |
+| \`label\` | String | 'name' | Campo usado como label |
+| \`trackBy\` | String | undefined | Campo para comparação |
+| \`loading\` | Boolean | false | Estado de carregamento |
+| \`variant\` | String | 'primary' | Cor do badge (primary/success/warning/danger) |
+| \`state\` | String/Boolean | null | Estado de validação |
+| \`multiple\` | Boolean | false | Permite múltipla seleção |
+| \`closeOnSelect\` | Boolean | true | Fecha ao selecionar |
+| \`clearable\` | Boolean | false | Permite limpar seleção |
+| \`searchable\` | Boolean | false | Campo de busca |
+| \`placeholder\` | String | 'selectAnOption' | Placeholder |
+| \`paginated\` | Boolean | false | Paginação infinita |
+| \`disabled\` | Boolean | false | Estado desabilitado |
+| \`gender\` | String | 'F' | Gênero para i18n |
+| \`prefix\` | String | '' | Prefixo para label |
 
 ### Events
-- **input**
-- **nextPage**
-- **change**
-- **close**
-- **input:page**
-- **clear**
-- **closeModal**
-        `
-      }
-    }
-  }
+
+- \`@input\` - Emitido quando valor muda
+- \`@nextPage\` - Paginação infinita
+- \`@change\` - Valor alterado (após fechar)
+- \`@close\` - Dropdown fechou
+- \`@clear\` - Seleção limpa
+        `,
+      },
+    },
+  },
 };
 
-// Estilos inline do componente
-const componentStyles = `
-
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
-
-
-
-
-@function color(inherit) {
-  @return var(--#{inherit});
-}
-
-inherit: 40px;
-inherit: var(--options-count);
-
-.selected-options-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  padding: 10px;
-
-  max-width: calc(100% - 30px);
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.selected-option-single {
-  max-width: calc(100% - 30px);
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.e-select-container {
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 30px;
-
-  flex-wrap: nowrap;
-}
-
-.icon-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 100%;
-}
-
-.clear-button {
-  border: none;
-  background-color: transparent;
-
-  transition: color 0.2s ease-in-out;
-
-  font-size: 1rem;
-
-  &:hover {
-    color: inherit;
+// CSS extraído de ESelect.vue (SCSS compilado)
+const eSelectStyles = `
+<style>
+  /* === ESelect - CSS Pixel Perfect do Frontoffice === */
+  
+  /* Variáveis CSS do tema Educacross */
+  :root {
+    --primary: #6e63e8;
+    --success: #28c76f;
+    --warning: #ff9f43;
+    --danger: #ea5455;
+    --body-color: #6e6b7b;
+    --text-muted: #b9b9c3;
+    --border-color: #d8d6de;
+    --white: #fff;
   }
 
-  cursor: pointer;
-}
+  /* Container principal */
+  .e-select-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
 
-.clear-button-badge {
-  font-size: 0.9rem;
-}
+  .e-select-wrapper.disabled {
+    cursor: not-allowed;
+  }
 
-.drop-icon {
-  transition: transform 0.2s ease-in-out;
+  .e-select-wrapper.disabled .e-select-container {
+    background-color: #efefef;
+    pointer-events: none;
+  }
 
-  font-size: 1.5rem;
+  /* Trigger do dropdown */
+  .e-select-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 30px;
+    flex-wrap: nowrap;
+  }
 
-  &.revert-drop-icon {
+  .e-select-container.form-control {
+    min-height: 38px;
+    padding: 0.438rem 2rem 0.438rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--body-color);
+    background-color: var(--white);
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: 0.357rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .e-select-container.form-control:focus,
+  .e-select-container.form-control:focus-within {
+    border-color: var(--e-select-variant, var(--primary));
+    box-shadow: 0 3px 10px 0 rgba(110, 99, 232, 0.1);
+    outline: none;
+  }
+
+  .e-select-container.is-invalid {
+    border-color: var(--danger) !important;
+  }
+
+  /* Opção selecionada (single) */
+  .selected-option-single {
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Badge de múltipla seleção */
+  .selected-options-badge {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+  }
+
+  .selected-options-badge .badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 0.357rem;
+  }
+
+  .selected-options-badge .badge .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .selected-options-badge .badge-primary {
+    background-color: rgba(110, 99, 232, 0.12);
+    color: var(--primary);
+  }
+
+  .selected-options-badge .badge-success {
+    background-color: rgba(40, 199, 111, 0.12);
+    color: var(--success);
+  }
+
+  .selected-options-badge .badge-warning {
+    background-color: rgba(255, 159, 67, 0.12);
+    color: var(--warning);
+  }
+
+  .selected-options-badge .badge-danger {
+    background-color: rgba(234, 84, 85, 0.12);
+    color: var(--danger);
+  }
+
+  /* Ícones */
+  .icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-right: 0.5rem;
+  }
+
+  .drop-icon {
+    transition: transform 0.2s ease-in-out;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+  }
+
+  .drop-icon.revert-drop-icon {
     transform: rotate(180deg);
   }
-}
 
-.options-container {
-  visibility: hidden;
-  pointer-events: none;
+  .clear-button {
+    border: none;
+    background-color: transparent;
+    transition: color 0.2s ease-in-out;
+    font-size: 1rem;
+    cursor: pointer;
+  }
 
-  position: absolute;
-  top: calc(100% + 1px);
-  left: 0;
+  .clear-button:hover {
+    color: var(--danger);
+  }
 
-  min-width: 100%;
-  max-height: calc(38px * 5);
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  /* Container de opções (dropdown) */
+  .options-container {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    min-width: 100%;
+    max-height: calc(38px * 5);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--white);
+    z-index: 1050;
+    box-shadow: 0 5px 25px rgba(34, 41, 47, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-
-  z-index: 3;
-
-  &.opened {
+  .options-container.opened {
     visibility: visible;
     pointer-events: all;
   }
-}
 
-.option-padding-multiple {
-  padding: 0 15px 0 10px;
-}
+  /* Opções individuais */
+  .option {
+    cursor: pointer;
+    position: relative;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--white);
+    z-index: 4;
+    border-radius: 6px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    transition: background-color 0.15s ease;
+  }
 
-.option-padding-single {
-  padding: 0 15px 0 1rem;
-}
-
-.option {
-  cursor: pointer;
-  position: relative;
-  min-height: 38px;
-
-  display: flex;
-  align-items: center;
-
-  border: 1px solid #fff;
-  z-index: 4;
-  border-radius: 6px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-
-  &:hover {
+  .option:hover {
     background-color: #eee;
   }
 
-  &:first-of-type {
+  .option:first-of-type {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
   }
 
-  &:last-of-type {
+  .option:last-of-type {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
 
-  &.selected:hover {
+  .option.selected {
+    background-color: rgba(110, 99, 232, 0.08);
+  }
+
+  .option.selected:hover {
     border-width: 1px;
     border-style: solid;
-    border-color: color(--e-select-variant);
+    border-color: var(--e-select-variant, var(--primary));
   }
-}
 
-.option-searchable {
-  @extend .option;
+  .option-padding-single {
+    padding: 0 15px 0 1rem;
+  }
 
-  margin: 5px 0;
-}
+  .option-padding-multiple {
+    padding: 0 15px 0 10px;
+  }
 
-.selected-options-badge {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-}
+  /* Campo de busca */
+  .option-searchable {
+    margin: 5px 10px;
+  }
 
-.disabled,
-.disabled .option {
-  cursor: not-allowed; // Indicates the disabled state
-}
+  .option-searchable .input-group-merge {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .option-searchable .input-group-text {
+    background-color: transparent;
+    border-right: none;
+    padding: 0.438rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.357rem 0 0 0.357rem;
+  }
+
+  .option-searchable .form-control {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Checkbox customizado (EFormCheck) */
+  .e-form-check {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+
+  .e-form-check input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--primary);
+  }
+
+  /* Spinner de loading */
+  .spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+  }
+</style>
 `;
 
-// Template base
-const baseTemplate = `
-<!-- Main container for the custom select component -->
-  <div
-    ref="refContainer"
-    class=""
-    style=""
-    class="relative cursor-pointer"
-  >
-    <!-- Dropdown Selector/Trigger Area -->
-    <div
-      role="combobox"
-      :aria-expanded="opened.toString()"
-      aria-haspopup="listbox"
-      :aria-disabled="disabled ? 'true' : undefined"
-      tabindex="0"
-      class=""
-      class="e-select-container form-control"
-    >
-      <!-- Slot for Single Selected Option Display (When multiple is false) -->
-      <slot
-        name="selected-option"
-        v-bind="{ ...internalSelectedOptions[0] }"
-      >
-        <!-- Display Label of the Selected Option -->
-        <span class="selected-option-single">
-          Sample Text
-        </span>
-      </slot>
-
-      <!-- Placeholder Display (when no option is selected) -->
-      <span class="text-muted">Sample Text</span>
-      <span>
-        <slot name="noOptions">
-          <span>Sem Opções</span>
-        </slot>
-      </span>
-
-      <!-- Badge Display (when options are selected and multiple is true) -->
-      <div
-        v-b-tooltip.hover="Texto"
-        class="selected-options-badge cursor-pointer mw-100"
-      >
-        <b-badge variant="" class="mw-100">
-          <span class="d-flex align-items-center font-normal mw-100">
-            <div>
-              <slot name="allOptionsLabel">
-                <span>Todas as opções selecionadas</span>
-              </slot>
-            </div>
-            <span class="text-truncate">
-              Sample Text
-            </span>
-            <span>
-              <div class="slot-placeholder"></div>
-            </span>
-            <span
-              class="material-symbols-outlined clear-button ml-1 cursor-pointer"
-            >
-              close
-            </span>
-          </span>
-        </b-badge>
-      </div>
-
-      <!-- Icons Container (for clear and drop-down icons) -->
-      <div class="" class="icon-container">
-        <!-- Clear Selected Option Icon -->
-
-        <!-- Dropdown Icon (with rotation if opened) -->
-        <span
-          class=""
-          class="material-symbols-outlined drop-icon"
-        >
-          expand_more
-        </span>
-
-        <b-spinner class="mr-50" small />
-      </div>
-    </div>
-
-    <!-- Options List Container -->
-    <Transition>
-      <ul ref="refUl" role="listbox" class="" class="options-container">
-        <!-- Search Input (if searchable is true) -->
-        <div class="option-searchable">
-          <b-input-group class="input-group-merge">
-            <template #prepend>
-              <b-input-group-text id="searchQueryIcon" class="d-flex">
-                <span class="material-symbols-outlined" style="font-size: 21px"> search </span>
-              </b-input-group-text>
-`;
-
-// Story: Default
+/**
+ * Default - Estado fechado com placeholder
+ */
 export const Default = {
   render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Selecione uma opção</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="text-muted">Selecione uma opção</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+        <ul role="listbox" class="options-container">
+          <li class="option option-padding-single">Opção 1</li>
+          <li class="option option-padding-single">Opção 2</li>
+          <li class="option option-padding-single">Opção 3</li>
+        </ul>
+      </div>
+    </div>
+  `,
 };
 
+/**
+ * Opened - Dropdown aberto mostrando opções
+ */
+export const Opened = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 300px;">
+      <label class="form-label">Selecione uma disciplina</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="true" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="text-muted">Selecione uma opção</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
+          </div>
+        </div>
+        <ul role="listbox" class="options-container opened">
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            Matemática
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            Português
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            Ciências
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            História
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            Geografia
+          </li>
+        </ul>
+      </div>
+    </div>
+  `,
+};
 
+/**
+ * SingleSelected - Uma opção selecionada
+ */
+export const SingleSelected = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Disciplina</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="selected-option-single">Matemática</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * MultipleSelected - Múltiplas opções selecionadas com badge
+ */
+export const MultipleSelected = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Disciplinas</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <div class="selected-options-badge cursor-pointer mw-100">
+            <span class="badge badge-primary">
+              <span class="d-flex align-items-center font-normal mw-100">
+                <span>3 disciplinas selecionadas</span>
+                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
+              </span>
+            </span>
+          </div>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * MultipleWithCheckboxes - Dropdown aberto com checkboxes
+ */
+export const MultipleWithCheckboxes = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 350px;">
+      <label class="form-label">Selecione as turmas</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="true" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <div class="selected-options-badge cursor-pointer mw-100">
+            <span class="badge badge-primary">
+              <span class="d-flex align-items-center font-normal mw-100">
+                <span>2 turmas selecionadas</span>
+                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
+              </span>
+            </span>
+          </div>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
+          </div>
+        </div>
+        <ul role="listbox" class="options-container opened">
+          <li role="option" 
+              data-testid="select-all-option" 
+              aria-label="Selecionar todos os itens" 
+              aria-selected="false" 
+              tabindex="-1" 
+              class="option option-padding-multiple">
+            <span class="e-form-check">
+              <input type="checkbox">
+            </span>
+            <span>Selecionar todas</span>
+          </li>
+          <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-multiple selected">
+            <span class="e-form-check">
+              <input type="checkbox" checked>
+            </span>
+            <span>5º Ano A</span>
+          </li>
+          <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-multiple selected">
+            <span class="e-form-check">
+              <input type="checkbox" checked>
+            </span>
+            <span>5º Ano B</span>
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-multiple">
+            <span class="e-form-check">
+              <input type="checkbox">
+            </span>
+            <span>6º Ano A</span>
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-multiple">
+            <span class="e-form-check">
+              <input type="checkbox">
+            </span>
+            <span>6º Ano B</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Searchable - Com campo de busca
+ */
+export const Searchable = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 350px;">
+      <label class="form-label">Buscar aluno</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="true" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="text-muted">Digite para buscar...</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
+          </div>
+        </div>
+        <ul role="listbox" class="options-container opened">
+          <div class="option-searchable">
+            <div class="input-group input-group-merge">
+              <span class="input-group-text">
+                <span class="material-symbols-outlined" style="font-size: 21px;">search</span>
+              </span>
+              <input type="text" 
+                     class="form-control" 
+                     placeholder="Buscar aluno..." 
+                     autocomplete="off"
+                     value="João">
+            </div>
+          </div>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            João Silva
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            João Pedro
+          </li>
+          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
+            João Lucas
+          </li>
+        </ul>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Loading - Estado de carregamento
+ */
+export const Loading = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Carregando opções...</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="text-muted">Carregando...</span>
+          <div class="icon-container mr-2">
+            <div class="spinner-border spinner-border-sm text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Disabled - Estado desabilitado
+ */
+export const Disabled = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Campo desabilitado</label>
+      <div class="e-select-wrapper disabled" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             aria-disabled="true"
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span class="text-muted">Selecione uma opção</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * Invalid - Estado de erro/validação
+ */
+export const Invalid = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Campo obrigatório</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--danger);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control is-invalid">
+          <span class="text-muted">Selecione uma opção</span>
+          <div class="icon-container mr-2">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+      <div class="invalid-feedback d-block">Este campo é obrigatório</div>
+    </div>
+  `,
+};
+
+/**
+ * Variants - Diferentes cores de badge
+ */
+export const Variants = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4">
+      <div class="row g-3">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Primary</label>
+          <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+            <div class="e-select-container form-control">
+              <div class="selected-options-badge">
+                <span class="badge badge-primary">
+                  <span class="d-flex align-items-center">
+                    <span>3 opções selecionadas</span>
+                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
+                  </span>
+                </span>
+              </div>
+              <div class="icon-container">
+                <span class="material-symbols-outlined drop-icon">expand_more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Success</label>
+          <div class="e-select-wrapper" style="--e-select-variant: var(--success);">
+            <div class="e-select-container form-control">
+              <div class="selected-options-badge">
+                <span class="badge badge-success">
+                  <span class="d-flex align-items-center">
+                    <span>5 opções selecionadas</span>
+                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
+                  </span>
+                </span>
+              </div>
+              <div class="icon-container">
+                <span class="material-symbols-outlined drop-icon">expand_more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Warning</label>
+          <div class="e-select-wrapper" style="--e-select-variant: var(--warning);">
+            <div class="e-select-container form-control">
+              <div class="selected-options-badge">
+                <span class="badge badge-warning">
+                  <span class="d-flex align-items-center">
+                    <span>2 opções selecionadas</span>
+                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
+                  </span>
+                </span>
+              </div>
+              <div class="icon-container">
+                <span class="material-symbols-outlined drop-icon">expand_more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Danger</label>
+          <div class="e-select-wrapper" style="--e-select-variant: var(--danger);">
+            <div class="e-select-container form-control">
+              <div class="selected-options-badge">
+                <span class="badge badge-danger">
+                  <span class="d-flex align-items-center">
+                    <span>1 opção selecionada</span>
+                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
+                  </span>
+                </span>
+              </div>
+              <div class="icon-container">
+                <span class="material-symbols-outlined drop-icon">expand_more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * NoOptions - Sem opções disponíveis
+ */
+export const NoOptions = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Selecione uma escola</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <span>Sem Opções</span>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
+
+/**
+ * AllSelected - Todas as opções selecionadas
+ */
+export const AllSelected = {
+  render: () => `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 100px;">
+      <label class="form-label">Turmas</label>
+      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
+        <div role="combobox" 
+             aria-expanded="false" 
+             aria-haspopup="listbox" 
+             tabindex="0" 
+             class="e-select-container form-control">
+          <div class="selected-options-badge cursor-pointer mw-100">
+            <span class="badge badge-primary">
+              <span class="d-flex align-items-center font-normal mw-100">
+                <span>Todas as opções selecionadas</span>
+                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
+              </span>
+            </span>
+          </div>
+          <div class="icon-container">
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+};
