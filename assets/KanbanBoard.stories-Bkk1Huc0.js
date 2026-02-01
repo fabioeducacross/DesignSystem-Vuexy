@@ -1,4 +1,4 @@
-import{_ as U}from"./iframe-DwbcDsyR.js";import{f as M}from"./snippets-m8t1HIl1.js";const V={title:"Organisms/Apps/KanbanBoard",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{_ as U}from"./iframe-BrC4_as2.js";import{f as M}from"./snippets-m8t1HIl1.js";const V={title:"Organisms/Apps/KanbanBoard",tags:["autodocs"],parameters:{docs:{description:{component:`
 # Kanban Board
 
 Quadro Kanban para visualização e gerenciamento de tarefas.
