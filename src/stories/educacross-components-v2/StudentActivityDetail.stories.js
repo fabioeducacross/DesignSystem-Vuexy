@@ -1,91 +1,28 @@
 /**
- * StudentActivityDetail - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component StudentActivityDetail
- * @source educacross-frontoffice\src\components\mission-plus\StudentActivityDetail.vue
- * @generated 2026-02-01T21:06:31.304913
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * StudentActivityDetail - Activity Detail View for Student
  */
 
 export default {
-  title: 'Educacross V2/StudentActivityDetail',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## StudentActivityDetail
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Feedback/StudentActivityDetail',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.activity-detail{background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:24px}.activity-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:24px;padding-bottom:20px;border-bottom:2px solid #E8E8E8}.activity-title{font-size:24px;font-weight:700;color:#5E5873;margin:0 0 8px}.activity-meta{font-size:14px;color:#6E6B7B}.activity-badge{padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;white-space:nowrap}.activity-section{margin-bottom:24px}.section-title{font-size:16px;font-weight:600;color:#5E5873;margin:0 0 12px}.activity-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}.stat-card{padding:16px;background:#F8F8F8;border-radius:8px;text-align:center}.stat-card-value{font-size:32px;font-weight:700;margin-bottom:6px}.stat-card-label{font-size:13px;color:#6E6B7B}.activity-timeline{position:relative;padding-left:32px}.timeline-item{position:relative;padding-bottom:24px}.timeline-item:last-child{padding-bottom:0}.timeline-dot{position:absolute;left:-32px;width:12px;height:12px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px}.timeline-line{position:absolute;left:-27px;top:12px;bottom:-12px;width:2px;background:#E8E8E8}.timeline-item:last-child .timeline-line{display:none}.timeline-content{background:#F8F8F8;padding:12px;border-radius:6px}.question-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.question-box{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;cursor:pointer;transition:.2s}.question-box:hover{transform:scale(1.05)}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="activity-detail"><div class="activity-header"><div><h1 class="activity-title">Missão: Frações Básicas</h1><div class="activity-meta"><i class="bi bi-calendar3"></i> Iniciada em 05/02/2026 • <i class="bi bi-clock"></i> 2h 15min</div></div><span class="activity-badge" style="background:#E8F5E9;color:#28C76F"><i class="bi bi-check-circle-fill"></i> Concluída</span></div><div class="activity-stats"><div class="stat-card"><div class="stat-card-value" style="color:#28C76F">8.5</div><div class="stat-card-label">Nota Final</div></div><div class="stat-card"><div class="stat-card-value" style="color:#6E63E8">12/15</div><div class="stat-card-label">Questões Certas</div></div><div class="stat-card"><div class="stat-card-value" style="color:#FF9F43">85%</div><div class="stat-card-label">Taxa de Acerto</div></div><div class="stat-card"><div class="stat-card-value" style="color:#00CFE8">2h 15m</div><div class="stat-card-label">Tempo Total</div></div></div></div>`};
 
+export const ComQuestoes={render:()=>`${styles}<div class="activity-detail"><div class="activity-header"><div><h1 class="activity-title">Operações com Frações</h1><div class="activity-meta">João Silva • 5º Ano A</div></div><span class="activity-badge" style="background:#E8F5E9;color:#28C76F">Completa</span></div><div class="activity-section"><h3 class="section-title">Desempenho por Questão</h3><div class="question-grid">${Array(15).fill(0).map((_,i)=>{const status=['correct','correct','partial','incorrect','correct','correct','correct','partial','correct','correct','incorrect','correct','correct','correct','partial'][i];const colors={correct:'#E8F5E9',partial:'#FFF8E1',incorrect:'#FFEBEE'};const textColors={correct:'#28C76F',partial:'#FF9F43',incorrect:'#EA5455'};return`<div class="question-box" style="background:${colors[status]};color:${textColors[status]}" title="Questão ${i+1}: ${status==='correct'?'Correta':status==='partial'?'Parcial':'Incorreta'}">${i+1}</div>`}).join('')}</div><div style="margin-top:16px;display:flex;gap:16px;font-size:13px"><div style="display:flex;align-items:center;gap:6px"><div style="width:16px;height:16px;background:#E8F5E9;border-radius:3px"></div><span>12 Corretas</span></div><div style="display:flex;align-items:center;gap:6px"><div style="width:16px;height:16px;background:#FFF8E1;border-radius:3px"></div><span>2 Parciais</span></div><div style="display:flex;align-items:center;gap:6px"><div style="width:16px;height:16px;background:#FFEBEE;border-radius:3px"></div><span>1 Incorreta</span></div></div></div></div>`};
 
+export const ComTimeline={render:()=>`${styles}<div class="activity-detail"><div class="activity-header"><div><h1 class="activity-title">Verbos e Conjugações</h1><div class="activity-meta">Ana Costa • 5º Ano A</div></div><span class="activity-badge" style="background:#E0F7FA;color:#00CFE8"><i class="bi bi-hourglass-split"></i> Em Progresso</span></div><div class="activity-section"><h3 class="section-title">Histórico de Tentativas</h3><div class="activity-timeline">${[{t:'10:45',a:'Iniciou a missão',d:'Primeira tentativa',c:'#6E63E8'},{t:'11:30',a:'Completou 8 questões',d:'Taxa de acerto: 87%',c:'#28C76F'},{t:'12:15',a:'Pausa para intervalo',d:'45 minutos',c:'#FF9F43'},{t:'13:00',a:'Retomou atividade',d:'Questões 9-15',c:'#6E63E8'}].map((item,i)=>`<div class="timeline-item"><div class="timeline-dot" style="background:${item.c};box-shadow:0 0 0 2px ${item.c}"></div><div class="timeline-line"></div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:14px;font-weight:600;color:#5E5873">${item.a}</span><span style="font-size:12px;color:#6E6B7B">${item.t}</span></div><div class="timeline-content"><div style="font-size:13px;color:#6E6B7B">${item.d}</div></div></div>`).join('')}</div></div></div>`};
 
-`;
+export const ComDetalhamento={render:()=>`${styles}<div class="activity-detail" style="max-width:800px"><div class="activity-header"><div><h1 class="activity-title">Ciclo da Água</h1><div class="activity-meta">Bruno Oliveira • 5º Ano B • Ciências</div></div><span class="activity-badge" style="background:#E8F5E9;color:#28C76F">9.2/10</span></div><div class="activity-stats"><div class="stat-card"><div class="stat-card-value" style="color:#28C76F">9.2</div><div class="stat-card-label">Nota</div></div><div class="stat-card"><div class="stat-card-value" style="color:#6E63E8">10/12</div><div class="stat-card-label">Acertos</div></div><div class="stat-card"><div class="stat-card-value" style="color:#FF9F43">1h 45m</div><div class="stat-card-label">Tempo</div></div><div class="stat-card"><div class="stat-card-value" style="color:#00CFE8">1ª</div><div class="stat-card-label">Tentativa</div></div></div><div class="activity-section"><h3 class="section-title">Detalhamento por Tipo</h3><div style="display:flex;flex-direction:column;gap:12px">${[{t:'Múltipla Escolha',c:8,e:0,p:0,total:8,icon:'bi-list-check',color:'#28C76F'},{t:'Verdadeiro ou Falso',c:2,e:1,p:0,total:3,icon:'bi-toggle-on',color:'#FF9F43'},{t:'Dissertativa',c:0,e:0,p:1,total:1,icon:'bi-file-text',color:'#00CFE8'}].map(q=>`<div style="padding:16px;background:#F8F8F8;border-radius:8px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><div style="display:flex;align-items:center;gap:10px"><i class="bi ${q.icon}" style="font-size:20px;color:${q.color}"></i><span style="font-weight:600;color:#5E5873">${q.t}</span></div><span style="font-size:14px;color:#6E6B7B">${q.c+q.e+q.p}/${q.total} questões</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center">${[{l:'Corretas',v:q.c,c:'#28C76F'},{l:'Incorretas',v:q.e,c:'#EA5455'},{l:'Parciais',v:q.p,c:'#FF9F43'}].map(s=>`<div><div style="font-size:20px;font-weight:700;color:${s.c}">${s.v}</div><div style="font-size:11px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div></div>`).join('')}</div></div></div>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <b-card class="shadow-none border mb-1">
-      <b-media class="d-flex align-items-center">
-        <div>
-          <b-img-lazy src="" rounded v-bind="mainProps" />
-`;
+export const ComFeedback={render:()=>`${styles}<div class="activity-detail" style="max-width:700px"><div class="activity-header"><div><h1 class="activity-title">Geografia do Brasil</h1><div class="activity-meta">Diana Santos • 5º Ano A</div></div><span class="activity-badge" style="background:#FFF8E1;color:#FF9F43">7.5/10</span></div><div class="activity-section"><h3 class="section-title">Feedback da Professora</h3><div style="padding:16px;background:#FFF8E1;border-left:4px solid #FF9F43;border-radius:6px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle fill='%23FF9F43' cx='20' cy='20' r='20'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='16' font-weight='bold'%3EMS%3C/text%3E%3C/svg%3E" style="width:40px;height:40px;border-radius:50%"><div><div style="font-weight:600;color:#5E5873">Prof. Maria Silva</div><div style="font-size:12px;color:#6E6B7B">08/02/2026 às 14:30</div></div></div><p style="margin:0;font-size:14px;line-height:1.6;color:#5E5873">Bom trabalho, Diana! Você demonstrou compreensão dos conceitos principais, mas precisa revisar as regiões geográficas. Recomendo estudar os mapas com mais atenção. Continue assim!</p></div></div><div class="activity-section"><h3 class="section-title">Pontos de Melhoria</h3><div style="display:flex;flex-direction:column;gap:10px">${['Revisar localização das capitais (3 erros)','Estudar biomas brasileiros (2 erros)','Praticar interpretação de mapas'].map(p=>`<div style="display:flex;align-items:center;gap:10px;padding:10px;background:#F8F8F8;border-radius:6px"><i class="bi bi-exclamation-circle" style="color:#FF9F43;font-size:18px"></i><span style="font-size:14px;color:#5E5873">${p}</span></div>`).join('')}</div></div></div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const EmProgresso={render:()=>`${styles}<div class="activity-detail"><div class="activity-header"><div><h1 class="activity-title">Sistema Solar</h1><div class="activity-meta">Eduardo Lima • 5º Ano B • Ciências</div></div><span class="activity-badge" style="background:#E3F2FD;color:#00CFE8"><i class="bi bi-play-circle"></i> 60% Concluído</span></div><div class="activity-stats"><div class="stat-card"><div class="stat-card-value" style="color:#00CFE8">9/15</div><div class="stat-card-label">Questões</div></div><div class="stat-card"><div class="stat-card-value" style="color:#28C76F">88%</div><div class="stat-card-label">Acerto até agora</div></div><div class="stat-card"><div class="stat-card-value" style="color:#6E63E8">45min</div><div class="stat-card-label">Tempo decorrido</div></div><div class="stat-card"><div class="stat-card-value" style="color:#FF9F43">6</div><div class="stat-card-label">Restantes</div></div></div><div class="activity-section"><h3 class="section-title">Progresso</h3><div style="margin-bottom:12px;display:flex;justify-content:space-between;font-size:14px"><span style="color:#5E5873;font-weight:600">9 de 15 questões</span><span style="color:#00CFE8;font-weight:700">60%</span></div><div style="background:#E8E8E8;height:12px;border-radius:6px;overflow:hidden"><div style="width:60%;height:100%;background:linear-gradient(90deg,#00CFE8,#6E63E8);transition:.3s"></div></div></div></div>`};
 
+export const Vazio={render:()=>`${styles}<div class="activity-detail" style="min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center"><svg viewBox="0 0 24 24" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.3;margin-bottom:24px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><h3 style="margin:0 0 12px;font-size:20px;font-weight:600;color:#5E5873">Atividade não iniciada</h3><p style="margin:0;font-size:14px;color:#6E6B7B;max-width:400px">O aluno ainda não começou esta atividade. Aguarde o início para visualizar os detalhes.</p></div>`};
 
+export const Comparacao={render:()=>`${styles}<div class="activity-detail" style="max-width:800px"><div class="activity-header"><div><h1 class="activity-title">Comparação de Desempenho</h1><div class="activity-meta">Fernanda Costa vs. Média da Turma</div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:20px"><div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Fernanda Costa</h4><div class="activity-stats" style="grid-template-columns:1fr"><div class="stat-card"><div class="stat-card-value" style="color:#28C76F">9.5</div><div class="stat-card-label">Nota</div></div><div class="stat-card"><div class="stat-card-value" style="color:#6E63E8">95%</div><div class="stat-card-label">Acerto</div></div><div class="stat-card"><div class="stat-card-value" style="color:#00CFE8">1h 30m</div><div class="stat-card-label">Tempo</div></div></div></div><div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Média da Turma</h4><div class="activity-stats" style="grid-template-columns:1fr"><div class="stat-card"><div class="stat-card-value" style="color:#FF9F43">7.8</div><div class="stat-card-label">Nota</div></div><div class="stat-card"><div class="stat-card-value" style="color:#6E63E8">78%</div><div class="stat-card-label">Acerto</div></div><div class="stat-card"><div class="stat-card-value" style="color:#00CFE8">2h 15m</div><div class="stat-card-label">Tempo</div></div></div></div></div><div style="margin-top:20px;padding:16px;background:#E8F5E9;border-radius:8px;text-align:center"><i class="bi bi-trophy-fill" style="font-size:32px;color:#FFD700;margin-bottom:8px"></i><div style="font-size:16px;font-weight:700;color:#28C76F">Desempenho Acima da Média!</div><div style="font-size:13px;color:#6E6B7B;margin-top:4px">+1.7 pontos • 45 minutos mais rápido</div></div></div>`};

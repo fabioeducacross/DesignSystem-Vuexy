@@ -1,91 +1,28 @@
 /**
- * StudentsDetail - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component StudentsDetail
- * @source educacross-frontoffice\src\components\mission-plus\StudentsDetail.vue
- * @generated 2026-02-01T21:06:31.318663
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * StudentsDetail - Student Details Panel/Card
  */
 
 export default {
-  title: 'Educacross V2/StudentsDetail',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## StudentsDetail
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Feedback/StudentsDetail',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.student-detail{background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px}.student-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #E8E8E8}.student-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;font-weight:700}.student-info h3{margin:0 0 6px;font-size:20px;font-weight:700;color:#5E5873}.student-info p{margin:0;font-size:14px;color:#6E6B7B}.student-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;margin-bottom:20px}.stat-box{text-align:center;padding:16px;background:#F8F8F8;border-radius:8px}.stat-value{font-size:28px;font-weight:700;margin-bottom:6px}.stat-label{font-size:12px;color:#6E6B7B}.student-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.badge-item{padding:6px 12px;border-radius:20px;font-size:13px;font-weight:600}.student-compact{padding:12px;border-radius:6px}.student-compact .student-avatar{width:48px;height:48px;font-size:18px}.student-compact .student-info h3{font-size:16px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="student-detail"><div class="student-header"><div class="student-avatar">JS</div><div class="student-info" style="flex:1"><h3>João Silva</h3><p>5º Ano A • Matrícula 2024001</p><p style="margin-top:4px"><i class="bi bi-envelope" style="margin-right:6px"></i>joao.silva@educacross.com</p></div><span style="padding:6px 12px;background:#E8F5E9;color:#28C76F;border-radius:12px;font-size:13px;font-weight:600"><i class="bi bi-check-circle-fill"></i> Ativo</span></div><div class="student-stats"><div class="stat-box"><div class="stat-value" style="color:#6E63E8">45</div><div class="stat-label">Missões Concluídas</div></div><div class="stat-box"><div class="stat-value" style="color:#28C76F">8.5</div><div class="stat-label">Média Geral</div></div><div class="stat-box"><div class="stat-value" style="color:#FF9F43">87%</div><div class="stat-label">Taxa de Acerto</div></div></div></div>`};
 
+export const ComDesempenho={render:()=>`${styles}<div class="student-detail" style="max-width:600px"><div class="student-header"><div class="student-avatar" style="background:linear-gradient(135deg,#FF9F43,#EA5455)">AS</div><div class="student-info" style="flex:1"><h3>Ana Silva</h3><p>5º Ano A • Matrícula 2024002</p></div></div><div class="student-stats"><div class="stat-box"><div class="stat-value" style="color:#6E63E8">52</div><div class="stat-label">Missões</div></div><div class="stat-box"><div class="stat-value" style="color:#28C76F">9.2</div><div class="stat-label">Média</div></div><div class="stat-box"><div class="stat-value" style="color:#28C76F">92%</div><div class="stat-label">Acerto</div></div><div class="stat-box"><div class="stat-value" style="color:#00CFE8">3.2h</div><div class="stat-label">Tempo</div></div></div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Desempenho por Disciplina</h4><div style="display:flex;flex-direction:column;gap:12px">${[{d:'Matemática',v:95,c:'#28C76F'},{d:'Português',v:88,c:'#6E63E8'},{d:'Ciências',v:92,c:'#00CFE8'},{d:'História',v:85,c:'#FF9F43'}].map(s=>`<div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:#5E5873;font-weight:600">${s.d}</span><span style="font-size:13px;color:${s.c};font-weight:700">${s.v}%</span></div><div style="background:#E8E8E8;height:6px;border-radius:3px;overflow:hidden"><div style="width:${s.v}%;height:100%;background:${s.c};transition:.3s"></div></div></div>`).join('')}</div></div>`};
 
+export const ComConquistas={render:()=>`${styles}<div class="student-detail" style="max-width:500px"><div class="student-header"><div class="student-avatar" style="background:linear-gradient(135deg,#00CFE8,#6E63E8)">BC</div><div class="student-info" style="flex:1"><h3>Bruno Costa</h3><p>5º Ano B • Matrícula 2024015</p></div></div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Conquistas Recentes</h4><div class="student-badges">${[{t:'🏆 Mestre das Frações',c:'#FFD700',b:'#FFF8E1'},{t:'📚 Leitor Expert',c:'#6E63E8',b:'#E8E5F7'},{t:'🔬 Cientista',c:'#00CFE8',b:'#E0F7FA'},{t:'⭐ Destaque do Mês',c:'#FF9F43',b:'#FFF8E1'}].map(b=>`<span class="badge-item" style="background:${b.b};color:${b.c}">${b.t}</span>`).join('')}</div><div style="margin-top:20px;padding:16px;background:#F8F8F8;border-radius:8px;text-align:center"><div style="font-size:48px;font-weight:700;color:#6E63E8;margin-bottom:6px">1.250</div><div style="font-size:13px;color:#6E6B7B">Pontos de Experiência (XP)</div><div style="margin-top:12px;background:#E8E8E8;height:8px;border-radius:4px;overflow:hidden"><div style="width:65%;height:100%;background:linear-gradient(90deg,#6E63E8,#28C76F)"></div></div><div style="margin-top:6px;font-size:12px;color:#6E6B7B">Faltam 750 XP para o próximo nível</div></div></div>`};
 
-`;
+export const ListaCompacta={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px;max-width:500px">${['João Silva','Ana Costa','Bruno Oliveira','Diana Santos','Eduardo Lima'].map((name,i)=>{const avg=[8.5,9.2,7.8,9.5,6.9][i];const color=avg>=9?'#28C76F':avg>=8?'#6E63E8':avg>=7?'#FF9F43':'#EA5455';return`<div class="student-detail student-compact"><div style="display:flex;align-items:center;gap:12px"><div class="student-avatar" style="background:linear-gradient(135deg,${color},#6E63E8)">${name.split(' ').map(n=>n[0]).join('')}</div><div class="student-info" style="flex:1"><h3>${name}</h3><p style="font-size:13px">5º Ano ${['A','A','B','A','B'][i]}</p></div><div style="text-align:right"><div style="font-size:20px;font-weight:700;color:${color}">${avg}</div><div style="font-size:11px;color:#6E6B7B">Média</div></div></div></div>`}).join('')}</div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Lista compacta de alunos com média.</p>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <b-card class="shadow-none border mb-1">
-      <b-media class="d-flex align-items-center">
-        <div>
-          <b-img-lazy src="" rounded v-bind="mainProps" />
-`;
+export const ComProgresso={render:()=>`${styles}<div class="student-detail" style="max-width:600px"><div class="student-header"><div class="student-avatar">DS</div><div class="student-info" style="flex:1"><h3>Diana Santos</h3><p>5º Ano A • Matrícula 2024018</p></div><span style="padding:6px 12px;background:#E0F7FA;color:#00CFE8;border-radius:12px;font-size:13px;font-weight:600"><i class="bi bi-graph-up-arrow"></i> Em Progresso</span></div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Missões em Andamento</h4><div style="display:flex;flex-direction:column;gap:12px">${[{m:'Frações Básicas',p:75},{m:'Verbos e Conjugações',p:40},{m:'Ciclo da Água',p:90}].map(m=>`<div style="padding:12px;background:#F8F8F8;border-radius:8px"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-size:14px;font-weight:600;color:#5E5873">${m.m}</span><span style="font-size:13px;color:${m.p>=80?'#28C76F':m.p>=50?'#FF9F43':'#6E63E8'};font-weight:700">${m.p}%</span></div><div style="background:#E8E8E8;height:6px;border-radius:3px;overflow:hidden"><div style="width:${m.p}%;height:100%;background:${m.p>=80?'#28C76F':m.p>=50?'#FF9F43':'#6E63E8'};transition:.3s"></div></div></div>`).join('')}</div></div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const ComContato={render:()=>`${styles}<div class="student-detail" style="max-width:500px"><div class="student-header"><div class="student-avatar" style="background:linear-gradient(135deg,#9C27B0,#E91E63)">EL</div><div class="student-info" style="flex:1"><h3>Eduardo Lima</h3><p>5º Ano B • Matrícula 2024022</p></div></div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Dados de Contato</h4><div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;gap:10px;padding:10px;background:#F8F8F8;border-radius:6px"><i class="bi bi-envelope" style="font-size:18px;color:#6E63E8"></i><span style="font-size:14px;color:#5E5873">eduardo.lima@email.com</span></div><div style="display:flex;align-items:center;gap:10px;padding:10px;background:#F8F8F8;border-radius:6px"><i class="bi bi-phone" style="font-size:18px;color:#28C76F"></i><span style="font-size:14px;color:#5E5873">(11) 91234-5678</span></div></div><h4 style="margin:16px 0 12px;font-size:14px;font-weight:600;color:#5E5873">Responsável</h4><div style="padding:12px;background:#F8F8F8;border-radius:8px"><div style="font-weight:600;color:#5E5873;margin-bottom:6px">Carlos Lima (Pai)</div><div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#6E6B7B"><div><i class="bi bi-envelope" style="margin-right:6px"></i>carlos.lima@email.com</div><div><i class="bi bi-phone" style="margin-right:6px"></i>(11) 99876-5432</div></div></div></div>`};
 
+export const ComHistorico={render:()=>`${styles}<div class="student-detail" style="max-width:650px"><div class="student-header"><div class="student-avatar" style="background:linear-gradient(135deg,#28C76F,#00CFE8)">FC</div><div class="student-info" style="flex:1"><h3>Fernanda Costa</h3><p>5º Ano A • Matrícula 2024025</p></div></div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Histórico de Atividades</h4><div style="display:flex;flex-direction:column;gap:8px">${[{d:'05/02/2026',a:'Completou missão "Frações Básicas"',i:'bi-trophy',c:'#28C76F'},{d:'03/02/2026',a:'Desbloqueou conquista "Matemático"',i:'bi-award',c:'#FFD700'},{d:'01/02/2026',a:'Iniciou missão "Verbos e Conjugações"',i:'bi-play-circle',c:'#6E63E8'},{d:'30/01/2026',a:'Entregou trabalho de Ciências',i:'bi-file-earmark-check',c:'#00CFE8'}].map(h=>`<div style="display:flex;align-items:start;gap:12px;padding:12px;background:#F8F8F8;border-radius:6px"><i class="bi ${h.i}" style="font-size:20px;color:${h.c};margin-top:2px"></i><div style="flex:1"><div style="font-size:14px;color:#5E5873;font-weight:600">${h.a}</div><div style="font-size:12px;color:#6E6B7B;margin-top:2px">${h.d}</div></div></div>`).join('')}</div></div>`};
 
+export const CardSimples={render:()=>`${styles}<div class="student-detail" style="max-width:300px"><div style="text-align:center"><div class="student-avatar" style="margin:0 auto 16px">GS</div><h3 style="margin:0 0 6px;font-size:18px;color:#5E5873">Gabriela Santos</h3><p style="margin:0 0 16px;font-size:13px;color:#6E6B7B">5º Ano B</p><div class="student-stats" style="grid-template-columns:1fr 1fr"><div class="stat-box"><div class="stat-value" style="color:#6E63E8;font-size:24px">38</div><div class="stat-label">Missões</div></div><div class="stat-box"><div class="stat-value" style="color:#28C76F;font-size:24px">8.8</div><div class="stat-label">Média</div></div></div></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Card simplificado para grid de alunos.</p>`};

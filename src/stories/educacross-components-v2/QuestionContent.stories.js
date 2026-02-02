@@ -1,98 +1,28 @@
 /**
- * QuestionContent - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component QuestionContent
- * @source educacross-frontoffice\src\components\evaluations\questionsListDetail\components\QuestionContent.vue
- * @generated 2026-02-01T21:06:31.217442
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * QuestionContent - Question Display with Rich Text
  */
 
 export default {
-  title: 'Educacross V2/QuestionContent',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## QuestionContent
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Feedback/QuestionContent',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.question-content{background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px}.question-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #E8E8E8}.question-number{width:40px;height:40px;border-radius:50%;background:#6E63E8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}.question-meta{text-align:right;font-size:13px;color:#6E6B7B}.question-text{font-size:15px;line-height:1.8;color:#5E5873;margin-bottom:20px}.question-image{max-width:100%;border-radius:8px;margin:16px 0}.question-formula{font-family:monospace;background:#F8F8F8;padding:12px;border-radius:6px;margin:12px 0;font-size:16px;text-align:center}.question-alternatives{display:flex;flex-direction:column;gap:10px}.question-alt{display:flex;align-items:start;gap:12px;padding:12px;border:2px solid #D8D6DE;border-radius:8px;cursor:pointer;transition:.2s}.question-alt:hover{border-color:#6E63E8;background:#F8F8FF}.question-alt input{margin-top:4px}.question-explanation{margin-top:20px;padding:16px;background:#E8F5E9;border-left:4px solid #28C76F;border-radius:6px}.question-feedback{margin-top:12px;padding:12px;border-radius:6px}.feedback-correct{background:#E8F5E9;color:#28C76F;border:1px solid #28C76F}.feedback-incorrect{background:#FFEBEE;color:#EA5455;border:1px solid #EA5455}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">1</span><span style="padding:4px 10px;background:#E8F5E9;color:#28C76F;border-radius:12px;font-size:12px;font-weight:600"><i class="bi bi-list-check"></i> Múltipla Escolha</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 10 pontos</div><div>Nível: Fácil</div></div></div><div class="question-text">Qual é o resultado da operação: <strong>3/4 + 1/2</strong>?</div><div class="question-alternatives">${['A) 1/2','B) 5/4','C) 4/6','D) 7/8'].map(opt=>`<label class="question-alt"><input type="radio" name="q1" style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt}</span></label>`).join('')}</div></div>`};
 
+export const ComImagem={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">2</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 15 pontos</div><div>Nível: Médio</div></div></div><div class="question-text">Observe a figura abaixo e identifique qual fração da pizza foi consumida:</div><img class="question-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23FFE0B2'/%3E%3Cpath d='M100 100 L190 100 A90 90 0 0 1 145 182 Z' fill='%23FF9F43'/%3E%3Cpath d='M100 100 L145 182 A90 90 0 0 1 55 182 Z' fill='%23FF9F43'/%3E%3Cpath d='M100 100 L55 182 A90 90 0 0 1 10 100 Z' fill='%23FF9F43'/%3E%3Cline x1='100' y1='100' x2='190' y2='100' stroke='white' stroke-width='2'/%3E%3Cline x1='100' y1='100' x2='145' y2='182' stroke='white' stroke-width='2'/%3E%3Cline x1='100' y1='100' x2='55' y2='182' stroke='white' stroke-width='2'/%3E%3Cline x1='100' y1='100' x2='10' y2='100' stroke='white' stroke-width='2'/%3E%3C/svg%3E" alt="Pizza dividida em 4 partes"><div class="question-alternatives">${['A) 1/4','B) 2/4','C) 3/4','D) 4/4'].map(opt=>`<label class="question-alt"><input type="radio" name="q2" style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt}</span></label>`).join('')}</div></div>`};
 
-.conntent-img img {
-  max-height: 400px;
-}
-`;
+export const ComFormula={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">3</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 12 pontos</div><div>Nível: Difícil</div></div></div><div class="question-text">Resolva a seguinte equação:</div><div class="question-formula">2x + 5 = 13</div><div class="question-text">Qual é o valor de <strong>x</strong>?</div><div class="question-alternatives">${['A) x = 2','B) x = 4','C) x = 6','D) x = 8'].map(opt=>`<label class="question-alt"><input type="radio" name="q3" style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt}</span></label>`).join('')}</div></div>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <div>
-      <div class="EvaluationsHtmlContentRenderer" content="" max-image-height="400px" />
-    </div>
-    <div
-      class="d-flex justify-content-center conntent-img"
-    >
-      <b-img src="" fluid></b-img>
-    </div>
-  </div>
-`;
+export const Dissertativa={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">4</span><span style="padding:4px 10px;background:#E3F2FD;color:#00CFE8;border-radius:12px;font-size:12px;font-weight:600"><i class="bi bi-file-text"></i> Dissertativa</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 20 pontos</div><div>Mínimo: 10 linhas</div></div></div><div class="question-text">Explique com suas palavras o que você entende por <strong>ciclo da água</strong> e descreva suas principais etapas.</div><textarea style="width:100%;min-height:200px;padding:12px;border:2px solid #D8D6DE;border-radius:8px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical" placeholder="Digite sua resposta aqui..."></textarea><div style="margin-top:8px;font-size:12px;color:#6E6B7B;text-align:right">0 / 10 linhas mínimas</div></div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const ComExplicacao={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">5</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 10 pontos</div></div></div><div class="question-text">Qual é o resultado de <strong>15 × 3</strong>?</div><div class="question-alternatives">${['A) 30','B) 35','C) 45','D) 50'].map((opt,i)=>`<label class="question-alt" style="${i===2?'border-color:#28C76F;background:#E8F5E9':''}"><input type="radio" name="q5" ${i===2?'checked':''} style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt}</span>${i===2?'<i class="bi bi-check-circle-fill" style="margin-left:auto;color:#28C76F;font-size:18px"></i>':''}</label>`).join('')}</div><div class="question-explanation"><div style="display:flex;align-items:start;gap:8px;margin-bottom:8px"><i class="bi bi-lightbulb-fill" style="color:#28C76F;font-size:18px"></i><strong style="color:#28C76F">Explicação:</strong></div><p style="margin:0;color:#5E5873;line-height:1.6">Para resolver 15 × 3, podemos pensar em 15 grupos de 3 objetos. Somando: 15 + 15 + 15 = 45. Portanto, a resposta correta é <strong>45</strong>.</p></div></div>`};
 
+export const ComFeedback={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">6</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 10 pontos</div></div></div><div class="question-text">Qual destas palavras é um <strong>substantivo próprio</strong>?</div><div class="question-alternatives">${[{t:'A) cidade',c:false},{t:'B) Brasil',c:true},{t:'C) escola',c:false},{t:'D) professor',c:false}].map((opt,i)=>`<label class="question-alt" style="${opt.c?'border-color:#28C76F;background:#E8F5E9':''}"><input type="radio" name="q6" ${opt.c?'checked':''} style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt.t}</span>${opt.c?'<i class="bi bi-check-circle-fill" style="margin-left:auto;color:#28C76F;font-size:18px"></i>':''}</label>`).join('')}</div><div class="question-feedback feedback-correct"><i class="bi bi-check-circle-fill" style="margin-right:8px"></i><strong>Correto!</strong> Brasil é um substantivo próprio porque nomeia um país específico e deve ser escrito com letra maiúscula.</div></div>`};
 
+export const FeedbackErro={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">7</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 10 pontos</div></div></div><div class="question-text">Qual é a capital do Brasil?</div><div class="question-alternatives">${[{t:'A) São Paulo',s:true},{t:'B) Brasília',c:true},{t:'C) Rio de Janeiro',s:false},{t:'D) Salvador',s:false}].map((opt,i)=>`<label class="question-alt" style="${opt.s&&!opt.c?'border-color:#EA5455;background:#FFEBEE':opt.c?'border-color:#28C76F':''}"><input type="radio" name="q7" ${opt.s?'checked':''} style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt.t}</span>${opt.s&&!opt.c?'<i class="bi bi-x-circle-fill" style="margin-left:auto;color:#EA5455;font-size:18px"></i>':''}${opt.c&&!opt.s?'<i class="bi bi-arrow-left" style="margin-left:auto;color:#28C76F;font-size:14px"></i> Resposta correta':''}</label>`).join('')}</div><div class="question-feedback feedback-incorrect"><i class="bi bi-x-circle-fill" style="margin-right:8px"></i><strong>Incorreto.</strong> A capital do Brasil é Brasília, localizada no Distrito Federal.</div></div>`};
+
+export const VerdadeiroOuFalso={render:()=>`${styles}<div class="question-content"><div class="question-header"><div style="display:flex;align-items:center;gap:12px"><span class="question-number">8</span><span style="padding:4px 10px;background:#FFF8E1;color:#FF9F43;border-radius:12px;font-size:12px;font-weight:600"><i class="bi bi-toggle-on"></i> V ou F</span></div><div class="question-meta"><div style="font-weight:600;color:#5E5873">Valor: 5 pontos</div></div></div><div class="question-text">A água ferve a 100°C ao nível do mar.</div><div class="question-alternatives">${['Verdadeiro','Falso'].map((opt,i)=>`<label class="question-alt"><input type="radio" name="q8" style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873;font-weight:600">${opt}</span></label>`).join('')}</div></div>`};

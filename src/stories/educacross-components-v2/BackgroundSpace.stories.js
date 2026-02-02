@@ -1,108 +1,30 @@
 /**
- * BackgroundSpace - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component BackgroundSpace
- * @source educacross-frontoffice\src\components\deeplink\BackgroundSpace.vue
- * @generated 2026-02-01T21:06:30.900802
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * BackgroundSpace - Empty State Background with Icon
  */
 
 export default {
-  title: 'Educacross V2/BackgroundSpace',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## BackgroundSpace
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Feedback/BackgroundSpace',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.background-space{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center;min-height:400px}.bg-space-icon{width:120px;height:120px;margin-bottom:24px;opacity:.3}.bg-space-title{font-size:20px;font-weight:600;color:#5E5873;margin:0 0 12px}.bg-space-text{font-size:14px;color:#6E6B7B;margin:0 0 24px;max-width:400px}.bg-space-action{margin-top:8px}.bg-space-compact{padding:40px 20px;min-height:300px}.bg-space-compact .bg-space-icon{width:80px;height:80px;margin-bottom:16px}.bg-space-compact .bg-space-title{font-size:18px}.bg-space-compact .bg-space-text{font-size:13px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><h3 class="bg-space-title">Nenhum dado disponível</h3><p class="bg-space-text">Não há informações para exibir no momento. Tente novamente mais tarde.</p></div>`};
 
+export const SemMissoes={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h3 class="bg-space-title">Nenhuma missão encontrada</h3><p class="bg-space-text">Você ainda não possui missões criadas. Comece criando sua primeira missão para seus alunos.</p><div class="bg-space-action"><button style="padding:10px 24px;background:#6E63E8;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px"><i class="bi bi-plus-circle" style="margin-right:6px"></i>Criar Missão</button></div></div>`};
 
-.backgroundControl {
-  background-image: url('@/assets/images/images-educa/deep-link/Educa_BG_Espaco.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  background-attachment: fixed;
-}
+export const SemAlunos={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><h3 class="bg-space-title">Nenhum aluno na turma</h3><p class="bg-space-text">Esta turma ainda não possui alunos matriculados. Adicione alunos para começar.</p><div class="bg-space-action"><button style="padding:10px 24px;background:#28C76F;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px"><i class="bi bi-person-plus" style="margin-right:6px"></i>Adicionar Alunos</button></div></div>`};
 
-// remove the background image on mobile
-@media (max-width: 768px) {
-  .backgroundControl {
-    background-image: none !important;
-  }
-}
-`;
+export const SemResultados={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><h3 class="bg-space-title">Nenhum resultado disponível</h3><p class="bg-space-text">Os resultados ainda não foram processados. Aguarde alguns instantes e atualize a página.</p></div>`};
 
-// Template base
-const baseTemplate = `
-<div class="flex justify-center items-center backgroundControl">
-    <div class="slot-placeholder">[Slot Content]</div>
-  </div>
-`;
+export const SemAtividades={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><h3 class="bg-space-title">Nenhuma atividade agendada</h3><p class="bg-space-text">Não há atividades programadas para esta turma. Que tal criar uma nova missão?</p></div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const CompactVariant={render:()=>`${styles}<div class="background-space bg-space-compact"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><h3 class="bg-space-title">Nenhum dado</h3><p class="bg-space-text">Não há informações disponíveis.</p></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Variante:</strong> Compacta para espaços menores (cards, sidebars).</p>`};
 
+export const PaginaNaoEncontrada={render:()=>`${styles}<div class="background-space" style="min-height:500px"><svg class="bg-space-icon" style="width:160px;height:160px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><h3 class="bg-space-title" style="font-size:48px;font-weight:700;color:#6E63E8;margin-bottom:16px">404</h3><h4 style="font-size:24px;font-weight:600;color:#5E5873;margin:0 0 12px">Página não encontrada</h4><p class="bg-space-text">A página que você está procurando não existe ou foi removida.</p><div class="bg-space-action"><button style="padding:10px 24px;background:#6E63E8;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px" onclick="history.back()"><i class="bi bi-arrow-left" style="margin-right:6px"></i>Voltar</button></div></div>`};
 
+export const ErroConexao={render:()=>`${styles}<div class="background-space"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="2" x2="22" y2="22"/></svg><h3 class="bg-space-title" style="color:#EA5455">Erro de conexão</h3><p class="bg-space-text">Não foi possível carregar os dados. Verifique sua conexão com a internet e tente novamente.</p><div class="bg-space-action"><button style="padding:10px 24px;background:#EA5455;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px"><i class="bi bi-arrow-clockwise" style="margin-right:6px"></i>Tentar Novamente</button></div></div>`};
+
+export const AllIcons={render:()=>`${styles}<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px">${[{icon:'<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>',title:'Missões'},{icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/>',title:'Alunos'},{icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',title:'Atividades'},{icon:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>',title:'Resultados'},{icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:'Relatórios'},{icon:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>',title:'Busca'}].map(i=>`<div class="background-space bg-space-compact"><svg class="bg-space-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">${i.icon}</svg><h3 class="bg-space-title">Sem ${i.title}</h3></div>`).join('')}</div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Diferentes ícones para contextos variados.</p>`};

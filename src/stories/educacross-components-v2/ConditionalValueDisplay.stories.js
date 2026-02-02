@@ -1,102 +1,28 @@
 /**
- * ConditionalValueDisplay - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ConditionalValueDisplay
- * @source educacross-frontoffice\src\components\badge\ConditionalValueDisplay.vue
- * @generated 2026-02-01T21:06:30.950570
- * 
- * Props: None
- * Slots: empty
- * Emits: None
+ * ConditionalValueDisplay - Show/Hide Content Conditionally
  */
 
 export default {
-  title: 'Educacross V2/ConditionalValueDisplay',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ConditionalValueDisplay
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- **empty**
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Feedback/ConditionalValueDisplay',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.conditional-display{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:6px;background:#F8F8F8;font-size:14px}.conditional-hidden{opacity:.5;font-style:italic}.conditional-icon{font-size:16px}.conditional-value{font-weight:600;color:#5E5873}.conditional-label{color:#6E6B7B}.conditional-badge{padding:2px 8px;background:#6E63E8;color:#fff;border-radius:12px;font-size:12px;font-weight:600}.conditional-empty{color:#EA5455}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="conditional-display"><i class="bi bi-check-circle conditional-icon" style="color:#28C76F"></i><span class="conditional-label">Nota:</span><span class="conditional-value">8.5</span></div><div class="conditional-display conditional-hidden"><i class="bi bi-dash-circle conditional-icon"></i><span class="conditional-label">Nota:</span><span class="conditional-value">Não disponível</span></div><div class="conditional-display conditional-empty"><i class="bi bi-x-circle conditional-icon"></i><span class="conditional-label">Nota:</span><span class="conditional-value">-</span></div></div>`};
 
+export const ComValor={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="conditional-display"><span class="conditional-label">Pontuação:</span><span class="conditional-value">850 pontos</span></div><div class="conditional-display"><span class="conditional-label">Taxa de acerto:</span><span class="conditional-value" style="color:#28C76F">87%</span></div><div class="conditional-display"><span class="conditional-label">Tempo gasto:</span><span class="conditional-value">15 minutos</span></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Exibindo valores quando disponíveis.</p>`};
 
-.badge {
-  font-size: 10px;
-  font-weight: 700;
-}
-`;
+export const SemValor={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="conditional-display conditional-hidden"><span class="conditional-label">Pontuação:</span><span class="conditional-value">Aguardando resultado</span></div><div class="conditional-display conditional-hidden"><span class="conditional-label">Taxa de acerto:</span><span class="conditional-value">Calculando...</span></div><div class="conditional-display conditional-empty"><span class="conditional-label">Tempo gasto:</span><span class="conditional-value">-</span></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Estados de carregamento ou dados indisponíveis.</p>`};
 
-// Template base
-const baseTemplate = `
-<div class="flex-grow-1">
-    <div>
-      <b-badge variant="light-primary" class="text-uppercase" pill>
-        Não há dados para exibir
-      </b-badge>
-      <div class="d-flex flex-column align-items-center justify-content-center h-100">
-        <b-img src="@/assets/images/belinha/confusion.svg" class="mb-1" />
-        <span
-          class="text-center font-bold"
-          class=""
-        ></span>
-        <div class="slot-placeholder"></div>
-      </div>
-`;
+export const PerfilDoAluno={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:500px"><div style="display:flex;align-items:center;gap:16px;margin-bottom:20px"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;font-weight:700">JS</div><div style="flex:1"><h3 style="margin:0 0 6px;font-size:20px;font-weight:700;color:#5E5873">João Silva</h3><p style="margin:0;font-size:14px;color:#6E6B7B">5º Ano A • Matrícula 2024001</p></div></div><div style="display:flex;flex-direction:column;gap:12px"><div class="conditional-display"><span class="conditional-label">Email:</span><span class="conditional-value">joao.silva@educacross.com</span></div><div class="conditional-display"><span class="conditional-label">Telefone:</span><span class="conditional-value">(11) 98765-4321</span></div><div class="conditional-display conditional-hidden"><span class="conditional-label">Endereço:</span><span class="conditional-value">Não informado</span></div><div class="conditional-display"><span class="conditional-label">Responsável:</span><span class="conditional-value">Maria Silva</span></div><div class="conditional-display conditional-hidden"><span class="conditional-label">Telefone responsável:</span><span class="conditional-value">Não cadastrado</span></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Perfil de aluno com dados opcionais.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const RelatorioDeMissao={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:600px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Relatório: Frações Básicas</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="conditional-display"><span class="conditional-label">Iniciada em:</span><span class="conditional-value">05/02/2026</span></div><div class="conditional-display"><span class="conditional-label">Concluída em:</span><span class="conditional-value">10/02/2026</span></div><div class="conditional-display"><span class="conditional-label">Nota final:</span><span class="conditional-value" style="color:#28C76F">8.5/10</span></div><div class="conditional-display"><span class="conditional-label">Tempo total:</span><span class="conditional-value">2h 15min</span></div><div class="conditional-display conditional-hidden"><span class="conditional-label">Tentativas extras:</span><span class="conditional-value">Não realizadas</span></div><div class="conditional-display"><span class="conditional-label">Taxa de acerto:</span><span class="conditional-value" style="color:#28C76F">85%</span></div></div><div style="margin-top:16px;padding-top:16px;border-top:1px solid #E8E8E8"><div class="conditional-display" style="background:#E8F5E9"><i class="bi bi-trophy conditional-icon" style="color:#28C76F"></i><span class="conditional-label">Conquista desbloqueada:</span><span class="conditional-value">Mestre das Frações</span><span class="conditional-badge">+50 XP</span></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Relatório de missão com dados opcionais e gamificação.</p>`};
 
+export const DadosDeContato={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:400px"><h3 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#5E5873">Dados de Contato</h3><div style="display:flex;flex-direction:column;gap:12px"><div class="conditional-display"><i class="bi bi-envelope conditional-icon" style="color:#6E63E8"></i><span class="conditional-value">maria.silva@email.com</span></div><div class="conditional-display"><i class="bi bi-phone conditional-icon" style="color:#28C76F"></i><span class="conditional-value">(11) 98765-4321</span></div><div class="conditional-display conditional-hidden"><i class="bi bi-whatsapp conditional-icon"></i><span class="conditional-value">Não informado</span></div><div class="conditional-display conditional-hidden"><i class="bi bi-telegram conditional-icon"></i><span class="conditional-value">Não informado</span></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Dados de contato com campos opcionais.</p>`};
 
+export const Estatisticas={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:700px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Estatísticas da Turma 5º A</h3><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px"><div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:32px;font-weight:700;color:#6E63E8;margin-bottom:6px">28</div><div class="conditional-display" style="justify-content:center;background:transparent;padding:0"><span class="conditional-label">Total de alunos</span></div></div><div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:32px;font-weight:700;color:#28C76F;margin-bottom:6px">87%</div><div class="conditional-display" style="justify-content:center;background:transparent;padding:0"><span class="conditional-label">Taxa de conclusão</span></div></div><div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div class="conditional-display conditional-hidden" style="flex-direction:column;justify-content:center;background:transparent;padding:0"><div style="font-size:24px;font-weight:700;color:#6E6B7B;margin-bottom:6px">-</div><span class="conditional-label">Média de tempo</span><span style="font-size:11px;color:#EA5455;margin-top:4px">Em cálculo</span></div></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Dashboard com estatísticas calculadas dinamicamente.</p>`};
+
+export const ComFallback={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px;max-width:500px"><div class="conditional-display"><span class="conditional-label">Foto do perfil:</span><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Crect fill='%236E63E8' width='32' height='32' rx='4'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='14' font-weight='bold'%3EJS%3C/text%3E%3C/svg%3E" style="width:32px;height:32px;border-radius:4px"></div><div class="conditional-display conditional-hidden"><span class="conditional-label">Foto do perfil:</span><div style="width:32px;height:32px;background:#F3F2F7;border-radius:4px;display:flex;align-items:center;justify-content:center"><i class="bi bi-person" style="font-size:20px;color:#6E6B7B"></i></div></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Exibindo fallback quando valor está ausente.</p>`};
