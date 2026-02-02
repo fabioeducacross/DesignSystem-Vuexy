@@ -1,5 +1,23 @@
 # Agent Helpers - Workflow de Configuração do Storybook com Vuexy
 
+## ⚠️ LIÇÃO APRENDIDA: Estrutura Dual do Projeto
+
+**CRITICAL**: O DesignSystem-Vuexy possui DUAS categorias distintas de componentes:
+
+### 1. Vuexy Generic (Template Reference)
+- **Pasta**: `src/stories/atoms/`, `molecules/`, `organisms/`, `templates/`, `pages/`
+- **Propósito**: Documentar componentes do template Vuexy genérico (botões, cards, invoices, etc.)
+- **Status**: **NÃO são usados no educacross-frontoffice**
+- **Exemplo**: InvoiceListImproved foi criado aqui por engano
+
+### 2. Educacross Components V2 (⭐ Real Production)
+- **Pasta**: `src/stories/educacross-components-v2/`
+- **Propósito**: Documentar **111 componentes reais** do educacross-frontoffice
+- **Status**: **Componentes em uso em produção**
+- **Exemplos**: ProgressBar, MediaCard, ListTable, MissionDetails, QuestionAlternative
+
+**REGRA DE OURO**: Sempre verificar se componente existe em `educacross-frontoffice/src/components/` antes de criar story. Se existir, vai para `educacross-components-v2/`.
+
 ## Descrição
 Este diretório contém a documentação do fluxo de trabalho para configuração do Storybook com o tema Vuexy.
 
