@@ -1,11 +1,10 @@
 /**
- * BadgeStatus Component - Pixel Perfect from educacross-frontoffice
+ * BadgeStatus - Badge de Status de Proficiência
+ * ==============================================
+ * Badge educacional que exibe o nível de proficiência dos alunos.
  *
  * @component BadgeStatus
- * @category Educacross Components V2
- * @status PIXEL-PERFECT
  * @source educacross-frontoffice/src/components/badge/BadgeStatus.vue
- * @since 2.0.0
  */
 
 export default {
@@ -15,451 +14,236 @@ export default {
     docs: {
       description: {
         component: `
-## BadgeStatus - Badge de Proficiência Educacross (Pixel Perfect)
+Badge de proficiência educacional para indicar desempenho dos alunos.
 
-Componente extraído diretamente de \`educacross-frontoffice/src/components/badge/BadgeStatus.vue\`.
+## Contexto de Uso
 
-Este componente usa o sistema de **Legends** para determinar automaticamente a variante de cor baseado no valor e tipo de enum.
+### Professor
+- Visualiza proficiência dos alunos em atividades
+- Monitora progresso em missões e avaliações
 
-### Props do Componente Real
+### Coordenador
+- Analisa desempenho de turmas
+- Gera relatórios de proficiência
+
+### Aluno
+- Visualiza seu próprio nível
+- Acompanha evolução
+
+## Props API
 
 | Prop | Tipo | Default | Descrição |
 |------|------|---------|-----------|
-| \`value\` | Any | - | Valor para determinar a variante |
-| \`enum\` | String | null | Tipo de enum (proficiency, progress, etc) |
-| \`pill\` | Boolean | true | Estilo pill (arredondado) |
-| \`badgeClass\` | String | '' | Classes CSS adicionais |
+| \`level\` | String | 'proficient' | Nível: 'below-basic', 'basic', 'proficient', 'advanced' |
+| \`label\` | String | - | Texto do badge |
+| \`pill\` | Boolean | true | Estilo arredondado |
 
-### Enums Disponíveis (LEGENDS)
+## Níveis de Proficiência
 
-- \`proficiency\` - Abaixo do Básico, Básico, Proficiente, Avançado
-- \`proficiencyWithInProgress\` - Inclui "Em Andamento"
-- \`proficiencyWithNotCompleted\` - Inclui "Não fizeram"
-- \`progress\` - Progresso de atividades
-- \`learningPerformance\` - Desempenho de aprendizagem
-- \`accuracyPerformance\` - Precisão
-- \`participation\` - Participação
-- \`eventProgress\` - Progresso de eventos
-- \`UserStatusEnum\` - Status do usuário
-
-### Sistema de Variantes
-
-| ID | Label | Variante CSS | Cor |
-|----|-------|--------------|-----|
-| 1 | Abaixo do Básico | legend-below-basic | Vermelho |
-| 2 | Básico | legend-basic | Amarelo |
-| 3 | Proficiente | legend-proficient | Verde |
-| 4 | Avançado | legend-advanced | Roxo/Primary |
-| 0 | Em Andamento | legend-in-progress | Cinza |
-| 0 | Não fizeram | legend-not-completed | Cinza escuro |
+- **Abaixo do Básico** (Vermelho): < 50%
+- **Básico** (Amarelo): 50-70%
+- **Proficiente** (Verde): 70-90%
+- **Avançado** (Roxo): > 90%
         `,
       },
     },
   },
+  argTypes: {
+    level: {
+      control: 'select',
+      options: ['below-basic', 'basic', 'proficient', 'advanced'],
+    },
+    label: {
+      control: 'text',
+    },
+    pill: {
+      control: 'boolean',
+    },
+  },
 };
 
-// CSS do BadgeStatus com variantes de Legend
-const badgeStatusStyles = `
+const styles = `
 <style>
-  /* === BadgeStatus - CSS Pixel Perfect do Frontoffice === */
-  
-  /* Variáveis de cores do sistema de proficiência */
   :root {
     --legend-below-basic: #ea5455;
     --legend-basic: #ff9f43;
     --legend-proficient: #28c76f;
     --legend-advanced: #6e63e8;
-    --legend-in-progress: #82868b;
-    --legend-not-completed: #4b4b4b;
   }
 
-  /* Badge base */
   .badge-status {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 0.25rem;
     padding: 0.35rem 0.75rem;
     font-size: 0.85rem;
     font-weight: 500;
-    line-height: 1;
     text-transform: uppercase;
     border-radius: 0.357rem;
-    border: 1px solid transparent;
+    border: 1px solid;
   }
 
-  .badge-status.badge-pill {
+  .badge-status.pill {
     border-radius: 50rem;
     padding: 0.35rem 1rem;
   }
 
-  .badge-status .material-symbols-outlined {
-    font-size: 12px;
-  }
-
-  /* Variante: Abaixo do Básico */
-  .badge-light-legend-below-basic {
-    background-color: rgba(234, 84, 85, 0.12);
+  .badge-below-basic {
+    background: rgba(234, 84, 85, 0.12);
     color: var(--legend-below-basic);
     border-color: var(--legend-below-basic);
   }
 
-  .text-legend-below-basic {
-    color: var(--legend-below-basic) !important;
-  }
-
-  .bg-light-legend-below-basic {
-    background-color: rgba(234, 84, 85, 0.12) !important;
-  }
-
-  /* Variante: Básico */
-  .badge-light-legend-basic {
-    background-color: rgba(255, 159, 67, 0.12);
+  .badge-basic {
+    background: rgba(255, 159, 67, 0.12);
     color: var(--legend-basic);
     border-color: var(--legend-basic);
   }
 
-  .text-legend-basic {
-    color: var(--legend-basic) !important;
-  }
-
-  .bg-light-legend-basic {
-    background-color: rgba(255, 159, 67, 0.12) !important;
-  }
-
-  /* Variante: Proficiente */
-  .badge-light-legend-proficient {
-    background-color: rgba(40, 199, 111, 0.12);
+  .badge-proficient {
+    background: rgba(40, 199, 111, 0.12);
     color: var(--legend-proficient);
     border-color: var(--legend-proficient);
   }
 
-  .text-legend-proficient {
-    color: var(--legend-proficient) !important;
-  }
-
-  .bg-light-legend-proficient {
-    background-color: rgba(40, 199, 111, 0.12) !important;
-  }
-
-  /* Variante: Avançado */
-  .badge-light-legend-advanced {
-    background-color: rgba(110, 99, 232, 0.12);
+  .badge-advanced {
+    background: rgba(110, 99, 232, 0.12);
     color: var(--legend-advanced);
     border-color: var(--legend-advanced);
-  }
-
-  .text-legend-advanced {
-    color: var(--legend-advanced) !important;
-  }
-
-  .bg-light-legend-advanced {
-    background-color: rgba(110, 99, 232, 0.12) !important;
-  }
-
-  /* Variante: Em Andamento */
-  .badge-light-legend-in-progress {
-    background-color: rgba(130, 134, 139, 0.12);
-    color: var(--legend-in-progress);
-    border-color: var(--legend-in-progress);
-  }
-
-  .text-legend-in-progress {
-    color: var(--legend-in-progress) !important;
-  }
-
-  .bg-light-legend-in-progress {
-    background-color: rgba(130, 134, 139, 0.12) !important;
-  }
-
-  /* Variante: Não fizeram */
-  .badge-light-legend-not-completed {
-    background-color: rgba(75, 75, 75, 0.12);
-    color: var(--legend-not-completed);
-    border-color: var(--legend-not-completed);
-  }
-
-  .text-legend-not-completed {
-    color: var(--legend-not-completed) !important;
-  }
-
-  .bg-light-legend-not-completed {
-    background-color: rgba(75, 75, 75, 0.12) !important;
-  }
-
-  /* Casos especiais */
-  .badge-light-dark-gray,
-  .badge-light-light-gray {
-    background: #fff;
-  }
-
-  .whitespace-normal {
-    white-space: normal !important;
   }
 </style>
 `;
 
-/**
- * Proficiency - Níveis de proficiência
- */
-export const Proficiency = {
+const badge = (level, label, pill = true) => 
+  `<span class="badge-status badge-${level} ${pill ? 'pill' : ''}">${label}</span>`;
+
+export const Default = {
+  args: { level: 'proficient', label: 'Proficiente', pill: true },
+  render: (args) => `${styles}<div style="padding:2rem">${badge(args.level, args.label, args.pill)}</div>`,
+};
+
+export const AllLevels = {
   render: () => `
-    ${badgeStatusStyles}
-    <div class="p-4">
-      <h6 class="mb-3">Enum: proficiency</h6>
-      <div class="d-flex flex-wrap gap-3">
-        <span class="badge-status badge-pill badge-light-legend-below-basic border-legend-below-basic">
-          Abaixo do Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-basic border-legend-basic">
-          Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-proficient border-legend-proficient">
-          Proficiente
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-advanced border-legend-advanced">
-          Avançado
-        </span>
+    ${styles}
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:2rem;">
+      <div style="text-align:center;padding:1rem;border:1px solid #ddd;border-radius:0.5rem;">
+        <h4 style="font-size:0.875rem;margin-bottom:0.5rem;">Abaixo do Básico</h4>
+        ${badge('below-basic', 'Abaixo do Básico')}
+        <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;">&lt; 50%</p>
+      </div>
+      <div style="text-align:center;padding:1rem;border:1px solid #ddd;border-radius:0.5rem;">
+        <h4 style="font-size:0.875rem;margin-bottom:0.5rem;">Básico</h4>
+        ${badge('basic', 'Básico')}
+        <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;">50-70%</p>
+      </div>
+      <div style="text-align:center;padding:1rem;border:1px solid #ddd;border-radius:0.5rem;">
+        <h4 style="font-size:0.875rem;margin-bottom:0.5rem;">Proficiente</h4>
+        ${badge('proficient', 'Proficiente')}
+        <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;">70-90%</p>
+      </div>
+      <div style="text-align:center;padding:1rem;border:1px solid #ddd;border-radius:0.5rem;">
+        <h4 style="font-size:0.875rem;margin-bottom:0.5rem;">Avançado</h4>
+        ${badge('advanced', 'Avançado')}
+        <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;">&gt; 90%</p>
       </div>
     </div>
   `,
 };
 
-/**
- * ProficiencyWithInProgress - Com estado "Em Andamento"
- */
-export const ProficiencyWithInProgress = {
+export const PillVsSquare = {
   render: () => `
-    ${badgeStatusStyles}
-    <div class="p-4">
-      <h6 class="mb-3">Enum: proficiencyWithInProgress</h6>
-      <div class="d-flex flex-wrap gap-3">
-        <span class="badge-status badge-pill badge-light-legend-in-progress border-legend-in-progress">
-          Em Andamento
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-below-basic border-legend-below-basic">
-          Abaixo do Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-basic border-legend-basic">
-          Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-proficient border-legend-proficient">
-          Proficiente
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-advanced border-legend-advanced">
-          Avançado
-        </span>
+    ${styles}
+    <div style="padding:2rem;">
+      <h3 style="margin-bottom:1rem;">Pill (Arredondado)</h3>
+      <div style="display:flex;gap:1rem;margin-bottom:2rem;">
+        ${badge('below-basic', 'Abaixo', true)}
+        ${badge('basic', 'Básico', true)}
+        ${badge('proficient', 'Proficiente', true)}
+        ${badge('advanced', 'Avançado', true)}
+      </div>
+      <h3 style="margin-bottom:1rem;">Square</h3>
+      <div style="display:flex;gap:1rem;">
+        ${badge('below-basic', 'Abaixo', false)}
+        ${badge('basic', 'Básico', false)}
+        ${badge('proficient', 'Proficiente', false)}
+        ${badge('advanced', 'Avançado', false)}
       </div>
     </div>
   `,
 };
 
-/**
- * ProficiencyWithNotCompleted - Com estado "Não fizeram"
- */
-export const ProficiencyWithNotCompleted = {
+export const ProfessorContext = {
   render: () => `
-    ${badgeStatusStyles}
-    <div class="p-4">
-      <h6 class="mb-3">Enum: proficiencyWithNotCompleted</h6>
-      <div class="d-flex flex-wrap gap-3">
-        <span class="badge-status badge-pill badge-light-legend-not-completed border-legend-not-completed">
-          Não fizeram
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-below-basic border-legend-below-basic">
-          Abaixo do Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-basic border-legend-basic">
-          Básico
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-proficient border-legend-proficient">
-          Proficiente
-        </span>
-        <span class="badge-status badge-pill badge-light-legend-advanced border-legend-advanced">
-          Avançado
-        </span>
+    ${styles}
+    <div style="max-width:600px;margin:2rem auto;padding:1.5rem;background:#fff;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom:1rem;">📊 Desempenho - Matemática</h3>
+      ${['Maria Silva|advanced|Avançado', 'João Santos|proficient|Proficiente', 'Ana Costa|basic|Básico', 'Pedro Oliveira|below-basic|Abaixo do Básico'].map(s => {
+        const [name, level, label] = s.split('|');
+        return `<div style="display:flex;justify-content:space-between;padding:1rem;border-bottom:1px solid #eee;"><span>${name}</span>${badge(level, label)}</div>`;
+      }).join('')}
+    </div>
+  `,
+};
+
+export const CoordinatorContext = {
+  render: () => `
+    ${styles}
+    <div style="max-width:800px;margin:2rem auto;padding:2rem;background:#fff;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom:1.5rem;">📈 Relatório de Proficiência</h3>
+      ${['5º Ano A|8|12|6|2', '5º Ano B|5|15|8|4', '6º Ano A|10|14|4|1'].map(s => {
+        const [turma, adv, prof, bas, ab] = s.split('|');
+        return `
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem;padding:1rem;border-bottom:1px solid #eee;">
+            <div style="font-weight:500;">${turma}</div>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              ${badge('advanced', adv + ' Avançados')}
+              ${badge('proficient', prof + ' Proficientes')}
+              ${badge('basic', bas + ' Básicos')}
+              ${badge('below-basic', ab + ' Abaixo')}
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `,
+};
+
+export const StudentContext = {
+  render: () => `
+    ${styles}
+    <div style="max-width:500px;margin:2rem auto;padding:2rem;background:#fff;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:center;">
+      <h3 style="margin-bottom:1.5rem;">🎯 Meu Desempenho</h3>
+      ${['📐 Matemática|advanced|Avançado', '📖 Português|proficient|Proficiente', '🌍 Geografia|proficient|Proficiente', '🔬 Ciências|basic|Básico'].map(s => {
+        const [subj, level, label] = s.split('|');
+        return `<div style="display:flex;justify-content:space-between;padding:1rem;margin-bottom:0.5rem;background:#f8f7fa;border-radius:0.5rem;"><span>${subj}</span>${badge(level, label)}</div>`;
+      }).join('')}
+    </div>
+  `,
+};
+
+export const CompactMode = {
+  render: () => `
+    ${styles}
+    <div style="padding:2rem;">
+      <p style="margin-bottom:1rem;">Modo compacto para tabelas:</p>
+      <div style="display:flex;gap:0.5rem;">
+        ${badge('advanced', 'A', false)}
+        ${badge('proficient', 'P', false)}
+        ${badge('basic', 'B', false)}
+        ${badge('below-basic', 'AB', false)}
       </div>
     </div>
   `,
 };
 
-/**
- * WithIcon - Badge com ícone (quando pill=false)
- */
-export const WithIcon = {
-  render: () => `
-    ${badgeStatusStyles}
-    <div class="p-4">
-      <h6 class="mb-3">Badges com ícone (pill=false)</h6>
-      <div class="d-flex flex-wrap gap-3">
-        <span class="badge-status badge-light-legend-below-basic border-legend-below-basic">
-          <span class="material-symbols-outlined text-legend-below-basic" style="font-size: 12px;">person_edit</span>
-          Abaixo do Básico
-        </span>
-        <span class="badge-status badge-light-legend-basic border-legend-basic">
-          <span class="material-symbols-outlined text-legend-basic" style="font-size: 12px;">person_edit</span>
-          Básico
-        </span>
-        <span class="badge-status badge-light-legend-proficient border-legend-proficient">
-          <span class="material-symbols-outlined text-legend-proficient" style="font-size: 12px;">person_edit</span>
-          Proficiente
-        </span>
-        <span class="badge-status badge-light-legend-advanced border-legend-advanced">
-          <span class="material-symbols-outlined text-legend-advanced" style="font-size: 12px;">person_edit</span>
-          Avançado
-        </span>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * InContext - Badges em contexto de tabela
- */
-export const InContext = {
-  render: () => `
-    ${badgeStatusStyles}
-    <style>
-      .demo-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      .demo-table th, .demo-table td {
-        padding: 0.75rem 1rem;
-        border-bottom: 1px solid #ebe9f1;
-        text-align: left;
-      }
-      .demo-table th {
-        background-color: #f3f2f7;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.857rem;
-      }
-    </style>
-    <div class="p-4">
-      <h6 class="mb-3">Badges em contexto de tabela</h6>
-      <div class="card">
-        <table class="demo-table">
-          <thead>
-            <tr>
-              <th>Aluno</th>
-              <th>Desempenho</th>
-              <th>Proficiência</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ana Silva</td>
-              <td>85%</td>
-              <td>
-                <span class="badge-status badge-pill badge-light-legend-proficient border-legend-proficient">
-                  Proficiente
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td>Bruno Santos</td>
-              <td>92%</td>
-              <td>
-                <span class="badge-status badge-pill badge-light-legend-advanced border-legend-advanced">
-                  Avançado
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td>Carla Oliveira</td>
-              <td>45%</td>
-              <td>
-                <span class="badge-status badge-pill badge-light-legend-basic border-legend-basic">
-                  Básico
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td>Daniel Costa</td>
-              <td>22%</td>
-              <td>
-                <span class="badge-status badge-pill badge-light-legend-below-basic border-legend-below-basic">
-                  Abaixo do Básico
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td>Elena Ferreira</td>
-              <td>-</td>
-              <td>
-                <span class="badge-status badge-pill badge-light-legend-not-completed border-legend-not-completed">
-                  Não fizeram
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * AllVariants - Todas as variantes disponíveis
- */
-export const AllVariants = {
-  render: () => `
-    ${badgeStatusStyles}
-    <div class="p-4">
-      <h5 class="mb-4">Todas as Variantes de Badge</h5>
-      
-      <div class="mb-4">
-        <h6 class="text-muted mb-2">Pill (arredondado)</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge-status badge-pill badge-light-legend-below-basic">Abaixo do Básico</span>
-          <span class="badge-status badge-pill badge-light-legend-basic">Básico</span>
-          <span class="badge-status badge-pill badge-light-legend-proficient">Proficiente</span>
-          <span class="badge-status badge-pill badge-light-legend-advanced">Avançado</span>
-          <span class="badge-status badge-pill badge-light-legend-in-progress">Em Andamento</span>
-          <span class="badge-status badge-pill badge-light-legend-not-completed">Não fizeram</span>
-        </div>
-      </div>
-      
-      <div class="mb-4">
-        <h6 class="text-muted mb-2">Retangular com ícone</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge-status badge-light-legend-below-basic">
-            <span class="material-symbols-outlined" style="font-size: 12px;">sentiment_dissatisfied</span>
-            Abaixo do Básico
-          </span>
-          <span class="badge-status badge-light-legend-basic">
-            <span class="material-symbols-outlined" style="font-size: 12px;">sentiment_neutral</span>
-            Básico
-          </span>
-          <span class="badge-status badge-light-legend-proficient">
-            <span class="material-symbols-outlined" style="font-size: 12px;">sentiment_satisfied</span>
-            Proficiente
-          </span>
-          <span class="badge-status badge-light-legend-advanced">
-            <span class="material-symbols-outlined" style="font-size: 12px;">sentiment_very_satisfied</span>
-            Avançado
-          </span>
-          <span class="badge-status badge-light-legend-in-progress">
-            <span class="material-symbols-outlined" style="font-size: 12px;">directions_walk</span>
-            Em Andamento
-          </span>
-          <span class="badge-status badge-light-legend-not-completed">
-            <span class="material-symbols-outlined" style="font-size: 12px;">no_accounts</span>
-            Não fizeram
-          </span>
-        </div>
-      </div>
-      
-      <div>
-        <h6 class="text-muted mb-2">Com borda</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge-status badge-pill badge-light-legend-below-basic border-legend-below-basic" style="border-width: 1px; border-style: solid; border-color: var(--legend-below-basic);">Abaixo do Básico</span>
-          <span class="badge-status badge-pill badge-light-legend-basic" style="border-width: 1px; border-style: solid; border-color: var(--legend-basic);">Básico</span>
-          <span class="badge-status badge-pill badge-light-legend-proficient" style="border-width: 1px; border-style: solid; border-color: var(--legend-proficient);">Proficiente</span>
-          <span class="badge-status badge-pill badge-light-legend-advanced" style="border-width: 1px; border-style: solid; border-color: var(--legend-advanced);">Avançado</span>
-        </div>
-      </div>
+export const Interactive = {
+  args: { level: 'proficient', label: 'Proficiente', pill: true },
+  render: (args) => `
+    ${styles}
+    <div style="padding:2rem;text-align:center;">
+      <strong>Preview Interativo</strong>
+      <div style="margin:2rem 0;">${badge(args.level, args.label, args.pill)}</div>
+      <p style="color:#666;font-size:0.875rem;">Use os controles acima</p>
     </div>
   `,
 };
