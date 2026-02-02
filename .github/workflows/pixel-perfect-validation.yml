@@ -71,7 +71,13 @@ jobs:
           npx playwright test --grep "Pixel Perfect - Todos os Componentes" --reporter=html
         continue-on-error: false
 
-      - name: 🔄 Atualizar Screenshots Baseline
+      - name: � Validar Screenshots Responsivos (Mobile/Tablet/Desktop)
+        if: ${{ github.event.inputs.update_snapshots != 'true' }}
+        run: |
+          npx playwright test --grep "Responsividade" --reporter=html
+        continue-on-error: false
+
+      - name: �🔄 Atualizar Screenshots Baseline
         if: ${{ github.event.inputs.update_snapshots == 'true' }}
         run: |
           npx playwright test --grep "Pixel Perfect" --update-snapshots --reporter=list

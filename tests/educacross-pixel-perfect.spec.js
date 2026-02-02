@@ -33,6 +33,19 @@ const STORY_FRAME_URL = (storyId) => `${BASE_URL}/iframe.html?id=${storyId}&view
 // Timeout para carregamento de componentes
 const COMPONENT_LOAD_TIMEOUT = 10000;
 
+// Viewports para testes responsivos
+const VIEWPORTS = {
+  mobile: { width: 375, height: 667, name: 'mobile' },    // iPhone SE
+  tablet: { width: 768, height: 1024, name: 'tablet' },   // iPad
+  desktop: { width: 1280, height: 720, name: 'desktop' }  // Desktop HD
+};
+
+// Componentes críticos para teste responsivo (subset para performance)
+const RESPONSIVE_COMPONENT_PATTERNS = [
+  'listtable', 'mediacard', 'tabcards', 'navigation',
+  'forms', 'modals', 'tables', 'cards'
+];
+
 // ============================================================================
 // CARREGAMENTO DINÂMICO DAS STORIES
 // ============================================================================
@@ -367,32 +380,65 @@ test.describe('Cobertura', () => {
 });
 
 // ============================================================================
-// TESTES: RESPONSIVIDADE
+// TESTES: RESPONSIVIDADE - MÚLTIPLOS VIEWPORTS
 // ============================================================================
 
-test.describe('Responsividade - Viewports', () => {
-  const VIEWPORTS = {
-    mobile: { width: 375, height: 667 },
-    tablet: { width: 768, height: 1024 },
-    desktop: { width: 1920, height: 1080 }
-  };
-  
-  // Testa amostra de stories em diferentes viewports
-  const SAMPLE_STORIES = MANUAL_STORIES.slice(0, 5);
-  
-  Object.entries(VIEWPORTS).forEach(([viewportName, viewport]) => {
-    SAMPLE_STORIES.forEach(story => {
-      test(`${viewportName}: ${story.id}`, async ({ page }) => {
-        await page.setViewportSize(viewport);
-        await goToStory(page, story.id);
-        
-        // Screenshot responsivo
-        await expect(page).toHaveScreenshot(`${story.id}-${viewportName}.png`, {
-          maxDiffPixels: 0,
-          threshold: 0,
-          fullPage: true
-        });
+// Stories para teste responsivo (componentes que mudam significativamente)
+const RESPONSIVE_STORIES = EDUCACROSS_V2_STORIES.filter(story =>
+  RESPONSIVE_COMPONENT_PATTERNS.some(pattern => 
+    story.id.toLowerCase().includes(pattern)
+  )
+).slice(0, 30); // Limita a 30 para performance
+
+test.describe('Responsividade - Mobile (375px)', () => {
+  RESPONSIVE_STORIES.forEach(story => {
+    test(`Mobile: ${story.title} - ${story.name}`, async ({ page }) => {
+      await page.setViewportSize(VIEWPORTS.mobile);
+      await goToStory(page, story.id);
+      await page.waitForTimeout(1000);
+      
+      const isAnimated = hasAnimations(story.id);
+      const tolerance = isAnimated ? { maxDiffPixels: 50000, threshold: 0.1 } : { maxDiffPixels: 0, threshold: 0 };
+      
+      await expect(page).toHaveScreenshot(`${story.id}-mobile.png`, {
+        ...tolerance,
+        fullPage: true
       });
     });
   });
 });
+
+test.describe('Responsividade - Tablet (768px)', () => {
+  RESPONSIVE_STORIES.forEach(story => {
+    test(`Tablet: ${story.title} - ${story.name}`, async ({ page }) => {
+      await page.setViewportSize(VIEWPORTS.tablet);
+      await goToStory(page, story.id);
+      await page.waitForTimeout(1000);
+      
+      const isAnimated = hasAnimations(story.id);
+      const tolerance = isAnimated ? { maxDiffPixels: 50000, threshold: 0.1 } : { maxDiffPixels: 0, threshold: 0 };
+      
+      await expect(page).toHaveScreenshot(`${story.id}-tablet.png`, {
+        ...tolerance,
+        fullPage: true
+      });
+    });
+  });
+});
+
+test.describe('Responsividade - Desktop (1280px)', () => {
+  RESPONSIVE_STORIES.forEach(story => {
+    test(`Desktop: ${story.title} - ${story.name}`, async ({ page }) => {
+      await page.setViewportSize(VIEWPORTS.desktop);
+      await goToStory(page, story.id);
+      await page.waitForTimeout(1000);
+      
+      const isAnimated = hasAnimations(story.id);
+      const tolerance = isAnimated ? { maxDiffPixels: 50000, threshold: 0.1 } : { maxDiffPixels: 0, threshold: 0 };
+      
+      await expect(page).toHaveScreenshot(`${story.id}-desktop.png`, {
+        ...tolerance,
+        fullPage: true
+      });
+    });
+  });});

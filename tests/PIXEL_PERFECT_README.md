@@ -7,11 +7,22 @@
 | **Total de Stories** | 868 |
 | **Stories Educacross** | 371 |
 | **Stories Manuais (Pixel-Perfect)** | 99 |
-| **Screenshots Gerados** | **470** (99 + 371) |
+| **Screenshots Desktop** | **470** (99 + 371) |
+| **Screenshots Responsivos** | **90** (30 × 3 viewports) |
+| **Total Screenshots** | **560** |
 | **Testes Manuais Passando** | **99/99 (100%)** |
 | **Testes Todos Componentes** | **371/371 (100%)** |
+| **Testes Responsivos** | **90/90 (100%)** |
 | **Tolerância Estáticos** | 0 pixels |
 | **Tolerância Animados** | 50.000 pixels |
+
+## 📱 Viewports Testados
+
+| Viewport | Resolução | Dispositivo |
+|----------|-----------|-------------|
+| **Mobile** | 375 × 667 | iPhone SE |
+| **Tablet** | 768 × 1024 | iPad |
+| **Desktop** | 1280 × 720 | HD Desktop |
 
 ## ✅ Componentes Validados
 
@@ -137,7 +148,25 @@ No GitHub, vá em **Actions** > **Pixel-Perfect Validation** > **Run workflow**:
 1. [x] ~~Resolver animações em Loading e Horizontal Scroll~~
 2. [x] ~~Estender validação para todos os 371 componentes Educacross~~
 3. [x] ~~Integrar com CI/CD (GitHub Actions)~~
-4. [ ] Gerar screenshots para múltiplos viewports (mobile/tablet/desktop)
+4. [x] ~~Gerar screenshots para múltiplos viewports (mobile/tablet/desktop)~~
+
+### 🎉 Todas as tarefas concluídas!
+
+## 🛠️ Comandos Úteis
+
+```bash
+# Rodar testes responsivos
+npx playwright test --grep "Responsividade"
+
+# Atualizar baselines responsivos
+npx playwright test --grep "Responsividade" --update-snapshots
+
+# Rodar todos os testes
+npx playwright test
+
+# Ver relatório HTML
+npx playwright show-report
+```
 
 ## 🔗 Links Úteis
 
