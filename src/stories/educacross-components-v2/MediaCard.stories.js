@@ -169,8 +169,6 @@ export default {
   }
 </style>
 
-# MediaCard
-
 Card de métrica com ícone lateral para exibir estatísticas e informações resumidas em dashboards.
 
 ---

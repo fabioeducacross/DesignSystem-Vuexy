@@ -169,8 +169,6 @@ export default {
   }
 </style>
 
-# ProgressBar
-
 Indicador visual de progresso do estudante com sistema inteligente de cores baseado em níveis de proficiência educacional.
 
 ---

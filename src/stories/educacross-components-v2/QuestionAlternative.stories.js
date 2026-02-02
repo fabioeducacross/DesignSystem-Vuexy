@@ -168,8 +168,6 @@ export default {
   }
 </style>
 
-# QuestionAlternative
-
 Card de alternativa para questões de múltipla escolha em avaliações, suportando conteúdo de texto e imagem com feedback visual de resposta correta/incorreta.
 
 ---
