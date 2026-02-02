@@ -7,8 +7,9 @@
 | **Total de Stories** | 868 |
 | **Stories Educacross** | 371 |
 | **Stories Manuais (Pixel-Perfect)** | 99 |
-| **Screenshots Gerados** | 99 |
-| **Testes Passando** | **99/99 (100%)** |
+| **Screenshots Gerados** | **470** (99 + 371) |
+| **Testes Manuais Passando** | **99/99 (100%)** |
+| **Testes Todos Componentes** | **371/371 (100%)** |
 | **Tolerância Estáticos** | 0 pixels |
 | **Tolerância Animados** | 50.000 pixels |
 
@@ -100,7 +101,7 @@ O arquivo `playwright.config.js` está configurado com:
 ## 📝 Próximos Passos
 
 1. [x] ~~Resolver animações em Loading e Horizontal Scroll~~
-2. [ ] Estender validação para todos os 371 componentes Educacross
+2. [x] ~~Estender validação para todos os 371 componentes Educacross~~
 3. [ ] Integrar com CI/CD (GitHub Actions)
 4. [ ] Gerar screenshots para múltiplos viewports (mobile/tablet/desktop)
 

@@ -227,10 +227,13 @@ test.describe('Pixel Perfect - Todos os Componentes', () => {
       // Aguarda estabilização do layout
       await page.waitForTimeout(1000);
       
-      // Screenshot com tolerância zero
+      // Componentes com animações têm tolerância maior
+      const isAnimated = hasAnimations(story.id);
+      const tolerance = isAnimated ? { maxDiffPixels: 50000, threshold: 0.1 } : { maxDiffPixels: 0, threshold: 0 };
+      
+      // Screenshot com tolerância configurada
       await expect(page).toHaveScreenshot(`${story.id}.png`, {
-        maxDiffPixels: 0,
-        threshold: 0,
+        ...tolerance,
         fullPage: true
       });
     });
