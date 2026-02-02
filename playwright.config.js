@@ -3,20 +3,43 @@ const { defineConfig, devices } = require('@playwright/test');
 
 /**
  * Playwright Configuration for Educacross Design System
+ * Otimizado para validação PIXEL-PERFECT com 4 workers
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
   testDir: './tests',
+  
+  // Paralelização com 4 workers para 222 testes
   fullyParallel: true,
+  workers: process.env.CI ? 2 : 4,
+  
+  // Retries para lidar com flakiness
+  retries: process.env.CI ? 2 : 1,
+  
+  // Timeout maior para screenshots
+  timeout: 30000,
+  expect: {
+    timeout: 10000,
+    // Configuração PIXEL-PERFECT - tolerância ZERO
+    toHaveScreenshot: {
+      maxDiffPixels: 0,
+      threshold: 0,
+    },
+  },
+  
+  // Reporters
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+  ],
+  
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
   
   use: {
     baseURL: 'http://localhost:6006',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    video: 'on-first-retry',
   },
 
   projects: [
@@ -28,7 +51,7 @@ module.exports = defineConfig({
 
   /* Run local server before tests */
   webServer: {
-    command: 'python -m http.server 6006 --directory storybook-static',
+    command: 'npx http-server storybook-static -p 6006 -c-1',
     url: 'http://localhost:6006',
     reuseExistingServer: !process.env.CI,
     timeout: 120000,

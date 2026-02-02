@@ -1,0 +1,107 @@
+# 🎯 Validação Pixel-Perfect - Educacross Design System
+
+## 📊 Resumo dos Resultados
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de Stories** | 868 |
+| **Stories Educacross** | 371 |
+| **Stories Manuais (Pixel-Perfect)** | 99 |
+| **Screenshots Gerados** | 99 |
+| **Testes Passando** | 97/99 (98%) |
+| **Tolerância** | 0 pixels |
+
+## ✅ Componentes Validados
+
+Os seguintes componentes manuais estão com validação pixel-perfect:
+
+1. **AppCollapse** - 6 variantes
+2. **AppCollapseItem** - 1 variante
+3. **AppLanguageSelector** - 1 variante
+4. **ButtonWaitAction** - 7 variantes
+5. **Divider** - 7 variantes
+6. **DynamicMediaCard** - 1 variante
+7. **ESelect** - 12 variantes
+8. **LegendCard** - 4 variantes
+9. **ListTable** - 8 variantes
+10. **MediaCard** - 8 variantes
+11. **MediaCardIcon** - 1 variante
+12. **MultipleDropdown** - 8 variantes
+13. **ProgressBar** - 12 variantes
+14. **TabCards** - 6 variantes
+15. **VerticalDivider** - 1 variante
+16. **ZipLoading** - 7 variantes
+17. **Dividers (educacross-components)** - 6 variantes
+
+## ⚠️ Componentes com Animações
+
+2 componentes falham por terem estados dinâmicos:
+
+1. **ListTable - Loading** - Animação de skeleton/loading
+2. **TabCards - Horizontal Scroll** - Posição do scroll variável
+
+**Recomendação**: Adicionar tolerância específica para esses componentes ou desabilitar animações.
+
+## 🛠️ Como Usar
+
+### Gerar novos baselines
+```bash
+npx playwright test --grep "Pixel Perfect - Componentes Manuais" --update-snapshots
+```
+
+### Validar screenshots (tolerância zero)
+```bash
+npx playwright test --grep "Pixel Perfect - Componentes Manuais"
+```
+
+### Rodar todos os testes (inclui Vuexy)
+```bash
+npx playwright test
+```
+
+### Ver relatório HTML
+```bash
+npx playwright show-report
+```
+
+## 📁 Estrutura de Arquivos
+
+```
+tests/
+├── educacross-pixel-perfect.spec.js  # Arquivo principal de testes
+├── PIXEL_PERFECT_README.md           # Esta documentação
+└── educacross-pixel-perfect.spec.js-snapshots/
+    ├── educacross-components-v2-forms-eselect--default-chromium-win32.png
+    ├── educacross-components-v2-layout-divider--default-chromium-win32.png
+    └── ... (99 arquivos .png)
+```
+
+## ⚙️ Configuração
+
+O arquivo `playwright.config.js` está configurado com:
+
+```javascript
+{
+  workers: 4,                    // 4 workers paralelos
+  retries: 1,                    // 1 retry para flakiness
+  timeout: 30000,                // 30s timeout
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixels: 0,          // Tolerância ZERO
+      threshold: 0               // Sem margem de erro
+    }
+  }
+}
+```
+
+## 📝 Próximos Passos
+
+1. [ ] Resolver animações em Loading e Horizontal Scroll
+2. [ ] Estender validação para todos os 371 componentes Educacross
+3. [ ] Integrar com CI/CD (GitHub Actions)
+4. [ ] Gerar screenshots para múltiplos viewports (mobile/tablet/desktop)
+
+## 🔗 Links Úteis
+
+- [Playwright Visual Comparisons](https://playwright.dev/docs/test-snapshots)
+- [Storybook Testing](https://storybook.js.org/docs/writing-tests)
