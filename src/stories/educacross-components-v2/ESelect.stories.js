@@ -4,7 +4,7 @@
  * @component ESelect
  * @category Educacross Components V2
  * @priority P0 - Critical
- * @status Production
+ * @status PIXEL-PERFECT
  * @source educacross-frontoffice/src/components/selects/ESelect.vue
  * @since 2.0.0
  * 
