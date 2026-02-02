@@ -1,0 +1,140 @@
+name: Pixel-Perfect Validation
+
+on:
+  push:
+    branches: [main, v1, v1.1]
+    paths:
+      - 'src/stories/**'
+      - 'tests/**'
+      - '.storybook/**'
+  pull_request:
+    branches: [main, v1, v1.1]
+    paths:
+      - 'src/stories/**'
+      - 'tests/**'
+      - '.storybook/**'
+  workflow_dispatch:
+    inputs:
+      update_snapshots:
+        description: 'Atualizar screenshots baseline'
+        required: false
+        default: 'false'
+        type: boolean
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pixel-perfect:
+    name: Validação Pixel-Perfect
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: 📥 Checkout código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📚 Instalar dependências
+        run: npm ci
+
+      - name: 🏗️ Build Storybook
+        run: npm run build-storybook
+
+      - name: 🎭 Instalar Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: 🖥️ Iniciar servidor Storybook
+        run: |
+          npx http-server storybook-static -p 6006 --silent &
+          sleep 5
+          curl -s http://localhost:6006 > /dev/null || exit 1
+          echo "✅ Storybook rodando na porta 6006"
+
+      - name: 📸 Validar Screenshots (Componentes Manuais)
+        if: ${{ github.event.inputs.update_snapshots != 'true' }}
+        run: |
+          npx playwright test --grep "Pixel Perfect - Componentes Manuais" --reporter=html
+        continue-on-error: false
+
+      - name: 📸 Validar Screenshots (Todos os Componentes)
+        if: ${{ github.event.inputs.update_snapshots != 'true' }}
+        run: |
+          npx playwright test --grep "Pixel Perfect - Todos os Componentes" --reporter=html
+        continue-on-error: false
+
+      - name: 🔄 Atualizar Screenshots Baseline
+        if: ${{ github.event.inputs.update_snapshots == 'true' }}
+        run: |
+          npx playwright test --grep "Pixel Perfect" --update-snapshots --reporter=list
+          echo "✅ Screenshots atualizados"
+
+      - name: 📤 Upload Relatório Playwright
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: 📤 Upload Screenshots Diff
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: screenshot-diffs
+          path: test-results/
+          retention-days: 7
+
+      - name: 📤 Upload Screenshots Atualizados
+        uses: actions/upload-artifact@v4
+        if: ${{ github.event.inputs.update_snapshots == 'true' }}
+        with:
+          name: updated-snapshots
+          path: tests/educacross-pixel-perfect.spec.js-snapshots/
+          retention-days: 7
+
+      - name: 📊 Resumo do Teste
+        if: always()
+        run: |
+          echo "## 📊 Resultados da Validação Pixel-Perfect" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Métrica | Valor |" >> $GITHUB_STEP_SUMMARY
+          echo "|---------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| **Branch** | \`${{ github.ref_name }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Commit** | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Workflow** | Pixel-Perfect Validation |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "### ✅ Todos os testes passaram!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ Alguns testes falharam" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Verifique os artefatos para ver os diffs de screenshots." >> $GITHUB_STEP_SUMMARY
+          fi
+
+  notify-failure:
+    name: Notificar Falha
+    runs-on: ubuntu-latest
+    needs: pixel-perfect
+    if: failure()
+    
+    steps:
+      - name: 🚨 Criar comentário no PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '## ❌ Validação Pixel-Perfect Falhou\n\nAlguns componentes têm diferenças visuais. Verifique o [relatório do Playwright](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) para detalhes.\n\n### 🔧 Para corrigir:\n1. Execute localmente: `npx playwright test --grep "Pixel Perfect"`\n2. Se as mudanças são intencionais: `npx playwright test --update-snapshots`\n3. Commit os novos screenshots'
+            })

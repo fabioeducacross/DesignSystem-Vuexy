@@ -98,14 +98,49 @@ O arquivo `playwright.config.js` está configurado com:
 }
 ```
 
+## 🚀 CI/CD - GitHub Actions
+
+A validação pixel-perfect está integrada ao CI/CD via GitHub Actions.
+
+### Workflow Automático
+
+O workflow `.github/workflows/pixel-perfect-validation.yml` executa automaticamente quando:
+- **Push** para branches `main`, `v1`, `v1.1`
+- **Pull Requests** para essas branches
+- **Mudanças** em `src/stories/**`, `tests/**`, `.storybook/**`
+
+### Executar Manualmente
+
+No GitHub, vá em **Actions** > **Pixel-Perfect Validation** > **Run workflow**:
+- Marque `update_snapshots: true` para atualizar baselines
+
+### Artefatos Gerados
+
+| Artefato | Quando | Retenção |
+|----------|--------|----------|
+| `playwright-report` | Sempre | 30 dias |
+| `screenshot-diffs` | Falha | 7 dias |
+| `updated-snapshots` | Update | 7 dias |
+
+### Fluxo de Trabalho
+
+```
+1. Push/PR → Workflow inicia
+2. Build Storybook → Gera static site
+3. Playwright Tests → Compara screenshots
+4. ✅ Pass → Merge permitido
+5. ❌ Fail → Ver diffs nos artefatos
+```
+
 ## 📝 Próximos Passos
 
 1. [x] ~~Resolver animações em Loading e Horizontal Scroll~~
 2. [x] ~~Estender validação para todos os 371 componentes Educacross~~
-3. [ ] Integrar com CI/CD (GitHub Actions)
+3. [x] ~~Integrar com CI/CD (GitHub Actions)~~
 4. [ ] Gerar screenshots para múltiplos viewports (mobile/tablet/desktop)
 
 ## 🔗 Links Úteis
 
 - [Playwright Visual Comparisons](https://playwright.dev/docs/test-snapshots)
 - [Storybook Testing](https://storybook.js.org/docs/writing-tests)
+- [GitHub Actions](https://docs.github.com/en/actions)
