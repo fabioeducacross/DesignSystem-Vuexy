@@ -5,7 +5,7 @@
  * 
  * @component ExerciseType
  * @source educacross-frontoffice\src\components\exercise-type\reading-meter\ExerciseType.vue
- * @generated 2026-02-01T20:35:35.836499
+ * @generated 2026-02-01T21:06:31.005576
  * 
  * Props: None
  * Slots: None
@@ -74,8 +74,8 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div>
-    <WordList width="" height="" />
-    <FullText width="" height="" />
+    <div class="WordList" width="" height="" />
+    <div class="FullText" width="" height="" />
   </div>
 `;
 

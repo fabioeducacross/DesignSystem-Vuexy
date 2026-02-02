@@ -5,7 +5,7 @@
  * 
  * @component QuestionAlternative
  * @source educacross-frontoffice\src\components\evaluations\questionsListDetail\components\QuestionAlternative.vue
- * @generated 2026-02-01T20:35:35.945818
+ * @generated 2026-02-01T21:06:31.213266
  * 
  * Props: None
  * Slots: None
@@ -101,7 +101,7 @@ const baseTemplate = `
   >
     <b-card-body body-class="body-alternative">
       <div class="d-flex align-items-center justify-content-center h-full conntent-img">
-        <EvaluationsHtmlContentRenderer content="" class="alternative-content" />
+        <div class="EvaluationsHtmlContentRenderer" content="" class="alternative-content" />
       </div>
       <div class="letter-container">
         <b-avatar

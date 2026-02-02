@@ -5,7 +5,7 @@
  * 
  * @component MediaCardIcon
  * @source educacross-frontoffice\src\components\card\MediaCardIcon.vue
- * @generated 2026-02-01T20:35:35.892386
+ * @generated 2026-02-01T21:06:31.101155
  * 
  * Props: None
  * Slots: None

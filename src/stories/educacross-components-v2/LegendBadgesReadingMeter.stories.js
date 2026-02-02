@@ -5,7 +5,7 @@
  * 
  * @component LegendBadgesReadingMeter
  * @source educacross-frontoffice\src\components\legends\LegendBadgesReadingMeter.vue
- * @generated 2026-02-01T20:35:35.860656
+ * @generated 2026-02-01T21:06:31.050504
  * 
  * Props: None
  * Slots: None
@@ -76,7 +76,6 @@ const baseTemplate = `
 <div class="d-flex gap-1">
     <b-badge
       variant=""
-      class=""
       class="d-flex align-items-center"
       pill
     >

@@ -5,7 +5,7 @@
  * 
  * @component ProgressBarHorizontalV2
  * @source educacross-frontoffice\src\components\progessBar\ProgressBarHorizontalV2.vue
- * @generated 2026-02-01T20:35:35.935818
+ * @generated 2026-02-01T21:06:31.191149
  * 
  * Props: None
  * Slots: default, description
@@ -76,12 +76,9 @@ const componentStyles = `
 const baseTemplate = `
 <div class="">
     <b-progress variant="" value="" height=""></b-progress>
-    <slot
-      name="default"
-      item=""
-    >
+    <div class="slot-placeholder">
       <div class="d-flex">
-        <span class="" class="font-bold mr-1">Sample Text%</span>
+        <span class="font-bold mr-1">Sample Text%</span>
         <span class="ml-auto whitespace-no-wrap">
           <span class="font-weight-bolder">Sample Text </span>
           Sample Text
@@ -89,7 +86,7 @@ const baseTemplate = `
         </span>
         <div class="slot-placeholder"></div>
       </div>
-    </slot>
+    </div>
   </div>
 `;
 

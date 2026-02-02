@@ -5,7 +5,7 @@
  * 
  * @component IntermediateRedirectLoginDeepLink
  * @source educacross-frontoffice\src\components\deeplink\IntermediateRedirectLoginDeepLink.vue
- * @generated 2026-02-01T20:35:35.858226
+ * @generated 2026-02-01T21:06:31.045036
  * 
  * Props: None
  * Slots: None
@@ -137,7 +137,7 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<BackgroundSpace>
+<div class="BackgroundSpace">
     <div class="redirectLogin-container">
       <div class="color-patternTwo">
         <img src="@/assets/images/images-educa/images-feedback/belinha-gear.png" alt="corujinha" />
@@ -155,7 +155,7 @@ const baseTemplate = `
         </div>
       </div>
     </div>
-  </BackgroundSpace>
+  </div>
 `;
 
 // Story: Default

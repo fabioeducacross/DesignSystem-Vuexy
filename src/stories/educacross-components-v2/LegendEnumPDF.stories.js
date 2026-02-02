@@ -5,7 +5,7 @@
  * 
  * @component LegendEnumPDF
  * @source educacross-frontoffice\src\components\legends\LegendEnumPDF.vue
- * @generated 2026-02-01T20:35:35.868183
+ * @generated 2026-02-01T21:06:31.061275
  * 
  * Props: None
  * Slots: enum-component
@@ -82,11 +82,11 @@ const baseTemplate = `
         <div class="d-flex justify-content-center gap-2 flex-wrap">
           <div>Sample Text</div>
           <div>
-            <slot name="enum-component" value="">
-              <SemaphoreStatus :status-enum="item" size="pdf">
+            <div class="slot-placeholder">
+              <div class="SemaphoreStatus" :status-enum="item" size="pdf">
                 <span class="font-10">Sample Text</span>
-              </SemaphoreStatus>
-            </slot>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
  * 
  * @component CellStatus
  * @source educacross-frontoffice\src\components\badge\CellStatus.vue
- * @generated 2026-02-01T20:35:35.799491
+ * @generated 2026-02-01T21:06:30.924929
  * 
  * Props: None
  * Slots: None

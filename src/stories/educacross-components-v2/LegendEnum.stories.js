@@ -5,7 +5,7 @@
  * 
  * @component LegendEnum
  * @source educacross-frontoffice\src\components\legends\LegendEnum.vue
- * @generated 2026-02-01T20:35:35.865826
+ * @generated 2026-02-01T21:06:31.058255
  * 
  * Props: None
  * Slots: enum-component
@@ -85,16 +85,15 @@ const baseTemplate = `
         <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
           <div>Sample Text:</div>
           <div>
-            <slot name="enum-component" value="">
-              <SemaphoreStatus :status-enum="item">
+            <div class="slot-placeholder">
+              <div class="SemaphoreStatus" :status-enum="item">
                 <span>Sample Text</span>
-              </SemaphoreStatus>
-            </slot>
+              </div>
+            </div>
           </div>
         </div>
         <p
           class="mt-1 mb-0"
-          v-html="$t(item.legend)"
         ></p>
       </b-card-body>
       <hr />

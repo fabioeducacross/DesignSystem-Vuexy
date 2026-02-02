@@ -5,7 +5,7 @@
  * 
  * @component MissionDetailsPlus
  * @source educacross-frontoffice\src\components\mission-plus\MissionDetailsPlus.vue
- * @generated 2026-02-01T20:35:35.902782
+ * @generated 2026-02-01T21:06:31.128362
  * 
  * Props: None
  * Slots: None
@@ -113,7 +113,7 @@ const baseTemplate = `
 
       <b-col cols="12">
         <div class="cards-round-slide my-2" class="">
-          <div class="swiper-container" ref="swiperContainer">
+          <div class="swiper-container">
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide"

@@ -5,7 +5,7 @@
  * 
  * @component DefaultFAQModal
  * @source educacross-frontoffice\src\components\modal\DefaultFAQModal.vue
- * @generated 2026-02-01T20:35:35.818240
+ * @generated 2026-02-01T21:06:30.967791
  * 
  * Props: None
  * Slots: None
@@ -145,7 +145,7 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<b-modal id="faq-modal" ref="faq-modal" content-class="shadow" centered hide-footer size="lg">
+<b-modal id="faq-modal" content-class="shadow" centered hide-footer size="lg">
     <div class="modal-content-navBar">
       <div class="modal-container">
         <div class="modal-header-icon">

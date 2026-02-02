@@ -5,7 +5,7 @@
  * 
  * @component StudentEvidenceReportPDF
  * @source educacross-frontoffice\src\components\student-evidence-report\StudentEvidenceReportPDF.vue
- * @generated 2026-02-01T20:35:35.989500
+ * @generated 2026-02-01T21:06:31.310969
  * 
  * Props: None
  * Slots: None
@@ -113,18 +113,18 @@ const baseTemplate = `
         <div class="p-50 chart-1 flex-1">
           <h4 class="font-semibold text-center text-body">Rendimento da turma</h4>
           <div>
-            <v-chart ref="pie" autoresize option="" class="donut-chart" />
+            <v-chart autoresize option="" class="donut-chart" />
           </div>
         </div>
         <div class="p-50 chart-2 flex-1">
           <h4 class="font-semibold text-center text-body">Jogos finalizados</h4>
           <div>
-            <v-chart ref="bar" autoresize option="" class="bar-chart" />
+            <v-chart autoresize option="" class="bar-chart" />
           </div>
         </div>
       </div>
       <div class="border-t w-100 charts-legends-container">
-        <LegendEnum legends="" card-class="shadow-none mb-0" />
+        <div class="LegendEnum" legends="" card-class="shadow-none mb-0" />
         <hr class="mt-0" />
         <div class="d-flex align-items-center gap-4 px-1 pb-1">
           <span class="whitespace-no-wrap">Jogos Finalizados:</span>
@@ -189,7 +189,7 @@ const baseTemplate = `
                 Sample Text
               </b-badge>
             </b-td>
-            <template>
+            <div>
               <b-td class="text-black text-center">
                 Sample Text
               </b-td>

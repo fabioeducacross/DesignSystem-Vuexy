@@ -5,7 +5,7 @@
  * 
  * @component AlbumCover
  * @source educacross-frontoffice\src\components\player\AlbumCover.vue
- * @generated 2026-02-01T20:35:35.776149
+ * @generated 2026-02-01T21:06:30.887646
  * 
  * Props: None
  * Slots: None

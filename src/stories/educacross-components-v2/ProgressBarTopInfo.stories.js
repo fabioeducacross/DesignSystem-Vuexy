@@ -5,7 +5,7 @@
  * 
  * @component ProgressBarTopInfo
  * @source educacross-frontoffice\src\components\progessBar\ProgressBarTopInfo.vue
- * @generated 2026-02-01T20:35:35.937797
+ * @generated 2026-02-01T21:06:31.195156
  * 
  * Props: None
  * Slots: None

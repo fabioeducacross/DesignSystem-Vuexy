@@ -5,7 +5,7 @@
  * 
  * @component ProgressBarVertical
  * @source educacross-frontoffice\src\components\progessBar\ProgressBarVertical.vue
- * @generated 2026-02-01T20:35:35.939797
+ * @generated 2026-02-01T21:06:31.200258
  * 
  * Props: None
  * Slots: None
@@ -74,7 +74,7 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div class="d-flex gap-2 w-100 align-items-center">
-    <span class="" class="font-extrabold">Sample Text%</span>
+    <span class="font-extrabold">Sample Text%</span>
     <b-progress
       height=""
       value=""

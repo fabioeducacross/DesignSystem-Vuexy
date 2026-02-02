@@ -5,7 +5,7 @@
  * 
  * @component NewDeepLink
  * @source educacross-frontoffice\src\components\deeplink\NewDeepLink.vue
- * @generated 2026-02-01T20:35:35.918003
+ * @generated 2026-02-01T21:06:31.158099
  * 
  * Props: None
  * Slots: None
@@ -112,7 +112,7 @@ const baseTemplate = `
           class=""
           vertical-align="center"
         >
-          <template v-slot:aside>
+          <div>
             <div class="">
               <span class="material-symbols-outlined text-white media-icon"> sports_esports </span>
             </div>

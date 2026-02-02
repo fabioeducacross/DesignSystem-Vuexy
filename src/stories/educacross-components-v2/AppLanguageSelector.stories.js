@@ -5,7 +5,7 @@
  * 
  * @component AppLanguageSelector
  * @source educacross-frontoffice\src\components\app-language-selector\AppLanguageSelector.vue
- * @generated 2026-02-01T20:35:35.781921
+ * @generated 2026-02-01T21:06:30.896456
  * 
  * Props: None
  * Slots: None
@@ -88,7 +88,7 @@ const componentStyles = `
 const baseTemplate = `
 <b-overlay :show.sync="loading">
     <b-dropdown variant="flat-primary" toggle-class=" p-0" no-caret size="sm">
-      <template #button-content>
+      <div>
         <div class="flag-container">
           <b-img
             src=""

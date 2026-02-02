@@ -5,7 +5,7 @@
  * 
  * @component SimpleTab
  * @source educacross-frontoffice\src\components\tab\SimpleTab.vue
- * @generated 2026-02-01T20:35:35.983511
+ * @generated 2026-02-01T21:06:31.301497
  * 
  * Props: None
  * Slots: None
@@ -73,14 +73,14 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<Tab
+<div class="Tab"
     :current-tab="0"
     :tab-title="title"
     tabs=""
     :tab-title-icon="icon"
   >
-    <template v-slot:tab-content-0>
-      <div class="slot-placeholder"></div>
+    <div>
+      <div class="slot-placeholder">[Slot Content]</div>
 `;
 
 // Story: Default

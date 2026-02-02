@@ -5,7 +5,7 @@
  * 
  * @component MissionBookDetails
  * @source educacross-frontoffice\src\components\mission-plus\MissionBookDetails.vue
- * @generated 2026-02-01T20:35:35.896637
+ * @generated 2026-02-01T21:06:31.115214
  * 
  * Props: None
  * Slots: None
@@ -124,7 +124,7 @@ const baseTemplate = `
     static
     title="Detalhes da Missão"
   >
-    <template #modal-header>
+    <div>
       <button class="back">
         <span class="material-symbols-outlined" style="font-size: 16px">arrow_back</span>
       </button>

@@ -5,7 +5,7 @@
  * 
  * @component FeedbackAndSend
  * @source educacross-frontoffice\src\components\mission-plus\FeedbackAndSend.vue
- * @generated 2026-02-01T20:35:35.842770
+ * @generated 2026-02-01T21:06:31.019537
  * 
  * Props: None
  * Slots: None
@@ -87,13 +87,12 @@ const baseTemplate = `
 
     <hr class="w-full divider w-75 mx-auto my-2 border-gray" />
 
-    <MissionDetails :guide-id="props.id" />
+    <div class="MissionDetails" :guide-id="props.id" />
 
     <hr class="w-full divider w-75 mx-auto my-2 border-gray" />
 
     <div class="d-flex justify-content-center gap-4 mb-2">
       <b-button
-        ref="loadableButtonarchiveMission"
         class="button-left"
         variant="outline-primary"
         type="border"

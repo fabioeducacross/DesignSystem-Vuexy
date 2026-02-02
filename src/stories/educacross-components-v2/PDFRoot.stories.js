@@ -5,7 +5,7 @@
  * 
  * @component PDFRoot
  * @source educacross-frontoffice\src\components\PDFs\PDFRoot.vue
- * @generated 2026-02-01T20:35:35.920405
+ * @generated 2026-02-01T21:06:31.163174
  * 
  * Props: None
  * Slots: None

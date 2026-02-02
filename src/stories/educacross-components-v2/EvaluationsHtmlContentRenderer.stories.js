@@ -5,7 +5,7 @@
  * 
  * @component EvaluationsHtmlContentRenderer
  * @source educacross-frontoffice\src\components\evaluations\shared\EvaluationsHtmlContentRenderer.vue
- * @generated 2026-02-01T20:35:35.835385
+ * @generated 2026-02-01T21:06:31.003575
  * 
  * Props: None
  * Slots: None
@@ -130,7 +130,7 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<div class="html-content-renderer" style="" v-html="sanitizedHtml"></div>
+<div class="html-content-renderer" style=""></div>
 `;
 
 // Story: Default

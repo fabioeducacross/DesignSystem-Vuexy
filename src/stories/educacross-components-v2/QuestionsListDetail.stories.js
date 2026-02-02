@@ -5,7 +5,7 @@
  * 
  * @component QuestionsListDetail
  * @source educacross-frontoffice\src\components\evaluations\questionsListDetail\QuestionsListDetail.vue
- * @generated 2026-02-01T20:35:35.958573
+ * @generated 2026-02-01T21:06:31.234549
  * 
  * Props: None
  * Slots: None
@@ -117,7 +117,6 @@ const componentStyles = `
 const baseTemplate = `
 <b-modal
     id="question-detail-modal"
-    ref="question-detail-modal"
     visible=""
     content-class="shadow"
     title="Detalhes da Avaliação"
@@ -126,7 +125,7 @@ const baseTemplate = `
     size="lg"
   >
     <b-skeleton-wrapper loading="">
-      <template #loading>
+      <div>
         <div>
           <b-row>
             <b-col cols="12" lg="4">

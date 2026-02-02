@@ -5,7 +5,7 @@
  * 
  * @component GameDetailsModal
  * @source educacross-frontoffice\src\components\modal\GameDetailsModal.vue
- * @generated 2026-02-01T20:35:35.847107
+ * @generated 2026-02-01T21:06:31.024537
  * 
  * Props: None
  * Slots: None
@@ -128,7 +128,6 @@ const componentStyles = `
 const baseTemplate = `
 <b-modal
     id="student-detail-modal"
-    ref="student-detail-modal"
     visible=""
     content-class="shadow "
     modal-class="d-flex flex-column justify-content-center"
@@ -138,7 +137,7 @@ const baseTemplate = `
     static
     size="xl"
   >
-    <template #modal-header>
+    <div>
       <button class="back">
         <span class="material-symbols-outlined" style="font-size: 16px">arrow_back</span>
       </button>

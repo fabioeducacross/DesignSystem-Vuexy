@@ -5,7 +5,7 @@
  * 
  * @component ListTableSelectLocal
  * @source educacross-frontoffice\src\components\table\ListTableSelectLocal.vue
- * @generated 2026-02-01T20:35:35.887132
+ * @generated 2026-02-01T21:06:31.090825
  * 
  * Props: None
  * Slots: header
@@ -124,7 +124,7 @@ const componentStyles = `
 const baseTemplate = `
 <div>
     <b-card no-body class="">
-      <slot name="header" />
+      <div class="slot-placeholder">
       <b-row class="p-2">
         <!-- Per Page -->
         <b-col
@@ -146,7 +146,7 @@ const baseTemplate = `
           <b-row align-h="end" align-v="center">
             <b-col style="max-width: 520px">
               <b-input-group>
-                <template #prepend>
+                <div>
                   <b-input-group-text
                     id="searchQueryIcon"
                   >

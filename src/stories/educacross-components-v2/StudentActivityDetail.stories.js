@@ -5,7 +5,7 @@
  * 
  * @component StudentActivityDetail
  * @source educacross-frontoffice\src\components\mission-plus\StudentActivityDetail.vue
- * @generated 2026-02-01T20:35:35.985523
+ * @generated 2026-02-01T21:06:31.304913
  * 
  * Props: None
  * Slots: None
@@ -76,7 +76,7 @@ const baseTemplate = `
 <div>
     <b-card class="shadow-none border mb-1">
       <b-media class="d-flex align-items-center">
-        <template #aside>
+        <div>
           <b-img-lazy src="" rounded v-bind="mainProps" />
 `;
 

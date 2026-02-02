@@ -5,7 +5,7 @@
  * 
  * @component PieChart
  * @source educacross-frontoffice\src\components\chart\PieChart.vue
- * @generated 2026-02-01T20:35:35.927866
+ * @generated 2026-02-01T21:06:31.178164
  * 
  * Props: None
  * Slots: None
@@ -103,7 +103,6 @@ const componentStyles = `
 const baseTemplate = `
 <div>
     <vue-apex-charts
-      ref="refChart"
       options=""
       series=""
       height=""

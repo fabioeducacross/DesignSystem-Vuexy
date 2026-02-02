@@ -5,7 +5,7 @@
  * 
  * @component ListTablePagination
  * @source educacross-frontoffice\src\components\table\ListTablePagination.vue
- * @generated 2026-02-01T20:35:35.879703
+ * @generated 2026-02-01T21:06:31.079101
  * 
  * Props: None
  * Slots: None
@@ -82,13 +82,6 @@ const baseTemplate = `
     >
       <span
         class="text-muted"
-        v-html="
-          $t('ShowingEntries', {
-            from: formatNumber(perPage * (value - 1) + (totalData ? 1 : 0)),
-            to: formatNumber(endItem),
-            of: formatNumber(totalData),
-          })
-        "
       >
       </span>
     </b-col>
@@ -109,7 +102,7 @@ const baseTemplate = `
         prev-class="prev-item"
         next-class="next-item"
       >
-        <template #prev-text>
+        <div>
           <feather-icon icon="ChevronLeftIcon" size="18" />
 `;
 

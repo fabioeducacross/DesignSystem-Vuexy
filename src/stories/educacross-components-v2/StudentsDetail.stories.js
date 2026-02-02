@@ -5,7 +5,7 @@
  * 
  * @component StudentsDetail
  * @source educacross-frontoffice\src\components\mission-plus\StudentsDetail.vue
- * @generated 2026-02-01T20:35:35.993500
+ * @generated 2026-02-01T21:06:31.318663
  * 
  * Props: None
  * Slots: None
@@ -76,7 +76,7 @@ const baseTemplate = `
 <div>
     <b-card class="shadow-none border mb-1">
       <b-media class="d-flex align-items-center">
-        <template #aside>
+        <div>
           <b-img-lazy src="" rounded v-bind="mainProps" />
 `;
 

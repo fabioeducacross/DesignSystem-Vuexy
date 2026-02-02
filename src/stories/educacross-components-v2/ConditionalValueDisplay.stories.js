@@ -5,7 +5,7 @@
  * 
  * @component ConditionalValueDisplay
  * @source educacross-frontoffice\src\components\badge\ConditionalValueDisplay.vue
- * @generated 2026-02-01T20:35:35.811589
+ * @generated 2026-02-01T21:06:30.950570
  * 
  * Props: None
  * Slots: empty
@@ -77,7 +77,7 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div class="flex-grow-1">
-    <template>
+    <div>
       <b-badge variant="light-primary" class="text-uppercase" pill>
         Não há dados para exibir
       </b-badge>
@@ -86,7 +86,6 @@ const baseTemplate = `
         <span
           class="text-center font-bold"
           class=""
-          v-html="Texto"
         ></span>
         <div class="slot-placeholder"></div>
       </div>

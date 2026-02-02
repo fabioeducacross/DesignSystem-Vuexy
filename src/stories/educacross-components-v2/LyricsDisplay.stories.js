@@ -5,7 +5,7 @@
  * 
  * @component LyricsDisplay
  * @source educacross-frontoffice\src\components\player\LyricsDisplay.vue
- * @generated 2026-02-01T20:35:35.889375
+ * @generated 2026-02-01T21:06:31.095093
  * 
  * Props: None
  * Slots: None
@@ -349,16 +349,13 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div
-    ref="container"
     class="lyrics-container"
     class=""
   >
     <div class="lyrics-wrapper" style="">
       <div
-        ref=""
         class="lyric-line"
         class=""
-        v-html="lyric.text"
       ></div>
 
       <!-- Extra padding for smooth scrolling -->

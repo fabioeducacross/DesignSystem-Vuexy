@@ -5,7 +5,7 @@
  * 
  * @component Template7
  * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template7.vue
- * @generated 2026-02-01T20:35:36.022518
+ * @generated 2026-02-01T21:06:31.360058
  * 
  * Props: None
  * Slots: None
@@ -76,13 +76,13 @@ const baseTemplate = `
 <b-row>
     <b-col cols="12">
       <b-card>
-        <QuestionContent content="" />
+        <div class="QuestionContent" content="" />
       </b-card>
       <b-card>
-        <QuestionContent content="" />
+        <div class="QuestionContent" content="" />
       </b-card>
       <b-card>
-        <QuestionContent content="" />
+        <div class="QuestionContent" content="" />
       </b-card>
     </b-col>
     <b-col cols="12" md="12">
@@ -92,7 +92,7 @@ const baseTemplate = `
           md="6"
           lg="3"
         >
-          <QuestionAlternative alternative="" />
+          <div class="QuestionAlternative" alternative="" />
         </b-col>
       </b-row>
     </b-col>

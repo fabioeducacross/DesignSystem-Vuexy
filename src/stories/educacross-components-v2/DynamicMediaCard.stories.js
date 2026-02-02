@@ -5,7 +5,7 @@
  * 
  * @component DynamicMediaCard
  * @source educacross-frontoffice\src\components\card\DynamicMediaCard.vue
- * @generated 2026-02-01T20:35:35.828173
+ * @generated 2026-02-01T21:06:30.983982
  * 
  * Props: None
  * Slots: None
@@ -97,7 +97,7 @@ const baseTemplate = `
     body-class="d-flex flex-column"
   >
     <b-skeleton-wrapper loading="">
-      <template #loading>
+      <div>
         <b-skeleton-img no-aspect height="150px" />
 `;
 

@@ -5,7 +5,7 @@
  * 
  * @component PerformancePDFList
  * @source educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDFList.vue
- * @generated 2026-02-01T20:35:35.925405
+ * @generated 2026-02-01T21:06:31.175164
  * 
  * Props: None
  * Slots: None
@@ -74,7 +74,7 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div>
-    <PerformancePdf
+    <div class="PerformancePdf"
       :event-data="eventData"
       student=""
     />

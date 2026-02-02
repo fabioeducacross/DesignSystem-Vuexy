@@ -5,7 +5,7 @@
  * 
  * @component ListTableAccess
  * @source educacross-frontoffice\src\components\table\ListTableAccess.vue
- * @generated 2026-02-01T20:35:35.874345
+ * @generated 2026-02-01T21:06:31.070781
  * 
  * Props: None
  * Slots: None
@@ -143,8 +143,6 @@ const baseTemplate = `
     <b-skeleton-table columns="" rows="" class="" />
     <b-table
       id="table-access"
-      ref="refTableAccess"
-      class=""
       class="position-relative"
       items=""
       fields=""
@@ -156,7 +154,7 @@ const baseTemplate = `
       responsive
       tbody-class="text-black"
     >
-      <template #head="item">
+      <div>
         <div
           v-b-tooltip.html
           title=""

@@ -5,7 +5,7 @@
  * 
  * @component MissionDetails
  * @source educacross-frontoffice\src\components\missions\MissionDetails.vue
- * @generated 2026-02-01T20:35:35.899781
+ * @generated 2026-02-01T21:06:31.122385
  * 
  * Props: None
  * Slots: None
@@ -87,7 +87,7 @@ const baseTemplate = `
         class=""
       >
         <div class="d-flex align-items-center gap-1">
-          <ActivityIcon type="" color="#fff" size="" />
+          <div class="ActivityIcon" type="" color="#fff" size="" />
           Sample Text
         </div>
       </b-badge>
@@ -128,7 +128,7 @@ const baseTemplate = `
       <b-col cols="12">
         <div class="d-flex justify-content-center">
           <div class="mission-visualization-container">
-            <MissionVisualization data="" />
+            <div class="MissionVisualization" data="" />
           </div>
         </div>
       </b-col>

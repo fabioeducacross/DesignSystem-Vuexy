@@ -5,7 +5,7 @@
  * 
  * @component SelectInfinityScroll
  * @source educacross-frontoffice\src\components\selects\SelectInfinityScroll.vue
- * @generated 2026-02-01T20:35:35.966960
+ * @generated 2026-02-01T21:06:31.247883
  * 
  * Props: None
  * Slots: None
@@ -91,7 +91,7 @@ const baseTemplate = `
     clearable=""
     value=""
   >
-    <template #spinner>
+    <div>
       <b-spinner small variant="secondary" />
 `;
 

@@ -5,7 +5,7 @@
  * 
  * @component RainbowProgressBar
  * @source educacross-frontoffice\src\components\progessBar\RainbowProgressBar.vue
- * @generated 2026-02-01T20:35:35.964612
+ * @generated 2026-02-01T21:06:31.245889
  * 
  * Props: None
  * Slots: legend

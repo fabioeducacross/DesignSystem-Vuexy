@@ -5,7 +5,7 @@
  * 
  * @component SelectLocaleNavbar
  * @source educacross-frontoffice\src\components\locale\SelectLocaleNavbar.vue
- * @generated 2026-02-01T20:35:35.973584
+ * @generated 2026-02-01T21:06:31.258843
  * 
  * Props: None
  * Slots: None

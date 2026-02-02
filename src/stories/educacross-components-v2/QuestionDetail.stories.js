@@ -5,7 +5,7 @@
  * 
  * @component QuestionDetail
  * @source educacross-frontoffice\src\components\evaluations\questionDetailV2\QuestionDetail.vue
- * @generated 2026-02-01T20:35:35.954192
+ * @generated 2026-02-01T21:06:31.227742
  * 
  * Props: None
  * Slots: None
@@ -105,7 +105,6 @@ h5 {
 const baseTemplate = `
 <b-modal
     id="question-detail-modal"
-    ref="question-detail-modal"
     visible=""
     content-class="shadow "
     modal-class="d-flex flex-column justify-content-center"
@@ -115,7 +114,7 @@ const baseTemplate = `
     size="lg"
   >
     <b-skeleton-wrapper loading="">
-      <template v-slot:loading>
+      <div>
         <div>
           <b-row>
             <b-col cols="12" lg="4">

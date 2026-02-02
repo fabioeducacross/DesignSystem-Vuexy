@@ -5,7 +5,7 @@
  * 
  * @component CopyLink
  * @source educacross-frontoffice\src\components\mission-plus\CopyLink.vue
- * @generated 2026-02-01T20:35:35.813592
+ * @generated 2026-02-01T21:06:30.956955
  * 
  * Props: None
  * Slots: None
@@ -100,7 +100,7 @@ const baseTemplate = `
       alt="belinha"
     />
     <h1 class="title">Copiar link da missão</h1>
-    <b-form-input ref="input" class="cursor-pointer custom-input" />
+    <b-form-input class="cursor-pointer custom-input" />
     <b-button class="custom-button" variant="primary" type="filled">
       Copiar link
     </b-button>

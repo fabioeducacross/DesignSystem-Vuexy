@@ -5,7 +5,7 @@
  * 
  * @component Player
  * @source educacross-frontoffice\src\components\player\Player.vue
- * @generated 2026-02-01T20:35:35.930861
+ * @generated 2026-02-01T21:06:31.181679
  * 
  * Props: None
  * Slots: None
@@ -492,7 +492,6 @@ const baseTemplate = `
         <div class="audio-controls-container">
           <!-- Audio element - always present to maintain playback -->
           <audio
-            ref="audioPlayer"
             src=""
             controls
             controlslist="nodownload"
@@ -512,7 +511,6 @@ const baseTemplate = `
 
         <!-- Hidden audio element for fullscreen mode -->
         <audio
-          ref="audioPlayer"
           src=""
           class="hidden-audio"
         />

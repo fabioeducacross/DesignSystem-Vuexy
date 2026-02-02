@@ -5,7 +5,7 @@
  * 
  * @component Tab
  * @source educacross-frontoffice\src\components\tab\Tab.vue
- * @generated 2026-02-01T20:35:35.997809
+ * @generated 2026-02-01T21:06:31.324231
  * 
  * Props: None
  * Slots: None
@@ -150,7 +150,7 @@ const baseTemplate = `
       class=""
     />
     <div>
-      <slot name="" />
+      <div class="slot-placeholder">
     </div>
   </div>
 `;

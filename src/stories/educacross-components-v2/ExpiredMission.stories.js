@@ -5,7 +5,7 @@
  * 
  * @component ExpiredMission
  * @source educacross-frontoffice\src\components\mission-plus\ExpiredMission.vue
- * @generated 2026-02-01T20:35:35.841770
+ * @generated 2026-02-01T21:06:31.013035
  * 
  * Props: None
  * Slots: None

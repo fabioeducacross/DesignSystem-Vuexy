@@ -5,7 +5,7 @@
  * 
  * @component SidebarProficiencyInfo
  * @source educacross-frontoffice\src\components\reading-meter\SidebarProficiencyInfo.vue
- * @generated 2026-02-01T20:35:35.981519
+ * @generated 2026-02-01T21:06:31.280199
  * 
  * Props: None
  * Slots: None
@@ -144,7 +144,7 @@ const baseTemplate = `
     right
     no-header
   >
-    <template #default="{ hide }">
+    <div>
       <div
         class="d-flex justify-content-between align-items-center content-sidebar-header px-2 py-1"
       >

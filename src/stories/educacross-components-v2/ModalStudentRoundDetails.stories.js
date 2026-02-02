@@ -5,7 +5,7 @@
  * 
  * @component ModalStudentRoundDetails
  * @source educacross-frontoffice\src\components\mission-plus\ModalStudentRoundDetails.vue
- * @generated 2026-02-01T20:35:35.909208
+ * @generated 2026-02-01T21:06:31.141751
  * 
  * Props: None
  * Slots: None
@@ -76,7 +76,6 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <b-modal
-    ref="Modal"
     visible=""
     hide-footer
     size="xl"
@@ -87,18 +86,18 @@ const baseTemplate = `
   >
     <div>
       <div class="d-flex flex-col gap-2 p-2">
-        <StudentGameDetail
+        <div class="StudentGameDetail"
           :student-round="studentGameDetail"
           :student-name="studentName"
         />
 
-        <StudentQuizDetail
+        <div class="StudentQuizDetail"
           :student-round="studentQuizDetail"
           :student-name="studentName"
         />
       </div>
       <div>
-        <StudentsDetail :student-round="studentsDetail" />
+        <div class="StudentsDetail" :student-round="studentsDetail" />
       </div>
     </div>
   </b-modal>

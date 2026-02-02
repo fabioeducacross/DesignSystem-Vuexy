@@ -5,7 +5,7 @@
  * 
  * @component PerformanceCell
  * @source educacross-frontoffice\src\components\cells\PerformanceCell.vue
- * @generated 2026-02-01T20:35:35.922414
+ * @generated 2026-02-01T21:06:31.165405
  * 
  * Props: None
  * Slots: None
@@ -73,7 +73,7 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<ConditionalValueDisplay value="" layout="">
+<div class="ConditionalValueDisplay" value="" layout="">
     <div class="d-flex align-items-center gap-1" style="width: fit-content">
       <span
         class="whitespace-no-wrap"
@@ -85,7 +85,7 @@ const baseTemplate = `
         Sample Text
       </b-badge>
     </div>
-  </ConditionalValueDisplay>
+  </div>
 `;
 
 // Story: Default

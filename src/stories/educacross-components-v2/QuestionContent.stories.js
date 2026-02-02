@@ -5,7 +5,7 @@
  * 
  * @component QuestionContent
  * @source educacross-frontoffice\src\components\evaluations\questionsListDetail\components\QuestionContent.vue
- * @generated 2026-02-01T20:35:35.950169
+ * @generated 2026-02-01T21:06:31.217442
  * 
  * Props: None
  * Slots: None
@@ -77,7 +77,7 @@ const componentStyles = `
 const baseTemplate = `
 <div>
     <div>
-      <EvaluationsHtmlContentRenderer content="" max-image-height="400px" />
+      <div class="EvaluationsHtmlContentRenderer" content="" max-image-height="400px" />
     </div>
     <div
       class="d-flex justify-content-center conntent-img"

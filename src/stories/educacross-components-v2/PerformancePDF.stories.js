@@ -5,7 +5,7 @@
  * 
  * @component PerformancePDF
  * @source educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDF.vue
- * @generated 2026-02-01T20:35:35.924401
+ * @generated 2026-02-01T21:06:31.171182
  * 
  * Props: None
  * Slots: None
@@ -358,7 +358,7 @@ const baseTemplate = `
       </div>
     </div>
     <!-- <div class="legend-container">
-      <LegendEnumPDF legends="" class="shadow-none" />
+      <div class="LegendEnumPDF" legends="" class="shadow-none" />
     </div> -->
     <div class="footer-container">
       <span class="font-12 font-semibold">@Sample Text</span>

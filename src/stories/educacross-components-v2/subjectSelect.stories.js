@@ -5,7 +5,7 @@
  * 
  * @component subjectSelect
  * @source educacross-frontoffice\src\components\subjects\subjectSelect.vue
- * @generated 2026-02-01T20:35:36.037528
+ * @generated 2026-02-01T21:06:31.385694
  * 
  * Props: None
  * Slots: None
@@ -75,9 +75,9 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<ValidationObserver ref="formRef">
+<div class="ValidationObserver">
     <b-form>
-      <ValidationProvider v-slot="{ errors }" name="subject" rules="required">
+      <div class="ValidationProvider" v-slot="{ errors }" name="subject" rules="required">
         <b-form-group label="">
           <b-form-select
             options=""
@@ -88,7 +88,7 @@ const baseTemplate = `
             Sample Text
           </small>
         </b-form-group>
-      </ValidationProvider>
+      </div>
 
       <b-button type="submit" variant="primary">
         Sample Text
@@ -97,7 +97,7 @@ const baseTemplate = `
         Sample Text
       </b-button>
     </b-form>
-  </ValidationObserver>
+  </div>
 `;
 
 // Story: Default

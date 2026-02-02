@@ -5,7 +5,7 @@
  * 
  * @component ProgressBarHorizontal
  * @source educacross-frontoffice\src\components\progessBar\ProgressBarHorizontal.vue
- * @generated 2026-02-01T20:35:35.933866
+ * @generated 2026-02-01T21:06:31.187146
  * 
  * Props: None
  * Slots: default, right-content

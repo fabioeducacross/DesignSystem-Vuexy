@@ -5,7 +5,7 @@
  * 
  * @component QuestionStatus
  * @source educacross-frontoffice\src\components\question\QuestionStatus.vue
- * @generated 2026-02-01T20:35:35.956192
+ * @generated 2026-02-01T21:06:31.229780
  * 
  * Props: None
  * Slots: None
@@ -91,7 +91,7 @@ const baseTemplate = `
         Sample Text
       </span>
     </div>
-    <div class="slot-placeholder"></div>
+    <div class="slot-placeholder">[Slot Content]</div>
   </div>
 `;
 

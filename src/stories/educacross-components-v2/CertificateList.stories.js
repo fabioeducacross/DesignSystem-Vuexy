@@ -5,7 +5,7 @@
  * 
  * @component CertificateList
  * @source educacross-frontoffice\src\components\PDFs\event\certificate\CertificateList.vue
- * @generated 2026-02-01T20:35:35.807492
+ * @generated 2026-02-01T21:06:30.938922
  * 
  * Props: None
  * Slots: None
@@ -74,7 +74,7 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div>
-    <Certificate
+    <div class="Certificate"
       data=""
       :school-logo="eventData.logoUrl"
     />

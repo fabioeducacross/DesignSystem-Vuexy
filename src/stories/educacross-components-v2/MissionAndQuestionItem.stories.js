@@ -5,7 +5,7 @@
  * 
  * @component MissionAndQuestionItem
  * @source educacross-frontoffice\src\components\mission-plus\MissionAndQuestionItem.vue
- * @generated 2026-02-01T20:35:35.894640
+ * @generated 2026-02-01T21:06:31.106771
  * 
  * Props: None
  * Slots: None
@@ -85,7 +85,7 @@ const baseTemplate = `
         class="flex-column flex-md-row align-items-center mb-1 mb-md-0 flex-grow-1"
         vertical-align="center"
       >
-        <template #aside>
+        <div>
           <div
             class="image-border rounded mb-1 mb-md-0"
             class=""

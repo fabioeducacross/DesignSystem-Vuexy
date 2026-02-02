@@ -5,7 +5,7 @@
  * 
  * @component ChangeProficiency
  * @source educacross-frontoffice\src\components\proficiency\ChangeProficiency.vue
- * @generated 2026-02-01T20:35:35.809580
+ * @generated 2026-02-01T21:06:30.945227
  * 
  * Props: None
  * Slots: None
@@ -111,7 +111,6 @@ const baseTemplate = `
     </b-alert>
 
     <b-modal
-      ref="refModalConfirm"
       centered
       static
       hide-header
@@ -131,7 +130,7 @@ const baseTemplate = `
             <p class="text-body font-weight-bold">Sample Text</p>
             <span class="material-symbols-outlined mt-auto">stat_minus_3</span>
             <br />
-            <BadgeStatus value="" enum="proficiency" pill="" />
+            <span class="badge">
           </div>
           <div
             class="h100 text-center flex-1 text-primary border-primary rounded px-2 py-1 d-flex flex-column"
@@ -140,11 +139,7 @@ const baseTemplate = `
             <p class="font-weight-bold">Sample Text</p>
             <span class="material-symbols-outlined mt-auto">stat_minus_3</span>
             <br />
-            <BadgeStatus
-              value=""
-              enum="proficiency"
-              pill=""
-            />
+            <span class="badge">
           </div>
         </div>
       </section>
@@ -166,7 +161,6 @@ const baseTemplate = `
     </b-modal>
 
     <b-modal
-      ref="refModalReason"
       centered
       static
       hide-header
@@ -197,7 +191,6 @@ const baseTemplate = `
       </section>
     </b-modal>
     <b-modal
-      ref="refModalReportInconsistency"
       centered
       static
       hide-header

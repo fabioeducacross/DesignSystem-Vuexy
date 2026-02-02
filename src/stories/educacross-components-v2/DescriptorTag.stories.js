@@ -5,7 +5,7 @@
  * 
  * @component DescriptorTag
  * @source educacross-frontoffice\src\components\descriptors\DescriptorTag.vue
- * @generated 2026-02-01T20:35:35.823260
+ * @generated 2026-02-01T21:06:30.976801
  * 
  * Props: None
  * Slots: None
@@ -90,7 +90,7 @@ const baseTemplate = `
       placement=""
       custom-class="test-z"
     >
-      <template #title>
+      <div>
         Sample Text
 `;
 

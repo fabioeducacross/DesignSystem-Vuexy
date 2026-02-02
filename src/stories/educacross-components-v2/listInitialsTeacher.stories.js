@@ -5,7 +5,7 @@
  * 
  * @component listInitialsTeacher
  * @source educacross-frontoffice\src\components\teacher\listInitialsTeacher.vue
- * @generated 2026-02-01T20:35:36.035531
+ * @generated 2026-02-01T21:06:31.381266
  * 
  * Props: None
  * Slots: None

@@ -5,7 +5,7 @@
  * 
  * @component FixedStickyFooter
  * @source educacross-frontoffice\src\components\FixedStickyFooter.vue
- * @generated 2026-02-01T20:35:35.844822
+ * @generated 2026-02-01T21:06:31.021532
  * 
  * Props: None
  * Slots: None
@@ -95,11 +95,10 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div
-    class=""
     class="footer position-fixed bottom-0 left-0 right-0 fixed-footer-wrapper"
   >
-    <HelpChat />
-    <div id="actions-footer" ref="footerRef">
+    <div class="HelpChat" />
+    <div id="actions-footer">
       <portal-target
         class=""
         name="fixed-sticky-footer-destination"

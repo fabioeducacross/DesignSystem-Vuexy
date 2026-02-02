@@ -5,7 +5,7 @@
  * 
  * @component subjects
  * @source educacross-frontoffice\src\components\subjects\subjects.vue
- * @generated 2026-02-01T20:35:36.038524
+ * @generated 2026-02-01T21:06:31.388731
  * 
  * Props: None
  * Slots: None

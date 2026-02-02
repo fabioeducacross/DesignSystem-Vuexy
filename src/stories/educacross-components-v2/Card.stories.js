@@ -5,7 +5,7 @@
  * 
  * @component Card
  * @source educacross-frontoffice\src\components\PDFs\Card.vue
- * @generated 2026-02-01T20:35:35.795487
+ * @generated 2026-02-01T21:06:30.918100
  * 
  * Props: None
  * Slots: None

@@ -5,7 +5,7 @@
  * 
  * @component SubjectBand
  * @source educacross-frontoffice\src\components\subjects\SubjectBand.vue
- * @generated 2026-02-01T20:35:35.995807
+ * @generated 2026-02-01T21:06:31.320952
  * 
  * Props: None
  * Slots: None

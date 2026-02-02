@@ -5,7 +5,7 @@
  * 
  * @component SelectLocale
  * @source educacross-frontoffice\src\components\locale\SelectLocale.vue
- * @generated 2026-02-01T20:35:35.971016
+ * @generated 2026-02-01T21:06:31.253332
  * 
  * Props: None
  * Slots: None
@@ -82,7 +82,7 @@ const baseTemplate = `
     toggle-class="d-flex align-items-center"
     right=""
   >
-    <template #button-content>
+    <div>
       <span class="d-flex align-items-center">
         <b-img src="" height="14px" width="22px" alt="" />
         <span class="ml-50" class="">

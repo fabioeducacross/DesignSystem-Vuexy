@@ -5,7 +5,7 @@
  * 
  * @component BarChart
  * @source educacross-frontoffice\src\components\chart\BarChart.vue
- * @generated 2026-02-01T20:35:35.789485
+ * @generated 2026-02-01T21:06:30.905803
  * 
  * Props: None
  * Slots: None
@@ -73,12 +73,7 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<VueApexCharts
-    ref="refChart"
-    options=""
-    series=""
-    height=""
-  />
+<div class="apex-chart-placeholder" style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500;">
 `;
 
 // Story: Default

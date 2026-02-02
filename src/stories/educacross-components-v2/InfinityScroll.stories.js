@@ -5,7 +5,7 @@
  * 
  * @component InfinityScroll
  * @source educacross-frontoffice\src\components\selects\InfinityScroll.vue
- * @generated 2026-02-01T20:35:35.856214
+ * @generated 2026-02-01T21:06:31.041669
  * 
  * Props: None
  * Slots: None
@@ -87,7 +87,7 @@ const baseTemplate = `
     placeholder=""
     searchable=""
   >
-    <template #no-options> Nenhuma opção foi encontrada.
+    <div> Nenhuma opção foi encontrada.
 `;
 
 // Story: Default

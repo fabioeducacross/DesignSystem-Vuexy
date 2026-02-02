@@ -5,7 +5,7 @@
  * 
  * @component ExpandableFilterArea
  * @source educacross-frontoffice\src\components\filter\ExpandableFilterArea.vue
- * @generated 2026-02-01T20:35:35.838773
+ * @generated 2026-02-01T21:06:31.009485
  * 
  * Props: None
  * Slots: footer
@@ -76,14 +76,13 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <section>
-    <transition
-    >
-      <div ref="content" class="expand-content">
-        <div class="slot-placeholder"></div>
+    <div>
+      <div class="expand-content">
+        <div class="slot-placeholder">[Slot Content]</div>
       </div>
-    </transition>
+    </div>
 
-    <slot name="footer" />
+    <div class="slot-placeholder">
 
     <div class="d-flex justify-content-center">
       <button

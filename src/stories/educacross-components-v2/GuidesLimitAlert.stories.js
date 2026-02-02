@@ -5,7 +5,7 @@
  * 
  * @component GuidesLimitAlert
  * @source educacross-frontoffice\src\components\missions\GuidesLimitAlert.vue
- * @generated 2026-02-01T20:35:35.849554
+ * @generated 2026-02-01T21:06:31.028644
  * 
  * Props: None
  * Slots: None

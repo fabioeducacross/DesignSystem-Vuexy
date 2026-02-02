@@ -5,7 +5,7 @@
  * 
  * @component ListTableRanking
  * @source educacross-frontoffice\src\components\table\ListTableRanking.vue
- * @generated 2026-02-01T20:35:35.880693
+ * @generated 2026-02-01T21:06:31.083848
  * 
  * Props: None
  * Slots: None
@@ -77,9 +77,8 @@ const componentStyles = `
 
 // Template base
 const baseTemplate = `
-<ListTableLocalSorting
+<div class="ListTableLocalSorting"
     id="RankingTable"
-    ref="listTableRef"
     :table-columns="tableColumns"
     :data-table="dataTable"
     :total-data="totalData"
@@ -89,7 +88,7 @@ const baseTemplate = `
     :export-to-excel="exportToExcel"
     :generating-excel="excelLoading"
   >
-    <template #head(stars)="item">
+    <div>
       <div class="d-flex flex-no-wrap align-items-center gap-1">
         <b-img
           src="@/assets/images/teacher-context/school-context/ranking-icons/Estrela.svg"

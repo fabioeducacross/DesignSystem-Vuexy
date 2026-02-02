@@ -5,7 +5,7 @@
  * 
  * @component TemplateDefault
  * @source educacross-frontoffice\src\components\evaluations\questionsListDetail\templates\TemplateDefault.vue
- * @generated 2026-02-01T20:35:36.030524
+ * @generated 2026-02-01T21:06:31.371948
  * 
  * Props: None
  * Slots: None
@@ -84,13 +84,13 @@ const baseTemplate = `
         border-variant="light-gray shadow-none"
       >
         <div class="mb-1">
-          <QuestionContent content="" />
+          <div class="QuestionContent" content="" />
         </div>
       </b-card>
     </b-col>
     <b-col cols="12">
       <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-2 mb-50">
-        <QuestionAlternative
+        <div class="QuestionAlternative"
           alternative=""
         />
       </div>

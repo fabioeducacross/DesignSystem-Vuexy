@@ -5,7 +5,7 @@
  * 
  * @component HelpChat
  * @source educacross-frontoffice\src\components\global\HelpChat.vue
- * @generated 2026-02-01T20:35:35.852980
+ * @generated 2026-02-01T21:06:31.035383
  * 
  * Props: None
  * Slots: None

@@ -5,7 +5,7 @@
  * 
  * @component CardsList
  * @source educacross-frontoffice\src\components\PDFs\CardsList.vue
- * @generated 2026-02-01T20:35:35.797492
+ * @generated 2026-02-01T21:06:30.921597
  * 
  * Props: None
  * Slots: None
@@ -102,7 +102,7 @@ const baseTemplate = `
       <span class="color-patternTwo">Sample Text</span>
     </div>
     <div class="cardsContainer">
-      <Card student="" />
+      <div class="Card" student="" />
     </div>
   </div>
 `;

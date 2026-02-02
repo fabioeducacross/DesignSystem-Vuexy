@@ -5,7 +5,7 @@
  * 
  * @component AppCollapseItem
  * @source educacross-frontoffice\src\components\app-collapse\AppCollapseItem.vue
- * @generated 2026-02-01T20:35:35.779456
+ * @generated 2026-02-01T21:06:30.894157
  * 
  * Props: None
  * Slots: header
@@ -98,14 +98,14 @@ const baseTemplate = `
       role="tab"
       data-toggle="collapse"
     >
-      <slot name="header">
+      <div class="slot-placeholder">
         <span class="lead collapse-title">Sample Text</span>
-      </slot>
+      </div>
     </b-card-header>
 
     <b-collapse id="" accordion="" role="tabpanel">
       <b-card-body class="">
-        <div class="slot-placeholder"></div>
+        <div class="slot-placeholder">[Slot Content]</div>
       </b-card-body>
     </b-collapse>
   </b-card>

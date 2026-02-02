@@ -5,7 +5,7 @@
  * 
  * @component SelectInfinityScrollModelo
  * @source educacross-frontoffice\src\components\selects\SelectInfinityScrollModelo.vue
- * @generated 2026-02-01T20:35:35.970003
+ * @generated 2026-02-01T21:06:31.250179
  * 
  * Props: None
  * Slots: None
@@ -80,8 +80,8 @@ const baseTemplate = `
     options=""
     filterable=""
   >
-    <template #list-footer>
-      <li ref="load" class="loader">Loading more options...</li>
+    <div>
+      <li class="loader">Loading more options...</li>
 `;
 
 // Story: Default

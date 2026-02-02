@@ -5,7 +5,7 @@
  * 
  * @component EFormCheck
  * @source educacross-frontoffice\src\components\form\EFormCheck.vue
- * @generated 2026-02-01T20:35:35.830176
+ * @generated 2026-02-01T21:06:30.990267
  * 
  * Props: None
  * Slots: None

@@ -5,7 +5,7 @@
  * 
  * @component ShareGuide
  * @source educacross-frontoffice\src\components\mission-plus\ShareGuide.vue
- * @generated 2026-02-01T20:35:35.975585
+ * @generated 2026-02-01T21:06:31.264086
  * 
  * Props: None
  * Slots: None

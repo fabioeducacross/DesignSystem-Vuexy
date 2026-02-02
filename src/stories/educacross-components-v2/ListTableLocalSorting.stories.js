@@ -5,7 +5,7 @@
  * 
  * @component ListTableLocalSorting
  * @source educacross-frontoffice\src\components\table\ListTableLocalSorting.vue
- * @generated 2026-02-01T20:35:35.877693
+ * @generated 2026-02-01T21:06:31.074841
  * 
  * Props: None
  * Slots: header
@@ -95,7 +95,7 @@ const componentStyles = `
 const baseTemplate = `
 <div>
     <b-card no-body class="">
-      <slot name="header" />
+      <div class="slot-placeholder">
       <div class="">
         <b-row>
           <!-- Per Page -->
@@ -120,7 +120,7 @@ const baseTemplate = `
               toggle-class="d-flex align-items-center gap-1 py-50"
               block
             >
-              <template #button-content>
+              <div>
                 <span class="material-symbols-outlined"> tune </span>
                 <span class="mr-auto">Classificar e ordenar</span>
 `;

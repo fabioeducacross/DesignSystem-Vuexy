@@ -5,7 +5,7 @@
  * 
  * @component VerticalDivider
  * @source educacross-frontoffice\src\components\divider\VerticalDivider.vue
- * @generated 2026-02-01T20:35:36.031526
+ * @generated 2026-02-01T21:06:31.372934
  * 
  * Props: None
  * Slots: None

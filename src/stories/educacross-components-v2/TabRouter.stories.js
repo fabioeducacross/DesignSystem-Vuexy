@@ -5,7 +5,7 @@
  * 
  * @component TabRouter
  * @source educacross-frontoffice\src\components\tab\TabRouter.vue
- * @generated 2026-02-01T20:35:36.003125
+ * @generated 2026-02-01T21:06:31.329702
  * 
  * Props: None
  * Slots: default
@@ -171,7 +171,7 @@ const baseTemplate = `
       </span>
     </div>
 
-    <slot name="default" />
+    <div class="slot-placeholder">
   </div>
 `;
 

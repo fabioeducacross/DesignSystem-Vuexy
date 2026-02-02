@@ -163,8 +163,109 @@ class VueParser:
 class TemplateConverter:
     """Converte template Vue para HTML estático"""
     
-    @staticmethod
-    def vue_to_html(template: str, sample_data: Dict = None) -> str:
+    # Mapeamento de componentes Vue para HTML equivalente
+    VUE_TO_HTML_MAP = {
+        # Bootstrap Vue
+        'BCard': 'div class="card"',
+        'BCardHeader': 'div class="card-header"',
+        'BCardBody': 'div class="card-body"',
+        'BCardFooter': 'div class="card-footer"',
+        'BCardTitle': 'h5 class="card-title"',
+        'BCardText': 'p class="card-text"',
+        'BButton': 'button class="btn btn-primary"',
+        'BBtn': 'button class="btn btn-primary"',
+        'BTable': 'table class="table"',
+        'BThead': 'thead',
+        'BTbody': 'tbody',
+        'BTr': 'tr',
+        'BTh': 'th',
+        'BTd': 'td',
+        'BFormInput': 'input class="form-control" type="text"',
+        'BFormSelect': 'select class="form-select"',
+        'BFormCheckbox': 'input class="form-check-input" type="checkbox"',
+        'BFormGroup': 'div class="mb-3"',
+        'BInputGroup': 'div class="input-group"',
+        'BInputGroupPrepend': 'span class="input-group-text"',
+        'BInputGroupAppend': 'span class="input-group-text"',
+        'BRow': 'div class="row"',
+        'BCol': 'div class="col"',
+        'BContainer': 'div class="container"',
+        'BModal': 'div class="modal" style="display: block; position: relative;"',
+        'BModalHeader': 'div class="modal-header"',
+        'BModalBody': 'div class="modal-body"',
+        'BModalFooter': 'div class="modal-footer"',
+        'BDropdown': 'div class="dropdown"',
+        'BDropdownItem': 'a class="dropdown-item" href="#"',
+        'BCollapse': 'div class="collapse show"',
+        'BAccordion': 'div class="accordion"',
+        'BAccordionItem': 'div class="accordion-item"',
+        'BBadge': 'span class="badge bg-primary"',
+        'BSpinner': 'div class="spinner-border spinner-border-sm"',
+        'BProgress': 'div class="progress"',
+        'BProgressBar': 'div class="progress-bar" style="width: 50%"',
+        'BAlert': 'div class="alert alert-primary"',
+        'BTooltip': 'span',
+        'BPopover': 'span',
+        'BNav': 'ul class="nav"',
+        'BNavItem': 'li class="nav-item"',
+        'BNavLink': 'a class="nav-link" href="#"',
+        'BTabs': 'div class="nav nav-tabs"',
+        'BTab': 'div class="tab-pane active"',
+        'BPagination': 'nav class="pagination"',
+        'BImg': 'img',
+        'BLink': 'a href="#"',
+        'BIcon': 'i class="ti ti-star"',
+        
+        # Vue Select
+        'VSelect': 'select class="form-select"',
+        'vSelect': 'select class="form-select"',
+        
+        # ApexCharts
+        'VueApexCharts': 'div class="apex-chart-placeholder" style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500;"',
+        'apexchart': 'div class="apex-chart-placeholder" style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500;"',
+        
+        # Router
+        'RouterLink': 'a href="#"',
+        'router-link': 'a href="#"',
+        'RouterView': 'div class="router-view"',
+        
+        # Transitions
+        'Transition': 'div',
+        'TransitionGroup': 'div',
+        'transition': 'div',
+        
+        # Teleport
+        'Teleport': 'div',
+        
+        # Keep Alive
+        'KeepAlive': 'div',
+        
+        # Suspense
+        'Suspense': 'div',
+        
+        # Fragment
+        'template': 'div',
+        
+        # Custom Educacross components
+        'ESelect': 'select class="form-select e-select"',
+        'EFormCheck': 'div class="form-check"',
+        'MediaCard': 'div class="card media-card"',
+        'LegendCard': 'div class="card legend-card"',
+        'BadgeStatus': 'span class="badge"',
+        'ProgressBarHorizontal': 'div class="progress"',
+        'AppCollapse': 'div class="accordion"',
+        'AppCollapseItem': 'div class="accordion-item"',
+        'ListTable': 'div class="table-responsive"',
+        'TabCards': 'div class="tab-cards"',
+        'Divider': 'hr class="divider"',
+        'VerticalDivider': 'div class="vr"',
+        
+        # Icons
+        'Icon': 'i class="ti ti-star"',
+    }
+    
+    @classmethod
+    def vue_to_html(cls, template: str, sample_data: Dict = None) -> str:
         """Converte sintaxe Vue para HTML estático"""
         html = template
         
@@ -181,7 +282,7 @@ class TemplateConverter:
         # Remove v-model
         html = re.sub(r'\s+v-model="[^"]*"', '', html)
         
-        # Converte :class para class
+        # Converte :class para class (preserva valor se possível)
         html = re.sub(r':class="[^"]*"', 'class=""', html)
         
         # Converte :style para style
@@ -197,28 +298,70 @@ class TemplateConverter:
         html = re.sub(r'\s+@[\w.-]+="[^"]*"', '', html)
         html = re.sub(r'\s+v-on:[\w.-]+="[^"]*"', '', html)
         
-        # Remove slots (substitui por placeholder)
-        html = re.sub(r'<slot\s*/>', '<div class="slot-placeholder"></div>', html)
-        html = re.sub(r'<slot[^>]*>[^<]*</slot>', '<div class="slot-placeholder"></div>', html)
+        # Remove v-html e v-text
+        html = re.sub(r'\s+v-html="[^"]*"', '', html)
+        html = re.sub(r'\s+v-text="[^"]*"', '', html)
         
-        # IMPORTANTE: Remove TODA a interpolação Vue {{ ... }} (incluindo expressões complexas)
-        # Isso evita erros de sintaxe no JavaScript do Storybook
+        # Remove ref
+        html = re.sub(r'\s+ref="[^"]*"', '', html)
+        
+        # CONVERTE COMPONENTES VUE PARA HTML
+        for vue_comp, html_equiv in cls.VUE_TO_HTML_MAP.items():
+            # Opening tag with attributes
+            html = re.sub(
+                rf'<{vue_comp}(\s[^>]*)?>',
+                f'<{html_equiv}>',
+                html,
+                flags=re.IGNORECASE
+            )
+            # Self-closing tag
+            html = re.sub(
+                rf'<{vue_comp}(\s[^>]*)?\s*/>',
+                f'<{html_equiv}></{html_equiv.split()[0]}>',
+                html,
+                flags=re.IGNORECASE
+            )
+            # Closing tag
+            html = re.sub(
+                rf'</{vue_comp}>',
+                f'</{html_equiv.split()[0]}>',
+                html,
+                flags=re.IGNORECASE
+            )
+        
+        # Converte componentes desconhecidos para div
+        # Padrão: PascalCase ou kebab-case custom components
+        html = re.sub(r'<([A-Z][a-zA-Z0-9]+)(\s[^>]*)?>(?!</)', r'<div class="\1"\2>', html)
+        html = re.sub(r'<([A-Z][a-zA-Z0-9]+)\s*/>', r'<div class="\1"></div>', html)
+        html = re.sub(r'</([A-Z][a-zA-Z0-9]+)>', r'</div>', html)
+        
+        # Remove slots (substitui por placeholder)
+        html = re.sub(r'<slot\s*/>', '<div class="slot-placeholder">[Slot Content]</div>', html)
+        html = re.sub(r'<slot[^>]*>([^<]*)</slot>', r'<div class="slot-placeholder">\1</div>', html)
+        html = re.sub(r'<slot[^>]*>', '<div class="slot-placeholder">', html)
+        html = re.sub(r'</slot>', '</div>', html)
+        
+        # IMPORTANTE: Remove TODA a interpolação Vue {{ ... }}
         html = re.sub(r'\{\{[^}]*\}\}', 'Sample Text', html)
         
-        # Remove template literals JavaScript dentro de atributos
+        # Remove template literals JavaScript
         html = re.sub(r'`[^`]*\$\{[^}]*\}[^`]*`', '""', html)
-        
-        # Remove componentes Vue personalizados (substitui por div)
-        # Mantém classes e outros atributos
         
         # Remove referências a $t (i18n)
         html = re.sub(r"\$t\(['\"][^'\"]+['\"]\)", 'Texto', html)
         
-        # Escapa backticks restantes para evitar conflito com template literals JS
+        # Escapa backticks
         html = html.replace('`', "'")
         
         # Remove expressões ternárias órfãs
         html = re.sub(r'\?\s*[\'"][^\']*[\'"]\s*:\s*[\'"][^\']*[\'"]', '', html)
+        
+        # Limpa atributos vazios duplicados
+        html = re.sub(r'class=""\s+class="', 'class="', html)
+        html = re.sub(r'style=""\s+style="', 'style="', html)
+        
+        # Remove linhas vazias excessivas
+        html = re.sub(r'\n\s*\n\s*\n', '\n\n', html)
         
         return html
     
@@ -239,8 +382,15 @@ class TemplateConverter:
         # Remove @include (mixins)
         css = re.sub(r'@include\s+[\w-]+\([^)]*\)\s*;?', '', css)
         
-        # Flatten nested selectors (simplificado)
-        # Nota: Para SCSS complexo, seria melhor usar sass compiler
+        # Remove @function e @mixin definitions
+        css = re.sub(r'@function\s+[\w-]+\([^)]*\)\s*\{[^}]*\}', '', css)
+        css = re.sub(r'@mixin\s+[\w-]+\([^)]*\)\s*\{[^}]*\}', '', css)
+        
+        # Remove @if, @else, @for, @each, @while
+        css = re.sub(r'@if\s+[^{]+\{[^}]*\}', '', css)
+        css = re.sub(r'@else\s*\{[^}]*\}', '', css)
+        css = re.sub(r'@for\s+[^{]+\{[^}]*\}', '', css)
+        css = re.sub(r'@each\s+[^{]+\{[^}]*\}', '', css)
         
         return css
 

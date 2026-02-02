@@ -5,7 +5,7 @@
  * 
  * @component BackgroundSpace
  * @source educacross-frontoffice\src\components\deeplink\BackgroundSpace.vue
- * @generated 2026-02-01T20:35:35.784485
+ * @generated 2026-02-01T21:06:30.900802
  * 
  * Props: None
  * Slots: None
@@ -93,7 +93,7 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <div class="flex justify-center items-center backgroundControl">
-    <div class="slot-placeholder"></div>
+    <div class="slot-placeholder">[Slot Content]</div>
   </div>
 `;
 

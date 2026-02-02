@@ -5,7 +5,7 @@
  * 
  * @component ModalStudentActivityDetails
  * @source educacross-frontoffice\src\components\mission-plus\ModalStudentActivityDetails.vue
- * @generated 2026-02-01T20:35:35.906778
+ * @generated 2026-02-01T21:06:31.137359
  * 
  * Props: None
  * Slots: None
@@ -76,7 +76,6 @@ const componentStyles = `
 // Template base
 const baseTemplate = `
 <b-modal
-    ref="Modal"
     title=""
     visible=""
     hide-footer
@@ -88,13 +87,13 @@ const baseTemplate = `
   >
     <div>
       <div class="d-flex flex-col gap-2 p-2">
-        <StudentActivityDetail
+        <div class="StudentActivityDetail"
           :student-round="studentActivityDetail"
           :student-name="studentName"
         />
       </div>
       <div>
-        <StudentsDetail :student-round="studentsData" />
+        <div class="StudentsDetail" :student-round="studentsData" />
       </div>
     </div>
   </b-modal>

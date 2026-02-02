@@ -5,7 +5,7 @@
  * 
  * @component MissionVisualization
  * @source educacross-frontoffice\src\components\missions\MissionVisualization.vue
- * @generated 2026-02-01T20:35:35.904777
+ * @generated 2026-02-01T21:06:31.134865
  * 
  * Props: None
  * Slots: None
@@ -68,17 +68,7 @@ const componentStyles = `
 }
 
 
-@mixin deviceContainer(inherit, inherit, inherit) {
-  position: relative;
-  top: 0;
-  left: 0;
 
-  img:first-child {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
 
   img:last-child {
     position: absolute;

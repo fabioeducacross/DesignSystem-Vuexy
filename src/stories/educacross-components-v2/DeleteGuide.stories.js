@@ -5,7 +5,7 @@
  * 
  * @component DeleteGuide
  * @source educacross-frontoffice\src\components\mission-plus\DeleteGuide.vue
- * @generated 2026-02-01T20:35:35.821255
+ * @generated 2026-02-01T21:06:30.970805
  * 
  * Props: None
  * Slots: None

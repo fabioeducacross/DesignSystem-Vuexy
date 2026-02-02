@@ -5,7 +5,7 @@
  * 
  * @component CancelMission
  * @source educacross-frontoffice\src\components\mission-plus\CancelMission.vue
- * @generated 2026-02-01T20:35:35.792487
+ * @generated 2026-02-01T21:06:30.913236
  * 
  * Props: None
  * Slots: None

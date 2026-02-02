@@ -5,7 +5,7 @@
  * 
  * @component RadialBarChart
  * @source educacross-frontoffice\src\components\chart\RadialBarChart.vue
- * @generated 2026-02-01T20:35:35.962625
+ * @generated 2026-02-01T21:06:31.242894
  * 
  * Props: None
  * Slots: None

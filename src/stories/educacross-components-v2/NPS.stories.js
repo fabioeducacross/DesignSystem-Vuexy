@@ -5,7 +5,7 @@
  * 
  * @component NPS
  * @source educacross-frontoffice\src\components\NPS\NPS.vue
- * @generated 2026-02-01T20:35:35.914601
+ * @generated 2026-02-01T21:06:31.153670
  * 
  * Props: None
  * Slots: None
@@ -228,7 +228,6 @@ const baseTemplate = `
         <b-col cols="12" md="12" lg="4" xl="3">
           <b-button
             id="button-loading-dontShowAgainNPS"
-            ref="loadableButtonDontShowAgainNPS"
             variant="outline-primary"
             type="border"
             class="w-100 mb-1 mb-sm-1"
@@ -242,7 +241,6 @@ const baseTemplate = `
         </b-col>
         <b-col cols="12" md="12" lg="4" xl="3">
           <b-button
-            ref="loadableButtonSubmitNPsS"
             variant="primary"
             type="filled"
             class="w-100"
