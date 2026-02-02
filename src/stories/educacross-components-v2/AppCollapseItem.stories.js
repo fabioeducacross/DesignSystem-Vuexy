@@ -908,6 +908,5 @@ export const Interactive = {
         </div>
       </div>
     `;
-  }
-
-
+  },
+};
