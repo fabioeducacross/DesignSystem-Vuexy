@@ -1,94 +1,30 @@
 /**
- * VerticalDivider - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component VerticalDivider
- * @source educacross-frontoffice\src\components\divider\VerticalDivider.vue
- * @generated 2026-02-01T21:06:31.372934
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * VerticalDivider - Vertical Separator Line
  */
 
 export default {
-  title: 'Educacross V2/VerticalDivider',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## VerticalDivider
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Navigation/VerticalDivider',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.vertical-divider{display:inline-block;width:var(--thickness,1px);height:var(--height,24px);background:var(--color,#D8D6DE);margin:0 var(--spacing,16px);vertical-align:middle}.demo-container{display:flex;align-items:center;padding:16px;background:#fff;border:1px solid #F3F2F7;border-radius:6px}.demo-item{font-size:14px;color:#6E6B7B;display:flex;align-items:center;gap:8px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="demo-container"><span class="demo-item">Item 1</span><div class="vertical-divider"></div><span class="demo-item">Item 2</span><div class="vertical-divider"></div><span class="demo-item">Item 3</span></div>`};
 
+export const AllHeights={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px"><div class="demo-container"><span class="demo-item">Small</span><div class="vertical-divider" style="--height:16px"></div><span class="demo-item">16px</span></div><div class="demo-container"><span class="demo-item">Medium</span><div class="vertical-divider" style="--height:24px"></div><span class="demo-item">24px (default)</span></div><div class="demo-container"><span class="demo-item">Large</span><div class="vertical-divider" style="--height:32px"></div><span class="demo-item">32px</span></div><div class="demo-container"><span class="demo-item">Full</span><div class="vertical-divider" style="--height:48px"></div><span class="demo-item">48px</span></div></div>`};
 
-.vertical-divider {
-  &::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 100%;
-  }
-}
-`;
+export const AllColors={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px"><div class="demo-container"><span class="demo-item">Default</span><div class="vertical-divider" style="--color:#D8D6DE"></div><span class="demo-item">#D8D6DE</span></div><div class="demo-container"><span class="demo-item">Primary</span><div class="vertical-divider" style="--color:#6E63E8"></div><span class="demo-item">#6E63E8</span></div><div class="demo-container"><span class="demo-item">Success</span><div class="vertical-divider" style="--color:#28C76F"></div><span class="demo-item">#28C76F</span></div><div class="demo-container"><span class="demo-item">Light</span><div class="vertical-divider" style="--color:#F3F2F7"></div><span class="demo-item">#F3F2F7</span></div></div>`};
 
-// Template base
-const baseTemplate = `
-<div class=""></div>
-`;
+export const NavbarActions={render:()=>`${styles}<style>.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:#fff;border-bottom:1px solid #D8D6DE}.navbar-actions{display:flex;align-items:center}.navbar-btn{padding:8px;border:none;background:transparent;color:#6E6B7B;cursor:pointer;border-radius:6px;transition:all .2s}.navbar-btn:hover{background:#F8F8F8;color:#6E63E8}.navbar-btn i{font-size:20px}.navbar-logo{font-size:18px;font-weight:700;color:#6E63E8}</style><nav class="navbar"><div class="navbar-logo"><i class="bi bi-mortarboard-fill" style="margin-right:8px"></i>Educacross</div><div class="navbar-actions"><button class="navbar-btn"><i class="bi bi-search"></i></button><div class="vertical-divider"></div><button class="navbar-btn"><i class="bi bi-bell"></i></button><div class="vertical-divider"></div><button class="navbar-btn"><i class="bi bi-gear"></i></button><div class="vertical-divider"></div><div style="width:36px;height:36px;border-radius:50%;background:#6E63E8;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px">MS</div></div></nav><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Separação de ações na navbar.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const Breadcrumbs={render:()=>`${styles}<style>.breadcrumb{display:flex;align-items:center;padding:12px 0;font-size:14px}.breadcrumb-item{color:#6E6B7B;text-decoration:none;transition:color .2s}.breadcrumb-item:hover{color:#6E63E8}.breadcrumb-item.active{color:#5E5873;font-weight:500}</style><nav class="breadcrumb"><a href="#" class="breadcrumb-item">Dashboard</a><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><a href="#" class="breadcrumb-item">Missões</a><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><a href="#" class="breadcrumb-item">Matemática</a><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><span class="breadcrumb-item active">Frações Básicas</span></nav><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Breadcrumb com separadores verticais.</p>`};
 
+export const Metadata={render:()=>`${styles}<style>.metadata{display:flex;align-items:center;gap:0;font-size:13px;color:#6E6B7B}.metadata-item{display:flex;align-items:center;gap:6px}.metadata-item i{font-size:16px;color:#6E63E8}</style><div class="metadata"><div class="metadata-item"><i class="bi bi-person"></i><span>Mariana Silva</span></div><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><div class="metadata-item"><i class="bi bi-calendar"></i><span>15/01/2024</span></div><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><div class="metadata-item"><i class="bi bi-people"></i><span>28 alunos</span></div><div class="vertical-divider" style="--height:16px;--spacing:12px"></div><div class="metadata-item"><i class="bi bi-book"></i><span>Matemática</span></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Metadados de missão separados.</p>`};
 
+export const CardFooterActions={render:()=>`${styles}<style>.card-demo{background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:400px}.card-title{margin:0 0 8px;font-size:16px;font-weight:600;color:#5E5873}.card-text{margin:0 0 16px;font-size:14px;color:#6E6B7B}.card-actions{display:flex;align-items:center;justify-content:flex-end;padding-top:16px;border-top:1px solid #F3F2F7}.card-btn{padding:8px 16px;border:none;background:transparent;color:#6E63E8;font-weight:500;cursor:pointer;border-radius:6px;transition:all .2s}.card-btn:hover{background:#F8F8F8}.card-btn.primary{background:#6E63E8;color:#fff}.card-btn.primary:hover{background:#5952D4}</style><div class="card-demo"><h3 class="card-title">Frações Básicas</h3><p class="card-text">Missão de Matemática para 5º A com 12 questões.</p><div class="card-actions"><button class="card-btn">Cancelar</button><div class="vertical-divider" style="--height:20px;--spacing:8px"></div><button class="card-btn">Editar</button><div class="vertical-divider" style="--height:20px;--spacing:8px"></div><button class="card-btn primary">Aplicar</button></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Separação de botões no footer.</p>`};
+
+export const StatisticsRow={render:()=>`${styles}<style>.stats-row{display:flex;align-items:center;padding:20px;background:#fff;border:1px solid #D8D6DE;border-radius:8px}.stat{flex:1;text-align:center}.stat-value{margin:0 0 4px;font-size:28px;font-weight:700;color:#5E5873}.stat-label{margin:0;font-size:13px;color:#6E6B7B}.stat-icon{font-size:32px;margin-bottom:8px}.stat.primary .stat-icon{color:#6E63E8}.stat.success .stat-icon{color:#28C76F}.stat.warning .stat-icon{color:#FF9F43}.stat.info .stat-icon{color:#00CFE8}</style><div class="stats-row"><div class="stat primary"><div class="stat-icon"><i class="bi bi-people-fill"></i></div><h3 class="stat-value">156</h3><p class="stat-label">Alunos</p></div><div class="vertical-divider" style="--height:64px"></div><div class="stat success"><div class="stat-icon"><i class="bi bi-book-fill"></i></div><h3 class="stat-value">45</h3><p class="stat-label">Missões</p></div><div class="vertical-divider" style="--height:64px"></div><div class="stat info"><div class="stat-icon"><i class="bi bi-check-circle-fill"></i></div><h3 class="stat-value">87%</h3><p class="stat-label">Taxa Conclusão</p></div><div class="vertical-divider" style="--height:64px"></div><div class="stat warning"><div class="stat-icon"><i class="bi bi-trophy-fill"></i></div><h3 class="stat-value">8.2</h3><p class="stat-label">Média Geral</p></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Dashboard com estatísticas separadas.</p>`};
+
+export const Responsive={render:()=>`${styles}<style>@media (max-width:768px){.responsive-divider{display:none}.responsive-container{flex-direction:column!important;align-items:flex-start!important;gap:8px}}</style><div class="demo-container responsive-container"><span class="demo-item"><i class="bi bi-calendar"></i> 15/01/2024</span><div class="vertical-divider responsive-divider"></div><span class="demo-item"><i class="bi bi-clock"></i> 14:30</span><div class="vertical-divider responsive-divider"></div><span class="demo-item"><i class="bi bi-person"></i> Mariana Silva</span></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Responsivo:</strong> Em telas pequenas, dividers somem.</p>`};

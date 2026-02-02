@@ -1,186 +1,28 @@
 /**
- * TabRouter - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component TabRouter
- * @source educacross-frontoffice\src\components\tab\TabRouter.vue
- * @generated 2026-02-01T21:06:31.329702
- * 
- * Props: None
- * Slots: default
- * Emits: None
+ * TabRouter - Tabs with Vue Router Integration
  */
 
 export default {
-  title: 'Educacross V2/TabRouter',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## TabRouter
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- **default**
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Navigation/TabRouter',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.tab-router{border-bottom:1px solid #E8E8E8}.tab-router-list{display:flex;gap:4px;list-style:none;margin:0;padding:0}.tab-router-item{position:relative}.tab-router-link{display:flex;align-items:center;gap:8px;padding:14px 20px;color:#6E6B7B;text-decoration:none;font-size:15px;font-weight:500;border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}.tab-router-link:hover{color:#6E63E8;background:#F8F8F8}.tab-router-link.active{color:#6E63E8;border-bottom-color:#6E63E8}.tab-router-link i{font-size:18px}.tab-badge{background:#EA5455;color:#fff;font-size:11px;font-weight:600;padding:2px 6px;border-radius:10px;min-width:18px;text-align:center}.tab-router.pills .tab-router-link{border-radius:6px;border-bottom:none}.tab-router.pills .tab-router-link.active{background:#6E63E8;color:#fff}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+const routes=[{path:'/dashboard',label:'Dashboard',icon:'bi-speedometer2'},{path:'/missions',label:'Missões',icon:'bi-book',badge:5},{path:'/students',label:'Alunos',icon:'bi-people'},{path:'/reports',label:'Relatórios',icon:'bi-bar-chart'}];
 
+export const Default={render:()=>`${styles}<nav class="tab-router"><ul class="tab-router-list">${routes.map((r,i)=>`<li class="tab-router-item"><a href="#${r.path}" class="tab-router-link ${i===0?'active':''}" onclick="event.preventDefault()"><i class="bi ${r.icon}"></i><span>${r.label}</span>${r.badge?`<span class="tab-badge">${r.badge}</span>`:''}</a></li>`).join('')}</ul></nav><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Navegação principal do dashboard do professor.</p>`};
 
+export const WithIcons={render:()=>`${styles}<nav class="tab-router"><ul class="tab-router-list"><li class="tab-router-item"><a href="#" class="tab-router-link active"><i class="bi bi-grid"></i><span>Visão Geral</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-graph-up"></i><span>Desempenho</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-list-check"></i><span>Atividades</span><span class="tab-badge">12</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-clock-history"></i><span>Histórico</span></a></li></ul></nav>`};
 
+export const PillsVariant={render:()=>`${styles}<nav class="tab-router pills"><ul class="tab-router-list">${routes.map((r,i)=>`<li class="tab-router-item"><a href="#" class="tab-router-link ${i===0?'active':''}"><i class="bi ${r.icon}"></i><span>${r.label}</span></a></li>`).join('')}</ul></nav><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Variante:</strong> Pills com background colorido.</p>`};
 
-.tab-line {
-  border: 1px solid inherit;
+export const PerfilDoAluno={render:()=>`${styles}<div style="max-width:800px"><div style="margin-bottom:20px;padding:20px;background:#fff;border:1px solid #D8D6DE;border-radius:8px 8px 0 0"><div style="display:flex;align-items:center;gap:16px"><div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-weight:700">JS</div><div><h2 style="margin:0 0 4px;font-size:20px;font-weight:600;color:#5E5873">João Silva</h2><p style="margin:0;font-size:14px;color:#6E6B7B">5º A • Matrícula: 2024001234 • <span style="color:#28C76F">●</span> Ativo</p></div></div></div><nav class="tab-router"><ul class="tab-router-list"><li class="tab-router-item"><a href="#" class="tab-router-link active"><i class="bi bi-person"></i><span>Resumo</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-book"></i><span>Missões</span><span class="tab-badge">8</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-graph-up"></i><span>Desempenho</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-trophy"></i><span>Conquistas</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-clock-history"></i><span>Histórico</span></a></li></ul></nav></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Perfil do aluno com 5 seções navegáveis.</p>`};
 
-  height: 1px;
-  width: 100%;
+export const RelatorioMissao={render:()=>`${styles}<div style="max-width:900px"><div style="margin-bottom:16px"><h2 style="margin:0 0 4px;font-size:20px;font-weight:600;color:#5E5873">Missão: Frações Básicas</h2><p style="margin:0;font-size:14px;color:#6E6B7B">5º A • Matemática • Aplicada em 15/01/2024</p></div><nav class="tab-router"><ul class="tab-router-list"><li class="tab-router-item"><a href="#" class="tab-router-link active"><i class="bi bi-grid"></i><span>Visão Geral</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-people"></i><span>Alunos</span><span class="tab-badge" style="background:#28C76F">28</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-list-ol"></i><span>Questões</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-file-earmark-text"></i><span>Evidências</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-download"></i><span>Exportar</span></a></li></ul></nav></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Relatório de missão com navegação.</p>`};
 
-  margin-bottom: 1rem;
-}
-.tabs-row {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: thin;
+export const DashboardCoordenador={render:()=>`${styles}<div style="max-width:1200px"><div style="margin-bottom:20px"><h1 style="margin:0 0 4px;font-size:24px;font-weight:700;color:#5E5873">Painel do Coordenador</h1><p style="margin:0;font-size:14px;color:#6E6B7B">João Carlos • Escola Municipal Vista Alegre • 24 turmas, 32 professores</p></div><nav class="tab-router"><ul class="tab-router-list"><li class="tab-router-item"><a href="#" class="tab-router-link active"><i class="bi bi-speedometer2"></i><span>Dashboard</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-grid-3x3"></i><span>Turmas</span><span class="tab-badge" style="background:#6E63E8">24</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-person-badge"></i><span>Professores</span><span class="tab-badge" style="background:#6E63E8">32</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-graph-up-arrow"></i><span>Desempenho</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-file-bar-graph"></i><span>Relatórios</span></a></li><li class="tab-router-item"><a href="#" class="tab-router-link"><i class="bi bi-gear"></i><span>Configurações</span></a></li></ul></nav></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Dashboard coordenador - 6 seções principais.</p>`};
 
-  .tab-link {
-    display: inline-block;
-    position: relative;
-
-    padding: 14px 24px 10px 24px;
-
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.14);
-
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-    background: inherit;
-
-    transform: translateX(calc(var(--index) * var(--offset)));
-
-    white-space: nowrap;
-    .tab-icon {
-      font-size: 18px;
-    }
-
-    &:hover {
-      color: inherit !important;
-      background-color: inherit;
-    }
-
-    &.active {
-      background: inherit;
-      color: inherit;
-      //font-weight: 700;
-
-      z-index: 1;
-    }
-  }
-}
-`;
-
-// Template base
-const baseTemplate = `
-<div class="min-vh-100">
-    <div
-      class="d-flex flex-column-reverse flex-md-row justify-content-center justify-content-md-between align-items-md-baseline flex-nowwrap"
-    >
-      <div
-        class="tabs-row d-md-flex"
-        class=""
-      >
-        <a
-          class="tab-link d-flex align-items-center gap-1"
-          style=""
-          class=""
-        >
-          <span class="material-symbols-outlined tab-icon">
-            Sample Text
-          </span>
-          Sample Text
-        </a>
-      </div>
-      <div class="d-lg-flex">
-        <div class="d-none d-lg-block mr-1">
-          <span>
-            Atualizado em: Sample Text às
-            Sample Text
-          </span>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-center justify-content-md-end mb-50 mb-md-0 gap-1 tab-title text-primary font-bold text-uppercase"
-        >
-          <span class="material-symbols-outlined">
-            Sample Text
-          </span>
-          Sample Text
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="tab-line"
-      class=""
-    />
-
-    <div class="d-block d-lg-none mb-1">
-      <span>
-        Atualizado em: Sample Text às
-        Sample Text
-      </span>
-    </div>
-
-    <div class="slot-placeholder">
-  </div>
-`;
-
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
-
-
+export const KeyboardNavigation={render:()=>`${styles}<style>.tab-router-link:focus{outline:2px solid #6E63E8;outline-offset:-2px}</style><nav class="tab-router"><ul class="tab-router-list" role="tablist">${routes.map((r,i)=>`<li class="tab-router-item" role="presentation"><a href="#" class="tab-router-link ${i===0?'active':''}" role="tab" tabindex="${i===0?'0':'-1'}" aria-selected="${i===0}"><i class="bi ${r.icon}"></i><span>${r.label}</span></a></li>`).join('')}</ul></nav><div style="margin-top:20px;padding:16px;background:#F8F8F8;border-radius:8px;font-size:13px;color:#6E6B7B"><strong>WCAG 2.1 AA:</strong><ul style="margin:8px 0 0;padding-left:20px"><li><kbd>←</kbd> <kbd>→</kbd> - Navegar entre tabs<li><kbd>Home</kbd> / <kbd>End</kbd><li><strong>role="tablist"</strong> + <strong>role="tab"</strong><li><strong>aria-selected</strong> indica tab ativa</ul></div>`};

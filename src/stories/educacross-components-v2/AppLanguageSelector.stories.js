@@ -1,108 +1,28 @@
 /**
- * AppLanguageSelector - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component AppLanguageSelector
- * @source educacross-frontoffice\src\components\app-language-selector\AppLanguageSelector.vue
- * @generated 2026-02-01T21:06:30.896456
- * 
- * Props: None
- * Slots: None
- * Emits: input
+ * AppLanguageSelector - Language Selector for Navbar
  */
 
 export default {
-  title: 'Educacross V2/AppLanguageSelector',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## AppLanguageSelector
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- **input**
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Navigation/AppLanguageSelector',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.lang-selector{position:relative;display:inline-block}.lang-trigger{display:flex;align-items:center;gap:8px;padding:8px 12px;border:none;background:transparent;color:#6E6B7B;cursor:pointer;border-radius:6px;font-size:14px;transition:all .2s}.lang-trigger:hover{background:#F8F8F8;color:#6E63E8}.lang-flag{font-size:20px}.lang-code{font-weight:500;text-transform:uppercase;font-size:13px}.lang-dropdown{position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid #D8D6DE;border-radius:6px;box-shadow:0 4px 24px rgba(0,0,0,.12);width:180px;display:none;z-index:1000}.lang-dropdown.open{display:block}.lang-option{display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;transition:all .15s;border-bottom:1px solid #F3F2F7}.lang-option:last-child{border-bottom:none}.lang-option:hover{background:#F8F8F8}.lang-option.selected{background:#E8F5E9;color:#28C76F}.lang-option-info{flex:1}.lang-option-name{font-size:14px;font-weight:500;color:#5E5873;margin:0 0 2px}.lang-option.selected .lang-option-name{color:#28C76F}.lang-option-code{font-size:12px;color:#6E6B7B;margin:0}.lang-check{color:#28C76F;font-size:16px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+const langs=[{code:'pt-BR',flag:'🇧🇷',name:'Português'},{code:'en-US',flag:'🇺🇸',name:'English'},{code:'es-ES',flag:'🇪🇸',name:'Español'}];
 
+export const Default={render:()=>`${styles}<div class="lang-selector"><button class="lang-trigger" onclick="this.nextElementSibling.classList.toggle('open')"><span class="lang-flag">🇧🇷</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button><div class="lang-dropdown">${langs.map((l,i)=>`<div class="lang-option ${i===0?'selected':''}" onclick="alert('${l.name}')"><span style="font-size:24px">${l.flag}</span><div class="lang-option-info"><p class="lang-option-name">${l.name}</p><p class="lang-option-code">${l.code}</p></div>${i===0?'<i class="bi bi-check lang-check"></i>':''}</div>`).join('')}</div></div>`};
 
-.flag-container {
-  height: 24px;
-  width: 24px;
-}
+export const InNavbar={render:()=>`${styles}<div style="background:#fff;border-bottom:1px solid #D8D6DE;padding:12px 24px;display:flex;justify-content:space-between;align-items:center"><div style="font-size:18px;font-weight:700;color:#6E63E8"><i class="bi bi-mortarboard-fill" style="margin-right:8px"></i>Educacross</div><div style="display:flex;align-items:center;gap:8px"><div class="lang-selector"><button class="lang-trigger" onclick="this.nextElementSibling.classList.toggle('open')"><span class="lang-flag">🇧🇷</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button><div class="lang-dropdown">${langs.map((l,i)=>`<div class="lang-option ${i===0?'selected':''}"><span style="font-size:24px">${l.flag}</span><div class="lang-option-info"><p class="lang-option-name">${l.name}</p><p class="lang-option-code">${l.code}</p></div>${i===0?'<i class="bi bi-check lang-check"></i>':''}</div>`).join('')}</div></div><div style="width:36px;height:36px;border-radius:50%;background:#6E63E8;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px">MS</div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Navbar da aplicação (professora Mariana Silva).</p>`};
 
-.country-flag {
-  height: 24px;
-}
+export const Opened={render:()=>`${styles}<div class="lang-selector"><button class="lang-trigger"><span class="lang-flag">🇧🇷</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button><div class="lang-dropdown open">${langs.map((l,i)=>`<div class="lang-option ${i===0?'selected':''}"><span style="font-size:24px">${l.flag}</span><div class="lang-option-info"><p class="lang-option-name">${l.name}</p><p class="lang-option-code">${l.code}</p></div>${i===0?'<i class="bi bi-check lang-check"></i>':''}</div>`).join('')}</div></div>`};
 
-.country-flag-option {
-  margin-right: 10px;
-  height: 24px;
-  display: inline-block;
-}
-`;
+export const AllVariants={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:24px"><div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Navbar</h4><div class="lang-selector"><button class="lang-trigger"><span class="lang-flag">🇧🇷</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button></div></div><div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Compact (com código)</h4><div class="lang-selector"><button class="lang-trigger"><span class="lang-flag">🇧🇷</span><span class="lang-code">PT-BR</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button></div></div><div><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Full</h4><div class="lang-selector"><button class="lang-trigger" style="padding:10px 16px"><span class="lang-flag">🇧🇷</span><span style="font-weight:500">Português (Brasil)</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button></div></div></div>`};
 
-// Template base
-const baseTemplate = `
-<b-overlay :show.sync="loading">
-    <b-dropdown variant="flat-primary" toggle-class=" p-0" no-caret size="sm">
-      <div>
-        <div class="flag-container">
-          <b-img
-            src=""
-            class="country-flag"
-          />
-        </div>
-`;
+export const ConfiguracoesDeConta={render:()=>`${styles}<div style="max-width:600px;background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:24px"><h3 style="margin:0 0 20px;font-size:18px;font-weight:600;color:#5E5873">Preferências de Idioma</h3><label style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#5E5873">Idioma da Interface</label><p style="margin:0 0 12px;font-size:13px;color:#6E6B7B">Escolha o idioma para menus e mensagens.</p><div class="lang-selector" style="width:100%"><button class="lang-trigger" style="width:100%;justify-content:space-between;border:1px solid #D8D6DE"><div style="display:flex;align-items:center;gap:12px"><span class="lang-flag">🇧🇷</span><span style="font-weight:500">Português (Brasil)</span></div><i class="bi bi-chevron-down" style="font-size:12px"></i></button></div><div style="padding-top:16px;border-top:1px solid #F3F2F7;margin-top:20px"><button style="padding:10px 24px;background:#6E63E8;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:500">Salvar</button></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Config de conta (professora).</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const Interactive={render:()=>`${styles}<div class="lang-selector"><button class="lang-trigger" id="lang-btn" onclick="document.getElementById('lang-dd').classList.toggle('open')"><span class="lang-flag" id="flag">🇧🇷</span><span class="lang-code" id="code">PT-BR</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button><div class="lang-dropdown" id="lang-dd">${langs.map((l,i)=>`<div class="lang-option ${i===0?'selected':''}" onclick="document.getElementById('flag').textContent='${l.flag}';document.getElementById('code').textContent='${l.code}';document.querySelectorAll('.lang-option').forEach((o,j)=>{o.classList.toggle('selected',j===${i});o.querySelector('.lang-check').style.display=j===${i}?'block':'none'});document.getElementById('lang-dd').classList.remove('open');document.getElementById('fb').innerHTML='<strong style=color:#28C76F>✓</strong> ${l.name}'"><span style="font-size:24px">${l.flag}</span><div class="lang-option-info"><p class="lang-option-name">${l.name}</p><p class="lang-option-code">${l.code}</p></div><i class="bi bi-check lang-check" style="display:${i===0?'block':'none'}"></i></div>`).join('')}</div></div><div id="fb" style="margin-top:16px;font-size:14px;color:#6E6B7B;min-height:20px"></div><p style="margin-top:20px;font-size:13px;color:#6E6B7B"><strong>Interação:</strong> Clique para trocar idioma.</p>`};
 
-
+export const KeyboardNavigation={render:()=>`${styles}<style>.lang-trigger:focus{outline:2px solid #6E63E8;outline-offset:2px}.lang-option:focus{outline:2px solid #6E63E8;outline-offset:-2px;background:#F8F8F8}</style><div class="lang-selector"><button class="lang-trigger" tabindex="0"><span class="lang-flag">🇧🇷</span><span class="lang-code">PT-BR</span><i class="bi bi-chevron-down" style="font-size:12px"></i></button><div class="lang-dropdown open">${langs.map((l,i)=>`<div class="lang-option ${i===0?'selected':''}" tabindex="0" role="option" aria-selected="${i===0}" onkeydown="if(event.key==='Enter'||event.key===' '){alert('${l.name}')}"><span style="font-size:24px">${l.flag}</span><div class="lang-option-info"><p class="lang-option-name">${l.name}</p><p class="lang-option-code">${l.code}</p></div>${i===0?'<i class="bi bi-check lang-check"></i>':''}</div>`).join('')}</div></div><div style="margin-top:20px;padding:16px;background:#F8F8F8;border-radius:8px;font-size:13px;color:#6E6B7B"><strong>WCAG 2.1 AA:</strong><ul style="margin:8px 0 0;padding-left:20px"><li><kbd>Tab</kbd> - Navegar<li><kbd>Enter</kbd> / <kbd>Espaço</kbd> - Selecionar<li><strong>role="option"</strong> + <strong>aria-selected</strong></ul></div>`};
