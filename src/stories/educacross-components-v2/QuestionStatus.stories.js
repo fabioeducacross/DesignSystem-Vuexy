@@ -1,106 +1,28 @@
 /**
- * QuestionStatus - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component QuestionStatus
- * @source educacross-frontoffice\src\components\question\QuestionStatus.vue
- * @generated 2026-02-01T21:06:31.229780
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * QuestionStatus - Question Answer Status Badge
  */
 
 export default {
-  title: 'Educacross V2/QuestionStatus',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## QuestionStatus
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Data Display/QuestionStatus',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.question-status{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:12px;font-size:13px;font-weight:600}.status-correct{background:#E8F5E9;color:#28C76F}.status-incorrect{background:#FFEBEE;color:#EA5455}.status-partial{background:#FFF8E1;color:#FF9F43}.status-pending{background:#F3F2F7;color:#6E6B7B}.status-skipped{background:#E3F2FD;color:#00CFE8}.question-status i{font-size:14px}.status-with-score{display:inline-flex;align-items:center;gap:8px}.status-score{font-size:16px;font-weight:700}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><span class="question-status status-correct"><i class="bi bi-check-circle-fill"></i>Correta</span><span class="question-status status-incorrect"><i class="bi bi-x-circle-fill"></i>Incorreta</span><span class="question-status status-partial"><i class="bi bi-dash-circle-fill"></i>Parcialmente Correta</span><span class="question-status status-pending"><i class="bi bi-clock"></i>Pendente</span><span class="question-status status-skipped"><i class="bi bi-skip-forward"></i>Não Respondida</span></div>`};
 
+export const WithScore={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="status-with-score"><span class="question-status status-correct"><i class="bi bi-check-circle-fill"></i>Correta</span><span class="status-score" style="color:#28C76F">10/10</span></div><div class="status-with-score"><span class="question-status status-partial"><i class="bi bi-dash-circle-fill"></i>Parcial</span><span class="status-score" style="color:#FF9F43">5/10</span></div><div class="status-with-score"><span class="question-status status-incorrect"><i class="bi bi-x-circle-fill"></i>Incorreta</span><span class="status-score" style="color:#EA5455">0/10</span></div></div>`};
 
-.question-status {
-  width: 20px;
-  height: 20px;
+export const ListaQuestoes={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:600px"><h3 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#5E5873">Resultado: João Silva</h3><div style="display:flex;flex-direction:column;gap:12px">${[{n:1,s:'correct',t:'10/10'},{n:2,s:'correct',t:'10/10'},{n:3,s:'partial',t:'5/10'},{n:4,s:'incorrect',t:'0/10'},{n:5,s:'correct',t:'10/10'},{n:6,s:'skipped',t:'0/10'},{n:7,s:'pending',t:'-'},{n:8,s:'pending',t:'-'}].map(q=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;background:#F8F8F8;border-radius:6px"><div style="display:flex;align-items:center;gap:12px"><span style="width:32px;height:32px;border-radius:50%;background:#6E63E8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">${q.n}</span><span class="question-status status-${q.s}"><i class="bi bi-${q.s==='correct'?'check-circle-fill':q.s==='incorrect'?'x-circle-fill':q.s==='partial'?'dash-circle-fill':q.s==='skipped'?'skip-forward':'clock'}"></i>${q.s==='correct'?'Correta':q.s==='incorrect'?'Incorreta':q.s==='partial'?'Parcial':q.s==='skipped'?'Não Resp.':'Pendente'}</span></div><span style="font-size:16px;font-weight:700;color:${q.s==='correct'?'#28C76F':q.s==='incorrect'?'#EA5455':q.s==='partial'?'#FF9F43':'#6E6B7B'}">${q.t}</span></div>`).join('')}</div><div style="margin-top:16px;padding-top:16px;border-top:1px solid #E8E8E8;display:flex;justify-content:space-between;font-size:18px;font-weight:700"><span style="color:#5E5873">Total:</span><span style="color:#6E63E8">55/80 pontos (69%)</span></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Resultado individual de aluno (professora visualizando).</p>`};
 
-  border-radius: 50%;
+export const ResumoTurma={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:800px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Desempenho por Questão - Turma 5º A</h3><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">${[1,2,3,4,5,6,7,8].map(n=>{const correct=Math.floor(Math.random()*20)+8;const incorrect=Math.floor(Math.random()*8)+2;const partial=28-correct-incorrect;return`<div style="background:#F8F8F8;border-radius:8px;padding:16px"><div style="font-size:32px;font-weight:700;color:#6E63E8;margin-bottom:8px">Q${n}</div><div style="display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span class="question-status status-correct" style="padding:2px 8px;font-size:11px"><i class="bi bi-check-circle-fill"></i>${correct}</span><span style="font-size:12px;color:#6E6B7B">${Math.round(correct/28*100)}%</span></div><div style="display:flex;justify-content:space-between;align-items:center"><span class="question-status status-partial" style="padding:2px 8px;font-size:11px"><i class="bi bi-dash-circle-fill"></i>${partial}</span><span style="font-size:12px;color:#6E6B7B">${Math.round(partial/28*100)}%</span></div><div style="display:flex;justify-content:space-between;align-items:center"><span class="question-status status-incorrect" style="padding:2px 8px;font-size:11px"><i class="bi bi-x-circle-fill"></i>${incorrect}</span><span style="font-size:12px;color:#6E6B7B">${Math.round(incorrect/28*100)}%</span></div></div></div>`}).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Dashboard de desempenho da turma por questão (28 alunos).</p>`};
 
-  & > .material-symbols-outlined {
-    font-size: 16px;
-  }
-}
-`;
+export const TabelaAlunos={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden;max-width:900px"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#F8F8F8;border-bottom:2px solid #D8D6DE"><th style="padding:12px;text-align:left;font-size:13px;font-weight:600;color:#6E6B7B">Aluno</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Q1</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Q2</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Q3</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Q4</th><th style="padding:12px;text-align:right;font-size:13px;font-weight:600;color:#6E6B7B">Total</th></tr></thead><tbody>${['Ana Silva','Bruno Santos','Carlos Oliveira','Diana Costa','Eduardo Lima'].map((name,i)=>{const statuses=[['correct','correct','partial','correct'],['correct','incorrect','correct','partial'],['partial','correct','correct','incorrect'],['correct','correct','correct','correct'],['incorrect','partial','correct','partial']][i];const total=[35,25,28,40,23][i];return`<tr style="border-bottom:1px solid #F3F2F7"><td style="padding:12px"><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px">${name.split(' ').map(n=>n[0]).join('')}</div><span style="font-weight:500;color:#5E5873">${name}</span></div></td>${statuses.map(s=>`<td style="padding:12px;text-align:center"><span class="question-status status-${s}" style="padding:2px 6px;font-size:11px"><i class="bi bi-${s==='correct'?'check':'dash'}"></i></span></td>`).join('')}<td style="padding:12px;text-align:right;font-size:16px;font-weight:700;color:${total>=35?'#28C76F':total>=25?'#FF9F43':'#EA5455'}">${total}/40</td></tr>`}).join('')}</tbody></table></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Tabela de desempenho individual por questão (5 primeiros alunos).</p>`};
 
-// Template base
-const baseTemplate = `
-<div class="d-flex flex-no-wrap gap-2 align-items-center">
-    <div
-      class="question-status d-flex align-items-center justify-content-center"
-      class=""
-    >
-      <span class="material-symbols-outlined" class="">
-        Sample Text
-      </span>
-    </div>
-    <div class="slot-placeholder">[Slot Content]</div>
-  </div>
-`;
+export const IconOnly={render:()=>`${styles}<div style="display:flex;gap:12px;align-items:center"><i class="bi bi-check-circle-fill" style="font-size:24px;color:#28C76F"></i><i class="bi bi-x-circle-fill" style="font-size:24px;color:#EA5455"></i><i class="bi bi-dash-circle-fill" style="font-size:24px;color:#FF9F43"></i><i class="bi bi-clock" style="font-size:24px;color:#6E6B7B"></i><i class="bi bi-skip-forward" style="font-size:24px;color:#00CFE8"></i></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Variante:</strong> Apenas ícones para uso em tabelas compactas.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const CompactView={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:6px">${Array(12).fill(0).map((_,i)=>{const s=['correct','correct','partial','incorrect','correct','skipped','correct','partial','correct','correct','incorrect','pending'][i];return`<span class="question-status status-${s}" style="padding:2px 8px;font-size:11px">${i+1}</span>`}).join('')}</div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Visualização compacta de 12 questões (número = ID da questão).</p>`};
 
-
+export const Interactive={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:8px">${[1,2,3,4,5,6].map(n=>{const s=['correct','incorrect','partial','pending','correct','skipped'][n-1];return`<button onclick="alert('Questão ${n}: ${s}')" style="border:none;background:transparent;padding:0;cursor:pointer"><span class="question-status status-${s}"><i class="bi bi-${s==='correct'?'check-circle-fill':s==='incorrect'?'x-circle-fill':s==='partial'?'dash-circle-fill':s==='skipped'?'skip-forward':'clock'}"></i>Q${n}</span></button>`}).join('')}</div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Interação:</strong> Clique em cada questão para ver detalhes.</p>`};

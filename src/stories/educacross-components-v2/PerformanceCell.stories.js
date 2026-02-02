@@ -1,99 +1,26 @@
 /**
- * PerformanceCell - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component PerformanceCell
- * @source educacross-frontoffice\src\components\cells\PerformanceCell.vue
- * @generated 2026-02-01T21:06:31.165405
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * PerformanceCell - Table Cell with Performance Indicator
  */
 
 export default {
-  title: 'Educacross V2/PerformanceCell',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## PerformanceCell
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Data Display/PerformanceCell',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.performance-cell{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:8px 16px;min-width:80px;border-radius:6px;font-weight:700;overflow:hidden}.performance-bg{position:absolute;left:0;top:0;height:100%;transition:.3s}.perf-low{background:#FFEBEE;color:#EA5455}.perf-low .performance-bg{background:rgba(234,84,85,.2)}.perf-medium{background:#FFF8E1;color:#FF9F43}.perf-medium .performance-bg{background:rgba(255,159,67,.2)}.perf-high{background:#E8F5E9;color:#28C76F}.perf-high .performance-bg{background:rgba(40,199,111,.2)}.perf-neutral{background:#F3F2F7;color:#6E6B7B}.perf-neutral .performance-bg{background:rgba(110,107,123,.1)}.performance-value{position:relative;z-index:1;font-size:16px}.performance-compact{padding:4px 10px;min-width:60px}.performance-compact .performance-value{font-size:14px}.grade-badge{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;font-size:18px;font-weight:700}.sort-indicator{margin-left:6px;font-size:12px;opacity:.6}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="performance-cell perf-high"><div class="performance-bg" style="width:92%"></div><span class="performance-value">9.2/10</span></div><div class="performance-cell perf-medium"><div class="performance-bg" style="width:70%"></div><span class="performance-value">7.0/10</span></div><div class="performance-cell perf-low"><div class="performance-bg" style="width:45%"></div><span class="performance-value">4.5/10</span></div><div class="performance-cell perf-neutral"><div class="performance-bg" style="width:0%"></div><span class="performance-value">-</span></div></div>`};
 
+export const AllFormats={render:()=>`${styles}<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:600px"><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Percentual</div><div class="performance-cell perf-high"><div class="performance-bg" style="width:87%"></div><span class="performance-value">87%</span></div></div><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Nota</div><div class="performance-cell perf-high"><div class="performance-bg" style="width:87%"></div><span class="performance-value">8.7/10</span></div></div><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Conceito</div><div class="grade-badge perf-high">A</div></div></div>`};
 
+export const TabelaAlunos={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden;max-width:900px"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#F8F8F8;border-bottom:2px solid #D8D6DE"><th style="padding:12px;text-align:left;font-size:13px;font-weight:600;color:#6E6B7B">Aluno</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 1</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 2</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 3</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B;cursor:pointer">Média<i class="bi bi-arrow-down sort-indicator"></i></th></tr></thead><tbody>${['Ana Silva','Bruno Santos','Carlos Oliveira','Diana Costa','Eduardo Lima'].map((name,i)=>{const scores=[[9.2,8.5,9.0],[7.0,7.5,8.0],[5.5,6.0,5.0],[10,9.5,9.8],[4.0,4.5,5.0]][i];const avg=scores.reduce((a,b)=>a+b,0)/3;const level=avg>=8?'high':avg>=6?'medium':'low';return`<tr style="border-bottom:1px solid #F3F2F7"><td style="padding:12px"><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px">${name.split(' ').map(n=>n[0]).join('')}</div><span style="font-weight:500;color:#5E5873">${name}</span></div></td>${scores.map(s=>{const l=s>=8?'high':s>=6?'medium':'low';return`<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${l}"><div class="performance-bg" style="width:${s*10}%"></div><span class="performance-value">${s.toFixed(1)}</span></div></td>`}).join('')}<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${level}"><div class="performance-bg" style="width:${avg*10}%"></div><span class="performance-value">${avg.toFixed(1)}</span></div></td></tr>`}).join('')}</tbody></table></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Tabela de desempenho com células coloridas e barra de progresso.</p>`};
 
-`;
+export const RankingTurma={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:500px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Top 5 - Turma 5º A</h3><div style="display:flex;flex-direction:column;gap:12px">${[{name:'Diana Costa',score:96,medal:'🥇'},{name:'Ana Silva',score:89,medal:'🥈'},{name:'Bruno Santos',score:85,medal:'🥉'},{name:'Carlos Oliveira',score:78,medal:'4º'},{name:'Fernanda Lima',score:74,medal:'5º'}].map((s,i)=>`<div style="display:flex;align-items:center;gap:12px;padding:12px;background:${i<3?'#F8F8F8':'transparent'};border-radius:8px"><div style="width:40px;text-align:center;font-size:24px">${s.medal}</div><div style="flex:1"><div style="font-weight:600;color:#5E5873;margin-bottom:4px">${s.name}</div><div style="background:#E8E8E8;height:6px;border-radius:3px;overflow:hidden"><div style="width:${s.score}%;height:100%;background:linear-gradient(90deg,#6E63E8,#28C76F);transition:.5s"></div></div></div><div class="performance-cell performance-compact perf-${s.score>=85?'high':s.score>=70?'medium':'low'}"><div class="performance-bg" style="width:100%"></div><span class="performance-value">${s.score}%</span></div></div>`).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Ranking da turma com medalhas e células de desempenho.</p>`};
 
-// Template base
-const baseTemplate = `
-<div class="ConditionalValueDisplay" value="" layout="">
-    <div class="d-flex align-items-center gap-1" style="width: fit-content">
-      <span
-        class="whitespace-no-wrap"
-        style="width: 50px"
-      >
-        Sample Text%
-      </span>
-      <b-badge variant="" pill class="text-uppercase">
-        Sample Text
-      </b-badge>
-    </div>
-  </div>
-`;
+export const BoletimCompleto={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden;max-width:700px"><div style="background:linear-gradient(135deg,#6E63E8,#28C76F);color:#fff;padding:20px"><h3 style="margin:0 0 8px;font-size:20px">Boletim Escolar</h3><p style="margin:0;opacity:.9">João Silva - 5º Ano A</p></div><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#F8F8F8;border-bottom:2px solid #D8D6DE"><th style="padding:12px;text-align:left;font-size:13px;font-weight:600;color:#6E6B7B">Disciplina</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">1º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">2º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">3º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Média</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Conceito</th></tr></thead><tbody>${[{d:'Matemática',s:[8.5,9.0,8.8]},{d:'Português',s:[7.5,8.0,8.5]},{d:'Ciências',s:[9.0,9.5,9.2]},{d:'História',s:[6.5,7.0,7.5]},{d:'Geografia',s:[8.0,8.5,8.0]}].map(row=>{const avg=row.s.reduce((a,b)=>a+b,0)/3;const grade=avg>=9?'A':avg>=8?'B':avg>=6?'C':'D';const level=avg>=8?'high':avg>=6?'medium':'low';return`<tr style="border-bottom:1px solid #F3F2F7"><td style="padding:12px;font-weight:600;color:#5E5873">${row.d}</td>${row.s.map(s=>{const l=s>=8?'high':s>=6?'medium':'low';return`<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${l}"><div class="performance-bg" style="width:${s*10}%"></div><span class="performance-value">${s.toFixed(1)}</span></div></td>`}).join('')}<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${level}"><div class="performance-bg" style="width:${avg*10}%"></div><span class="performance-value">${avg.toFixed(1)}</span></div></td><td style="padding:12px;text-align:center"><div class="grade-badge perf-${level}" style="width:35px;height:35px;font-size:16px">${grade}</div></td></tr>`}).join('')}</tbody></table></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Boletim completo com notas por bimestre e conceitos.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const ComparacaoMensal={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:800px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Evolução - João Silva</h3><div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px">${['Jan','Fev','Mar','Abr','Mai','Jun'].map((month,i)=>{const score=[65,70,75,80,85,88][i];const level=score>=80?'high':score>=70?'medium':'low';const trend=i>0?score-[65,70,75,80,85,88][i-1]:0;return`<div style="text-align:center"><div style="font-size:12px;color:#6E6B7B;margin-bottom:8px;font-weight:600">${month}</div><div class="performance-cell performance-compact perf-${level}" style="margin:0 auto"><div class="performance-bg" style="width:${score}%"></div><span class="performance-value">${score}%</span></div>${i>0?`<div style="margin-top:6px;font-size:11px;color:${trend>0?'#28C76F':'#EA5455'};font-weight:600">${trend>0?'+':''}${trend}%</div>`:''}</div>`}).join('')}</div><div style="margin-top:20px;padding:16px;background:#F8F8F8;border-radius:8px;display:flex;justify-content:space-around"><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#28C76F">+23%</div><div style="font-size:12px;color:#6E6B7B">Evolução Total</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#6E63E8">88%</div><div style="font-size:12px;color:#6E6B7B">Desempenho Atual</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#FF9F43">3.5</div><div style="font-size:12px;color:#6E6B7B">Média Mensal</div></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Comparação mensal com tendência de evolução.</p>`};
 
-
+export const ComVariacoes={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px;max-width:400px"><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Matemática</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-high"><div class="performance-bg" style="width:92%"></div><span class="performance-value">92%</span></div><span style="font-size:12px;color:#28C76F;font-weight:600">+12%</span></div></div></div><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Português</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-medium"><div class="performance-bg" style="width:78%"></div><span class="performance-value">78%</span></div><span style="font-size:12px;color:#EA5455;font-weight:600">-5%</span></div></div></div><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Ciências</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-high"><div class="performance-bg" style="width:88%"></div><span class="performance-value">88%</span></div><span style="font-size:12px;color:#6E6B7B;font-weight:600">0%</span></div></div></div></div><p style="margin-top:8px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Células com indicador de variação (+ ou -).</p>`};

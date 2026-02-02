@@ -1,90 +1,28 @@
 /**
- * ExerciseType - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ExerciseType
- * @source educacross-frontoffice\src\components\exercise-type\reading-meter\ExerciseType.vue
- * @generated 2026-02-01T21:06:31.005576
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * ExerciseType - Exercise Type Classification Tags
  */
 
 export default {
-  title: 'Educacross V2/ExerciseType',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ExerciseType
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Data Display/ExerciseType',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.exercise-type{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;transition:.2s}.type-multiple-choice{background:#E8F5E9;color:#28C76F}.type-essay{background:#E3F2FD;color:#00CFE8}.type-true-false{background:#FFF8E1;color:#FF9F43}.type-matching{background:#F3E5F5;color:#9C27B0}.type-ordering{background:#FFF3E0;color:#FB8C00}.type-fill-blanks{background:#E0F2F1;color:#00897B}.exercise-type i{font-size:16px}.type-outline{background:transparent;border:2px solid currentColor}.exercise-type-small{padding:3px 10px;font-size:11px}.exercise-type-small i{font-size:13px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:12px"><span class="exercise-type type-multiple-choice"><i class="bi bi-list-check"></i>Múltipla Escolha</span><span class="exercise-type type-essay"><i class="bi bi-file-text"></i>Dissertativa</span><span class="exercise-type type-true-false"><i class="bi bi-toggle-on"></i>Verdadeiro ou Falso</span><span class="exercise-type type-matching"><i class="bi bi-link-45deg"></i>Associação</span><span class="exercise-type type-ordering"><i class="bi bi-sort-down"></i>Ordenação</span><span class="exercise-type type-fill-blanks"><i class="bi bi-dash-square"></i>Preencher Lacunas</span></div>`};
 
+export const OutlineVariant={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:12px"><span class="exercise-type type-multiple-choice type-outline"><i class="bi bi-list-check"></i>Múltipla Escolha</span><span class="exercise-type type-essay type-outline"><i class="bi bi-file-text"></i>Dissertativa</span><span class="exercise-type type-true-false type-outline"><i class="bi bi-toggle-on"></i>V ou F</span><span class="exercise-type type-matching type-outline"><i class="bi bi-link-45deg"></i>Associação</span></div>`};
 
+export const SmallSize={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="exercise-type exercise-type-small type-multiple-choice"><i class="bi bi-list-check"></i>MC</span><span class="exercise-type exercise-type-small type-essay"><i class="bi bi-file-text"></i>Diss</span><span class="exercise-type exercise-type-small type-true-false"><i class="bi bi-toggle-on"></i>V/F</span><span class="exercise-type exercise-type-small type-matching"><i class="bi bi-link-45deg"></i>Assoc</span><span class="exercise-type exercise-type-small type-ordering"><i class="bi bi-sort-down"></i>Ord</span><span class="exercise-type exercise-type-small type-fill-blanks"><i class="bi bi-dash-square"></i>Lacuna</span></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Variante pequena para tabelas e visualizações compactas.</p>`};
 
-`;
+export const BibliotecaDeMissoes={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:900px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Biblioteca de Missões - Matemática 5º Ano</h3><div style="display:flex;flex-direction:column;gap:16px">${[{t:'Frações Básicas',d:'Introdução ao conceito de frações',q:12,type:'multiple-choice'},{t:'Operações com Frações',d:'Adição e subtração de frações',q:8,type:'essay'},{t:'Quiz Rápido: Frações',d:'Avaliação rápida de conhecimento',q:10,type:'true-false'},{t:'Conectando Frações e Decimais',d:'Relação entre representações numéricas',q:6,type:'matching'}].map(m=>`<div style="background:#F8F8F8;border-radius:8px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:16px"><div style="flex:1"><div style="display:flex;align-items:center;gap:12px;margin-bottom:6px"><h4 style="margin:0;font-size:16px;font-weight:600;color:#5E5873">${m.t}</h4><span class="exercise-type type-${m.type}"><i class="bi bi-${m.type==='multiple-choice'?'list-check':m.type==='essay'?'file-text':m.type==='true-false'?'toggle-on':'link-45deg'}"></i>${m.type==='multiple-choice'?'Múltipla Escolha':m.type==='essay'?'Dissertativa':m.type==='true-false'?'V ou F':'Associação'}</span></div><p style="margin:0;font-size:13px;color:#6E6B7B">${m.d}</p></div><div style="text-align:right"><div style="font-size:24px;font-weight:700;color:#6E63E8">${m.q}</div><div style="font-size:12px;color:#6E6B7B">questões</div></div></div>`).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Biblioteca de missões com tipo de exercício visível.</p>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <div class="WordList" width="" height="" />
-    <div class="FullText" width="" height="" />
-  </div>
-`;
+export const FiltroTipos={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:700px"><h3 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#5E5873">Filtrar por Tipo de Exercício</h3><div style="display:flex;flex-wrap:wrap;gap:10px">${['multiple-choice','essay','true-false','matching','ordering','fill-blanks'].map(type=>{const counts=[24,8,15,6,4,12]['multiple-choice','essay','true-false','matching','ordering','fill-blanks'].indexOf(type)];return`<button onclick="this.classList.toggle('active')" style="border:none;background:transparent;padding:0;cursor:pointer;position:relative"><span class="exercise-type type-${type} type-outline" style="transition:.2s"><i class="bi bi-${type==='multiple-choice'?'list-check':type==='essay'?'file-text':type==='true-false'?'toggle-on':type==='matching'?'link-45deg':type==='ordering'?'sort-down':'dash-square'}"></i>${type==='multiple-choice'?'Múltipla Escolha':type==='essay'?'Dissertativa':type==='true-false'?'V ou F':type==='matching'?'Associação':type==='ordering'?'Ordenação':'Lacunas'}<span style="margin-left:6px;background:#6E63E8;color:#fff;padding:2px 6px;border-radius:10px;font-size:11px">${counts}</span></span></button>`}).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Interação:</strong> Clique nos tipos para filtrar questões do banco.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const CabecalhoQuestao={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:700px"><div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #E8E8E8"><div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:50%;background:#6E63E8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">5</span><span class="exercise-type type-multiple-choice"><i class="bi bi-list-check"></i>Múltipla Escolha</span></div><div style="text-align:right;font-size:13px;color:#6E6B7B"><div style="font-weight:600;color:#5E5873">Valor: 10 pontos</div><div>Nível: Médio</div></div></div><p style="margin:0;font-size:15px;line-height:1.6;color:#5E5873">Qual é o resultado da operação: 3/4 + 1/2?</p><div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">${['A) 1/2','B) 5/4','C) 4/6','D) 7/8'].map(opt=>`<label style="display:flex;align-items:center;gap:12px;padding:12px;border:2px solid #D8D6DE;border-radius:8px;cursor:pointer"><input type="radio" name="q5" style="width:18px;height:18px"><span style="font-size:14px;color:#5E5873">${opt}</span></label>`).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Cabeçalho de questão com tipo visível (aluno resolvendo).</p>`};
 
+export const LegendaTipos={render:()=>`${styles}<div style="background:#F8F8F8;border-radius:8px;padding:16px;max-width:500px"><h4 style="margin:0 0 12px;font-size:14px;font-weight:600;color:#5E5873">Tipos de Exercícios</h4><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${[{type:'multiple-choice',label:'Múltipla Escolha'},{type:'essay',label:'Dissertativa'},{type:'true-false',label:'V ou F'},{type:'matching',label:'Associação'},{type:'ordering',label:'Ordenação'},{type:'fill-blanks',label:'Lacunas'}].map(t=>`<div style="display:flex;align-items:center;gap:8px"><span class="exercise-type exercise-type-small type-${t.type}"><i class="bi bi-${t.type==='multiple-choice'?'list-check':t.type==='essay'?'file-text':t.type==='true-false'?'toggle-on':t.type==='matching'?'link-45deg':t.type==='ordering'?'sort-down':'dash-square'}"></i></span><span style="font-size:13px;color:#6E6B7B">${t.label}</span></div>`).join('')}</div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Legenda de tipos para ajuda/documentação.</p>`};
 
+export const MissaoCompleta={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:650px"><div style="display:flex;align-items:start;gap:16px;margin-bottom:20px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect fill='%236E63E8' width='80' height='80' rx='12'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='32' font-weight='bold'%3E📐%3C/text%3E%3C/svg%3E" style="width:80px;height:80px;border-radius:12px"><div style="flex:1"><h3 style="margin:0 0 6px;font-size:20px;font-weight:700;color:#5E5873">Geometria Básica</h3><p style="margin:0 0 12px;font-size:14px;color:#6E6B7B">Formas geométricas e suas propriedades</p><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="exercise-type exercise-type-small type-multiple-choice"><i class="bi bi-list-check"></i>8 MC</span><span class="exercise-type exercise-type-small type-essay"><i class="bi bi-file-text"></i>2 Diss</span><span class="exercise-type exercise-type-small type-matching"><i class="bi bi-link-45deg"></i>3 Assoc</span><span style="padding:4px 10px;background:#E8E8E8;border-radius:12px;font-size:11px;color:#6E6B7B">13 questões total</span></div></div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:16px;border-top:1px solid #E8E8E8"><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#6E63E8">15</div><div style="font-size:12px;color:#6E6B7B">minutos</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#28C76F">87%</div><div style="font-size:12px;color:#6E6B7B">taxa conclusão</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#FF9F43">Médio</div><div style="font-size:12px;color:#6E6B7B">dificuldade</div></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Card de missão com composição de tipos de exercícios.</p>`};

@@ -1,105 +1,30 @@
 /**
- * DescriptorTag - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component DescriptorTag
- * @source educacross-frontoffice\src\components\descriptors\DescriptorTag.vue
- * @generated 2026-02-01T21:06:30.976801
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * DescriptorTag - BNCC Descriptor Tag
  */
 
 export default {
-  title: 'Educacross V2/DescriptorTag',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## DescriptorTag
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Data Display/DescriptorTag',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.descriptor-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:#F3F2F7;border:1px solid #D8D6DE;border-radius:4px;font-size:13px;font-weight:500;color:#5E5873;font-family:monospace}.descriptor-tag.clickable{cursor:pointer;transition:all .2s}.descriptor-tag.clickable:hover{background:#6E63E8;color:#fff;border-color:#6E63E8}.descriptor-icon{font-size:14px;color:#6E63E8}.descriptor-code{font-weight:600}.descriptor-label{font-weight:400;font-family:system-ui}.descriptor-tag.primary{background:#E8E7FD;border-color:#6E63E8;color:#6E63E8}.descriptor-tag.success{background:#E8F5E9;border-color:#28C76F;color:#28C76F}.descriptor-tag.info{background:#E0F7FA;border-color:#00CFE8;color:#00CFE8}.descriptor-tag.small{padding:2px 8px;font-size:11px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<span class="descriptor-tag"><i class="bi bi-bookmark descriptor-icon"></i><span class="descriptor-code">EF05MA08</span></span>`};
 
+export const WithLabel={render:()=>`${styles}<span class="descriptor-tag"><i class="bi bi-bookmark descriptor-icon"></i><span class="descriptor-code">EF05MA08</span><span class="descriptor-label">• Frações</span></span>`};
 
-.test-z {
-  z-index: 99999999999;
-}
-`;
+export const AllVariants={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><span class="descriptor-tag"><span class="descriptor-code">EF05MA08</span></span><span class="descriptor-tag primary"><i class="bi bi-bookmark"></i><span class="descriptor-code">EF05MA08</span></span><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA08</span><span class="descriptor-label">Concluído</span></span><span class="descriptor-tag info"><i class="bi bi-info-circle"></i><span class="descriptor-code">EF05MA08</span></span></div>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <b-badge
-      id=""
-      variant=""
-      pill
-      class="text-wrap cursor-help"
-    >
-      Sample Text
-    </b-badge>
-    <b-popover
-      target=""
-      triggers="hover"
-      placement=""
-      custom-class="test-z"
-    >
-      <div>
-        Sample Text
-`;
+export const Clickable={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="descriptor-tag clickable" onclick="alert('EF05MA08')"><i class="bi bi-bookmark descriptor-icon"></i><span class="descriptor-code">EF05MA08</span><span class="descriptor-label">• Frações</span></span><span class="descriptor-tag clickable" onclick="alert('EF05LP01')"><i class="bi bi-bookmark descriptor-icon"></i><span class="descriptor-code">EF05LP01</span><span class="descriptor-label">• Leitura</span></span><span class="descriptor-tag clickable" onclick="alert('EF05CI03')"><i class="bi bi-bookmark descriptor-icon"></i><span class="descriptor-code">EF05CI03</span><span class="descriptor-label">• Ciclo da Água</span></span></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Interação:</strong> Clique para ver detalhes do descritor.</p>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const MultipleDescriptors={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:600px"><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Missão: Frações Básicas</h3><div style="margin-bottom:12px"><label style="display:block;margin-bottom:6px;font-size:13px;font-weight:500;color:#6E6B7B">Descritores BNCC:</label><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="descriptor-tag primary"><i class="bi bi-bookmark"></i><span class="descriptor-code">EF05MA08</span></span><span class="descriptor-tag primary"><i class="bi bi-bookmark"></i><span class="descriptor-code">EF05MA09</span></span><span class="descriptor-tag primary"><i class="bi bi-bookmark"></i><span class="descriptor-code">EF05MA10</span></span></div></div><p style="margin:0;font-size:13px;color:#6E6B7B">12 questões • 5º A • Matemática</p></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Missão com múltiplos descritores BNCC.</p>`};
 
+export const CabecalhoAvaliacao={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:24px;max-width:700px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px"><div><h1 style="margin:0 0 8px;font-size:24px;font-weight:700;color:#5E5873">Avaliação: Operações com Frações</h1><p style="margin:0;font-size:14px;color:#6E6B7B">Matemática • 5º Ano A • 15/01/2024</p></div><div style="text-align:right"><div style="font-size:12px;color:#6E6B7B;margin-bottom:4px">Peso:</div><div style="font-size:20px;font-weight:700;color:#6E63E8">10 pontos</div></div></div><div style="background:#F8F8F8;border-radius:6px;padding:12px;margin-bottom:20px"><div style="font-size:12px;font-weight:600;color:#6E6B7B;margin-bottom:8px">DESCRITORES BNCC:</div><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="descriptor-tag"><span class="descriptor-code">EF05MA08</span><span class="descriptor-label">• Problemas com adição/subtração</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05MA09</span><span class="descriptor-label">• Multiplicação/divisão</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05MA10</span><span class="descriptor-label">• Equivalência</span></span></div></div><p style="margin:0;font-size:14px;color:#5E5873">Esta avaliação contém <strong>12 questões</strong> distribuídas em 3 níveis de dificuldade.</p></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Cabeçalho de avaliação impressa (professora Mariana Silva).</p>`};
 
+export const RelatorioCobertura={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:800px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Cobertura BNCC - Matemática 5º Ano</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div><h4 style="margin:0 0 8px;font-size:14px;font-weight:600;color:#28C76F">✓ Abordados (5)</h4><div style="display:flex;flex-direction:column;gap:6px"><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA08</span><span class="descriptor-label">• 8 atividades</span></span><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA09</span><span class="descriptor-label">• 6 atividades</span></span><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA10</span><span class="descriptor-label">• 5 atividades</span></span><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA11</span><span class="descriptor-label">• 4 atividades</span></span><span class="descriptor-tag success"><i class="bi bi-check-circle"></i><span class="descriptor-code">EF05MA12</span><span class="descriptor-label">• 3 atividades</span></span></div></div><div><h4 style="margin:0 0 8px;font-size:14px;font-weight:600;color:#EA5455">⚠ Não Abordados (3)</h4><div style="display:flex;flex-direction:column;gap:6px"><span class="descriptor-tag" style="opacity:0.6"><span class="descriptor-code">EF05MA13</span><span class="descriptor-label">• 0 atividades</span></span><span class="descriptor-tag" style="opacity:0.6"><span class="descriptor-code">EF05MA14</span><span class="descriptor-label">• 0 atividades</span></span><span class="descriptor-tag" style="opacity:0.6"><span class="descriptor-code">EF05MA15</span><span class="descriptor-label">• 0 atividades</span></span></div></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Relatório de cobertura curricular (coordenador pedagógico).</p>`};
+
+export const SmallSize={render:()=>`${styles}<div style="display:flex;flex-wrap:wrap;gap:6px"><span class="descriptor-tag small"><span class="descriptor-code">EF05MA08</span></span><span class="descriptor-tag small"><span class="descriptor-code">EF05MA09</span></span><span class="descriptor-tag small"><span class="descriptor-code">EF05MA10</span></span><span class="descriptor-tag small"><span class="descriptor-code">EF05MA11</span></span><span class="descriptor-tag small"><span class="descriptor-code">EF05MA12</span></span><span class="descriptor-tag small"><span class="descriptor-code">EF05MA13</span></span></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Variante:</strong> Tamanho pequeno (11px) para uso em tabelas.</p>`};
+
+export const AllSubjects={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px"><div><h4 style="margin:0 0 8px;font-size:14px;font-weight:600;color:#6E63E8">Matemática</h4><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="descriptor-tag"><span class="descriptor-code">EF05MA08</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05MA09</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05MA10</span></span></div></div><div><h4 style="margin:0 0 8px;font-size:14px;font-weight:600;color:#28C76F">Português</h4><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="descriptor-tag"><span class="descriptor-code">EF05LP01</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05LP02</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05LP03</span></span></div></div><div><h4 style="margin:0 0 8px;font-size:14px;font-weight:600;color:#00CFE8">Ciências</h4><div style="display:flex;flex-wrap:wrap;gap:6px"><span class="descriptor-tag"><span class="descriptor-code">EF05CI01</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05CI02</span></span><span class="descriptor-tag"><span class="descriptor-code">EF05CI03</span></span></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Descritores BNCC organizados por disciplina (3 disciplinas do 5º ano).</p>`};
