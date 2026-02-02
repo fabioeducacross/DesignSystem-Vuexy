@@ -1,0 +1,76 @@
+const n={title:"Educacross V2/TemplateDefault",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
+## TemplateDefault
+
+Componente extraído pixel-perfect do frontoffice Educacross.
+
+### Props
+- Nenhuma prop definida
+
+### Slots
+- Nenhum slot definido
+
+### Events
+- Nenhum evento definido
+        `}}}},t=`
+
+:root {
+  --primary: #6e63e8;
+  --primary-rgb: 110, 99, 232;
+  --success: #28c76f;
+  --success-rgb: 40, 199, 111;
+  --danger: #ea5455;
+  --danger-rgb: 234, 84, 85;
+  --warning: #ff9f43;
+  --warning-rgb: 255, 159, 67;
+  --info: #00cfe8;
+  --info-rgb: 0, 207, 232;
+  --secondary: #6c757d;
+  --secondary-rgb: 108, 117, 125;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --legend-below-basic: #ea5455;
+  --legend-basic: #ff9f43;
+  --legend-proficient: #28c76f;
+  --legend-advanced: #6e63e8;
+  --border-color: #dbdade;
+  --body-bg: #f8f7fa;
+  --card-bg: #ffffff;
+  --text-color: #5d596c;
+  --heading-color: #5d596c;
+}
+
+
+
+`,s=`
+<b-row class="match-height h-full">
+    <b-col cols="12">
+      <b-card
+        header="Enunciado da Questão"
+        header-bg-variant="primary"
+        header-text-variant="white"
+        header-class="justify-content-center h5 font-weight-normal p-50"
+        body-class="p-1"
+        border-variant="light-gray shadow-none"
+      >
+        <div class="mb-1">
+          <div class="QuestionContent" content="" />
+        </div>
+      </b-card>
+    </b-col>
+    <b-col cols="12">
+      <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-2 mb-50">
+        <div class="QuestionAlternative"
+          alternative=""
+        />
+      </div>
+    </b-col>
+  </b-row>
+`,e={render:()=>`
+    <style>${t}</style>
+    ${s}
+  `};var a,r,o;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: () => \`
+    <style>\${componentStyles}</style>
+    \${baseTemplate}
+  \`
+}`,...(o=(r=e.parameters)==null?void 0:r.docs)==null?void 0:o.source}}};const c=["Default"];export{e as Default,c as __namedExportsOrder,n as default};
