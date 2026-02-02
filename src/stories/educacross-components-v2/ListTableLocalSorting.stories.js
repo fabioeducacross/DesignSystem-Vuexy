@@ -1,136 +1,30 @@
 /**
- * ListTableLocalSorting - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ListTableLocalSorting
- * @source educacross-frontoffice\src\components\table\ListTableLocalSorting.vue
- * @generated 2026-02-01T21:06:31.074841
- * 
- * Props: None
- * Slots: header
- * Emits: update:sortBy, update:sortDesc
+ * ListTableLocalSorting - Client-Side Sortable Table
  */
 
 export default {
-  title: 'Educacross V2/ListTableLocalSorting',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ListTableLocalSorting
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- **header**
-
-### Events
-- **update:sortBy**
-- **update:sortDesc**
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Tables/ListTableLocalSorting',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.sort-table{width:100%;background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden}.sort-header{background:#F8F7FA;padding:12px 16px;border-bottom:2px solid #D8D6DE;display:grid;grid-template-columns:1fr 150px 120px 100px;gap:12px;font-weight:600;font-size:13px;color:#5E5873}.sort-header-cell{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none;transition:.2s}.sort-header-cell:hover{color:#6E63E8}.sort-header-cell.active{color:#6E63E8}.sort-icons{display:flex;flex-direction:column;font-size:10px;opacity:0.3}.sort-icons.active{opacity:1}.sort-row{display:grid;grid-template-columns:1fr 150px 120px 100px;gap:12px;padding:12px 16px;border-bottom:1px solid #EBE9F1;align-items:center;transition:.2s}.sort-row:hover{background:#F8F8F8}.sort-row:last-child{border-bottom:none}.student-info{display:flex;align-items:center;gap:12px}.student-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;color:#fff}.student-name{font-weight:600;color:#5E5873;font-size:14px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+const students=[{n:'Ana Silva',t:'8ºA',m:9.8,f:95,c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',m:8.5,f:82,c:'#00CFE8'},{n:'Diana Santos',t:'8ºA',m:9.2,f:88,c:'#28C76F'},{n:'Eduardo Lima',t:'9ºA',m:7.8,f:75,c:'#FF9F43'}];
 
+export const Default={render:()=>`${styles}<div class="sort-table"><div class="sort-header"><div class="sort-header-cell active"><span>Estudante</span><span class="sort-icons active"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Turma</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Média</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Faltas</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${students.sort((a,b)=>a.n.localeCompare(b.n)).map(s=>`<div class="sort-row"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div><div style="font-size:13px;color:#6E6B7B">${s.f}%</div></div>`).join('')}</div>`};
 
-.searchQuery {
-  border-left: 0;
-  padding-left: 0;
-}
+export const OrdemDecrescente={render:()=>`${styles}<div class="sort-table"><div class="sort-header"><div class="sort-header-cell"><span>Estudante</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Turma</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell active"><span>Média</span><span class="sort-icons active"><i class="bi bi-caret-down-fill"></i></span></div><div class="sort-header-cell"><span>Faltas</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${students.sort((a,b)=>b.m-a.m).map(s=>`<div class="sort-row"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div><div style="font-size:13px;color:#6E6B7B">${s.f}%</div></div>`).join('')}</div>`};
 
-#searchQueryIcon {
-  .material-symbols-outlined {
-    font-size: 18px;
-  }
-}
+export const OrdemCrescente={render:()=>`${styles}<div class="sort-table"><div class="sort-header"><div class="sort-header-cell"><span>Estudante</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Turma</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Média</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell active"><span>Faltas</span><span class="sort-icons active"><i class="bi bi-caret-up-fill"></i></span></div></div>${students.sort((a,b)=>a.f-b.f).map(s=>`<div class="sort-row"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div><div style="font-size:13px;color:#6E6B7B">${s.f}%</div></div>`).join('')}</div>`};
 
-.per-page-selector {
-  width: 90px;
-  min-width: 90px;
-}
+export const Missoes={render:()=>`${styles}<div class="sort-table"><div class="sort-header" style="grid-template-columns:1fr 150px 120px 120px"><div class="sort-header-cell active"><span>Missão</span><span class="sort-icons active"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Data Limite</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Alunos</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Status</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${[{m:'Frações Básicas',d:'10/02/2026',a:28,s:'Aberta',c:'#28C76F'},{m:'Geometria Plana',d:'12/02/2026',a:32,s:'Aberta',c:'#28C76F'},{m:'Sistema Solar',d:'08/02/2026',a:25,s:'Encerrada',c:'#6E6B7B'},{m:'Verbos e Conjugações',d:'15/02/2026',a:30,s:'Rascunho',c:'#FF9F43'}].sort((a,b)=>a.m.localeCompare(b.m)).map(m=>`<div class="sort-row" style="grid-template-columns:1fr 150px 120px 120px"><div style="font-weight:600;color:#5E5873">${m.m}</div><div style="font-size:13px;color:#6E6B7B">${m.d}</div><div style="font-weight:600;color:#6E63E8">${m.a}</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${m.c}20;color:${m.c}">${m.s}</span></div></div>`).join('')}</div>`};
 
-.card-border {
-  border: 1px solid #d8d6de;
-  box-shadow: none;
-}
-`;
+export const ComIcones={render:()=>`${styles}<style>.icon-col{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}</style><div class="sort-table"><div class="sort-header" style="grid-template-columns:60px 1fr 120px 120px"><div></div><div class="sort-header-cell active"><span>Disciplina</span><span class="sort-icons active"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Missões</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Média</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${[{d:'Matemática',m:12,me:9.5,icon:'📐',c:'#6E63E8'},{d:'Português',m:8,me:8.8,icon:'📖',c:'#00CFE8'},{d:'Ciências',m:10,me:9.2,icon:'🔬',c:'#28C76F'},{d:'História',m:6,me:8.5,icon:'📜',c:'#FF9F43'}].sort((a,b)=>a.d.localeCompare(b.d)).map(d=>`<div class="sort-row" style="grid-template-columns:60px 1fr 120px 120px"><div><div class="icon-col" style="background:${d.c}20">${d.icon}</div></div><div style="font-weight:600;color:#5E5873;font-size:15px">${d.d}</div><div style="font-weight:600;color:#6E63E8">${d.m} missões</div><div style="font-weight:700;color:#28C76F">${d.me}</div></div>`).join('')}</div>`};
 
-// Template base
-const baseTemplate = `
-<div>
-    <b-card no-body class="">
-      <div class="slot-placeholder">
-      <div class="">
-        <b-row>
-          <!-- Per Page -->
-          <b-col
-            cols="12"
-            md="auto"
-            class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
-          >
-            <label>Sample Text</label>
-            <v-select
-              options=""
-              clearable=""
-              searchable=""
-              class="per-page-selector d-inline-block mx-50"
-            />
-          </b-col>
+export const ComBadges={render:()=>`${styles}<div class="sort-table"><div class="sort-header"><div class="sort-header-cell active"><span>Estudante</span><span class="sort-icons active"><i class="bi bi-caret-down-fill"></i></span></div><div class="sort-header-cell"><span>Conquistas</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>XP Total</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Nível</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${[{n:'João Silva',co:8,xp:3200,nv:12,c:'#6E63E8'},{n:'Maria Costa',co:6,xp:2850,nv:10,c:'#00CFE8'},{n:'Pedro Santos',co:5,xp:2500,nv:9,c:'#28C76F'},{n:'Ana Oliveira',co:7,xp:2950,nv:11,c:'#FF9F43'}].sort((a,b)=>b.n.localeCompare(a.n)).map(s=>`<div class="sort-row"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="display:flex;gap:4px">${'🏆'.repeat(Math.min(3,s.co))}</div><div style="font-weight:700;color:#6E63E8">${s.xp} XP</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${s.c}20;color:${s.c}">Nv ${s.nv}</span></div></div>`).join('')}</div>`};
 
-          <b-col md="auto" class="mb-1 mb-md-0">
-            <b-dropdown
-              text="Primary"
-              variant="outline-primary"
-              toggle-class="d-flex align-items-center gap-1 py-50"
-              block
-            >
-              <div>
-                <span class="material-symbols-outlined"> tune </span>
-                <span class="mr-auto">Classificar e ordenar</span>
-`;
+export const MultiColunas={render:()=>`${styles}<div class="sort-table"><div class="sort-header" style="grid-template-columns:1fr 100px 100px 100px 100px"><div class="sort-header-cell"><span>Estudante</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell active"><span>Mat.</span><span class="sort-icons active"><i class="bi bi-caret-down-fill"></i></span></div><div class="sort-header-cell"><span>Port.</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Ciên.</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Hist.</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${[{n:'Ana',ma:10.0,po:9.5,ci:9.8,hi:9.2,c:'#6E63E8'},{n:'Bruno',ma:9.5,po:8.8,ci:9.0,hi:8.5,c:'#00CFE8'},{n:'Diana',ma:9.2,po:9.8,ci:9.5,hi:9.0,c:'#28C76F'}].sort((a,b)=>b.ma-a.ma).map(s=>`<div class="sort-row" style="grid-template-columns:1fr 100px 100px 100px 100px"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n[0]}</div><div class="student-name">${s.n}</div></div><div style="font-weight:700;color:#6E63E8">${s.ma}</div><div style="font-weight:700;color:#00CFE8">${s.po}</div><div style="font-weight:700;color:#28C76F">${s.ci}</div><div style="font-weight:700;color:#FF9F43">${s.hi}</div></div>`).join('')}</div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
-
-
+export const Completa={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><div><h3 style="margin:0;font-size:20px;font-weight:700;color:#5E5873">Lista de Estudantes</h3><div style="font-size:13px;color:#6E6B7B;margin-top:4px">Clique nos cabeçalhos para ordenar</div></div><button style="padding:8px 16px;background:#6E63E8;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer"><i class="bi bi-download"></i> Exportar</button></div><div class="sort-table"><div class="sort-header"><div class="sort-header-cell active"><span>Estudante</span><span class="sort-icons active"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Turma</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Média</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div><div class="sort-header-cell"><span>Frequência</span><span class="sort-icons"><i class="bi bi-caret-up-fill"></i></span></div></div>${students.sort((a,b)=>a.n.localeCompare(b.n)).map(s=>`<div class="sort-row"><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div><div style="font-size:13px;color:${s.f>=90?'#28C76F':s.f>=75?'#FF9F43':'#EA5455'};font-weight:600">${s.f}%</div></div>`).join('')}</div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Tabela com ordenação local (professor ordenando lista por diferentes critérios).</p>`};

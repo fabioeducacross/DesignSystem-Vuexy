@@ -1,181 +1,28 @@
 /**
- * ListTableAccess - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ListTableAccess
- * @source educacross-frontoffice\src\components\table\ListTableAccess.vue
- * @generated 2026-02-01T21:06:31.070781
- * 
- * Props: None
- * Slots: None
- * Emits: None
+ * ListTableAccess - Access Control Table
  */
 
 export default {
-  title: 'Educacross V2/ListTableAccess',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ListTableAccess
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- Nenhum evento definido
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Tables/ListTableAccess',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.access-table{width:100%;background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden}.access-header{background:#F8F7FA;padding:12px 16px;border-bottom:2px solid #D8D6DE;display:grid;grid-template-columns:1fr 150px 150px 120px;gap:12px;font-weight:600;font-size:13px;color:#5E5873}.access-row{display:grid;grid-template-columns:1fr 150px 150px 120px;gap:12px;padding:12px 16px;border-bottom:1px solid #EBE9F1;align-items:center;transition:.2s}.access-row:hover{background:#F8F8F8}.access-row:last-child{border-bottom:none}.user-info{display:flex;align-items:center;gap:12px}.user-avatar{width:36px;height:36px;border-radius:50%;background:#6E63E8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px}.user-name{font-weight:600;color:#5E5873;font-size:14px}.user-email{font-size:12px;color:#6E6B7B}.badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;display:inline-block}.switch{position:relative;width:44px;height:24px;background:#D8D6DE;border-radius:12px;cursor:pointer;transition:.3s}.switch.active{background:#28C76F}.switch-circle{position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.3s}.switch.active .switch-circle{left:23px}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="access-table"><div class="access-header"><div>Usuário</div><div>Perfil</div><div>Último Acesso</div><div>Status</div></div>${[{n:'Ana Silva',e:'ana@escola.com',p:'Admin',u:'Hoje 10:30',a:true,c:'#6E63E8'},{n:'Bruno Costa',e:'bruno@escola.com',p:'Professor',u:'Hoje 09:15',a:true,c:'#00CFE8'},{n:'Diana Santos',e:'diana@escola.com',p:'Coordenador',u:'Ontem 16:45',a:true,c:'#28C76F'},{n:'Eduardo Lima',e:'eduardo@escola.com',p:'Professor',u:'05/02/2026',a:false,c:'#FF9F43'}].map(u=>`<div class="access-row"><div class="user-info"><div class="user-avatar" style="background:${u.c}">${u.n.split(' ').map(n=>n[0]).join('')}</div><div><div class="user-name">${u.n}</div><div class="user-email">${u.e}</div></div></div><div><span class="badge" style="background:#6E63E820;color:#6E63E8">${u.p}</span></div><div style="font-size:13px;color:#6E6B7B">${u.u}</div><div><div class="switch${u.a?' active':''}"><div class="switch-circle"></div></div></div></div>`).join('')}</div>`};
 
+export const Permissoes={render:()=>`${styles}<style>.permission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-size:12px}.permission-item{display:flex;align-items:center;gap:4px;color:#6E6B7B}.permission-item i{color:#28C76F}</style><div class="access-table"><div class="access-header"><div>Usuário</div><div colspan="3">Permissões</div></div>${[{n:'Ana Silva',p:['Gerenciar Usuários','Criar Missões','Ver Relatórios']},{n:'Bruno Costa',p:['Criar Missões','Ver Alunos']},{n:'Diana Santos',p:['Ver Relatórios','Gerenciar Turmas','Criar Missões']}].map((u,i)=>`<div class="access-row" style="grid-template-columns:200px 1fr"><div class="user-info"><div class="user-avatar" style="background:${['#6E63E8','#00CFE8','#28C76F'][i]}">${u.n.split(' ').map(n=>n[0]).join('')}</div><div class="user-name">${u.n}</div></div><div class="permission-grid">${u.p.map(p=>`<div class="permission-item"><i class="bi bi-check-circle-fill"></i>${p}</div>`).join('')}</div></div>`).join('')}</div>`};
 
-.cell-access-content {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.less-activity {
-  background-color: #f9a9a9;
-}
-.some-activity {
-  background-color: #fac2ae;
-}
-.half-activity {
-  background-color: #cbe3ab;
-}
-.almost-full-activity {
-  background-color: #8fcf9b;
-}
-.per-page-selector {
-  width: 90px;
-  min-width: 90px;
-}
-`;
+export const ComFiltro={render:()=>`${styles}<style>.filter-bar{display:flex;gap:12px;padding:16px;background:#F8F7FA;border-bottom:1px solid #D8D6DE}.filter-select{padding:8px 12px;border-radius:6px;border:1px solid #D8D6DE;background:#fff;font-size:13px}</style><div class="access-table"><div class="filter-bar"><select class="filter-select"><option>Todos os Perfis</option><option>Admin</option><option>Professor</option><option>Coordenador</option></select><select class="filter-select"><option>Todos Status</option><option>Ativos</option><option>Inativos</option></select><input type="text" placeholder="Buscar usuário..." class="filter-select" style="flex:1"></div><div class="access-header"><div>Usuário</div><div>Perfil</div><div>Último Acesso</div><div>Status</div></div>${[{n:'Ana Silva',e:'ana@escola.com',p:'Admin',u:'Hoje',a:true}].map(u=>`<div class="access-row"><div class="user-info"><div class="user-avatar">${u.n.split(' ').map(n=>n[0]).join('')}</div><div><div class="user-name">${u.n}</div><div class="user-email">${u.e}</div></div></div><div><span class="badge" style="background:#6E63E820;color:#6E63E8">${u.p}</span></div><div style="font-size:13px;color:#6E6B7B">${u.u}</div><div><div class="switch active"><div class="switch-circle"></div></div></div></div>`).join('')}</div>`};
 
-// Template base
-const baseTemplate = `
-<b-card no-body>
-    <div class="m-2">
-      <b-row>
-        <!-- Per Page -->
-        <b-col
-          cols="12"
-          md="auto"
-          class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
-        >
-          <label>Sample Text</label>
-          <v-select
-            options=""
-            clearable=""
-            searchable=""
-            class="per-page-selector d-inline-block mx-50"
-          />
-        </b-col>
+export const Hierarquia={render:()=>`${styles}<style>.hierarchy-badge{padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;text-transform:uppercase}</style><div class="access-table"><div class="access-header"><div>Usuário</div><div>Nível</div><div>Subordinados</div><div>Status</div></div>${[{n:'Maria Diretora',p:'Nível 1',s:3,b:'#6E63E8'},{n:'João Coordenador',p:'Nível 2',s:5,b:'#00CFE8'},{n:'Ana Professora',p:'Nível 3',s:0,b:'#28C76F'}].map(u=>`<div class="access-row"><div class="user-info"><div class="user-avatar" style="background:${u.b}">${u.n.split(' ').map(n=>n[0]).join('')}</div><div class="user-name">${u.n}</div></div><div><span class="hierarchy-badge" style="background:${u.b};color:#fff">${u.p}</span></div><div style="font-weight:600;color:#6E63E8">${u.s} usuários</div><div><div class="switch active"><div class="switch-circle"></div></div></div></div>`).join('')}</div>`};
 
-        <!-- Search / Export -->
-        <b-col cols="12" md>
-          <b-row align-h="end" align-v="center">
-            <b-col cols="12" sm="auto">
-              <b-button
-                variant="outline-primary"
-                size="sm"
-                class="w-100 mt-2 mt-sm-0"
-                class=""
-                style="height: 38px"
-                disabled=""
-              >
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                  <b-spinner small></b-spinner>
-                  <span
-                    class="material-symbols-outlined"
-                    style="font-size: 22px"
-                  >
-                    ios_share
-                  </span>
-                  <span>Exportar em Excel</span>
-                </div>
-              </b-button>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-    </div>
-    <b-skeleton-table columns="" rows="" class="" />
-    <b-table
-      id="table-access"
-      class="position-relative"
-      items=""
-      fields=""
-      :per-page="perPage"
-      :current-page="currentPage"
-      :sort-by.sync="sortBy"
-      :sort-desc.sync="sortDesc"
-      striped
-      responsive
-      tbody-class="text-black"
-    >
-      <div>
-        <div
-          v-b-tooltip.html
-          title=""
-          class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase"
-        >
-          Sample Text
-          <span
-            class="material-symbols-outlined head-icon-info"
-            style="font-size: 16px"
-          >
-            info
-          </span>
-        </div>
-`;
+export const Logs={render:()=>`${styles}<style>.log-badge{padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600}</style><div class="access-table"><div class="access-header"><div>Usuário</div><div>Ação</div><div>Data/Hora</div><div>IP</div></div>${[{n:'Ana Silva',a:'Login',d:'Hoje 10:30',ip:'192.168.1.10',c:'#28C76F'},{n:'Bruno Costa',a:'Criar Missão',d:'Hoje 09:45',ip:'192.168.1.25',c:'#6E63E8'},{n:'Diana Santos',a:'Editar Turma',d:'Hoje 09:20',ip:'192.168.1.18',c:'#00CFE8'},{n:'Eduardo Lima',a:'Login Failed',d:'Ontem 23:50',ip:'177.45.32.8',c:'#EA5455'}].map(l=>`<div class="access-row"><div class="user-info"><div class="user-avatar" style="background:${l.c}">${l.n.split(' ').map(n=>n[0]).join('')}</div><div class="user-name">${l.n}</div></div><div><span class="log-badge" style="background:${l.c}20;color:${l.c}">${l.a}</span></div><div style="font-size:13px;color:#6E6B7B">${l.d}</div><div style="font-size:12px;color:#6E6B7B;font-family:monospace">${l.ip}</div></div>`).join('')}</div>`};
 
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
+export const Convites={render:()=>`${styles}<style>.invite-btn{padding:6px 12px;border-radius:6px;border:none;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}</style><div class="access-table"><div class="access-header"><div>Email Convidado</div><div>Perfil</div><div>Enviado Em</div><div>Ação</div></div>${[{e:'novo@escola.com',p:'Professor',d:'Hoje'},{e:'outro@escola.com',p:'Coordenador',d:'Ontem'}].map(i=>`<div class="access-row"><div style="font-weight:600;color:#6E6B7B">${i.e}</div><div><span class="badge" style="background:#FF9F4320;color:#FF9F43">${i.p}</span></div><div style="font-size:13px;color:#6E6B7B">${i.d}</div><div><button class="invite-btn" style="background:#6E63E8;color:#fff">Reenviar</button></div></div>`).join('')}</div>`};
 
+export const Compacta={render:()=>`${styles}<div class="access-table" style="font-size:13px"><div class="access-header" style="padding:10px 12px"><div>Usuário</div><div>Perfil</div><div>Status</div></div>${[{n:'Ana Silva',p:'Admin',a:true},{n:'Bruno Costa',p:'Professor',a:true},{n:'Diana Santos',p:'Coordenador',a:false}].map((u,i)=>`<div class="access-row" style="padding:10px 12px;grid-template-columns:1fr 120px 80px"><div class="user-info" style="gap:8px"><div class="user-avatar" style="width:32px;height:32px;font-size:12px;background:${['#6E63E8','#00CFE8','#28C76F'][i]}">${u.n.split(' ').map(n=>n[0]).join('')}</div><div class="user-name" style="font-size:13px">${u.n}</div></div><div><span class="badge" style="padding:3px 8px;font-size:11px;background:#6E63E820;color:#6E63E8">${u.p}</span></div><div><div class="switch${u.a?' active':''}" style="width:36px;height:20px"><div class="switch-circle" style="width:14px;height:14px"></div></div></div></div>`).join('')}</div>`};
 
+export const Completa={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><div><h3 style="margin:0;font-size:20px;font-weight:700;color:#5E5873">Controle de Acesso</h3><div style="font-size:13px;color:#6E6B7B;margin-top:4px">4 usuários ativos • 1 inativo</div></div><button style="padding:10px 20px;background:#6E63E8;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer"><i class="bi bi-plus-lg"></i> Adicionar Usuário</button></div><div class="access-table"><div class="access-header"><div>Usuário</div><div>Perfil</div><div>Último Acesso</div><div>Status</div></div>${[{n:'Ana Silva',e:'ana@escola.com',p:'Admin',u:'Hoje 10:30',a:true,c:'#6E63E8'},{n:'Bruno Costa',e:'bruno@escola.com',p:'Professor',u:'Hoje 09:15',a:true,c:'#00CFE8'},{n:'Diana Santos',e:'diana@escola.com',p:'Coordenador',u:'Ontem 16:45',a:true,c:'#28C76F'},{n:'Eduardo Lima',e:'eduardo@escola.com',p:'Professor',u:'05/02/2026',a:false,c:'#6E6B7B'}].map(u=>`<div class="access-row"><div class="user-info"><div class="user-avatar" style="background:${u.c}">${u.n.split(' ').map(n=>n[0]).join('')}</div><div><div class="user-name">${u.n}</div><div class="user-email">${u.e}</div></div></div><div><span class="badge" style="background:#6E63E820;color:#6E63E8">${u.p}</span></div><div style="font-size:13px;color:#6E6B7B">${u.u}</div><div><div class="switch${u.a?' active':''}"><div class="switch-circle"></div></div></div></div>`).join('')}</div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Gestão de acessos (admin gerenciando permissões de usuários).</p>`};

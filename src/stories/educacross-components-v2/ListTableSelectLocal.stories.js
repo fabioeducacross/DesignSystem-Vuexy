@@ -1,165 +1,28 @@
 /**
- * ListTableSelectLocal - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ListTableSelectLocal
- * @source educacross-frontoffice\src\components\table\ListTableSelectLocal.vue
- * @generated 2026-02-01T21:06:31.090825
- * 
- * Props: None
- * Slots: header
- * Emits: input
+ * ListTableSelectLocal - Local Selection Table
  */
 
 export default {
-  title: 'Educacross V2/ListTableSelectLocal',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ListTableSelectLocal
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- **header**
-
-### Events
-- **input**
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Tables/ListTableSelectLocal',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.local-select-table{width:100%;background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden}.local-header{background:#F8F7FA;padding:12px 16px;border-bottom:2px solid #D8D6DE;display:grid;grid-template-columns:48px 1fr 150px 120px;gap:12px;font-weight:600;font-size:13px;color:#5E5873;align-items:center}.local-row{display:grid;grid-template-columns:48px 1fr 150px 120px;gap:12px;padding:12px 16px;border-bottom:1px solid #EBE9F1;align-items:center;transition:.2s;cursor:pointer}.local-row:hover{background:#F8F8F8}.local-row.selected{background:#E8F5E9;border-left:3px solid #28C76F}.local-row:last-child{border-bottom:none}.checkbox{width:20px;height:20px;border:2px solid #D8D6DE;border-radius:4px;cursor:pointer;position:relative;transition:.2s}.checkbox.checked{background:#28C76F;border-color:#28C76F}.checkbox.checked:after{content:'✓';color:#fff;font-size:14px;font-weight:700;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.item-info{display:flex;align-items:center;gap:12px}.item-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}.item-name{font-weight:600;color:#5E5873;font-size:14px}.selection-summary{padding:12px 16px;background:#E8F5E9;border-top:1px solid #28C76F;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#28C76F;font-weight:600}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox"></div></div><div>Item</div><div>Quantidade</div><div>Valor</div></div>${[{i:'Cadernos',q:50,v:'R$ 250',icon:'📓',c:'#6E63E8'},{i:'Canetas',q:120,v:'R$ 180',icon:'✒️',c:'#00CFE8'},{i:'Lápis',q:200,v:'R$ 100',icon:'✏️',c:'#28C76F'}].map((item,idx)=>`<div class="local-row${idx===0?' selected':''}"><div><div class="checkbox${idx===0?' checked':''}"></div></div><div class="item-info"><div class="item-icon" style="background:${item.c}20">${item.icon}</div><div class="item-name">${item.i}</div></div><div style="font-size:13px;color:#6E6B7B">${item.q} un.</div><div style="font-weight:600;color:#5E5873">${item.v}</div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 1 item selecionado</div></div>`};
 
+export const Multiplos={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox checked"></div></div><div>Material</div><div>Quantidade</div><div>Total</div></div>${[{i:'Livros Didáticos',q:35,v:'R$ 1.750',icon:'📚',c:'#6E63E8'},{i:'Atlas Geográfico',q:35,v:'R$ 875',icon:'🗺️',c:'#00CFE8'},{i:'Calculadoras',q:35,v:'R$ 525',icon:'🔢',c:'#28C76F'}].map(item=>`<div class="local-row selected"><div><div class="checkbox checked"></div></div><div class="item-info"><div class="item-icon" style="background:${item.c}20">${item.icon}</div><div class="item-name">${item.i}</div></div><div style="font-size:13px;color:#6E6B7B">${item.q}</div><div style="font-weight:700;color:#28C76F">${item.v}</div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 3 itens selecionados • Total: R$ 3.150</div></div>`};
 
+export const Recursos={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox"></div></div><div>Recurso Didático</div><div>Disponível</div><div>Status</div></div>${[{r:'Projetor Multimídia',d:5,s:'Disponível',icon:'📽️',c:'#28C76F',sel:true},{r:'Laboratório de Ciências',d:2,s:'Disponível',icon:'🔬',c:'#28C76F',sel:true},{r:'Quadra Esportiva',d:1,s:'Reservado',icon:'⚽',c:'#FF9F43',sel:false}].map(r=>`<div class="local-row${r.sel?' selected':''}"><div><div class="checkbox${r.sel?' checked':''}"></div></div><div class="item-info"><div class="item-icon" style="background:${r.c}20">${r.icon}</div><div class="item-name">${r.r}</div></div><div style="font-size:13px;color:#6E6B7B">${r.d} un.</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${r.c}20;color:${r.c}">${r.s}</span></div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 2 recursos selecionados</div></div>`};
 
+export const Atividades={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox checked"></div></div><div>Atividade</div><div>Duração</div><div>Tipo</div></div>${[{a:'Leitura de Texto',d:'30 min',t:'Individual',icon:'📖',c:'#6E63E8'},{a:'Discussão em Grupo',d:'45 min',t:'Grupo',icon:'💬',c:'#00CFE8'},{a:'Exercícios Práticos',d:'60 min',t:'Individual',icon:'✍️',c:'#28C76F'}].map(a=>`<div class="local-row selected"><div><div class="checkbox checked"></div></div><div class="item-info"><div class="item-icon" style="background:${a.c}20">${a.icon}</div><div class="item-name">${a.a}</div></div><div style="font-size:13px;color:#6E6B7B">${a.d}</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${a.c}20;color:${a.c}">${a.t}</span></div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 3 atividades • Tempo total: 2h 15min</div></div>`};
 
-  .selectItems {
-    color: inherit;
-  }
-  .checkbox-container {
-    top: 1rem;
-    right: 1rem;
-  }
-  .searchQuery {
-    border-left: 0;
-    padding-left: 0;
-  }
-  #searchQueryIcon {
-    .material-symbols-outlined {
-      font-size: 18px;
-    }
-  }
-  .per-page-selector {
-    width: 90px;
-    min-width: 90px;
-  }
+export const Topicos={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox"></div></div><div>Tópico BNCC</div><div>Ano</div><div>Disciplina</div></div>${[{t:'Operações com Frações',a:'7º',d:'Matemática',sel:true,c:'#6E63E8'},{t:'Verbos no Pretérito',a:'8º',d:'Português',sel:true,c:'#00CFE8'},{t:'Ciclo da Água',a:'6º',d:'Ciências',sel:false,c:'#28C76F'}].map(t=>`<div class="local-row${t.sel?' selected':''}"><div><div class="checkbox${t.sel?' checked':''}"></div></div><div style="font-weight:600;color:#5E5873">${t.t}</div><div style="font-size:13px;color:#6E6B7B">${t.a} Ano</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${t.c}20;color:${t.c}">${t.d}</span></div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 2 tópicos selecionados</div></div>`};
 
-  .selectable-card-container {
-    flex: 1 1 auto;
-    .card {
-      flex: 1 1 auto;
-    }
-  }
+export const ComBusca={render:()=>`${styles}<style>.search-bar{padding:12px 16px;background:#F8F7FA;border-bottom:1px solid #D8D6DE}.search-bar input{width:100%;padding:8px 12px 8px 36px;border-radius:6px;border:1px solid #D8D6DE;font-size:13px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236E6B7B'%3E%3Cpath d='M11.7 10.3l3.6 3.6-1.4 1.4-3.6-3.6a6 6 0 1 1 1.4-1.4zM7 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z'/%3E%3C/svg%3E") no-repeat 10px center}</style><div class="local-select-table"><div class="search-bar"><input type="text" placeholder="Buscar item..." value="Livro"></div><div class="local-header"><div><div class="checkbox"></div></div><div>Item</div><div>Quantidade</div><div>Valor</div></div>${[{i:'Livros Didáticos',q:35,v:'R$ 1.750',icon:'📚',c:'#6E63E8',sel:true}].map(item=>`<div class="local-row selected"><div><div class="checkbox checked"></div></div><div class="item-info"><div class="item-icon" style="background:${item.c}20">${item.icon}</div><div class="item-name">${item.i}</div></div><div style="font-size:13px;color:#6E6B7B">${item.q}</div><div style="font-weight:600;color:#5E5873">${item.v}</div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 1 item encontrado e selecionado</div></div>`};
 
-  .selectAll-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+export const Vazio={render:()=>`${styles}<div class="local-select-table"><div class="local-header"><div><div class="checkbox"></div></div><div>Item</div><div>Quantidade</div><div>Valor</div></div><div style="padding:60px 20px;text-align:center;border-bottom:1px solid #EBE9F1"><svg width="80" height="80" style="opacity:0.3;margin:0 auto 12px"><circle fill="#E8E8E8" cx="40" cy="40" r="40"/><path fill="#6E6B7B" d="M25 30 H55 V35 H25 Z M25 40 H55 V45 H25 Z M25 50 H40 V55 H25 Z"/></svg><div style="font-size:14px;font-weight:600;color:#5E5873;margin-bottom:6px">Nenhum Item Disponível</div><div style="font-size:13px;color:#6E6B7B">Adicione itens para começar a seleção.</div></div></div>`};
 
-    width: 100%;
-
-    border-top: 1px solid inherit;
-
-    padding: 1rem 2rem;
-    padding: 1rem 1.175rem;
-
-    @media (max-width: 576px) {
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-  .border-arround {
-    border: 1px solid #dae1e7;
-  }
-`;
-
-// Template base
-const baseTemplate = `
-<div>
-    <b-card no-body class="">
-      <div class="slot-placeholder">
-      <b-row class="p-2">
-        <!-- Per Page -->
-        <b-col
-          cols="12"
-          md="auto"
-          class="d-flex align-items-center flex-wrap justify-content-start mb-1 mb-md-0"
-        >
-          <label>Sample Text</label>
-          <v-select
-            options=""
-            clearable=""
-            searchable=""
-            class="per-page-selector d-inline-block mx-50"
-          />
-        </b-col>
-
-        <!-- Search -->
-        <b-col cols="12" md>
-          <b-row align-h="end" align-v="center">
-            <b-col style="max-width: 520px">
-              <b-input-group>
-                <div>
-                  <b-input-group-text
-                    id="searchQueryIcon"
-                  >
-                    <span class="material-symbols-outlined"> search </span>
-                  </b-input-group-text>
-`;
-
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
-
-
+export const Completa={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><div><h3 style="margin:0;font-size:20px;font-weight:700;color:#5E5873">Selecionar Materiais</h3><div style="font-size:13px;color:#6E6B7B;margin-top:4px">Escolha os materiais para o pedido</div></div><button style="padding:8px 16px;background:#28C76F;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer"><i class="bi bi-check-lg"></i> Confirmar Seleção</button></div><div class="local-select-table"><div class="local-header"><div><div class="checkbox checked"></div></div><div>Material</div><div>Quantidade</div><div>Total</div></div>${[{i:'Livros Didáticos',q:35,v:'R$ 1.750',icon:'📚',c:'#6E63E8'},{i:'Cadernos',q:50,v:'R$ 250',icon:'📓',c:'#00CFE8'},{i:'Canetas',q:120,v:'R$ 180',icon:'✒️',c:'#28C76F'}].map(item=>`<div class="local-row selected"><div><div class="checkbox checked"></div></div><div class="item-info"><div class="item-icon" style="background:${item.c}20">${item.icon}</div><div class="item-name">${item.i}</div></div><div style="font-size:13px;color:#6E6B7B">${item.q}</div><div style="font-weight:700;color:#28C76F">${item.v}</div></div>`).join('')}<div class="selection-summary"><i class="bi bi-check-circle-fill"></i> 3 itens selecionados • Valor total: R$ 2.180</div></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Seleção local (coordenador escolhendo materiais para pedido, sem API).</p>`};

@@ -1,164 +1,28 @@
 /**
- * ListTableSelect - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
- * 
- * @component ListTableSelect
- * @source educacross-frontoffice\src\components\table\ListTableSelect.vue
- * @generated 2026-02-01T21:06:31.087422
- * 
- * Props: None
- * Slots: header
- * Emits: input, change
+ * ListTableSelect - Table with Multiple Selection
  */
 
 export default {
-  title: 'Educacross V2/ListTableSelect',
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## ListTableSelect
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- **header**
-
-### Events
-- **input**
-- **change**
-        `
-      }
-    }
-  }
+  title: 'Educacross Components V2/Tables/ListTableSelect',
+  tags: ['autodocs']
 };
 
-// Estilos inline do componente
-const componentStyles = `
+const styles = `<style>
+.select-table{width:100%;background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden}.select-header{background:#F8F7FA;padding:12px 16px;border-bottom:2px solid #D8D6DE;display:grid;grid-template-columns:48px 1fr 150px 120px;gap:12px;font-weight:600;font-size:13px;color:#5E5873;align-items:center}.select-row{display:grid;grid-template-columns:48px 1fr 150px 120px;gap:12px;padding:12px 16px;border-bottom:1px solid #EBE9F1;align-items:center;transition:.2s;cursor:pointer}.select-row:hover{background:#F8F8F8}.select-row.selected{background:#6E63E810}.select-row:last-child{border-bottom:none}.checkbox{width:20px;height:20px;border:2px solid #D8D6DE;border-radius:4px;cursor:pointer;position:relative;transition:.2s}.checkbox.checked{background:#6E63E8;border-color:#6E63E8}.checkbox.checked:after{content:'✓';color:#fff;font-size:14px;font-weight:700;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.student-info{display:flex;align-items:center;gap:12px}.student-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;color:#fff}.student-name{font-weight:600;color:#5E5873;font-size:14px}.actions-bar{padding:12px 16px;background:#F8F7FA;border-top:1px solid #D8D6DE;display:flex;justify-content:space-between;align-items:center}.btn{padding:8px 16px;border-radius:6px;border:none;font-weight:600;font-size:13px;cursor:pointer;transition:.2s}.btn-primary{background:#6E63E8;color:#fff}.btn-secondary{background:#E8E8E8;color:#5E5873}
+</style>`;
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+export const Default={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox"></div></div><div>Estudante</div><div>Turma</div><div>Média</div></div>${[{n:'Ana Silva',t:'8ºA',m:9.5,c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',m:8.8,c:'#00CFE8'},{n:'Diana Santos',t:'8ºA',m:9.2,c:'#28C76F'}].map((s,i)=>`<div class="select-row"><div><div class="checkbox${i===0?' checked':''}"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div></div>`).join('')}</div>`};
 
+export const TodosSelecionados={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox checked"></div></div><div>Estudante</div><div>Turma</div><div>Média</div></div>${[{n:'Ana Silva',t:'8ºA',m:9.5,c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',m:8.8,c:'#00CFE8'},{n:'Diana Santos',t:'8ºA',m:9.2,c:'#28C76F'}].map(s=>`<div class="select-row selected"><div><div class="checkbox checked"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div></div>`).join('')}</div>`};
 
+export const ComAcoes={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox checked"></div></div><div>Estudante</div><div>Turma</div><div>Status</div></div>${[{n:'Ana Silva',t:'8ºA',s:'Ativo',c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',s:'Ativo',c:'#00CFE8'}].map(s=>`<div class="select-row selected"><div><div class="checkbox checked"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-size:13px;color:#28C76F">${s.s}</div></div>`).join('')}<div class="actions-bar"><div style="font-size:13px;color:#6E6B7B"><strong style="color:#5E5873">2</strong> estudantes selecionados</div><div style="display:flex;gap:8px"><button class="btn btn-secondary">Cancelar</button><button class="btn btn-primary">Adicionar à Missão</button></div></div></div>`};
 
+export const Parcial={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox" style="background:#6E63E8;opacity:0.5"></div></div><div>Estudante</div><div>Turma</div><div>Média</div></div>${[{n:'Ana Silva',t:'8ºA',m:9.5,sel:true,c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',m:8.8,sel:false,c:'#00CFE8'},{n:'Diana Santos',t:'8ºA',m:9.2,sel:true,c:'#28C76F'},{n:'Eduardo Lima',t:'9ºA',m:8.5,sel:false,c:'#FF9F43'}].map(s=>`<div class="select-row${s.sel?' selected':''}"><div><div class="checkbox${s.sel?' checked':''}"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div></div>`).join('')}</div>`};
 
-.selectItems {
-  color: inherit;
-}
-.checkbox-container {
-  top: 1rem;
-  right: 1rem;
-}
-.searchQuery {
-  border-left: 0;
-  padding-left: 0;
-}
-#searchQueryIcon {
-  .material-symbols-outlined {
-    font-size: 18px;
-  }
-}
-.per-page-selector {
-  width: 90px;
-  min-width: 90px;
-}
+export const MultiSelecao={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox checked"></div></div><div>Missão</div><div>Data Limite</div><div>Status</div></div>${[{m:'Frações Básicas',d:'10/02/2026',s:'Aberta',sel:true,c:'#28C76F'},{m:'Verbos e Conjugações',d:'12/02/2026',s:'Aberta',sel:true,c:'#6E63E8'},{m:'Sistema Solar',d:'15/02/2026',s:'Rascunho',sel:true,c:'#FF9F43'}].map(m=>`<div class="select-row selected"><div><div class="checkbox checked"></div></div><div style="font-weight:600;color:#5E5873">${m.m}</div><div style="font-size:13px;color:#6E6B7B">${m.d}</div><div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:${m.c}20;color:${m.c}">${m.s}</span></div></div>`).join('')}<div class="actions-bar"><div style="font-size:13px;color:#6E6B7B"><strong style="color:#5E5873">3</strong> missões selecionadas</div><div style="display:flex;gap:8px"><button class="btn btn-secondary">Duplicar</button><button class="btn btn-primary" style="background:#EA5455">Excluir</button></div></div></div>`};
 
-.selectable-card-container {
-  flex: 1 1 auto;
-  .card {
-    flex: 1 1 auto;
-  }
-}
+export const ComFiltro={render:()=>`${styles}<style>.filter{display:flex;gap:12px;padding:12px 16px;background:#F8F7FA;border-bottom:1px solid #D8D6DE}.filter input{padding:8px 12px;border-radius:6px;border:1px solid #D8D6DE;flex:1;font-size:13px}</style><div class="select-table"><div class="filter"><input type="text" placeholder="Buscar estudante..."><select style="padding:8px 12px;border-radius:6px;border:1px solid #D8D6DE"><option>Todas Turmas</option><option>8º Ano A</option><option>8º Ano B</option></select></div><div class="select-header"><div><div class="checkbox"></div></div><div>Estudante</div><div>Turma</div><div>Média</div></div>${[{n:'Ana Silva',t:'8ºA',m:9.5,c:'#6E63E8'}].map(s=>`<div class="select-row"><div><div class="checkbox"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div></div>`).join('')}</div>`};
 
-.selectAll-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid inherit;
+export const Exportar={render:()=>`${styles}<div class="select-table"><div class="select-header"><div><div class="checkbox checked"></div></div><div>Estudante</div><div>Email</div><div>Turma</div></div>${[{n:'Ana Silva',e:'ana@aluno.com',t:'8ºA',c:'#6E63E8'},{n:'Bruno Costa',e:'bruno@aluno.com',t:'8ºB',c:'#00CFE8'}].map(s=>`<div class="select-row selected"><div><div class="checkbox checked"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.e}</div><div style="font-size:13px;color:#6E6B7B">${s.t}</div></div>`).join('')}<div class="actions-bar"><div style="font-size:13px;color:#6E6B7B"><strong style="color:#5E5873">2</strong> selecionados</div><div style="display:flex;gap:8px"><button class="btn btn-secondary"><i class="bi bi-file-earmark-excel"></i> Excel</button><button class="btn btn-secondary"><i class="bi bi-file-earmark-pdf"></i> PDF</button><button class="btn btn-primary"><i class="bi bi-envelope"></i> Enviar Email</button></div></div></div>`};
 
-  padding: 1rem 2rem;
-  padding: 1rem 1.175rem;
-
-  @media (max-width: 576px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.border-arround {
-  border: 1px solid #dae1e7;
-}
-`;
-
-// Template base
-const baseTemplate = `
-<div>
-    <b-card no-body class="">
-      <div class="slot-placeholder">
-      <b-row class="p-2">
-        <!-- Per Page -->
-        <b-col
-          cols="12"
-          md="auto"
-          class="d-flex align-items-center flex-wrap justify-content-start mb-1 mb-md-0"
-        >
-          <label>Sample Text</label>
-          <v-select
-            options=""
-            clearable=""
-            searchable=""
-            class="per-page-selector d-inline-block mx-50"
-          />
-        </b-col>
-
-        <!-- Search -->
-        <b-col cols="12" md>
-          <b-row align-h="end" align-v="center">
-            <b-col style="max-width: 520px">
-              <b-input-group>
-                <div>
-                  <b-input-group-text
-                    id="searchQueryIcon"
-                  >
-                    <span class="material-symbols-outlined"> search </span>
-                  </b-input-group-text>
-`;
-
-// Story: Default
-export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
-};
-
-
+export const Completa={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><div><h3 style="margin:0;font-size:20px;font-weight:700;color:#5E5873">Selecionar Alunos</h3><div style="font-size:13px;color:#6E6B7B;margin-top:4px">Selecione os alunos para adicionar à missão</div></div></div><div class="select-table"><div class="select-header"><div><div class="checkbox checked"></div></div><div>Estudante</div><div>Turma</div><div>Média</div></div>${[{n:'Ana Silva',t:'8ºA',m:9.5,c:'#6E63E8'},{n:'Bruno Costa',t:'8ºB',m:8.8,c:'#00CFE8'},{n:'Diana Santos',t:'8ºA',m:9.2,c:'#28C76F'}].map(s=>`<div class="select-row selected"><div><div class="checkbox checked"></div></div><div class="student-info"><div class="student-avatar" style="background:${s.c}">${s.n.split(' ').map(n=>n[0]).join('')}</div><div class="student-name">${s.n}</div></div><div style="font-size:13px;color:#6E6B7B">${s.t}</div><div style="font-weight:700;color:#28C76F">${s.m}</div></div>`).join('')}<div class="actions-bar"><div style="font-size:13px;color:#6E6B7B"><strong style="color:#5E5873">3</strong> alunos selecionados</div><div style="display:flex;gap:8px"><button class="btn btn-secondary">Cancelar</button><button class="btn btn-primary">Adicionar à Missão</button></div></div></div></div><p style="margin-top:12px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Seleção de alunos (professor adicionando estudantes a uma missão).</p>`};
