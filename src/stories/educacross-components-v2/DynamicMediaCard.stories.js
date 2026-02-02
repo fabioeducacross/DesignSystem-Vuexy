@@ -1,90 +1,5 @@
 /**
- * DynamicMediaCard - Card com Animação de Números
- * =================================================
- * Card de métrica que anima mudanças de valores dinamicamente (CountUp effect)
- * 
- * @component DynamicMediaCard
- * @source educacross-frontoffice/src/components/card/DynamicMediaCard.vue
- * @category Cards
- * @priority P1 - Core UI
- * 
- * ## Contexto Educacional
- * - **Professor**: Dashboard em tempo real com métricas que mudam durante o dia
- * - **Coordenador**: Comparação mensal/anual com animação de diferenças
- * - **Aluno**: Progresso pessoal com feedback visual de evolução
- * 
- * ## Casos de Uso
- * - Dashboard em tempo real (alunos online, missões sendo completadas)
- * - Comparação de períodos (mês atual vs anterior)
- * - Feedback imediato de ações (+ pontos, + conquistas)
- * - Métricas financeiras (investimento por aluno)
- * - Indicadores de performance educacional
- * 
- * ## Props API
- * @prop {string} title - Título da métrica (ex: "Alunos Ativos")
- * @prop {number} value - Valor atual da métrica
- * @prop {number} previousValue - Valor anterior (para animação)
- * @prop {number} animationDuration - Duração da animação em ms (default: 2000)
- * @prop {string} icon - Ícone Bootstrap Icons
- * @prop {string} color - Cor: 'primary', 'success', 'warning', 'danger', 'info'
- * @prop {string} format - Formato: 'number', 'percentage', 'currency'
- * @prop {boolean} loading - Estado de carregamento
- * 
- * ## Figma Design Specs
- * 
- * ### Dimensões
- * - **Card**: Width 100%, min-height 180px, padding 24px
- * - **Icon Container**: 64x64px, border-radius 12px
- * - **Icon**: font-size 32px
- * - **Gap**: 16px entre elementos
- * 
- * ### Cores
- * Mesmas do MediaCardIcon (primary, success, warning, danger, info)
- * 
- * ### Tipografia
- * - **Title**: font-size 14px, font-weight 500, color #6E6B7B
- * - **Value**: font-size 36px, font-weight 700, color #5E5873, line-height 1
- * - **Previous Value**: font-size 12px, font-weight 400, color #B9B9C3
- * 
- * ### Animação
- * - **CountUp**: Número anima de previousValue → value
- * - **Duration**: 2000ms (2 segundos)
- * - **Easing**: ease-out
- * - **Format**: Number (1.234), Percentage (45%), Currency (R$ 1.234,56)
- * 
- * ### Estados
- * - **Default**: Border cinza, fundo branco
- * - **Animating**: Cor da variant com destaque
- * - **Loading**: Skeleton com pulse
- * - **Error**: Border vermelho, ícone de erro
- * 
- * ### Acessibilidade
- * - Role: article
- * - aria-live: polite (anuncia mudanças)
- * - aria-label: descrição completa
- * - Screen reader: anuncia valor final após animação
- * 
- * ## Integração Vue 2.7
- * ```vue
- * <DynamicMediaCard
- *   title="Alunos Ativos"
- *   :value="156"
- *   :previous-value="138"
- *   icon="bi-people"
- *   color="primary"
- *   format="number"
- *   :animation-duration="2000"
- * />
- * 
- * <DynamicMediaCard
- *   title="Taxa de Conclusão"
- *   :value="92.5"
- *   :previous-value="85.3"
- *   icon="bi-check-circle"
- *   color="success"
- *   format="percentage"
- * />
- * ```
+ * DynamicMediaCard - Animated Metric Card
  */
 
 export default {
@@ -95,356 +10,483 @@ export default {
     docs: {
       description: {
         component: `
-Card de métrica com animação CountUp para mudanças dinâmicas de valores.
+Card de métrica com animação dinâmica (CountUp effect) para dashboards em tempo real.
 
-### Features
-- ✅ Animação CountUp (previousValue → value)
-- ✅ 3 formatos (number, percentage, currency)
-- ✅ 5 cores (primary, success, warning, danger, info)
-- ✅ Duração configurável
-- ✅ Loading skeleton
-- ✅ Estados: default, animating, loading
-- ✅ Acessibilidade (aria-live, screen reader)
-- ✅ Contexto educacional (tempo real, comparação)
+## Props
+| Prop | Type |
+|------|------|
+| title | String |
+| value | Number |
+| previousValue | Number |
+| format | String |
+| icon | String |
+| color | String |
         `
       }
     }
   },
   argTypes: {
-    title: {
-      control: 'text',
-      description: 'Título da métrica',
-      table: {
-        type: { summary: 'string' }
-      }
-    },
-    value: {
-      control: 'number',
-      description: 'Valor atual',
-      table: {
-        type: { summary: 'number' }
-      }
-    },
-    previousValue: {
-      control: 'number',
-      description: 'Valor anterior (para animação)',
-      table: {
-        type: { summary: 'number' }
-      }
-    },
     format: {
       control: 'select',
-      options: ['number', 'percentage', 'currency'],
-      description: 'Formato de exibição',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'number' }
-      }
+      options: ['number', 'percentage', 'currency']
     },
     color: {
       control: 'select',
-      options: ['primary', 'success', 'warning', 'danger', 'info'],
-      description: 'Cor do card',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'primary' }
-      }
-    },
-    icon: {
-      control: 'text',
-      description: 'Ícone Bootstrap Icons',
-      table: {
-        type: { summary: 'string' }
-      }
-    },
-    animationDuration: {
-      control: 'number',
-      description: 'Duração da animação em ms',
-      table: {
-        type: { summary: 'number' },
-        defaultValue: { summary: '2000' }
-      }
-    },
-    loading: {
-      control: 'boolean',
-      description: 'Estado de carregamento',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' }
-      }
+      options: ['primary', 'success', 'warning', 'danger']
     }
   }
 };
 
-// Estilos Figma CSS
-const componentStyles = `
-/* Card Container */
-.dynamic-media-card {
-  background: white;
-  border: 1px solid #EBE9F1;
-  border-radius: 8px;
-  padding: 24px;
-  min-height: 180px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  transition: all 0.3s ease;
-}
-
-.dynamic-media-card:hover {
-  box-shadow: 0 4px 24px rgba(34, 41, 47, 0.12);
-}
-
-/* Icon Container */
-.dynamic-icon-container {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 32px;
-}
-
-.dynamic-icon-container.primary {
-  background: rgba(110, 99, 232, 0.12);
-  color: #6E63E8;
-}
-
-.dynamic-icon-container.success {
-  background: rgba(40, 199, 111, 0.12);
-  color: #28C76F;
-}
-
-.dynamic-icon-container.warning {
-  background: rgba(255, 159, 67, 0.12);
-  color: #FF9F43;
-}
-
-.dynamic-icon-container.danger {
-  background: rgba(234, 84, 85, 0.12);
-  color: #EA5455;
-}
-
-.dynamic-icon-container.info {
-  background: rgba(0, 207, 232, 0.12);
-  color: #00CFE8;
-}
-
-/* Content */
-.dynamic-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.dynamic-title {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6E6B7B;
-  margin: 0;
-}
-
-.dynamic-value {
-  font-size: 36px;
-  font-weight: 700;
-  color: #5E5873;
-  margin: 0;
-  line-height: 1;
-  transition: color 0.3s ease;
-}
-
-.dynamic-value.animating {
-  color: #6E63E8;
-}
-
-.dynamic-previous {
-  font-size: 12px;
-  font-weight: 400;
-  color: #B9B9C3;
-  margin: 4px 0 0 0;
-}
-
-.dynamic-change {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 8px;
-}
-
-.dynamic-change.positive {
-  color: #28C76F;
-}
-
-.dynamic-change.negative {
-  color: #EA5455;
-}
-
-.dynamic-change i {
-  font-size: 14px;
-}
-
-/* Loading Skeleton */
-.dynamic-skeleton {
-  background: white;
-  border: 1px solid #EBE9F1;
-  border-radius: 8px;
-  padding: 24px;
-  min-height: 180px;
-  display: flex;
-  gap: 16px;
-}
-
-.skeleton-icon-dynamic {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-
-.skeleton-content-dynamic {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.skeleton-title-dynamic {
-  width: 140px;
-  height: 14px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-
-.skeleton-value-dynamic {
-  width: 100px;
-  height: 36px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-
-.skeleton-previous-dynamic {
-  width: 80px;
-  height: 12px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-position: 200% 0;
+const styles = `
+<style>
+  .dynamic-card {
+    background: #fff;
+    border: 1px solid #D8D6DE;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
   }
-  100% {
-    background-position: -200% 0;
+  .dynamic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
   }
-}
+  .dynamic-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .dynamic-card-title {
+    font-size: 14px;
+    color: #6E6B7B;
+    font-weight: 500;
+  }
+  .dynamic-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--icon-bg);
+  }
+  .dynamic-card-icon i {
+    font-size: 20px;
+    color: var(--accent-color);
+  }
+  .dynamic-card-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5E5873;
+    margin: 0 0 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  .dynamic-card-change {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .dynamic-card-change.positive { color: #28C76F; }
+  .dynamic-card-change.negative { color: #EA5455; }
+  .color-primary { --accent-color: #6E63E8; --icon-bg: rgba(110,99,232,0.12); }
+  .color-success { --accent-color: #28C76F; --icon-bg: rgba(40,199,111,0.12); }
+  .color-warning { --accent-color: #FF9F43; --icon-bg: rgba(255,159,67,0.12); }
+  .color-danger { --accent-color: #EA5455; --icon-bg: rgba(234,84,85,0.12); }
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animating .dynamic-card-value {
+    animation: countUp 0.5s ease-out;
+  }
+</style>
 `;
 
-// Função de animação CountUp
-const countUpAnimation = (element, start, end, duration, format) => {
-  const startTime = performance.now();
-  const difference = end - start;
-  
-  const formatValue = (val) => {
-    if (format === 'percentage') {
-      return val.toFixed(1) + '%';
-    } else if (format === 'currency') {
-      return 'R$ ' + val.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    } else {
-      return Math.round(val).toLocaleString('pt-BR');
-    }
-  };
-  
-  const animate = (currentTime) => {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    
-    // Easing function: ease-out
-    const easeOut = 1 - Math.pow(1 - progress, 3);
-    const currentValue = start + (difference * easeOut);
-    
-    element.textContent = formatValue(currentValue);
-    
-    if (progress < 1) {
-      requestAnimationFrame(animate);
-    } else {
-      element.classList.remove('animating');
-    }
-  };
-  
-  element.classList.add('animating');
-  requestAnimationFrame(animate);
-};
-
-// Story: Default
 export const Default = {
   args: {
-    title: 'Alunos Ativos',
-    value: 156,
-    previousValue: 138,
+    title: 'Total Alunos',
+    value: 1234,
+    previousValue: 1189,
     format: 'number',
-    color: 'primary',
     icon: 'bi-people',
-    animationDuration: 2000,
-    loading: false
+    color: 'primary'
   },
   render: (args) => {
-    if (args.loading) {
-      return `
-        <style>${componentStyles}</style>
-        <div class="dynamic-skeleton">
-          <div class="skeleton-icon-dynamic"></div>
-          <div class="skeleton-content-dynamic">
-            <div class="skeleton-title-dynamic"></div>
-            <div class="skeleton-value-dynamic"></div>
-            <div class="skeleton-previous-dynamic"></div>
-          </div>
-        </div>
-      `;
-    }
-
     const change = args.value - args.previousValue;
     const changePercent = ((change / args.previousValue) * 100).toFixed(1);
-    const changeClass = change >= 0 ? 'positive' : 'negative';
-    const changeIcon = change >= 0 ? 'bi-arrow-up' : 'bi-arrow-down';
+    const formatted = args.format === 'percentage' ? `${args.value}%` :
+                      args.format === 'currency' ? `R$ ${args.value.toLocaleString('pt-BR')}` :
+                      args.value.toLocaleString('pt-BR');
     
-    setTimeout(() => {
-      const valueElement = document.querySelector('.dynamic-value');
-      if (valueElement) {
-        countUpAnimation(valueElement, args.previousValue, args.value, args.animationDuration, args.format);
-      }
-    }, 100);
-
     return `
-      <style>${componentStyles}</style>
-      <div class="dynamic-media-card" role="article" aria-live="polite" aria-label="${args.title}: ${args.value}">
-        <div class="dynamic-icon-container ${args.color}">
-          <i class="${args.icon}"></i>
+      ${styles}
+      <div class="dynamic-card color-${args.color} animating">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">${args.title}</span>
+          <div class="dynamic-card-icon">
+            <i class="bi ${args.icon}"></i>
+          </div>
         </div>
-        <div class="dynamic-content">
-          <p class="dynamic-title">${args.title}</p>
-          <h2 class="dynamic-value">${args.value}</h2>
-          <p class="dynamic-previous">Anterior: ${args.previousValue}</p>
-          <span class="dynamic-change ${changeClass}">
-            <i class="${changeIcon}"></i>
-            ${change >= 0 ? '+' : ''}${change} (${changePercent >= 0 ? '+' : ''}${changePercent}%)
-          </span>
+        <h2 class="dynamic-card-value">${formatted}</h2>
+        <div class="dynamic-card-change ${change >= 0 ? 'positive' : 'negative'}">
+          <i class="bi bi-arrow-${change >= 0 ? 'up' : 'down'}"></i>
+          <span>${change >= 0 ? '+' : ''}${changePercent}% vs. mês anterior</span>
         </div>
       </div>
     `;
   }
 };
 
+export const NumberAnimation = {
+  render: () => `
+    ${styles}
+    <div class="dynamic-card color-primary animating">
+      <div class="dynamic-card-header">
+        <span class="dynamic-card-title">Alunos Matriculados</span>
+        <div class="dynamic-card-icon">
+          <i class="bi bi-people"></i>
+        </div>
+      </div>
+      <h2 class="dynamic-card-value">1.234</h2>
+      <div class="dynamic-card-change positive">
+        <i class="bi bi-arrow-up"></i>
+        <span>+3.8% vs. mês anterior</span>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Número aumentou de 1.189 → 1.234 (animação CountUp).
+    </p>
+  `
+};
 
+export const PercentageAnimation = {
+  render: () => `
+    ${styles}
+    <div class="dynamic-card color-success animating">
+      <div class="dynamic-card-header">
+        <span class="dynamic-card-title">Taxa de Aprovação</span>
+        <div class="dynamic-card-icon">
+          <i class="bi bi-check-circle"></i>
+        </div>
+      </div>
+      <h2 class="dynamic-card-value">92%</h2>
+      <div class="dynamic-card-change positive">
+        <i class="bi bi-arrow-up"></i>
+        <span>+5.7% vs. mês anterior</span>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Taxa subiu de 87% → 92%.
+    </p>
+  `
+};
+
+export const CurrencyAnimation = {
+  render: () => `
+    ${styles}
+    <div class="dynamic-card color-warning animating">
+      <div class="dynamic-card-header">
+        <span class="dynamic-card-title">Investimento em Recursos</span>
+        <div class="dynamic-card-icon">
+          <i class="bi bi-cash-stack"></i>
+        </div>
+      </div>
+      <h2 class="dynamic-card-value">R$ 45.780</h2>
+      <div class="dynamic-card-change positive">
+        <i class="bi bi-arrow-up"></i>
+        <span>+12.3% vs. mês anterior</span>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Investimento aumentou de R$ 40.750 → R$ 45.780.
+    </p>
+  `
+};
+
+export const DecreaseAnimation = {
+  render: () => `
+    ${styles}
+    <div class="dynamic-card color-danger animating">
+      <div class="dynamic-card-header">
+        <span class="dynamic-card-title">Missões Pendentes</span>
+        <div class="dynamic-card-icon">
+          <i class="bi bi-clock-history"></i>
+        </div>
+      </div>
+      <h2 class="dynamic-card-value">23</h2>
+      <div class="dynamic-card-change negative">
+        <i class="bi bi-arrow-down"></i>
+        <span>-26.7% vs. semana anterior</span>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Pendências reduziram de 31 → 23 (melhoria).
+    </p>
+  `
+};
+
+export const DashboardRealTime = {
+  render: () => `
+    ${styles}
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <div class="dynamic-card color-primary animating">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Alunos Online Agora</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-person-check"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">387</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+12 nos últimos 5 min</span>
+        </div>
+      </div>
+      
+      <div class="dynamic-card color-success animating">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Atividades Concluídas Hoje</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-check-all"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">1.567</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+245 vs. ontem</span>
+        </div>
+      </div>
+      
+      <div class="dynamic-card color-info animating">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Tempo Médio Sessão</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-stopwatch"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">42 min</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+7 min vs. semana anterior</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Dashboard em tempo real do coordenador - atualiza a cada 30 segundos.
+    </p>
+  `
+};
+
+export const ComparacaoMensal = {
+  render: () => `
+    ${styles}
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div class="dynamic-card color-primary">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Jan/2024</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-people"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">1.150</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+2.7% vs. Dez</span>
+        </div>
+      </div>
+      
+      <div class="dynamic-card color-primary">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Fev/2024</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-people"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">1.189</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+3.4% vs. Jan</span>
+        </div>
+      </div>
+      
+      <div class="dynamic-card color-primary animating">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Mar/2024</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-people"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">1.234</h2>
+        <div class="dynamic-card-change positive">
+          <i class="bi bi-arrow-up"></i>
+          <span>+3.8% vs. Fev</span>
+        </div>
+      </div>
+      
+      <div class="dynamic-card color-primary" style="opacity: 0.5;">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Abr/2024</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">---</h2>
+        <div style="font-size: 12px; color: #6E6B7B;">Aguardando dados</div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Evolução mensal de alunos matriculados (Mar/2024 com animação).
+    </p>
+  `
+};
+
+export const LoadingState = {
+  render: () => `
+    ${styles}
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      .loading .dynamic-card-value {
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+    </style>
+    <div class="dynamic-card color-primary loading">
+      <div class="dynamic-card-header">
+        <span class="dynamic-card-title">Carregando...</span>
+        <div class="dynamic-card-icon">
+          <i class="bi bi-arrow-repeat" style="animation: spin 1s linear infinite;"></i>
+        </div>
+      </div>
+      <h2 class="dynamic-card-value">---</h2>
+      <div style="font-size: 12px; color: #6E6B7B;">Atualizando dados...</div>
+    </div>
+    <style>
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  `
+};
+
+export const AllFormats = {
+  render: () => `
+    ${styles}
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+      <div class="dynamic-card color-primary">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Número Inteiro</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-123"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">1.234</h2>
+      </div>
+      
+      <div class="dynamic-card color-success">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Porcentagem</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-percent"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">92%</h2>
+      </div>
+      
+      <div class="dynamic-card color-warning">
+        <div class="dynamic-card-header">
+          <span class="dynamic-card-title">Moeda</span>
+          <div class="dynamic-card-icon">
+            <i class="bi bi-currency-dollar"></i>
+          </div>
+        </div>
+        <h2 class="dynamic-card-value">R$ 45.780</h2>
+      </div>
+    </div>
+  `
+};
+
+export const Interactive = {
+  render: () => {
+    let value = 1234;
+    return `
+      ${styles}
+      <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div class="dynamic-card color-primary" id="interactive-card">
+          <div class="dynamic-card-header">
+            <span class="dynamic-card-title">Alunos Ativos</span>
+            <div class="dynamic-card-icon">
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+          <h2 class="dynamic-card-value">${value}</h2>
+          <div class="dynamic-card-change positive">
+            <i class="bi bi-arrow-up"></i>
+            <span id="change-text">+0% vs. anterior</span>
+          </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button onclick="updateValue(50)" style="padding: 8px 16px; border: 1px solid #6E63E8; background: #fff; color: #6E63E8; border-radius: 6px; cursor: pointer;">
+            +50 alunos
+          </button>
+          <button onclick="updateValue(-30)" style="padding: 8px 16px; border: 1px solid #EA5455; background: #fff; color: #EA5455; border-radius: 6px; cursor: pointer;">
+            -30 alunos
+          </button>
+          <button onclick="resetValue()" style="padding: 8px 16px; border: 1px solid #6E6B7B; background: #fff; color: #6E6B7B; border-radius: 6px; cursor: pointer;">
+            Reset
+          </button>
+        </div>
+      </div>
+      
+      <script>
+        let currentValue = ${value};
+        const initialValue = ${value};
+        
+        function updateValue(change) {
+          const card = document.getElementById('interactive-card');
+          const valueEl = card.querySelector('.dynamic-card-value');
+          const changeEl = card.querySelector('.dynamic-card-change');
+          const changeText = document.getElementById('change-text');
+          
+          currentValue += change;
+          valueEl.textContent = currentValue.toLocaleString('pt-BR');
+          
+          card.classList.add('animating');
+          setTimeout(() => card.classList.remove('animating'), 500);
+          
+          const diff = currentValue - initialValue;
+          const percent = ((diff / initialValue) * 100).toFixed(1);
+          
+          changeEl.className = 'dynamic-card-change ' + (diff >= 0 ? 'positive' : 'negative');
+          changeEl.querySelector('i').className = 'bi bi-arrow-' + (diff >= 0 ? 'up' : 'down');
+          changeText.textContent = (diff >= 0 ? '+' : '') + percent + '% vs. inicial';
+        }
+        
+        function resetValue() {
+          currentValue = initialValue;
+          const valueEl = document.getElementById('interactive-card').querySelector('.dynamic-card-value');
+          valueEl.textContent = initialValue.toLocaleString('pt-BR');
+          
+          const changeEl = document.getElementById('interactive-card').querySelector('.dynamic-card-change');
+          changeEl.className = 'dynamic-card-change positive';
+          document.getElementById('change-text').textContent = '+0% vs. inicial';
+        }
+      </script>
+      
+      <p style="margin-top: 20px; font-size: 13px; color: #6E6B7B;">
+        <strong>Contexto:</strong> Card interativo com animação CountUp. Clique nos botões para testar.
+      </p>
+    `;
+  }
+};
