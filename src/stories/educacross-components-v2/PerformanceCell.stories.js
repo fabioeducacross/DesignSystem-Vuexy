@@ -1,26 +1,405 @@
 /**
  * PerformanceCell - Table Cell with Performance Indicator
+ * =========================================================
+ * Célula de tabela com indicador visual de desempenho (nota, percentual, conceito)
+ * 
+ * @component PerformanceCell
+ * @category Educacross Components V2 / Data Display
+ * @source educacross-frontoffice (uso comum em tabelas de relatórios)
+ * @priority P1 - Core UI
+ * @status EXPANDED
+ * @since 2.0.0
  */
 
 export default {
   title: 'Educacross Components V2/Data Display/PerformanceCell',
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'padded',
+    docs: {
+      description: {
+        component: ``
+## PerformanceCell - Célula de Desempenho
+
+Componente de célula de tabela com indicador visual colorido e barra de progresso para exibir notas, percentuais e conceitos.
+
+### Casos de Uso
+
+**Professor**: Visualizar notas de alunos em tabelas, comparar desempenho entre missões, analisar evolução temporal, identificar rapidamente alunos com dificuldade
+
+**Coordenador**: Relatórios de desempenho por turma, comparação entre disciplinas, rankings e estatísticas, boletins e análises pedagógicas
+
+**Aluno/Responsável**: Consultar boletim escolar, acompanhar evolução nas disciplinas, ver ranking da turma, entender feedback visual das notas
+        ``
+      }
+    }
+  }
 };
 
-const styles = `<style>
-.performance-cell{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:8px 16px;min-width:80px;border-radius:6px;font-weight:700;overflow:hidden}.performance-bg{position:absolute;left:0;top:0;height:100%;transition:.3s}.perf-low{background:#FFEBEE;color:#EA5455}.perf-low .performance-bg{background:rgba(234,84,85,.2)}.perf-medium{background:#FFF8E1;color:#FF9F43}.perf-medium .performance-bg{background:rgba(255,159,67,.2)}.perf-high{background:#E8F5E9;color:#28C76F}.perf-high .performance-bg{background:rgba(40,199,111,.2)}.perf-neutral{background:#F3F2F7;color:#6E6B7B}.perf-neutral .performance-bg{background:rgba(110,107,123,.1)}.performance-value{position:relative;z-index:1;font-size:16px}.performance-compact{padding:4px 10px;min-width:60px}.performance-compact .performance-value{font-size:14px}.grade-badge{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;font-size:18px;font-weight:700}.sort-indicator{margin-left:6px;font-size:12px;opacity:.6}
-</style>`;
+const css = ``<style>
+  .performance-cell {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    min-width: 80px;
+    border-radius: 6px;
+    font-weight: 700;
+    overflow: hidden;
+  }
+  .performance-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  .perf-high {
+    background: #E8F5E9;
+    color: #28C76F;
+  }
+  .perf-high .performance-bg {
+    background: rgba(40, 199, 111, 0.2);
+  }
+  .perf-medium {
+    background: #FFF8E1;
+    color: #FF9F43;
+  }
+  .perf-medium .performance-bg {
+    background: rgba(255, 159, 67, 0.2);
+  }
+  .perf-low {
+    background: #FFEBEE;
+    color: #EA5455;
+  }
+  .perf-low .performance-bg {
+    background: rgba(234, 84, 85, 0.2);
+  }
+  .perf-neutral {
+    background: #F3F2F7;
+    color: #6E6B7B;
+  }
+  .perf-neutral .performance-bg {
+    background: rgba(110, 107, 123, 0.1);
+  }
+  .performance-value {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+  }
+  .performance-compact {
+    padding: 4px 10px;
+    min-width: 60px;
+  }
+  .performance-compact .performance-value {
+    font-size: 14px;
+  }
+  .grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .sort-indicator {
+    margin-left: 6px;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">``;
 
-export const Default={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:12px"><div class="performance-cell perf-high"><div class="performance-bg" style="width:92%"></div><span class="performance-value">9.2/10</span></div><div class="performance-cell perf-medium"><div class="performance-bg" style="width:70%"></div><span class="performance-value">7.0/10</span></div><div class="performance-cell perf-low"><div class="performance-bg" style="width:45%"></div><span class="performance-value">4.5/10</span></div><div class="performance-cell perf-neutral"><div class="performance-bg" style="width:0%"></div><span class="performance-value">-</span></div></div>`};
+const getLevel = (value) => value >= 80 ? 'high' : value >= 60 ? 'medium' : 'low';
 
-export const AllFormats={render:()=>`${styles}<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:600px"><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Percentual</div><div class="performance-cell perf-high"><div class="performance-bg" style="width:87%"></div><span class="performance-value">87%</span></div></div><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Nota</div><div class="performance-cell perf-high"><div class="performance-bg" style="width:87%"></div><span class="performance-value">8.7/10</span></div></div><div style="text-align:center"><div style="margin-bottom:8px;font-size:12px;color:#6E6B7B;font-weight:600">Conceito</div><div class="grade-badge perf-high">A</div></div></div>`};
+export const Default = {
+  render: () => ``
+    ${css}
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div class="performance-cell perf-high">
+        <div class="performance-bg" style="width: 92%"></div>
+        <span class="performance-value">9.2/10</span>
+      </div>
+      
+      <div class="performance-cell perf-medium">
+        <div class="performance-bg" style="width: 70%"></div>
+        <span class="performance-value">7.0/10</span>
+      </div>
+      
+      <div class="performance-cell perf-low">
+        <div class="performance-bg" style="width: 45%"></div>
+        <span class="performance-value">4.5/10</span>
+      </div>
+      
+      <div class="performance-cell perf-neutral">
+        <div class="performance-bg" style="width: 0%"></div>
+        <span class="performance-value">-</span>
+      </div>
+    </div>
+  ``
+};
 
-export const TabelaAlunos={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden;max-width:900px"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#F8F8F8;border-bottom:2px solid #D8D6DE"><th style="padding:12px;text-align:left;font-size:13px;font-weight:600;color:#6E6B7B">Aluno</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 1</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 2</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Missão 3</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B;cursor:pointer">Média<i class="bi bi-arrow-down sort-indicator"></i></th></tr></thead><tbody>${['Ana Silva','Bruno Santos','Carlos Oliveira','Diana Costa','Eduardo Lima'].map((name,i)=>{const scores=[[9.2,8.5,9.0],[7.0,7.5,8.0],[5.5,6.0,5.0],[10,9.5,9.8],[4.0,4.5,5.0]][i];const avg=scores.reduce((a,b)=>a+b,0)/3;const level=avg>=8?'high':avg>=6?'medium':'low';return`<tr style="border-bottom:1px solid #F3F2F7"><td style="padding:12px"><div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#6E63E8,#28C76F);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px">${name.split(' ').map(n=>n[0]).join('')}</div><span style="font-weight:500;color:#5E5873">${name}</span></div></td>${scores.map(s=>{const l=s>=8?'high':s>=6?'medium':'low';return`<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${l}"><div class="performance-bg" style="width:${s*10}%"></div><span class="performance-value">${s.toFixed(1)}</span></div></td>`}).join('')}<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${level}"><div class="performance-bg" style="width:${avg*10}%"></div><span class="performance-value">${avg.toFixed(1)}</span></div></td></tr>`}).join('')}</tbody></table></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Tabela de desempenho com células coloridas e barra de progresso.</p>`};
+export const AllFormats = {
+  render: () => ``
+    ${css}
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px;">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 8px; font-size: 12px; color: #6E6B7B; font-weight: 600;">Percentual</div>
+        <div class="performance-cell perf-high">
+          <div class="performance-bg" style="width: 87%"></div>
+          <span class="performance-value">87%</span>
+        </div>
+      </div>
+      
+      <div style="text-align: center;">
+        <div style="margin-bottom: 8px; font-size: 12px; color: #6E6B7B; font-weight: 600;">Nota</div>
+        <div class="performance-cell perf-high">
+          <div class="performance-bg" style="width: 87%"></div>
+          <span class="performance-value">8.7/10</span>
+        </div>
+      </div>
+      
+      <div style="text-align: center;">
+        <div style="margin-bottom: 8px; font-size: 12px; color: #6E6B7B; font-weight: 600;">Conceito</div>
+        <div class="grade-badge perf-high">A</div>
+      </div>
+    </div>
+  ``
+};
 
-export const RankingTurma={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:500px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Top 5 - Turma 5º A</h3><div style="display:flex;flex-direction:column;gap:12px">${[{name:'Diana Costa',score:96,medal:'🥇'},{name:'Ana Silva',score:89,medal:'🥈'},{name:'Bruno Santos',score:85,medal:'🥉'},{name:'Carlos Oliveira',score:78,medal:'4º'},{name:'Fernanda Lima',score:74,medal:'5º'}].map((s,i)=>`<div style="display:flex;align-items:center;gap:12px;padding:12px;background:${i<3?'#F8F8F8':'transparent'};border-radius:8px"><div style="width:40px;text-align:center;font-size:24px">${s.medal}</div><div style="flex:1"><div style="font-weight:600;color:#5E5873;margin-bottom:4px">${s.name}</div><div style="background:#E8E8E8;height:6px;border-radius:3px;overflow:hidden"><div style="width:${s.score}%;height:100%;background:linear-gradient(90deg,#6E63E8,#28C76F);transition:.5s"></div></div></div><div class="performance-cell performance-compact perf-${s.score>=85?'high':s.score>=70?'medium':'low'}"><div class="performance-bg" style="width:100%"></div><span class="performance-value">${s.score}%</span></div></div>`).join('')}</div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Ranking da turma com medalhas e células de desempenho.</p>`};
+export const TabelaAlunos = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 20px; max-width: 900px;">
+      <h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #5E5873;">
+        Desempenho da Turma - Matemática 5º A
+      </h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="border-bottom: 2px solid #E8E8E8;">
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: #6E6B7B;">Aluno</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">Missão 1</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">Missão 2</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">Missão 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${[
+            { nome: 'Ana Silva', notas: [9.2, 8.5, 9.0] },
+            { nome: 'Bruno Costa', notas: [7.0, 7.5, 8.0] },
+            { nome: 'Carlos Mendes', notas: [5.5, 6.0, 6.5] },
+            { nome: 'Diana Santos', notas: [8.0, 8.5, 8.2] },
+            { nome: 'Eduardo Lima', notas: [4.5, 5.0, null] }
+          ].map(aluno => ``
+            <tr style="border-bottom: 1px solid #F3F2F7;">
+              <td style="padding: 12px; font-size: 14px; color: #5E5873; font-weight: 600;">${aluno.nome}</td>
+              ${aluno.notas.map(nota => {
+                if (nota === null) return '<td style="padding: 12px; text-align: center;"><div class="performance-cell perf-neutral"><span class="performance-value">-</span></div></td>';
+                const level = getLevel(nota * 10);
+                const percent = nota * 10;
+                return `<td style="padding: 12px; text-align: center;"><div class="performance-cell perf-${level}"><div class="performance-bg" style="width: ${percent}%"></div><span class="performance-value">${nota.toFixed(1)}/10</span></div></td>`;
+              }).join('')}
+            </tr>
+          ``).join('')}
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Tabela de desempenho de alunos em missões. Professor analisando performance da turma.
+    </p>
+  ``
+};
 
-export const BoletimCompleto={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;overflow:hidden;max-width:700px"><div style="background:linear-gradient(135deg,#6E63E8,#28C76F);color:#fff;padding:20px"><h3 style="margin:0 0 8px;font-size:20px">Boletim Escolar</h3><p style="margin:0;opacity:.9">João Silva - 5º Ano A</p></div><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#F8F8F8;border-bottom:2px solid #D8D6DE"><th style="padding:12px;text-align:left;font-size:13px;font-weight:600;color:#6E6B7B">Disciplina</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">1º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">2º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">3º Bim</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Média</th><th style="padding:12px;text-align:center;font-size:13px;font-weight:600;color:#6E6B7B">Conceito</th></tr></thead><tbody>${[{d:'Matemática',s:[8.5,9.0,8.8]},{d:'Português',s:[7.5,8.0,8.5]},{d:'Ciências',s:[9.0,9.5,9.2]},{d:'História',s:[6.5,7.0,7.5]},{d:'Geografia',s:[8.0,8.5,8.0]}].map(row=>{const avg=row.s.reduce((a,b)=>a+b,0)/3;const grade=avg>=9?'A':avg>=8?'B':avg>=6?'C':'D';const level=avg>=8?'high':avg>=6?'medium':'low';return`<tr style="border-bottom:1px solid #F3F2F7"><td style="padding:12px;font-weight:600;color:#5E5873">${row.d}</td>${row.s.map(s=>{const l=s>=8?'high':s>=6?'medium':'low';return`<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${l}"><div class="performance-bg" style="width:${s*10}%"></div><span class="performance-value">${s.toFixed(1)}</span></div></td>`}).join('')}<td style="padding:12px;text-align:center"><div class="performance-cell performance-compact perf-${level}"><div class="performance-bg" style="width:${avg*10}%"></div><span class="performance-value">${avg.toFixed(1)}</span></div></td><td style="padding:12px;text-align:center"><div class="grade-badge perf-${level}" style="width:35px;height:35px;font-size:16px">${grade}</div></td></tr>`}).join('')}</tbody></table></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Boletim completo com notas por bimestre e conceitos.</p>`};
+export const RankingTurma = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 20px; max-width: 500px;">
+      <h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #5E5873;">
+        🏆 Ranking Geral - Matemática 5º A
+      </h3>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        ${[
+          { pos: 1, nome: 'Ana Silva', nota: 9.2, medal: '🥇' },
+          { pos: 2, nome: 'Diana Santos', nota: 8.5, medal: '🥈' },
+          { pos: 3, nome: 'Bruno Costa', nota: 7.5, medal: '🥉' },
+          { pos: 4, nome: 'Carlos Mendes', nota: 6.0, medal: '' },
+          { pos: 5, nome: 'Eduardo Lima', nota: 4.8, medal: '' }
+        ].map(aluno => {
+          const level = getLevel(aluno.nota * 10);
+          const percent = aluno.nota * 10;
+          return ``
+            <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #F8F8F8; border-radius: 8px;">
+              <span style="font-size: 24px; min-width: 30px;">${aluno.medal || aluno.pos + 'º'}</span>
+              <span style="flex: 1; font-size: 14px; font-weight: 600; color: #5E5873;">${aluno.nome}</span>
+              <div class="performance-cell perf-${level}">
+                <div class="performance-bg" style="width: ${percent}%"></div>
+                <span class="performance-value">${aluno.nota.toFixed(1)}/10</span>
+              </div>
+            </div>
+          ``;
+        }).join('')}
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Ranking de alunos com medalhas. Aluno visualizando posição na turma.
+    </p>
+  ``
+};
 
-export const ComparacaoMensal={render:()=>`${styles}<div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:20px;max-width:800px"><h3 style="margin:0 0 16px;font-size:18px;font-weight:600;color:#5E5873">Evolução - João Silva</h3><div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px">${['Jan','Fev','Mar','Abr','Mai','Jun'].map((month,i)=>{const score=[65,70,75,80,85,88][i];const level=score>=80?'high':score>=70?'medium':'low';const trend=i>0?score-[65,70,75,80,85,88][i-1]:0;return`<div style="text-align:center"><div style="font-size:12px;color:#6E6B7B;margin-bottom:8px;font-weight:600">${month}</div><div class="performance-cell performance-compact perf-${level}" style="margin:0 auto"><div class="performance-bg" style="width:${score}%"></div><span class="performance-value">${score}%</span></div>${i>0?`<div style="margin-top:6px;font-size:11px;color:${trend>0?'#28C76F':'#EA5455'};font-weight:600">${trend>0?'+':''}${trend}%</div>`:''}</div>`}).join('')}</div><div style="margin-top:20px;padding:16px;background:#F8F8F8;border-radius:8px;display:flex;justify-content:space-around"><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#28C76F">+23%</div><div style="font-size:12px;color:#6E6B7B">Evolução Total</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#6E63E8">88%</div><div style="font-size:12px;color:#6E6B7B">Desempenho Atual</div></div><div style="text-align:center"><div style="font-size:24px;font-weight:700;color:#FF9F43">3.5</div><div style="font-size:12px;color:#6E6B7B">Média Mensal</div></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Comparação mensal com tendência de evolução.</p>`};
+export const BoletimCompleto = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 24px; max-width: 800px;">
+      <h3 style="margin: 0 0 20px; font-size: 20px; font-weight: 600; color: #5E5873;">
+        Boletim Escolar 2024 - Ana Silva
+      </h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="border-bottom: 2px solid #E8E8E8;">
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: #6E6B7B;">Disciplina</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">1º Bim</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">2º Bim</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">3º Bim</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">4º Bim</th>
+            <th style="padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #6E6B7B;">Conceito</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${[
+            { disciplina: 'Matemática', notas: [9.2, 8.5, 9.0, 8.8], conceito: 'A' },
+            { disciplina: 'Português', notas: [8.0, 8.5, 7.5, 8.0], conceito: 'B' },
+            { disciplina: 'Ciências', notas: [7.0, 7.5, 8.0, 7.8], conceito: 'B' },
+            { disciplina: 'História', notas: [8.5, 9.0, 8.8, 9.2], conceito: 'A' }
+          ].map(disc => ``
+            <tr style="border-bottom: 1px solid #F3F2F7;">
+              <td style="padding: 12px; font-size: 14px; color: #5E5873; font-weight: 600;">${disc.disciplina}</td>
+              ${disc.notas.map(nota => {
+                const level = getLevel(nota * 10);
+                const percent = nota * 10;
+                return `<td style="padding: 12px; text-align: center;"><div class="performance-cell performance-compact perf-${level}"><div class="performance-bg" style="width: ${percent}%"></div><span class="performance-value">${nota.toFixed(1)}</span></div></td>`;
+              }).join('')}
+              <td style="padding: 12px; text-align: center;"><div class="grade-badge perf-${disc.conceito === 'A' ? 'high' : 'medium'}">${disc.conceito}</div></td>
+            </tr>
+          ``).join('')}
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Boletim completo com notas bimestrais. Responsável visualizando desempenho.
+    </p>
+  ``
+};
 
-export const ComVariacoes={render:()=>`${styles}<div style="display:flex;flex-direction:column;gap:16px;max-width:400px"><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Matemática</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-high"><div class="performance-bg" style="width:92%"></div><span class="performance-value">92%</span></div><span style="font-size:12px;color:#28C76F;font-weight:600">+12%</span></div></div></div><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Português</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-medium"><div class="performance-bg" style="width:78%"></div><span class="performance-value">78%</span></div><span style="font-size:12px;color:#EA5455;font-weight:600">-5%</span></div></div></div><div style="background:#fff;border:1px solid #D8D6DE;border-radius:8px;padding:16px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:600;color:#5E5873">Ciências</span><div style="display:flex;align-items:center;gap:8px"><div class="performance-cell performance-compact perf-high"><div class="performance-bg" style="width:88%"></div><span class="performance-value">88%</span></div><span style="font-size:12px;color:#6E6B7B;font-weight:600">0%</span></div></div></div></div><p style="margin-top:8px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Células com indicador de variação (+ ou -).</p>`};
+export const EvolucaoMensal = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 20px; max-width: 700px;">
+      <h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #5E5873;">
+        Evolução Mensal - Bruno Costa
+      </h3>
+      <div style="display: flex; gap: 10px; align-items: flex-end;">
+        ${[
+          { mes: 'Jan', nota: 6.0 },
+          { mes: 'Fev', nota: 6.5 },
+          { mes: 'Mar', nota: 7.0 },
+          { mes: 'Abr', nota: 7.2 },
+          { mes: 'Mai', nota: 7.8 },
+          { mes: 'Jun', nota: 8.5 }
+        ].map((item, idx, arr) => {
+          const level = getLevel(item.nota * 10);
+          const percent = item.nota * 10;
+          const prevNota = idx > 0 ? arr[idx - 1].nota : item.nota;
+          const trend = item.nota > prevNota ? '↗️' : item.nota < prevNota ? '↘️' : '→';
+          return ``
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <div style="font-size: 12px; color: #6E6B7B;">${trend}</div>
+              <div class="performance-cell perf-${level}" style="writing-mode: vertical-rl; transform: rotate(180deg); height: ${percent * 1.5}px; min-width: 60px;">
+                <span class="performance-value" style="writing-mode: horizontal-tb; transform: rotate(180deg);">${item.nota.toFixed(1)}</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 600; color: #5E5873;">${item.mes}</div>
+            </div>
+          ``;
+        }).join('')}
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Gráfico de evolução com indicadores de tendência. Aluno acompanhando progresso.
+    </p>
+  ``
+};
+
+export const ComVariacao = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 20px; max-width: 900px;">
+      <h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #5E5873;">
+        Performance por Disciplina - 5º A
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        ${[
+          { disciplina: 'Matemática', nota: 8.5, variacao: '+0.8' },
+          { disciplina: 'Português', nota: 7.2, variacao: '-0.3' },
+          { disciplina: 'Ciências', nota: 9.0, variacao: '+1.2' },
+          { disciplina: 'História', nota: 6.5, variacao: '+0.2' },
+          { disciplina: 'Geografia', nota: 7.8, variacao: '-0.5' },
+          { disciplina: 'Inglês', nota: 8.2, variacao: '+0.6' }
+        ].map(disc => {
+          const level = getLevel(disc.nota * 10);
+          const percent = disc.nota * 10;
+          const variacaoPositiva = disc.variacao.startsWith('+');
+          return ``
+            <div style="padding: 16px; border: 1px solid #E8E8E8; border-radius: 8px;">
+              <div style="margin-bottom: 12px; font-size: 14px; font-weight: 600; color: #5E5873;">${disc.disciplina}</div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="performance-cell perf-${level}">
+                  <div class="performance-bg" style="width: ${percent}%"></div>
+                  <span class="performance-value">${disc.nota.toFixed(1)}</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: ${variacaoPositiva ? '#28C76F' : '#EA5455'};">
+                  ${disc.variacao}
+                </div>
+              </div>
+            </div>
+          ``;
+        }).join('')}
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Cards de disciplinas com variação de desempenho. Coordenador analisando métricas.
+    </p>
+  ``
+};
+
+export const Conceitos = {
+  render: () => ``
+    ${css}
+    <div style="background: #fff; border: 1px solid #D8D6DE; border-radius: 8px; padding: 24px; max-width: 600px;">
+      <h3 style="margin: 0 0 20px; font-size: 18px; font-weight: 600; color: #5E5873;">
+        Legenda de Conceitos
+      </h3>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        ${[
+          { conceito: 'A', descricao: 'Excelente', faixa: '9.0 - 10.0', nivel: 'high' },
+          { conceito: 'B', descricao: 'Bom', faixa: '7.0 - 8.9', nivel: 'medium' },
+          { conceito: 'C', descricao: 'Regular', faixa: '6.0 - 6.9', nivel: 'medium' },
+          { conceito: 'D', descricao: 'Insuficiente', faixa: '4.0 - 5.9', nivel: 'low' },
+          { conceito: 'E', descricao: 'Muito Insuficiente', faixa: '0.0 - 3.9', nivel: 'low' }
+        ].map(item => ``
+          <div style="display: flex; align-items: center; gap: 16px; padding: 12px; background: #F8F8F8; border-radius: 8px;">
+            <div class="grade-badge perf-${item.nivel}">${item.conceito}</div>
+            <div style="flex: 1;">
+              <div style="font-size: 16px; font-weight: 600; color: #5E5873; margin-bottom: 4px;">${item.descricao}</div>
+              <div style="font-size: 13px; color: #6E6B7B;">${item.faixa}</div>
+            </div>
+          </div>
+        ``).join('')}
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B;">
+      <strong>Contexto:</strong> Legenda explicativa do sistema de conceitos. Documentação para responsáveis.
+    </p>
+  ``
+};
