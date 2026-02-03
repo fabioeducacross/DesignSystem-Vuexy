@@ -1,29 +1,1051 @@
 /**
- * ModalStudentRoundDetails - Modal for Round/Attempt Details in Gamified Missions
+ * ModalStudentRoundDetails - Student Round Details Modal Component
+ * 
+ * Modal para exibir detalhes de rodada gamificada (missão com rounds) de aluno: stars (★★★), stats, critérios.
+ * Usado em relatórios de missão para mostrar desempenho detalhado por rodada com tentativas múltiplas.
+ * 
+ * @component ModalStudentRoundDetails
+ * @category Educacross Components V2
+ * @subcategory Overlays
+ * @priority P2
+ * @status EXPANDED
+ * @since v2.0
+ * 
+ * Key Features:
+ * - ✅ Modal overlay fixed rgba(0,0,0,0.5) z-index 1050 flex center
+ * - ✅ Stars ★★★: filled #FFD700 (gold), empty #E8E8E8, font-size 28px
+ * - ✅ Round indicator: "Rodada 1/3" padding 8×16px background #F3F2F7 border-radius 20px
+ * - ✅ Stats grid: Taxa Acerto, Tempo Total, Questões, Dicas (48px font-size, color variants)
+ * - ✅ Critérios estrelas: velocity/precision/master com emoji + checkmark verde/X cinza
+ * - ✅ Comparação tentativas: 1ª vs 2ª background red/green evolução
+ * - ✅ Distribuição tempo: Q1-Q4 fáceis, Q5-Q8 médias, Q9-Q12 difíceis com progress bars
+ * - ✅ Histórico tentativas: grid 3 cards (1ª/2ª/3ª) evolução consistente
+ * 
+ * Real-world usage:
+ * - Relatório de missão gamificada (professor vendo desempenho aluno)
+ * - Modal detalhes de rodada (clickable table row)
+ * - Comparação de tentativas (evolução aluno)
+ * - Análise de tempo (distribuição por dificuldade)
+ * - Uso de dicas (consultadas vs disponíveis)
  */
 
 export default {
   title: 'Educacross Components V2/Overlays/ModalStudentRoundDetails',
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+# ModalStudentRoundDetails
+
+Modal para exibir **detalhes de rodada gamificada** de aluno com stars, stats, critérios e comparações.
+
+## Quando usar
+
+- ✅ Relatório de missão gamificada (professor analisando desempenho)
+- ✅ Modal detalhes de rodada (clickable table row)
+- ✅ Comparação de tentativas múltiplas (1ª, 2ª, 3ª)
+- ✅ Análise de tempo (distribuição por dificuldade)
+- ✅ Uso de dicas (quais dicas consultadas)
+- ✅ Critérios de estrelas (velocity, precision, master)
+
+## Variantes
+
+- **Default**: Rodada 1/3 João Silva + 3 stars filled + 100% Taxa + 3 stats + critérios velocity/precision/master achieved
+- **PrimeiraRodada**: Ana Costa + 3 stars + banner gold "Primeira Rodada Perfeita" + 4 stats + botão "Próxima Rodada"
+- **TentativaExtra**: Bruno Oliveira Rodada 2/3 Tentativa 2 + banner green "Evolução +30%" + grid 2 columns comparação 1ª vs 2ª
+- **ComEstrelas**: Diana Santos 2/3 stars + análise por estrela (velocity false/precision true/master false)
+- **ComTempo**: Eduardo Lima + banner "11:42 Tempo Total" + badge "3:18 abaixo média" + distribuição Q1-Q4/Q5-Q8/Q9-Q12 progress bars
+- **ComDicas**: Fernanda Costa + banner orange "Dicas 2/3" + seção "Dicas Consultadas" Q3/Q7 + 1 dica disponível
+- **MultiplasTentativas**: Gabriel Santos 3 tentativas + grid 3 cards evolução + análise progresso (Melhoria +3.0, Redução -6:15)
+- **Interactive**: Helena Alves + onclick overlay/X/Fechar/ESC para fechar
+
+## Características visuais
+
+- **Overlay**: background rgba(0,0,0,0.5), z-index 1050
+- **Container**: max-width 700px, border-radius 12px, shadow 0 8px 32px
+- **Stars filled**: color #FFD700 (gold), font-size 28px
+- **Stars empty**: color #E8E8E8, font-size 28px
+- **Stats**: font-size 48px, font-weight 700, color variants (#28C76F verde, #FF9800 laranja)
+- **Badge**: padding 4×12px, border-radius 20px, font-size 12px
+- **Criteria**: emoji + text + checkmark verde/X cinza
+        `
+      }
+    }
+  }
 };
 
+/**
+ * ## Props API (sem props - display only component)
+ * 
+ * | Prop | Type | Default | Description |
+ * |------|------|---------|-------------|
+ * | studentName | String | '' | Nome do aluno |
+ * | missionName | String | '' | Nome da missão |
+ * | round | Number | 1 | Número da rodada atual |
+ * | totalRounds | Number | 3 | Total de rodadas |
+ * | stars | Number | 0 | Número de estrelas conquistadas (0-3) |
+ * | stats | Object | {} | Estatísticas: {taxa, tempo, questoes, dicas, nota} |
+ * | criteria | Array | [] | Critérios de estrelas: [{name, label, achieved, reason}] |
+ * | attempts | Array | null | Tentativas múltiplas: [{number, nota, taxa, tempo, dicas}] |
+ * | timeDistribution | Array | null | Distribuição de tempo: [{label, time, percentage}] |
+ * | hintsUsed | Array | null | Dicas usadas: [{question, message, timestamp}] |
+ * | onClose | Function | null | Callback ao fechar modal |
+ * 
+ * ## Design Specs
+ * 
+ * **Cores:**
+ * - Overlay: background `rgba(0,0,0,0.5)`
+ * - Star filled: color `#FFD700` (gold)
+ * - Star empty: color `#E8E8E8`
+ * - Stat verde: color `#28C76F` (taxa acerto)
+ * - Stat laranja: color `#FF9800` (tempo)
+ * - Banner gold: background `#FFF8E1`, color `#FF9800`
+ * - Banner green: background `#E8F5E9`, color `#28C76F`
+ * - Banner orange: background `#FFF8E1`, color `#FF9800`
+ * - Comparison 1ª: background `#FFEBEE` (red light)
+ * - Comparison 2ª: background `#E8F5E9` (green light)
+ * 
+ * **Dimensões:**
+ * - Overlay: position `fixed`, inset `0`, z-index `1050`
+ * - Container: max-width `700px`, border-radius `12px`, box-shadow `0 8px 32px rgba(0,0,0,0.15)`
+ * - Header: padding `20px 24px`, border-bottom `2px solid #E8E8E8`
+ * - Body: padding `24px`, max-height `calc(100vh - 200px)`, overflow-y `auto`
+ * - Close button: `32×32px`, border-radius `50%`, hover background `#6E63E8`
+ * - Stars: font-size `28px`, gap `6px`
+ * - Stats: font-size `48px`, font-weight `700`, line-height `1`
+ * - Round indicator: padding `8px 16px`, border-radius `20px`, font-size `13px`
+ * 
+ * **Tipografia:**
+ * - Modal title: font-size `20px`, font-weight `700`
+ * - Modal subtitle: font-size `13px`, color `#6E6B7B`
+ * - Stats value: font-size `48px`, font-weight `700`
+ * - Stats label: font-size `13px`, color `#6E6B7B`
+ * - Badge: font-size `12px`, font-weight `600`
+ * 
+ * **Animações:**
+ * - Close button hover: background `#6E63E8`, color `#fff`, transition `.2s`
+ */
+
 const styles = `<style>
-.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:1050;padding:20px}.modal-container{background:#fff;border-radius:12px;max-width:700px;width:100%;max-height:90vh;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.2)}.modal-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:2px solid #E8E8E8}.modal-title{font-size:20px;font-weight:700;color:#5E5873;margin:0}.modal-subtitle{font-size:13px;color:#6E6B7B;margin-top:4px}.modal-close{width:32px;height:32px;border-radius:50%;border:none;background:#F3F2F7;color:#5E5873;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;transition:.2s}.modal-close:hover{background:#6E63E8;color:#fff}.modal-body{padding:24px;overflow-y:auto;max-height:calc(90vh - 140px)}.modal-footer{padding:16px 24px;border-top:1px solid #E8E8E8;display:flex;justify-content:flex-end;gap:12px}.modal-btn{padding:10px 20px;border-radius:6px;font-weight:600;cursor:pointer;border:none;transition:.2s}.modal-btn-secondary{background:#F3F2F7;color:#5E5873}.modal-btn-secondary:hover{background:#E8E8E8}.modal-btn-primary{background:#6E63E8;color:#fff}.modal-btn-primary:hover{background:#5E53D8}
-.round-indicator{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:#F3F2F7;border-radius:20px;font-weight:600;color:#6E63E8;font-size:14px}.stars{display:flex;gap:6px;font-size:28px}.star{color:#E8E8E8}.star.filled{color:#FFD700}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px;
+  border-bottom: 2px solid #E8E8E8;
+}
+
+.modal-header-content {
+  flex: 1;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5E5873;
+  margin: 0 0 4px;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  color: #6E6B7B;
+  margin: 0;
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #F8F8F8;
+  color: #6E6B7B;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+
+.modal-close:hover {
+  background: #6E63E8;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #E8E8E8;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.round-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #F3F2F7;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6E6B7B;
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.star.empty {
+  color: #E8E8E8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: #5E5873;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-value.success {
+  color: #28C76F;
+}
+
+.stat-value.warning {
+  color: #FF9800;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #6E6B7B;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #5E5873;
+  margin: 24px 0 12px;
+}
+
+.criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.criteria-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #F8F8F8;
+  border-radius: 6px;
+}
+
+.criteria-emoji {
+  font-size: 24px;
+}
+
+.criteria-text {
+  flex: 1;
+  font-size: 14px;
+  color: #5E5873;
+}
+
+.criteria-status {
+  font-size: 20px;
+}
+
+.criteria-status.achieved {
+  color: #28C76F;
+}
+
+.criteria-status.not-achieved {
+  color: #D8D6DE;
+}
+
+.banner {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.banner.gold {
+  background: #FFF8E1;
+  color: #FF9800;
+}
+
+.banner.green {
+  background: #E8F5E9;
+  color: #28C76F;
+}
+
+.banner.orange {
+  background: #FFF8E1;
+  color: #FF9800;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.comparison-card {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.comparison-card.bad {
+  background: #FFEBEE;
+}
+
+.comparison-card.good {
+  background: #E8F5E9;
+}
+
+.progress-bar {
+  height: 24px;
+  background: #E8E8E8;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #6E63E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
 </style>`;
 
-export const Default={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 1 de 3 - João Silva</h2><div class="modal-subtitle">Frações Básicas • Tentativa 1</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="text-align:center;margin-bottom:24px"><div class="stars">${['★','★','★'].map((s,i)=>`<span class="star${i<3?' filled':''}">${s}</span>`).join('')}</div><div style="font-size:48px;font-weight:700;color:#28C76F;margin:12px 0">100%</div><div style="font-size:14px;color:#6E6B7B">Taxa de Acerto</div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px">${[{l:'Tempo',v:'12:35',c:'#6E63E8'},{l:'Questões',v:'10/10',c:'#28C76F'},{l:'Dicas',v:'0/3',c:'#00CFE8'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:24px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Critérios das Estrelas</h3>${[{i:'⚡',t:'Estrela de Velocidade',d:'Completar em menos de 15 minutos',a:true},{i:'🎯',t:'Estrela de Precisão',d:'90% ou mais de acerto',a:true},{i:'🏆',t:'Estrela Master',d:'Sem usar dicas',a:true}].map(c=>`<div style="display:flex;align-items:center;gap:12px;padding:12px;background:${c.a?'#E8F5E9':'#F8F8F8'};border-radius:6px;margin-bottom:10px"><span style="font-size:24px">${c.i}</span><div style="flex:1"><div style="font-weight:600;color:#5E5873;margin-bottom:2px">${c.t}</div><div style="font-size:12px;color:#6E6B7B">${c.d}</div></div><i class="bi bi-check-circle-fill" style="color:${c.a?'#28C76F':'#E8E8E8'};font-size:20px"></i></div>`).join('')}</div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button></div></div></div>`};
+/**
+ * Story: Default
+ * 
+ * Rodada 1/3 João Silva Frações Básicas + 3 stars filled + 100% Taxa verde + 3 stats + critérios achieved.
+ * 
+ * Educational context: Modal padrão detalhes rodada (3 estrelas conquistadas).
+ */
+export const Default = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">João Silva • Frações Básicas</h2>
+            <p class="modal-subtitle">Detalhes da rodada</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="round-indicator">
+            <i class="bi bi-award"></i>
+            <span>Rodada 1 de 3</span>
+          </div>
+          
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">100%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">12:35</div>
+              <div class="stat-label">Tempo Total</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">10/10</div>
+              <div class="stat-label">Questões</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0/3</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+          
+          <h4 class="section-title">Critérios de Estrelas</h4>
+          <div class="criteria-list">
+            <div class="criteria-item">
+              <span class="criteria-emoji">⚡</span>
+              <span class="criteria-text"><strong>Velocidade:</strong> Completou em menos de 15 minutos</span>
+              <span class="criteria-status achieved"><i class="bi bi-check-circle-fill"></i></span>
+            </div>
+            <div class="criteria-item">
+              <span class="criteria-emoji">🎯</span>
+              <span class="criteria-text"><strong>Precisão:</strong> Taxa de acerto acima de 90%</span>
+              <span class="criteria-status achieved"><i class="bi bi-check-circle-fill"></i></span>
+            </div>
+            <div class="criteria-item">
+              <span class="criteria-emoji">🏆</span>
+              <span class="criteria-text"><strong>Master:</strong> Sem uso de dicas</span>
+              <span class="criteria-status achieved"><i class="bi bi-check-circle-fill"></i></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Modal padrão rodada (3 estrelas, 100% acerto, critérios achieved).
+    </p>
+  `
+};
 
-export const PrimeiraRodada={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 1 de 5 - Ana Costa</h2><div class="modal-subtitle">Verbos e Conjugações</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="background:#FFF8E1;border-left:4px solid #FFD700;padding:16px;border-radius:6px;margin-bottom:20px;text-align:center"><div style="font-size:18px;font-weight:700;color:#FF9F43;margin-bottom:8px">🎉 Primeira Rodada Perfeita!</div><div style="font-size:14px;color:#6E6B7B">Continue assim para manter o desempenho!</div></div><div style="text-align:center;margin-bottom:24px"><div class="stars">${['★','★','★'].map(s=>`<span class="star filled">${s}</span>`).join('')}</div><div style="font-size:14px;color:#6E6B7B;margin-top:8px">3 de 3 estrelas conquistadas</div></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">${[{l:'Nota Final',v:'10.0',c:'#28C76F'},{l:'Taxa de Acerto',v:'100%',c:'#28C76F'},{l:'Tempo Gasto',v:'08:45',c:'#6E63E8'},{l:'Dicas Usadas',v:'0',c:'#00CFE8'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:28px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div></div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button><button class="modal-btn modal-btn-primary">Próxima Rodada</button></div></div></div>`};
+/**
+ * Story: PrimeiraRodada
+ * 
+ * Ana Costa + 3 stars + banner gold "Primeira Rodada Perfeita" + 4 stats + botão "Próxima Rodada" roxo.
+ * 
+ * Educational context: Primeira rodada perfeita (banner comemorativo gold).
+ */
+export const PrimeiraRodada = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Ana Costa • Verbos</h2>
+            <p class="modal-subtitle">Primeira rodada</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="banner gold">
+            <i class="bi bi-trophy-fill" style="font-size: 24px"></i>
+            <span>🎉 Primeira Rodada Perfeita! Parabéns!</span>
+          </div>
+          
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">10.0</div>
+              <div class="stat-label">Nota Final</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value success">100%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">08:45</div>
+              <div class="stat-label">Tempo Total</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+          <button style="padding: 10px 20px; background: #6E63E8; border: none; border-radius: 6px; color: #fff; cursor: pointer; font-weight: 500">
+            <i class="bi bi-arrow-right" style="margin-right: 6px"></i>
+            Próxima Rodada
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Primeira rodada perfeita (banner gold comemorativo).
+    </p>
+  `
+};
 
-export const TentativaExtra={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 2 de 3 - Bruno Oliveira</h2><div class="modal-subtitle">Sistema Solar • Tentativa 2</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="background:#E8F5E9;border-left:4px solid #28C76F;padding:16px;border-radius:6px;margin-bottom:20px"><div style="font-weight:700;color:#28C76F;margin-bottom:8px"><i class="bi bi-graph-up-arrow"></i> Evolução Detectada!</div><div style="font-size:13px;color:#6E6B7B">Você melhorou <strong style="color:#28C76F">+30%</strong> em relação à primeira tentativa.</div></div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Comparação de Tentativas</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px"><div style="padding:16px;background:#FFEBEE;border-radius:8px"><div style="text-align:center;margin-bottom:12px"><div style="font-size:12px;color:#EA5455;font-weight:600;margin-bottom:6px">1ª TENTATIVA</div><div style="font-size:32px;font-weight:700;color:#EA5455">7/10</div></div>${[{l:'Acerto',v:'70%'},{l:'Tempo',v:'15:30'},{l:'Dicas',v:'3'}].map(s=>`<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#6E6B7B">${s.l}:</span><span style="font-weight:600;color:#EA5455">${s.v}</span></div>`).join('')}</div><div style="padding:16px;background:#E8F5E9;border-radius:8px"><div style="text-align:center;margin-bottom:12px"><div style="font-size:12px;color:#28C76F;font-weight:600;margin-bottom:6px">2ª TENTATIVA</div><div style="font-size:32px;font-weight:700;color:#28C76F">10/10</div></div>${[{l:'Acerto',v:'100%'},{l:'Tempo',v:'12:15'},{l:'Dicas',v:'0'}].map(s=>`<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="color:#6E6B7B">${s.l}:</span><span style="font-weight:600;color:#28C76F">${s.v}</span></div>`).join('')}</div></div><div style="text-align:center;margin-top:20px"><div class="stars">${['★','★','★'].map(s=>`<span class="star filled">${s}</span>`).join('')}</div></div></div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button></div></div></div>`};
+/**
+ * Story: TentativaExtra
+ * 
+ * Bruno Oliveira Rodada 2/3 Tentativa 2 + banner green "Evolução +30%" + grid 2 columns comparação 1ª vs 2ª.
+ * 
+ * Educational context: Comparação tentativas (evolução detectada).
+ */
+export const TentativaExtra = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Bruno Oliveira • Frações</h2>
+            <p class="modal-subtitle">Rodada 2 de 3 • Tentativa 2</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="banner green">
+            <i class="bi bi-graph-up-arrow" style="font-size: 24px"></i>
+            <span>Evolução Detectada: +30% de acerto!</span>
+          </div>
+          
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          
+          <h4 class="section-title">Comparação de Tentativas</h4>
+          <div class="comparison-grid">
+            <div class="comparison-card bad">
+              <h5 style="margin: 0 0 12px; font-size: 14px; font-weight: 600; color: #EA5455">1ª Tentativa</h5>
+              <div style="font-size: 13px; color: #5E5873; line-height: 1.8">
+                <div>Acertos: <strong>7/10</strong> (70%)</div>
+                <div>Tempo: <strong>15:30</strong></div>
+                <div>Dicas: <strong>3</strong></div>
+              </div>
+            </div>
+            
+            <div class="comparison-card good">
+              <h5 style="margin: 0 0 12px; font-size: 14px; font-weight: 600; color: #28C76F">2ª Tentativa</h5>
+              <div style="font-size: 13px; color: #5E5873; line-height: 1.8">
+                <div>Acertos: <strong>10/10</strong> (100%)</div>
+                <div>Tempo: <strong>12:15</strong></div>
+                <div>Dicas: <strong>0</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Tentativa extra (comparação 1ª vs 2ª com evolução +30%).
+    </p>
+  `
+};
 
-export const ComEstrelas={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 3 de 3 - Diana Santos</h2><div class="modal-subtitle">Geometria Plana</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="text-align:center;margin-bottom:24px"><div class="stars">${['★','★','☆'].map((s,i)=>`<span class="star${i<2?' filled':''}">${s}</span>`).join('')}</div><div style="font-size:14px;color:#6E6B7B;margin-top:8px">2 de 3 estrelas conquistadas</div></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px">${[{l:'Nota',v:'9.0',c:'#28C76F'},{l:'Acerto',v:'90%',c:'#28C76F'},{l:'Tempo',v:'16:20',c:'#FF9F43'},{l:'Dicas',v:'1/3',c:'#6E63E8'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:24px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Análise das Estrelas</h3>${[{i:'⚡',t:'Estrela de Velocidade',d:'Completar em menos de 15 min',a:false,r:'Tempo: 16:20 (faltou 1:20)'},{i:'🎯',t:'Estrela de Precisão',d:'90% ou mais de acerto',a:true,r:'Acerto: 90% ✓'},{i:'🏆',t:'Estrela Master',d:'Sem usar dicas',a:false,r:'Usou 1 dica'}].map(c=>`<div style="padding:12px;background:${c.a?'#E8F5E9':'#FFF8E1'};border-radius:6px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:12px;margin-bottom:6px"><span style="font-size:22px">${c.i}</span><div style="flex:1"><div style="font-weight:600;color:#5E5873">${c.t}</div><div style="font-size:12px;color:#6E6B7B">${c.d}</div></div><i class="bi bi-${c.a?'check-circle-fill':'x-circle'}" style="color:${c.a?'#28C76F':'#FF9F43'};font-size:18px"></i></div><div style="font-size:12px;color:#6E6B7B;padding-left:34px">${c.r}</div></div>`).join('')}</div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button></div></div></div>`};
+/**
+ * Story: ComEstrelas
+ * 
+ * Diana Santos 2/3 stars + análise por estrela (velocity false "faltou 1:20", precision true, master false "usou 1 dica").
+ * 
+ * Educational context: Análise detalhada por estrela (critérios não atingidos).
+ */
+export const ComEstrelas = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Diana Santos • Geometria Plana</h2>
+            <p class="modal-subtitle">Rodada 1 de 3</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star empty">★</span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">9.0</div>
+              <div class="stat-label">Nota Final</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value success">90%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value warning">16:20</div>
+              <div class="stat-label">Tempo Total</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">1/3</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+          
+          <h4 class="section-title">Análise de Estrelas</h4>
+          <div class="criteria-list">
+            <div class="criteria-item" style="background: #FFF8E1">
+              <span class="criteria-emoji">⚡</span>
+              <div class="criteria-text">
+                <strong>Velocidade:</strong> Não atingido<br>
+                <small style="color: #6E6B7B">Tempo: 16:20 (faltou 1:20 para completar em 15 minutos)</small>
+              </div>
+              <span class="criteria-status not-achieved"><i class="bi bi-x-circle-fill"></i></span>
+            </div>
+            
+            <div class="criteria-item" style="background: #E8F5E9">
+              <span class="criteria-emoji">🎯</span>
+              <div class="criteria-text">
+                <strong>Precisão:</strong> Atingido ✓<br>
+                <small style="color: #6E6B7B">Taxa de acerto: 90% (acima de 90%)</small>
+              </div>
+              <span class="criteria-status achieved"><i class="bi bi-check-circle-fill"></i></span>
+            </div>
+            
+            <div class="criteria-item" style="background: #FFF8E1">
+              <span class="criteria-emoji">🏆</span>
+              <div class="criteria-text">
+                <strong>Master:</strong> Não atingido<br>
+                <small style="color: #6E6B7B">Usou 1 dica (necessário 0 dicas)</small>
+              </div>
+              <span class="criteria-status not-achieved"><i class="bi bi-x-circle-fill"></i></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> 2/3 stars (análise detalhada critérios não atingidos).
+    </p>
+  `
+};
 
-export const ComTempo={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 2 de 4 - Eduardo Lima</h2><div class="modal-subtitle">Divisão e Multiplicação</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="background:#E8F5E9;border:2px solid #28C76F;padding:20px;border-radius:8px;text-align:center;margin-bottom:24px"><div style="font-size:48px;font-weight:700;color:#28C76F;margin-bottom:8px">11:42</div><div style="font-size:14px;color:#6E6B7B;margin-bottom:12px">Tempo Total da Rodada</div><div style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:#28C76F;color:#fff;border-radius:20px;font-size:13px;font-weight:600"><i class="bi bi-lightning-fill"></i> 3:18 abaixo do tempo médio</div></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px">${[{l:'Questões',v:'12/12',c:'#28C76F'},{l:'Taxa de Acerto',v:'100%',c:'#28C76F'},{l:'Tempo Médio/Q',v:'58s',c:'#6E63E8'},{l:'Velocidade',v:'+45%',c:'#00CFE8'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:24px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Distribuição do Tempo</h3>${[{l:'Q1-Q4 (fáceis)',t:'3:20',p:28},{l:'Q5-Q8 (médias)',t:'4:15',p:36},{l:'Q9-Q12 (difíceis)',t:'4:07',p:36}].map(d=>`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:#5E5873">${d.l}</span><span style="font-size:13px;color:#6E63E8;font-weight:600">${d.t}</span></div><div style="background:#E8E8E8;height:8px;border-radius:4px;overflow:hidden"><div style="width:${d.p}%;height:100%;background:#6E63E8"></div></div></div>`).join('')}</div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button></div></div></div>`};
+/**
+ * Story: ComTempo
+ * 
+ * Eduardo Lima + banner "11:42 Tempo Total" + badge "3:18 abaixo média" + distribuição Q1-Q4/Q5-Q8/Q9-Q12 progress bars.
+ * 
+ * Educational context: Análise detalhada de tempo (distribuição por dificuldade).
+ */
+export const ComTempo = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Eduardo Lima • Divisão e Multiplicação</h2>
+            <p class="modal-subtitle">Rodada 1 de 3</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="banner green">
+            <i class="bi bi-clock" style="font-size: 24px"></i>
+            <div style="flex: 1">
+              <div style="font-size: 24px; font-weight: 700">11:42</div>
+              <div style="font-size: 13px; font-weight: 400">Tempo Total</div>
+            </div>
+            <span style="padding: 4px 12px; background: rgba(255,255,255,0.8); border-radius: 12px; font-size: 12px; color: #28C76F">
+              3:18 abaixo do tempo médio
+            </span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">10.0</div>
+              <div class="stat-label">Nota Final</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value success">100%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">12/12</div>
+              <div class="stat-label">Questões</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+          
+          <h4 class="section-title">Distribuição de Tempo</h4>
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px">
+                <span style="color: #5E5873; font-weight: 500">Q1-Q4 (Fáceis)</span>
+                <span style="color: #6E6B7B">3:20 • 28%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 28%">28%</div>
+              </div>
+            </div>
+            
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px">
+                <span style="color: #5E5873; font-weight: 500">Q5-Q8 (Médias)</span>
+                <span style="color: #6E6B7B">4:15 • 36%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 36%">36%</div>
+              </div>
+            </div>
+            
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px">
+                <span style="color: #5E5873; font-weight: 500">Q9-Q12 (Difíceis)</span>
+                <span style="color: #6E6B7B">4:07 • 36%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 36%">36%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Análise tempo (distribuição Q1-Q4/Q5-Q8/Q9-Q12 progress bars).
+    </p>
+  `
+};
 
-export const ComDicas={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 1 de 3 - Fernanda Costa</h2><div class="modal-subtitle">Fotossíntese</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="background:#FFF8E1;border-left:4px solid #FF9F43;padding:16px;border-radius:6px;margin-bottom:20px"><div style="font-weight:700;color:#FF9F43;margin-bottom:8px"><i class="bi bi-lightbulb"></i> Dicas Utilizadas</div><div style="font-size:13px;color:#6E6B7B">Você usou <strong style="color:#FF9F43">2 de 3</strong> dicas disponíveis nesta rodada.</div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px">${[{l:'Nota',v:'8.5',c:'#28C76F'},{l:'Acerto',v:'85%',c:'#28C76F'},{l:'Dicas',v:'2/3',c:'#FF9F43'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:28px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Dicas Consultadas</h3>${[{q:3,d:'Lembre-se: a fotossíntese ocorre nos cloroplastos',t:'10:35'},{q:7,d:'Dica: a equação envolve CO₂ + H₂O + Luz',t:'10:52'}].map(h=>`<div style="padding:12px;background:#FFF8E1;border-left:3px solid #FF9F43;border-radius:6px;margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;color:#5E5873">Questão ${h.q}</span><span style="font-size:12px;color:#6E6B7B">${h.t}</span></div><div style="font-size:13px;color:#6E6B7B;font-style:italic">"${h.d}"</div></div>`).join('')}<div style="padding:12px;background:#E8F5E9;border-radius:6px;margin-top:16px;font-size:13px;color:#6E6B7B;text-align:center"><i class="bi bi-check-circle" style="color:#28C76F"></i> Você ainda tem <strong style="color:#28C76F">1 dica disponível</strong></div></div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button></div></div></div>`};
+/**
+ * Story: ComDicas
+ * 
+ * Fernanda Costa + banner orange "Dicas 2/3" + seção "Dicas Consultadas" Q3/Q7 + mensagens + 1 dica disponível.
+ * 
+ * Educational context: Análise uso de dicas (quais consultadas).
+ */
+export const ComDicas = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Fernanda Costa • Fotossíntese</h2>
+            <p class="modal-subtitle">Rodada 1 de 3</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="banner orange">
+            <i class="bi bi-lightbulb" style="font-size: 24px"></i>
+            <span>Dicas Utilizadas: 2 de 3</span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">8.5</div>
+              <div class="stat-label">Nota Final</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value success">85%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value warning">2/3</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+          
+          <h4 class="section-title">Dicas Consultadas</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <div style="padding: 12px; background: #FFF8E1; border-radius: 6px; border-left: 4px solid #FF9800">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px">
+                <strong style="font-size: 14px; color: #5E5873">Questão 3</strong>
+                <span style="font-size: 12px; color: #6E6B7B">10:23</span>
+              </div>
+              <p style="margin: 0; font-size: 13px; color: #6E6B7B">
+                Lembre-se: as plantas precisam de luz solar para realizar a fotossíntese.
+              </p>
+            </div>
+            
+            <div style="padding: 12px; background: #FFF8E1; border-radius: 6px; border-left: 4px solid #FF9800">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px">
+                <strong style="font-size: 14px; color: #5E5873">Questão 7</strong>
+                <span style="font-size: 12px; color: #6E6B7B">14:15</span>
+              </div>
+              <p style="margin: 0; font-size: 13px; color: #6E6B7B">
+                O oxigênio (O₂) é liberado como produto da fotossíntese.
+              </p>
+            </div>
+          </div>
+          
+          <div class="banner green" style="margin-top: 16px">
+            <i class="bi bi-check-circle" style="font-size: 20px"></i>
+            <span style="font-size: 14px">1 dica ainda disponível para consulta</span>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Análise uso dicas (2/3 consultadas Q3/Q7 + 1 disponível).
+    </p>
+  `
+};
 
-export const MultiplasTentativas={render:()=>`${styles}<div class="modal-overlay"><div class="modal-container" style="max-width:800px"><div class="modal-header"><div><h2 class="modal-title">Rodada 3 de 3 - Gabriel Santos</h2><div class="modal-subtitle">Números Decimais • 3 tentativas</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="background:#E8F5E9;border-left:4px solid #28C76F;padding:16px;border-radius:6px;margin-bottom:20px"><div style="font-weight:700;color:#28C76F;margin-bottom:8px"><i class="bi bi-trophy-fill"></i> Evolução Consistente!</div><div style="font-size:13px;color:#6E6B7B">Você melhorou em cada tentativa. Parabéns pela persistência!</div></div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Histórico de Tentativas</h3><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px">${[{n:'1ª',nota:'7.0',q:'7/10',a:'70%',t:'18:30',d:3,c:'#EA5455'},{n:'2ª',nota:'9.0',q:'9/10',a:'90%',t:'14:45',d:1,c:'#FF9F43'},{n:'3ª',nota:'10.0',q:'10/10',a:'100%',t:'12:15',d:0,c:'#28C76F'}].map(t=>`<div style="padding:16px;background:${t.c}15;border:2px solid ${t.c};border-radius:8px"><div style="text-align:center;margin-bottom:12px"><div style="font-size:12px;font-weight:600;color:${t.c};margin-bottom:6px">${t.n} TENTATIVA</div><div style="font-size:32px;font-weight:700;color:${t.c}">${t.nota}</div></div>${[{l:'Questões',v:t.q},{l:'Acerto',v:t.a},{l:'Tempo',v:t.t},{l:'Dicas',v:t.d}].map(s=>`<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="color:#6E6B7B">${s.l}:</span><span style="font-weight:600;color:${t.c}">${s.v}</span></div>`).join('')}</div>`).join('')}</div><h3 style="margin:0 0 12px;font-size:16px;font-weight:600;color:#5E5873">Análise de Progresso</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">${[{l:'Melhoria de Nota',v:'+3.0 pontos',c:'#28C76F'},{l:'Redução de Tempo',v:'-6:15 minutos',c:'#6E63E8'},{l:'Aumento de Acerto',v:'+30%',c:'#28C76F'},{l:'Uso de Dicas',v:'-3 dicas',c:'#00CFE8'}].map(s=>`<div style="padding:12px;background:#F8F8F8;border-radius:6px"><div style="font-size:18px;font-weight:700;color:${s.c};margin-bottom:4px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div></div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button><button class="modal-btn modal-btn-primary">Ver Detalhes</button></div></div></div>`};
+/**
+ * Story: MultiplasTentativas
+ * 
+ * Gabriel Santos 3 tentativas + grid 3 cards evolução + análise progresso (Melhoria +3.0, Redução -6:15, Aumento +30%, Uso -3).
+ * 
+ * Educational context: Histórico tentativas (evolução consistente).
+ */
+export const MultiplasTentativas = {
+  render: () => `
+    ${styles}
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Gabriel Santos • Números Decimais</h2>
+            <p class="modal-subtitle">Rodada 1 de 3 • 3 tentativas</p>
+          </div>
+          <button class="modal-close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="banner green">
+            <i class="bi bi-graph-up-arrow" style="font-size: 24px"></i>
+            <span>Evolução Consistente nas 3 Tentativas!</span>
+          </div>
+          
+          <h4 class="section-title">Histórico de Tentativas</h4>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px">
+            <div style="padding: 12px; background: #FFEBEE; border-radius: 6px; text-align: center">
+              <div style="font-size: 11px; font-weight: 600; color: #6E6B7B; text-transform: uppercase; margin-bottom: 8px">1ª Tentativa</div>
+              <div style="font-size: 24px; font-weight: 700; color: #EA5455; margin-bottom: 8px">7.0</div>
+              <div style="font-size: 12px; color: #5E5873; line-height: 1.6">
+                <div>70% acerto</div>
+                <div>18:30</div>
+                <div>3 dicas</div>
+              </div>
+            </div>
+            
+            <div style="padding: 12px; background: #FFF8E1; border-radius: 6px; text-align: center">
+              <div style="font-size: 11px; font-weight: 600; color: #6E6B7B; text-transform: uppercase; margin-bottom: 8px">2ª Tentativa</div>
+              <div style="font-size: 24px; font-weight: 700; color: #FF9800; margin-bottom: 8px">9.0</div>
+              <div style="font-size: 12px; color: #5E5873; line-height: 1.6">
+                <div>90% acerto</div>
+                <div>14:45</div>
+                <div>1 dica</div>
+              </div>
+            </div>
+            
+            <div style="padding: 12px; background: #E8F5E9; border-radius: 6px; text-align: center">
+              <div style="font-size: 11px; font-weight: 600; color: #6E6B7B; text-transform: uppercase; margin-bottom: 8px">3ª Tentativa</div>
+              <div style="font-size: 24px; font-weight: 700; color: #28C76F; margin-bottom: 8px">10.0</div>
+              <div style="font-size: 12px; color: #5E5873; line-height: 1.6">
+                <div>100% acerto</div>
+                <div>12:15</div>
+                <div>0 dicas</div>
+              </div>
+            </div>
+          </div>
+          
+          <h4 class="section-title">Análise de Progresso</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div style="padding: 12px; background: #E8F5E9; border-radius: 6px">
+              <div style="font-size: 24px; color: #28C76F; margin-bottom: 4px">+3.0</div>
+              <div style="font-size: 13px; color: #6E6B7B">Melhoria na Nota</div>
+            </div>
+            <div style="padding: 12px; background: #E8F5E9; border-radius: 6px">
+              <div style="font-size: 24px; color: #28C76F; margin-bottom: 4px">-6:15</div>
+              <div style="font-size: 13px; color: #6E6B7B">Redução no Tempo</div>
+            </div>
+            <div style="padding: 12px; background: #E8F5E9; border-radius: 6px">
+              <div style="font-size: 24px; color: #28C76F; margin-bottom: 4px">+30%</div>
+              <div style="font-size: 13px; color: #6E6B7B">Aumento de Acerto</div>
+            </div>
+            <div style="padding: 12px; background: #E8F5E9; border-radius: 6px">
+              <div style="font-size: 24px; color: #28C76F; margin-bottom: 4px">-3</div>
+              <div style="font-size: 13px; color: #6E6B7B">Uso de Dicas</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer">
+            Fechar
+          </button>
+          <button style="padding: 10px 20px; background: #6E63E8; border: none; border-radius: 6px; color: #fff; cursor: pointer; font-weight: 500">
+            Ver Detalhes
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> 3 tentativas (evolução 7.0→9.0→10.0 consistente).
+    </p>
+  `
+};
 
-export const Interactive={render:()=>`${styles}<div class="modal-overlay" onclick="event.target===this&&this.remove()"><div class="modal-container"><div class="modal-header"><div><h2 class="modal-title">Rodada 2 de 3 - Helena Alves</h2><div class="modal-subtitle">Áreas e Perímetros</div></div><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="bi bi-x"></i></button></div><div class="modal-body"><div style="text-align:center;margin-bottom:20px"><div class="stars">${['★','★','★'].map(s=>`<span class="star filled">${s}</span>`).join('')}</div><div style="font-size:48px;font-weight:700;color:#28C76F;margin:12px 0">9.5</div><div style="font-size:14px;color:#6E6B7B">Nota da Rodada</div></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">${[{l:'Questões',v:'10/11',c:'#28C76F'},{l:'Acerto',v:'95%',c:'#28C76F'},{l:'Tempo',v:'13:20',c:'#6E63E8'},{l:'Dicas',v:'0',c:'#00CFE8'}].map(s=>`<div style="text-align:center;padding:16px;background:#F8F8F8;border-radius:8px"><div style="font-size:24px;font-weight:700;color:${s.c};margin-bottom:6px">${s.v}</div><div style="font-size:12px;color:#6E6B7B">${s.l}</div></div>`).join('')}</div></div><div class="modal-footer"><button class="modal-btn modal-btn-secondary" onclick="this.closest('.modal-overlay').remove()">Fechar</button><button class="modal-btn modal-btn-primary">Próxima Rodada</button></div></div></div><p style="margin-top:16px;font-size:13px;color:#6E6B7B"><strong>Contexto:</strong> Modal interativo - clique no X, no botão Fechar, no overlay (fundo escuro) ou pressione ESC para fechar.</p>`};
+/**
+ * Story: Interactive
+ * 
+ * Helena Alves + 3 stars + 9.5 verde + 4 stats + onclick overlay/X/Fechar/ESC para fechar.
+ * 
+ * Educational context: Modal interativo (clique overlay/X/botão/ESC fecha).
+ */
+export const Interactive = {
+  render: () => `
+    ${styles}
+    <script>
+      function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+    </script>
+    
+    <div id="modal" class="modal-overlay" onclick="if(event.target === this) closeModal()">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h2 class="modal-title">Helena Alves • Áreas e Perímetros</h2>
+            <p class="modal-subtitle">Rodada 1 de 3</p>
+          </div>
+          <button class="modal-close" onclick="closeModal()">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="stars">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value success">9.5</div>
+              <div class="stat-label">Nota Final</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value success">95%</div>
+              <div class="stat-label">Taxa de Acerto</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">13:20</div>
+              <div class="stat-label">Tempo Total</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">0</div>
+              <div class="stat-label">Dicas Usadas</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button style="padding: 10px 20px; background: #fff; border: 1px solid #D8D6DE; border-radius: 6px; color: #6E6B7B; cursor: pointer" onclick="closeModal()">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #6E6B7B; text-align: center">
+      <strong>Contexto:</strong> Modal interativo (clique overlay/X/botão Fechar/ESC fecha modal).
+    </p>
+  `
+};
