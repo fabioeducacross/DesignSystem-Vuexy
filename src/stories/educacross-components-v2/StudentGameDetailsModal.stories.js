@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Modals/StudentGameDetailsModal',
+  title: 'Educacross V2/StudentGameDetailsModal',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };
@@ -201,12 +201,12 @@ export const Vazio = {
   render: () => renderModal(`
     <div class="student-body" style="padding:48px 30px">
       <div class="empty">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 3a5 5 0 0 0-5 5v3H5a1 1 0 0 0 0 2h2v2H5a1 1 0 0 0 0 2h2v1a5 5 0 1 0 10 0v-1h2a1 1 0 0 0 0-2h-2v-2h2a1 1 0 0 0 0-2h-2V8a5 5 0 0 0-5-5z"/>
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="50" stroke="currentColor" stroke-width="2"/>
+          <path d="M40 60h40M60 40v40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <div style="font-size:16px;font-weight:600">Nenhuma missão ativa</div>
-        <div style="font-size:13px">Quando seu professor liberar um novo jogo, ele aparecerá aqui com todas as instruções.</div>
-        <button style="justify-self:center;padding:8px 16px;border-radius:8px;border:none;background:#6E63E8;color:#fff;font-weight:600;cursor:pointer">Explorar biblioteca</button>
+        <div style="font-size:16px;font-weight:600;color:#3F3F46">Nenhum jogo em andamento</div>
+        <div style="font-size:13px">Comece uma nova missão para ver seus progressos aqui.</div>
       </div>
     </div>
   `)
