@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Navigation/Breadcrumb',
+  title: 'Vuexy/Molecules/Navigation/Breadcrumb',
   tags: ['autodocs'],
   parameters: {
     docs: {

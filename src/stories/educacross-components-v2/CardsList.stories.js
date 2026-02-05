@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Lists/CardsList',
+  title: 'Front-office/Lists/CardsList',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

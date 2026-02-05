@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Mission/CopyLink',
+  title: 'Front-office/Mission/CopyLink',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

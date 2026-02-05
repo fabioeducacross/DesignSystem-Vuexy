@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Templates/Template6',
+  title: 'Front-office/Templates/Template6',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -46,7 +46,7 @@ Template com alternativas empilhadas full-width (cols-12 sempre), ideal para res
 
 ## Estrutura
 
-```
+\`\`\`
 +--------------------------------+
 | Card 1: Question Content       |
 +--------------------------------+
@@ -56,7 +56,7 @@ Template com alternativas empilhadas full-width (cols-12 sempre), ideal para res
 +--------------------------------+
 | Alternative 2 (100% width)     |  ← Opcional
 +--------------------------------+
-```
+\`\`\`
 
 ## Variantes
 

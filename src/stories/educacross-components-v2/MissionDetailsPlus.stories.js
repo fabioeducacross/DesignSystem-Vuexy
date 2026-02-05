@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Content/MissionDetailsPlus',
+  title: 'Front-office/Content/MissionDetailsPlus',
   tags: ['autodocs'],
   parameters: {
     docs: {

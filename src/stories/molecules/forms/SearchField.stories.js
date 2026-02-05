@@ -11,7 +11,7 @@
 import { createOverviewGrid, generateSnippetDocs } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Forms/SearchField',
+  title: 'Vuexy/Molecules/Forms/SearchField',
   tags: ['autodocs'],
   argTypes: {
     placeholder: {

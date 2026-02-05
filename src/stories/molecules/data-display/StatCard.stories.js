@@ -6,7 +6,7 @@
  */
 
 export default {
-  title: 'Molecules/Data Display/StatCard',
+  title: 'Vuexy/Molecules/Data Display/StatCard',
   tags: ['autodocs'],
   parameters: {
     docs: {

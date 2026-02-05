@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Navigation/Sidebar',
+  title: 'Vuexy/Organisms/Navigation/Sidebar',
   tags: ['autodocs'],
   parameters: {
     docs: {

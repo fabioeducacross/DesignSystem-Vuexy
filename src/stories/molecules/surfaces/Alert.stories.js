@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Surfaces/Alert',
+  title: 'Vuexy/Molecules/Surfaces/Alert',
   tags: ['autodocs'],
   parameters: {
     docs: {

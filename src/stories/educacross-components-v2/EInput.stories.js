@@ -101,7 +101,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/EInput',
+  title: 'Front-office/Forms/EInput',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

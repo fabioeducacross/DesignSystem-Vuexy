@@ -16,6 +16,9 @@
 <!-- Flag Icons (LOCAL - bandeiras de países) -->
 <link rel="stylesheet" href="/vuexy/fonts/flag-icons.css">
 
+<!-- Material Symbols Outlined (GOOGLE CDN - ícones do Google) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
 <!-- jQuery (LOCAL - required for DataTables, Select2, etc) -->
 <script src="/vuexy/vendors/libs/jquery/jquery.js"></script>
 
@@ -52,3 +55,145 @@
 <!-- Quill (required for WYSIWYG editor) -->
 <link rel="stylesheet" href="/vuexy/vendors/libs/quill/editor.css">
 <script src="/vuexy/vendors/libs/quill/quill.js"></script>
+
+<!-- CSS Global para remover wrappers do Storybook em páginas de documentação customizadas -->
+<style id="doc-page-overrides">
+  /* 
+   * Quando uma story usa createDocPage (classe .doc-page presente),
+   * removemos TODOS os elementos automáticos do Storybook
+   */
+  
+  /* Esconder título automático do Storybook */
+  .sbdocs:has(.doc-page) .sbdocs-title,
+  .sbdocs:has(.doc-page) h1.sbdocs-title,
+  .sbdocs:has(.doc-page) .sbdocs-h1 {
+    display: none !important;
+  }
+  
+  /* Esconder barra de ferramentas (zoom, eject, etc) */
+  .sbdocs:has(.doc-page) .sb-bar,
+  .sbdocs:has(.doc-page) [class*="ZoomButton"],
+  .sbdocs:has(.doc-page) [class*="ZoomControl"],
+  .sbdocs:has(.doc-page) button[title*="zoom" i],
+  .sbdocs:has(.doc-page) button[title*="Zoom" i],
+  .sbdocs:has(.doc-page) .docblock-code-toggle {
+    display: none !important;
+  }
+  
+  /* Remover canvas wrapper e seu estilo */
+  .sbdocs:has(.doc-page) .docs-story {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  
+  /* Remover wrapper de preview do story */
+  .sbdocs:has(.doc-page) .docs-story > div {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Expandir conteúdo para largura total */
+  .sbdocs:has(.doc-page) .sbdocs-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  /* Remover wrapper padrão do preview.js */
+  .sbdocs:has(.doc-page) .storybook-component-wrapper {
+    min-height: unset !important;
+    display: block !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .sbdocs:has(.doc-page) .storybook-component-wrapper > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  /* Esconder primary story heading se existir */
+  .sbdocs:has(.doc-page) #story--*--primary,
+  .sbdocs:has(.doc-page) [id*="--primary-inner"] {
+    margin: 0 !important;
+  }
+
+  /* ===== Fallback para navegadores sem suporte a :has() ===== */
+  /* Classe aplicada via JavaScript quando .doc-page é detectado */
+  .sb-show-main.sb-doc-page-active .sbdocs-title,
+  .sb-show-main.sb-doc-page-active h1.sbdocs-title {
+    display: none !important;
+  }
+  
+  .sb-show-main.sb-doc-page-active .sb-bar,
+  .sb-show-main.sb-doc-page-active [class*="ZoomButton"],
+  .sb-show-main.sb-doc-page-active [class*="ZoomControl"] {
+    display: none !important;
+  }
+  
+  .sb-show-main.sb-doc-page-active .docs-story {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+  
+  .sb-show-main.sb-doc-page-active .sbdocs-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+</style>
+
+<!-- Script para detectar páginas de documentação e aplicar classe fallback -->
+<script>
+  (function() {
+    // Aguarda o DOM e observa mudanças para detectar .doc-page
+    function checkForDocPage() {
+      var docPage = document.querySelector('.doc-page');
+      var body = document.body;
+      
+      if (docPage && body) {
+        body.classList.add('sb-doc-page-active');
+      } else if (body) {
+        body.classList.remove('sb-doc-page-active');
+      }
+    }
+    
+    // Verifica inicialmente
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', checkForDocPage);
+    } else {
+      checkForDocPage();
+    }
+    
+    // Observa mudanças no DOM para páginas carregadas dinamicamente
+    var observer = new MutationObserver(function(mutations) {
+      checkForDocPage();
+    });
+    
+    // Inicia observador quando body existir
+    function startObserver() {
+      if (document.body) {
+        observer.observe(document.body, { 
+          childList: true, 
+          subtree: true 
+        });
+        checkForDocPage();
+      } else {
+        requestAnimationFrame(startObserver);
+      }
+    }
+    startObserver();
+  })();
+</script>

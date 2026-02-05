@@ -29,7 +29,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Feedback/BackgroundSpace',
+  title: 'Front-office/Feedback/BackgroundSpace',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -5,7 +5,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/SelectLocale',
+  title: 'Front-office/Forms/SelectLocale',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

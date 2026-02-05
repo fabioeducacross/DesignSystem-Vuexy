@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Navigation/Stepper',
+  title: 'Vuexy/Molecules/Navigation/Stepper',
   tags: ['autodocs'],
   parameters: {
     docs: {

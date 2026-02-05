@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Organisms/Data Display/DataTable',
+  title: 'Vuexy/Organisms/Data Display/DataTable',
   tags: ['autodocs'],
   argTypes: {
     rowsCount: {

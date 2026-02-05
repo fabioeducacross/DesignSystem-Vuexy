@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Teachers/listInitialsTeacher',
+  title: 'Front-office/Teachers/listInitialsTeacher',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

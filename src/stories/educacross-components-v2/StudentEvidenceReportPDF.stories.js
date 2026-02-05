@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Educacross V2/StudentEvidenceReportPDF',
+  title: 'Front-office/PDF/StudentEvidenceReportPDF',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

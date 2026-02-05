@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/StudentAvatar',
+  title: 'Front-office/StudentAvatar',
   tags: ['autodocs'],
   argTypes: {
     src: {

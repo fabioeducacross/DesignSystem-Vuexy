@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Actions/ButtonGroup',
+  title: 'Vuexy/Molecules/Actions/ButtonGroup',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/Auth/ForgotPassword',
+  title: 'Vuexy/Templates/Auth/ForgotPassword',
   tags: ['autodocs'],
   parameters: {
     docs: {

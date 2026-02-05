@@ -1,5 +1,5 @@
 export default {
-  title: 'Foundations/Icons',
+  title: 'Vuexy/Foundations/Icons',
   parameters: {
     docs: {
       description: {

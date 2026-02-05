@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/Range',
+  title: 'Vuexy/Atoms/Forms/Range',
   tags: ['autodocs'],
   parameters: {
     docs: {

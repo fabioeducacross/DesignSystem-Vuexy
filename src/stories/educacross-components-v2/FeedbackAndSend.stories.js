@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Mission/FeedbackAndSend',
+  title: 'Front-office/Mission/FeedbackAndSend',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

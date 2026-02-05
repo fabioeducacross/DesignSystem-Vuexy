@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Feedback/ProgressBar',
+  title: 'Front-office/Feedback/ProgressBar',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

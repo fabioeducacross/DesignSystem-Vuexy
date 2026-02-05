@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Actions/CloseButton',
+  title: 'Vuexy/Atoms/Actions/CloseButton',
   tags: ['autodocs'],
   parameters: {
     docs: {

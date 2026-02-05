@@ -31,7 +31,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Overlays/ModalStudentActivityDetails',
+  title: 'Front-office/Overlays/ModalStudentActivityDetails',
   tags: ['autodocs'],
   parameters: {
     docs: {

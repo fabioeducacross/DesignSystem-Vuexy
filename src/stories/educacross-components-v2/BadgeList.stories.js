@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/BadgeList',
+  title: 'Front-office/BadgeList',
   tags: ['autodocs'],
   argTypes: {
     variant: {

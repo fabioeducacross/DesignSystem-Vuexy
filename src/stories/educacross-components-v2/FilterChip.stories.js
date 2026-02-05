@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/FilterChip',
+  title: 'Front-office/FilterChip',
   tags: ['autodocs'],
   argTypes: {
     label: {

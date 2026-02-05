@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Cards/MediaCard',
+  title: 'Front-office/Cards/MediaCard',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

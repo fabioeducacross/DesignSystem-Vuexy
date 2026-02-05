@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/ProgressBarTopInfo',
+  title: 'Front-office/ProgressBarTopInfo',
   tags: ['autodocs'],
   argTypes: {
     value: {

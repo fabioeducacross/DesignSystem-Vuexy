@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Modals/CancelMission',
+  title: 'Front-office/Modals/CancelMission',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

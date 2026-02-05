@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Modals/GameDetailsModal',
+  title: 'Front-office/Modals/GameDetailsModal',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };

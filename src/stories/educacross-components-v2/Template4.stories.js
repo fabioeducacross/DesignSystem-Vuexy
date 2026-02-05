@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Templates/Template4',
+  title: 'Front-office/Templates/Template4',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -32,7 +32,7 @@ Template com layout split-view: conteúdo à esquerda (50%), alternativas grid �
 
 ## Estrutura do Layout
 
-```
+\`\`\`
 +--------------------------------+
 | Card Header (100%)             |
 +--------------------------------+
@@ -41,7 +41,7 @@ Template com layout split-view: conteúdo à esquerda (50%), alternativas grid �
 | - QuestionContent  | - 2x2 Grid|
 |                    |           |
 +--------------------------------+
-```
+\`\`\`
 
 ## Diferenças dos Templates Anteriores
 

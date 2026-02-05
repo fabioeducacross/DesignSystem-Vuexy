@@ -13,7 +13,7 @@
  */
 
 export default {
-  title: 'Educacross V2/PerformancePDF',
+  title: 'Front-office/PDF/PerformancePDF',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

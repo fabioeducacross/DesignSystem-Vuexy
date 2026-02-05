@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Templates/Template9',
+  title: 'Front-office/Templates/Template9',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -42,7 +42,7 @@ Template com **3 cards sequenciais + alternativas grid 2 colunas** (50% cada).
 
 ## Estrutura
 
-```
+\`\`\`
 +--------------------------------+
 | Card 1: Contexto/Introdução    |  ← Full-width
 +--------------------------------+
@@ -54,7 +54,7 @@ Template com **3 cards sequenciais + alternativas grid 2 colunas** (50% cada).
 +--------------------------------+
 | Alternative C  | Alternative D |  ← md-6 → cols-12 mobile
 +--------------------------------+
-```
+\`\`\`
 
 ## Variantes
 

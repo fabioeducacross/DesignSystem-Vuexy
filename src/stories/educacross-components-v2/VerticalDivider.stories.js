@@ -29,7 +29,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Layout/VerticalDivider',
+  title: 'Front-office/Layout/VerticalDivider',
   tags: ['autodocs'],
   parameters: {
     docs: {

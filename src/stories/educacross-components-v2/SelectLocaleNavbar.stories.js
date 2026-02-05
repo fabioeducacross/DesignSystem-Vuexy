@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Navigation/SelectLocaleNavbar',
+  title: 'Front-office/Navigation/SelectLocaleNavbar',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',
@@ -448,7 +448,7 @@ export const Interactive = {
       localeOptions.forEach(option => {
         option.addEventListener('click', () => {
           const locale = option.textContent.trim();
-          alert(\`Idioma selecionado: \${locale}\n\nAplicando localização...\`);
+          alert('Idioma selecionado: ' + locale + '\n\nAplicando localização...');
         });
       });
     }, 100);

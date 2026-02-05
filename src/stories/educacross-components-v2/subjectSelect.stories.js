@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Subjects/subjectSelect',
+  title: 'Front-office/Subjects/subjectSelect',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

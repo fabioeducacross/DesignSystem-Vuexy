@@ -13,7 +13,7 @@
  */
 
 export default {
-  title: 'Educacross V2/SidebarProficiencyInfo',
+  title: 'Front-office/Navigation/SidebarProficiencyInfo',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

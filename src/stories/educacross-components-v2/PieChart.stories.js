@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Charts/PieChart',
+  title: 'Front-office/Charts/PieChart',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

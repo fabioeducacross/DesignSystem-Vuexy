@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Apps/Invoice',
+  title: 'Vuexy/Organisms/Apps/Invoice',
   tags: ['autodocs'],
   parameters: {
     docs: {

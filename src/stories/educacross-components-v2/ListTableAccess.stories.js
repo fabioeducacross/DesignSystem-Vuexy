@@ -31,7 +31,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Tables/ListTableAccess',
+  title: 'Front-office/Tables/ListTableAccess',
   tags: ['autodocs'],
   parameters: {
     docs: {

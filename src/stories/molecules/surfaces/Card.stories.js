@@ -4,7 +4,7 @@
  */
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 export default {
-  title: 'Molecules/Surfaces/Card',
+  title: 'Vuexy/Molecules/Surfaces/Card',
   tags: ['autodocs'],
   parameters: { docs: { description: { component: '# Card - Container de conteúdo do Vuexy' } } },
   argTypes: {

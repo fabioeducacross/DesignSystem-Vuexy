@@ -91,7 +91,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/EFormCheck',
+  title: 'Front-office/Forms/EFormCheck',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

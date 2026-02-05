@@ -176,7 +176,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Educacross V2/Tab',
+  title: 'Front-office/Navigation/Tab',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -498,7 +498,7 @@ export const Interactive = {
             contentText.textContent = content.text;
           }
           
-          console.log(\`Evento @update:currentTab emitido com index: \${index}\`);
+          console.log('Evento @update:currentTab emitido com index: ' + index);
         });
       });
     }, 100);

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Content/ListGroup',
+  title: 'Vuexy/Molecules/Content/ListGroup',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -1,5 +1,5 @@
 export default {
-  title: 'Foundations/Spacing',
+  title: 'Vuexy/Foundations/Spacing',
   parameters: {
     previewTabs: {
       canvas: { hidden: false },

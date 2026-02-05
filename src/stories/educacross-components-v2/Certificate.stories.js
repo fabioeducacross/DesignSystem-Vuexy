@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Educacross V2/Certificate',
+  title: 'Front-office/PDF/Certificate',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

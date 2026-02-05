@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Feedback/Notification',
+  title: 'Vuexy/Molecules/Feedback/Notification',
   tags: ['autodocs'],
   parameters: {
     docs: {

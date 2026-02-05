@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Navigation/TabCards',
+  title: 'Front-office/Navigation/TabCards',
   tags: ['autodocs'],
   parameters: {
     docs: {

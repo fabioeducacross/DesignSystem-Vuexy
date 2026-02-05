@@ -12,7 +12,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Forms/Wizard',
+  title: 'Vuexy/Organisms/Forms/Wizard',
   tags: ['autodocs'],
   parameters: {
     docs: {

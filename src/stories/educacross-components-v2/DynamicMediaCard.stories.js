@@ -3,7 +3,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Cards/DynamicMediaCard',
+  title: 'Front-office/Cards/DynamicMediaCard',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

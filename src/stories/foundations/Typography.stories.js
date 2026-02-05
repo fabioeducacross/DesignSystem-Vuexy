@@ -16,7 +16,7 @@
  */
 
 export default {
-  title: 'Foundations/Typography',
+  title: 'Vuexy/Foundations/Typography',
   parameters: {
     previewTabs: {
       canvas: { hidden: false },

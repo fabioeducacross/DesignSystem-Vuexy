@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/Misc/FAQ',
+  title: 'Vuexy/Templates/Misc/FAQ',
   tags: ['autodocs'],
   parameters: {
     docs: {

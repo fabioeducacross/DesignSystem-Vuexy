@@ -9,7 +9,7 @@ import {
 } from '../_helpers/placeholders';
 
 export default {
-  title: 'Foundations/Images',
+  title: 'Vuexy/Foundations/Images',
   parameters: {
     docs: {
       description: {

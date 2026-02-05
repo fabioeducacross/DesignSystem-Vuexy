@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/Textarea',
+  title: 'Vuexy/Atoms/Forms/Textarea',
   tags: ['autodocs'],
   parameters: {
     docs: {

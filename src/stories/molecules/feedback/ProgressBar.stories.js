@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Feedback/ProgressBar',
+  title: 'Vuexy/Molecules/Feedback/ProgressBar',
   tags: ['autodocs'],
   parameters: {
     docs: {

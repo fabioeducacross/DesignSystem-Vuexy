@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Lists/CertificateList',
+  title: 'Front-office/Lists/CertificateList',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

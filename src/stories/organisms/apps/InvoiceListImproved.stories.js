@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Organisms/Apps/Invoice List Improved',
+  title: 'Vuexy/Organisms/Apps/Invoice List Improved',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

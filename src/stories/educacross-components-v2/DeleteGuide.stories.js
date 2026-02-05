@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Guides/DeleteGuide',
+  title: 'Front-office/Guides/DeleteGuide',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

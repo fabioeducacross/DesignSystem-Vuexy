@@ -7,7 +7,7 @@
  */
 
 export default {
-  title: 'Molecules/Navigation/FolderTabs',
+  title: 'Vuexy/Molecules/Navigation/FolderTabs',
   tags: ['autodocs'],
   parameters: {
     docs: {

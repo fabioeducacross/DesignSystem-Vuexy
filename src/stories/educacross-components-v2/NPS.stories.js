@@ -13,7 +13,7 @@
  */
 
 export default {
-  title: 'Educacross V2/NPS',
+  title: 'Front-office/Feedback/NPS',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

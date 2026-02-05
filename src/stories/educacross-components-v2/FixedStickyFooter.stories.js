@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Layout/FixedStickyFooter',
+  title: 'Front-office/Layout/FixedStickyFooter',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -31,7 +31,7 @@ Componente de **rodapé fixo** que permanece visível no fundo da tela.
 
 ## Características
 
-- **Position fixed**: `position: fixed; bottom: 0`
+- **Position fixed**: \`position: fixed; bottom: 0\`
 - **Z-index 998**: Sobrepõe conteúdo mas abaixo de modais (z-1000)
 - **Box shadow top**: Sombra superior para destaque
 - **Responsive**: Adapta left offset para sidebar
@@ -39,9 +39,9 @@ Componente de **rodapé fixo** que permanece visível no fundo da tela.
 
 ## CSS Classes
 
-- `.fixed-footer-wrapper`: Container principal
-- `.expand`: Classe para sidebar expandida
-- `left: inherit` em desktop, `left: 0` em mobile (<1199px)
+- \`.fixed-footer-wrapper\`: Container principal
+- \`.expand\`: Classe para sidebar expandida
+- \`left: inherit\` em desktop, \`left: 0\` em mobile (<1199px)
         `
       }
     }

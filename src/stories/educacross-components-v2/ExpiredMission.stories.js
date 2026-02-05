@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Feedback/ExpiredMission',
+  title: 'Front-office/Feedback/ExpiredMission',
   tags: ['autodocs'],
   parameters: {
     docs: {

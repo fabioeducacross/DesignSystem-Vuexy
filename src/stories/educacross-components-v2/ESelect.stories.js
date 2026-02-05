@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/ESelect',
+  title: 'Front-office/Forms/ESelect',
   tags: ['autodocs'],
   parameters: {
     docs: {

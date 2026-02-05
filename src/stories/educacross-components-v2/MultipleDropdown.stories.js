@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/MultipleDropdown',
+  title: 'Front-office/Forms/MultipleDropdown',
   tags: ['autodocs'],
   parameters: {
     docs: {

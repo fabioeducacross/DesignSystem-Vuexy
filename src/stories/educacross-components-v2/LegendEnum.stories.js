@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Legends/LegendEnum',
+  title: 'Front-office/Legends/LegendEnum',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

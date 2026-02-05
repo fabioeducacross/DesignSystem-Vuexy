@@ -203,7 +203,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Educacross V2/GuidesLimitAlert',
+  title: 'Front-office/Feedback/GuidesLimitAlert',
   tags: ['autodocs'],
   parameters: {
     docs: {

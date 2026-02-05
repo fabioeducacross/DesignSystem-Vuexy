@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Overlays/Tooltip',
+  title: 'Vuexy/Molecules/Overlays/Tooltip',
   tags: ['autodocs'],
   parameters: {
     docs: {

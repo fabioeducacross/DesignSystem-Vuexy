@@ -321,7 +321,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Educacross V2/QuestionDetail',
+  title: 'Front-office/Evaluations/QuestionDetail',
   tags: ['autodocs'],
   parameters: {
     docs: {

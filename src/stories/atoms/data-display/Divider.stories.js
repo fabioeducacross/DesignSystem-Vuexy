@@ -6,7 +6,7 @@
  */
 
 export default {
-  title: 'Atoms/Data Display/Divider',
+  title: 'Vuexy/Atoms/Data Display/Divider',
   tags: ['autodocs'],
   parameters: {
     docs: {

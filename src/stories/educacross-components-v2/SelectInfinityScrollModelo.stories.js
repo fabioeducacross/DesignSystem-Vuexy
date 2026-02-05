@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Selects/SelectInfinityScrollModelo',
+  title: 'Front-office/Selects/SelectInfinityScrollModelo',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

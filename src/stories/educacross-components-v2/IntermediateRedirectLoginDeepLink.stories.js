@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Educacross V2/IntermediateRedirectLoginDeepLink',
+  title: 'Front-office/Navigation/IntermediateRedirectLoginDeepLink',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

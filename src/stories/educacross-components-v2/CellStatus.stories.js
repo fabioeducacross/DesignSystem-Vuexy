@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Badges/CellStatus',
+  title: 'Front-office/Badges/CellStatus',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

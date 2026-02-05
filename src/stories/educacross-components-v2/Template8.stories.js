@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Templates/Template8',
+  title: 'Front-office/Templates/Template8',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -43,7 +43,7 @@ Template com **header + split view**: card de contexto acima + split 50/50 (cont
 
 ## Estrutura
 
-```
+\`\`\`
 +---------------------------------------+
 | Header Card: Contexto Geral          |  ← Full-width 100%
 +---------------------------------------+
@@ -52,7 +52,7 @@ Template com **header + split view**: card de contexto acima + split 50/50 (cont
 | Card 1            | [C]  [D]         |  ← Grid 2×2 inside right
 | Card 2            |                  |
 +---------------------------------------+
-```
+\`\`\`
 
 ## Variantes
 

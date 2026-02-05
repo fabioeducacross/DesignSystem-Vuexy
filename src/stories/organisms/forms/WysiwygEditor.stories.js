@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Forms/WysiwygEditor',
+  title: 'Vuexy/Organisms/Forms/WysiwygEditor',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/Misc/Error404',
+  title: 'Vuexy/Templates/Misc/Error404',
   tags: ['autodocs'],
   parameters: {
     docs: {

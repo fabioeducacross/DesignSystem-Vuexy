@@ -1,5 +1,5 @@
 export default {
-  title: 'Educacross Components V2/Missions/MissionBookDetails',
+  title: 'Front-office/Missions/MissionBookDetails',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

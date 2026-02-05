@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Tables/ListTablePagination',
+  title: 'Front-office/Tables/ListTablePagination',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

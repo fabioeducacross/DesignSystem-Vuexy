@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Feedback/Badge',
+  title: 'Vuexy/Atoms/Feedback/Badge',
   tags: ['autodocs'],
   parameters: {
     docs: {

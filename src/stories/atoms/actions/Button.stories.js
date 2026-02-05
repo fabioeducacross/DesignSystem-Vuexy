@@ -11,7 +11,7 @@
 import { createOverviewGrid, generateSnippetDocs } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Actions/Button',
+  title: 'Vuexy/Atoms/Actions/Button',
   tags: ['autodocs'],
   argTypes: {
     variant: {

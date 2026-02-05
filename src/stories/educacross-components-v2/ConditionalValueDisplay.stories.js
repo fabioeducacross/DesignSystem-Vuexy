@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Feedback/ConditionalValueDisplay',
+  title: 'Front-office/Feedback/ConditionalValueDisplay',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

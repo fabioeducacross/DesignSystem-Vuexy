@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Filters/ExpandableFilterArea',
+  title: 'Front-office/Filters/ExpandableFilterArea',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

@@ -29,7 +29,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Tables/ListTableSelectLocal',
+  title: 'Front-office/Tables/ListTableSelectLocal',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Data Display/LegendCard',
+  title: 'Front-office/Data Display/LegendCard',
   tags: ['autodocs'],
   parameters: {
     docs: {

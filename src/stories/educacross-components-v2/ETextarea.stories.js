@@ -103,7 +103,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Forms/ETextarea',
+  title: 'Front-office/Forms/ETextarea',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

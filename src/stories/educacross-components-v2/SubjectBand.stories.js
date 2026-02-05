@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Educacross Components V2/Data Display/SubjectBand',
+  title: 'Front-office/Data Display/SubjectBand',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -155,7 +155,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Educacross Components V2/Media/AlbumCover',
+  title: 'Front-office/Media/AlbumCover',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

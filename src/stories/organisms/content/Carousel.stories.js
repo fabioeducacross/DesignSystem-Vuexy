@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Content/Carousel',
+  title: 'Vuexy/Organisms/Content/Carousel',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/Auth/Register',
+  title: 'Vuexy/Templates/Auth/Register',
   tags: ['autodocs'],
   parameters: {
     docs: {

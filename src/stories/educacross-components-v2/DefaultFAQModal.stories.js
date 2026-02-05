@@ -1,120 +1,198 @@
 export default {
-  title: 'Educacross Components V2/Modals/DefaultFAQModal',
+  title: 'Front-office/Modals/DefaultFAQModal',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };
 
-const css = `.faq-backdrop{min-height:100vh;padding:32px;background:linear-gradient(135deg,#1A1D2E,#232741,#1A1D2E);display:flex;align-items:center;justify-content:center}.faq-modal{width:720px;max-width:calc(100% - 40px);background:#fff;border-radius:20px;box-shadow:0 32px 80px rgba(10,18,34,.6);overflow:hidden;display:flex;flex-direction:column;max-height:85vh}.faq-header{padding:28px 30px;border-bottom:1px solid #EDEDF5;background:linear-gradient(135deg,#7367F0,#5E50C8);color:#fff;display:flex;justify-content:space-between;align-items:center}.faq-title{font-size:22px;font-weight:700;display:flex;align-items:center;gap:12px}.faq-close{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}.faq-close:hover{background:rgba(255,255,255,.2)}.faq-body{padding:28px 30px;overflow-y:auto;display:grid;gap:20px}.faq-search{position:relative;margin-bottom:8px}.faq-search input{width:100%;padding:12px 16px 12px 44px;border:1px solid #E5E3F3;border-radius:12px;font-size:14px;background:#F9F8FE;transition:.2s}.faq-search input:focus{outline:none;border-color:#7367F0;background:#fff}.faq-search i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#9795B5;font-size:18px}.faq-section{display:grid;gap:12px}.faq-section-title{font-size:16px;font-weight:700;color:#2F2B3D;display:flex;align-items:center;gap:10px}.faq-section-title i{color:#7367F0;font-size:20px}.faq-item{border:1px solid #E5E3F3;border-radius:14px;padding:18px 20px;background:#fff;cursor:pointer;transition:.2s;display:grid;gap:10px}.faq-item:hover{border-color:#7367F0;box-shadow:0 4px 14px rgba(115,103,240,.12)}.faq-item.expanded{background:#F9F8FE}.faq-question{font-size:14px;font-weight:600;color:#3F3F46;display:flex;justify-content:space-between;align-items:center;gap:12px}.faq-question i{color:#7367F0;transition:.2s}.faq-item.expanded .faq-question i{transform:rotate(180deg)}.faq-answer{font-size:13px;line-height:1.7;color:#6E6B7B;margin-top:4px;display:none}.faq-item.expanded .faq-answer{display:block}.contact-card{border:1px solid #D9D6F3;border-radius:14px;padding:20px;background:linear-gradient(135deg,#F9F8FE,#F3F2FF);display:grid;gap:12px}.contact-title{font-size:14px;font-weight:600;color:#433878;display:flex;align-items:center;gap:8px}.contact-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.contact-btn{padding:12px 16px;border-radius:10px;border:1px solid #E1DFFE;background:#fff;color:#433878;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.2s}.contact-btn:hover{background:#7367F0;color:#fff;border-color:#7367F0}.quick-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:#F9F8FE;border:1px solid #EDEDF5;cursor:pointer;transition:.2s}.quick-link:hover{background:#fff;border-color:#7367F0}.quick-link i{width:32px;height:32px;border-radius:8px;background:#E6E4FF;color:#7367F0;display:flex;align-items:center;justify-content:center}.quick-text{flex:1}.quick-text-title{font-size:13px;font-weight:600;color:#3F3F46}.quick-text-desc{font-size:11px;color:#9795B5}.badge-pill{display:inline-flex;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:600;background:#E6E4FF;color:#5E50C8}.compact .faq-modal{width:480px}.empty{padding:50px 24px;text-align:center;border:2px dashed #D8D6DE;border-radius:16px;background:#F9F8FE;color:#6E6B7B;display:grid;gap:12px}.empty svg{width:100px;height:100px;margin:0 auto;opacity:.3}.faq-footer{padding:18px 30px;border-top:1px solid #EDEDF5;background:#F9F8FE;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#9795B5}`;
+const styles = `
+:root {
+  --primary: #6e63e8;
+  --accent: #00cfe8;
+  --muted: #8f8ca8;
+  --text: #2f2b3d;
+  --border: #e6e5f2;
+  --card: #ffffff;
+}
 
-const renderModal = (content, extra = '') => `
-<div class="faq-backdrop ${extra}">
+.faq-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(110, 99, 232, 0.1), transparent 32%),
+    radial-gradient(circle at 90% 10%, rgba(0, 207, 232, 0.08), transparent 32%),
+    linear-gradient(135deg, #1a1d2e, #232741 60%, #1a1d2e);
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.faq-modal {
+  width: min(840px, calc(100% - 32px));
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-height: 88vh;
+}
+
+.faq-header {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, #7367f0, #5e50c8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-title { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; }
+.faq-close { width: 34px; height: 34px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.35); display:grid; place-items:center; cursor:pointer; background: rgba(255,255,255,0.14); }
+.faq-body { padding: 22px 24px; overflow: hidden; display: grid; gap: 16px; }
+.faq-scroll { overflow-y: auto; display: grid; gap: 14px; padding-right: 6px; }
+
+.faq-search { position: relative; }
+.faq-search input { width: 100%; padding: 12px 14px 12px 42px; border-radius: 12px; border: 1px solid var(--border); background: #f8f7ff; font-size: 14px; }
+.faq-search i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+
+.faq-section { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: #fbfaff; display: grid; gap: 12px; }
+.faq-section-title { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--text); }
+.faq-section-title small { color: var(--muted); font-size: 12px; }
+
+.faq-item { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; display: grid; gap: 8px; cursor: pointer; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+.faq-item:hover { border-color: var(--primary); box-shadow: 0 10px 24px rgba(115, 103, 240, 0.18); }
+.faq-item.active { background: #f7f6ff; border-color: rgba(115, 103, 240, 0.4); }
+.faq-question { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-weight: 700; color: var(--text); }
+.faq-answer { display: none; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.faq-item.active .faq-answer { display: block; }
+
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.contact-btn { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.contact-btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 12px 28px rgba(115, 103, 240, 0.3); }
+
+.quick-link { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: #fff; cursor: pointer; }
+.quick-link:hover { border-color: var(--primary); box-shadow: 0 10px 20px rgba(115,103,240,0.12); }
+
+.badge-pill { padding: 6px 10px; border-radius: 999px; background: #efeefe; color: #4b3cc4; font-weight: 700; font-size: 11px; }
+
+.video-box { aspect-ratio: 16/9; border-radius: 16px; border: 1px solid var(--border); background: linear-gradient(135deg, #e6e4ff, #d9d6f3); display: grid; place-items: center; color: var(--text); }
+
+.status-card { border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: grid; gap: 6px; background: #fff; }
+
+.footer { padding: 14px 22px; border-top: 1px solid var(--border); background: #f8f7ff; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 12px; }
+
+.empty { border: 2px dashed var(--border); border-radius: 14px; padding: 40px 20px; text-align: center; display: grid; gap: 10px; color: var(--muted); background: #fbfaff; }
+
+.compact .faq-modal { width: min(520px, 100%); }
+
+@media (max-width: 720px) {
+  .faq-shell { padding: 16px; }
+  .faq-modal { max-height: none; }
+  .footer { flex-direction: column; gap: 6px; align-items: flex-start; }
+}
+`;
+
+const render = (body, opts = {}) => `
+<div class="faq-shell ${opts.extra || ''}">
   <div class="faq-modal">
-    ${content}
+    <div class="faq-header">
+      <div class="faq-title"><i class="bi bi-question-circle"></i> ${opts.title || 'Central de Ajuda'}</div>
+      <div class="faq-close"><i class="bi bi-x"></i></div>
+    </div>
+    <div class="faq-body">
+      ${body}
+    </div>
+    <div class="footer">
+      <span><i class="bi bi-lightbulb"></i> Última atualização: 28/01/2026</span>
+      <span>Idioma: Português (BR)</span>
+    </div>
   </div>
 </div>
-<style>${css}</style>
+<style>${styles}</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 <script>
   setTimeout(() => {
     document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('expanded');
-      });
+      item.addEventListener('click', () => item.classList.toggle('active'));
     });
   }, 100);
 </script>
 `;
 
-const header = (title) => `
-  <div class="faq-header">
-    <div class="faq-title"><i class="bi bi-question-circle"></i> ${title}</div>
-    <div class="faq-close"><i class="bi bi-x-lg"></i></div>
+const faqList = (items, expandedIndex = 0) => items.map((faq, idx) => `
+  <div class="faq-item ${idx === expandedIndex ? 'active' : ''}">
+    <div class="faq-question">${faq.q} <i class="bi bi-chevron-down"></i></div>
+    <div class="faq-answer">${faq.a}</div>
   </div>
-`;
+`).join('');
 
 export const Default = {
-  render: () => renderModal(`
-    ${header('Central de Ajuda')}
-    <div class="faq-body">
-      <div class="faq-search">
-        <i class="bi bi-search"></i>
-        <input type="text" placeholder="Buscar dúvidas frequentes...">
-      </div>
+  render: () => render(`
+    <div class="faq-search">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Buscar dúvidas frequentes..." />
+    </div>
+    <div class="faq-scroll">
       <div class="faq-section">
         <div class="faq-section-title"><i class="bi bi-patch-question"></i> Perguntas frequentes</div>
-        ${[
-          { q: 'Como adicionar um novo aluno à turma?', a: 'Acesse a aba "Turmas" no menu principal, selecione a turma desejada e clique em "+ Adicionar Aluno". Você pode importar via arquivo CSV ou adicionar manualmente.' },
-          { q: 'Como faço para resetar a senha de um estudante?', a: 'Na lista de alunos, clique no ícone de engrenagem ao lado do nome do estudante, selecione "Resetar senha" e confirme. O aluno receberá instruções por e-mail.' },
-          { q: 'Posso editar uma missão após publicá-la?', a: 'Sim, mas apenas ajustes de texto e configurações. Mudanças estruturais podem afetar o progresso dos alunos. Recomendamos duplicar e criar nova versão.' }
-        ].map(faq => `
-          <div class="faq-item">
-            <div class="faq-question">${faq.q}<i class="bi bi-chevron-down"></i></div>
-            <div class="faq-answer">${faq.a}</div>
-          </div>
-        `).join('')}
+        ${faqList([
+          { q: 'Como adicionar um novo aluno à turma?', a: 'Acesse Turmas > Adicionar Aluno e escolha CSV ou manual.' },
+          { q: 'Posso editar uma missão após publicá-la?', a: 'Apenas ajustes de texto e configurações são seguros. Para mudanças estruturais, duplique a missão.' },
+          { q: 'Como enviar feedback para o aluno?', a: 'Abra a evidência, clique em Feedback e registre o retorno com rubricas.' }
+        ])}
       </div>
-    </div>
-    <div class="faq-footer">
-      <span><i class="bi bi-lightbulb"></i> Última atualização: 28/01/2026</span>
-      <span>Idioma: Português (BR)</span>
     </div>
   `)
 };
 
 export const ComContato = {
-  render: () => renderModal(`
-    ${header('Precisa de ajuda?')}
-    <div class="faq-body">
+  render: () => render(`
+    <div class="faq-scroll">
       <div class="faq-section">
-        <div class="faq-section-title"><i class="bi bi-chat-dots"></i> Canais de suporte</div>
-        <div class="contact-card">
-          <div class="contact-title"><i class="bi bi-headset"></i> Entre em contato com nossa equipe</div>
-          <div class="contact-options">
-            <button class="contact-btn"><i class="bi bi-envelope"></i> E-mail</button>
-            <button class="contact-btn"><i class="bi bi-telephone"></i> Telefone</button>
-            <button class="contact-btn"><i class="bi bi-chat-left-text"></i> Chat ao vivo</button>
-          </div>
+        <div class="faq-section-title"><i class="bi bi-chat-dots"></i> Canais de suporte <small>Escolha o canal preferido</small></div>
+        <div class="contact-grid">
+          <button class="contact-btn primary"><i class="bi bi-whatsapp"></i> WhatsApp</button>
+          <button class="contact-btn"><i class="bi bi-chat-left-text"></i> Chat ao vivo</button>
+          <button class="contact-btn"><i class="bi bi-envelope"></i> E-mail</button>
+          <button class="contact-btn"><i class="bi bi-telephone"></i> Telefone</button>
         </div>
       </div>
       <div class="faq-section">
         <div class="faq-section-title"><i class="bi bi-clock-history"></i> Tempo médio de resposta</div>
-        <div style="font-size:13px;color:#6E6B7B;padding:0 4px">E-mail: até 24h úteis | Telefone: imediato | Chat: 5-10 minutos</div>
+        <div style="font-size:13px;color:var(--muted);">E-mail: até 24h • Telefone: imediato • Chat: 5-10 min</div>
       </div>
     </div>
-  `)
+  `, { title: 'Precisa de ajuda?' })
 };
 
 export const LinksRapidos = {
-  render: () => renderModal(`
-    ${header('Recursos e documentação')}
-    <div class="faq-body">
+  render: () => render(`
+    <div class="faq-scroll">
       <div class="faq-section">
         <div class="faq-section-title"><i class="bi bi-bookmark"></i> Acesso rápido</div>
         ${[
           { icon: 'bi-book', title: 'Guia do Professor', desc: 'Manual completo de uso', badge: 'Atualizado' },
           { icon: 'bi-play-circle', title: 'Vídeos tutoriais', desc: '18 aulas em vídeo', badge: 'Novo' },
-          { icon: 'bi-file-earmark-pdf', title: 'Download do PDF', desc: 'Documentação offline', badge: null },
-          { icon: 'bi-journal-code', title: 'API e integrações', desc: 'Para desenvolvedores', badge: null }
+          { icon: 'bi-file-earmark-pdf', title: 'Download PDF', desc: 'Documentação offline' },
+          { icon: 'bi-journal-code', title: 'API e integrações', desc: 'Para desenvolvedores' }
         ].map(link => `
           <div class="quick-link">
-            <div class="quick-link i"><i class="bi ${link.icon}"></i></div>
-            <div class="quick-text">
-              <div class="quick-text-title">${link.title}</div>
-              <div class="quick-text-desc">${link.desc}</div>
+            <div style="width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#efeefe;color:#4b3cc4;"><i class="bi ${link.icon}"></i></div>
+            <div style="flex:1;">
+              <div style="font-weight:800;color:var(--text);">${link.title}</div>
+              <div style="font-size:12px;color:var(--muted);">${link.desc}</div>
             </div>
             ${link.badge ? `<span class="badge-pill">${link.badge}</span>` : ''}
-            <i class="bi bi-arrow-right" style="color:#9795B5"></i>
+            <i class="bi bi-arrow-right" style="color:var(--muted);"></i>
           </div>
         `).join('')}
       </div>
     </div>
-  `)
+  `, { title: 'Recursos e documentação' })
 };
 
 export const CategoriasPorTopico = {
-  render: () => renderModal(`
-    ${header('Tópicos de ajuda')}
-    <div class="faq-body">
+  render: () => render(`
+    <div class="faq-scroll">
       ${[
         { title: 'Primeiros passos', icon: 'bi-rocket-takeoff', count: 8 },
         { title: 'Gestão de turmas', icon: 'bi-people', count: 12 },
@@ -124,125 +202,106 @@ export const CategoriasPorTopico = {
       ].map(cat => `
         <div class="faq-section">
           <div class="faq-section-title"><i class="bi ${cat.icon}"></i> ${cat.title} <span class="badge-pill">${cat.count} artigos</span></div>
-          <div style="font-size:13px;color:#9795B5;padding:0 4px">Clique para explorar artigos desta categoria</div>
+          <div style="font-size:13px;color:var(--muted);">Clique para explorar artigos desta categoria</div>
         </div>
       `).join('')}
     </div>
-  `)
+  `, { title: 'Tópicos de ajuda' })
 };
 
 export const ComBusca = {
-  render: () => renderModal(`
-    ${header('Buscar ajuda')}
-    <div class="faq-body">
-      <div class="faq-search">
-        <i class="bi bi-search"></i>
-        <input type="text" placeholder="Digite sua dúvida..." value="como importar alunos">
+  render: () => render(`
+    <div class="faq-search">
+      <i class="bi bi-search"></i>
+      <input type="text" value="como importar alunos" />
+    </div>
+    <div style="font-size:12px;color:var(--muted);">3 resultados encontrados</div>
+    <div class="faq-scroll">
+      ${faqList([
+        { q: 'Como importar alunos via CSV?', a: 'Prepare um arquivo com nome, email, data_nascimento, responsável e importe em Turmas > Importar.' },
+        { q: 'Formatos aceitos para importação', a: 'CSV separado por vírgula ou ponto e vírgula, com cabeçalho.' },
+        { q: 'Corrigir erros de importação', a: 'Baixe o log de erros, ajuste o CSV e reenviar.' }
+      ], 0)}
+    </div>
+  `, { title: 'Buscar ajuda' })
+};
+
+export const TutorialVideo = {
+  render: () => render(`
+    <div class="faq-scroll">
+      <div class="video-box">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:32px;cursor:pointer;"><i class="bi bi-play-fill"></i></div>
       </div>
-      <div style="font-size:12px;color:#9795B5;margin-bottom:12px">3 resultados encontrados</div>
       <div class="faq-section">
-        ${[
-          { q: 'Como importar alunos via planilha CSV?', highlight: true },
-          { q: 'Formatos aceitos para importação de dados', highlight: false },
-          { q: 'Como corrigir erros na importação de alunos?', highlight: false }
-        ].map(item => `
-          <div class="faq-item ${item.highlight ? 'expanded' : ''}">
-            <div class="faq-question">${item.q}<i class="bi bi-chevron-down"></i></div>
-            ${item.highlight ? '<div class="faq-answer">Prepare um arquivo CSV com as colunas: nome, email, data_nascimento, responsavel. Acesse Turmas > Importar e faça upload do arquivo. Revise a pré-visualização antes de confirmar.</div>' : ''}
+        <div class="faq-section-title"><i class="bi bi-film"></i> Como criar sua primeira missão</div>
+        <div style="font-size:13px;color:var(--muted);">Aprenda passo a passo como configurar objetivos, adicionar desafios e publicar uma missão. Duração: 8 minutos.</div>
+      </div>
+      <div class="faq-section" style="background:#fff;">
+        <div class="faq-section-title"><i class="bi bi-collection-play"></i> Mais vídeos</div>
+        ${['Importar alunos (3:20)', 'Configurar pontos XP (5:15)', 'Usar relatórios (6:40)'].map(v => `
+          <div class="quick-link" style="border:none; padding:8px 10px;">
+            <div style="width:30px; height:30px; border-radius:8px; background:#efeefe; display:grid; place-items:center; color:#4b3cc4;"><i class="bi bi-play-circle"></i></div>
+            <div style="font-weight:700;">${v}</div>
           </div>
         `).join('')}
       </div>
     </div>
-  `)
-};
-
-export const TutorialVideo = {
-  render: () => renderModal(`
-    ${header('Tutorial em vídeo')}
-    <div class="faq-body">
-      <div style="aspect-ratio:16/9;border-radius:16px;background:linear-gradient(135deg,#E6E4FF,#D9D6F3);display:flex;align-items:center;justify-content:center;border:1px solid #E1DFFE;margin-bottom:16px">
-        <div style="width:72px;height:72px;border-radius:50%;background:#7367F0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;cursor:pointer"><i class="bi bi-play-fill"></i></div>
-      </div>
-      <div class="faq-section">
-        <div class="faq-section-title"><i class="bi bi-film"></i> Como criar sua primeira missão</div>
-        <div style="font-size:13px;color:#6E6B7B;line-height:1.7">Aprenda passo a passo como configurar objetivos, adicionar desafios e publicar uma missão educacional. Duração: 8 minutos.</div>
-      </div>
-      <div class="contact-card" style="margin-top:8px">
-        <div class="contact-title"><i class="bi bi-collection-play"></i> Mais vídeos relacionados</div>
-        <div style="display:grid;gap:8px">
-          ${['Importar alunos (3:20)', 'Configurar pontos XP (5:15)', 'Usar relatórios (6:40)'].map(v => `
-            <div style="font-size:13px;color:#433878;cursor:pointer;padding:8px 12px;border-radius:8px;background:#fff;border:1px solid #E1DFFE"><i class="bi bi-play-circle" style="margin-right:8px"></i>${v}</div>
-          `).join('')}
-        </div>
-      </div>
-    </div>
-  `)
+  `, { title: 'Tutorial em vídeo' })
 };
 
 export const StatusDoSistema = {
-  render: () => renderModal(`
-    ${header('Status do sistema')}
-    <div class="faq-body">
+  render: () => render(`
+    <div class="faq-scroll">
       <div class="faq-section">
         <div class="faq-section-title"><i class="bi bi-activity"></i> Serviços operacionais</div>
         ${[
           { service: 'Plataforma web', status: 'operational', desc: 'Todos os sistemas funcionando' },
           { service: 'API de integrações', status: 'operational', desc: 'Tempo de resposta: 120ms' },
-          { service: 'Upload de arquivos', status: 'degraded', desc: 'Lentidão temporária detectada' },
-          { service: 'Notificações por e-mail', status: 'operational', desc: 'Entrega em até 2 minutos' }
+          { service: 'Upload de arquivos', status: 'degraded', desc: 'Lentidão temporária detectada' }
         ].map(item => {
-          const colors = {
-            operational: { bg: '#E6F7ED', border: '#34C759', text: '#1B874E' },
-            degraded: { bg: '#FFF4E5', border: '#FF9500', text: '#B86E00' }
-          };
-          const c = colors[item.status];
+          const map = item.status === 'operational'
+            ? { bg: '#e6f7ed', border: '#34c759', text: '#1b874e', label: '✓ Operacional' }
+            : { bg: '#fff4e5', border: '#ff9500', text: '#b86e00', label: '⚠ Degradado' };
           return `
-            <div class="faq-item" style="cursor:default">
-              <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="status-card">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
                 <div>
-                  <div style="font-size:14px;font-weight:600;color:#3F3F46">${item.service}</div>
-                  <div style="font-size:12px;color:#6E6B7B;margin-top:4px">${item.desc}</div>
+                  <div style="font-weight:800;color:var(--text);">${item.service}</div>
+                  <div style="font-size:12px;color:var(--muted);">${item.desc}</div>
                 </div>
-                <span style="padding:6px 12px;border-radius:999px;background:${c.bg};border:1px solid ${c.border};color:${c.text};font-size:11px;font-weight:600">${item.status === 'operational' ? '✓ Operacional' : '⚠ Degradado'}</span>
+                <span style="padding:6px 12px;border-radius:999px;background:${map.bg};border:1px solid ${map.border};color:${map.text};font-weight:700;font-size:12px;">${map.label}</span>
               </div>
             </div>
           `;
         }).join('')}
       </div>
     </div>
-    <div class="faq-footer">
-      <span><i class="bi bi-clock"></i> Atualizado há 2 minutos</span>
-      <a href="#" style="color:#7367F0;text-decoration:none">Histórico completo →</a>
-    </div>
-  `)
+  `, { title: 'Status do sistema' })
 };
 
 export const Compacto = {
-  render: () => renderModal(`
-    ${header('Ajuda')}
-    <div class="faq-body" style="padding:20px 24px">
-      <div class="faq-search" style="margin-bottom:14px">
-        <i class="bi bi-search"></i>
-        <input type="text" placeholder="O que você precisa?">
-      </div>
-      <div class="contact-options">
+  render: () => render(`
+    <div class="faq-search">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="O que você precisa?" />
+    </div>
+    <div class="faq-section" style="padding:12px;">
+      <div class="contact-grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
         <button class="contact-btn"><i class="bi bi-envelope"></i> E-mail</button>
         <button class="contact-btn"><i class="bi bi-chat-left-text"></i> Chat</button>
       </div>
     </div>
-  `, 'compact')
+  `, { extra: 'compact', title: 'Ajuda' })
 };
 
 export const Vazio = {
-  render: () => renderModal(`
-    <div class="faq-body" style="padding:48px 30px">
+  render: () => render(`
+    <div class="faq-scroll" style="align-content:center;">
       <div class="empty">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
-        </svg>
-        <div style="font-size:16px;font-weight:600">Nenhum resultado encontrado</div>
-        <div style="font-size:13px">Tente usar palavras-chave diferentes ou navegue pelas categorias.</div>
-        <button style="justify-self:center;padding:10px 18px;border-radius:10px;border:none;background:#7367F0;color:#fff;font-weight:600;cursor:pointer">Ver todas as categorias</button>
+        <div style="font-size:44px;">🔍</div>
+        <div style="font-weight:800;color:var(--text);">Nenhum resultado encontrado</div>
+        <div style="font-size:13px;">Tente palavras-chave diferentes ou navegue pelas categorias.</div>
+        <button class="contact-btn primary" style="justify-content:center;">Ver todas as categorias</button>
       </div>
     </div>
   `)
