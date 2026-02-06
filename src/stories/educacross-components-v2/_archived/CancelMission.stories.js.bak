@@ -1,0 +1,1223 @@
+import { 
+  createDocPage, 
+  createExampleCard, 
+  createPropsTable, 
+  createUsageSection 
+} from '../_helpers/docTemplate.js';
+
+export default {
+  title: 'Front-office/Modals/CancelMission',
+  parameters: {
+    layout: 'fullscreen',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+    docs: {
+      story: {
+        inline: true,
+        iframeHeight: 0,
+      },
+      canvas: {
+        sourceState: 'none',
+      },
+    },
+    controls: {
+      disable: true,
+    },
+    actions: {
+      disable: true,
+    },
+    toolbar: {
+      zoom: { hidden: true },
+      eject: { hidden: true },
+      copy: { hidden: true },
+    },
+  }
+};
+
+const styles = `
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 0.428rem;
+}
+
+.belinha-img {
+  width: 311px;
+  height: 241px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4b4b4b;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.warning-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #6e6b7b;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.attention-text {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ea5455;
+  text-align: center;
+  margin: 1rem 0;
+  line-height: 1.71;
+}
+
+.success-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #5e5873;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.29;
+}
+
+.success-message {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6e6b7b;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.71;
+}
+
+.actions-container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.714rem 1.5rem;
+  border-radius: 0.428rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 18rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-outline-danger {
+  background: transparent;
+  border: 1px solid #ea5455;
+  color: #ea5455;
+}
+
+.btn-outline-danger:hover:not(:disabled) {
+  background: #ea5455;
+  color: #fff;
+  box-shadow: 0 8px 25px -8px #ea5455;
+}
+
+.btn-danger {
+  background: #ea5455;
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #D64747;
+  box-shadow: 0 8px 25px -8px #ea5455;
+}
+
+.btn-primary {
+  background: #6e63e8;
+  color: #fff;
+  width: 18rem;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #5E50EE;
+  box-shadow: 0 8px 25px -8px #6e63e8;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+`;
+
+// Documentação principal
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'CancelMission',
+    subtitle: 'Modal de confirmação e feedback para cancelamento de missão',
+    badge: 'Front-office / Modals',
+    badgeIcon: 'cancel',
+    showStats: true,
+    stats: {
+      'Estados': '2',
+      'Botões': '3',
+      'Irreversível': '✓'
+    },
+    colors: {
+      primary: '#ea5455',
+      secondary: '#6e63e8'
+    },
+    content: `
+      ${createUsageSection({
+        title: 'Fluxo de Uso',
+        icon: 'info',
+        steps: [
+          'Professor acessa listagem de missões',
+          'Clica em "Cancelar Missão" em uma missão específica',
+          'Modal exibe confirmação com aviso de irreversibilidade',
+          'Professor confirma clicando em "Quero cancelar"',
+          'Sistema processa e exibe feedback de sucesso',
+          'Sugere arquivamento da missão cancelada'
+        ]
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Confirmação',
+        description: 'Modal inicial solicitando confirmação do cancelamento',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          <div class="modal-container">
+            <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+            
+            <h2 class="modal-title">Cancelar envio de missão?</h2>
+            
+            <p class="warning-text">
+              Tem certeza que deseja cancelar a <strong>"Leitura e Interpretação - Fábulas"</strong>?
+            </p>
+            
+            <p class="attention-text">
+              Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+            </p>
+            
+            <div class="actions-container">
+              <button class="btn btn-outline-danger">Não quero cancelar</button>
+              <button class="btn btn-danger">Quero cancelar</button>
+            </div>
+          </div>
+        `,
+        codes: {
+          html: `<!-- Modal de Confirmação -->
+<div class="cancel-mission-modal">
+  <img src="/belinha.png" alt="Belinha" />
+  <h2>Cancelar envio de missão?</h2>
+  <p class="warning">
+    Tem certeza que deseja cancelar a <strong>"Leitura e Interpretação"</strong>?
+  </p>
+  <p class="attention">
+    Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada.
+  </p>
+  <div class="actions">
+    <button class="btn-cancel">Não quero cancelar</button>
+    <button class="btn-confirm">Quero cancelar</button>
+  </div>
+</div>`,
+          vue2: `<template>
+  <b-modal 
+    v-model="showModal" 
+    centered 
+    hide-header 
+    hide-footer
+  >
+    <div class="cancel-mission">
+      <img src="@/assets/belinha.png" alt="Belinha" />
+      <h2>Cancelar envio de missão?</h2>
+      <p class="warning">
+        Tem certeza que deseja cancelar a 
+        <strong>"{{ mission.name }}"</strong>?
+      </p>
+      <p class="attention">
+        Atenção: Ao cancelar o envio da missão, 
+        a mesma não poderá ser reenviada.
+      </p>
+      <div class="actions">
+        <b-button 
+          variant="outline-danger"
+          @click="closeModal"
+        >
+          Não quero cancelar
+        </b-button>
+        <b-button 
+          variant="danger"
+          :disabled="loading"
+          @click="confirmCancel"
+        >
+          <b-spinner v-if="loading" small />
+          Quero cancelar
+        </b-button>
+      </div>
+    </div>
+  </b-modal>
+</template>
+
+<script>
+export default {
+  props: {
+    mission: { type: Object, required: true }
+  },
+  data() {
+    return {
+      showModal: false,
+      loading: false
+    }
+  },
+  methods: {
+    async confirmCancel() {
+      this.loading = true
+      try {
+        await this.$http.post('/missions/' + this.mission.id + '/cancel')
+        this.$emit('cancelled')
+        this.showSuccessState()
+      } catch (error) {
+        this.$toast.error('Erro ao cancelar missão')
+      } finally {
+        this.loading = false
+      }
+    },
+    closeModal() {
+      this.showModal = false
+    }
+  }
+}
+</script>`,
+          vue3: `<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  mission: { type: Object, required: true }
+})
+
+const emit = defineEmits(['cancelled', 'close'])
+
+const loading = ref(false)
+
+async function confirmCancel() {
+  loading.value = true
+  try {
+    await fetch(\`/api/missions/\${props.mission.id}/cancel\`, {
+      method: 'POST'
+    })
+    emit('cancelled')
+  } catch (error) {
+    console.error('Erro ao cancelar', error)
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
+<template>
+  <div class="cancel-mission-modal">
+    <img src="/belinha.png" alt="Belinha" />
+    <h2>Cancelar envio de missão?</h2>
+    <p class="warning">
+      Tem certeza que deseja cancelar a 
+      <strong>"{{ mission.name }}"</strong>?
+    </p>
+    <p class="attention">
+      Atenção: Ao cancelar o envio da missão, 
+      a mesma não poderá ser reenviada.
+    </p>
+    <div class="actions">
+      <button 
+        class="btn-cancel"
+        @click="emit('close')"
+      >
+        Não quero cancelar
+      </button>
+      <button 
+        class="btn-confirm"
+        :disabled="loading"
+        @click="confirmCancel"
+      >
+        <span v-if="loading" class="spinner"></span>
+        Quero cancelar
+      </button>
+    </div>
+  </div>
+</template>`,
+          react: `import { useState } from 'react'
+
+export function CancelMissionModal({ mission, onCancel, onClose }) {
+  const [loading, setLoading] = useState(false)
+
+  const handleConfirm = async () => {
+    setLoading(true)
+    try {
+      await fetch(\`/api/missions/\${mission.id}/cancel\`, {
+        method: 'POST'
+      })
+      onCancel()
+    } catch (error) {
+      console.error('Erro ao cancelar', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className="cancel-mission-modal">
+      <img src="/belinha.png" alt="Belinha" />
+      <h2>Cancelar envio de missão?</h2>
+      <p className="warning">
+        Tem certeza que deseja cancelar a 
+        <strong>"{mission.name}"</strong>?
+      </p>
+      <p className="attention">
+        Atenção: Ao cancelar o envio da missão, 
+        a mesma não poderá ser reenviada.
+      </p>
+      <div className="actions">
+        <button 
+          className="btn-cancel"
+          onClick={onClose}
+        >
+          Não quero cancelar
+        </button>
+        <button 
+          className="btn-confirm"
+          disabled={loading}
+          onClick={handleConfirm}
+        >
+          {loading && <span className="spinner" />}
+          Quero cancelar
+        </button>
+      </div>
+    </div>
+  )
+}`
+        }
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Sucesso',
+        description: 'Feedback após cancelamento bem-sucedido',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          <div class="modal-container">
+            <h1 class="success-title">Missão cancelada!</h1>
+            
+            <p class="success-message">
+              Não é mais possível enviar essa missão para os alunos.<br>
+              Deseja arquivá-la para não aparecer mais na listagem?
+            </p>
+            
+            <button class="btn btn-primary">Ok</button>
+          </div>
+        `,
+        codes: {
+          html: `<!-- Estado de Sucesso -->
+<div class="success-state">
+  <h1>Missão cancelada!</h1>
+  <p>
+    Não é mais possível enviar essa missão.<br>
+    Deseja arquivá-la para não aparecer mais?
+  </p>
+  <button class="btn-ok">Ok</button>
+</div>`,
+          vue2: `<template>
+  <div v-if="success" class="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br>
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <b-button 
+      variant="primary"
+      @click="closeModal"
+    >
+      Ok
+    </b-button>
+  </div>
+</template>`,
+          vue3: `<template>
+  <div v-if="success" class="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br>
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <button 
+      class="btn-primary"
+      @click="emit('close')"
+    >
+      Ok
+    </button>
+  </div>
+</template>`,
+          react: `{success && (
+  <div className="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br />
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <button 
+      className="btn-primary"
+      onClick={onClose}
+    >
+      Ok
+    </button>
+  </div>
+)}`
+        }
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Loading',
+        description: 'Botão com spinner durante processamento',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          <div class="modal-container">
+            <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+            
+            <h2 class="modal-title">Cancelar envio de missão?</h2>
+            
+            <p class="warning-text">
+              Tem certeza que deseja cancelar a <strong>"Geografia - Continentes"</strong>?
+            </p>
+            
+            <p class="attention-text">
+              Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+            </p>
+            
+            <div class="actions-container">
+              <button class="btn btn-outline-danger" disabled>Não quero cancelar</button>
+              <button class="btn btn-danger" disabled>
+                <span class="spinner"></span>
+                Quero cancelar
+              </button>
+            </div>
+          </div>
+        `,
+        codes: {
+          html: `<button class="btn-loading" disabled>
+  <span class="spinner"></span>
+  Quero cancelar
+</button>
+
+<style>
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>`,
+          vue2: `<b-button 
+  variant="danger"
+  :disabled="loading"
+>
+  <b-spinner v-if="loading" small />
+  Quero cancelar
+</b-button>`,
+          vue3: `<button :disabled="loading">
+  <span v-if="loading" class="spinner"></span>
+  Quero cancelar
+</button>`,
+          react: `<button disabled={loading}>
+  {loading && <span className="spinner" />}
+  Quero cancelar
+</button>`
+        }
+      })}
+
+      ${createPropsTable([
+        {
+          prop: 'cancelMission',
+          type: 'Object',
+          default: '{}',
+          description: 'Objeto da missão a ser cancelada. Deve conter { id, name, guideName }'
+        }
+      ])}
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">tune</span>
+          <span>Estados do Modal</span>
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fff5f5;">
+            <h4 style="color: #ea5455; margin: 0 0 0.5rem 0;">1. Confirmação</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Exibe ilustração Belinha, warning e botões de ação</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fff9f5;">
+            <h4 style="color: #ff9f43; margin: 0 0 0.5rem 0;">2. Loading</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Botões desabilitados, spinner visível durante API call</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #f0fdf4;">
+            <h4 style="color: #28c76f; margin: 0 0 0.5rem 0;">3. Sucesso</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Feedback de sucesso com sugestão de arquivamento</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">warning</span>
+          <span>Regras de Negócio</span>
+        </h3>
+        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;"><strong>Irreversibilidade:</strong> Missão cancelada não pode ser reenviada</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Confirmação Dupla:</strong> Exibe nome da missão + aviso em vermelho</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Sugestão Útil:</strong> Após cancelar, oferece arquivamento</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Loading State:</strong> Ambos botões desabilitados durante processamento</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">palette</span>
+          <span>Especificações Visuais</span>
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Largura Modal</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">500px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Imagem Belinha</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">311×241px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Largura Botões</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">288px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Gap Botões</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">16px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #ea5455; padding: 1rem; border-radius: 8px; background: #fff5f5;">
+            <div style="font-size: 0.75rem; color: #ea5455; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Cor Danger</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #ea5455;">#ea5455</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #6e63e8; padding: 1rem; border-radius: 8px; background: #f8f7ff;">
+            <div style="font-size: 0.75rem; color: #6e63e8; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Cor Primary</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #6e63e8;">#6e63e8</div>
+          </div>
+        </div>
+      </div>
+    
+  })
+};
+
+export const ConfirmationState = {
+  name: 'Confirmation',
+  render: () => `
+    ${styles}
+    <div style="display: flex; justify-content: center; padding: 2rem; background: #f8f9fa;">
+      <div class="modal-container" style="width: 100%; max-width: 520px;">
+        <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+        <h2 class="modal-title">Cancelar envio de missão?</h2>
+        <p class="warning-text">
+          Tem certeza que deseja cancelar a <strong>"Leitura e Interpretação - Fábulas"</strong>?
+        </p>
+        <p class="attention-text">
+          Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+        </p>
+        <div class="actions-container">
+          <button class="btn btn-outline-danger">Não quero cancelar</button>
+          <button class="btn btn-danger">Quero cancelar</button>
+        </div>
+      </div>
+    </div>
+  `
+};
+
+export const LoadingState = {
+  name: 'Loading',
+  render: () => `
+    ${styles}
+    <div style="display: flex; justify-content: center; padding: 2rem; background: #f8f9fa;">
+      <div class="modal-container" style="width: 100%; max-width: 520px;">
+        <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+        <h2 class="modal-title">Cancelar envio de missão?</h2>
+      <p class="warning-text">
+        Tem certeza que deseja cancelar a <strong>"Geografia - Continentes e Oceanos"</strong>?
+      </p>
+      <p class="attention-text">
+        Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+      </p>
+      <div class="actions-container">
+        <button class="btn btn-outline-danger" disabled>Não quero cancelar</button>
+        <button class="btn btn-danger" disabled>
+          <span class="spinner"></span>
+          Quero cancelar
+        </button>
+      </div>
+    </div>
+  `
+};
+
+export const SuccessState = {
+  name: 'Success',
+  render: () => `
+    ${styles}
+    <div style="display: flex; justify-content: center; padding: 2rem; background: #f8f9fa;">
+      <div class="modal-container" style="width: 100%; max-width: 520px;">
+        <h1 class="success-title">Missão cancelada!</h1>
+      <p class="success-message">
+        Não é mais possível enviar essa missão para os alunos.<br>
+        Deseja arquivá-la para não aparecer mais na listagem?
+      </p>
+      <button class="btn btn-primary">Ok</button>
+      </div>
+    </div>
+  `
+};
+
+export const AllStates = {
+  name: 'All States',
+  render: () => `
+    ${styles}
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; padding: 2rem; background: #f8f9fa; justify-content: center;">
+      <div style="flex: 1 1 320px; max-width: 520px; display: flex; justify-content: center;">
+        <div class="modal-container" style="width: 100%;">
+          <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+          <h2 class="modal-title">Cancelar envio de missão?</h2>
+          <p class="warning-text">
+            Tem certeza que deseja cancelar a <strong>"Missão A"</strong>?
+          </p>
+          <p class="attention-text">
+            Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada.
+          </p>
+          <div class="actions-container">
+            <button class="btn btn-outline-danger">Não quero cancelar</button>
+            <button class="btn btn-danger">Quero cancelar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div style="flex: 1 1 320px; max-width: 520px; display: flex; justify-content: center;">
+        <div class="modal-container" style="width: 100%;">
+          <h1 class="success-title">Missão cancelada!</h1>
+          <p class="success-message">
+            Não é mais possível enviar essa missão.<br>
+            Deseja arquivá-la para não aparecer mais?
+          </p>
+          <button class="btn btn-primary">Ok</button>
+        </div>
+      </div>
+    </div>
+  `
+};
+
+export const Default = {
+  render: () => createDocPage({
+    title: 'CancelMission',
+    subtitle: 'Modal de confirmação e feedback para cancelamento de missão',
+    badge: 'Front-office / Modals',
+    badgeIcon: 'cancel',
+    showStats: true,
+    stats: {
+      'Estados': '2',
+      'Botões': '3',
+      'Irreversível': '✓'
+    },
+    colors: {
+      primary: '#ea5455',
+      secondary: '#6e63e8'
+    },
+    content: `
+      ${createUsageSection({
+        title: 'Fluxo de Uso',
+        icon: 'info',
+        steps: [
+          'Professor acessa listagem de missões',
+          'Clica em "Cancelar Missão" em uma missão específica',
+          'Modal exibe confirmação com aviso de irreversibilidade',
+          'Professor confirma clicando em "Quero cancelar"',
+          'Sistema processa e exibe feedback de sucesso',
+          'Sugere arquivamento da missão cancelada'
+        ]
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Confirmação',
+        description: 'Modal inicial solicitando confirmação do cancelamento',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          <div class="modal-container">
+            <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+            
+            <h2 class="modal-title">Cancelar envio de missão?</h2>
+            
+            <p class="warning-text">
+              Tem certeza que deseja cancelar a <strong>"Leitura e Interpretação - Fábulas"</strong>?
+            </p>
+            
+            <p class="attention-text">
+              Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+            </p>
+            
+            <div class="actions-container">
+              <button class="btn btn-outline-danger">Não quero cancelar</button>
+              <button class="btn btn-danger">Quero cancelar</button>
+            </div>
+          </div>
+        \`,
+        codes: {
+          html: \`<!-- Modal de Confirmação -->
+<div class="cancel-mission-modal">
+  <img src="/belinha.png" alt="Belinha" />
+  <h2>Cancelar envio de missão?</h2>
+  <p class="warning">
+    Tem certeza que deseja cancelar a <strong>"Leitura e Interpretação"</strong>?
+  </p>
+  <p class="attention">
+    Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada.
+  </p>
+  <div class="actions">
+    <button class="btn-cancel">Não quero cancelar</button>
+    <button class="btn-confirm">Quero cancelar</button>
+  </div>
+</div>\`,
+          vue2: \`<template>
+  <b-modal 
+    v-model="showModal" 
+    centered 
+    hide-header 
+    hide-footer
+  >
+    <div class="cancel-mission">
+      <img src="@/assets/belinha.png" alt="Belinha" />
+      <h2>Cancelar envio de missão?</h2>
+      <p class="warning">
+        Tem certeza que deseja cancelar a 
+        <strong>"{{ mission.name }}"</strong>?
+      </p>
+      <p class="attention">
+        Atenção: Ao cancelar o envio da missão, 
+        a mesma não poderá ser reenviada.
+      </p>
+      <div class="actions">
+        <b-button 
+          variant="outline-danger"
+          @click="closeModal"
+        >
+          Não quero cancelar
+        </b-button>
+        <b-button 
+          variant="danger"
+          :disabled="loading"
+          @click="confirmCancel"
+        >
+          <b-spinner v-if="loading" small />
+          Quero cancelar
+        </b-button>
+      </div>
+    </div>
+  </b-modal>
+</template>
+
+<script>
+export default {
+  props: {
+    mission: { type: Object, required: true }
+  },
+  data() {
+    return {
+      showModal: false,
+      loading: false
+    }
+  },
+  methods: {
+    async confirmCancel() {
+      this.loading = true
+      try {
+        await this.$http.post('/missions/' + this.mission.id + '/cancel')
+        this.$emit('cancelled')
+        this.showSuccessState()
+      } catch (error) {
+        this.$toast.error('Erro ao cancelar missão')
+      } finally {
+        this.loading = false
+      }
+    },
+    closeModal() {
+      this.showModal = false
+    }
+  }
+}
+</script>\`,
+          vue3: \`<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  mission: { type: Object, required: true }
+})
+
+const emit = defineEmits(['cancelled', 'close'])
+
+const loading = ref(false)
+
+async function confirmCancel() {
+  loading.value = true
+  try {
+    await fetch('/api/missions/' + props.mission.id + '/cancel', {
+      method: 'POST'
+    })
+    emit('cancelled')
+  } catch (error) {
+    console.error('Erro ao cancelar', error)
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
+<template>
+  <div class="cancel-mission-modal">
+    <img src="/belinha.png" alt="Belinha" />
+    <h2>Cancelar envio de missão?</h2>
+    <p class="warning">
+      Tem certeza que deseja cancelar a 
+      <strong>"{{ mission.name }}"</strong>?
+    </p>
+    <p class="attention">
+      Atenção: Ao cancelar o envio da missão, 
+      a mesma não poderá ser reenviada.
+    </p>
+    <div class="actions">
+      <button 
+        class="btn-cancel"
+        @click="emit('close')"
+      >
+        Não quero cancelar
+      </button>
+      <button 
+        class="btn-confirm"
+        :disabled="loading"
+        @click="confirmCancel"
+      >
+        <span v-if="loading" class="spinner"></span>
+        Quero cancelar
+      </button>
+    </div>
+  </div>
+</template>\`,
+          react: \`import { useState } from 'react'
+
+export function CancelMissionModal({ mission, onCancel, onClose }) {
+  const [loading, setLoading] = useState(false)
+
+  const handleConfirm = async () => {
+    setLoading(true)
+    try {
+      await fetch('/api/missions/' + props.mission.id + '/cancel', {
+        method: 'POST'
+      })
+      onCancel()
+    } catch (error) {
+      console.error('Erro ao cancelar', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className="cancel-mission-modal">
+      <img src="/belinha.png" alt="Belinha" />
+      <h2>Cancelar envio de missão?</h2>
+      <p className="warning">
+        Tem certeza que deseja cancelar a 
+        <strong>"{mission.name}"</strong>?
+      </p>
+      <p className="attention">
+        Atenção: Ao cancelar o envio da missão, 
+        a mesma não poderá ser reenviada.
+      </p>
+      <div className="actions">
+        <button 
+          className="btn-cancel"
+          onClick={onClose}
+        >
+          Não quero cancelar
+        </button>
+        <button 
+          className="btn-confirm"
+          disabled={loading}
+          onClick={handleConfirm}
+        >
+          {loading && <span className="spinner" />}
+          Quero cancelar
+        </button>
+      </div>
+    </div>
+  )
+}\`
+        }
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Sucesso',
+        description: 'Feedback após cancelamento bem-sucedido',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          ${styles}
+          <div class="modal-container">
+            <h1 class="success-title">Missão cancelada!</h1>
+            
+            <p class="success-message">
+              Não é mais possível enviar essa missão para os alunos.<br>
+              Deseja arquivá-la para não aparecer mais na listagem?
+            </p>
+            
+            <button class="btn btn-primary">Ok</button>
+          </div>
+        \`,
+        codes: {
+          html: \`<!-- Estado de Sucesso -->
+<div class="success-state">
+  <h1>Missão cancelada!</h1>
+  <p>
+    Não é mais possível enviar essa missão.<br>
+    Deseja arquivá-la para não aparecer mais?
+  </p>
+  <button class="btn-ok">Ok</button>
+</div>\`,
+          vue2: \`<template>
+  <div v-if="success" class="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br>
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <b-button 
+      variant="primary"
+      @click="closeModal"
+    >
+      Ok
+    </b-button>
+  </div>
+</template>\`,
+          vue3: \`<template>
+  <div v-if="success" class="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br>
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <button 
+      class="btn-primary"
+      @click="emit('close')"
+    >
+      Ok
+    </button>
+  </div>
+</template>\`,
+          react: \`{success && (
+  <div className="success-state">
+    <h1>Missão cancelada!</h1>
+    <p>
+      Não é mais possível enviar essa missão.<br />
+      Deseja arquivá-la para não aparecer mais?
+    </p>
+    <button 
+      className="btn-primary"
+      onClick={onClose}
+    >
+      Ok
+    </button>
+  </div>
+)}\`
+        }
+      })}
+
+      ${createExampleCard({
+        title: 'Estado de Loading',
+        description: 'Botão com spinner durante processamento',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          ${styles}
+          <div class="modal-container">
+            <img src="/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png" class="belinha-img" alt="Belinha" />
+            
+            <h2 class="modal-title">Cancelar envio de missão?</h2>
+            
+            <p class="warning-text">
+              Tem certeza que deseja cancelar a <strong>"Geografia - Continentes"</strong>?
+            </p>
+            
+            <p class="attention-text">
+              Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
+            </p>
+            
+            <div class="actions-container">
+              <button class="btn btn-outline-danger" disabled>Não quero cancelar</button>
+              <button class="btn btn-danger" disabled>
+                <span class="spinner"></span>
+                Quero cancelar
+              </button>
+            </div>
+          </div>
+        \`,
+        codes: {
+          html: \`<button class="btn-loading" disabled>
+  <span class="spinner"></span>
+  Quero cancelar
+</button>
+
+<style>
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>\`,
+          vue2: \`<b-button 
+  variant="danger"
+  :disabled="loading"
+>
+  <b-spinner v-if="loading" small />
+  Quero cancelar
+</b-button>\`,
+          vue3: \`<button :disabled="loading">
+  <span v-if="loading" class="spinner"></span>
+  Quero cancelar
+</button>\`,
+          react: \`<button disabled={loading}>
+  {loading && <span className="spinner" />}
+  Quero cancelar
+</button>\`
+        }
+      })}
+
+      ${createPropsTable([
+        {
+          prop: 'cancelMission',
+          type: 'Object',
+          default: '{}',
+          description: 'Objeto da missão a ser cancelada. Deve conter { id, name, guideName }'
+        }
+      ])}
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">tune</span>
+          <span>Estados do Modal</span>
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fff5f5;">
+            <h4 style="color: #ea5455; margin: 0 0 0.5rem 0;">1. Confirmação</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Exibe ilustração Belinha, warning e botões de ação</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fff9f5;">
+            <h4 style="color: #ff9f43; margin: 0 0 0.5rem 0;">2. Loading</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Botões desabilitados, spinner visível durante API call</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #f0fdf4;">
+            <h4 style="color: #28c76f; margin: 0 0 0.5rem 0;">3. Sucesso</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Feedback de sucesso com sugestão de arquivamento</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">warning</span>
+          <span>Regras de Negócio</span>
+        </h3>
+        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;"><strong>Irreversibilidade:</strong> Missão cancelada não pode ser reenviada</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Confirmação Dupla:</strong> Exibe nome da missão + aviso em vermelho</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Sugestão Útil:</strong> Após cancelar, oferece arquivamento</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Loading State:</strong> Ambos botões desabilitados durante processamento</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">palette</span>
+          <span>Especificações Visuais</span>
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Largura Modal</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">500px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Imagem Belinha</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">311×241px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Largura Botões</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">288px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fbfaff;">
+            <div style="font-size: 0.75rem; color: #6e6b7b; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Gap Botões</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #2f2b3d;">16px</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #ea5455; padding: 1rem; border-radius: 8px; background: #fff5f5;">
+            <div style="font-size: 0.75rem; color: #ea5455; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Cor Danger</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #ea5455;">#ea5455</div>
+          </div>
+          <div style="flex: 1; min-width: 140px; border: 1px solid #6e63e8; padding: 1rem; border-radius: 8px; background: #f8f7ff;">
+            <div style="font-size: 0.75rem; color: #6e63e8; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Cor Primary</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #6e63e8;">#6e63e8</div>
+          </div>
+        </div>
+      </div>
+    
+  })
+};
