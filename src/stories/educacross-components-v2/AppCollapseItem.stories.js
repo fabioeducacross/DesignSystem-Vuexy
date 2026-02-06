@@ -580,7 +580,7 @@ export const Multiple = {
       return collapse.render(item.title, item.content, idx === 0);
     }).join('');
 
-    return styles + `<div style="max-width:600px;">${html}</div>`;
+    return `${styles}<div style="max-width:600px;">${html}</div>`;
   }
 };
 
@@ -599,7 +599,7 @@ export const FAQ = {
       return collapse.render(faq.q, faq.a, idx === 0);
     }).join('');
 
-    return styles + `
+    return `${styles}
       <div style="max-width:700px;">
         <h3 style="margin-bottom:1.5rem;color:#202223;">Perguntas Frequentes</h3>
         ${html}
@@ -663,7 +663,7 @@ export const SkillReport = {
       );
     }).join('');
 
-    return styles + `
+    return `${styles}
       <div style="max-width:800px;">
         <div style="margin-bottom:1.5rem;padding:1rem;background:#f8f9fa;border-left:4px solid #6e63e8;">
           <h4 style="margin:0 0 0.5rem 0;color:#202223;">Relatório de Habilidades - 7º Ano A</h4>
@@ -678,7 +678,7 @@ export const SkillReport = {
 export const LeftIcon = {
   name: 'Left Icon Position',
   render: () => {
-    return styles + `
+    return `${styles}
       <style>
         .left-icon-demo .card-header {
           padding: 1rem 1rem 1rem 3.8rem;
@@ -721,8 +721,7 @@ export const Responsive = {
   render: () => {
     const collapse = createInteractiveCollapse();
     collapse.addListeners();
-    return styles + `
-      <div style="max-width:100%;padding:1rem;background:#f8f7fa;">
+    return `${styles}      <div style="max-width:100%;padding:1rem;background:#f8f7fa;">
         ${collapse.render(
           'Título responsivo em mobile',
           `
@@ -758,7 +757,7 @@ export const LoadingSkeleton = {
       );
     }).join('');
 
-    return styles + `
+    return `${styles}
       <style>
         @keyframes pulse {
           0%, 100% { opacity: 1; }
@@ -821,7 +820,7 @@ export const Interactive = {
       });
     }, 100);
     
-    return styles + `
+    return `${styles}
       <div style="max-width:650px;">
         <div style="background:#e8f5e9;padding:1rem;border-radius:0.5rem;margin-bottom:1.5rem;border-left:4px solid #28c76f;">
           <h5 style="margin:0 0 0.5rem 0;color:#1b5e20;">✅ Interactive Demo</h5>

@@ -1,3 +1,10 @@
+import { 
+  createDocPage, 
+  createExampleCard, 
+  createPropsTable, 
+  createUsageSection 
+} from '../_helpers/docTemplate.js';
+
 /**
  * DeleteGuide - Mission Deletion Confirmation Component
  * =========================================
@@ -10,75 +17,11 @@
  */
 
 export default {
-  title: 'Front-office/Guides/DeleteGuide',
-  tags: ['autodocs'],
+  title: 'Front-office/Modals/DeleteGuide',
   parameters: {
-    layout: 'centered',
-    docs: {
-      description: {
-        component: `
-# DeleteGuide
-
-Componente de **confirmação para excluir missões** com orientação visual da mascote Belinha.
-
-## Contexto de Uso
-
-- **Exclusão de missões**: Confirmar antes de deletar missão/atividade
-- **Ação destrutiva**: Padrão para ações irreversíveis
-- **Feedback visual**: Mascote Belinha fornece contexto amigável
-- **Estados de loading**: Spinner durante processamento
-- **Prevenção de erros**: Confirmação dupla antes da exclusão
-
-## Estrutura
-
-\`\`\`
-+----------------------------------------+
-|        [Belinha mascote]               |  ← Imagem contexto
-|                                        |
-| Deseja excluir a missão "Matemática"? |  ← Título confirmação
-|                                        |
-| [Não quero excluir] [Quero excluir]   |  ← Actions buttons
-+----------------------------------------+
-\`\`\`
-
-## Características
-
-- **Mascote Belinha**: Imagem contextual que humaniza diálogo
-- **Título dinâmico**: Exibe nome da missão a ser excluída
-- **Botões opostos**: "Não quero" outline-danger vs "Quero" filled danger
-- **Loading state**: Spinner branco no botão durante processamento
-- **Disabled states**: Previne múltiplos cliques durante loading
-- **Gap 4 (24px)**: Espaçamento entre botões
-- **Centered layout**: Tudo centralizado para foco na decisão
-
-## Events
-
-- **@close**: Quando clica "Não quero excluir" (cancela)
-- **@close-and-update**: Quando clica "Quero excluir" (confirma e atualiza)
-
-## Estados do Componente
-
-1. **Idle (padrão)**: Ambos botões habilitados, sem spinner
-2. **Loading delete**: Botão "Quero excluir" com spinner, ambos disabled
-3. **Loading cancel**: Ambos botões disabled (previne cliques)
-
-## Padrão de Ação Destrutiva
-
-- **Danger variant**: Vermelho #EA5455 para indicar perigo
-- **Outline primeiro**: Ação segura (não excluir) é outline
-- **Filled segundo**: Ação destrutiva (excluir) é filled, mais proeminente
-- **Confirmação explícita**: Texto claro "Quero excluir" sem ambiguidade
-- **Visual feedback**: Spinner durante processamento confirma ação
-
-## Quando usar
-
-- **Exclusões permanentes**: Deletar missões, provas, questões
-- **Ações irreversíveis**: Qualquer operação que não pode ser desfeita
-- **Confirmação crítica**: Operações que impactam múltiplos usuários
-- **Context awareness**: Quando precisa humanizar diálogo sério
-        `
-      }
-    }
+    layout: 'fullscreen',
+    docs: { page: null },
+    options: { showPanel: false }
   }
 };
 
@@ -105,6 +48,336 @@ Componente de **confirmação para excluir missões** com orientação visual da
  * - Container: d-flex flex-col align-items-center
  * - Buttons: d-flex justify-content-center gap-4
  */
+
+// Documentação principal
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'DeleteGuide',
+    subtitle: 'Modal de confirmação para exclusão de missões com orientação da mascote Belinha',
+    badge: 'Front-office / Modals',
+    badgeIcon: 'delete_forever',
+    showStats: true,
+    stats: {
+      'Tipo': 'Confirmation',
+      'Ação': 'Destructive',
+      'Loading': '✓'
+    },
+    colors: {
+      primary: '#EA5455',
+      secondary: '#f39c12'
+    },
+    content: `
+      ${createUsageSection({
+        title: 'Fluxo de Exclusão',
+        icon: 'rule',
+        steps: [
+          'Professor clica "Excluir missão"',
+          'Modal DeleteGuide aparece com Belinha',
+          'Exibe nome da missão a ser excluída',
+          'Professor pode "Não quero excluir" (cancela)',
+          'Ou clica "Quero excluir" (confirma)',
+          'Botão exibe loading durante processamento',
+          'Modal fecha e missão é excluída'
+        ]
+      })}
+
+      ${createExampleCard({
+        title: 'Modal Padrão',
+        description: 'Confirmação básica de exclusão com mascote Belinha',
+        showTitle: true,
+        wrapPreview: false,
+        preview: `
+          <style>
+            .delete-guide-modal {
+              background: white;
+              border-radius: 12px;
+              padding: 2rem;
+              box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+              width: 400px;
+              text-align: center;
+              border: 1px solid #e5e3f3;
+              max-width: calc(100vw - 2rem);
+            }
+
+            .mascot-belinha {
+              width: 100px;
+              height: 100px;
+              margin: 0 auto 1.5rem auto;
+              display: block;
+            }
+
+            .delete-title {
+              font-size: 1.375rem;
+              font-weight: 700;
+              color: #2f2b3d;
+              margin: 0 0 1.5rem 0;
+              line-height: 1.3;
+            }
+
+            .delete-subtitle {
+              font-size: 0.875rem;
+              color: #6e6b7b;
+              margin: 0 0 2rem 0;
+              line-height: 1.4;
+            }
+
+            .delete-actions {
+              display: flex;
+              gap: 1rem;
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+
+            .btn {
+              padding: 0.75rem 1.5rem;
+              border-radius: 8px;
+              font-size: 0.875rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              border: 2px solid transparent;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.5rem;
+              min-height: 44px;
+              min-width: 140px;
+              white-space: nowrap;
+            }
+
+            .btn-outline-danger {
+              background: transparent;
+              color: #EA5455;
+              border-color: #EA5455;
+            }
+
+            .btn-outline-danger:hover:not(:disabled) {
+              background: #EA5455;
+              color: white;
+              transform: translateY(-1px);
+            }
+
+            .btn-danger {
+              background: #EA5455;
+              color: white;
+              border-color: #EA5455;
+            }
+
+            .btn-danger:hover:not(:disabled) {
+              background: #d63384;
+              border-color: #d63384;
+              transform: translateY(-1px);
+            }
+          </style>
+          <div style="display: flex; justify-content: center; padding: 2rem; background: rgba(0,0,0,0.5);">
+            <div class="delete-guide-modal">
+              <svg class="mascot-belinha" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="50" fill="#FFE082"/>
+                <circle cx="45" cy="45" r="8" fill="#333"/>
+                <circle cx="75" cy="45" r="8" fill="#333"/>
+                <path d="M 40 70 Q 60 85 80 70" stroke="#333" stroke-width="3" fill="none"/>
+                <circle cx="35" cy="35" r="3" fill="#ff6b6b" opacity="0.8"/>
+                <circle cx="85" cy="40" r="2" fill="#ff6b6b" opacity="0.6"/>
+              </svg>
+              
+              <h3 class="delete-title">Deseja excluir a missão "Matemática Básica"?</h3>
+              <p class="delete-subtitle">Esta ação não pode ser desfeita.</p>
+              
+              <div class="delete-actions">
+                <button class="btn btn-outline-danger">Não quero excluir</button>
+                <button class="btn btn-danger">Quero excluir</button>
+              </div>
+            </div>
+          </div>
+        `,
+        codes: {
+          html: `<!-- Modal DeleteGuide -->
+<div class="delete-guide-modal">
+  <div class="mascot-belinha">
+    <!-- SVG Belinha preocupada -->
+  </div>
+  
+  <h3>Deseja excluir a missão "{{missionName}}"?</h3>
+  <p>Esta ação não pode ser desfeita.</p>
+  
+  <div class="delete-actions">
+    <button class="btn btn-outline-danger" onclick="cancelDelete()">
+      Não quero excluir
+    </button>
+    <button class="btn btn-danger" onclick="confirmDelete()">
+      Quero excluir
+    </button>
+  </div>
+</div>`,
+          react: `import { useState } from 'react'
+
+function DeleteGuideModal({ missionName, isOpen, onClose, onConfirm }) {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleConfirm = async () => {
+    setIsLoading(true)
+    try {
+      await onConfirm()
+      onClose()
+    } catch (error) {
+      console.error('Error deleting mission:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  if (!isOpen) return null
+
+  return (
+    <div className="modal-overlay">
+      <div className="delete-guide-modal">
+        <BelinhaSvg className="mascot-belinha" />
+        
+        <h3 className="delete-title">
+          Deseja excluir a missão "{missionName}"?
+        </h3>
+        <p className="delete-subtitle">
+          Esta ação não pode ser desfeita.
+        </p>
+        
+        <div className="delete-actions">
+          <button 
+            className="btn btn-outline-danger"
+            onClick={onClose}
+            disabled={isLoading}
+          >
+            Não quero excluir
+          </button>
+          <button 
+            className={\`btn btn-danger \${isLoading ? 'btn-loading' : ''}\`}
+            onClick={handleConfirm}
+            disabled={isLoading}
+          >
+            Quero excluir
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}`,
+          vue2: `<template>
+  <b-modal
+    v-model="visible"
+    hide-header
+    hide-footer
+    centered
+    size="md"
+  >
+    <div class="delete-guide-modal">
+      <BelinhaSvg class="mascot-belinha" />
+      
+      <h3 class="delete-title">
+        Deseja excluir a missão "{{ missionName }}"?
+      </h3>
+      <p class="delete-subtitle">
+        Esta ação não pode ser desfeita.
+      </p>
+      
+      <div class="delete-actions">
+        <b-button
+          variant="outline-danger"
+          @click="$emit('close')"
+          :disabled="isLoading"
+        >
+          Não quero excluir
+        </b-button>
+        <b-button
+          variant="danger"
+          @click="handleConfirm"
+          :disabled="isLoading"
+          :class="{ 'btn-loading': isLoading }"
+        >
+          Quero excluir
+        </b-button>
+      </div>
+    </div>
+  </b-modal>
+</template>
+
+<script>
+export default {
+  props: {
+    visible: Boolean,
+    missionName: String
+  },
+  data() {
+    return {
+      isLoading: false
+    }
+  },
+  methods: {
+    async handleConfirm() {
+      this.isLoading = true
+      try {
+        await this.$emit('confirm')
+        this.$emit('close')
+      } catch (error) {
+        console.error('Error:', error)
+      } finally {
+        this.isLoading = false
+      }
+    }
+  }
+}
+</script>`
+        }
+      })}
+
+      ${createPropsTable([
+        {
+          prop: 'visible',
+          type: 'Boolean',
+          default: 'false',
+          description: 'Controla a visibilidade do modal'
+        },
+        {
+          prop: 'missionName',
+          type: 'String',
+          default: '""',
+          description: 'Nome da missão a ser excluída (exibido no título)'
+        },
+        {
+          prop: 'studentsCount',
+          type: 'Number',
+          default: '0',
+          description: 'Número de alunos impactados (exibe aviso se > 0)'
+        },
+        {
+          prop: 'isLoading',
+          type: 'Boolean',
+          default: 'false',
+          description: 'Estado de carregamento (desabilita botões e exibe spinner)'
+        }
+      ])}
+
+      <div class="doc-section">
+        <h3 class="doc-section-title">
+          <span class="material-symbols-outlined">psychology</span>
+          <span>Design Behavior</span>
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #fff3cd;">
+            <h4 style="color: #856404; margin: 0 0 0.5rem 0;">Belinha Preocupada</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Mascote com expressão preocupada humaniza a seriedade da ação</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #ffe6e6;">
+            <h4 style="color: #EA5455; margin: 0 0 0.5rem 0;">Ação Destrutiva</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Botão vermelho indica perigo, outline-danger para cancelar é menos proeminente</p>
+          </div>
+          <div style="flex: 1; min-width: 240px; border: 1px solid #e5e3f3; padding: 1rem; border-radius: 8px; background: #f0f9ff;">
+            <h4 style="color: #0ea5e9; margin: 0 0 0.5rem 0;">Feedback Claro</h4>
+            <p style="font-size: 0.875rem; color: #6e6b7b; margin: 0;">Loading spinner e texto "não pode ser desfeita" informam sobre a ação</p>
+          </div>
+        </div>
+      </div>
+    `
+  })
+};
 
 // Estilos base
 const deleteGuideStyles = `
