@@ -503,13 +503,7 @@ export const Default = {
   render: () => `
     ${deleteGuideStyles}
     <div class="delete-guide-container">
-      <svg width="120" height="120" viewBox="0 0 120 120" class="mascot-image">
-        <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-        <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-        <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-        <path d="M 45 75 Q 60 85 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <text x="60" y="25" text-anchor="middle" font-size="40" fill="#EA5455">?</text>
-      </svg>
+      <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
       
       <h1 class="delete-title">
         Deseja excluir a missão <span class="mission-name">"Matemática Básica"</span>?
@@ -532,12 +526,7 @@ export const WithLoading = {
   render: () => `
     ${deleteGuideStyles}
     <div class="delete-guide-container">
-      <svg width="120" height="120" viewBox="0 0 120 120" class="mascot-image">
-        <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-        <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-        <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-        <path d="M 45 75 Q 60 70 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
       
       <h1 class="delete-title">
         Deseja excluir a missão <span class="mission-name">"Geografia Mundial"</span>?
@@ -561,14 +550,7 @@ export const WithWarning = {
   render: () => `
     ${deleteGuideStyles}
     <div class="delete-guide-container">
-      <svg width="120" height="120" viewBox="0 0 120 120" class="mascot-image">
-        <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-        <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-        <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-        <path d="M 45 75 Q 60 68 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M 50 45 L 45 50" stroke="#5D596C" stroke-width="2" stroke-linecap="round"/>
-        <path d="M 70 45 L 75 50" stroke="#5D596C" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
       
       <h1 class="delete-title">
         Deseja excluir a missão <span class="mission-name">"Português Avançado"</span>?
@@ -626,12 +608,7 @@ export const MultipleMissions = {
     </style>
     
     <div class="delete-guide-container">
-      <svg width="120" height="120" viewBox="0 0 120 120" class="mascot-image">
-        <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-        <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-        <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-        <path d="M 45 75 Q 60 68 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
       
       <h1 class="delete-title">
         Deseja excluir <span class="mission-name">3 missões</span>?
@@ -701,14 +678,7 @@ export const WithStudentsImpact = {
     </style>
     
     <div class="delete-guide-container">
-      <svg width="120" height="120" viewBox="0 0 120 120" class="mascot-image">
-        <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-        <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-        <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-        <path d="M 45 75 Q 60 68 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <circle cx="50" cy="45" r="2" fill="#5D596C"/>
-        <circle cx="70" cy="45" r="2" fill="#5D596C"/>
-      </svg>
+      <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
       
       <h1 class="delete-title">
         Deseja excluir a missão <span class="mission-name">"Ciências Naturais"</span>?
@@ -824,13 +794,7 @@ export const InModal = {
         <button class="modal-close">×</button>
         
         <div class="delete-guide-container">
-          <svg width="100" height="100" viewBox="0 0 120 120" class="mascot-image">
-            <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-            <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-            <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-            <path d="M 45 75 Q 60 85 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <text x="60" y="25" text-anchor="middle" font-size="40" fill="#EA5455">!</text>
-          </svg>
+          <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
           
           <h1 class="delete-title">
             Deseja excluir a missão <span class="mission-name">"Física Moderna"</span>?
@@ -878,12 +842,7 @@ export const Responsive = {
           Desktop
         </h4>
         <div class="delete-guide-container">
-          <svg width="100" height="100" viewBox="0 0 120 120" class="mascot-image">
-            <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-            <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-            <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-            <path d="M 45 75 Q 60 85 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-          </svg>
+          <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
           
           <h1 class="delete-title" style="font-size: 18px;">
             Excluir missão <span class="mission-name">"Química"</span>?
@@ -902,12 +861,7 @@ export const Responsive = {
         </h4>
         <div style="max-width: 300px;">
           <div class="delete-guide-container">
-            <svg width="80" height="80" viewBox="0 0 120 120" class="mascot-image">
-              <circle cx="60" cy="60" r="50" fill="#FFE5CC"/>
-              <circle cx="45" cy="55" r="5" fill="#5D596C"/>
-              <circle cx="75" cy="55" r="5" fill="#5D596C"/>
-              <path d="M 45 75 Q 60 85 75 75" stroke="#5D596C" stroke-width="3" fill="none" stroke-linecap="round"/>
-            </svg>
+            <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-image" alt="Belinha - excluir missão" />
             
             <h1 class="delete-title" style="font-size: 16px;">
               Excluir <span class="mission-name">"Química"</span>?

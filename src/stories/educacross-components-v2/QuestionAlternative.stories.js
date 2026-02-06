@@ -638,9 +638,7 @@ export const ImageAlternatives = {
               <div class="question-letter">A</div>
             </div>
             <div class="content-img">
-              <svg width="120" height="120" viewBox="0 0 120 120">
-                <rect x="30" y="30" width="60" height="60" fill="none" stroke="#6e63e8" stroke-width="3"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-doubt.png" class="mascot-image" alt="Belinha - dúvida" />
             </div>
           </div>
           
@@ -649,9 +647,7 @@ export const ImageAlternatives = {
               <div class="question-letter">B</div>
             </div>
             <div class="content-img">
-              <svg width="120" height="120" viewBox="0 0 120 120">
-                <polygon points="60,20 100,100 20,100" fill="none" stroke="#28c76f" stroke-width="3"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-doubt.png" class="mascot-image" alt="Belinha - dúvida" />
             </div>
             <div class="feedback-icon correct">✓</div>
           </div>
@@ -661,9 +657,7 @@ export const ImageAlternatives = {
               <div class="question-letter">C</div>
             </div>
             <div class="content-img">
-              <svg width="120" height="120" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="40" fill="none" stroke="#ff9f43" stroke-width="3"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-doubt.png" class="mascot-image" alt="Belinha - dúvida" />
             </div>
           </div>
           
@@ -672,9 +666,7 @@ export const ImageAlternatives = {
               <div class="question-letter">D</div>
             </div>
             <div class="content-img">
-              <svg width="120" height="120" viewBox="0 0 120 120">
-                <polygon points="60,20 100,50 90,100 30,100 20,50" fill="none" stroke="#00cfe8" stroke-width="3"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-doubt.png" class="mascot-image" alt="Belinha - dúvida" />
             </div>
           </div>
         </div>

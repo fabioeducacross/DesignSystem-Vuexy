@@ -201,10 +201,7 @@ export const Vazio = {
   render: () => renderModal(`
     <div class="student-body" style="padding:48px 30px">
       <div class="empty">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="50" stroke="currentColor" stroke-width="2"/>
-          <path d="M40 60h40M60 40v40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <img src="/educacross-assets/belinha/belinha-school-doubt.png" class="mascot-image" alt="Belinha - dúvida" />
         <div style="font-size:16px;font-weight:600;color:#3F3F46">Nenhum jogo em andamento</div>
         <div style="font-size:13px">Comece uma nova missão para ver seus progressos aqui.</div>
       </div>
