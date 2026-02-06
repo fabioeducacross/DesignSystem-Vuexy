@@ -4,6 +4,7 @@ import {
   createPropsTable, 
   createUsageSection 
 } from '../_helpers/docTemplate.js';
+import { getCopyLinkMascot } from '../_helpers/mascots.js';
 
 // Estilos específicos para o CopyLink modal
 const copyLinkStyles = `
@@ -340,12 +341,7 @@ export const Documentation = {
           \${copyLinkStyles}
           <div style="display: flex; justify-content: center; padding: 2rem; background: rgba(0,0,0,0.5);">
             <div class="copy-link-modal">
-              <svg class="mascot-image" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="60" r="50" fill="#FFE082"/>
-                <circle cx="45" cy="45" r="8" fill="#333"/>
-                <circle cx="75" cy="45" r="8" fill="#333"/>
-                <path d="M 40 70 Q 60 85 80 70" stroke="#333" stroke-width="3" fill="none"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-copy_link.png" class="mascot-image" alt="Belinha - copiar link" />
               
               <h3 class="modal-title">Compartilhar Link</h3>
               

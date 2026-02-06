@@ -4,6 +4,7 @@ import {
   createPropsTable, 
   createUsageSection 
 } from '../_helpers/docTemplate.js';
+import { getDeleteGuideMascot } from '../_helpers/mascots.js';
 
 /**
  * DeleteGuide - Mission Deletion Confirmation Component
@@ -171,14 +172,7 @@ export const Documentation = {
           </style>
           <div style="display: flex; justify-content: center; padding: 2rem; background: rgba(0,0,0,0.5);">
             <div class="delete-guide-modal">
-              <svg class="mascot-belinha" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="60" r="50" fill="#FFE082"/>
-                <circle cx="45" cy="45" r="8" fill="#333"/>
-                <circle cx="75" cy="45" r="8" fill="#333"/>
-                <path d="M 40 70 Q 60 85 80 70" stroke="#333" stroke-width="3" fill="none"/>
-                <circle cx="35" cy="35" r="3" fill="#ff6b6b" opacity="0.8"/>
-                <circle cx="85" cy="40" r="2" fill="#ff6b6b" opacity="0.6"/>
-              </svg>
+              <img src="/educacross-assets/belinha/belinha-school-enable-script.png" class="mascot-belinha" alt="Belinha - excluir missão" />
               
               <h3 class="delete-title">Deseja excluir a missão "Matemática Básica"?</h3>
               <p class="delete-subtitle">Esta ação não pode ser desfeita.</p>
