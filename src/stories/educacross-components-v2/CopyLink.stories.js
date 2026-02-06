@@ -657,7 +657,7 @@ export default {
           html: \`<div class="qr-section">
   <p>Ou escaneie o QR Code:</p>
   <div class="qr-code">
-    <img src="/qr-code.png" alt="QR Code" />
+    <img src="/qr-code.svg" alt="QR Code" style="width: 200px; height: 200px;" />
   </div>
 </div>\`,
           react: \`import QRCode from 'qrcode-generator'

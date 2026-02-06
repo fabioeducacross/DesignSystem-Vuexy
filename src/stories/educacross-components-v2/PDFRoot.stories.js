@@ -211,7 +211,6 @@ const componentStyles = `
   }
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `;
 
 const backIconSVG = `<svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="#5D596C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

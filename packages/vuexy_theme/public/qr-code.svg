@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <!-- QR Code pattern simulation -->
+  <rect x="10" y="10" width="30" height="30" fill="black"/>
+  <rect x="50" y="10" width="10" height="10" fill="black"/>
+  <rect x="70" y="10" width="10" height="10" fill="black"/>
+  <rect x="90" y="10" width="10" height="10" fill="black"/>
+  <rect x="160" y="10" width="30" height="30" fill="black"/>
+  
+  <rect x="10" y="50" width="10" height="10" fill="black"/>
+  <rect x="30" y="50" width="10" height="10" fill="black"/>
+  <rect x="70" y="50" width="10" height="10" fill="black"/>
+  <rect x="110" y="50" width="10" height="10" fill="black"/>
+  <rect x="160" y="50" width="10" height="10" fill="black"/>
+  <rect x="180" y="50" width="10" height="10" fill="black"/>
+  
+  <rect x="10" y="160" width="30" height="30" fill="black"/>
+  <rect x="50" y="160" width="10" height="10" fill="black"/>
+  <rect x="90" y="160" width="10" height="10" fill="black"/>
+  <rect x="130" y="160" width="10" height="10" fill="black"/>
+  <rect x="170" y="160" width="10" height="10" fill="black"/>
+  
+  <!-- Center text -->
+  <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">QR Code</text>
+  <text x="100" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="#999">Placeholder</text>
+</svg>

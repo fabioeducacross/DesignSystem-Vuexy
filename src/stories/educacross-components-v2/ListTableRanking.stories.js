@@ -238,7 +238,7 @@ const css = `<style>
     color: #FFD700;
   }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">`;
+`;
 
 const students = [
   { n: 'Ana Silva', c: '8º A', s: 9.8, x: 2850, col: '#6E63E8' },

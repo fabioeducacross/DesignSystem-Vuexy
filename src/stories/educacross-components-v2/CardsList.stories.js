@@ -44,7 +44,6 @@ export const Default = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -85,7 +84,6 @@ export const ListaDeAlunos = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -123,7 +121,6 @@ export const LayoutLista = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -168,7 +165,6 @@ export const ComFiltros = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -199,7 +195,6 @@ export const TurmasGrid = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -233,7 +228,6 @@ export const RecursosEducacionais = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -266,7 +260,6 @@ export const ConquistasAluno = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 

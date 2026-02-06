@@ -9,7 +9,6 @@ const baseCss = `.mission-details{max-width:960px;margin:0 auto;padding:24px;dis
 const withContainer = (content) => `
 <div class="mission-details">${content}</div>
 <style>${baseCss}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `;
 
 export const Default = {

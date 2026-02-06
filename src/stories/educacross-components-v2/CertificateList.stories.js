@@ -50,7 +50,6 @@ export const Default = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -95,7 +94,6 @@ export const PorAluno = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -132,7 +130,6 @@ export const PorEvento = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -174,7 +171,6 @@ export const EmLote = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -214,7 +210,6 @@ export const ComModelos = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -281,7 +276,6 @@ export const Compacto = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -302,6 +296,5 @@ export const Vazio = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };

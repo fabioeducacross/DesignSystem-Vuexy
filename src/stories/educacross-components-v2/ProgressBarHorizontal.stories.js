@@ -199,7 +199,6 @@ export default {
 export const Default = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Barra de Progresso Padrão</div>
       <div class="progress-container">
@@ -220,7 +219,6 @@ export const Default = {
 export const Danger = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Estado de Alerta - Progresso Baixo</div>
       <div class="bg-progress-bar-danger">
@@ -246,7 +244,6 @@ export const Danger = {
 export const Warning = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Estado de Atenção - Progresso Médio</div>
       <div class="bg-progress-bar-warning">
@@ -272,7 +269,6 @@ export const Warning = {
 export const Success = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Estado de Sucesso - Progresso Alto</div>
       <div class="bg-progress-bar-success">
@@ -298,7 +294,6 @@ export const Success = {
 export const WithRightContent = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Barra com Porcentagem à Direita</div>
       <div class="progress-container">
@@ -323,7 +318,6 @@ export const WithRightContent = {
 export const WithTooltip = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Barra com Tooltip Informativo</div>
       <div class="progress-container">
@@ -349,7 +343,6 @@ export const WithTooltip = {
 export const MultipleProgress = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container">
       <div class="demo-label">Múltiplas Barras de Progresso por Disciplina</div>
       <div class="progress-grid">
@@ -408,7 +401,6 @@ export const MultipleProgress = {
 export const MobileView = {
   render: () => `
     ${componentStyles}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <div class="demo-container mobile-viewport">
       <div class="demo-label">Visualização Mobile (375px)</div>
       

@@ -4,6 +4,7 @@
 if (typeof window !== 'undefined') {
   const cssFiles = [
     '/vuexy/css/core.css',
+    '/vuexy/fonts/bootstrap-icons.css',
     // Add more CSS files as needed for specific components
   ];
 

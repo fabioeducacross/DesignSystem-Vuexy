@@ -9,7 +9,6 @@ const css = `.mission-book{max-width:960px;margin:0 auto;padding:24px;display:gr
 const wrap = (content) => `
 <div class="mission-book">${content}</div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `;
 
 export const Default = {

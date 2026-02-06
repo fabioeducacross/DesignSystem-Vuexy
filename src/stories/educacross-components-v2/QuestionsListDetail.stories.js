@@ -57,7 +57,6 @@ export const Default = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -104,7 +103,6 @@ export const ComImagem = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -151,7 +149,6 @@ export const VerdadeiroFalso = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -194,7 +191,6 @@ export const PorDisciplina = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -235,7 +231,6 @@ export const ComEstatisticas = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -271,7 +266,6 @@ export const ModoEdicao = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -294,7 +288,6 @@ export const Compacta = {
   `).join('')}
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };
 
@@ -315,6 +308,5 @@ export const Vazio = {
   </div>
 </div>
 <style>${css}</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 `
 };

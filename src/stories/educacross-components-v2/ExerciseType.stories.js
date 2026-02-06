@@ -139,7 +139,7 @@ const css = `<style>
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">`;
+`;
 
 export const Default = {
   render: () => `

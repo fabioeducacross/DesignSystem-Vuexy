@@ -111,7 +111,7 @@ const css = `<style>
     opacity: 0.6;
   }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">`;
+`;
 
 const getLevel = (value) => value >= 80 ? 'high' : value >= 60 ? 'medium' : 'low';
 
