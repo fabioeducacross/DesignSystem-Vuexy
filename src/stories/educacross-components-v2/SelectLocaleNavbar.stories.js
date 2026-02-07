@@ -1,12 +1,14 @@
 /**
  * SelectLocaleNavbar - Language Selector Dropdown
  * ================================================
- * 
- * Dropdown for language/locale selection in navbar.
- * Features collapsible sub-options with flag icons.
+ * Dropdown para seleção de idioma/locale na navbar
  * 
  * @component SelectLocaleNavbar
- * @source educacross-frontoffice\src\components\locale\SelectLocaleNavbar.vue
+ * @category Educacross Components V2 / Navigation
+ * @source educacross-frontoffice/src/components/locale/SelectLocaleNavbar.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

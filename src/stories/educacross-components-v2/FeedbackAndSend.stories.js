@@ -1,12 +1,14 @@
 /**
  * FeedbackAndSend - Mission Feedback Modal
  * =========================================
- * 
- * Success modal after mission creation with send option.
- * Shows confirmation and allows immediate sending or exit.
+ * Modal de confirmação após criação de missão com opção de envio imediato
  * 
  * @component FeedbackAndSend
- * @source educacross-frontoffice\src\components\mission-plus\FeedbackAndSend.vue
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice/src/components/mission-plus/FeedbackAndSend.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

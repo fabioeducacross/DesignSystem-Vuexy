@@ -1,3 +1,16 @@
+/**
+ * MissionDetails - Detalhes Completos de Missão
+ * ============================================
+ * Visualização detalhada de missão com objetivos, timeline e recursos
+ * 
+ * @component MissionDetails
+ * @category Educacross Components V2 / Missions
+ * @source educacross-frontoffice (gestão de missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Missions/MissionDetails',
   tags: ['autodocs'],

@@ -1,10 +1,14 @@
 /**
- * PDFRoot - Comprehensive Stories
- * =========================================
+ * PDFRoot - Container Raiz para PDFs
+ * ===================================
+ * Layout wrapper para visualização e exportação de PDFs com header e ações
  * 
  * @component PDFRoot
- * @description PDF export layout wrapper with header actions
+ * @category Educacross Components V2 / PDF
  * @source educacross-frontoffice/src/components/PDFs/PDFRoot.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

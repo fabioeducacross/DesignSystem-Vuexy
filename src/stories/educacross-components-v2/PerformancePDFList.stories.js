@@ -1,12 +1,14 @@
 /**
  * PerformancePDFList - PDF Performance Report List Component
- * =========================================
- * 
- * Displays performance metrics in list format optimized for PDF export.
- * Shows student performance data with scores and status indicators.
+ * ==========================================================
+ * Lista de métricas de desempenho otimizada para exportação em PDF
  * 
  * @component PerformancePDFList
- * @source educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDFList.vue
+ * @category Educacross Components V2 / PDF
+ * @source educacross-frontoffice/src/components/PDFs/event/performance/PerformancePDFList.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

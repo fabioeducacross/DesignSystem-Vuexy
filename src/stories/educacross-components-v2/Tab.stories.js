@@ -1,7 +1,14 @@
 /**
+ * Tab - Navegação por Abas Horizontal
+ * ======================================
+ * Navegação horizontal com abas, sombras e estados ativos
+ * 
  * @component Tab
- * @description Horizontal tab navigation with shadow effects, active states, and custom transform positioning
+ * @category Educacross Components V2 / Navigation
  * @source educacross-frontoffice/src/components/Tab.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-03
  */
 
