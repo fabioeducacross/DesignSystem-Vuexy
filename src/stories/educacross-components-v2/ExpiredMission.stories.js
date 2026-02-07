@@ -1,10 +1,14 @@
 /**
  * ExpiredMission - Modal de Missão Expirada
  * ==========================================
- * Modal/alerta exibido quando professor tenta enviar missão com prazo expirado.
- *
+ * Modal/alerta exibido quando professor tenta enviar missão com prazo expirado
+ * 
  * @component ExpiredMission
+ * @category Educacross Components V2 / Feedback
  * @source educacross-frontoffice/src/components/mission-plus/ExpiredMission.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

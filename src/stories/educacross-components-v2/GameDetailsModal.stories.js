@@ -1,3 +1,16 @@
+/**
+ * GameDetailsModal - Modal de Detalhes de Jogo/Gamificação
+ * ========================================================
+ * Modal com detalhes completos de jogo educacional ou missão gamificada
+ * 
+ * @component GameDetailsModal
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (missões gamificadas)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Modals/GameDetailsModal',
   tags: ['autodocs'],

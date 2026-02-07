@@ -1,5 +1,14 @@
 /**
  * EditProfileStudentNew - Modal de Edição de Perfil do Estudante
+ * ==================================================================
+ * Modal para edição de dados do perfil do aluno (nome, avatar, mascote)
+ * 
+ * @component EditProfileStudentNew
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (perfil do aluno)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
  * Versão simplificada (Fase 1 - Refatoração Emergencial)
  * - CSS inline removido → utiliza classes Vuexy nativas

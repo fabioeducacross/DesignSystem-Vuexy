@@ -1,3 +1,16 @@
+/**
+ * DefaultChart - Gráfico Genérico/Padrão
+ * ======================================
+ * Gráfico de linha padrão com legendas e filtros de período
+ * 
+ * @component DefaultChart
+ * @category Educacross Components V2 / Charts
+ * @source educacross-frontoffice (dashboards, análises)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Charts/DefaultChart',
   tags: ['autodocs'],

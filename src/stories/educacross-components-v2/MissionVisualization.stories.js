@@ -1,3 +1,16 @@
+/**
+ * MissionVisualization - Visualização de Missão
+ * ================================================
+ * Template completo de visualização de missão com detalhes, progresso e áreas
+ * 
+ * @component MissionVisualization
+ * @category Educacross Components V2 / Missions
+ * @source educacross-frontoffice (visualização de missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Missions/MissionVisualization',
   tags: ['autodocs'],

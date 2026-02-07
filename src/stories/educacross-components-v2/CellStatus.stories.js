@@ -1,12 +1,14 @@
 /**
  * CellStatus - Table Cell Status Badge
  * =====================================
- * 
- * Status badge overlay for table cells.
- * Shows editing state, review status, and pace indicators.
+ * Status badge overlay para células de tabela (edição, revisão, ritmo)
  * 
  * @component CellStatus
- * @source educacross-frontoffice\src\components\badge\CellStatus.vue
+ * @category Educacross Components V2 / Badges
+ * @source educacross-frontoffice/src/components/badge/CellStatus.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

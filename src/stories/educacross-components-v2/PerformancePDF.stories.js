@@ -1,10 +1,14 @@
 /**
- * PerformancePDF - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * PerformancePDF - Relatório de Desempenho em PDF
+ * ================================================
+ * Template de PDF para relatórios de desempenho de alunos/turmas
  * 
  * @component PerformancePDF
- * @source educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDF.vue
+ * @category Educacross Components V2 / PDF
+ * @source educacross-frontoffice/src/components/PDFs/event/performance/PerformancePDF.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-01T21:06:31.171182
  * 
  * Props: None

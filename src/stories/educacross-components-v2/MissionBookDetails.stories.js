@@ -1,3 +1,16 @@
+/**
+ * MissionBookDetails - Detalhes de Livro/Conteúdo de Missão
+ * ===========================================================
+ * Card com detalhes completos de livro didático ou conteúdo de missão
+ * 
+ * @component MissionBookDetails
+ * @category Educacross Components V2 / Missions
+ * @source educacross-frontoffice (biblioteca, missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Missions/MissionBookDetails',
   tags: ['autodocs'],

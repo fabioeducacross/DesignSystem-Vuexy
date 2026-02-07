@@ -2,10 +2,14 @@
  * ProgressBarVertical - Vertical Progress Bar
  * ===========================================
  * Barra de progresso vertical com porcentagem e
- * sistema de cores de proficiência.
+ * sistema de cores de proficiência
  * 
  * @component ProgressBarVertical
+ * @category Educacross Components V2 / Data Display
  * @source educacross-frontoffice/src/components/progessBar/ProgressBarVertical.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {
