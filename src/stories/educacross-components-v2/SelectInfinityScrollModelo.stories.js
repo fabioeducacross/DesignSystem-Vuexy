@@ -1,12 +1,14 @@
 /**
  * SelectInfinityScrollModelo - Infinity Scroll Select Template
- * =========================================
- * 
- * Template/model component for implementing infinity scroll in v-select.
- * Shows best practices for loader placement and loading states.
+ * =============================================================
+ * Template/modelo para implementar infinity scroll em v-select
  * 
  * @component SelectInfinityScrollModelo
- * @source educacross-frontoffice\src\components\selects\SelectInfinityScrollModelo.vue
+ * @category Educacross Components V2 / Forms
+ * @source educacross-frontoffice/src/components/selects/SelectInfinityScrollModelo.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

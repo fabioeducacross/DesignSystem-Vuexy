@@ -1,11 +1,14 @@
 /**
  * BadgeList - Lista de Badges/Conquistas
- * ========================================
- * Lista de badges de conquistas educacionais,
- * usada em perfis de alunos e gamificação.
+ * =======================================
+ * Lista de badges de conquistas educacionais para gamificação
  * 
  * @component BadgeList
- * @usage Perfil de aluno, sistema de gamificação, conquistas
+ * @category Educacross Components V2 / Data Display
+ * @source educacross-frontoffice (perfil de aluno, gamificação)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

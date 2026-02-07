@@ -1,11 +1,14 @@
 /**
  * SimpleTab - Tabs Simples para Navegação
- * =========================================
- * Componente de tabs simples para navegação entre
- * diferentes visualizações em relatórios e perfis.
+ * ======================================
+ * Componente de tabs simples para navegação entre visualizações
  * 
  * @component SimpleTab
- * @usage Relatórios de professor, perfil de aluno, filtros
+ * @category Educacross Components V2 / Navigation
+ * @source educacross-frontoffice (relatórios, perfis)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

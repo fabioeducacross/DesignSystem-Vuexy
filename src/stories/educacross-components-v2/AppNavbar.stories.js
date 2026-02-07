@@ -1,11 +1,14 @@
 /**
  * AppNavbar - Header de Navegação Principal
- *
- * Barra de navegação superior usada nas páginas de gerenciamento de contas e contextos autenticados.
- *
+ * ============================================
+ * Barra de navegação superior com logo, botão "Como Jogar?" e dropdown usuário
+ * 
  * @component AppNavbar
- * @category Navigation
+ * @category Educacross Components V2 / Navigation
  * @source educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue (linhas 6-68)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
  * @features
  * - Logo centralizado (whitelabel support)

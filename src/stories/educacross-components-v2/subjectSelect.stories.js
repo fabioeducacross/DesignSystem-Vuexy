@@ -1,12 +1,14 @@
 /**
  * subjectSelect - Subject Selection Form Component
- * =========================================
- * 
- * Form component for selecting academic subjects with validation.
- * Includes submit/cancel actions and ValidationProvider integration.
+ * =================================================
+ * Formulário de seleção de disciplinas com validação
  * 
  * @component subjectSelect
- * @source educacross-frontoffice\src\components\subjects\subjectSelect.vue
+ * @category Educacross Components V2 / Forms
+ * @source educacross-frontoffice/src/components/subjects/subjectSelect.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

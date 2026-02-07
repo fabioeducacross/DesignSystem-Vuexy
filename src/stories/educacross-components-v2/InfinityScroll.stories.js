@@ -1,12 +1,14 @@
 /**
  * InfinityScroll - Infinite Scroll Select Component
- * =========================================
- * 
- * Custom select component with infinite scroll pagination.
- * Loads more options dynamically as user scrolls down the dropdown.
+ * ==================================================
+ * Select com scroll infinito e carregamento dinâmico de opções
  * 
  * @component InfinityScroll
- * @source educacross-frontoffice\src\components\selects\InfinityScroll.vue
+ * @category Educacross Components V2 / Forms
+ * @source educacross-frontoffice/src/components/selects/InfinityScroll.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

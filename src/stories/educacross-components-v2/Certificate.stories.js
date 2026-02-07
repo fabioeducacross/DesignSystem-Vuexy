@@ -1,10 +1,14 @@
 /**
- * Certificate - Comprehensive Stories
- * =========================================
+ * Certificate - Certificado Digital
+ * ==================================
+ * Layout de certificado digital para eventos, cursos e missões concluídas
  * 
  * @component Certificate
- * @description Digital certificate layout for event/course completion
+ * @category Educacross Components V2 / PDF
  * @source educacross-frontoffice/src/components/PDFs/event/certificate/Certificate.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

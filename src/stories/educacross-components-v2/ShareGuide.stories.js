@@ -1,12 +1,14 @@
 /**
- * ShareGuide - Guide Sharing Modal
- * =================================
- * 
- * Modal for sharing guides with multiple options.
- * Allows sharing via link, copy, or download.
+ * ShareGuide - Modal de Compartilhamento de Guias
+ * ================================================
+ * Modal para compartilhar guias via link, cópia ou download
  * 
  * @component ShareGuide
- * @source educacross-frontoffice\src\components\mission-plus\ShareGuide.vue
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice/src/components/mission-plus/ShareGuide.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

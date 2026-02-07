@@ -1,12 +1,14 @@
 /**
  * Template5 - Hybrid Layout Component (Same as Template1)
- * =========================================
- * 
- * Layout template identical to Template1: 2 content cards + 4-column alternatives grid.
- * Provides alternative naming/routing for same layout pattern.
+ * ========================================================
+ * Layout template idêntico ao Template1 (2 cards de conteúdo + grid 4 colunas)
  * 
  * @component Template5
- * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template5.vue
+ * @category Educacross Components V2 / Templates
+ * @source educacross-frontoffice/src/components/evaluations/questionDetail/templates/Template5.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

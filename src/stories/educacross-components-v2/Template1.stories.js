@@ -1,12 +1,14 @@
 /**
  * Template1 - Question Layout Template Component
- * =========================================
- * 
- * Layout template for question display with content areas and alternatives.
- * Provides structured grid layout for educational assessments with responsive design.
+ * ===============================================
+ * Layout template para exibição de questões com áreas de conteúdo e alternativas
  * 
  * @component Template1
- * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template1.vue
+ * @category Educacross Components V2 / Templates
+ * @source educacross-frontoffice/src/components/evaluations/questionDetail/templates/Template1.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {
