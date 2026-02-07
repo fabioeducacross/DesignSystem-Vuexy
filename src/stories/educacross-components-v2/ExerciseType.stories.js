@@ -7,7 +7,7 @@
  * @category Educacross Components V2 / Data Display
  * @source educacross-frontoffice (biblioteca de missões, criação de exercícios)
  * @priority P1 - Core UI
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

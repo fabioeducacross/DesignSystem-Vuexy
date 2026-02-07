@@ -5,10 +5,10 @@
  * Customizável via CSS variables (--thickness, --height, --color, --spacing).
  * 
  * @component VerticalDivider
- * @category Educacross Components V2
+ * @category Educacross Components V2 / Layout
  * @subcategory Layout
- * @priority P2
- * @status EXPANDED
+ * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * @since v2.0
  * 
  * Key Features:

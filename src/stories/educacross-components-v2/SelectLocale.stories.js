@@ -2,6 +2,13 @@
  * SelectLocale - Language Selector
  * =================================
  * Seletor de idioma com pt-BR, en-US, es-ES
+ * 
+ * @component SelectLocale
+ * @category Educacross Components V2 / Forms
+ * @source educacross-frontoffice (header, perfil usuário, configurações)
+ * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

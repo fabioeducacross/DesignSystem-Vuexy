@@ -6,8 +6,8 @@
  * @component ConditionalValueDisplay
  * @category Educacross Components V2 / Feedback
  * @source educacross-frontoffice (perfis, relatórios, dados opcionais)
- * @priority P2 - Common UI
- * @status EXPANDED
+ * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

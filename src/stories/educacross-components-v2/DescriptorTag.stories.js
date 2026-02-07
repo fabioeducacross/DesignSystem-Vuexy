@@ -5,10 +5,10 @@
  * Formato padrão: EF05MA08 (Ensino Fundamental, 5º ano, Matemática, habilidade 08).
  * 
  * @component DescriptorTag
- * @category Educacross Components V2
+ * @category Educacross Components V2 / Data Display
  * @subcategory Data Display
- * @priority P2
- * @status EXPANDED
+ * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * @since v2.0
  * 
  * Key Features:
