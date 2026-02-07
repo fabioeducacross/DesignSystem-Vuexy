@@ -1,10 +1,16 @@
 /**
- * StudentEvidenceReportPDF - Comprehensive Stories
+ * StudentEvidenceReportPDF - Student Evidence Report PDF Generator
  * =========================================
  * 
+ * PDF report generator for student performance evidence with charts and metrics.
+ * Includes skill proficiency tracking, performance evolution, and activity details.
+ * 
  * @component StudentEvidenceReportPDF
- * @description Student evidence report PDF with charts and performance metrics
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/student-evidence-report/StudentEvidenceReportPDF.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

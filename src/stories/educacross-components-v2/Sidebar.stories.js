@@ -1,3 +1,18 @@
+/**
+ * Sidebar - Vertical Navigation Menu
+ * =========================================
+ * 
+ * Main sidebar navigation menu for the entire Educacross platform.
+ * Role-based navigation (Teacher, Coordinator, Student) with multi-level hierarchy.
+ * 
+ * @component Sidebar
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/sidebar/Sidebar.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Navigation/Sidebar',
   tags: ['autodocs'],

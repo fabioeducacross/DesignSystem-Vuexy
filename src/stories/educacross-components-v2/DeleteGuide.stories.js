@@ -14,7 +14,11 @@ import { getDeleteGuideMascot } from '../_helpers/mascots.js';
  * Includes loading states and destructive action patterns.
  * 
  * @component DeleteGuide
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\mission-plus\DeleteGuide.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

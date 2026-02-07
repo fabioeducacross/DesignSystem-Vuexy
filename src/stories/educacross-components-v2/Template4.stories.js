@@ -6,7 +6,11 @@
  * Ideal for questions requiring side-by-side comparison or reference material.
  * 
  * @component Template4
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template4.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

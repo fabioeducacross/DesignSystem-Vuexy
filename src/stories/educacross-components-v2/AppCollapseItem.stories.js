@@ -1,13 +1,17 @@
 /**
- * AppCollapseItem - Professional Documentation
+ * AppCollapseItem - Accordion Item Component
  * ===========================================
- * 
- * @component AppCollapseItem
- * @source educacross-frontoffice/src/components/app-collapse/AppCollapseItem.vue
- * @reconstructed 2026-02-02
  * 
  * Item de acordeão expansível para FAQ, navegação de relatórios e listas colapsáveis.
  * Usado em SupportMaterials, SkillReport, MissionReports e listagens de missões.
+ * 
+ * @component AppCollapseItem
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/app-collapse/AppCollapseItem.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ * @reconstructed 2026-02-02
  */
 
 export default {

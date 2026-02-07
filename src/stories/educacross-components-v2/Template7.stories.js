@@ -6,7 +6,11 @@
  * More contextual than Template1/2, ideal for step-by-step instructions.
  * 
  * @component Template7
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template7.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {
