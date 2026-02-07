@@ -1,3 +1,16 @@
+/**
+ * DefaultFAQModal - Modal de Perguntas Frequentes
+ * ================================================
+ * Modal com lista de FAQ (Frequently Asked Questions)
+ * 
+ * @component DefaultFAQModal
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (ajuda, suporte)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Modals/DefaultFAQModal',
   tags: ['autodocs'],

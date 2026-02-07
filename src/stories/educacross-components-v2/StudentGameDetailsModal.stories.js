@@ -1,3 +1,16 @@
+/**
+ * StudentGameDetailsModal - Modal de Detalhes do Jogo do Aluno
+ * =============================================================
+ * Modal para exibir detalhes completos do progresso em missões gamificadas
+ * 
+ * @component StudentGameDetailsModal
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (relatórios de missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Modals/StudentGameDetailsModal',
   tags: ['autodocs'],

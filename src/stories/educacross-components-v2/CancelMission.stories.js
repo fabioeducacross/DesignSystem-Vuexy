@@ -1,5 +1,14 @@
 /**
  * CancelMission - Modal de Cancelamento de Missão
+ * ================================================
+ * Modal de confirmação para cancelar missão ativa com justificativa
+ * 
+ * @component CancelMission
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (gestão de missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
  * Versão simplificada (Fase 1 - Refatoração Emergencial)
  * - CSS inline removido → utiliza classes Vuexy nativas

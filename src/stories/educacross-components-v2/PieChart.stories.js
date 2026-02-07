@@ -1,3 +1,16 @@
+/**
+ * PieChart - Gráfico de Pizza
+ * =============================
+ * Gráfico circular para distribuição de dados em dashboards
+ * 
+ * @component PieChart
+ * @category Educacross Components V2 / Charts
+ * @source educacross-frontoffice (dashboards, relatórios)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Charts/PieChart',
   tags: ['autodocs'],

@@ -1,3 +1,16 @@
+/**
+ * RadialBar - Gráfico de Barra Radial
+ * =====================================
+ * Gráfico circular tipo "gauge" para percentuais
+ * 
+ * @component RadialBar
+ * @category Educacross Components V2 / Charts
+ * @source educacross-frontoffice (métricas de desempenho)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Charts/RadialBar',
   tags: ['autodocs'],

@@ -1,3 +1,16 @@
+/**
+ * CardsList - Lista de Cards Responsiva
+ * ======================================
+ * Lista de cards com visualização em grid ou lista (toggle view)
+ * 
+ * @component CardsList
+ * @category Educacross Components V2 / Lists
+ * @source educacross-frontoffice (listas de missões, conteúdos)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Lists/CardsList',
   tags: ['autodocs'],

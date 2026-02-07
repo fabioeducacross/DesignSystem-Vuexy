@@ -1,3 +1,16 @@
+/**
+ * QuestionsListDetail - Lista Detalhada de Questões
+ * =================================================
+ * Lista de questões de banco com prévia completa de alternativas
+ * 
+ * @component QuestionsListDetail
+ * @category Educacross Components V2 / Lists
+ * @source educacross-frontoffice (banco de questões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Lists/QuestionsListDetail',
   tags: ['autodocs'],

@@ -1,3 +1,16 @@
+/**
+ * CertificateList - Lista de Certificados
+ * =========================================
+ * Lista de certificados de conclusão de missões/cursos
+ * 
+ * @component CertificateList
+ * @category Educacross Components V2 / Lists
+ * @source educacross-frontoffice (perfil do aluno, conquistas)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Lists/CertificateList',
   tags: ['autodocs'],
