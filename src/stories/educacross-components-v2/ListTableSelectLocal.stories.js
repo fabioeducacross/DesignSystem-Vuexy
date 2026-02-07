@@ -8,7 +8,7 @@
  * @category Educacross Components V2
  * @subcategory Tables
  * @priority P2
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since v2.0
  * 
  * Key Features:
