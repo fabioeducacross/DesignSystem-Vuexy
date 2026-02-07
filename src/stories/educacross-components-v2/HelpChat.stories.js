@@ -1,21 +1,95 @@
 /**
- * HelpChat - Pixel Perfect Stories
+ * HelpChat - Central de Ajuda Interativa
  * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * Widget de chat para suporte ao usuário com múltiplos canais
+ * (chat ao vivo, WhatsApp, FAQ, Typebot)
  * 
  * @component HelpChat
- * @source educacross-frontoffice\src\components\global\HelpChat.vue
- * @generated 2026-02-01T21:06:31.035383
+ * @category Educacross Components V2 / Global
+ * @source educacross-frontoffice/src/components/global/HelpChat.vue
+ * @priority P0 - Critical
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
- * Props: None
- * Slots: None
- * Emits: input
+ * Componente global de ajuda que oferece múltiplos canais de suporte:
+ * chat ao vivo, integração com WhatsApp, bot automatizado (Typebot) e FAQ.
  */
 
 export default {
   title: 'Front-office/Global/HelpChat',
   tags: ['autodocs'],
-  parameters: { layout: 'fullscreen' }
+  parameters: { 
+    layout: 'fullscreen',
+    docs: {
+      description: {
+        component: `
+# HelpChat - Central de Ajuda
+
+Widget de chat interativo para suporte ao usuário com múltiplos canais de atendimento.
+
+---
+
+## 📋 Contexto de Uso
+
+### Personas
+
+**Professor, Coordenador, Aluno** (Todos os Usuários)
+- Acessa chat flutuante em qualquer página
+- Envia dúvidas sobre funcionalidades
+- Escolhe canal preferido (chat, WhatsApp, FAQ)
+- Visualiza tempo médio de resposta
+
+**Equipe de Suporte**
+- Atende via chat ao vivo
+- Redireciona para WhatsApp quando necessário
+- Monitora status de atendimentos
+
+### Casos de Uso
+
+1. **Dúvida sobre Funcionalidade**: Usuário clica no botão flutuante, envia mensagem, recebe resposta em 5-10 min
+2. **Tutorial Guiado**: Bot Typebot orienta usuário passo a passo
+3. **Atendimento Offline**: Usuário envia mensagem fora do horário, recebe resposta por e-mail
+4. **Migração WhatsApp**: Chat oferece link direto para WhatsApp quando usuário prefere mobile
+
+---
+
+## 🎨 Props API
+
+| Prop | Type | Default | Descrição |
+|------|------|---------|-----------|
+| open | Boolean | false | Controla visibilidade do widget |
+| channel | String | 'chat' | Canal ativo: 'chat', 'whatsapp', 'typebot' |
+| status | String | 'online' | Status: 'online', 'offline', 'away' |
+
+---
+
+## 🎨 Design Specs
+
+### Dimensões
+
+| Elemento | Width | Height | Mobile |
+|----------|-------|--------|--------|
+| Widget | 960px max | 540px | Full screen |
+| Sidebar | 320px | 100% | Collapses to header |
+| Floating Button | 64px | 64px | 56px |
+
+### Cores
+
+| Status | Color | Box Shadow |
+|--------|-------|------------|
+| Online | #28c76f | rgba(40,199,111,0.18) |
+| Away | #ffb300 | rgba(255,179,0,0.25) |
+| Offline | #d8d6de | none |
+
+### Comportamento
+
+- **Floating Button**: Fixed bottom-right, 24px margin
+- **Auto-scroll**: Mensagens scrollam para última ao abrir
+- **Quick Actions**: Pills clicáveis para respostas rápidas
+        `,
+      },
+    },
+  }
 };
 
 const styles = `

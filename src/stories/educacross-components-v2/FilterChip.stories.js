@@ -5,11 +5,18 @@
  * disciplinas, anos escolares e outros contextos.
  * 
  * @component FilterChip
- * @usage Usado em filtros de turmas, disciplinas, séries, e outros contextos educacionais
+ * @category Educacross Components V2 / Forms
+ * @source educacross-frontoffice (filtros em dashboards, relatórios)
+ * @priority P0 - Critical
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ * 
+ * Componente de filtro visual usado para seleção e remoção de filtros em
+ * dashboards, relatórios e listagens (turmas, disciplinas, períodos).
  */
 
 export default {
-  title: 'Front-office/FilterChip',
+  title: 'Front-office/Forms/FilterChip',
   tags: ['autodocs'],
   argTypes: {
     label: {
@@ -39,7 +46,75 @@ export default {
     layout: 'padded',
     docs: {
       description: {
-        component: 'Chips/badges usados para filtros em turmas, disciplinas, séries escolares e outras categorias do sistema educacional.',
+        component: `
+# FilterChip - Badge de Filtro
+
+Chip visual removível usado para exibir filtros ativos em dashboards, relatórios e listagens da plataforma Educacross.
+
+---
+
+## 📋 Contexto de Uso
+
+### Personas
+
+**Professor** (Usuário Principal)
+- Aplica filtros em dashboards de alunos (turma, disciplina, período)
+- Remove filtros clicando no X
+- Visualiza filtros ativos no cabeçalho de relatórios
+
+**Coordenador Pedagógico**
+- Filtra múltiplas turmas em relatórios consolidados
+- Aplica filtros de ano letivo e período
+- Compara dados com diferentes combinações de filtros
+
+### Casos de Uso
+
+1. **Dashboard de Alunos**: Filtrar por turma (5º A) + disciplina (Matemática)
+2. **Relatórios**: Aplicar período (Novembro 2024) + status (Ativa)
+3. **Listagens**: Filtrar missões por ano escolar (5º Ano)
+
+---
+
+## 🎨 Props API
+
+| Prop | Type | Default | Descrição |
+|------|------|---------|-----------|
+| label | String | Required | Texto exibido no chip |
+| variant | String | 'light-primary' | Cor: primary, success, danger, info, warning, secondary |
+| size | String | 'md' | Tamanho: sm, md, lg |
+| removable | Boolean | false | Mostra botão X para remover |
+| icon | String | - | Ícone Material Symbols (opcional) |
+
+---
+
+## 🎨 Design Specs
+
+### Dimensões
+
+| Tamanho | Height | Padding H | Font Size |
+|---------|--------|-----------|-----------|
+| Small | 24px | 8px | 11px |
+| Medium | 28px | 12px | 13px |
+| Large | 32px | 16px | 14px |
+
+### Cores
+
+| Variant | Background | Text | Border |
+|---------|-----------|------|--------|
+| primary | #7367f0 | white | - |
+| light-primary | rgba(115,103,240,0.12) | #7367f0 | - |
+| success | #28c76f | white | - |
+| light-success | rgba(40,199,111,0.12) | #28c76f | - |
+| danger | #ea5455 | white | - |
+| light-danger | rgba(234,84,85,0.12) | #ea5455 | - |
+
+### Comportamento
+
+- **Border Radius**: 20px (pill completo)
+- **Gap Interno**: 4px (ícone + texto + botão)
+- **Transition**: 0.2s ease em hover/focus
+- **Remove Button**: Opacity 0.7 → 1.0 em hover
+        `,
       },
     },
   },
