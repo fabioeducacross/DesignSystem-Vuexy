@@ -7,6 +7,7 @@
  * @source educacross-frontoffice/src/components/selects/SelectInfinityScroll.vue
  * @category Forms
  * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * 
  * ## Contexto Educacional
  * - **Professor**: Selecionar alunos de grandes turmas, escolher missões de biblioteca extensa

@@ -7,6 +7,7 @@
  * @source educacross-frontoffice/src/components/form/ETextarea.vue
  * @category Forms
  * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * 
  * ## Contexto Educacional
  * - **Professor**: Observações sobre alunos, feedback de atividades, relatórios

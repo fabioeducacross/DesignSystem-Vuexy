@@ -7,6 +7,7 @@
  * @source educacross-frontoffice/src/components/form/EFormCheck.vue
  * @category Forms
  * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * 
  * ## Contexto Educacional
  * - **Professor**: Formulários de avaliação, configurações de turma

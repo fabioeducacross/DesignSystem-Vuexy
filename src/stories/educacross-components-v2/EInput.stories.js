@@ -7,6 +7,7 @@
  * @source educacross-frontoffice/src/components/form/EInput.vue
  * @category Forms
  * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * 
  * ## Contexto Educacional
  * - **Professor**: Cadastro de alunos, criação de turmas, formulários de missão

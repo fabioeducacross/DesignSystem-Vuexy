@@ -7,7 +7,7 @@
  * @category Educacross Components V2 / Tables
  * @source educacross-frontoffice (seleção de alunos para missões, exportação de dados)
  * @priority P1 - Core UI
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

@@ -6,6 +6,7 @@
  * @component SubjectCard
  * @category Cards
  * @priority P1 - Core UI
+ * @status PIXEL-PERFECT
  * 
  * ## Contexto Educacional
  * - **Professor**: Lista de disciplinas que leciona, seleção de matéria para missão

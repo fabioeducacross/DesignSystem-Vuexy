@@ -8,7 +8,7 @@
  * @category Educacross Components V2 / Templates
  * @source educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue
  * @priority P1 - Core UI
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

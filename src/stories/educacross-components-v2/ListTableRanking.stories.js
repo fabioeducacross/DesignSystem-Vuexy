@@ -7,7 +7,7 @@
  * @category Educacross Components V2 / Tables
  * @source educacross-frontoffice (rankings de alunos, turmas, disciplinas)
  * @priority P1 - Core UI
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

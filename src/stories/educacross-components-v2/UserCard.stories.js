@@ -7,7 +7,7 @@
  * @category Educacross Components V2 / Cards
  * @source educacross-frontoffice/src/views/pages/auth-context/manage-account/components/UserCard.vue
  * @priority P1 - Core UI
- * @status EXPANDED
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 
