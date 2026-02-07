@@ -384,7 +384,7 @@ export const Default = {
       <div class="navbar-column"></div>
       <div class="navbar-column" style="display: flex; justify-content: center;">
         <div class="logo-container">
-          <img src="/images/images-educa/logo-educacross.png" alt="Logo Educacross" style="height: 35px" />
+          <img src="/educacross-assets/logo-educacross.png" alt="Logo Educacross" style="height: 35px" />
         </div>
       </div>
       <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 12px;">
@@ -548,7 +548,7 @@ export const Mobile = {
       <div class="navbar-column"></div>
       <div class="navbar-column" style="display: flex; justify-content: center;">
         <div class="logo-container">
-          <img src="/images/images-educa/logo-educacross.png" alt="Logo Educacross" style="height: 35px" />
+          <img src="/educacross-assets/logo-educacross.png" alt="Logo Educacross" style="height: 35px" />
         </div>
       </div>
       <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 8px;">
@@ -971,7 +971,7 @@ export const WithEditModalOpen = {
         <div class="navbar-column"></div>
         <div class="navbar-column" style="display: flex; justify-content: center;">
           <div class="logo-container">
-            <img src="/images/images-educa/logo-educacross.png" alt="Logo Educacross" style="height: 40px" />
+            <img src="/educacross-assets/logo-educacross.png" alt="Logo Educacross" style="height: 40px" />
           </div>
         </div>
         <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 12px;">

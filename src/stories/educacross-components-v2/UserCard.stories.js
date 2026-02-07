@@ -233,7 +233,7 @@ export const Default = {
   render: () => `
     ${styles}
     <div class="user-card" onclick="this.style.transform='translateY(-2px)'; setTimeout(() => this.style.transform='', 200)">
-      <div class="user-card-header" style="background: url('/profile-corujinhas/7.png') center center / 80px no-repeat, url('/images/images-educa/bg-bolinhas.svg') center center / cover no-repeat, #5F4B8B linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);">
+      <div class="user-card-header" style="background: url('/profile-corujinhas/7.png') center center / 80px no-repeat, url('/educacross-assets/bg-bolinhas.svg') center center / cover no-repeat, #5F4B8B linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);">
         <span class="user-badge">Aluno</span>
         <i class="bi bi-gear-fill settings-icon"></i>
       </div>

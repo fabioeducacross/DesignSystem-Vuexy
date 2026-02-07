@@ -44,7 +44,7 @@ const base = (title, subtitle, datasets, labels, showFilters = false) => `
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   const canvas = document.querySelector('[id^="line-"]');
@@ -155,7 +155,7 @@ export const ComparacaoTrimestral = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('line-trim'), {
@@ -313,7 +313,7 @@ export const MultipleLines = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('line-multi'), {
@@ -347,7 +347,7 @@ export const Compacto = {
   <canvas class="chart-canvas" id="line-compact" style="height:200px"></canvas>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('line-compact'), {

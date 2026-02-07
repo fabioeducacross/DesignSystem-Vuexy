@@ -34,7 +34,7 @@ const base = (title, subtitle, value, max, color, label, centerLabel = `${value}
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   const canvas = document.querySelector('[id^="radial-"]');
@@ -113,7 +113,7 @@ export const DesempenhoAluno = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('radial-desempenho'), {
@@ -179,7 +179,7 @@ export const MultipleRadials = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   const data = [
@@ -241,7 +241,7 @@ export const ComNiveis = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('radial-nivel'), {
@@ -289,7 +289,7 @@ export const Compacto = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('radial-compact'), {

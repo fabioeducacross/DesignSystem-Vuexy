@@ -47,7 +47,7 @@ const base = (title, subtitle, data, labels, colors, showStats = false, totalLab
   </div>` : ''}
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   const canvas = document.querySelector('[id^="pie-"]');
@@ -167,7 +167,7 @@ export const ConquistasPorTipo = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('pie-conquistas'), {
@@ -219,7 +219,7 @@ export const Donut = {
   </div>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('pie-donut'), {
@@ -259,7 +259,7 @@ export const Compacto = {
   <canvas class="chart-canvas" id="pie-compact" style="height:200px"></canvas>
 </div>
 <style>${css}</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/vuexy/vendors/libs/chart/chart.umd.min.js"></script>
 <script>
 setTimeout(() => {
   new Chart(document.getElementById('pie-compact'), {
