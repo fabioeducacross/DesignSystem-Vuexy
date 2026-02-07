@@ -1,10 +1,16 @@
 /**
- * IntermediateRedirectLoginDeepLink - Comprehensive Stories
+ * IntermediateRedirectLoginDeepLink - Deep Link Authentication Screen
  * =========================================
  * 
+ * Redirect/loading screen during deep link authentication flow.
+ * Handles authentication state while redirecting users to target content.
+ * 
  * @component IntermediateRedirectLoginDeepLink
- * @description Redirect/loading screen during deep link authentication
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/deeplink/IntermediateRedirectLoginDeepLink.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

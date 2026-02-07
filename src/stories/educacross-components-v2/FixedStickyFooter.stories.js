@@ -6,7 +6,11 @@
  * Used for action buttons and persistent controls.
  * 
  * @component FixedStickyFooter
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\FixedStickyFooter.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

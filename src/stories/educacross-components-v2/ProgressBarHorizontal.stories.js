@@ -1,7 +1,16 @@
 /**
+ * ProgressBarHorizontal - Mission Progress Bar Component
+ * =========================================
+ * 
+ * Horizontal progress bar for mission/lesson completion with colored backgrounds and tooltips.
+ * Shows completion percentage with visual feedback.
+ * 
  * @component ProgressBarHorizontal
- * @description Horizontal progress bar for mission/lesson completion with colored backgrounds and tooltips
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/ProgressBarHorizontal.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-03
  */
 

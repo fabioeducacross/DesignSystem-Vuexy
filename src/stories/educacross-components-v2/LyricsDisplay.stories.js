@@ -1,10 +1,16 @@
 /**
- * LyricsDisplay - Pixel Perfect Stories
+ * LyricsDisplay - Song Lyrics Display Component
  * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * 
+ * Interactive lyrics display for audio content with fullscreen toggle.
+ * Synchronized with audio playback for educational content.
  * 
  * @component LyricsDisplay
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\player\LyricsDisplay.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-01T21:06:31.095093
  * 
  * Props: None

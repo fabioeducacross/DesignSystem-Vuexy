@@ -6,7 +6,11 @@
  * Third alias maintained for maximum legacy compatibility.
  * 
  * @component Template11
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template11.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

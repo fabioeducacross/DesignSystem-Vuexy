@@ -1,11 +1,16 @@
 /**
- * ProgressBarHorizontalV2 - Horizontal Progress Bar
+ * ProgressBarHorizontalV2 - Horizontal Progress Bar with Details
  * =================================================
+ * 
  * Barra de progresso horizontal com variantes de proficiência
  * e informações detalhadas abaixo da barra.
  * 
  * @component ProgressBarHorizontalV2
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/progessBar/ProgressBarHorizontalV2.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {
