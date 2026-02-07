@@ -5,11 +5,18 @@
  * usada em contextos de proficiência e métricas educacionais.
  * 
  * @component ProgressBarTopInfo
+ * @category Educacross Components V2 / Feedback
  * @source educacross-frontoffice/src/components/progessBar/ProgressBarTopInfo.vue
+ * @priority P0 - Critical
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ * 
+ * Barra de progresso com layout top-info: label à esquerda e porcentagem à
+ * direita no topo da barra, seguida pela barra visual. Ideal para dashboards.
  */
 
 export default {
-  title: 'Front-office/ProgressBarTopInfo',
+  title: 'Front-office/Feedback/ProgressBarTopInfo',
   tags: ['autodocs'],
   argTypes: {
     value: {
@@ -42,7 +49,70 @@ export default {
     layout: 'padded',
     docs: {
       description: {
-        component: 'Barra de progresso com informações no topo (label e porcentagem), usada em dashboards e relatórios educacionais.',
+        component: `
+# ProgressBarTopInfo - Barra com Informações no Topo
+
+Variante de barra de progresso com layout top-info: label e porcentagem alinhados no topo da barra, ideal para dashboards e cards compactos.
+
+---
+
+## 📋 Contexto de Uso
+
+### Personas
+
+**Professor** (Uso Principal)
+- Visualiza proficiência em cards de alunos (label: "João Silva", value: 72%)
+- Acompanha progresso de missões em dashboards
+- Monitora desempenho médio da turma
+
+**Coordenador Pedagógico**
+- Analisa métricas consolidadas em relatórios
+- Compara turmas lado a lado em grids
+- Exporta dados visuais para apresentações
+
+### Casos de Uso
+
+1. **Dashboard de Alunos**: Card compacto com nome do aluno e proficiência no topo
+2. **Relatórios**: Múltiplas métricas empilhadas verticalmente
+3. **Cards de Missão**: Progresso de conclusão com nome da missão no topo
+
+---
+
+## 🎨 Props API
+
+| Prop | Type | Default | Descrição |
+|------|------|---------|-----------|
+| value | Number | 0 | Valor 0-100 |
+| variant | String | 'primary' | Cor: danger, warning, success, primary |
+| label | String | - | Texto à esquerda no topo |
+| height | String | '8px' | Altura da barra |
+| showTooltip | Boolean | false | Tooltip na porcentagem |
+| tooltipText | String | - | Texto do tooltip (se showTooltip=true) |
+
+---
+
+## 🎨 Design Specs
+
+### Layout
+
+- **Top Section**: Flex row, space-between, 4px abaixo da barra
+- **Label**: Left-aligned, font-weight 600, 14px
+- **Percentage**: Right-aligned, font-weight 700, 14px
+- **Gap**: 4px entre top section e barra
+
+### Cores
+
+Mesmas de ProgressBar:
+- Danger (#ea5455): 0-29%
+- Warning (#ff9f43): 30-69%
+- Success (#28c76f): 70-100%
+- Primary (#7367f0): Custom
+
+### Comportamento
+
+- **Tooltip**: Cursor help, title attribute mostra tooltipText
+- **Responsive**: Label truncate com ellipsis em mobile
+        `,
       },
     },
   },
