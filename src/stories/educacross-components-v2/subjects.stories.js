@@ -6,7 +6,11 @@
  * Used for showing discipline information across the platform.
  * 
  * @component subjects
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\subjects\subjects.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

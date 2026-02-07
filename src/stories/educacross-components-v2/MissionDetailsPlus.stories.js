@@ -1,10 +1,16 @@
 /**
  * MissionDetailsPlus - Detalhes de Missão Plus
  * ============================================
+ * 
  * Exibe informações completas de uma Missão Plus (turma, duração, alunos, turnos).
- *
+ * Shows comprehensive mission information with class, duration, and shifts.
+ * 
  * @component MissionDetailsPlus
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/mission-plus/MissionDetailsPlus.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

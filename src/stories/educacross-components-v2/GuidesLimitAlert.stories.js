@@ -1,7 +1,16 @@
 /**
+ * GuidesLimitAlert - Mission Creation Limit Alert
+ * =========================================
+ * 
+ * Alert modal warning about monthly mission creation limits per class.
+ * Informs teachers about mission quota constraints.
+ * 
  * @component GuidesLimitAlert
- * @description Alert modal warning about monthly mission creation limits per class
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/GuidesLimitAlert.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-03
  */
 

@@ -1,10 +1,16 @@
 /**
  * RainbowProgressBar - Barra de Progresso Arco-Íris
  * ===================================================
+ * 
  * Barra de progresso com gradiente de cores do arco-íris, usado para indicar proficiência.
- *
+ * Shows proficiency level through a rainbow gradient with triangle indicator.
+ * 
  * @component RainbowProgressBar
+ * @category Educacross Components V2
  * @source educacross-frontoffice/src/components/progessBar/RainbowProgressBar.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

@@ -1,3 +1,18 @@
+/**
+ * ChangeProficiency - Proficiency Level Change Component
+ * =========================================
+ * 
+ * Visual display for proficiency level changes with animated transitions.
+ * Shows before/after states with colored indicators.
+ * 
+ * @component ChangeProficiency
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/proficiency/ChangeProficiency.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
+ */
+
 export default {
   title: 'Front-office/Proficiency/ChangeProficiency',
   tags: ['autodocs'],

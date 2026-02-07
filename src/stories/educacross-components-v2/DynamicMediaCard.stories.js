@@ -1,5 +1,16 @@
 /**
  * DynamicMediaCard - Animated Metric Card
+ * =========================================
+ * 
+ * Card de métrica com animação dinâmica (CountUp effect) para dashboards em tempo real.
+ * Displays animated numeric metrics with smooth transitions.
+ * 
+ * @component DynamicMediaCard
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/cards/DynamicMediaCard.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

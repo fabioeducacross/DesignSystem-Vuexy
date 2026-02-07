@@ -6,7 +6,11 @@
  * Shows status, completion, and provides details access.
  * 
  * @component MissionAndQuestionItem
+ * @category Educacross Components V2
  * @source educacross-frontoffice\src\components\mission-plus\MissionAndQuestionItem.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {

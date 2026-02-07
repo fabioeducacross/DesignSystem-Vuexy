@@ -1,10 +1,16 @@
 /**
  * StudentAvatar - Avatar de Estudante
  * =====================================
+ * 
  * Avatar de estudante com foto ou iniciais, usado em listas,
  * rankings, perfis e visualizações de turma.
  * 
  * @component StudentAvatar
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/student/StudentAvatar.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @usage Lista de alunos, ranking de proficiência, perfil de estudante
  */
 

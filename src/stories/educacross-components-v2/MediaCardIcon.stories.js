@@ -1,5 +1,16 @@
 /**
  * MediaCardIcon - Metric Card with Large Icon
+ * =========================================
+ * 
+ * Card de métrica com ícone grande centralizado para dashboards educacionais.
+ * Used by teachers and coordinators for visual metrics display.
+ * 
+ * @component MediaCardIcon
+ * @category Educacross Components V2
+ * @source educacross-frontoffice/src/components/cards/MediaCardIcon.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  */
 
 export default {
