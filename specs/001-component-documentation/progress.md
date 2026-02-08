@@ -15,12 +15,12 @@
 ## Overall Progress
 
 **Total**: 123 components  
-**Completed com 4 stories**: 0 (0%)  
-**Documentation apenas**: 10 (8.1%)  
-**Remaining**: 123 (100% precisam refatoração)
+**Completed com 4 stories**: 1 (0.8%) - **EInput** 🎉  
+**Documentation apenas**: 4 (3.3%)  
+**Remaining**: 122 (99.2% precisam completar 4 stories)
 
 ```
-[████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 8.1%
+[█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.8%
 ```
 
 ---
@@ -30,7 +30,7 @@
 | Phase | Status | Components | Progress |
 |-------|--------|------------|----------|
 | Phase 0 | ✅ Complete | Preparation | 100% |
-| Phase 1 | ✅ Complete | P0 Forms (5) | 5/5 |
+| Phase 1 | 🚧 In Progress | P0 Forms (5) | 1/5 (20%) |
 | Phase 2 | ⏸️ Not Started | P1+P2 Nav+Progress (19) | 0/19 |
 | Phase 3 | ⏸️ Not Started | P3 Data Display (15) | 0/15 |
 | Phase 4 | ⏸️ Not Started | P4 Exercise+Mission (28) | 0/28 |
@@ -40,9 +40,39 @@
 
 ---
 
-## Completed Components (10/123)
+## Phase 1 - P0 Forms (5 componentes)
 
-✅ Components that already have complete template:
+### ✅ Completos com 4 stories (1/5)
+
+1. **EInput** ⭐ - Piloto completo
+   - ✅ Documentation: Hero + Stats + 3 exemplos + Props + 6 features
+   - ✅ Playground: 10 argTypes com controls (type, size, state, icon, disabled, readonly, etc.)
+   - ✅ Use Cases: 3 cenários (Cadastro Aluno, Busca Turma, Formulário Missão)
+   - ✅ Accessibility: Keyboard nav + ARIA labels + Contraste WCAG AA + Screen readers
+
+### ⏳ Pendentes - Precisam Playground + Use Cases + Accessibility (4/5)
+
+2. EFormCheck (Documentation ✅)
+3. ESelect (Documentation ✅)
+4. ETextarea (Documentation ✅)
+5. FilterChip (Documentation ✅)
+
+---
+
+## Components Com Documentation Apenas (4/123)
+
+⚠️ Components que já têm Documentation story mas precisam das outras 3:
+
+1. EFormCheck.stories.js
+2. ESelect.stories.js
+3. ETextarea.stories.js
+4. FilterChip.stories.js
+
+---
+
+## Components Com Template Genérico (5/123)
+
+✅ Components que já têm template completo (formato antigo - precisa refatorar para 4 stories):
 
 1. ButtonWaitAction.stories.js
 2. Card.stories.js

@@ -1,0 +1,529 @@
+- generic [ref=e3]:
+  - main [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e62]:
+        - button "Remount component" [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+        - button "Zoom in" [ref=e66] [cursor=pointer]:
+          - img [ref=e67]
+        - button "Zoom out" [ref=e70] [cursor=pointer]:
+          - img [ref=e71]
+        - button "Reset zoom" [ref=e74] [cursor=pointer]:
+          - img [ref=e75]
+        - button "Change the background of the preview" [ref=e79] [cursor=pointer]:
+          - img [ref=e80]
+        - button "Apply a grid to the preview" [ref=e83] [cursor=pointer]:
+          - img [ref=e84]
+        - button "Change the size of the preview" [ref=e87] [cursor=pointer]:
+          - img [ref=e88]
+        - button "Enable measure" [ref=e92] [cursor=pointer]:
+          - img [ref=e93]
+        - button "Apply outlines to the preview" [ref=e96] [cursor=pointer]:
+          - img [ref=e97]
+      - generic [ref=e99]:
+        - button "Go full screen" [ref=e100] [cursor=pointer]:
+          - img [ref=e101]
+        - link "Open canvas in new tab" [ref=e103] [cursor=pointer]:
+          - /url: iframe.html?args=&globals=&id=📚-getting-started--introduction
+          - img [ref=e104]
+        - button "Copy canvas link" [ref=e107] [cursor=pointer]:
+          - img [ref=e108]
+    - generic [ref=e13]:
+      - link "Skip to sidebar" [ref=e111] [cursor=pointer]:
+        - /url: "#📚-getting-started--introduction"
+      - iframe [ref=e14]:
+        - generic [ref=f1e5]:
+          - generic [ref=f1e10]:
+            - generic [ref=f1e11]:
+              - generic [ref=f1e12]: palette
+              - generic [ref=f1e13]: Educacross Design System v10.9.0
+            - heading "Design System Educacross Platform" [level=1] [ref=f1e14]:
+              - text: Design System
+              - text: Educacross Platform
+            - paragraph [ref=f1e15]: Biblioteca completa de componentes UI baseada no template Vuexy, organizada com princípios de Atomic Design e documentada para Vue 2.7
+          - generic [ref=f1e18]:
+            - generic [ref=f1e20]:
+              - generic [ref=f1e21]: 220+
+              - generic [ref=f1e22]: Componentes
+            - generic [ref=f1e24]:
+              - generic [ref=f1e25]: "111"
+              - generic [ref=f1e26]: Educacross Real
+            - generic [ref=f1e28]:
+              - generic [ref=f1e29]: 8000+
+              - generic [ref=f1e30]: Ícones
+            - generic [ref=f1e32]:
+              - generic [ref=f1e33]: 100%
+              - generic [ref=f1e34]: Responsive
+          - generic [ref=f1e36]:
+            - generic [ref=f1e37]:
+              - generic [ref=f1e38]:
+                - generic [ref=f1e39]: auto_awesome
+                - generic [ref=f1e40]: Estrutura Dual
+              - heading "Dois Universos de Componentes" [level=2] [ref=f1e41]
+              - paragraph [ref=f1e42]: Design system híbrido com componentes genéricos Vuexy e componentes reais do Educacross Platform
+            - generic [ref=f1e43]:
+              - generic [ref=f1e45]:
+                - generic [ref=f1e47]: dashboard_customize
+                - heading "Vuexy Generic Components" [level=3] [ref=f1e48]
+                - paragraph [ref=f1e49]: Componentes do template Vuexy organizados por Atomic Design (Atoms → Molecules → Organisms → Templates)
+                - list [ref=f1e50]:
+                  - listitem [ref=f1e51]:
+                    - generic [ref=f1e52]: check_circle
+                    - generic [ref=f1e53]: Buttons, Cards, Forms, Tables
+                  - listitem [ref=f1e54]:
+                    - generic [ref=f1e55]: check_circle
+                    - generic [ref=f1e56]: Modals, Dropdowns, Tooltips
+                  - listitem [ref=f1e57]:
+                    - generic [ref=f1e58]: check_circle
+                    - generic [ref=f1e59]: Charts, Invoices, E-commerce
+                  - listitem [ref=f1e60]:
+                    - generic [ref=f1e61]: check_circle
+                    - generic [ref=f1e62]: 220+ componentes base do template
+                  - listitem [ref=f1e63]:
+                    - generic [ref=f1e64]: check_circle
+                    - generic [ref=f1e65]: Documentação de referência
+              - generic [ref=f1e67]:
+                - generic [ref=f1e69]: verified
+                - heading "Educacross Real Components" [level=3] [ref=f1e70]
+                - paragraph [ref=f1e71]: 111 componentes reais extraídos do educacross-frontoffice e documentados no Storybook
+                - list [ref=f1e72]:
+                  - listitem [ref=f1e73]:
+                    - generic [ref=f1e74]: check_circle
+                    - generic [ref=f1e75]: AppNavbar, Sidebar, ManageAccountPage
+                  - listitem [ref=f1e76]:
+                    - generic [ref=f1e77]: check_circle
+                    - generic [ref=f1e78]: EditProfileStudentNew, UserCard
+                  - listitem [ref=f1e79]:
+                    - generic [ref=f1e80]: check_circle
+                    - generic [ref=f1e81]: AcceptOrRejectAccess Modal
+                  - listitem [ref=f1e82]:
+                    - generic [ref=f1e83]: check_circle
+                    - generic [ref=f1e84]: Componentes em produção
+                  - listitem [ref=f1e85]:
+                    - generic [ref=f1e86]: check_circle
+                    - generic [ref=f1e87]: Código Vue 2.7 real
+          - generic [ref=f1e89]:
+            - generic [ref=f1e90]:
+              - generic [ref=f1e91]:
+                - generic [ref=f1e92]: account_tree
+                - generic [ref=f1e93]: Atomic Design
+              - heading "Princípios de Organização" [level=2] [ref=f1e94]
+              - paragraph [ref=f1e95]: Componentes organizados de forma hierárquica do mais simples ao mais complexo
+            - generic [ref=f1e96]:
+              - generic [ref=f1e98]:
+                - generic [ref=f1e101]: scatter_plot
+                - generic [ref=f1e102]:
+                  - heading "Atoms" [level=4] [ref=f1e103]
+                  - paragraph [ref=f1e104]: Elementos mais básicos e indivisíveis
+                  - generic [ref=f1e105]:
+                    - strong [ref=f1e106]: "Exemplos:"
+                    - text: Buttons, Inputs, Labels, Badges, Icons
+              - generic [ref=f1e108]:
+                - generic [ref=f1e111]: category
+                - generic [ref=f1e112]:
+                  - heading "Molecules" [level=4] [ref=f1e113]
+                  - paragraph [ref=f1e114]: Grupos de átomos funcionando juntos
+                  - generic [ref=f1e115]:
+                    - strong [ref=f1e116]: "Exemplos:"
+                    - text: Form Groups, Search Bars, Cards, Alerts
+              - generic [ref=f1e118]:
+                - generic [ref=f1e121]: view_module
+                - generic [ref=f1e122]:
+                  - heading "Organisms" [level=4] [ref=f1e123]
+                  - paragraph [ref=f1e124]: Seções complexas de interface
+                  - generic [ref=f1e125]:
+                    - strong [ref=f1e126]: "Exemplos:"
+                    - text: Headers, Navigation, Data Tables, Forms
+              - generic [ref=f1e128]:
+                - generic [ref=f1e131]: web
+                - generic [ref=f1e132]:
+                  - heading "Templates" [level=4] [ref=f1e133]
+                  - paragraph [ref=f1e134]: Layouts de página completos
+                  - generic [ref=f1e135]:
+                    - strong [ref=f1e136]: "Exemplos:"
+                    - text: Dashboard, Profile, Invoice, E-commerce
+          - generic [ref=f1e138]:
+            - generic [ref=f1e139]:
+              - generic [ref=f1e140]:
+                - generic [ref=f1e141]: code
+                - generic [ref=f1e142]: Stack Tecnológico
+              - heading "Frameworks & Bibliotecas" [level=2] [ref=f1e143]
+              - paragraph [ref=f1e144]: Componentes compatíveis com múltiplos frameworks e bibliotecas modernas
+            - generic [ref=f1e145]:
+              - generic [ref=f1e146]:
+                - generic [ref=f1e147]: language
+                - generic [ref=f1e148]: Vue 2.7
+              - generic [ref=f1e149]:
+                - generic [ref=f1e150]: code
+                - generic [ref=f1e151]: React
+              - generic [ref=f1e152]:
+                - generic [ref=f1e153]: html
+                - generic [ref=f1e154]: HTML5
+              - generic [ref=f1e155]:
+                - generic [ref=f1e156]: view_quilt
+                - generic [ref=f1e157]: Bootstrap 5
+              - generic [ref=f1e158]:
+                - generic [ref=f1e159]: show_chart
+                - generic [ref=f1e160]: ApexCharts
+              - generic [ref=f1e161]:
+                - generic [ref=f1e162]: interests
+                - generic [ref=f1e163]: Tabler Icons
+              - generic [ref=f1e164]:
+                - generic [ref=f1e165]: psychology
+                - generic [ref=f1e166]: Material Symbols
+              - generic [ref=f1e167]:
+                - generic [ref=f1e168]: star
+                - generic [ref=f1e169]: Font Awesome
+          - generic [ref=f1e171]:
+            - generic [ref=f1e172]:
+              - generic [ref=f1e173]:
+                - generic [ref=f1e174]: workspace_premium
+                - generic [ref=f1e175]: Recursos
+              - heading "Tudo que Você Precisa" [level=2] [ref=f1e176]
+              - paragraph [ref=f1e177]: Funcionalidades modernas para desenvolvimento ágil e escalável
+            - generic [ref=f1e178]:
+              - generic [ref=f1e180]:
+                - generic [ref=f1e182]: menu_book
+                - heading "Documentação Completa" [level=4] [ref=f1e183]
+                - paragraph [ref=f1e184]: Cada componente com exemplos de código em HTML, React, Vue 2 e Vue 3
+              - generic [ref=f1e186]:
+                - generic [ref=f1e188]: devices
+                - heading "Responsivo" [level=4] [ref=f1e189]
+                - paragraph [ref=f1e190]: Todos os componentes otimizados para mobile, tablet e desktop
+              - generic [ref=f1e192]:
+                - generic [ref=f1e194]: accessibility_new
+                - heading "Acessível" [level=4] [ref=f1e195]
+                - paragraph [ref=f1e196]: Componentes seguindo padrões WCAG 2.1 e boas práticas de acessibilidade
+              - generic [ref=f1e198]:
+                - generic [ref=f1e200]: tune
+                - heading "Customizável" [level=4] [ref=f1e201]
+                - paragraph [ref=f1e202]: Variáveis CSS e props configuráveis para adaptar ao seu design
+              - generic [ref=f1e204]:
+                - generic [ref=f1e206]: speed
+                - heading "Performance" [level=4] [ref=f1e207]
+                - paragraph [ref=f1e208]: Componentes otimizados com lazy loading e code splitting
+              - generic [ref=f1e210]:
+                - generic [ref=f1e212]: science
+                - heading "Testado" [level=4] [ref=f1e213]
+                - paragraph [ref=f1e214]: Testes visuais automatizados com Playwright para garantir qualidade
+  - navigation [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - link "Skip to canvas" [ref=e23] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e25] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e26]
+          - button "Shortcuts" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+        - generic [ref=e36]: Search for components
+        - combobox "Search for components" [ref=e38]:
+          - generic:
+            - img
+          - searchbox "Search for components" [ref=e39]
+          - code: ⌃ K
+          - button "Tag filters" [ref=e115] [cursor=pointer]:
+            - img [ref=e116]
+        - generic [ref=e40]:
+          - generic [ref=e118]:
+            - img
+            - generic [ref=e119]:
+              - button "📚 Getting Started" [expanded] [ref=e120] [cursor=pointer]:
+                - img [ref=e122]
+                - text: 📚 Getting Started
+              - button "Collapse" [ref=e124] [cursor=pointer]:
+                - img [ref=e125]
+            - generic [ref=e127]:
+              - link "Introduction" [ref=e128] [cursor=pointer]:
+                - /url: /?path=/story/📚-getting-started--introduction
+                - img [ref=e130]
+                - text: Introduction
+              - link "Skip to canvas" [ref=e132] [cursor=pointer]:
+                - /url: "#storybook-preview-wrapper"
+            - button "Doc Template Example" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]:
+                - img [ref=e137]
+                - img [ref=e139]
+              - text: Doc Template Example
+            - generic [ref=e141]:
+              - button "Vuexy" [expanded] [ref=e142] [cursor=pointer]:
+                - img [ref=e144]
+                - text: Vuexy
+              - button "Collapse" [ref=e146] [cursor=pointer]:
+                - img [ref=e147]
+            - button "Atoms" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]:
+                - img [ref=e153]
+                - img [ref=e155]
+              - text: Atoms
+            - button "Foundations" [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]:
+                - img [ref=e161]
+                - img [ref=e163]
+              - text: Foundations
+            - button "Molecules" [ref=e166] [cursor=pointer]:
+              - generic [ref=e167]:
+                - img [ref=e169]
+                - img [ref=e171]
+              - text: Molecules
+            - button "Organisms" [ref=e174] [cursor=pointer]:
+              - generic [ref=e175]:
+                - img [ref=e177]
+                - img [ref=e179]
+              - text: Organisms
+            - button "Templates" [ref=e182] [cursor=pointer]:
+              - generic [ref=e183]:
+                - img [ref=e185]
+                - img [ref=e187]
+              - text: Templates
+            - generic [ref=e189]:
+              - button "Front-office" [expanded] [ref=e190] [cursor=pointer]:
+                - img [ref=e192]
+                - text: Front-office
+              - button "Collapse" [ref=e194] [cursor=pointer]:
+                - img [ref=e195]
+            - button "Modals" [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]:
+                - img [ref=e201]
+                - img [ref=e203]
+              - text: Modals
+            - button "Media" [ref=e206] [cursor=pointer]:
+              - generic [ref=e207]:
+                - img [ref=e209]
+                - img [ref=e211]
+              - text: Media
+            - button "Navigation" [ref=e214] [cursor=pointer]:
+              - generic [ref=e215]:
+                - img [ref=e217]
+                - img [ref=e219]
+              - text: Navigation
+            - button "Feedback" [ref=e222] [cursor=pointer]:
+              - generic [ref=e223]:
+                - img [ref=e225]
+                - img [ref=e227]
+              - text: Feedback
+            - button "BadgeList" [ref=e230] [cursor=pointer]:
+              - generic [ref=e231]:
+                - img [ref=e233]
+                - img [ref=e235]
+              - text: BadgeList
+            - button "Charts" [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - img [ref=e241]
+                - img [ref=e243]
+              - text: Charts
+            - button "Cards" [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]:
+                - img [ref=e249]
+                - img [ref=e251]
+              - text: Cards
+            - button "Lists" [ref=e254] [cursor=pointer]:
+              - generic [ref=e255]:
+                - img [ref=e257]
+                - img [ref=e259]
+              - text: Lists
+            - button "Badges" [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]:
+                - img [ref=e265]
+                - img [ref=e267]
+              - text: Badges
+            - button "PDF" [ref=e270] [cursor=pointer]:
+              - generic [ref=e271]:
+                - img [ref=e273]
+                - img [ref=e275]
+              - text: PDF
+            - button "Proficiency" [ref=e278] [cursor=pointer]:
+              - generic [ref=e279]:
+                - img [ref=e281]
+                - img [ref=e283]
+              - text: Proficiency
+            - button "Data Display" [ref=e286] [cursor=pointer]:
+              - generic [ref=e287]:
+                - img [ref=e289]
+                - img [ref=e291]
+              - text: Data Display
+            - button "Layout" [ref=e294] [cursor=pointer]:
+              - generic [ref=e295]:
+                - img [ref=e297]
+                - img [ref=e299]
+              - text: Layout
+            - button "Forms" [ref=e302] [cursor=pointer]:
+              - generic [ref=e303]:
+                - img [ref=e305]
+                - img [ref=e307]
+              - text: Forms
+            - button "Evaluations" [ref=e310] [cursor=pointer]:
+              - generic [ref=e311]:
+                - img [ref=e313]
+                - img [ref=e315]
+              - text: Evaluations
+            - button "Filters" [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]:
+                - img [ref=e321]
+                - img [ref=e323]
+              - text: Filters
+            - button "Mission" [ref=e326] [cursor=pointer]:
+              - generic [ref=e327]:
+                - img [ref=e329]
+                - img [ref=e331]
+              - text: Mission
+            - button "Global" [ref=e334] [cursor=pointer]:
+              - generic [ref=e335]:
+                - img [ref=e337]
+                - img [ref=e339]
+              - text: Global
+            - button "Selects" [ref=e342] [cursor=pointer]:
+              - generic [ref=e343]:
+                - img [ref=e345]
+                - img [ref=e347]
+              - text: Selects
+            - button "Legends" [ref=e350] [cursor=pointer]:
+              - generic [ref=e351]:
+                - img [ref=e353]
+                - img [ref=e355]
+              - text: Legends
+            - button "Tables" [ref=e358] [cursor=pointer]:
+              - generic [ref=e359]:
+                - img [ref=e361]
+                - img [ref=e363]
+              - text: Tables
+            - button "Templates" [ref=e366] [cursor=pointer]:
+              - generic [ref=e367]:
+                - img [ref=e369]
+                - img [ref=e371]
+              - text: Templates
+            - button "Missions" [ref=e374] [cursor=pointer]:
+              - generic [ref=e375]:
+                - img [ref=e377]
+                - img [ref=e379]
+              - text: Missions
+            - button "Content" [ref=e382] [cursor=pointer]:
+              - generic [ref=e383]:
+                - img [ref=e385]
+                - img [ref=e387]
+              - text: Content
+            - button "Overlays" [ref=e390] [cursor=pointer]:
+              - generic [ref=e391]:
+                - img [ref=e393]
+                - img [ref=e395]
+              - text: Overlays
+            - button "ProfilePicture" [ref=e398] [cursor=pointer]:
+              - generic [ref=e399]:
+                - img [ref=e401]
+                - img [ref=e403]
+              - text: ProfilePicture
+            - button "ProgressBarHorizontalV2" [ref=e406] [cursor=pointer]:
+              - generic [ref=e407]:
+                - img [ref=e409]
+                - img [ref=e411]
+              - text: ProgressBarHorizontalV2
+            - button "ProgressBarVertical" [ref=e414] [cursor=pointer]:
+              - generic [ref=e415]:
+                - img [ref=e417]
+                - img [ref=e419]
+              - text: ProgressBarVertical
+            - button "SimpleTab" [ref=e422] [cursor=pointer]:
+              - generic [ref=e423]:
+                - img [ref=e425]
+                - img [ref=e427]
+              - text: SimpleTab
+            - button "StudentAvatar" [ref=e430] [cursor=pointer]:
+              - generic [ref=e431]:
+                - img [ref=e433]
+                - img [ref=e435]
+              - text: StudentAvatar
+            - button "Teachers" [ref=e438] [cursor=pointer]:
+              - generic [ref=e439]:
+                - img [ref=e441]
+                - img [ref=e443]
+              - text: Teachers
+            - button "Subjects" [ref=e446] [cursor=pointer]:
+              - generic [ref=e447]:
+                - img [ref=e449]
+                - img [ref=e451]
+              - text: Subjects
+            - generic [ref=e453]:
+              - button "Educacross Components V2" [expanded] [ref=e454] [cursor=pointer]:
+                - img [ref=e456]
+                - text: Educacross Components V2
+              - button "Collapse" [ref=e458] [cursor=pointer]:
+                - img [ref=e459]
+            - button "Forms" [ref=e462] [cursor=pointer]:
+              - generic [ref=e463]:
+                - img [ref=e465]
+                - img [ref=e467]
+              - text: Forms
+            - button "Modals" [ref=e470] [cursor=pointer]:
+              - generic [ref=e471]:
+                - img [ref=e473]
+                - img [ref=e475]
+              - text: Modals
+            - button "Cards" [ref=e478] [cursor=pointer]:
+              - generic [ref=e479]:
+                - img [ref=e481]
+                - img [ref=e483]
+              - text: Cards
+            - button "Missions" [ref=e486] [cursor=pointer]:
+              - generic [ref=e487]:
+                - img [ref=e489]
+                - img [ref=e491]
+              - text: Missions
+            - button "Feedback" [ref=e494] [cursor=pointer]:
+              - generic [ref=e495]:
+                - img [ref=e497]
+                - img [ref=e499]
+              - text: Feedback
+            - button "Evaluations" [ref=e502] [cursor=pointer]:
+              - generic [ref=e503]:
+                - img [ref=e505]
+                - img [ref=e507]
+              - text: Evaluations
+          - text: / / / / / / / / / / / / / / /
+      - generic [ref=e510]:
+        - link "Storybook 10 Learn what's new in Storybook" [ref=e511] [cursor=pointer]:
+          - /url: /?path=/settings/whats-new
+          - img [ref=e513]
+          - generic [ref=e515]:
+            - generic "Storybook 10" [ref=e516]
+            - generic [ref=e517]: Learn what's new in Storybook
+          - button "Dismiss notification" [ref=e518]:
+            - img [ref=e519]
+        - generic [ref=e521]:
+          - img [ref=e523]
+          - generic [ref=e525]:
+            - generic "Connection lost" [ref=e526]
+            - generic [ref=e527]: Please restart your Storybook server and reload the page
+          - button "Dismiss notification" [ref=e528] [cursor=pointer]:
+            - img [ref=e529]
+  - generic [ref=e533]:
+    - generic [ref=e535]:
+      - tablist [ref=e537]:
+        - tab "Controls" [ref=e538] [cursor=pointer]:
+          - generic [ref=e541]: Controls
+        - tab "Actions" [ref=e542] [cursor=pointer]:
+          - generic [ref=e545]: Actions
+        - tab "Interactions" [ref=e546] [cursor=pointer]:
+          - generic [ref=e549]: Interactions
+      - generic [ref=e552]:
+        - button "Change addon orientation [alt D]" [ref=e553] [cursor=pointer]:
+          - img [ref=e554]
+        - button "Hide addons [alt A]" [ref=e557] [cursor=pointer]:
+          - img [ref=e558]
+    - generic [ref=e565]:
+      - generic [ref=e566]:
+        - generic [ref=e567]: Interactive story playground
+        - generic [ref=e568]: Controls give you an easy to use interface to test your components. Set your story args and you'll see controls appearing here automatically.
+      - generic [ref=e569]:
+        - link "Watch 5m video" [ref=e570] [cursor=pointer]:
+          - /url: https://youtu.be/0gOfS6K0x0E
+          - generic [ref=e571]:
+            - img [ref=e572]
+            - text: Watch 5m video
+            - img [ref=e575]
+        - link "Read docs" [ref=e578] [cursor=pointer]:
+          - /url: https://storybook.js.org/docs/essentials/controls
+          - generic [ref=e579]:
+            - img [ref=e580]
+            - text: Read docs
+            - img [ref=e583]

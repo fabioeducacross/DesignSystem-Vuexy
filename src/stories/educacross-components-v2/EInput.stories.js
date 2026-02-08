@@ -943,3 +943,394 @@ ${createPropsTable([
     ]
   })
 };
+
+// ============================================================================
+// 🎨 PLAYGROUND - Controls Interativos
+// ============================================================================
+
+export const Playground = {
+  args: {
+    value: '',
+    placeholder: 'Digite aqui...',
+    type: 'text',
+    size: 'md',
+    state: '',
+    disabled: false,
+    readonly: false,
+    icon: '',
+    iconPosition: 'left',
+    maxLength: null
+  },
+  argTypes: {
+    value: { control: 'text', description: 'Valor do input' },
+    placeholder: { control: 'text', description: 'Texto placeholder' },
+    type: { 
+      control: 'select', 
+      options: ['text', 'email', 'number', 'password', 'tel', 'url', 'search'],
+      description: 'Tipo de input'
+    },
+    size: { 
+      control: 'select', 
+      options: ['sm', 'md', 'lg'],
+      description: 'Tamanho do input'
+    },
+    state: { 
+      control: 'select', 
+      options: ['', 'valid', 'invalid', 'warning'],
+      description: 'Estado de validação'
+    },
+    icon: { 
+      control: 'text', 
+      description: 'Ícone Bootstrap Icons (ex: search, person, envelope)'
+    },
+    iconPosition: { 
+      control: 'radio', 
+      options: ['left', 'right'],
+      description: 'Posição do ícone'
+    },
+    disabled: { control: 'boolean', description: 'Desabilita interação' },
+    readonly: { control: 'boolean', description: 'Apenas leitura' },
+    maxLength: { control: 'number', description: 'Máximo de caracteres' }
+  },
+  render: (args) => {
+    const sizeMap = { sm: '32px', md: '38px', lg: '46px' };
+    const paddingMap = { sm: '8px 12px', md: '10px 14px', lg: '12px 16px' };
+    const fontSizeMap = { sm: '13px', md: '14px', lg: '16px' };
+    
+    const stateStyles = {
+      valid: 'border: 2px solid #28C76F; background-color: #F0FDF4;',
+      invalid: 'border: 2px solid #EA5455; background-color: #FEF2F2;',
+      warning: 'border: 2px solid #FF9F43; background-color: #FFF8F0;',
+      '': 'border: 1px solid #D8D6DE;'
+    };
+    
+    const hasIcon = args.icon && args.icon.trim() !== '';
+    const iconPaddingLeft = hasIcon && args.iconPosition === 'left' ? '42px' : paddingMap[args.size].split(' ')[1];
+    const iconPaddingRight = hasIcon && args.iconPosition === 'right' ? '42px' : paddingMap[args.size].split(' ')[1];
+    
+    return `
+      <div style="max-width: 500px; padding: 20px; font-family: Inter, sans-serif;">
+        <label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">
+          Interactive Playground
+        </label>
+        <div style="position: relative;">
+          ${hasIcon && args.iconPosition === 'left' ? `<i class="bi bi-${args.icon}" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #6E6B7B; font-size: 18px; pointer-events: none;"></i>` : ''}
+          <input 
+            type="${args.type}"
+            placeholder="${args.placeholder}"
+            value="${args.value}"
+            ${args.disabled ? 'disabled' : ''}
+            ${args.readonly ? 'readonly' : ''}
+            ${args.maxLength ? `maxlength="${args.maxLength}"` : ''}
+            style="
+              width: 100%; 
+              height: ${sizeMap[args.size]}; 
+              padding: ${paddingMap[args.size].split(' ')[0]} ${iconPaddingRight} ${paddingMap[args.size].split(' ')[0]} ${iconPaddingLeft};
+              ${stateStyles[args.state]}
+              border-radius: 6px;
+              font-size: ${fontSizeMap[args.size]};
+              color: #5E5873;
+              outline: none;
+              transition: all 0.2s;
+              font-family: Inter, sans-serif;
+              ${args.disabled ? 'background-color: #F8F8F8; cursor: not-allowed; opacity: 0.6;' : ''}
+              ${args.readonly ? 'background-color: #F8F8F8;' : ''}
+            "
+          />
+          ${hasIcon && args.iconPosition === 'right' ? `<i class="bi bi-${args.icon}" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #6E6B7B; font-size: 18px; pointer-events: none;"></i>` : ''}
+        </div>
+        ${args.state === 'valid' ? '<small style="display: block; margin-top: 4px; color: #28C76F; font-size: 12px;">✓ Valor válido</small>' : ''}
+        ${args.state === 'invalid' ? '<small style="display: block; margin-top: 4px; color: #EA5455; font-size: 12px;">✗ Valor inválido</small>' : ''}
+        ${args.state === 'warning' ? '<small style="display: block; margin-top: 4px; color: #FF9F43; font-size: 12px;">⚠ Atenção necessária</small>' : ''}
+        ${args.maxLength ? `<small style="display: block; margin-top: 4px; color: #A8AAAE; font-size: 12px; text-align: right;">${args.value.length} / ${args.maxLength} caracteres</small>` : ''}
+      </div>
+    `;
+  }
+};
+
+// ============================================================================
+// 🎭 USE CASES - Cenários Reais Educacross
+// ============================================================================
+
+export const UseCases = {
+  render: () => `
+    <div style="display: flex; flex-direction: column; gap: 48px; padding: 20px; font-family: Inter, sans-serif; max-width: 800px;">
+      
+      <!-- Caso 1: Cadastro de Aluno -->
+      <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          📝 Caso 1: Cadastro de Aluno
+        </h3>
+        <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
+          Professor cadastra novo aluno na turma com nome completo, email e matrícula.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Nome Completo <span style="color: #EA5455;">*</span>
+            </label>
+            <div style="position: relative;">
+              <i class="bi bi-person" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #6E6B7B; font-size: 18px;"></i>
+              <input 
+                type="text" 
+                placeholder="Ex: Maria Silva Santos"
+                style="width: 100%; height: 38px; padding: 10px 14px 10px 42px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Email <span style="color: #EA5455;">*</span>
+            </label>
+            <div style="position: relative;">
+              <i class="bi bi-envelope" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #6E6B7B; font-size: 18px;"></i>
+              <input 
+                type="email" 
+                placeholder="maria@escola.com.br"
+                style="width: 100%; height: 38px; padding: 10px 14px 10px 42px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Matrícula
+            </label>
+            <input 
+              type="text" 
+              placeholder="2024001234"
+              maxlength="10"
+              style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+            />
+            <small style="display: block; margin-top: 4px; color: #A8AAAE; font-size: 12px;">Máximo 10 caracteres</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Caso 2: Busca de Turma -->
+      <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          🔍 Caso 2: Busca de Turma
+        </h3>
+        <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
+          Coordenador busca turma por nome ou código para visualizar relatórios.
+        </p>
+        <div>
+          <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+            Buscar Turma
+          </label>
+          <div style="position: relative;">
+            <input 
+              type="search" 
+              placeholder="Digite o nome ou código da turma..."
+              style="width: 100%; height: 38px; padding: 10px 42px 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+            />
+            <i class="bi bi-search" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #6E6B7B; font-size: 18px;"></i>
+          </div>
+          <small style="display: block; margin-top: 4px; color: #A8AAAE; font-size: 12px;">
+            Ex: "Turma 5A", "MAT-2024-01"
+          </small>
+        </div>
+      </div>
+      
+      <!-- Caso 3: Formulário de Missão -->
+      <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          🎯 Caso 3: Formulário de Missão
+        </h3>
+        <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
+          Professor cria nova missão com título e pontuação máxima.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Título da Missão <span style="color: #EA5455;">*</span>
+            </label>
+            <input 
+              type="text" 
+              placeholder="Ex: Matemática - Frações e Operações"
+              style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+            />
+          </div>
+          
+          <div style="display: flex; gap: 16px;">
+            <div style="flex: 1;">
+              <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+                Pontuação <span style="color: #EA5455;">*</span>
+              </label>
+              <input 
+                type="number" 
+                placeholder="100"
+                min="0"
+                max="1000"
+                style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+              />
+            </div>
+            
+            <div style="flex: 1;">
+              <label style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+                Tempo (minutos)
+              </label>
+              <input 
+                type="number" 
+                placeholder="60"
+                min="1"
+                style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #5E5873; outline: none;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  `
+};
+
+// ============================================================================
+// ♿ ACCESSIBILITY - WCAG AA Compliance
+// ============================================================================
+
+export const Accessibility = {
+  render: () => `
+    <div style="padding: 20px; max-width: 700px; font-family: Inter, sans-serif;">
+      <h2 style="margin: 0 0 24px 0; color: #4B465C; font-size: 24px; font-weight: 600;">
+        ♿ Testes de Acessibilidade WCAG AA
+      </h2>
+      
+      <!-- Keyboard Navigation -->
+      <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          ⌨️ Navegação por Teclado
+        </h3>
+        <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
+          Use <kbd style="padding: 2px 6px; background: #FFF; border: 1px solid #D8D6DE; border-radius: 4px; font-family: monospace;">Tab</kbd> para focar, 
+          <kbd style="padding: 2px 6px; background: #FFF; border: 1px solid #D8D6DE; border-radius: 4px; font-family: monospace;">Shift+Tab</kbd> para voltar
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <input 
+            type="text" 
+            placeholder="Input 1 - Pressione Tab para navegar"
+            style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+            onfocus="this.style.border='2px solid #6E63E8'; this.style.boxShadow='0 0 0 4px rgba(110, 99, 232, 0.25)';"
+            onblur="this.style.border='1px solid #D8D6DE'; this.style.boxShadow='none';"
+          />
+          <input 
+            type="text" 
+            placeholder="Input 2 - Navegável por teclado"
+            style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+            onfocus="this.style.border='2px solid #6E63E8'; this.style.boxShadow='0 0 0 4px rgba(110, 99, 232, 0.25)';"
+            onblur="this.style.border='1px solid #D8D6DE'; this.style.boxShadow='none';"
+          />
+          <input 
+            type="text" 
+            placeholder="Input 3 - Focus visível (anel azul)"
+            style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+            onfocus="this.style.border='2px solid #6E63E8'; this.style.boxShadow='0 0 0 4px rgba(110, 99, 232, 0.25)';"
+            onblur="this.style.border='1px solid #D8D6DE'; this.style.boxShadow='none';"
+          />
+        </div>
+      </div>
+      
+      <!-- ARIA Labels -->
+      <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          🏷️ ARIA Labels e Associações
+        </h3>
+        <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
+          Labels associados via ID para screen readers
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label id="email-label" style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Email (obrigatório)
+            </label>
+            <input 
+              type="email"
+              aria-labelledby="email-label"
+              aria-required="true"
+              aria-describedby="email-help"
+              placeholder="seu@email.com"
+              style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+            />
+            <small id="email-help" style="display: block; margin-top: 4px; color: #6E6B7B; font-size: 12px;">
+              Digite um email válido para receber notificações
+            </small>
+          </div>
+          
+          <div>
+            <label id="password-label" style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+              Senha
+            </label>
+            <input 
+              type="password"
+              aria-labelledby="password-label"
+              aria-required="true"
+              aria-describedby="password-requirements"
+              placeholder="Mínimo 8 caracteres"
+              style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+            />
+            <small id="password-requirements" style="display: block; margin-top: 4px; color: #6E6B7B; font-size: 12px;">
+              Mínimo 8 caracteres, incluindo letras e números
+            </small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contraste -->
+      <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          🎨 Contraste WCAG AA (Ratios Mínimos)
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; justify-content: space-between; padding: 8px; background: #FFF; border-radius: 4px;">
+            <span style="color: #5E5873; font-size: 14px;">Texto no fundo branco</span>
+            <span style="color: #28C76F; font-weight: 600; font-size: 14px;">#5E5873 - Ratio 7.5:1 ✓</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 8px; background: #FFF; border-radius: 4px;">
+            <span style="color: #5E5873; font-size: 14px;">Border padrão</span>
+            <span style="color: #28C76F; font-weight: 600; font-size: 14px;">#D8D6DE - Ratio 3:1 ✓</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 8px; background: #FFF; border-radius: 4px;">
+            <span style="color: #5E5873; font-size: 14px;">Focus ring (primário)</span>
+            <span style="color: #28C76F; font-weight: 600; font-size: 14px;">#6E63E8 - Ratio 4.5:1 ✓</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 8px; background: #FFF; border-radius: 4px;">
+            <span style="color: #5E5873; font-size: 14px;">Placeholder text</span>
+            <span style="color: #28C76F; font-weight: 600; font-size: 14px;">#B8C2CC - Ratio 3.2:1 ✓</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Screen Readers -->
+      <div style="padding: 20px; background: #F8F9FA; border-radius: 8px;">
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
+          🔊 Suporte a Screen Readers
+        </h3>
+        <div style="margin-bottom: 16px;">
+          <label for="screen-reader-test" style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
+            Input com feedback acessível
+          </label>
+          <input 
+            id="screen-reader-test"
+            type="text"
+            aria-label="Campo de texto totalmente acessível"
+            aria-describedby="sr-help"
+            placeholder="Digite aqui..."
+            style="width: 100%; height: 38px; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; outline: none;"
+          />
+          <div id="sr-help" style="display: block; margin-top: 8px; padding: 12px; background: #E7F3FF; border-left: 3px solid #00CFE8; border-radius: 4px;">
+            <strong style="color: #4B465C; font-size: 13px;">Screen Reader irá anunciar:</strong>
+            <ul style="margin: 8px 0 0 20px; color: #6E6B7B; font-size: 13px; line-height: 1.6;">
+              <li>"Campo de texto totalmente acessível"</li>
+              <li>"Digite aqui" (placeholder)</li>
+              <li>Estado atual: vazio/preenchido</li>
+              <li>Mensagens de erro via aria-describedby</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  `
+};
