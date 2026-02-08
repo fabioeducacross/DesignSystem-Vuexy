@@ -104,7 +104,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: 'Front-office/Forms/EInput',
+  title: '📦 Front-office / Forms / EInput',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',
@@ -878,6 +878,7 @@ export const KeyboardAccessibility = {
 // ============================================================================
 
 export const Documentation = {
+  name: '📖 Documentation',
   render: () => createDocPage({
     title: 'EInput',
     subtitle: 'Input básico com validação para formulários educacionais',
@@ -949,6 +950,7 @@ ${createPropsTable([
 // ============================================================================
 
 export const Playground = {
+  name: '🎨 Playground',
   args: {
     value: '',
     placeholder: 'Digite aqui...',
@@ -1053,6 +1055,7 @@ export const Playground = {
 // ============================================================================
 
 export const UseCases = {
+  name: '🎭 Use Cases',
   render: () => `
     <div style="display: flex; flex-direction: column; gap: 48px; padding: 20px; font-family: Inter, sans-serif; max-width: 800px;">
       
@@ -1192,6 +1195,7 @@ export const UseCases = {
 // ============================================================================
 
 export const Accessibility = {
+  name: '♿ Accessibility',
   render: () => `
     <div style="padding: 20px; max-width: 700px; font-family: Inter, sans-serif;">
       <h2 style="margin: 0 0 24px 0; color: #4B465C; font-size: 24px; font-weight: 600;">
