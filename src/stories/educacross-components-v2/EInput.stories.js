@@ -494,21 +494,447 @@ ${createExampleCard({
   title: 'Input Básico',
   description: 'Input text padrão com placeholder e ícone',
   preview: '<div style="max-width: 400px;"><div style="margin-bottom: 4px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Nome Completo</label><div style="position: relative;"><i class="bi bi-person" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #A8AAAE; font-size: 18px;"></i><input type="text" placeholder="Digite seu nome" style="width: 100%; height: 38px; padding: 10px 14px 10px 42px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; outline: none; transition: border-color 0.2s;" /></div></div></div>',
-  code: '<EInput\n  v-model="name"\n  type="text"\n  placeholder="Digite seu nome"\n  icon="person"\n  icon-position="left"\n  size="md"\n/>'
+  codes: {
+    html: `<!-- HTML/Vanilla JavaScript -->
+<div class="form-group">
+  <label class="form-label">Nome Completo</label>
+  <div class="input-icon-wrapper">
+    <i class="bi bi-person input-icon-left"></i>
+    <input 
+      type="text" 
+      class="form-control input-with-icon-left" 
+      placeholder="Digite seu nome"
+      id="nameInput"
+    />
+  </div>
+</div>
+
+<script>
+const nameInput = document.getElementById('nameInput');
+nameInput.addEventListener('input', (e) => {
+  console.log('Nome:', e.target.value);
+});
+</script>`,
+    vue2: `<!-- Vue 2 - Options API -->
+<template>
+  <div class="form-group">
+    <label class="form-label">Nome Completo</label>
+    <EInput
+      v-model="name"
+      type="text"
+      placeholder="Digite seu nome"
+      icon="person"
+      icon-position="left"
+      size="md"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: ''
+    }
+  },
+  watch: {
+    name(newValue) {
+      console.log('Nome:', newValue);
+    }
+  }
+}
+</script>`,
+    vue3: `<!-- Vue 3 - Composition API -->
+<script setup>
+import { ref, watch } from 'vue';
+import EInput from '@/components/EInput.vue';
+
+const name = ref('');
+
+watch(name, (newValue) => {
+  console.log('Nome:', newValue);
+});
+</script>
+
+<template>
+  <div class="form-group">
+    <label class="form-label">Nome Completo</label>
+    <EInput
+      v-model="name"
+      type="text"
+      placeholder="Digite seu nome"
+      icon="person"
+      icon-position="left"
+      size="md"
+    />
+  </div>
+</template>`,
+    react: `// React + TypeScript
+import { useState } from 'react';
+import { EInput } from '@/components/EInput';
+
+export default function NameForm() {
+  const [name, setName] = useState('');
+
+  const handleChange = (value: string) => {
+    setName(value);
+    console.log('Nome:', value);
+  };
+
+  return (
+    <div className="form-group">
+      <label className="form-label">Nome Completo</label>
+      <EInput
+        value={name}
+        onChange={handleChange}
+        type="text"
+        placeholder="Digite seu nome"
+        icon="person"
+        iconPosition="left"
+        size="md"
+      />
+    </div>
+  );
+}`
+  }
 })}
 
 ${createExampleCard({
   title: 'Estados de Validação',
   description: 'Input com feedback visual de valid/invalid',
   preview: '<div style="display: flex; gap: 16px; flex-wrap: wrap;"><div style="flex: 1; min-width: 200px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Email Válido</label><input type="email" value="user@example.com" style="width: 100%; height: 38px; padding: 10px 14px; border: 2px solid #28C76F; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #F0FDF4;" readonly /></div><div style="flex: 1; min-width: 200px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Email Inválido</label><input type="email" value="invalid-email" style="width: 100%; height: 38px; padding: 10px 14px; border: 2px solid #EA5455; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #FEF2F2;" /><small style="display: block; margin-top: 4px; color: #EA5455; font-size: 12px;">Digite um email válido</small></div></div>',
-  code: '<EInput\n  v-model="email"\n  type="email"\n  state="valid"\n  feedback="Digite um email válido"\n/>'
+  codes: {
+    html: `<!-- HTML/Vanilla JavaScript -->
+<div class="form-group">
+  <label class="form-label">Email</label>
+  <input 
+    type="email" 
+    class="form-control is-valid" 
+    value="user@example.com"
+    id="emailInputValid"
+  />
+  <div class="valid-feedback">Email válido!</div>
+</div>
+
+<div class="form-group">
+  <label class="form-label">Email</label>
+  <input 
+    type="email" 
+    class="form-control is-invalid" 
+    value="invalid-email"
+    id="emailInputInvalid"
+  />
+  <div class="invalid-feedback">Digite um email válido</div>
+</div>
+
+<script>
+const validateEmail = (input) => {
+  const isValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(input.value);
+  input.classList.toggle('is-valid', isValid);
+  input.classList.toggle('is-invalid', !isValid);
+};
+
+document.getElementById('emailInputValid').addEventListener('input', (e) => {
+  validateEmail(e.target);
+});
+</script>`,
+    vue2: `<!-- Vue 2 - Options API -->
+<template>
+  <div>
+    <div class="form-group">
+      <label class="form-label">Email Válido</label>
+      <EInput
+        v-model="validEmail"
+        type="email"
+        state="valid"
+        feedback="Email válido!"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email Inválido</label>
+      <EInput
+        v-model="invalidEmail"
+        type="email"
+        state="invalid"
+        feedback="Digite um email válido"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      validEmail: 'user@example.com',
+      invalidEmail: 'invalid-email'
+    }
+  },
+  methods: {
+    validateEmail(email) {
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      return emailRegex.test(email) ? 'valid' : 'invalid';
+    }
+  }
+}
+</script>`,
+    vue3: `<!-- Vue 3 - Composition API -->
+<script setup>
+import { ref, computed } from 'vue';
+import EInput from '@/components/EInput.vue';
+
+const validEmail = ref('user@example.com');
+const invalidEmail = ref('invalid-email');
+
+const validateEmail = (email: string): 'valid' | 'invalid' => {
+  const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+  return emailRegex.test(email) ? 'valid' : 'invalid';
+};
+
+const validEmailState = computed(() => validateEmail(validEmail.value));
+const invalidEmailState = computed(() => validateEmail(invalidEmail.value));
+</script>
+
+<template>
+  <div>
+    <div class="form-group">
+      <label class="form-label">Email Válido</label>
+      <EInput
+        v-model="validEmail"
+        type="email"
+        :state="validEmailState"
+        feedback="Email válido!"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email Inválido</label>
+      <EInput
+        v-model="invalidEmail"
+        type="email"
+        :state="invalidEmailState"
+        feedback="Digite um email válido"
+      />
+    </div>
+  </div>
+</template>`,
+    react: `// React + TypeScript
+import { useState, useCallback } from 'react';
+import { EInput } from '@/components/EInput';
+
+type ValidationState = 'valid' | 'invalid' | '';
+
+export default function EmailValidation() {
+  const [validEmail, setValidEmail] = useState('user@example.com');
+  const [invalidEmail, setInvalidEmail] = useState('invalid-email');
+
+  const validateEmail = useCallback((email: string): ValidationState => {
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    return emailRegex.test(email) ? 'valid' : 'invalid';
+  }, []);
+
+  return (
+    <div>
+      <div className="form-group">
+        <label className="form-label">Email Válido</label>
+        <EInput
+          value={validEmail}
+          onChange={setValidEmail}
+          type="email"
+          state={validateEmail(validEmail)}
+          feedback="Email válido!"
+        />
+      </div>
+
+      <div className="form-group">
+        <label className="form-label">Email Inválido</label>
+        <EInput
+          value={invalidEmail}
+          onChange={setInvalidEmail}
+          type="email"
+          state={validateEmail(invalidEmail)}
+          feedback="Digite um email válido"
+        />
+      </div>
+    </div>
+  );
+}`
+  }
 })}
 
 ${createExampleCard({
   title: 'Com Ícone Direito',
   description: 'Input de busca com ícone à direita',
   preview: '<div style="max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Buscar Aluno</label><div style="position: relative;"><input type="search" placeholder="Buscar por nome ou matrícula" style="width: 100%; height: 38px; padding: 10px 42px 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C;" /><i class="bi bi-search" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #A8AAAE; font-size: 18px;"></i></div></div>',
-  code: '<EInput\n  v-model="search"\n  type="search"\n  placeholder="Buscar por nome ou matrícula"\n  icon="search"\n  icon-position="right"\n/>'
+  codes: {
+    html: `<!-- HTML/Vanilla JavaScript -->
+<div class="form-group">
+  <label class="form-label">Buscar Aluno</label>
+  <div class="input-icon-wrapper">
+    <input 
+      type="search" 
+      class="form-control input-with-icon-right" 
+      placeholder="Buscar por nome ou matrícula"
+      id="searchInput"
+    />
+    <i class="bi bi-search input-icon-right"></i>
+  </div>
+</div>
+
+<script>
+let debounceTimer;
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('input', (e) => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    console.log('Buscando:', e.target.value);
+    // Chamada da API de busca aqui
+  }, 300);
+});
+</script>`,
+    vue2: `<!-- Vue 2 - Options API -->
+<template>
+  <div class="form-group">
+    <label class="form-label">Buscar Aluno</label>
+    <EInput
+      v-model="search"
+      type="search"
+      placeholder="Buscar por nome ou matrícula"
+      icon="search"
+      icon-position="right"
+      @input="handleSearch"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      search: '',
+      debounceTimer: null
+    }
+  },
+  methods: {
+    handleSearch(value) {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(() => {
+        console.log('Buscando:', value);
+        // Chamada da API de busca
+        this.performSearch(value);
+      }, 300);
+    },
+    async performSearch(query) {
+      // Implementação da busca
+      const results = await this.$api.searchStudents(query);
+      console.log('Resultados:', results);
+    }
+  },
+  beforeDestroy() {
+    clearTimeout(this.debounceTimer);
+  }
+}
+</script>`,
+    vue3: `<!-- Vue 3 - Composition API -->
+<script setup>
+import { ref } from 'vue';
+import { useDebounceFn } from '@vueuse/core';
+import EInput from '@/components/EInput.vue';
+
+const search = ref('');
+
+const performSearch = async (query: string) => {
+  if (!query.trim()) return;
+  
+  console.log('Buscando:', query);
+  // Chamada da API de busca
+  const results = await fetch(\`/api/students?q=\${encodeURIComponent(query)}\`);
+  const data = await results.json();
+  console.log('Resultados:', data);
+};
+
+const debouncedSearch = useDebounceFn((value: string) => {
+  performSearch(value);
+}, 300);
+
+const handleSearch = (value: string) => {
+  debouncedSearch(value);
+};
+</script>
+
+<template>
+  <div class="form-group">
+    <label class="form-label">Buscar Aluno</label>
+    <EInput
+      v-model="search"
+      type="search"
+      placeholder="Buscar por nome ou matrícula"
+      icon="search"
+      icon-position="right"
+      @input="handleSearch"
+    />
+  </div>
+</template>`,
+    react: `// React + TypeScript
+import { useState, useCallback } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
+import { EInput } from '@/components/EInput';
+
+interface Student {
+  id: string;
+  name: string;
+  enrollment: string;
+}
+
+export default function StudentSearch() {
+  const [search, setSearch] = useState('');
+  const [results, setResults] = useState<Student[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const performSearch = useCallback(async (query: string) => {
+    if (!query.trim()) {
+      setResults([]);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch(\`/api/students?q=\${encodeURIComponent(query)}\`);
+      const data = await response.json();
+      setResults(data);
+      console.log('Resultados:', data);
+    } catch (error) {
+      console.error('Erro na busca:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const debouncedSearch = useDebouncedCallback(performSearch, 300);
+
+  const handleChange = (value: string) => {
+    setSearch(value);
+    debouncedSearch(value);
+  };
+
+  return (
+    <div className="form-group">
+      <label className="form-label">Buscar Aluno</label>
+      <EInput
+        value={search}
+        onChange={handleChange}
+        type="search"
+        placeholder="Buscar por nome ou matrícula"
+        icon="search"
+        iconPosition="right"
+      />
+      {loading && <div className="spinner">Buscando...</div>}
+    </div>
+  );
+}`
+  }
 })}
 
 ${createPropsTable([
