@@ -658,8 +658,9 @@ export const UseCases = {
       
       <!-- Caso 1: Cadastro de Aluno -->
       <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
-        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          📝 Caso 1: Cadastro de Aluno
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-pencil-square" style="color: #6E63E8; font-size: 22px;"></i>
+          Caso 1: Cadastro de Aluno
         </h3>
         <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
           Professor cadastra novo aluno na turma com nome completo, email e matrícula.
@@ -710,8 +711,9 @@ export const UseCases = {
       
       <!-- Caso 2: Busca de Turma -->
       <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
-        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          🔍 Caso 2: Busca de Turma
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-search" style="color: #6E63E8; font-size: 22px;"></i>
+          Caso 2: Busca de Turma
         </h3>
         <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
           Coordenador busca turma por nome ou código para visualizar relatórios.
@@ -736,8 +738,9 @@ export const UseCases = {
       
       <!-- Caso 3: Formulário de Missão -->
       <div style="border: 1px solid #E5E5E5; border-radius: 8px; padding: 24px; background: #FAFAFA;">
-        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          🎯 Caso 3: Formulário de Missão
+        <h3 style="margin: 0 0 16px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-bullseye" style="color: #6E63E8; font-size: 22px;"></i>
+          Caso 3: Formulário de Missão
         </h3>
         <p style="margin: 0 0 20px 0; color: #6E6B7B; font-size: 14px;">
           Professor cria nova missão com título e pontuação máxima.
@@ -810,8 +813,9 @@ export const Accessibility = {
       
       <!-- Keyboard Navigation -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
-        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          ⌨️ Navegação por Teclado
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-keyboard" style="color: #6E63E8; font-size: 22px;"></i>
+          Navegação por Teclado
         </h3>
         <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
           Use <kbd style="padding: 2px 6px; background: #FFF; border: 1px solid #D8D6DE; border-radius: 4px; font-family: monospace;">Tab</kbd> para focar, 
@@ -844,8 +848,9 @@ export const Accessibility = {
       
       <!-- ARIA Labels -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
-        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          🏷️ ARIA Labels e Associações
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-tag" style="color: #6E63E8; font-size: 22px;"></i>
+          ARIA Labels e Associações
         </h3>
         <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
           Labels associados via ID para screen readers
@@ -889,8 +894,9 @@ export const Accessibility = {
       
       <!-- Contraste -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
-        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          🎨 Contraste WCAG AA (Ratios Mínimos)
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-palette" style="color: #6E63E8; font-size: 22px;"></i>
+          Contraste WCAG AA (Ratios Mínimos)
         </h3>
         <div style="display: flex; flex-direction: column; gap: 12px;">
           <div style="display: flex; justify-content: space-between; padding: 8px; background: #FFF; border-radius: 4px;">
@@ -914,8 +920,9 @@ export const Accessibility = {
       
       <!-- Screen Readers -->
       <div style="padding: 20px; background: #F8F9FA; border-radius: 8px;">
-        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600;">
-          🔊 Suporte a Screen Readers
+        <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+          <i class="bi bi-volume-up" style="color: #6E63E8; font-size: 22px;"></i>
+          Suporte a Screen Readers
         </h3>
         <div style="margin-bottom: 16px;">
           <label for="screen-reader-test" style="display: block; margin-bottom: 6px; color: #5E5873; font-size: 14px; font-weight: 500;">
