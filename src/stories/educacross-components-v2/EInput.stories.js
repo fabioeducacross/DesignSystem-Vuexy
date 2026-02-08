@@ -952,12 +952,12 @@ ${createPropsTable([
     `,
     
     features: [
-      { icon: 'check-circle', title: 'Validação Integrada', description: 'Estados valid/invalid/warning com feedback visual' },
-      { icon: 'palette', title: '7 Tipos de Input', description: 'text, email, number, password, tel, url, search' },
+      { icon: 'check-circle-fill', title: 'Validação Integrada', description: 'Estados valid/invalid/warning com feedback visual' },
+      { icon: 'input-cursor-text', title: '7 Tipos de Input', description: 'text, email, number, password, tel, url, search' },
       { icon: 'arrows-angle-contract', title: '3 Tamanhos', description: 'sm (32px), md (38px), lg (46px)' },
-      { icon: 'cursor-text', title: 'Ícones Opcionais', description: 'Bootstrap Icons à esquerda ou direita' },
-      { icon: 'universal-access', title: 'Acessível', description: 'ARIA labels, keyboard navigation, contraste WCAG AA' },
-      { icon: 'lightning', title: 'Performance', description: 'Componente leve sem dependências pesadas' }
+      { icon: 'emoji-smile', title: 'Ícones Opcionais', description: 'Bootstrap Icons à esquerda ou direita' },
+      { icon: 'universal-access-circle', title: 'Acessível', description: 'ARIA labels, keyboard navigation, contraste WCAG AA' },
+      { icon: 'lightning-charge-fill', title: 'Performance', description: 'Componente leve sem dependências pesadas' }
     ],
     
     relatedComponents: [
