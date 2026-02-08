@@ -4,9 +4,16 @@
 
 ## Summary
 
-Apply comprehensive documentation template to **117 remaining Educacross V2 components** (123 total - 6 completed) using batch processing with multi_replace_string_in_file for efficiency. Each component receives standardized structure: CSS styling + 6 documentation sections (Contexto, Arquitetura, Especificações, Comportamento, API, Relacionados).
+Apply **Opção A - Estratégia Híbrida** to **117 remaining Educacross V2 components** (123 total - 6 completed). Each component receives **4 stories essenciais**:
+
+1. **Documentation** - Template 1 JavaScript funcional (hero, stats, exemplos, props, features)
+2. **Playground** - Controls interativos para todas as props
+3. **Use Cases** - 2-4 cenários reais do contexto Educacross
+4. **Accessibility** - Testes de WCAG AA (keyboard, ARIA, contraste)
 
 **Current Status**: 6/123 (4.9%) ✅ → Goal: 123/123 (100%)
+
+**Mudança de Estratégia**: Ao invés de apenas adicionar Documentation, aplicamos estrutura completa de 4 stories. Reduz de ~12 stories/componente para 4 (~66% limpeza).
 
 ## Technical Context
 
@@ -46,38 +53,79 @@ agent_helpers/
 
 ## Implementation Phases
 
-### Phase 0: Preparation & Analysis (20 min)
+### Phase 0: Preparation & Strategy Update (30 min)
 
-**Objective**: Gather complete context before batch operations
+**Objective**: Refatorar abordagem para Opção A (4 stories/componente)
 
 **Tasks**:
-1. List all 117 component files that need template (verify against 123 total - 6 completed)
-2. Categorize by priority (P0-P12 groups from spec.md)
-3. Verify template structure in TEMPLATE_COMPONENT.stories.js
-4. Create progress.md tracking file
-5. Test multi_replace on 3 sample components from different categories
+1. ✅ Atualizar spec.md, plan.md, progress.md com Opção A
+2. ✅ Documentar estrutura das 4 stories (Documentation, Playground, Use Cases, Accessibility)
+3. Criar helper functions para gerar stories automaticamente
+4. Testar em 1 componente piloto (EInput) com 4 stories completas
+5. Validar build e performance
 
 **Validation**: 
-- ✅ All 117 files identified with full paths
-- ✅ Template sections extracted and ready
-- ✅ Test run completes successfully on 3 samples
+- ✅ EInput tem 4 stories funcionando
+- ✅ Build completa sem erros
+- ✅ Template pode ser replicado para outros componentes
 
 ---
 
-### Phase 1: Priority Batch 1 - Forms (P0) (30 min)
+### Phase 1: P0 - Forms (2h)
 
-**Objective**: Apply template to 5 critical form components
+**Objective**: Aplicar 4 stories em 5 componentes críticos de formulário
 
-**Components**:
-1. EFormCheck.stories.js
-2. EInput.stories.js
-3. ETextarea.stories.js
-4. FilterChip.stories.js
-5. MultipleDropdown.stories.js
+**Components** (1-5/123 = 4.1%):
+1. ✅ EInput.stories.js (Documentation apenas - precisa Playground, UseCases, Accessibility)
+2. ✅ EFormCheck.stories.js (Documentation apenas - precisa Playground, UseCases, Accessibility)
+3. ✅ ESelect.stories.js (Documentation apenas - precisa Playground, UseCases, Accessibility)
+4. ✅ ETextarea.stories.js (Documentation apenas - precisa Playground, UseCases, Accessibility)
+5. ✅ FilterChip.stories.js (Documentation apenas - precisa Playground, UseCases, Accessibility)
 
-**Approach**:
-- Read each file to locate export default
-- Prepare replacement with form-specific context
+**Approach por componente**:
+1. **Documentation** (30min) - ✅ JÁ APLICADO
+   - Import createDocPage, createExampleCard, createPropsTable
+   - Hero + stats + 3-6 exemplos + props table + features + related
+
+2. **Playground** (20min) - PENDENTE
+   ```javascript
+   export const Playground = {
+     args: { /* props padrão */ },
+     argTypes: { /* controles completos */ },
+     render: (args) => `<!-- HTML com todas props -->`,
+   };
+   ```
+
+3. **Use Cases** (30min) - PENDENTE
+   ```javascript
+   export const UseCases = {
+     render: () => `
+       <!-- Cadastro de Aluno -->
+       <!-- Busca de Turma -->
+       <!-- Formulário de Missão -->
+     `,
+   };
+   ```
+
+4. **Accessibility** (20min) - PENDENTE
+   ```javascript
+   export const Accessibility = {
+     render: () => `
+       <!-- Keyboard navigation test -->
+       <!-- ARIA labels verification -->
+       <!-- Contrast check -->
+     `,
+   };
+   ```
+
+**Status Atual**: Documentation ✅ | Playground ❌ | UseCases ❌ | Accessibility ❌
+
+**Validation**: 
+- ✅ 5 componentes com 4 stories cada (20 stories total)
+- ✅ Build sem erros
+- ✅ Cada story funciona independentemente
+
+**Progress**: 5/123 componentes com 4 stories = 4.1%
 - Execute multi_replace_string_in_file for all 5
 - Verify success, retry failures individually
 

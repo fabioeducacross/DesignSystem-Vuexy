@@ -1,3 +1,5 @@
+import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
+
 /**
  * FilterChip - Filter Badge/Chip Component
  * =========================================
@@ -459,4 +461,66 @@ export const AllVariants = {
       </div>
     </div>
   `,
+};
+
+// ============================================================================
+// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
+// ============================================================================
+
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'FilterChip',
+    subtitle: 'Badge pill para filtros em dashboards e relatórios',
+    badge: 'Forms / Filters',
+    colors: { primary: '#6E63E8', secondary: '#00CFE8' },
+    
+    stats: [
+      { label: 'Variantes', value: '10', description: 'primary, secondary, success, danger, warning, info + light' },
+      { label: 'Tamanhos', value: '3', description: 'sm, md, lg' },
+      { label: 'Removível', value: 'Sim', description: 'Com ícone X para remoção' },
+      { label: 'Uso Principal', value: 'Filtros', description: 'Dashboards, relatórios, listagens' }
+    ],
+    
+    content: `
+${createExampleCard({
+  title: 'Chip Básico',
+  description: 'Badge pill simples com label',
+  preview: '<div style="padding: 20px;"><span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background-color: #6E63E8; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Matemática</span></div>',
+  code: '<FilterChip\n  label="Matemática"\n  variant="primary"\n  size="md"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Chip Removível',
+  description: 'Com ícone X para remover filtro',
+  preview: '<div style="padding: 20px; display: flex; gap: 8px; flex-wrap: wrap;"><span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background-color: #6E63E8; color: white; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer;">Turma A <i class="bi bi-x" style="font-size: 16px; margin-left: 2px;"></i></span><span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background-color: #28C76F; color: white; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer;">2024 <i class="bi bi-x" style="font-size: 16px; margin-left: 2px;"></i></span><span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background-color: #00CFE8; color: white; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer;">1º Trimestre <i class="bi bi-x" style="font-size: 16px; margin-left: 2px;"></i></span></div>',
+  code: '<FilterChip\n  label="Turma A"\n  variant="primary"\n  :removable="true"\n  @remove="handleRemove"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Variantes de Cor',
+  description: 'Diferentes cores para categorização visual',
+  preview: '<div style="padding: 20px; display: flex; gap: 8px; flex-wrap: wrap;"><span style="padding: 6px 12px; background-color: #6E63E8; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Primary</span><span style="padding: 6px 12px; background-color: #28C76F; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Success</span><span style="padding: 6px 12px; background-color: #FF9F43; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Warning</span><span style="padding: 6px 12px; background-color: #EA5455; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Danger</span><span style="padding: 6px 12px; background-color: #00CFE8; color: white; border-radius: 20px; font-size: 13px; font-weight: 500;">Info</span></div>',
+  code: '<FilterChip variant="primary" label="Primary" />\n<FilterChip variant="success" label="Success" />\n<FilterChip variant="warning" label="Warning" />'
+})}
+
+${createPropsTable([
+  { name: 'label', type: 'String', default: "''", description: 'Texto do chip/badge' },
+  { name: 'variant', type: 'String', default: "'primary'", description: 'Cor: primary, secondary, success, danger, warning, info, light-*' },
+  { name: 'size', type: 'String', default: "'md'", description: "Tamanho: 'sm', 'md', 'lg'" },
+  { name: 'removable', type: 'Boolean', default: 'false', description: 'Mostra ícone X para remoção' }
+])}
+    `,
+    
+    features: [
+      { icon: 'funnel', title: 'Filtros Visuais', description: 'Representação visual de filtros ativos' },
+      { icon: 'palette', title: '10 Variantes', description: 'Cores sólidas e light para categorização' },
+      { icon: 'x-circle', title: 'Removível', description: 'Ícone X para remover filtro rapidamente' },
+      { icon: 'stack', title: 'Agrupação', description: 'Funciona bem em grupos de filtros' }
+    ],
+    
+    relatedComponents: [
+      { name: 'ESelect', path: '/story/front-office-forms-eselect--default' },
+      { name: 'BadgeStatus', path: '/story/front-office-badges-badgestatus--default' }
+    ]
+  })
 };

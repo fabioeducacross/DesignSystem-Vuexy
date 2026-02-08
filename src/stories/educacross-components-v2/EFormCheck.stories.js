@@ -1,3 +1,5 @@
+import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
+
 /**
  * EFormCheck - Educational Checkbox & Radio Components
  * ====================================================
@@ -630,5 +632,69 @@ export const KeyboardNavigation = {
       </div>
     `;
   }
+};
+
+// ============================================================================
+// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
+// ============================================================================
+
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'EFormCheck',
+    subtitle: 'Checkbox e radio buttons para formulários educacionais',
+    badge: 'Forms / Core UI',
+    colors: { primary: '#6E63E8', secondary: '#28C76F' },
+    
+    stats: [
+      { label: 'Tipos', value: '2', description: 'checkbox, radio' },
+      { label: 'Tamanhos', value: '3', description: 'sm (16px), md (20px), lg (24px)' },
+      { label: 'Variantes', value: '5', description: 'default, success, warning, danger, info' },
+      { label: 'Acessibilidade', value: 'WCAG AA', description: 'Contraste, ARIA, keyboard' }
+    ],
+    
+    content: `
+${createExampleCard({
+  title: 'Checkbox Básico',
+  description: 'Checkbox padrão com label',
+  preview: '<div style="padding: 20px;"><div style="display: flex; align-items: center; gap: 10px;"><input type="checkbox" id="check1" style="width: 20px; height: 20px; border: 1px solid #D8D6DE; border-radius: 4px; cursor: pointer; accent-color: #6E63E8;" /><label for="check1" style="color: #5E5873; font-size: 14px; cursor: pointer;">Aceito os termos e condições</label></div></div>',
+  code: '<EFormCheck\n  v-model="accepted"\n  type="checkbox"\n  label="Aceito os termos e condições"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Radio Buttons',
+  description: 'Grupo de radio buttons para seleção única',
+  preview: '<div style="padding: 20px; display: flex; flex-direction: column; gap: 12px;"><div style="display: flex; align-items: center; gap: 10px;"><input type="radio" name="role" id="radio1" style="width: 20px; height: 20px; cursor: pointer; accent-color: #6E63E8;" checked /><label for="radio1" style="color: #5E5873; font-size: 14px; cursor: pointer;">Professor</label></div><div style="display: flex; align-items: center; gap: 10px;"><input type="radio" name="role" id="radio2" style="width: 20px; height: 20px; cursor: pointer; accent-color: #6E63E8;" /><label for="radio2" style="color: #5E5873; font-size: 14px; cursor: pointer;">Coordenador</label></div><div style="display: flex; align-items: center; gap: 10px;"><input type="radio" name="role" id="radio3" style="width: 20px; height: 20px; cursor: pointer; accent-color: #6E63E8;" /><label for="radio3" style="color: #5E5873; font-size: 14px; cursor: pointer;">Aluno</label></div></div>',
+  code: '<EFormCheck\n  v-model="role"\n  type="radio"\n  name="role"\n  label="Professor"\n  value="teacher"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Variantes de Cor',
+  description: 'Checkbox com diferentes cores semânticas',
+  preview: '<div style="padding: 20px; display: flex; flex-wrap: wrap; gap: 16px;"><div style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #6E63E8; cursor: pointer;" /><span style="font-size: 14px; color: #5E5873;">Primary</span></div><div style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #28C76F; cursor: pointer;" /><span style="font-size: 14px; color: #5E5873;">Success</span></div><div style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #FF9F43; cursor: pointer;" /><span style="font-size: 14px; color: #5E5873;">Warning</span></div><div style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #EA5455; cursor: pointer;" /><span style="font-size: 14px; color: #5E5873;">Danger</span></div></div>',
+  code: '<EFormCheck variant="success" />\n<EFormCheck variant="warning" />\n<EFormCheck variant="danger" />'
+})}
+
+${createPropsTable([
+  { name: 'checked', type: 'Boolean', default: 'false', description: 'Estado selecionado (v-model)' },
+  { name: 'type', type: 'String', default: "'checkbox'", description: "Tipo: 'checkbox' ou 'radio'" },
+  { name: 'label', type: 'String', default: "''", description: 'Texto do label' },
+  { name: 'variant', type: 'String', default: "'default'", description: 'Cor: default, success, warning, danger, info' },
+  { name: 'size', type: 'String', default: "'md'", description: "Tamanho: 'sm' (16px), 'md' (20px), 'lg' (24px)" },
+  { name: 'disabled', type: 'Boolean', default: 'false', description: 'Desabilita interação' }
+])}
+    `,
+    
+    features: [
+      { icon: 'check-circle', title: 'Checkbox & Radio', description: 'Suporte completo para checkbox e radio buttons' },
+      { icon: 'palette', title: '5 Variantes', description: 'default, success, warning, danger, info' },
+      { icon: 'arrows-angle-contract', title: '3 Tamanhos', description: 'sm (16px), md (20px), lg (24px)' },
+      { icon: 'universal-access', title: 'Acessível', description: 'ARIA, keyboard navigation, contraste WCAG AA' }
+    ],
+    
+    relatedComponents: [
+      { name: 'EInput', path: '/story/front-office-forms-einput--default' },
+      { name: 'ESelect', path: '/story/front-office-forms-eselect--default' }
+    ]
+  })
 };
 

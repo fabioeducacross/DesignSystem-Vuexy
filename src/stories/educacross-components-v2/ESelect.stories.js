@@ -1,3 +1,5 @@
+import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
+
 /**
  * ESelect Component - Select Customizado Educacross
  *
@@ -1684,4 +1686,68 @@ export const PerPageSelector = {
       </div>
     </div>
   `,
+};
+
+// ============================================================================
+// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
+// ============================================================================
+
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'ESelect',
+    subtitle: 'Select customizado com busca, múltipla seleção e paginação',
+    badge: 'Forms / Filters',
+    colors: { primary: '#6E63E8', secondary: '#00CFE8' },
+    
+    stats: [
+      { label: 'Baseado em', value: 'vue-select', description: 'Biblioteca robusta e testada' },
+      { label: 'Funcionalidades', value: '4', description: 'busca, múltipla, paginação, validação' },
+      { label: 'Casos de Uso', value: '8+', description: 'turmas, disciplinas, anos, períodos, escolas' },
+      { label: 'Performance', value: 'Lazy Load', description: 'Paginação para grandes listas' }
+    ],
+    
+    content: `
+${createExampleCard({
+  title: 'Select Básico',
+  description: 'Dropdown simples com opções',
+  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Selecione uma Turma</label><select style="width: 100%; height: 38px; padding: 8px 12px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: white; cursor: pointer;"><option value="">Selecione...</option><option>Turma A - 5º Ano</option><option>Turma B - 6º Ano</option><option>Turma C - 7º Ano</option></select></div>',
+  code: '<ESelect\n  v-model="selectedClass"\n  :options="classes"\n  placeholder="Selecione uma turma"\n  label="name"\n  track-by="id"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Múltipla Seleção',
+  description: 'Permite selecionar vários itens',
+  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Selecione Disciplinas</label><div style="display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; border: 1px solid #D8D6DE; border-radius: 6px; min-height: 38px;"><span style="display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background-color: #6E63E8; color: white; border-radius: 4px; font-size: 13px;">Matemática <i class="bi bi-x" style="font-size: 14px; cursor: pointer;"></i></span><span style="display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background-color: #6E63E8; color: white; border-radius: 4px; font-size: 13px;">Português <i class="bi bi-x" style="font-size: 14px; cursor: pointer;"></i></span><input type="text" placeholder="Digite para buscar..." style="flex: 1; min-width: 120px; border: none; outline: none; font-size: 14px;" /></div></div>',
+  code: '<ESelect\n  v-model="selectedSubjects"\n  :options="subjects"\n  :multiple="true"\n  :searchable="true"\n  placeholder="Selecione disciplinas"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Com Busca',
+  description: 'Input de busca integrado para filtrar opções',
+  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Buscar Aluno</label><div style="position: relative;"><input type="text" placeholder="Digite o nome do aluno..." style="width: 100%; height: 38px; padding: 8px 32px 8px 12px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px;" /><i class="bi bi-search" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #A8AAAE;"></i></div></div>',
+  code: '<ESelect\n  v-model="selectedStudent"\n  :options="students"\n  :searchable="true"\n  placeholder="Digite o nome do aluno..."\n  @search="handleSearch"\n/>'
+})}
+
+${createPropsTable([
+  { name: 'value', type: 'Any', default: 'null', description: 'Valor selecionado (v-model)' },
+  { name: 'options', type: 'Array', default: '[]', description: 'Lista de opções' },
+  { name: 'multiple', type: 'Boolean', default: 'false', description: 'Permite múltipla seleção' },
+  { name: 'searchable', type: 'Boolean', default: 'false', description: 'Habilita busca/filtro' },
+  { name: 'clearable', type: 'Boolean', default: 'true', description: 'Mostra botão X para limpar' },
+  { name: 'loading', type: 'Boolean', default: 'false', description: 'Estado de carregamento' }
+])}
+    `,
+    
+    features: [
+      { icon: 'search', title: 'Busca Integrada', description: 'Filtra opções em tempo real' },
+      { icon: 'stack', title: 'Múltipla Seleção', description: 'Selecione vários itens com chips visuais' },
+      { icon: 'arrow-clockwise', title: 'Paginação', description: 'Lazy loading para grandes listas' },
+      { icon: 'universal-access', title: 'Acessível', description: 'ARIA, keyboard navigation, screen readers' }
+    ],
+    
+    relatedComponents: [
+      { name: 'FilterChip', path: '/story/front-office-forms-filterchip--default' },
+      { name: 'EInput', path: '/story/front-office-forms-einput--default' }
+    ]
+  })
 };

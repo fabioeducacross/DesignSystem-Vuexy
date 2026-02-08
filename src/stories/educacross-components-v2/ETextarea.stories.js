@@ -1,3 +1,5 @@
+import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
+
 /**
  * ETextarea - Educational Textarea Component
  * ==========================================
@@ -854,4 +856,67 @@ export const KeyboardAccessibility = {
       </div>
     </div>
   `
+};
+
+// ============================================================================
+// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
+// ============================================================================
+
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'ETextarea',
+    subtitle: 'Textarea para textos longos em formulários educacionais',
+    badge: 'Forms / Core UI',
+    colors: { primary: '#6E63E8', secondary: '#28C76F' },
+    
+    stats: [
+      { label: 'Tamanhos', value: '3', description: 'sm (80px), md (100px), lg (120px) min-height' },
+      { label: 'Auto-resize', value: 'Sim', description: 'Expande automaticamente com conteúdo' },
+      { label: 'Contador', value: 'Opcional', description: 'Mostra caracteres restantes' },
+      { label: 'Validação', value: '3 estados', description: 'valid, invalid, warning' }
+    ],
+    
+    content: `
+${createExampleCard({
+  title: 'Textarea Básico',
+  description: 'Textarea padrão com placeholder',
+  preview: '<div style="padding: 20px; max-width: 500px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Observações sobre o Aluno</label><textarea placeholder="Digite suas observações aqui..." rows="4" style="width: 100%; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; line-height: 1.6; resize: vertical; font-family: inherit;"></textarea></div>',
+  code: '<ETextarea\n  v-model="observations"\n  placeholder="Digite suas observações aqui..."\n  rows="4"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Com Contador de Caracteres',
+  description: 'Mostra caracteres restantes',
+  preview: '<div style="padding: 20px; max-width: 500px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Feedback da Atividade</label><div style="position: relative;"><textarea placeholder="Escreva seu feedback..." rows="4" maxlength="200" style="width: 100%; padding: 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; line-height: 1.6; resize: vertical; font-family: inherit;">Excelente trabalho!</textarea><div style="text-align: right; margin-top: 4px; font-size: 12px; color: #A8AAAE;"><span style="color: #6E63E8; font-weight: 500;">20</span> / 200 caracteres</div></div></div>',
+  code: '<ETextarea\n  v-model="feedback"\n  :max-length="200"\n  :show-counter="true"\n  rows="4"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Com Validação',
+  description: 'Estados de valid/invalid com feedback',
+  preview: '<div style="padding: 20px; max-width: 500px; display: flex; gap: 16px;"><div style="flex: 1;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Resposta Válida</label><textarea rows="3" style="width: 100%; padding: 10px 14px; border: 2px solid #28C76F; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #F0FDF4; line-height: 1.6; resize: vertical; font-family: inherit;">Resposta completa e detalhada.</textarea><small style="display: block; margin-top: 4px; color: #28C76F; font-size: 12px;">✔ Resposta aceita</small></div><div style="flex: 1;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Resposta Inválida</label><textarea rows="3" style="width: 100%; padding: 10px 14px; border: 2px solid #EA5455; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #FEF2F2; line-height: 1.6; resize: vertical; font-family: inherit;">Muito curta</textarea><small style="display: block; margin-top: 4px; color: #EA5455; font-size: 12px;">⚠ Mínimo 50 caracteres</small></div></div>',
+  code: '<ETextarea\n  v-model="answer"\n  state="invalid"\n  feedback="Mínimo 50 caracteres"\n/>'
+})}
+
+${createPropsTable([
+  { name: 'value', type: 'String', default: "''", description: 'Valor do textarea (v-model)' },
+  { name: 'rows', type: 'Number', default: '3', description: 'Número de linhas visíveis' },
+  { name: 'maxLength', type: 'Number', default: 'null', description: 'Máximo de caracteres' },
+  { name: 'state', type: 'String', default: "''", description: "Estado: 'valid', 'invalid', 'warning'" },
+  { name: 'showCounter', type: 'Boolean', default: 'false', description: 'Mostra contador de caracteres' }
+])}
+    `,
+    
+    features: [
+      { icon: 'arrows-expand', title: 'Auto-resize', description: 'Expande automaticamente com conteúdo' },
+      { icon: 'calculator', title: 'Contador', description: 'Mostra caracteres restantes opcionalmente' },
+      { icon: 'check-circle', title: 'Validação', description: 'Estados valid/invalid/warning com feedback' },
+      { icon: 'universal-access', title: 'Acessível', description: 'ARIA, keyboard, line-height 1.6 para leitura' }
+    ],
+    
+    relatedComponents: [
+      { name: 'EInput', path: '/story/front-office-forms-einput--default' },
+      { name: 'EFormCheck', path: '/story/front-office-forms-eformcheck--default' }
+    ]
+  })
 };

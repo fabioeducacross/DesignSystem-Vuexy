@@ -1,3 +1,5 @@
+import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
+
 /**
  * EInput - Educational Input Component
  * =====================================
@@ -869,4 +871,75 @@ export const KeyboardAccessibility = {
       </div>
     </div>
   `
+};
+
+// ============================================================================
+// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
+// ============================================================================
+
+export const Documentation = {
+  render: () => createDocPage({
+    title: 'EInput',
+    subtitle: 'Input básico com validação para formulários educacionais',
+    badge: 'Forms / Core UI',
+    colors: { primary: '#6E63E8', secondary: '#28C76F' },
+    
+    stats: [
+      { label: 'Tipos', value: '7', description: 'text, email, number, password, tel, url, search' },
+      { label: 'Tamanhos', value: '3', description: 'sm (32px), md (38px), lg (46px)' },
+      { label: 'Estados', value: '4', description: 'default, valid, invalid, warning' },
+      { label: 'Acessibilidade', value: 'WCAG AA', description: 'Contraste, ARIA, keyboard navigation' }
+    ],
+    
+    content: `
+${createExampleCard({
+  title: 'Input Básico',
+  description: 'Input text padrão com placeholder e ícone',
+  preview: '<div style="max-width: 400px;"><div style="margin-bottom: 4px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Nome Completo</label><div style="position: relative;"><i class="bi bi-person" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #A8AAAE; font-size: 18px;"></i><input type="text" placeholder="Digite seu nome" style="width: 100%; height: 38px; padding: 10px 14px 10px 42px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; outline: none; transition: border-color 0.2s;" /></div></div></div>',
+  code: '<EInput\n  v-model="name"\n  type="text"\n  placeholder="Digite seu nome"\n  icon="person"\n  icon-position="left"\n  size="md"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Estados de Validação',
+  description: 'Input com feedback visual de valid/invalid',
+  preview: '<div style="display: flex; gap: 16px; flex-wrap: wrap;"><div style="flex: 1; min-width: 200px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Email Válido</label><input type="email" value="user@example.com" style="width: 100%; height: 38px; padding: 10px 14px; border: 2px solid #28C76F; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #F0FDF4;" readonly /></div><div style="flex: 1; min-width: 200px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Email Inválido</label><input type="email" value="invalid-email" style="width: 100%; height: 38px; padding: 10px 14px; border: 2px solid #EA5455; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: #FEF2F2;" /><small style="display: block; margin-top: 4px; color: #EA5455; font-size: 12px;">Digite um email válido</small></div></div>',
+  code: '<EInput\n  v-model="email"\n  type="email"\n  state="valid"\n  feedback="Digite um email válido"\n/>'
+})}
+
+${createExampleCard({
+  title: 'Com Ícone Direito',
+  description: 'Input de busca com ícone à direita',
+  preview: '<div style="max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Buscar Aluno</label><div style="position: relative;"><input type="search" placeholder="Buscar por nome ou matrícula" style="width: 100%; height: 38px; padding: 10px 42px 10px 14px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C;" /><i class="bi bi-search" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #A8AAAE; font-size: 18px;"></i></div></div>',
+  code: '<EInput\n  v-model="search"\n  type="search"\n  placeholder="Buscar por nome ou matrícula"\n  icon="search"\n  icon-position="right"\n/>'
+})}
+
+${createPropsTable([
+  { name: 'value', type: 'String', default: "''", description: 'Valor do input (v-model)' },
+  { name: 'type', type: 'String', default: "'text'", description: 'Tipo: text, email, number, password, tel, url, search' },
+  { name: 'placeholder', type: 'String', default: "''", description: 'Texto placeholder' },
+  { name: 'state', type: 'String', default: "''", description: "Estado de validação: 'valid', 'invalid', 'warning'" },
+  { name: 'size', type: 'String', default: "'md'", description: "Tamanho: 'sm' (32px), 'md' (38px), 'lg' (46px)" },
+  { name: 'icon', type: 'String', default: "''", description: 'Ícone Bootstrap Icons (ex: search, person, envelope)' },
+  { name: 'icon-position', type: 'String', default: "'left'", description: "Posição do ícone: 'left' ou 'right'" },
+  { name: 'disabled', type: 'Boolean', default: 'false', description: 'Desabilita interação' },
+  { name: 'readonly', type: 'Boolean', default: 'false', description: 'Apenas leitura' },
+  { name: 'maxLength', type: 'Number', default: 'null', description: 'Máximo de caracteres permitidos' }
+])}
+    `,
+    
+    features: [
+      { icon: 'check-circle', title: 'Validação Integrada', description: 'Estados valid/invalid/warning com feedback visual' },
+      { icon: 'palette', title: '7 Tipos de Input', description: 'text, email, number, password, tel, url, search' },
+      { icon: 'arrows-angle-contract', title: '3 Tamanhos', description: 'sm (32px), md (38px), lg (46px)' },
+      { icon: 'cursor-text', title: 'Ícones Opcionais', description: 'Bootstrap Icons à esquerda ou direita' },
+      { icon: 'universal-access', title: 'Acessível', description: 'ARIA labels, keyboard navigation, contraste WCAG AA' },
+      { icon: 'lightning', title: 'Performance', description: 'Componente leve sem dependências pesadas' }
+    ],
+    
+    relatedComponents: [
+      { name: 'EFormCheck', path: '/story/front-office-forms-eformcheck--default' },
+      { name: 'ESelect', path: '/story/front-office-forms-eselect--default' },
+      { name: 'ETextarea', path: '/story/front-office-forms-etextarea--default' }
+    ]
+  })
 };

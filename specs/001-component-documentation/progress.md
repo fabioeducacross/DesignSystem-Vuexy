@@ -2,13 +2,22 @@
 
 **Last Updated**: 2026-02-08  
 **Branch**: v1.1  
+**Strategy**: Opção A - Híbrido Estratégico (4 stories/componente)  
 **Spec**: [spec.md](./spec.md) | **Plan**: [plan.md](./plan.md)
+
+## Estratégia de 4 Stories por Componente
+
+✅ **Documentation** (Template 1): Hero + Stats + Exemplos + Props + Features  
+✅ **Playground**: Controls interativos para testar todas props  
+✅ **Use Cases**: 2-4 cenários reais Educacross (Cadastro Aluno, Busca Turma, etc.)  
+✅ **Accessibility**: WCAG AA (keyboard, ARIA, contraste, screen readers)
 
 ## Overall Progress
 
 **Total**: 123 components  
-**Completed**: 10 (8.1%)  
-**Remaining**: 113 (91.9%)
+**Completed com 4 stories**: 0 (0%)  
+**Documentation apenas**: 10 (8.1%)  
+**Remaining**: 123 (100% precisam refatoração)
 
 ```
 [████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 8.1%

@@ -4,7 +4,55 @@
 **Created**: 2026-02-07  
 **Updated**: 2026-02-08  
 **Status**: In Progress  
+**Strategy**: Opção A - Híbrido Estratégico (4 stories por componente)  
 **Input**: Apply comprehensive documentation template to 117 remaining Educacross V2 components (123 total - 6 completed)
+
+## Estratégia de Documentação: Opção A - Híbrido Estratégico
+
+Cada componente terá **4 stories essenciais**:
+
+1. **📖 Documentation** (Template 1 JavaScript funcional)
+   - Hero section com título, subtitle, badge, cores
+   - 4 stats cards (tipos, tamanhos, estados, acessibilidade)
+   - 3-6 exemplos visuais com preview HTML + código Vue
+   - Props table completa (nome, tipo, default, descrição)
+   - 4-6 features cards (ícones + descrição)
+   - Componentes relacionados com links
+   - **Função**: Entrada principal, documentação estruturada
+
+2. **🎨 Playground** (Controls interativos)
+   - Story com argTypes completo
+   - Controles para testar todas as props
+   - Live preview no Canvas
+   - **Função**: Testes manuais, exploração de combinações
+
+3. **🎭 Use Cases** (Cenários reais Educacross)
+   - 2-4 exemplos de uso no contexto educacional
+   - Ex: "Cadastro de Aluno", "Busca de Turma", "Formulário de Missão"
+   - Código completo com contexto de negócio
+   - **Função**: Mostra aplicação prática no domínio
+
+4. **♿ Accessibility** (Acessibilidade)
+   - Testes de keyboard navigation
+   - ARIA labels e roles
+   - Contraste e legibilidade
+   - Screen reader support
+   - **Função**: Garantia de conformidade WCAG AA
+
+### Decisão Técnica: Por que Opção A?
+
+**Mantém**:
+- ✅ Documentação estruturada e consistente (Template 1)
+- ✅ Interatividade para testes (Playground)
+- ✅ Contexto educacional real (Use Cases)
+- ✅ Acessibilidade verificável (Accessibility)
+
+**Remove**:
+- ❌ Stories redundantes (All Types, All Sizes, etc.)
+- ❌ Exemplos desconectados do contexto educacional
+- ❌ Duplicação de informação
+
+**Resultado**: De ~12 stories por componente → **4 stories essenciais** (~66% redução)
 
 ## User Scenarios & Testing
 
