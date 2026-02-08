@@ -105,7 +105,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
 
 export default {
   title: '📦 Front-office / Forms / EInput',
-  tags: ['autodocs'],
+  tags: [],
   parameters: {
     layout: 'padded',
     docs: {
