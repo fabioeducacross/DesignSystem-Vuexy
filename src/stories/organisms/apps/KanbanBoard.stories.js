@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Apps/KanbanBoard',
+  title: 'Vuexy/Organisms/Apps/KanbanBoard',
   tags: ['autodocs'],
   parameters: {
     docs: {

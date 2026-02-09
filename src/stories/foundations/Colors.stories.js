@@ -1,5 +1,5 @@
 export default {
-  title: 'Foundations/Colors',
+  title: 'Vuexy/Foundations/Colors',
   parameters: {
     previewTabs: {
       canvas: { hidden: false },

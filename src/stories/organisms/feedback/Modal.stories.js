@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Feedback/Modal',
+  title: 'Vuexy/Organisms/Feedback/Modal',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -1,10 +1,14 @@
 /**
- * NPS - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * NPS - Net Promoter Score Survey
+ * ================================
+ * Componente de pesquisa NPS para feedback dos usuários
  * 
  * @component NPS
- * @source educacross-frontoffice\src\components\NPS\NPS.vue
+ * @category Educacross Components V2 / Feedback
+ * @source educacross-frontoffice/src/components/NPS/NPS.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-01T21:06:31.153670
  * 
  * Props: None
@@ -13,7 +17,7 @@
  */
 
 export default {
-  title: 'Educacross V2/NPS',
+  title: 'Educacross Components V2/Feedback/NPS',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

@@ -1,111 +1,547 @@
 /**
- * LegendEnum - Pixel Perfect Stories
+ * LegendEnum - Status Enum Legend Component
  * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * 
+ * Component for displaying enum-based status legends with color-coded badges.
+ * Shows status levels (Below Basic, Basic, Proficient, Advanced) with semaphore colors.
  * 
  * @component LegendEnum
  * @source educacross-frontoffice\src\components\legends\LegendEnum.vue
- * @generated 2026-02-01T21:06:31.058255
- * 
- * Props: None
- * Slots: enum-component
- * Emits: None
  */
 
 export default {
-  title: 'Educacross V2/LegendEnum',
+  title: 'Educacross Components V2/Legends/LegendEnum',
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
     docs: {
       description: {
         component: `
-## LegendEnum
+# LegendEnum
 
-Componente extraído pixel-perfect do frontoffice Educacross.
+Componente de legenda para **status baseados em enumeração** com badges coloridos.
 
-### Props
-- Nenhuma prop definida
+## Contexto de Uso
 
-### Slots
-- **enum-component**
+- **Níveis de proficiência**: Below Basic, Basic, Proficient, Advanced
+- **Sistema semáforo**: Vermelho (danger), Amarelo (warning), Verde (success), Azul (primary)
+- **Legendas de avaliação**: Explicar escala de performance
+- **Dashboards educacionais**: Mostrar categorias de status
+- **Relatórios**: Identificar níveis em gráficos e tabelas
 
-### Events
-- Nenhum evento definido
+## Estrutura
+
+\`\`\`
++--------------------------------+
+| Label: [Badge Status] Value    |  ← Status enum com cor semáforo
++--------------------------------+
+| Description text (optional)    |  ← Explicação do nível
++--------------------------------+
+\`\`\`
+
+## Status Enum Colors
+
+| Status | Color | CSS Variable | Hex | Significado |
+|--------|-------|--------------|-----|-------------|
+| **Below Basic** | 🔴 Vermelho | --legend-below-basic | #EA5455 | Abaixo do básico |
+| **Basic** | 🟡 Amarelo | --legend-basic | #FF9F43 | Básico |
+| **Proficient** | 🟢 Verde | --legend-proficient | #28C76F | Proficiente |
+| **Advanced** | 🔵 Azul | --legend-advanced | #6E63E8 | Avançado |
+
+## Características
+
+- **Badge semáforo**: Sistema de cores universalmente reconhecido
+- **Slot enum-component**: Permite customização do componente de status
+- **Card wrapper**: Apresentação organizada com border discreto
+- **Flexbox layout**: Centralizado com gap-2 (16px)
+- **Responsive**: flex-wrap para empilhar em mobile
+- **Typography**: text-sm (14px) para labels
+
+## Quando usar
+
+- **Explicar legendas**: Antes de gráficos ou tabelas com cores
+- **Onboarding**: Ensinar usuários sobre sistema de níveis
+- **Relatórios**: Cabeçalho de dashboards com escala
+- **Avaliações**: Mostrar critérios de classificação
         `
       }
     }
   }
 };
 
-// Estilos inline do componente
-const componentStyles = `
+/**
+ * Props API
+ * 
+ * Componente estrutural sem props - recebe status badges via slot enum-component
+ */
 
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
+/**
+ * Design Specs
+ * 
+ * Cores:
+ * - Below Basic: #EA5455 (danger)
+ * - Basic: #FF9F43 (warning)
+ * - Proficient: #28C76F (success)
+ * - Advanced: #6E63E8 (primary)
+ * - Card border: #D8D6DE
+ * - Text color: #5D596C
+ * 
+ * Dimensões:
+ * - Badge padding: 6px 12px
+ * - Badge border-radius: 4px
+ * - Gap between items: 16px (gap-2)
+ * - Card padding: 20px (card-body)
+ * - Font-size: 14px (text-sm)
+ * 
+ * Layout:
+ * - Display: flex
+ * - Justify-content: center
+ * - Align-items: center
+ * - Flex-wrap: wrap (responsive)
+ */
 
-
-.card-border {
-  border: 1px solid #d8d6de;
-  box-shadow: none;
-}
-`;
-
-// Template base
-const baseTemplate = `
-<b-card no-body class="">
-    <div>
-      <b-card-body
-        class="text-sm"
-        class=""
-      >
-        <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-          <div>Sample Text:</div>
-          <div>
-            <div class="slot-placeholder">
-              <div class="SemaphoreStatus" :status-enum="item">
-                <span>Sample Text</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p
-          class="mt-1 mb-0"
-        ></p>
-      </b-card-body>
-      <hr />
-    </div>
-  </b-card>
+// Estilos base
+const legendStyles = `
+<style>
+  .legend-enum-container {
+    background: #FFFFFF;
+    border: 1px solid #D8D6DE;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .legend-enum-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #5D596C;
+  }
+  
+  .legend-label {
+    font-weight: 500;
+    color: #5D596C;
+  }
+  
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  
+  .status-below-basic {
+    background: rgba(234, 84, 85, 0.12);
+    color: #EA5455;
+    border: 1px solid #EA5455;
+  }
+  
+  .status-basic {
+    background: rgba(255, 159, 67, 0.12);
+    color: #FF9F43;
+    border: 1px solid #FF9F43;
+  }
+  
+  .status-proficient {
+    background: rgba(40, 199, 111, 0.12);
+    color: #28C76F;
+    border: 1px solid #28C76F;
+  }
+  
+  .status-advanced {
+    background: rgba(110, 99, 232, 0.12);
+    color: #6E63E8;
+    border: 1px solid #6E63E8;
+  }
+  
+  .legend-description {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #6E6B7B;
+    text-align: center;
+  }
+  
+  .legend-divider {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #E0E0E0;
+  }
+  
+  @media (max-width: 576px) {
+    .legend-enum-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .legend-enum-container {
+      padding: 16px;
+    }
+  }
+</style>
 `;
 
 // Story: Default
 export const Default = {
   render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
+    ${legendStyles}
+    <div class="legend-enum-container">
+      <div class="legend-enum-row">
+        <span class="legend-label">Status:</span>
+        <span class="status-badge status-proficient">Proficient</span>
+      </div>
+      <p class="legend-description">
+        Status enum badge com cor semáforo verde (proficiente)
+      </p>
+    </div>
+  `
+};
+
+// Story: AllStatuses
+export const AllStatuses = {
+  render: () => `
+    ${legendStyles}
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px;">
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Below Basic:</span>
+          <span class="status-badge status-below-basic">Below Basic</span>
+        </div>
+        <p class="legend-description">
+          🔴 Vermelho (#EA5455) - Abaixo do nível básico esperado
+        </p>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Basic:</span>
+          <span class="status-badge status-basic">Basic</span>
+        </div>
+        <p class="legend-description">
+          🟡 Amarelo (#FF9F43) - Nível básico de proficiência
+        </p>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Proficient:</span>
+          <span class="status-badge status-proficient">Proficient</span>
+        </div>
+        <p class="legend-description">
+          🟢 Verde (#28C76F) - Proficiente, domínio adequado
+        </p>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Advanced:</span>
+          <span class="status-badge status-advanced">Advanced</span>
+        </div>
+        <p class="legend-description">
+          🔵 Azul (#6E63E8) - Avançado, excelência
+        </p>
+      </div>
+    </div>
+  `
+};
+
+// Story: MultipleStatuses
+export const MultipleStatuses = {
+  render: () => `
+    ${legendStyles}
+    <div class="legend-enum-container">
+      <div class="legend-enum-row">
+        <span class="legend-label">Níveis:</span>
+        <span class="status-badge status-below-basic">Below Basic</span>
+        <span class="status-badge status-basic">Basic</span>
+        <span class="status-badge status-proficient">Proficient</span>
+        <span class="status-badge status-advanced">Advanced</span>
+      </div>
+      <hr class="legend-divider">
+      <p class="legend-description">
+        Sistema semáforo com 4 níveis de proficiência (vermelho → amarelo → verde → azul)
+      </p>
+    </div>
+  `
+};
+
+// Story: WithMetrics
+export const WithMetrics = {
+  render: () => `
+    ${legendStyles}
+    <style>
+      .metric-card {
+        background: #F8F7FA;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+      }
+      
+      .metric-value {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 8px 0;
+      }
+      
+      .metric-label {
+        font-size: 13px;
+        color: #6E6B7B;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    </style>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; margin-bottom: 24px;">
+      <div class="metric-card">
+        <div class="metric-label">Below Basic</div>
+        <div class="metric-value" style="color: #EA5455;">12</div>
+        <span class="status-badge status-below-basic">15%</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Basic</div>
+        <div class="metric-value" style="color: #FF9F43;">23</div>
+        <span class="status-badge status-basic">29%</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Proficient</div>
+        <div class="metric-value" style="color: #28C76F;">35</div>
+        <span class="status-badge status-proficient">44%</span>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Advanced</div>
+        <div class="metric-value" style="color: #6E63E8;">10</div>
+        <span class="status-badge status-advanced">12%</span>
+      </div>
+    </div>
+    
+    <div class="legend-enum-container">
+      <div class="legend-enum-row">
+        <span class="legend-label">Legenda:</span>
+        <span class="status-badge status-below-basic">Below Basic</span>
+        <span class="status-badge status-basic">Basic</span>
+        <span class="status-badge status-proficient">Proficient</span>
+        <span class="status-badge status-advanced">Advanced</span>
+      </div>
+      <p class="legend-description">
+        Dashboard de proficiência: 80 alunos distribuídos em 4 níveis
+      </p>
+    </div>
+  `
+};
+
+// Story: InTable
+export const InTable = {
+  render: () => `
+    ${legendStyles}
+    <style>
+      .proficiency-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+        background: white;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .proficiency-table th {
+        background: #F8F7FA;
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 13px;
+        color: #5D596C;
+        text-transform: uppercase;
+        border-bottom: 2px solid #E0E0E0;
+      }
+      
+      .proficiency-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #F0F0F0;
+        font-size: 14px;
+        color: #5D596C;
+      }
+      
+      .proficiency-table tr:last-child td {
+        border-bottom: none;
+      }
+    </style>
+    
+    <table class="proficiency-table">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Disciplina</th>
+          <th>Nota</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ana Silva</td>
+          <td>Matemática</td>
+          <td>9.2</td>
+          <td><span class="status-badge status-advanced">Advanced</span></td>
+        </tr>
+        <tr>
+          <td>Bruno Costa</td>
+          <td>Português</td>
+          <td>7.8</td>
+          <td><span class="status-badge status-proficient">Proficient</span></td>
+        </tr>
+        <tr>
+          <td>Carlos Mendes</td>
+          <td>História</td>
+          <td>6.1</td>
+          <td><span class="status-badge status-basic">Basic</span></td>
+        </tr>
+        <tr>
+          <td>Diana Alves</td>
+          <td>Ciências</td>
+          <td>4.5</td>
+          <td><span class="status-badge status-below-basic">Below Basic</span></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="legend-enum-container">
+      <div class="legend-enum-row">
+        <span class="legend-label">Critérios:</span>
+        <span class="status-badge status-below-basic">&lt; 5.0</span>
+        <span class="status-badge status-basic">5.0 - 6.9</span>
+        <span class="status-badge status-proficient">7.0 - 8.9</span>
+        <span class="status-badge status-advanced">≥ 9.0</span>
+      </div>
+    </div>
+  `
+};
+
+// Story: CompactVariant
+export const CompactVariant = {
+  render: () => `
+    ${legendStyles}
+    <style>
+      .status-badge-compact {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 8px;
+        border-radius: 3px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+      }
+    </style>
+    <div class="legend-enum-container" style="padding: 12px;">
+      <div class="legend-enum-row" style="font-size: 12px; gap: 12px;">
+        <span class="legend-label" style="font-size: 12px;">Status:</span>
+        <span class="status-badge-compact status-below-basic">Below</span>
+        <span class="status-badge-compact status-basic">Basic</span>
+        <span class="status-badge-compact status-proficient">Prof.</span>
+        <span class="status-badge-compact status-advanced">Adv.</span>
+      </div>
+    </div>
+  `
+};
+
+// Story: WithIcons
+export const WithIcons = {
+  render: () => `
+    ${legendStyles}
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px;">
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Below Basic:</span>
+          <span class="status-badge status-below-basic">
+            <i class="bi bi-x-circle-fill" style="margin-right: 6px;"></i>
+            Below Basic
+          </span>
+        </div>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Basic:</span>
+          <span class="status-badge status-basic">
+            <i class="bi bi-exclamation-triangle-fill" style="margin-right: 6px;"></i>
+            Basic
+          </span>
+        </div>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Proficient:</span>
+          <span class="status-badge status-proficient">
+            <i class="bi bi-check-circle-fill" style="margin-right: 6px;"></i>
+            Proficient
+          </span>
+        </div>
+      </div>
+      
+      <div class="legend-enum-container">
+        <div class="legend-enum-row">
+          <span class="legend-label">Advanced:</span>
+          <span class="status-badge status-advanced">
+            <i class="bi bi-star-fill" style="margin-right: 6px;"></i>
+            Advanced
+          </span>
+        </div>
+      </div>
+    </div>
+  `
+};
+
+// Story: Responsive
+export const Responsive = {
+  render: () => `
+    ${legendStyles}
+    <div style="background: #E3F2FD; border-left: 4px solid #2196F3; padding: 16px; border-radius: 6px; margin-bottom: 24px; max-width: 700px;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #1565C0; margin: 0 0 8px 0;">
+        <i class="bi bi-phone"></i> LegendEnum: Responsivo
+      </h4>
+      <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #1976D2;">
+        <li>Desktop: flex-row com badges lado a lado</li>
+        <li>Mobile (&lt;576px): flex-column empilhado</li>
+        <li>Gap responsivo: 16px → 12px mobile</li>
+        <li>Padding: 20px → 16px mobile</li>
+      </ul>
+    </div>
+    
+    <div class="legend-enum-container">
+      <div class="legend-enum-row">
+        <span class="legend-label">Níveis de Proficiência:</span>
+        <span class="status-badge status-below-basic">
+          <i class="bi bi-x-circle-fill" style="margin-right: 6px;"></i>
+          Below Basic
+        </span>
+        <span class="status-badge status-basic">
+          <i class="bi bi-exclamation-triangle-fill" style="margin-right: 6px;"></i>
+          Basic
+        </span>
+        <span class="status-badge status-proficient">
+          <i class="bi bi-check-circle-fill" style="margin-right: 6px;"></i>
+          Proficient
+        </span>
+        <span class="status-badge status-advanced">
+          <i class="bi bi-star-fill" style="margin-right: 6px;"></i>
+          Advanced
+        </span>
+      </div>
+      <hr class="legend-divider">
+      <p class="legend-description">
+        Em mobile, badges empilham verticalmente para melhor legibilidade
+      </p>
+    </div>
   `
 };
 

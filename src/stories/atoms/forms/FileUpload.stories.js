@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/FileUpload',
+  title: 'Vuexy/Atoms/Forms/FileUpload',
   tags: ['autodocs'],
   parameters: {
     docs: {

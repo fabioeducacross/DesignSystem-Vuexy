@@ -6,7 +6,7 @@
  */
 
 export default {
-  title: 'Atoms/Data Display/Icon',
+  title: 'Vuexy/Atoms/Data Display/Icon',
   tags: ['autodocs'],
   parameters: {
     docs: {

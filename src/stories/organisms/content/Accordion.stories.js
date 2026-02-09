@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Content/Accordion',
+  title: 'Vuexy/Organisms/Content/Accordion',
   tags: ['autodocs'],
   parameters: {
     docs: {

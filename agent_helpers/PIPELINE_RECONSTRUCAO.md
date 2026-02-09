@@ -184,12 +184,12 @@ Copiar CSS completo do Card.stories.js ou CancelMission.stories.js:
 #### A. Título e Subtítulo
 
 ```markdown
-# ComponentName
-
 Breve descrição funcional (1-2 linhas).
 
 ---
 ```
+
+**Importante:** Não adicionar `# ComponentName` pois o Storybook já renderiza o título automaticamente a partir do `title` no export default.
 
 #### B. Contexto de Uso
 

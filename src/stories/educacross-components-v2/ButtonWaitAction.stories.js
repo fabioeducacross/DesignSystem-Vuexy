@@ -3,8 +3,9 @@
  *
  * @component ButtonWaitAction
  * @category Educacross Components V2
- * @status PIXEL-PERFECT
  * @source educacross-frontoffice/src/components/form/button/ButtonWaitAction.vue
+ * @priority P0
+ * @status PIXEL-PERFECT
  * @since 2.0.0
  */
 

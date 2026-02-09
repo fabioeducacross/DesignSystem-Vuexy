@@ -4,7 +4,7 @@
  */
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 export default {
-  title: 'Molecules/Forms/InputGroup',
+  title: 'Vuexy/Molecules/Forms/InputGroup',
   tags: ['autodocs'],
   parameters: { docs: { description: { component: '# Input Group - Input com addon/button' } } },
   argTypes: {

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Navigation/Dropdown',
+  title: 'Vuexy/Molecules/Navigation/Dropdown',
   tags: ['autodocs'],
   parameters: {
     docs: {

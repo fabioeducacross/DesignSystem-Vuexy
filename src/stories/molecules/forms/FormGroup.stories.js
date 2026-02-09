@@ -4,7 +4,7 @@
  */
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 export default {
-  title: 'Molecules/Forms/FormGroup',
+  title: 'Vuexy/Molecules/Forms/FormGroup',
   tags: ['autodocs'],
   parameters: { docs: { description: { component: '# Form Group - Label + Input + Help Text' } } },
   argTypes: {

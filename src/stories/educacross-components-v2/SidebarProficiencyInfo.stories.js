@@ -1,10 +1,14 @@
 /**
- * SidebarProficiencyInfo - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * SidebarProficiencyInfo - Sidebar de Informações de Proficiência
+ * =================================================================
+ * Sidebar com explicações sobre níveis de proficiência educacional
  * 
  * @component SidebarProficiencyInfo
- * @source educacross-frontoffice\src\components\reading-meter\SidebarProficiencyInfo.vue
+ * @category Educacross Components V2 / Navigation
+ * @source educacross-frontoffice/src/components/reading-meter/SidebarProficiencyInfo.vue
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * @generated 2026-02-01T21:06:31.280199
  * 
  * Props: None
@@ -13,7 +17,7 @@
  */
 
 export default {
-  title: 'Educacross V2/SidebarProficiencyInfo',
+  title: 'Educacross Components V2/Navigation/SidebarProficiencyInfo',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

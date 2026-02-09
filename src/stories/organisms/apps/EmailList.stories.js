@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Apps/EmailList',
+  title: 'Vuexy/Organisms/Apps/EmailList',
   tags: ['autodocs'],
   parameters: {
     docs: {

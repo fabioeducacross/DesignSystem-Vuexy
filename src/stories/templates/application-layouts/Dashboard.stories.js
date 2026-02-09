@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/Application Layouts/Dashboard',
+  title: 'Vuexy/Templates/Application Layouts/Dashboard',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

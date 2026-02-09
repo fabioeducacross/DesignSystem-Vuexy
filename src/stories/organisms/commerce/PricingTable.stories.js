@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Commerce/PricingTable',
+  title: 'Vuexy/Organisms/Commerce/PricingTable',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/Checkbox',
+  title: 'Vuexy/Atoms/Forms/Checkbox',
   tags: ['autodocs'],
   parameters: {
     docs: {

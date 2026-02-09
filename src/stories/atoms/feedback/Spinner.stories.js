@@ -6,7 +6,7 @@
  */
 
 export default {
-  title: 'Atoms/Feedback/Spinner',
+  title: 'Vuexy/Atoms/Feedback/Spinner',
   tags: ['autodocs'],
   parameters: {
     docs: {

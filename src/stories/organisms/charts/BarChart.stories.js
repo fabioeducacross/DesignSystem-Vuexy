@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Charts/BarChart',
+  title: 'Vuexy/Organisms/Charts/BarChart',
   tags: ['autodocs'],
   parameters: {
     docs: {

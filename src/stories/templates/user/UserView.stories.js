@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Templates/User/UserView',
+  title: 'Vuexy/Templates/User/UserView',
   tags: ['autodocs'],
   parameters: {
     docs: {

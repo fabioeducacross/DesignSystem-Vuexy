@@ -8,7 +8,7 @@
  */
 
 export default {
-  title: 'Molecules/Forms/ESelect',
+  title: 'Vuexy/Molecules/Forms/ESelect',
   tags: ['autodocs'],
   parameters: {
     docs: {

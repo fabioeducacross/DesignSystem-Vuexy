@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Charts/PieChart',
+  title: 'Vuexy/Organisms/Charts/PieChart',
   tags: ['autodocs'],
   parameters: {
     docs: {

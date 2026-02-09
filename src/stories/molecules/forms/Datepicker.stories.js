@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Forms/Datepicker',
+  title: 'Vuexy/Molecules/Forms/Datepicker',
   tags: ['autodocs'],
   parameters: {
     docs: {

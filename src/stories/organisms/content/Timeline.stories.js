@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Content/Timeline',
+  title: 'Vuexy/Organisms/Content/Timeline',
   tags: ['autodocs'],
   parameters: {
     docs: {

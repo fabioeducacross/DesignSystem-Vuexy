@@ -1,0 +1,64 @@
+- generic [ref=e3]:
+  - main [ref=e6]:
+    - iframe [ref=e14]:
+      - generic [ref=f1e2]:
+        - 'heading "Error fetching `/index.json`:" [level=1] [ref=f1e3]'
+        - paragraph [ref=f1e4]: "The component failed to render properly, likely due to a configuration issue in Storybook. Here are some common causes and how you can address them:"
+        - list [ref=f1e5]:
+          - listitem [ref=f1e6]:
+            - strong [ref=f1e7]: Missing Context/Providers
+            - text: ": You can use decorators to supply specific contexts or providers, which are sometimes necessary for components to render correctly. For detailed instructions on using decorators, please visit the"
+            - link "Decorators documentation" [ref=f1e8] [cursor=pointer]:
+              - /url: https://storybook.js.org/docs/writing-stories/decorators
+            - text: .
+          - listitem [ref=f1e9]:
+            - strong [ref=f1e10]: Misconfigured Webpack or Vite
+            - text: ": Verify that Storybook picks up all necessary settings for loaders, plugins, and other relevant parameters. You can find step-by-step guides for configuring"
+            - link "Webpack" [ref=f1e11] [cursor=pointer]:
+              - /url: https://storybook.js.org/docs/builders/webpack
+            - text: or
+            - link "Vite" [ref=f1e12] [cursor=pointer]:
+              - /url: https://storybook.js.org/docs/builders/vite
+            - text: with Storybook.
+          - listitem [ref=f1e13]:
+            - strong [ref=f1e14]: Missing Environment Variables
+            - text: ": Your Storybook may require specific environment variables to function as intended. You can set up custom environment variables as outlined in the"
+            - link "Environment Variables documentation" [ref=f1e15] [cursor=pointer]:
+              - /url: https://storybook.js.org/docs/configure/environment-variables
+            - text: .
+        - code [ref=f1e17]: "Unable to index ./src/stories/educacross-components-v2/Sidebar.stories.js: SyntaxError: Unexpected token (462:6) at constructor (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:134878:15) at Nv.raise (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:137195:54) at Nv.unexpected (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:137212:18) at Nv.parseIdentifierName (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:142793:43) at Nv.parseIdentifier (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:142782:42) at Nv.parseBindingAtom (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:139892:19) at Nv.parseBindingAtom (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:141486:72) at Nv.parseVarId (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:143538:20) at Nv.parseVarId (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:141352:13) at Nv.parseVar (C:\\Users\\Educacross\\Documents\\Educacross\\DesignSystem-Vuexy\\node_modules\\@storybook\\core\\dist\\babel\\index.cjs:143526:18) If you are in development, this likely indicates a problem with your Storybook process, check the terminal for errors. If you are in a deployed Storybook, there may have been an issue deploying the full Storybook build."
+  - navigation [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - link "Skip to canvas" [ref=e23] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e25] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e26]
+          - button "Shortcuts" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+        - generic [ref=e36]: Search for components
+        - combobox "Search for components" [ref=e38]:
+          - generic:
+            - img
+          - searchbox "Search for components" [ref=e39]
+          - code: ⌃ K
+        - generic [ref=e46]:
+          - text: Oh no! Something went wrong loading this Storybook.
+          - generic [ref=e49] [cursor=pointer]:
+            - text: View error
+            - img [ref=e50]
+          - link "View docs" [ref=e52] [cursor=pointer]:
+            - /url: https://storybook.js.org/docs
+            - generic [ref=e53]:
+              - text: View docs
+              - img [ref=e54]
+      - link "Storybook 10 Learn what's new in Storybook" [ref=e58] [cursor=pointer]:
+        - /url: /?path=/settings/whats-new
+        - img [ref=e60]
+        - generic [ref=e62]:
+          - generic "Storybook 10" [ref=e63]
+          - generic [ref=e64]: Learn what's new in Storybook
+        - button "Dismiss notification" [ref=e65]:
+          - img [ref=e66]

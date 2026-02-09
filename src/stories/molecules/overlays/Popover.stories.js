@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Overlays/Popover',
+  title: 'Vuexy/Molecules/Overlays/Popover',
   tags: ['autodocs'],
   parameters: {
     docs: {

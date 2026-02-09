@@ -4,7 +4,7 @@
  */
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 export default {
-  title: 'Atoms/Navigation/Link',
+  title: 'Vuexy/Atoms/Navigation/Link',
   tags: ['autodocs'],
   parameters: { docs: { description: { component: '# Link\nLink estilizado do Vuexy.' } } },
   argTypes: {

@@ -9,7 +9,7 @@
 import { formatHtmlSnippet, formatReactSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/Select',
+  title: 'Vuexy/Atoms/Forms/Select',
   tags: ['autodocs'],
   parameters: {
     docs: {

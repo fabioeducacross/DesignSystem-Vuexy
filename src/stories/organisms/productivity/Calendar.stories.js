@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Productivity/Calendar',
+  title: 'Vuexy/Organisms/Productivity/Calendar',
   tags: ['autodocs'],
   parameters: {
     docs: {

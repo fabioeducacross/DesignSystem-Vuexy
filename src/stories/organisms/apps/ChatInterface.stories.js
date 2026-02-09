@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Apps/ChatInterface',
+  title: 'Vuexy/Organisms/Apps/ChatInterface',
   tags: ['autodocs'],
   parameters: {
     docs: {

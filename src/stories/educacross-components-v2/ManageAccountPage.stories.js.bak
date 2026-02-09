@@ -1,0 +1,971 @@
+/**
+ * ManageAccountPage - Página "Seja bem-vindo(a)!"
+ * =================================================
+ * Template completo da página de gerenciamento de contas com navbar, filtros laterais,
+ * grid de UserCards e painel de convites.
+ * 
+ * @component ManageAccountPage
+ * @category Educacross Components V2 / Templates
+ * @source educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue
+ * @priority P1 - Core UI
+ * @status EXPANDED
+ * @since 2.0.0
+ */
+
+export default {
+  title: 'Educacross Components V2/Templates/ManageAccountPage',
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+    docs: {
+      description: {
+        component: `
+## ManageAccountPage - Gerenciamento de Contas
+
+Página completa "Seja bem-vindo(a)!" para seleção de perfil de usuário após login inicial.
+Responsável/profissional escolhe qual conta acessar entre múltiplos perfis vinculados.
+
+### Estrutura
+
+**Navbar** (topo fixo):
+- Logo centralizado
+- Botão "Como Jogar?" (direita)
+- Dropdown de conta com avatar e opções (Editar conta, Sair)
+
+**Hero Section**:
+- Card "Seja bem-vindo(a)!" com background de estrelas
+
+**Convites** (responsivo):
+- Desktop: Painel lateral direito fixo com lista de convites
+- Mobile: Card clicável roxo "você tem novos convites!"
+- Dropdown modal em mobile
+
+**Filtros de Usuário** (responsivo):
+- Desktop: Botões verticais na sidebar esquerda ("Todos", "Alunos", "Professores", etc.)
+- Mobile: Dropdown com seleção de filtro
+
+**Grid de Cards**:
+- Responsivo 1-4 colunas conforme viewport
+- UserCards com perfis de alunos/professores/gestores
+- Animação hover, estado loading individual
+
+**Footer**:
+- Rodapé institucional
+
+### Casos de Uso
+
+**Responsável Multi-Filho**: Escolher qual filho logar (Alice 5º, Fabio G5, Fabio 2º Ano)
+
+**Professor Multi-Contexto**: Alternar entre perfis (Professor, Coordenador, Diretor)
+
+**Gestor de Rede**: Acessar diferentes instituições vinculadas
+
+**Aceitar Convites**: Painel lateral para aceitar novos vínculos (responsável, professor, gestor)
+        `
+      }
+    }
+  }
+};
+
+const styles = `<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; }
+
+.navbar-container {
+  background: #fff;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.navbar-column { flex: 1; }
+.logo-container img { height: 38px; }
+.btn-how-to-play {
+  background: #7367F0;
+  color: #fff;
+  border: none;
+  border-radius: 1.428rem;
+  padding: 0.571rem 1.143rem;
+  font-size: 0.857rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+.btn-how-to-play:hover { 
+  background: #5E50EE;
+  box-shadow: 0 8px 25px -8px #7367F0;
+}
+.user-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(115, 103, 240, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7367F0;
+  font-weight: 500;
+}
+
+.hero-card {
+  background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27600%27 height=%27200%27%3E%3Cg opacity=%270.3%27%3E%3Cpath d=%27M50,50 l20,0 l-10,17 z%27 fill=%27%23FFB84D%27/%3E%3Ccircle cx=%27150%27 cy=%2760%27 r=%2712%27 fill=%27%234DD9F5%27/%3E%3Cpath d=%27M250,40 l15,0 l-7.5,13 z%27 fill=%27%23FF8FB1%27/%3E%3Ccircle cx=%27350%27 cy=%2770%27 r=%2710%27 fill=%27%23FFB443%27/%3E%3Cpath d=%27M450,50 l18,0 l-9,15.5 z%27 fill=%27%237367F0%27/%3E%3Ccircle cx=%27550%27 cy=%2760%27 r=%2714%27 fill=%27%2300BDB8%27/%3E%3C/g%3E%3C/svg%3E') center center no-repeat, #fff;
+  background-size: cover;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.428rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #EBE9F1;
+}
+.hero-card h1 {
+  color: #7367F0;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.invites-card-mobile {
+  background: #7367F0;
+  border-radius: 1.714rem;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.invites-card-mobile:hover { 
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px -8px #7367F0;
+}
+.invites-icon {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7367F0;
+  flex-shrink: 0;
+}
+.invites-text {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.857rem;
+}D8D6DE;
+  border-radius: 1.714rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.filter-dropdown-mobile:hover { 
+  border-color: #7367F0;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+.filter-text {
+  color: #7367F0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.857rem
+  color: #6E63E8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+0.75rem;
+  padding: 0.25rem;
+}
+
+.sidebar-left {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+}
+.filter-btn {
+  background: #fff;
+  border: 1px solid #7367F0;
+  color: #7367F0;
+  padding: 0.714rem 1.143rem;
+  border-radius: 1.714rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.857rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { 
+  background: rgba(115, 103, 240, 0.08);
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+.filter-btn.active {
+  background: #7367F0;
+  color: #fff;
+  box-shadow: 0 8px 25px -8px #7367F0
+.filter-btn:hover { background: rgba(110, 99, 232, 0.08); }
+.filter-btn.active {
+  background: #6E63E8;
+  color: #fff;
+}flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.cards-grid .user-card {
+  flex: 1 1 calc(33.333% - 0.5rem);
+  min-width: 292px;
+  max-width: 400
+  display: flex;
+  flex-direction: column;
+}
+.cards-grid {
+  displarem;
+  height: fit-content;
+}
+.invites-panel {
+  background: #fff;
+  border: 1px solid #7367F0;
+  border-radius: 0.428rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+.invites-header {
+  background: rgba(115, 103, 240, 0.12);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #5E5873;
+  text-transform: uppercase;
+  font-size: 0.857rem;
+}
+.invites-icon-header {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7367F0;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.invites-body {
+  padding: 1rem;
+  padding-top: 0.25rem;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+.invite-item {
+  background: rgba(115, 103, 240, 0.04);
+  border: 1px solid rgba(115, 103, 240, 0.2);
+  border-radius: 0.428rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.invite-item:last-child { margin-bottom: 0; }
+.invite-title {
+  font-weight: 600;
+  color: #5E5873;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+.invite-subtitle {
+  font-size: 0.857rem;
+  color: #6E6B7B;
+  margin-bottom: 0.5rem;
+}
+.invite-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.btn-accept {
+  flex: 1;
+  background: #28C76F;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.857rem;
+  border-radius: 0.357rem;
+  font-size: 0.857rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-accept:hover { 
+  background: #24B263;
+  box-shadow: 0 8px 25px -8px #28C76F;
+}
+.btn-decline {
+  flex: 1;
+  background: #EA5455;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.857rem;
+  border-radius: 0.357rem;
+  font-size: 0.857rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-declin1.5rem;
+  text-align: center;
+  color: #6E6B7B;
+  font-size: 0.857rem;
+  border-top: 1px solid #EBE9F1;
+  margin-top: auto
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer0.428rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+.user-card-header {
+  height: 97px;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: 80px, cover, cover !important;
+  background-position: center center, center center, center center !important;
+  background-repeat: no-repeat, no-repeat, no-repeat !important;
+  position: relative;
+}
+.user-badge {
+  background: #fff;
+  color: #7367F0;
+  padding: 0.286rem 0.857rem;
+  border-radius: 50rem;
+  font-size: 0.857rem;
+  font-weight: 500;
+  z-index: 1;
+  line-height: 1;
+}
+.settings-icon {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+.user-card-body {
+  padding: 1rem;
+  padding-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.user-name {
+  font-size: 1.285rem;
+  font-weight: 500;
+  color: #7367F0;
+  margin: 0;
+  text-align: center;
+}
+.user-info {
+  text-align: center;
+  font-size: 1rem;
+  color: #6E6B7B;
+  line-height: 1.45;
+  margin-top: 0;
+}
+.user-info p { margin: 0 0 0.25rem 0; }
+.class-badge {
+  display: inline-block;
+  background: rgba(115, 103, 240, 0.12);
+  color: #7367F0;
+  padding: 0.286rem 0.857rem;
+  border-radius: 0.857rem;
+  font-size: 0.857rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  line-height: 1;
+}
+.classes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  margin-top: 0;
+}
+.class-tag {
+  background: rgba(115, 103, 240, 0.12);
+  color: #7367F0;
+  padding: 0.286rem 0.857rem;
+  border-radius: 0.857rem;
+  font-size: 0.857rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.class-more {
+  background: rgba(115, 103, 240, 0.12);
+  color: #7367F0;
+  padding: 0.286rem 0.857rem;
+  border-radius: 0.857rem;
+  font-size: 0.857rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+.stats-section {
+  border-top: 1px solid #EBE9F1;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.stat-label {
+  font-size: 1rem;
+  color: #6E6B7B;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.stat-value {
+  font-size: 1.714rem;
+  font-weight: 700;
+  color: #7367F0;
+  line-height: 100;
+  cursor: pointer;
+}
+.stats-section {
+  border-top: 1px solid #EBE9F1;
+  padding-top: 12px;
+  margin-top: auto;
+  text-align: center;
+}
+.stat-label {
+  font-size: 12px;
+  color: #6E6B7B;
+  margin-bottom: 4px;
+}
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6E63E8;
+}
+
+@media (max-width: 1200px) {
+  .sidebar-left, .sidebar-right { display: none; }
+}
+</style>`;
+
+/**
+ * Story: Default (Desktop com Convites)
+ * 
+ * Layout completo desktop:
+ * - Navbar com logo + botão "Como Jogar?" + dropdown usuário
+ * - Hero "Seja bem-vindo(a)!" com background estrelas
+ * - Sidebar esquerda com filtros (Todos, Alunos, Professores, Gestores)
+ * - Grid 3 colunas com 6 UserCards (3 alunos + 3 perfis institucionais)
+ * - Sidebar direita com painel de convites (3 convites pendentes)
+ * - Footer institucional
+ * 
+ * Educational context: Responsável com múltiplos filhos + convites pendentes.
+ */
+export const Default = {
+  render: () => `
+    ${styles}
+    <!-- Navbar -->
+    <div class="navbar-container">
+      <div class="navbar-column"></div>
+      <div class="navbar-column" style="display: flex; justify-content: center;">
+        <div class="logo-container">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Ctext x='10' y='28' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%236E63E8'%3EEducacross%3C/text%3E%3C/svg%3E" alt="Logo" />
+        </div>
+      </div>
+      <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn-how-to-play">
+          <span>🎮</span>
+          <span>Como Jogar?</span>
+        </button>
+        <div class="user-dropdown">
+          <div class="user-avatar">MN</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="layout-container">
+      <!-- Sidebar Left (Filtros) -->
+      <div class="sidebar-left">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Alunos</button>
+        <button class="filter-btn">Professores</button>
+        <button class="filter-btn">Gestores</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Hero -->
+        <div class="hero-card">
+          <h1>Seja bem-vindo(a)!</h1>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+          <!-- Aluno 1 -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27 viewBox=%270 0 80 80%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3Cellipse cx=%2740%27 cy=%2755%27 rx=%2725%27 ry=%2730%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #4DD9F5;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Fabio G5</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+                <p>G5 - Manhã <span class="class-badge">2º Ano</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aluno 2 -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3Cellipse cx=%2740%27 cy=%2755%27 rx=%2725%27 ry=%2730%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #5DADE2;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Fabio 2º Ano</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+                <p>2º Ano B - Manhã <span class="class-badge">2º Ano</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aluno 3 -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2718%27 fill=%27%23FFB8E1%27/%3E%3Cellipse cx=%2740%27 cy=%2755%27 rx=%2725%27 ry=%2730%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #FF8FB1;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Alice 5º</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+                <p>5º Ano A - Tarde <span class="class-badge">5º Ano</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professor -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2718%27 fill=%27%23FFE8A3%27/%3E%3Cellipse cx=%2740%27 cy=%2758%27 rx=%2728%27 ry=%2725%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #7F6CC3;">
+              <span class="user-badge">Professor</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Colégio Nova Jornada</h2>
+              <div class="classes-wrapper">
+                <span class="class-tag">1º Ano A - Manhã</span>
+                <span class="class-more">+78</span>
+              </div>
+              <div class="stats-section">
+                <p class="stat-label">Alunos</p>
+                <span class="stat-value">190</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coordenador -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2732%27 r=%2720%27 fill=%27%23FF6B9D%27/%3E%3Cellipse cx=%2740%27 cy=%2758%27 rx=%2728%27 ry=%2724%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #F05FF3;">
+              <span class="user-badge">Coordenador</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Colégio Nova Jornada</h2>
+              <div class="classes-wrapper">
+                <span class="class-tag">1º Ano A - Manhã</span>
+                <span class="class-more">+78</span>
+              </div>
+              <div class="stats-section">
+                <p class="stat-label">Alunos</p>
+                <span class="stat-value">190</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestor de Redes -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2732%27 r=%2720%27 fill=%27%2300BDB8%27/%3E%3Cellipse cx=%2740%27 cy=%2758%27 rx=%2728%27 ry=%2724%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #00BDB8;">
+              <span class="user-badge">Gestor de Redes</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Rede Produto</h2>
+              <div class="stats-section">
+                <p class="stat-label">Escolas</p>
+                <span class="stat-value">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          © 2026 Educacross. Todos os direitos reservados.
+        </div>
+      </div>
+
+      <!-- Sidebar Right (Convites) -->
+      <div class="sidebar-right">
+        <div class="invites-panel">
+          <div class="invites-header">
+            Novos Convites
+            <div class="invites-icon-header">📬</div>
+          </div>
+          <div class="invites-body">
+            <div class="invite-item">
+              <div class="invite-title">Colégio Horizonte</div>
+              <div class="invite-subtitle">Convite para Professor - 3º Ano B</div>
+              <div class="invite-actions">
+                <button class="btn-accept">Aceitar</button>
+                <button class="btn-decline">Recusar</button>
+              </div>
+            </div>
+            <div class="invite-item">
+              <div class="invite-title">Escola Municipal Santos</div>
+              <div class="invite-subtitle">Convite para Coordenador</div>
+              <div class="invite-actions">
+                <button class="btn-accept">Aceitar</button>
+                <button class="btn-decline">Recusar</button>
+              </div>
+            </div>
+            <div class="invite-item">
+              <div class="invite-title">Rede Educacional ABC</div>
+              <div class="invite-subtitle">Convite para Gestor de Redes</div>
+              <div class="invite-actions">
+                <button class="btn-accept">Aceitar</button>
+                <button class="btn-decline">Recusar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+};
+
+/**
+ * Story: Mobile (Responsivo)
+ * 
+ * Layout mobile/tablet:
+ * - Navbar compacto (logo + botão icon-only + avatar)
+ * - Hero "Seja bem-vindo(a)!"
+ * - Card roxo "você tem novos convites!" (clicável)
+ * - Dropdown de filtro (Todos, Alunos, Professores, Gestores)
+ * - Grid 1 coluna com 6 UserCards
+ * - Footer
+ * 
+ * Educational context: Responsável acessando pelo celular para escolher perfil.
+ */
+export const Mobile = {
+  parameters: {
+    viewport: { defaultViewport: 'mobile1' }
+  },
+  render: () => `
+    ${styles}
+    <style>
+    .navbar-container { padding: 8px 12px; }
+    .btn-how-to-play span:last-child { display: none; }
+    .cards-grid { grid-template-columns: 1fr; }
+    </style>
+
+    <!-- Navbar Mobile -->
+    <div class="navbar-container">
+      <div class="navbar-column"></div>
+      <div class="navbar-column" style="display: flex; justify-content: center;">
+        <div class="logo-container">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='35' viewBox='0 0 100 35'%3E%3Ctext x='5' y='25' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%236E63E8'%3EEducacross%3C/text%3E%3C/svg%3E" alt="Logo" />
+        </div>
+      </div>
+      <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 8px;">
+        <button class="btn-how-to-play">
+          <span>🎮</span>
+        </button>
+        <div class="user-dropdown">
+          <div class="user-avatar">MN</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Mobile -->
+    <div style="padding: 12px;">
+      <!-- Hero -->
+      <div class="hero-card" style="padding: 20px;">
+        <h1 style="font-size: 24px;">Seja bem-vindo(a)!</h1>
+      </div>
+
+      <!-- Convites Mobile -->
+      <div class="invites-card-mobile">
+        <div class="invites-icon">📬</div>
+        <div class="invites-text">Você tem novos convites!</div>
+      </div>
+
+      <!-- Filtro Mobile -->
+      <div class="filter-dropdown-mobile">
+        <span class="filter-text">Todos</span>
+        <span style="color: #6E63E8;">▼</span>
+      </div>
+
+      <!-- Cards Grid Mobile -->
+      <div class="cards-grid">
+        <!-- Aluno 1 -->
+        <div class="user-card">
+          <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3Cellipse cx=%2740%27 cy=%2755%27 rx=%2725%27 ry=%2730%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #4DD9F5;">
+            <span class="user-badge">Aluno</span>
+            <span class="settings-icon">⚙️</span>
+          </div>
+          <div class="user-card-body">
+            <h2 class="user-name">Fabio G5</h2>
+            <div class="user-info">
+              <p>Colégio Nova Jornada</p>
+              <p>G5 - Manhã <span class="class-badge">2º Ano</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aluno 2 -->
+        <div class="user-card">
+          <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3Cellipse cx=%2740%27 cy=%2755%27 rx=%2725%27 ry=%2730%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #5DADE2;">
+            <span class="user-badge">Aluno</span>
+            <span class="settings-icon">⚙️</span>
+          </div>
+          <div class="user-card-body">
+            <h2 class="user-name">Alice 5º</h2>
+            <div class="user-info">
+              <p>Colégio Nova Jornada</p>
+              <p>5º Ano A - Tarde <span class="class-badge">5º Ano</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professor -->
+        <div class="user-card">
+          <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2718%27 fill=%27%23FFE8A3%27/%3E%3Cellipse cx=%2740%27 cy=%2758%27 rx=%2728%27 ry=%2725%27 fill=%27%23fff%27/%3E%3C/svg%3E') center center no-repeat, #7F6CC3;">
+            <span class="user-badge">Professor</span>
+          </div>
+          <div class="user-card-body">
+            <h2 class="user-name">Colégio Nova Jornada</h2>
+            <div class="classes-wrapper">
+              <span class="class-tag">1º Ano A - Manhã</span>
+              <span class="class-more">+78</span>
+            </div>
+            <div class="stats-section">
+              <p class="stat-label">Alunos</p>
+              <span class="stat-value">190</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer" style="margin-top: 24px;">
+        © 2026 Educacross. Todos os direitos reservados.
+      </div>
+    </div>
+  `
+};
+
+/**
+ * Story: SemConvites (Sem Painel Direito)
+ * 
+ * Layout desktop sem convites pendentes:
+ * - Navbar completo
+ * - Hero "Seja bem-vindo(a)!"
+ * - Sidebar esquerda com filtros
+ * - Grid 4 colunas (mais espaço sem painel direito)
+ * - 8 UserCards (4 alunos + 4 perfis institucionais)
+ * - Footer
+ * 
+ * Educational context: Usuário sem convites pendentes, grid expandido.
+ */
+export const SemConvites = {
+  render: () => `
+    ${styles}
+    <style>
+    .cards-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    </style>
+
+    <!-- Navbar -->
+    <div class="navbar-container">
+      <div class="navbar-column"></div>
+      <div class="navbar-column" style="display: flex; justify-content: center;">
+        <div class="logo-container">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Ctext x='10' y='28' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%236E63E8'%3EEducacross%3C/text%3E%3C/svg%3E" alt="Logo" />
+        </div>
+      </div>
+      <div class="navbar-column" style="display: flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn-how-to-play">
+          <span>🎮</span>
+          <span>Como Jogar?</span>
+        </button>
+        <div class="user-dropdown">
+          <div class="user-avatar">MN</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="layout-container">
+      <!-- Sidebar Left (Filtros) -->
+      <div class="sidebar-left">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Alunos</button>
+        <button class="filter-btn">Professores</button>
+        <button class="filter-btn">Gestores</button>
+      </div>
+
+      <!-- Main Content (Expandido) -->
+      <div class="main-content" style="max-width: 100%;">
+        <!-- Hero -->
+        <div class="hero-card">
+          <h1>Seja bem-vindo(a)!</h1>
+        </div>
+
+        <!-- Cards Grid Expandido -->
+        <div class="cards-grid">
+          <!-- 8 UserCards -->
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3C/svg%3E') center center no-repeat, #4DD9F5;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Fabio G5</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23FFB84D%27/%3E%3C/svg%3E') center center no-repeat, #5DADE2;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Fabio 2º Ano</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2718%27 fill=%27%23FFB8E1%27/%3E%3C/svg%3E') center center no-repeat, #FF8FB1;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Alice 5º</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2720%27 fill=%27%23B19CD9%27/%3E%3C/svg%3E') center center no-repeat, #8B7AB8;">
+              <span class="user-badge">Aluno</span>
+              <span class="settings-icon">⚙️</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Alice 6º Ano</h2>
+              <div class="user-info">
+                <p>Colégio Nova Jornada</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2730%27 r=%2718%27 fill=%27%23FFE8A3%27/%3E%3C/svg%3E') center center no-repeat, #7F6CC3;">
+              <span class="user-badge">Professor</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Colégio Nova Jornada</h2>
+              <div class="stats-section">
+                <p class="stat-label">Alunos</p>
+                <span class="stat-value">190</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2732%27 r=%2720%27 fill=%27%23FF6B9D%27/%3E%3C/svg%3E') center center no-repeat, #F05FF3;">
+              <span class="user-badge">Coordenador</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Colégio Nova Jornada</h2>
+              <div class="stats-section">
+                <p class="stat-label">Alunos</p>
+                <span class="stat-value">190</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2732%27 r=%2720%27 fill=%27%23FF6E6E%27/%3E%3C/svg%3E') center center no-repeat, #FE6E6E;">
+              <span class="user-badge">Diretor</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Colégio Nova Jornada</h2>
+              <div class="stats-section">
+                <p class="stat-label">Alunos</p>
+                <span class="stat-value">190</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-card">
+            <div class="user-card-header" style="background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2780%27 height=%2780%27%3E%3Ccircle cx=%2740%27 cy=%2732%27 r=%2720%27 fill=%27%2300BDB8%27/%3E%3C/svg%3E') center center no-repeat, #00BDB8;">
+              <span class="user-badge">Gestor de Redes</span>
+            </div>
+            <div class="user-card-body">
+              <h2 class="user-name">Rede Produto</h2>
+              <div class="stats-section">
+                <p class="stat-label">Escolas</p>
+                <span class="stat-value">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          © 2026 Educacross. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  `
+};

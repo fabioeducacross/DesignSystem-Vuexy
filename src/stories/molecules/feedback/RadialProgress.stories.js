@@ -6,7 +6,7 @@
  */
 
 export default {
-  title: 'Molecules/Feedback/RadialProgress',
+  title: 'Vuexy/Molecules/Feedback/RadialProgress',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -38,6 +38,11 @@ temp/
 dist/
 build/
 
+# Test outputs
+playwright-report/
+test-results/
+*.old.js
+
 # Vuexy template source (large files excluded, structure tracked)
 vuexy-template-source/html-version/**
 !vuexy-template-source/html-version/.gitkeep

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Data Display/Pagination',
+  title: 'Vuexy/Organisms/Data Display/Pagination',
   tags: ['autodocs'],
   parameters: {
     docs: {

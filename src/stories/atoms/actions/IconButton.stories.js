@@ -4,7 +4,7 @@
  */
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 export default {
-  title: 'Atoms/Actions/IconButton',
+  title: 'Vuexy/Atoms/Actions/IconButton',
   tags: ['autodocs'],
   parameters: { docs: { description: { component: '# Icon Button - Botão apenas com ícone do Vuexy' } } },
   argTypes: {

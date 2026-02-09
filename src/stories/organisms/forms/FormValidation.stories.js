@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Organisms/Forms/FormValidation',
+  title: 'Vuexy/Organisms/Forms/FormValidation',
   tags: ['autodocs'],
   parameters: {
     docs: {

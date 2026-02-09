@@ -5,7 +5,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Navigation/PaginationItem',
+  title: 'Vuexy/Molecules/Navigation/PaginationItem',
   tags: ['autodocs'],
   parameters: { 
     docs: { 

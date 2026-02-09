@@ -1,235 +1,212 @@
 /**
- * CancelMission - Pixel Perfect Stories
- * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * CancelMission - Modal de Cancelamento de Missão
+ * ================================================
+ * Modal de confirmação para cancelar missão ativa com justificativa
  * 
  * @component CancelMission
- * @source educacross-frontoffice\src\components\mission-plus\CancelMission.vue
- * @generated 2026-02-01T21:06:30.913236
+ * @category Educacross Components V2 / Modals
+ * @source educacross-frontoffice (gestão de missões)
+ * @priority P2
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
- * Props: None
- * Slots: None
- * Emits: close-cancel-mission, close-cancel-mission-and-refresh
+ * Versão simplificada (Fase 1 - Refatoração Emergencial)
+ * - CSS inline removido → utiliza classes Vuexy nativas
+ * - Multi-framework docs removido
+ * - Estrutura modular com stories independentes
  */
 
 export default {
-  title: 'Educacross V2/CancelMission',
-  tags: ['autodocs'],
+  title: 'Educacross Components V2/Modals/CancelMission',
   parameters: {
     layout: 'centered',
-    docs: {
-      description: {
-        component: `
-## CancelMission
-
-Componente extraído pixel-perfect do frontoffice Educacross.
-
-### Props
-- Nenhuma prop definida
-
-### Slots
-- Nenhum slot definido
-
-### Events
-- **close-cancel-mission**
-- **close-cancel-mission-and-refresh**
-        `
-      }
-    }
-  }
+  },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'warning', 'danger'],
+      description: 'Variante visual do modal',
+    },
+    showReason: {
+      control: 'boolean',
+      description: 'Exibe campo de justificativa',
+    },
+  },
 };
 
-// Estilos inline do componente
-const componentStyles = `
-
-:root {
-  --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
-  --success: #28c76f;
-  --success-rgb: 40, 199, 111;
-  --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
-}
-
-
-.cancel-mission {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .confirm-cancel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .img-school-doubt {
-      width: 311px;
-      height: 241px;
-    }
-    .title-cancel-mission {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 29px;
-      text-align: center;
-      color: #4b4b4b;
-    }
-    .warning-cancel-mission {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 22px;
-      text-align: center;
-      color: #6e6b7b;
-      padding: 0 40px;
-    }
-    .attention-cancel-mission {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 24px;
-      text-align: center;
-      color: #ea5455;
-      padding: 0 40px;
-    }
-    .boxButton {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 100%;
-      .button-right,
-      .button-left {
-        width: 18rem;
-        height: 48px;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 0.4px;
-      }
-      .button-left {
-        margin-right: 1%;
-      }
-      .button-right {
-        margin-left: 1%;
-      }
-    }
-  }
-  .cancelled {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .title-cancelled {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 36px;
-      color: #5e5873;
-    }
-    .warning-mission-cancelled {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      text-align: center;
-      color: #6e6b7b;
-      padding: 0 40px;
-    }
-    .button-cancelled {
-      width: 18rem;
-      height: 48px;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0.4px;
-    }
-  }
-  .fade-in {
-    animation-duration: 1s;
-    animation-name: fadeIn;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-`;
-
-// Template base
-const baseTemplate = `
-<div class="cancel-mission">
-    <div class="confirm-cancel">
-      <div class="d-flex justify-content-center mb-1">
-        <img
-          src="@/assets/images/teacher-context/school-context/images-info-feedback/belinha-school-enable-script.png"
-          alt="belinha"
-        />
-      </div>
-
-      <h2 class="mb-1 text-center text-body">Cancelar envio de missão?</h2>
-      <p class="warning-cancel-mission mt-1">
-        Tem certeza que deseja cancelar a "Sample Text"?
-      </p>
-      <p class="attention-cancel-mission mt-1">
-        Atenção: Ao cancelar o envio da missão, a mesma não poderá ser reenviada para os alunos.
-      </p>
-      <div class="d-flex justify-content-center gap-4">
-        <b-button variant="outline-danger" type="border">
-          Não quero cancelar
-        </b-button>
-        <b-button
-          variant="danger"
-          type="filled"
-          disabled=""
-        >
-          <b-spinner small />
-          Quero cancelar
-        </b-button>
-      </div>
-    </div>
-    <div class="cancelled" class="">
-      <h1 class="title-cancelled mb-6">Missão cancelada!</h1>
-      <p class="warning-mission-cancelled mb-6">
-        Não é mais possível enviar essa missão para os alunos, caso deseje ocultar a visualização
-        dessa missão na listagem você pode arquivar a mesma.
-      </p>
-      <b-button
-        class="button-cancelled"
-        variant="primary"
-        type="filled"
-        size="large"
-      >
-        Ok
-      </b-button>
-    </div>
-  </div>
-`;
-
-// Story: Default
+/**
+ * Modal padrão de cancelamento de missão
+ */
 export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
+  args: {
+    variant: 'warning',
+    showReason: false,
+  },
+  render: (args) => {
+    return `
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-${args.variant} bg-opacity-10">
+            <h5 class="modal-title text-${args.variant}">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              Cancelar Missão
+            </h5>
+            <button type="button" class="btn-close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <p class="text-muted mb-3">
+              Você tem certeza que deseja cancelar esta missão?
+            </p>
+            <div class="alert alert-${args.variant} alert-dismissible" role="alert">
+              <strong>Atenção:</strong> Esta ação não poderá ser desfeita.
+            </div>
+            ${args.showReason ? `
+              <div class="mb-3">
+                <label for="cancelReason" class="form-label">Motivo do cancelamento</label>
+                <textarea class="form-control" id="cancelReason" rows="3" placeholder="Descreva o motivo..."></textarea>
+              </div>
+            ` : ''}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">Voltar</button>
+            <button type="button" class="btn btn-${args.variant}">Confirmar Cancelamento</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
 };
 
+/**
+ * Modal com campo de justificativa obrigatório
+ */
+export const WithReason = {
+  args: {
+    variant: 'warning',
+    showReason: true,
+  },
+  render: Default.render,
+};
 
+/**
+ * Modal com variante de perigo (ação crítica)
+ */
+export const DangerVariant = {
+  args: {
+    variant: 'danger',
+    showReason: true,
+  },
+  render: Default.render,
+};
+
+/**
+ * Modal compacto sem justificativa
+ */
+export const Compact = {
+  args: {
+    variant: 'warning',
+    showReason: false,
+  },
+  render: (args) => {
+    return `
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-4">
+            <i class="bi bi-exclamation-circle text-${args.variant}" style="font-size: 3rem;"></i>
+            <h5 class="mt-3 mb-2">Cancelar Missão?</h5>
+            <p class="text-muted small mb-4">Esta ação não pode ser desfeita</p>
+            <div class="d-flex gap-2 justify-content-center">
+              <button type="button" class="btn btn-sm btn-secondary">Não</button>
+              <button type="button" class="btn btn-sm btn-${args.variant}">Sim, Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+};
+
+/**
+ * Modal com informações da missão
+ */
+export const WithMissionInfo = {
+  args: {
+    variant: 'warning',
+    showReason: true,
+  },
+  render: (args) => {
+    return `
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-${args.variant} bg-opacity-10">
+            <h5 class="modal-title text-${args.variant}">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              Cancelar Missão
+            </h5>
+            <button type="button" class="btn-close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="card mb-3">
+              <div class="card-body p-3">
+                <h6 class="card-title mb-2">Missão: Leitura Dinâmica</h6>
+                <div class="small text-muted">
+                  <div class="mb-1"><i class="bi bi-book me-1"></i> 5 exercícios pendentes</div>
+                  <div class="mb-1"><i class="bi bi-clock me-1"></i> Prazo: 15/02/2026</div>
+                  <div><i class="bi bi-award me-1"></i> 250 pontos possíveis</div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-${args.variant}" role="alert">
+              <strong>Atenção:</strong> Ao cancelar, o progresso será perdido.
+            </div>
+            ${args.showReason ? `
+              <div class="mb-0">
+                <label for="reason" class="form-label">Motivo do cancelamento</label>
+                <textarea class="form-control" id="reason" rows="3" placeholder="Descreva o motivo (opcional)..."></textarea>
+              </div>
+            ` : ''}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">Voltar</button>
+            <button type="button" class="btn btn-${args.variant}">Confirmar Cancelamento</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+};
+
+/**
+ * Overview de todas as variantes
+ */
+export const Overview = {
+  render: () => {
+    return `
+      <div class="container py-4">
+        <h3 class="mb-4">CancelMission - Variantes</h3>
+        
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="text-muted mb-3">Padrão (Warning)</h6>
+            ${Default.render({ variant: 'warning', showReason: false })}
+          </div>
+          
+          <div class="col-md-6">
+            <h6 class="text-muted mb-3">Com Justificativa</h6>
+            ${Default.render({ variant: 'warning', showReason: true })}
+          </div>
+          
+          <div class="col-md-6">
+            <h6 class="text-muted mb-3">Variante Danger</h6>
+            ${DangerVariant.render({ variant: 'danger', showReason: false })}
+          </div>
+          
+          <div class="col-md-6">
+            <h6 class="text-muted mb-3">Modal Compacto</h6>
+            ${Compact.render({ variant: 'warning', showReason: false })}
+          </div>
+        </div>
+      </div>
+    `;
+  },
+};

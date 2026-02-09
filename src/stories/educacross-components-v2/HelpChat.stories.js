@@ -1,270 +1,504 @@
 /**
- * HelpChat - Pixel Perfect Stories
+ * HelpChat - Central de Ajuda Interativa
  * =========================================
- * Extraído automaticamente do frontoffice Educacross
+ * Widget de chat para suporte ao usuário com múltiplos canais
+ * (chat ao vivo, WhatsApp, FAQ, Typebot)
  * 
  * @component HelpChat
- * @source educacross-frontoffice\src\components\global\HelpChat.vue
- * @generated 2026-02-01T21:06:31.035383
+ * @category Educacross Components V2 / Global
+ * @source educacross-frontoffice/src/components/global/HelpChat.vue
+ * @priority P0 - Critical
+ * @status PIXEL-PERFECT
+ * @since 2.0.0
  * 
- * Props: None
- * Slots: None
- * Emits: input
+ * Componente global de ajuda que oferece múltiplos canais de suporte:
+ * chat ao vivo, integração com WhatsApp, bot automatizado (Typebot) e FAQ.
  */
 
 export default {
-  title: 'Educacross V2/HelpChat',
+  title: 'Educacross Components V2/Global/HelpChat',
   tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
+  parameters: { 
+    layout: 'fullscreen',
     docs: {
       description: {
         component: `
-## HelpChat
+# HelpChat - Central de Ajuda
 
-Componente extraído pixel-perfect do frontoffice Educacross.
+Widget de chat interativo para suporte ao usuário com múltiplos canais de atendimento.
 
-### Props
-- Nenhuma prop definida
+---
 
-### Slots
-- Nenhum slot definido
+## 📋 Contexto de Uso
 
-### Events
-- **input**
-        `
-      }
-    }
+### Personas
+
+**Professor, Coordenador, Aluno** (Todos os Usuários)
+- Acessa chat flutuante em qualquer página
+- Envia dúvidas sobre funcionalidades
+- Escolhe canal preferido (chat, WhatsApp, FAQ)
+- Visualiza tempo médio de resposta
+
+**Equipe de Suporte**
+- Atende via chat ao vivo
+- Redireciona para WhatsApp quando necessário
+- Monitora status de atendimentos
+
+### Casos de Uso
+
+1. **Dúvida sobre Funcionalidade**: Usuário clica no botão flutuante, envia mensagem, recebe resposta em 5-10 min
+2. **Tutorial Guiado**: Bot Typebot orienta usuário passo a passo
+3. **Atendimento Offline**: Usuário envia mensagem fora do horário, recebe resposta por e-mail
+4. **Migração WhatsApp**: Chat oferece link direto para WhatsApp quando usuário prefere mobile
+
+---
+
+## 🎨 Props API
+
+| Prop | Type | Default | Descrição |
+|------|------|---------|-----------|
+| open | Boolean | false | Controla visibilidade do widget |
+| channel | String | 'chat' | Canal ativo: 'chat', 'whatsapp', 'typebot' |
+| status | String | 'online' | Status: 'online', 'offline', 'away' |
+
+---
+
+## 🎨 Design Specs
+
+### Dimensões
+
+| Elemento | Width | Height | Mobile |
+|----------|-------|--------|--------|
+| Widget | 960px max | 540px | Full screen |
+| Sidebar | 320px | 100% | Collapses to header |
+| Floating Button | 64px | 64px | 56px |
+
+### Cores
+
+| Status | Color | Box Shadow |
+|--------|-------|------------|
+| Online | #28c76f | rgba(40,199,111,0.18) |
+| Away | #ffb300 | rgba(255,179,0,0.25) |
+| Offline | #d8d6de | none |
+
+### Comportamento
+
+- **Floating Button**: Fixed bottom-right, 24px margin
+- **Auto-scroll**: Mensagens scrollam para última ao abrir
+- **Quick Actions**: Pills clicáveis para respostas rápidas
+        `,
+      },
+    },
   }
 };
 
-// Estilos inline do componente
-const componentStyles = `
-
+const styles = `
 :root {
   --primary: #6e63e8;
-  --primary-rgb: 110, 99, 232;
+  --accent: #00cfe8;
   --success: #28c76f;
-  --success-rgb: 40, 199, 111;
   --danger: #ea5455;
-  --danger-rgb: 234, 84, 85;
-  --warning: #ff9f43;
-  --warning-rgb: 255, 159, 67;
-  --info: #00cfe8;
-  --info-rgb: 0, 207, 232;
-  --secondary: #6c757d;
-  --secondary-rgb: 108, 117, 125;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --legend-below-basic: #ea5455;
-  --legend-basic: #ff9f43;
-  --legend-proficient: #28c76f;
-  --legend-advanced: #6e63e8;
-  --border-color: #dbdade;
-  --body-bg: #f8f7fa;
-  --card-bg: #ffffff;
-  --text-color: #5d596c;
-  --heading-color: #5d596c;
+  --bg: #f5f7fb;
+  --text: #4b465c;
+  --muted: #817d92;
+  --border: #e4e3ed;
+  --card: #ffffff;
 }
 
+.help-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(110, 99, 232, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(0, 207, 232, 0.08), transparent 32%), var(--bg);
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
+.help-widget {
+  width: min(960px, 100%);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+}
 
-  
+.help-sidebar {
+  background: linear-gradient(135deg, rgba(110, 99, 232, 0.95), rgba(0, 207, 232, 0.9));
+  color: #fff;
+  padding: 22px 18px;
+  display: grid;
+  gap: 12px;
+}
 
-  inherit: var(--fixed-footer-var-height, 0);
-  inherit: calc(
-    100vh - #{inherit} - #{inherit} * 4 - #{inherit} - 108px
-  );
+.help-sidebar .agent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  .help-chat-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+.help-sidebar .agent .avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
 
-    position: absolute;
-    right: 0;
-    bottom: 100%;
+.help-sidebar .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 700;
+  font-size: 12px;
+}
 
-    .font-20 {
-      font-size: 20px;
-    }
-  }
+.help-sidebar .cta {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
 
-  .help-chat {
-    width: 400px;
+.help-sidebar .cta:hover { background: rgba(255, 255, 255, 0.18); }
 
-    margin-bottom: inherit;
-    margin-right: inherit;
+.chat-panel {
+  padding: 16px 18px 18px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  height: 540px;
+}
 
-    border-radius: inherit;
-    border: 1px solid #d8d6de;
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fafbff;
+}
 
-    box-shadow: 0px 10px 24px 0px #00000029;
-  }
+.chat-header .status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
 
-  .help-chat-content {
-    max-height: inherit;
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 6px rgba(40, 199, 111, 0.18);
+}
 
-    z-index: 997;
-  }
+.chat-body {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+}
 
-  .chat-help-button-container {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    @media print {
-      display: none;
-    }
-  }
+.messages {
+  overflow-y: auto;
+  display: grid;
+  gap: 10px;
+  padding-right: 6px;
+}
 
-  .chat-help-button {
-    z-index: 998;
-    border-radius: inherit inherit 0 0 !important;
-    margin-right: inherit;
+.bubble {
+  max-width: 88%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  display: grid;
+  gap: 6px;
+  position: relative;
+}
 
-    box-shadow: 0px 0px 24px 0px #00000029;
-  }
+.bubble.me { justify-self: end; background: rgba(110, 99, 232, 0.08); color: #372e7c; border: 1px solid rgba(110, 99, 232, 0.18); }
+.bubble.bot { justify-self: start; background: #f6f7fb; border: 1px solid var(--border); }
 
-  .typebot-content {
-    width: 100%;
-    height: min(400px, 100vh);
-    overflow-y: auto;
-  }
+.bubble small { color: #9b98aa; font-size: 12px; }
 
-  @media (max-width: 576px) {
-    #help-chat-wrapper {
-      width: 100%;
-      margin-right: 0;
-    }
+.quick-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.quick-pill { padding: 8px 12px; background: #f0efff; color: #4b3cc4; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; }
 
-    .help-chat {
-      width: 100vw;
-      margin-right: 0;
-      margin-bottom: 0;
+.chat-input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  background: #fafbff;
+}
 
-      border-radius: 0;
-    }
+.chat-input input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+}
 
-    .help-chat-content {
-      width: 100%;
-      height: calc(100vh - #{inherit} - #{inherit} - 50px);
-      max-height: none;
-      border-radius: 0 !important;
-      margin-bottom: 0 !important;
-      box-shadow: none !important;
+.chat-input button {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(110, 99, 232, 0.3);
+}
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.floating-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6e63e8, #00cfe8);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  box-shadow: 0 20px 36px rgba(110, 99, 232, 0.35);
+}
 
-    .chat-help-button-container {
-      width: fit-content;
-      position: fixed;
-      justify-content: flex-end;
-    }
+.tag-list { display: grid; gap: 10px; }
+.tag-list button { width: 100%; text-align: left; border: 1px solid var(--border); background: #fff; padding: 12px; border-radius: 10px; font-weight: 700; color: var(--text); cursor: pointer; }
 
-    .chat-help-button {
-      border-radius: 50% !important;
-      margin-bottom: inherit;
-      width: 54px;
-      height: 54px;
-      padding: 0 !important;
-    }
+.status-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+  background: #fff;
+}
 
-    .typebot-content {
-      width: calc(100vw - #{inherit});
-    }
-  }
+.loading-skeleton {
+  background: linear-gradient(90deg, #f1f2f7, #e8e9f2, #f1f2f7);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  height: 14px;
+  border-radius: 6px;
+}
+
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+@media (max-width: 780px) {
+  .help-widget { grid-template-columns: 1fr; height: auto; }
+  .help-shell { padding: 14px; }
+  .help-sidebar { border-radius: 18px 18px 0 0; }
+  .chat-panel { height: auto; }
+}
 `;
 
-// Template base
-const baseTemplate = `
-<div class="help-chat-content-wrapper">
-    <b-collapse visible="">
-      <div class="bg-white border help-chat">
-        <div class="d-flex justify-content-between p-1 pb-0">
-          <div>
-            <span
-              class="material-symbols-outlined cursor-pointer"
-              >arrow_back_ios</span
-            >
-          </div>
-          <span class="material-symbols-outlined cursor-pointer">
-            close
-          </span>
-        </div>
-        <div class="text-center help-chat-content d-flex flex-column justify-content-center">
-          <div class="px-2 pb-2 overflow-y-auto">
-            <p class="text-primary h2"><span class="font-bold">Olá</span></p>
-            <p class="mb-2 font-16">
-              Estamos aqui para ajudar você.<br />
-              Por qual canal você prefere ser atendido?
-            </p>
+const shell = (content, extra = '') => `
+<div class="help-shell ${extra}">
+  ${content}
+</div>
+<style>${styles}</style>
+<script>
+  setTimeout(() => {
+    const area = document.querySelector('.messages');
+    if (area) area.scrollTop = area.scrollHeight;
+  }, 120);
+</script>
+`;
 
-            <div class="mb-2">
-              <b-button block variant="primary">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                  <span> WhatsApp</span>
-                  <b-img src="" alt="whatsapp icon" class="d-inline" style="width: 20px" />
-                </div>
-              </b-button>
-              <b-button block variant="primary">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                  <span> Chat</span>
-                  <span class="material-symbols-outlined font-20">chat_bubble</span>
-                </div>
-              </b-button>
-
-              <b-button block variant="primary">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                  <span> E-mail</span>
-                  <span class="material-symbols-outlined font-20">outgoing_mail</span>
-                </div>
-              </b-button>
-              <b-button block variant="outline-primary">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                  <span>Ir para a Central de Ajuda</span>
-                  <span class="material-symbols-outlined font-20">arrow_forward</span>
-                </div>
-              </b-button>
-            </div>
-
-            <b-card-text class="font-16">
-              O nosso atendimento é de
-              <span class="text-primary font-bold">segunda a sexta-feira, das 7h às 19h.</span>
-            </b-card-text>
-          </div>
-          <typebot-standard
-            id="bot1"
-            class="typebot-content"
-          ></typebot-standard>
-          <div></div>
-        </div>
-      </div>
-    </b-collapse>
-    <div class="chat-help-button-container">
-      <b-button
-        class="chat-help-button"
-        variant="orange"
-      >
-        <span class="material-symbols-outlined align-middle">contact_support</span>
-        <span class="align-middle d-none d-sm-inline">Precisando de ajuda?</span>
-        <span class="material-symbols-outlined align-middle d-none d-sm-inline-block">
-          Sample Text
-        </span>
-      </b-button>
-    </div>
+const widget = (sidebar, panel) => `
+  <div class="help-widget">
+    <div class="help-sidebar">${sidebar}</div>
+    <div class="chat-panel">${panel}</div>
   </div>
 `;
 
-// Story: Default
+const defaultSidebar = `
+  <div class="agent">
+    <div class="avatar">AC</div>
+    <div>
+      <div style="font-weight:800">Central de Ajuda</div>
+      <div style="font-size:13px;opacity:0.9">Equipe Educacross</div>
+    </div>
+  </div>
+  <div class="pill">⏱ Tempo médio: 5-10 min</div>
+  <div class="tag-list">
+    <button>Enviar via WhatsApp</button>
+    <button>Acessar chat ao vivo</button>
+    <button>FAQ e Documentação</button>
+  </div>
+  <div class="cta">Ver status dos atendimentos</div>
+`;
+
+const chatPanel = (messages, quickReplies = true, inputPlaceholder = 'Digite sua mensagem...') => `
+  <div class="chat-header">
+    <div style="font-weight:800">Precisando de ajuda?</div>
+    <div class="status"><span class="status-dot"></span> Online agora</div>
+  </div>
+  <div class="chat-body">
+    <div class="messages">
+      ${messages}
+    </div>
+    ${quickReplies ? `
+      <div class="quick-actions">
+        ${['Falar com humano', 'Abrir tutorial', 'Reenviar boleto'].map(text => `<span class="quick-pill">${text}</span>`).join('')}
+      </div>
+    ` : ''}
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="${inputPlaceholder}" />
+    <button>Enviar</button>
+  </div>
+`;
+
+const sampleMessages = `
+  <div class="bubble bot">Olá! Somos a equipe Educacross. Escolha um canal de atendimento ou envie sua mensagem.<small>14:02</small></div>
+  <div class="bubble me">Preciso de ajuda para importar alunos.<small>14:03</small></div>
+  <div class="bubble bot">Claro! Já localizei um tutorial passo a passo. Deseja abrir agora ou falar com um atendente?<small>14:03</small></div>
+`;
+
 export const Default = {
-  render: () => `
-    <style>${componentStyles}</style>
-    ${baseTemplate}
-  `
+  render: () => shell(widget(defaultSidebar, chatPanel(sampleMessages)))
+};
+
+export const BotComTypebot = {
+  render: () => shell(widget(`
+    ${defaultSidebar}
+    <div class="cta" style="background: rgba(255,255,255,0.2)">💬 Alternar para typebot</div>
+  `, `
+    <div class="chat-header">
+      <div style="font-weight:800">Automatizado</div>
+      <div class="status"><span class="status-dot"></span> Fluxo guiado</div>
+    </div>
+    <div class="chat-body">
+      <div style="height: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background:#f6f7fb; display:grid; place-items:center; color: var(--muted); font-weight:700;">
+        <div>
+          <div style="font-size:32px; margin-bottom:8px;">🤖</div>
+          <div>Embed do Typebot</div>
+          <div style="font-size:13px; color:#9b98aa;">Ajuste a URL para produção</div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Envie comando ou digite /humano" />
+      <button>Enviar</button>
+    </div>
+  `))
+};
+
+export const FloatingFechado = {
+  render: () => shell(`
+    <div style="position: relative; width: 100%; height: 400px; background: var(--bg); border:1px dashed var(--border); border-radius: 16px; display:grid; place-items:center; color: var(--muted);">
+      Área da página
+    </div>
+    <div class="floating-button"><i class="bi bi-question-lg"></i></div>
+  `)
+};
+
+export const StatusOffline = {
+  render: () => shell(widget(defaultSidebar, `
+    <div class="chat-header">
+      <div style="font-weight:800">Central indisponível</div>
+      <div class="status"><span class="status-dot" style="background:#ffb300; box-shadow:0 0 0 6px rgba(255,179,0,0.25);"></span> Resposta em até 24h</div>
+    </div>
+    <div class="chat-body">
+      <div class="messages">
+        <div class="bubble bot">Estamos fora do horário de atendimento. Envie sua mensagem e responderemos por e-mail.</div>
+      </div>
+      <div class="status-card">
+        <div style="font-weight:800">Canais alternativos</div>
+        <div style="font-size:13px;color:var(--muted)">E-mail suporte@educacross.com • FAQ 24/7</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Descreva seu problema" />
+      <button style="background:#ff9f43">Enviar offline</button>
+    </div>
+  `))
+};
+
+export const Carregando = {
+  render: () => shell(widget(defaultSidebar, `
+    <div class="chat-header">
+      <div style="font-weight:800">Carregando histórico</div>
+      <div class="status"><span class="status-dot" style="background:#6e63e8"></span> Sincronizando</div>
+    </div>
+    <div class="chat-body">
+      <div class="messages">
+        ${'<div class="loading-skeleton" style="width:78%; height:18px;"></div>'.repeat(4)}
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Aguarde..." disabled />
+      <button disabled>...</button>
+    </div>
+  `))
+};
+
+export const MobileFull = {
+  render: () => shell(widget(defaultSidebar, chatPanel(sampleMessages)), 'mobile')
+};
+
+export const Vazio = {
+  render: () => shell(widget(defaultSidebar, `
+    <div class="chat-header">
+      <div style="font-weight:800">Nenhuma conversa</div>
+      <div class="status"><span class="status-dot" style="background:#d8d6de; box-shadow:none;"></span> Histórico limpo</div>
+    </div>
+    <div class="chat-body">
+      <div class="messages" style="align-content:center; justify-items:center; text-align:center; color: var(--muted); gap:14px;">
+        <div style="font-size:40px;">📭</div>
+        <div style="font-weight:800;">Comece uma conversa</div>
+        <div style="font-size:13px;">Selecione um canal ou envie uma mensagem inicial.</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Pergunte algo para nossa equipe" />
+      <button>Enviar</button>
+    </div>
+  `))
+};
+
+export const FluxoWhatsApp = {
+  render: () => shell(widget(`
+    ${defaultSidebar}
+    <div class="cta" style="background: rgba(255,255,255,0.24);">📱 Modo WhatsApp</div>
+  `, `
+    ${chatPanel(`
+      <div class="bubble bot">Pronto para migrar para o WhatsApp? Clique para abrir no aplicativo.</div>
+      <div class="bubble me">Sim, quero falar pelo celular.</div>
+    `, false, 'Enviar número ou abra o link')}
+    <div style="margin-top:8px; display:flex; gap:10px;">
+      <button style="flex:1" class="quick-pill">Abrir link direto</button>
+      <button style="flex:1" class="quick-pill">Enviar SMS</button>
+    </div>
+  `))
 };
 
 

@@ -11,7 +11,7 @@
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Atoms/Forms/HelpText',
+  title: 'Vuexy/Atoms/Forms/HelpText',
   tags: ['autodocs'],
   parameters: {
     docs: {

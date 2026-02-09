@@ -170,8 +170,6 @@ export default {
   }
 </style>
 
-# ComponentName
-
 Descrição funcional curta do componente.
 
 ---

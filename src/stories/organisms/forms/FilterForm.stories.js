@@ -31,7 +31,7 @@
  */
 
 export default {
-  title: 'Organisms/Forms/FilterForm',
+  title: 'Vuexy/Organisms/Forms/FilterForm',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

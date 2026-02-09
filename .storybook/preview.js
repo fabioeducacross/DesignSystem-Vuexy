@@ -4,6 +4,7 @@
 if (typeof window !== 'undefined') {
   const cssFiles = [
     '/vuexy/css/core.css',
+    '/vuexy/fonts/bootstrap-icons.css',
     // Add more CSS files as needed for specific components
   ];
 
@@ -97,10 +98,12 @@ const preview = {
     (Story, context) => {
       const wrapper = document.createElement('div');
       
-      // Não aplicar decorator em páginas/templates completos
+      // Não aplicar decorator em páginas/templates completos ou stories de documentação
       const isFullPage = context.title.includes('Templates') || 
                          context.title.includes('Pages') ||
-                         context.name === 'Interactive';
+                         context.name === 'Interactive' ||
+                         context.name === 'Documentation' ||
+                         context.viewMode === 'docs';
       
       if (isFullPage) {
         // Para páginas completas, retorna sem wrapper
@@ -108,6 +111,14 @@ const preview = {
         if (typeof story === 'string') {
           const container = document.createElement('div');
           container.innerHTML = story;
+          
+          // Detecta se é uma doc-page para aplicar classe no body
+          if (container.querySelector('.doc-page')) {
+            setTimeout(() => {
+              document.body?.classList.add('sb-doc-page-active');
+            }, 0);
+          }
+          
           return container;
         }
         return story;

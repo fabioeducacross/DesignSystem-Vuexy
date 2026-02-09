@@ -11,7 +11,7 @@
 import { formatHtmlSnippet } from '../../_helpers/snippets';
 
 export default {
-  title: 'Molecules/Forms/TagInput',
+  title: 'Vuexy/Molecules/Forms/TagInput',
   tags: ['autodocs'],
   parameters: {
     docs: {
