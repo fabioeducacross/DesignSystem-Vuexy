@@ -1,0 +1,14 @@
+{
+  "name": "educacross-design-system-mcp",
+  "version": "1.1.0",
+  "description": "MCP Server para expor o Design System Educacross V2 para IAs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "axios": "^1.7.9"
+  }
+}
