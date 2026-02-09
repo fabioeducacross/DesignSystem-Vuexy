@@ -124,13 +124,15 @@ describe('Vue Types', () => {
 });
 
 describe('MCP Types', () => {
-  it('deveria ter 5 tools definidas', () => {
-    expect(MCP_TOOLS).toHaveLength(5);
+  it('deveria ter 7 tools definidas', () => {
+    expect(MCP_TOOLS).toHaveLength(7);
     expect(MCP_TOOLS[0].name).toBe('listComponents');
     expect(MCP_TOOLS[1].name).toBe('getComponent');
     expect(MCP_TOOLS[2].name).toBe('searchComponents');
     expect(MCP_TOOLS[3].name).toBe('getStats');
     expect(MCP_TOOLS[4].name).toBe('getComponentsByCategory');
+    expect(MCP_TOOLS[5].name).toBe('getCacheStats');
+    expect(MCP_TOOLS[6].name).toBe('getSearchIndexStats');
   });
   
   it('deveria criar erro MCP', () => {

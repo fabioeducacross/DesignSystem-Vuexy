@@ -164,6 +164,12 @@ async function main() {
           case 'getComponentsByCategory':
             return await handleGetComponentsByCategory(args);
           
+          case 'getCacheStats':
+            return await handleGetCacheStats(args);
+          
+          case 'getSearchIndexStats':
+            return await handleGetSearchIndexStats(args);
+          
           default:
             throw new Error(`Unknown tool: ${name}`);
         }
@@ -296,7 +302,7 @@ async function handleGetComponent(args: unknown) {
       content: [
         {
           type: 'text',
-          text: JSON.stringify(component, null, 2)
+          text: JSON.stringify({ component }, null, 2)
         }
       ]
     };
@@ -413,14 +419,13 @@ async function handleGetStats(_args: unknown) {
         {
           type: 'text',
           text: JSON.stringify({
-            components: {
-              total: components.length,
-              byCategory,
-              byPriority
-            },
+            totalComponents: components.length,
+            totalStories: components.reduce((sum, c) => sum + c.stats.storiesCount, 0),
+            categoryCounts: byCategory,
+            priorityCounts: byPriority,
+            topTags,
             cache: cacheStats,
-            search: searchStats,
-            topTags
+            search: searchStats
           }, null, 2)
         }
       ]
@@ -479,6 +484,66 @@ async function handleGetComponentsByCategory(args: unknown) {
     throw createMCPError(
       MCPErrorCode.INTERNAL_ERROR,
       'Failed to get components by category',
+      { error: String(error) }
+    );
+  }
+}
+
+/**
+ * getCacheStats - Obtém estatísticas do cache
+ */
+async function handleGetCacheStats(_args: unknown) {
+  const timer = new Timer('handleGetCacheStats');
+  
+  try {
+    const stats = componentCache.getStats();
+    
+    const elapsed = timer.end();
+    logger.info(`getCacheStats completed in ${elapsed}ms`);
+    
+    return {
+      content: [
+        {
+          type: 'text',
+          text: JSON.stringify(stats, null, 2)
+        }
+      ]
+    };
+  } catch (error) {
+    logger.error('handleGetCacheStats error:', error);
+    throw createMCPError(
+      MCPErrorCode.INTERNAL_ERROR,
+      'Failed to get cache stats',
+      { error: String(error) }
+    );
+  }
+}
+
+/**
+ * getSearchIndexStats - Obtém estatísticas do índice de busca
+ */
+async function handleGetSearchIndexStats(_args: unknown) {
+  const timer = new Timer('handleGetSearchIndexStats');
+  
+  try {
+    const stats = searchIndex.getStats();
+    
+    const elapsed = timer.end();
+    logger.info(`getSearchIndexStats completed in ${elapsed}ms`);
+    
+    return {
+      content: [
+        {
+          type: 'text',
+          text: JSON.stringify(stats, null, 2)
+        }
+      ]
+    };
+  } catch (error) {
+    logger.error('handleGetSearchIndexStats error:', error);
+    throw createMCPError(
+      MCPErrorCode.INTERNAL_ERROR,
+      'Failed to get search index stats',
       { error: String(error) }
     );
   }

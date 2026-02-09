@@ -343,6 +343,22 @@ export const MCP_TOOLS: MCPToolDefinition[] = [
       },
       required: ['category']
     }
+  },
+  {
+    name: 'getCacheStats',
+    description: 'Obtém estatísticas do cache de componentes',
+    inputSchema: {
+      type: 'object',
+      properties: {}
+    }
+  },
+  {
+    name: 'getSearchIndexStats',
+    description: 'Obtém estatísticas do índice de busca',
+    inputSchema: {
+      type: 'object',
+      properties: {}
+    }
   }
 ];
 
