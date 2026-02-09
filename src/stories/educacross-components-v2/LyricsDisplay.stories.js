@@ -19,7 +19,7 @@
  */
 
 export default {
-  title: 'Front-office/Media/LyricsDisplay',
+  title: 'Educacross Components V2/Media/LyricsDisplay',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

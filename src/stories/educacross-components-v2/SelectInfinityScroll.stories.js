@@ -97,7 +97,7 @@
  */
 
 export default {
-  title: 'Front-office/Forms/SelectInfinityScroll',
+  title: 'Educacross Components V2/Forms/SelectInfinityScroll',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

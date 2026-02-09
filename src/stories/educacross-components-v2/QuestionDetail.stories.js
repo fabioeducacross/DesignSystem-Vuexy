@@ -320,7 +320,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Front-office/Evaluations/QuestionDetail',
+  title: 'Educacross Components V2/Evaluations/QuestionDetail',
   tags: ['autodocs'],
   parameters: {
     docs: {

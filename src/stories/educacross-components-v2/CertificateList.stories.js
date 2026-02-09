@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Lists/CertificateList',
+  title: 'Educacross Components V2/Lists/CertificateList',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

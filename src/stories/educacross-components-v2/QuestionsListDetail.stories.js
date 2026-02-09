@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Lists/QuestionsListDetail',
+  title: 'Educacross Components V2/Lists/QuestionsListDetail',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

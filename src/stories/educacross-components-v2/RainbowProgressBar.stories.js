@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/RainbowProgressBar',
+  title: 'Educacross Components V2/Feedback/RainbowProgressBar',
   tags: ['autodocs'],
   parameters: {
     docs: {

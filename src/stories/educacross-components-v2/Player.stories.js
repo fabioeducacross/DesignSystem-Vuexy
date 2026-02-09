@@ -13,7 +13,7 @@
  */
 
 export default {
-  title: 'Front-office/Media/Player',
+  title: 'Educacross Components V2/Media/Player',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

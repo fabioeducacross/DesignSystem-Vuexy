@@ -16,7 +16,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/ProgressBarTopInfo',
+  title: 'Educacross Components V2/Feedback/ProgressBarTopInfo',
   tags: ['autodocs'],
   argTypes: {
     value: {

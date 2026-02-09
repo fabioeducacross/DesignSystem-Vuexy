@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Tables/ListTableRanking',
+  title: 'Educacross Components V2/Tables/ListTableRanking',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

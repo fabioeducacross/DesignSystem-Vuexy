@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/PDF/PDFRoot',
+  title: 'Educacross Components V2/PDF/PDFRoot',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

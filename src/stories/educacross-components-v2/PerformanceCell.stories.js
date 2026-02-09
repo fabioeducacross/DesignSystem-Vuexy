@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Data Display/PerformanceCell',
+  title: 'Educacross Components V2/Data Display/PerformanceCell',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

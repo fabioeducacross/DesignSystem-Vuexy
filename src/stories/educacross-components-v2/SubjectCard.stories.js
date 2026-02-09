@@ -87,7 +87,7 @@
  */
 
 export default {
-  title: 'Front-office/Cards/SubjectCard',
+  title: 'Educacross Components V2/Cards/SubjectCard',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

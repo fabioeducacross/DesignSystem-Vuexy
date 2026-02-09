@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Data Display/ExerciseType',
+  title: 'Educacross Components V2/Data Display/ExerciseType',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Data Display/QuestionStatus',
+  title: 'Educacross Components V2/Data Display/QuestionStatus',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

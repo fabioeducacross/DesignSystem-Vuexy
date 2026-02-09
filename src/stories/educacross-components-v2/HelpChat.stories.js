@@ -16,7 +16,7 @@
  */
 
 export default {
-  title: 'Front-office/Global/HelpChat',
+  title: 'Educacross Components V2/Global/HelpChat',
   tags: ['autodocs'],
   parameters: { 
     layout: 'fullscreen',

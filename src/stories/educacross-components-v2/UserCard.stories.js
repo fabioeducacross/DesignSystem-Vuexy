@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Cards/UserCard',
+  title: 'Educacross Components V2/Cards/UserCard',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

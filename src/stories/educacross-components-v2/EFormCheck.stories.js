@@ -94,7 +94,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: 'Front-office/Forms/EFormCheck',
+  title: 'Educacross Components V2/Forms/EFormCheck',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

@@ -152,7 +152,7 @@ const copyLinkStyles = `
  */
 
 export default {
-  title: 'Front-office/Modals/CopyLink',
+  title: 'Educacross Components V2/Modals/CopyLink',
   parameters: {
     layout: 'fullscreen',
     previewTabs: {

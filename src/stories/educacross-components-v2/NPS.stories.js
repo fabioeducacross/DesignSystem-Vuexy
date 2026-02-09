@@ -17,7 +17,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/NPS',
+  title: 'Educacross Components V2/Feedback/NPS',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

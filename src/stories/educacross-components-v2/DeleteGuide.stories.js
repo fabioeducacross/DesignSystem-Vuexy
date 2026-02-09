@@ -22,7 +22,7 @@ import { getDeleteGuideMascot } from '../_helpers/mascots.js';
  */
 
 export default {
-  title: 'Front-office/Modals/DeleteGuide',
+  title: 'Educacross Components V2/Modals/DeleteGuide',
   parameters: {
     layout: 'fullscreen',
     docs: { page: null },

@@ -30,7 +30,7 @@
  */
 
 export default {
-  title: 'Front-office/Overlays/ModalStudentRoundDetails',
+  title: 'Educacross Components V2/Overlays/ModalStudentRoundDetails',
   tags: ['autodocs'],
   parameters: {
     docs: {

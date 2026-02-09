@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/SelectLocaleNavbar',
+  title: 'Educacross Components V2/Navigation/SelectLocaleNavbar',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

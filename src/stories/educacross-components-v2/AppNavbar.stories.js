@@ -19,7 +19,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/AppNavbar',
+  title: 'Educacross Components V2/Navigation/AppNavbar',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Selects/InfinityScroll',
+  title: 'Educacross Components V2/Selects/InfinityScroll',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

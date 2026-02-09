@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Templates/Template7',
+  title: 'Educacross Components V2/Templates/Template7',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Tables/ListTableSelect',
+  title: 'Educacross Components V2/Tables/ListTableSelect',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

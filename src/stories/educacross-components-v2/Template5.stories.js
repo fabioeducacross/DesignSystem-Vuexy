@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Templates/Template5',
+  title: 'Educacross Components V2/Templates/Template5',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

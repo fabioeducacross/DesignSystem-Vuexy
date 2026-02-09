@@ -18,7 +18,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: 'Front-office/Forms/FilterChip',
+  title: 'Educacross Components V2/Forms/FilterChip',
   tags: ['autodocs'],
   argTypes: {
     label: {

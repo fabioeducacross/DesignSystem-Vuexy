@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/SimpleTab',
+  title: 'Educacross Components V2/SimpleTab',
   tags: ['autodocs'],
   argTypes: {
     variant: {

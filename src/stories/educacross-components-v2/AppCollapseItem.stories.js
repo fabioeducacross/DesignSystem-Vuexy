@@ -15,7 +15,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/AppCollapseItem',
+  title: 'Educacross Components V2/Navigation/AppCollapseItem',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

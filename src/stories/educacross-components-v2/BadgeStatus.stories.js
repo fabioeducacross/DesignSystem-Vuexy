@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/BadgeStatus',
+  title: 'Educacross Components V2/Feedback/BadgeStatus',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Front-office/Data Display/ListTable',
+  title: 'Educacross Components V2/Data Display/ListTable',
   tags: ['autodocs'],
   parameters: {
     docs: {

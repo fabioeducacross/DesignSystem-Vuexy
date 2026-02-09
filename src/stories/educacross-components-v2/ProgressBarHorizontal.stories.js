@@ -191,7 +191,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Front-office/Feedback/ProgressBarHorizontal',
+  title: 'Educacross Components V2/Feedback/ProgressBarHorizontal',
   tags: ['autodocs'],
   parameters: {
     docs: {

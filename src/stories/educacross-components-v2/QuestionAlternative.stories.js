@@ -11,7 +11,7 @@
  */
 
 export default {
-  title: 'Front-office/Evaluations/QuestionAlternative',
+  title: 'Educacross Components V2/Evaluations/QuestionAlternative',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

@@ -17,7 +17,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/SidebarProficiencyInfo',
+  title: 'Educacross Components V2/Navigation/SidebarProficiencyInfo',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Charts/RadialBar',
+  title: 'Educacross Components V2/Charts/RadialBar',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

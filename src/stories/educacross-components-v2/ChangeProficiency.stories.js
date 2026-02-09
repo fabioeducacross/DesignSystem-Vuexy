@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Proficiency/ChangeProficiency',
+  title: 'Educacross Components V2/Proficiency/ChangeProficiency',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };

@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Missions/MissionVisualization',
+  title: 'Educacross Components V2/Missions/MissionVisualization',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };

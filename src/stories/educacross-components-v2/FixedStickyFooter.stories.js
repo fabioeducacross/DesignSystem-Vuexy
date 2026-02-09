@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Layout/FixedStickyFooter',
+  title: 'Educacross Components V2/Layout/FixedStickyFooter',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

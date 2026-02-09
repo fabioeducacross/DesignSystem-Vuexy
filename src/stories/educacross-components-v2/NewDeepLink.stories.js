@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/NewDeepLink',
+  title: 'Educacross Components V2/Navigation/NewDeepLink',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',

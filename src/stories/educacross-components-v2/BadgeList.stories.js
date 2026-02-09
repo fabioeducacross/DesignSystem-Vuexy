@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/BadgeList',
+  title: 'Educacross Components V2/BadgeList',
   tags: ['autodocs'],
   argTypes: {
     variant: {

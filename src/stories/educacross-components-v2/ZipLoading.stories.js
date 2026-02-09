@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/ZipLoading',
+  title: 'Educacross Components V2/Feedback/ZipLoading',
   tags: ['autodocs'],
   parameters: {
     docs: {

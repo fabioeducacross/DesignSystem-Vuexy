@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Front-office/Forms/ButtonWaitAction',
+  title: 'Educacross Components V2/Forms/ButtonWaitAction',
   tags: ['autodocs'],
   parameters: {
     docs: {

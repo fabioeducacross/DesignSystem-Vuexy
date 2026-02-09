@@ -6,7 +6,7 @@ import {
 } from '../_helpers/docTemplate.js';
 
 export default {
-  title: 'Front-office/Modals/AcceptOrRejectAccess',
+  title: 'Educacross Components V2/Modals/AcceptOrRejectAccess',
   parameters: {
     layout: 'fullscreen',
     previewTabs: {

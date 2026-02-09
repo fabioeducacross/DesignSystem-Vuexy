@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/ExpiredMission',
+  title: 'Educacross Components V2/Feedback/ExpiredMission',
   tags: ['autodocs'],
   parameters: {
     docs: {

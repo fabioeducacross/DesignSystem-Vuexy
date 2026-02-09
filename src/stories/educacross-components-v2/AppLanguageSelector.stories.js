@@ -31,7 +31,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/AppLanguageSelector',
+  title: 'Educacross Components V2/Navigation/AppLanguageSelector',
   tags: ['autodocs'],
   parameters: {
     docs: {

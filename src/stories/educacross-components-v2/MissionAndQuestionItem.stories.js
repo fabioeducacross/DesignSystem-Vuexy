@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Mission/MissionAndQuestionItem',
+  title: 'Educacross Components V2/Mission/MissionAndQuestionItem',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

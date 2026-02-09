@@ -30,7 +30,7 @@
  */
 
 export default {
-  title: 'Front-office/Data Display/DescriptorTag',
+  title: 'Educacross Components V2/Data Display/DescriptorTag',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -16,7 +16,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: 'Front-office/Forms/ESelect',
+  title: 'Educacross Components V2/Forms/ESelect',
   tags: ['autodocs'],
   parameters: {
     docs: {

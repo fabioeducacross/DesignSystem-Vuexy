@@ -104,7 +104,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: '📦 Front-office / Forms / EInput',
+  title: 'Educacross Components V2/Forms / EInput',
   tags: [],
   parameters: {
     layout: 'padded',

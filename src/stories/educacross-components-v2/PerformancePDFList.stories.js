@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/PDF/PerformancePDFList',
+  title: 'Educacross Components V2/PDF/PerformancePDFList',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

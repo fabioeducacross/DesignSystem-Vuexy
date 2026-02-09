@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Front-office/Legends/LegendBadgesReadingMeter',
+  title: 'Educacross Components V2/Legends/LegendBadgesReadingMeter',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

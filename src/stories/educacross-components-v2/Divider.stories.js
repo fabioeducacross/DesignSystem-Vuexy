@@ -10,7 +10,7 @@
  */
 
 export default {
-  title: 'Front-office/Layout/Divider',
+  title: 'Educacross Components V2/Layout/Divider',
   tags: ['autodocs'],
   parameters: {
     docs: {

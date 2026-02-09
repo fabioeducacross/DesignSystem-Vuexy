@@ -106,7 +106,7 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  */
 
 export default {
-  title: 'Front-office/Forms/ETextarea',
+  title: 'Educacross Components V2/Forms/ETextarea',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

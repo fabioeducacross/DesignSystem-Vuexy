@@ -15,7 +15,7 @@
  */
 
 export default {
-  title: 'Front-office/StudentAvatar',
+  title: 'Educacross Components V2/StudentAvatar',
   tags: ['autodocs'],
   argTypes: {
     src: {

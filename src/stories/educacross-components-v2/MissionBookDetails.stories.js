@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Missions/MissionBookDetails',
+  title: 'Educacross Components V2/Missions/MissionBookDetails',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

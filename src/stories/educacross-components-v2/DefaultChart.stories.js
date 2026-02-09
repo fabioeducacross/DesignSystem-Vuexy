@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Charts/DefaultChart',
+  title: 'Educacross Components V2/Charts/DefaultChart',
   tags: ['autodocs'],
   parameters: { layout: 'padded' }
 };

@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/PDF/StudentEvidenceReportPDF',
+  title: 'Educacross Components V2/PDF/StudentEvidenceReportPDF',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

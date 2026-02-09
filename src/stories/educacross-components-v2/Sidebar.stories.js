@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/Sidebar',
+  title: 'Educacross Components V2/Navigation/Sidebar',
   tags: ['autodocs'],
   parameters: {
     docs: {

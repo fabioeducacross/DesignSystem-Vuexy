@@ -29,7 +29,7 @@
  */
 
 export default {
-  title: 'Front-office/Tables/ListTableLocalSorting',
+  title: 'Educacross Components V2/Tables/ListTableLocalSorting',
   tags: ['autodocs'],
   parameters: {
     docs: {

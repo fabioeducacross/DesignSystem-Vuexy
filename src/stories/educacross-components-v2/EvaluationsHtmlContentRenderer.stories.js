@@ -207,7 +207,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Front-office/Evaluations/EvaluationsHtmlContentRenderer',
+  title: 'Educacross Components V2/Evaluations/EvaluationsHtmlContentRenderer',
   tags: ['autodocs'],
   parameters: {
     docs: {

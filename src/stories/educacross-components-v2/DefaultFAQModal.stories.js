@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Modals/DefaultFAQModal',
+  title: 'Educacross Components V2/Modals/DefaultFAQModal',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' }
 };

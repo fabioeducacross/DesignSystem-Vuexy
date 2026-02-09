@@ -31,7 +31,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/StudentsDetail',
+  title: 'Educacross Components V2/Feedback/StudentsDetail',
   tags: ['autodocs'],
   parameters: {
     docs: {

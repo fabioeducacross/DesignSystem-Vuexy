@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/AppCollapse',
+  title: 'Educacross Components V2/Navigation/AppCollapse',
   tags: ['autodocs'],
   parameters: {
     docs: {

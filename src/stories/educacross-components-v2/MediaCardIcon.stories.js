@@ -14,7 +14,7 @@
  */
 
 export default {
-  title: 'Front-office/Cards/MediaCardIcon',
+  title: 'Educacross Components V2/Cards/MediaCardIcon',
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',

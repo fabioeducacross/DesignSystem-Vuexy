@@ -13,7 +13,7 @@
  */
 
 export default {
-  title: 'Front-office/Templates/ManageAccountPage',
+  title: 'Educacross Components V2/Templates/ManageAccountPage',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

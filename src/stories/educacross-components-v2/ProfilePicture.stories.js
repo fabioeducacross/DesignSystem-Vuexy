@@ -9,7 +9,7 @@
  */
 
 export default {
-  title: 'Front-office/ProfilePicture',
+  title: 'Educacross Components V2/ProfilePicture',
   tags: ['autodocs'],
   argTypes: {
     src: {

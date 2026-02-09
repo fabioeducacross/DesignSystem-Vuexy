@@ -30,7 +30,7 @@
  */
 
 export default {
-  title: 'Front-office/Navigation/TabRouter',
+  title: 'Educacross Components V2/Navigation/TabRouter',
   tags: ['autodocs'],
   parameters: {
     docs: {

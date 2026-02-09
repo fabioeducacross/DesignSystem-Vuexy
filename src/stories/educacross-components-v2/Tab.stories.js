@@ -182,7 +182,7 @@ const componentStyles = `
 `;
 
 export default {
-  title: 'Front-office/Navigation/Tab',
+  title: 'Educacross Components V2/Navigation/Tab',
   tags: ['autodocs'],
   parameters: {
     docs: {

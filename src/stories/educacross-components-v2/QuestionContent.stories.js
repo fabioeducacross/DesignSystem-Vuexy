@@ -32,7 +32,7 @@
  */
 
 export default {
-  title: 'Front-office/Feedback/QuestionContent',
+  title: 'Educacross Components V2/Feedback/QuestionContent',
   tags: ['autodocs'],
   parameters: {
     docs: {

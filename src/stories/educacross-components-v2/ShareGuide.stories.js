@@ -12,7 +12,7 @@
  */
 
 export default {
-  title: 'Front-office/Mission/ShareGuide',
+  title: 'Educacross Components V2/Mission/ShareGuide',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
