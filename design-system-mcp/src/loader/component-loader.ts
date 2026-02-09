@@ -266,13 +266,17 @@ export class ComponentLoader {
    * Infere prioridade com base em metadata
    */
   private inferPriority(storyData: any, vueData: any): 'P0' | 'P1' | 'P2' {
+    // Validação defensiva
+    const storiesCount = storyData?.stories?.length || 0;
+    const propsCount = vueData?.component?.props?.length || vueData?.props?.length || 0;
+    
     // P0: Componentes com muitas props/stories
-    if (storyData.stories.length >= 5 || vueData?.props.length >= 8) {
+    if (storiesCount >= 5 || propsCount >= 8) {
       return 'P0';
     }
     
     // P1: Componentes médios
-    if (storyData.stories.length >= 2 || vueData?.props.length >= 3) {
+    if (storiesCount >= 2 || propsCount >= 3) {
       return 'P1';
     }
     
