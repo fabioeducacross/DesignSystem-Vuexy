@@ -197,7 +197,7 @@ export class Logger {
    * Formata string de level
    */
   private getLevelString(level: LogLevel): string {
-    const labels = {
+    const labels: Record<number, string> = {
       [LogLevel.DEBUG]: 'DEBUG',
       [LogLevel.INFO]: 'INFO ',
       [LogLevel.WARN]: 'WARN ',

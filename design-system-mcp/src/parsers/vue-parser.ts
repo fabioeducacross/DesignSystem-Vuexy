@@ -5,7 +5,7 @@
  * Extrai props, events, slots e metadados avançados.
  */
 
-import { parse, compileScript } from '@vue/compiler-sfc';
+import { parse } from '@vue/compiler-sfc';
 import ts from 'typescript';
 import { readFile } from 'fs/promises';
 import { 
@@ -49,7 +49,7 @@ export function parseVueCode(code: string, filepath: string): ParsedVueFile {
       parseErrors.forEach(err => {
         errors.push({
           message: err.message,
-          line: err.loc?.start.line,
+          line: (err as any).loc?.start?.line,
           severity: 'error'
         });
       });
@@ -99,7 +99,7 @@ export function parseVueCode(code: string, filepath: string): ParsedVueFile {
       component,
       filepath,
       parsedAt: new Date(),
-      warnings: warnings.length > 0 ? warnings : undefined,
+      warnings: warnings.length > 0 ? warnings : [],
       errors: errors.length > 0 ? errors : undefined
     };
   } catch (error) {

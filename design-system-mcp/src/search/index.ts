@@ -241,14 +241,20 @@ export class SearchIndex {
     // Tags
     component.metadata.tags.forEach(tag => this.addTokens(tokens, tag));
     
-    // Props (nomes)
-    component.props.forEach(prop => this.addTokens(tokens, prop.name));
+    // Props (nomes) - validação defensiva
+    if (component.vue?.props) {
+      component.vue.props.forEach((prop: any) => this.addTokens(tokens, prop.name));
+    }
     
-    // Events (nomes)
-    component.events.forEach(event => this.addTokens(tokens, event.name));
+    // Events (nomes) - validação defensiva
+    if (component.vue?.events) {
+      component.vue.events.forEach((event: any) => this.addTokens(tokens, event.name));
+    }
     
-    // Slots (nomes)
-    component.slots.forEach(slot => this.addTokens(tokens, slot.name));
+    // Slots (nomes) - validação defensiva
+    if (component.vue?.slots) {
+      component.vue.slots.forEach((slot: any) => this.addTokens(tokens, slot.name));
+    }
     
     return tokens;
   }
@@ -315,17 +321,18 @@ export class SearchIndex {
       fields.push('tags');
     }
     
-    if (component.props.some(prop => 
+    // Validação defensiva para evitar erros quando component.vue é undefined
+    if (component.vue?.props?.some((prop: any) => 
         this.normalizeText(prop.name).includes(token))) {
       fields.push('props');
     }
     
-    if (component.events.some(event => 
+    if (component.vue?.events?.some((event: any) => 
         this.normalizeText(event.name).includes(token))) {
       fields.push('events');
     }
     
-    if (component.slots.some(slot => 
+    if (component.vue?.slots?.some((slot: any) => 
         this.normalizeText(slot.name).includes(token))) {
       fields.push('slots');
     }

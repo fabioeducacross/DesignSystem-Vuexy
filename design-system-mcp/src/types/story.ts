@@ -88,7 +88,7 @@ export type StoryDecorator = (story: () => string, context: unknown) => string;
 /**
  * Play function para interações automáticas
  */
-export type PlayFunction = (context: { canvasElement: HTMLElement }) => Promise<void>;
+export type PlayFunction = (context: { canvasElement: any }) => Promise<void>;
 
 /**
  * Metadados de uma story individual

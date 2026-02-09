@@ -5,7 +5,7 @@
  */
 
 import { config as dotenvConfig } from 'dotenv';
-import { PathConfig } from './paths.js';
+import { PathConfig } from '../utils/paths.js';
 
 /**
  * Configuração global do servidor

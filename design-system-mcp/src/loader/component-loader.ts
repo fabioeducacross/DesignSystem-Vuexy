@@ -7,7 +7,8 @@
 
 import { readdir } from 'fs/promises';
 import { join, basename } from 'path';
-import { Component, ComponentStats } from '../types/component.js';
+import { Component } from '../types/component.js';
+import { GetStatsOutput } from '../types/mcp.js';
 import { parseStoryFile } from '../parsers/story-parser.js';
 import { parseVueFile } from '../parsers/vue-parser.js';
 import { logger, Timer } from '../utils/logger.js';
@@ -40,7 +41,7 @@ export interface LoadResult {
   }>;
   
   /** Estatísticas agregadas */
-  stats: ComponentStats;
+  stats: GetStatsOutput;
 }
 
 /**
@@ -111,12 +112,12 @@ export class ComponentLoader {
     // Parse story file
     const storyData = await parseStoryFile(storyFilePath);
     
-    if (!storyData.metadata) {
-      logger.warn(`No metadata in ${storyFilePath}`);
+    if (!storyData.default) {
+      logger.warn(`No default export in ${storyFilePath}`);
       return null;
     }
     
-    if (storyData.errors.length > 0) {
+    if (storyData.errors && storyData.errors.length > 0) {
       logger.warn(`Story file has errors:`, {
         file: storyFilePath,
         errors: storyData.errors
@@ -134,7 +135,7 @@ export class ComponentLoader {
     if (vueFilePath) {
       vueData = await parseVueFile(vueFilePath);
       
-      if (vueData.warnings.length > 0) {
+      if (vueData.warnings && vueData.warnings.length > 0) {
         logger.debug(`Vue file has warnings:`, {
           file: vueFilePath,
           warnings: vueData.warnings
@@ -143,7 +144,7 @@ export class ComponentLoader {
     }
     
     // Extrair categoria do title
-    const category = this.extractCategory(storyData.metadata.title);
+    const category = this.extractCategory(storyData.default.title) as any;
     
     // Montar objeto Component
     const component: Component = {
@@ -151,29 +152,28 @@ export class ComponentLoader {
       category,
       priority: this.inferPriority(storyData, vueData),
       metadata: {
-        title: storyData.metadata.title,
+        title: storyData.default.title,
         description: this.extractDescription(storyData),
-        tags: storyData.metadata.tags || []
+        tags: storyData.default.tags || []
       },
       stories: storyData.stories.map(story => ({
         name: story.name,
         args: story.args,
         parameters: story.parameters
       })),
-      props: vueData?.props || [],
-      events: vueData?.events || [],
-      slots: vueData?.slots || [],
+      vue: vueData?.component || { props: [], events: [], slots: [] },
       paths: {
-        storyFile: storyFilePath,
-        vueFile: vueFilePath || undefined,
-        storybookUrl: this.buildStorybookUrl(storyData.metadata.title)
+        story: storyFilePath,
+        component: vueFilePath || '',
+        storybookUrl: this.buildStorybookUrl(storyData.default.title)
       },
       stats: {
         storiesCount: storyData.stories.length,
-        propsCount: vueData?.props.length || 0,
-        eventsCount: vueData?.events.length || 0,
-        slotsCount: vueData?.slots.length || 0
-      }
+        propsCount: vueData?.component.props.length || 0,
+        eventsCount: vueData?.component.events.length || 0,
+        slotsCount: vueData?.component.slots.length || 0
+      },
+      parsedAt: new Date()
     };
     
     timer.end();
@@ -259,7 +259,7 @@ export class ComponentLoader {
    * Extrai descrição do metadata
    */
   private extractDescription(storyData: any): string | undefined {
-    return storyData.metadata.parameters?.docs?.description?.component;
+    return storyData.default.parameters?.docs?.description?.component;
   }
   
   /**
@@ -295,19 +295,17 @@ export class ComponentLoader {
   /**
    * Calcula estatísticas agregadas
    */
-  private computeStats(components: Component[]): ComponentStats {
+  private computeStats(components: Component[]): GetStatsOutput {
     return {
       totalComponents: components.length,
-      byCategory: this.groupByCategory(components),
-      byPriority: {
+      totalStories: components.reduce((sum, c) => sum + c.stats.storiesCount, 0),
+      categoryCounts: this.groupByCategory(components),
+      priorityCounts: {
         P0: components.filter(c => c.priority === 'P0').length,
         P1: components.filter(c => c.priority === 'P1').length,
         P2: components.filter(c => c.priority === 'P2').length
       },
-      totalStories: components.reduce((sum, c) => sum + c.stats.storiesCount, 0),
-      totalProps: components.reduce((sum, c) => sum + c.stats.propsCount, 0),
-      totalEvents: components.reduce((sum, c) => sum + c.stats.eventsCount, 0),
-      totalSlots: components.reduce((sum, c) => sum + c.stats.slotsCount, 0)
+      topTags: []
     };
   }
   

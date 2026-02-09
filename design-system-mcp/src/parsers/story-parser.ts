@@ -7,6 +7,9 @@
 
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
+
+// @ts-ignore - @babel/traverse types mismatch
+const traverseDefault = traverse.default || traverse;
 import * as t from '@babel/types';
 import { readFile } from 'fs/promises';
 import { 
@@ -50,8 +53,8 @@ export function parseStoryCode(code: string, filepath: string): ParsedStoryFile 
     let defaultExport: StoryFileDefault | null = null;
     const stories: StoryMetadata[] = [];
     
-    traverse(ast, {
-      ExportDefaultDeclaration(path) {
+    traverseDefault(ast, {
+      ExportDefaultDeclaration(path: any) {
         try {
           defaultExport = extractDefaultExport(path.node.declaration);
         } catch (error) {
@@ -63,7 +66,7 @@ export function parseStoryCode(code: string, filepath: string): ParsedStoryFile 
         }
       },
       
-      ExportNamedDeclaration(path) {
+      ExportNamedDeclaration(path: any) {
         try {
           if (path.node.declaration && t.isVariableDeclaration(path.node.declaration)) {
             for (const decl of path.node.declaration.declarations) {

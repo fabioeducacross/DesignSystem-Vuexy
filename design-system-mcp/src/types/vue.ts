@@ -225,8 +225,8 @@ export interface ParsedVueFile {
   /** Timestamp do parse */
   parsedAt: Date;
   
-  /** Warnings (não bloqueiam o parse) */
-  warnings?: Array<{
+  /** Warnings (não bloqueiam o parse) - sempre presente, mesmo que vazio */
+  warnings: Array<{
     message: string;
     line?: number;
     severity: 'info' | 'warning';

@@ -19,7 +19,6 @@ import { logger, Timer } from './utils/logger.js';
 import { 
   MCP_SERVER_NAME, 
   MCP_SERVER_VERSION, 
-  MCP_PROTOCOL_VERSION,
   MCP_TOOLS,
   createMCPError,
   MCPErrorCode
@@ -28,7 +27,7 @@ import { ComponentLoader } from './loader/component-loader.js';
 import { componentCache } from './cache/memory-cache.js';
 import { createCacheInvalidator } from './cache/invalidator.js';
 import { searchIndex } from './search/index.js';
-import { Component, ComponentFilters } from './types/component.js';
+import { ComponentFilters } from './types/component.js';
 
 /**
  * Estado do sistema
@@ -285,7 +284,7 @@ async function handleGetComponent(args: unknown) {
     
     if (!component) {
       throw createMCPError(
-        MCPErrorCode.NOT_FOUND,
+        MCPErrorCode.COMPONENT_NOT_FOUND,
         `Component not found: ${name}`
       );
     }
@@ -366,7 +365,7 @@ async function handleSearchComponents(args: unknown) {
 /**
  * getStats - Obtém estatísticas agregadas
  */
-async function handleGetStats(args: unknown) {
+async function handleGetStats(_args: unknown) {
   const timer = new Timer('handleGetStats');
   
   try {
