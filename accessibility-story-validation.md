@@ -1,0 +1,328 @@
+- generic [ref=e3]:
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - button "Remount component" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - button "Zoom in" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+        - button "Zoom out" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - button "Reset zoom" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - button "Apply a grid to the preview" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+        - button "Change the size of the preview" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+        - button "Enable measure" [ref=e33] [cursor=pointer]:
+          - img [ref=e34]
+        - button "Apply outlines to the preview" [ref=e37] [cursor=pointer]:
+          - img [ref=e38]
+      - generic [ref=e40]:
+        - button "Go full screen" [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+        - link "Open canvas in new tab" [ref=e44] [cursor=pointer]:
+          - /url: iframe.html?id=educacross-components-v2-einput--accessibility
+          - img [ref=e45]
+        - button "Copy canvas link" [ref=e48] [cursor=pointer]:
+          - img [ref=e49]
+    - generic [ref=e56]:
+      - link "Skip to sidebar" [ref=e57] [cursor=pointer]:
+        - /url: "#educacross-components-v2-einput--accessibility"
+      - iframe [ref=e58]:
+        - generic [ref=f1e2]:
+          - heading "Couldn't find story matching 'educacross-components-v2-einput--accessibility'." [level=1] [ref=f1e3]
+          - paragraph [ref=f1e4]: "The component failed to render properly, likely due to a configuration issue in Storybook. Here are some common causes and how you can address them:"
+          - list [ref=f1e5]:
+            - listitem [ref=f1e6]:
+              - strong [ref=f1e7]: Missing Context/Providers
+              - text: ": You can use decorators to supply specific contexts or providers, which are sometimes necessary for components to render correctly. For detailed instructions on using decorators, please visit the"
+              - link "Decorators documentation" [ref=f1e8] [cursor=pointer]:
+                - /url: https://storybook.js.org/docs/writing-stories/decorators
+              - text: .
+            - listitem [ref=f1e9]:
+              - strong [ref=f1e10]: Misconfigured Webpack or Vite
+              - text: ": Verify that Storybook picks up all necessary settings for loaders, plugins, and other relevant parameters. You can find step-by-step guides for configuring"
+              - link "Webpack" [ref=f1e11] [cursor=pointer]:
+                - /url: https://storybook.js.org/docs/builders/webpack
+              - text: or
+              - link "Vite" [ref=f1e12] [cursor=pointer]:
+                - /url: https://storybook.js.org/docs/builders/vite
+              - text: with Storybook.
+            - listitem [ref=f1e13]:
+              - strong [ref=f1e14]: Missing Environment Variables
+              - text: ": Your Storybook may require specific environment variables to function as intended. You can set up custom environment variables as outlined in the"
+              - link "Environment Variables documentation" [ref=f1e15] [cursor=pointer]:
+                - /url: https://storybook.js.org/docs/configure/environment-variables
+              - text: .
+          - code [ref=f1e17]: "- Are you sure a story with that id exists? - Please check your stories field of your main.js config. - Also check the browser console and terminal for error messages."
+  - navigation [ref=e61]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - link "Skip to canvas" [ref=e67] [cursor=pointer]:
+          - /url: "#storybook-preview-wrapper"
+        - link "Storybook" [ref=e69] [cursor=pointer]:
+          - /url: ./
+          - img "Storybook" [ref=e70]
+        - button "Shortcuts" [ref=e76] [cursor=pointer]:
+          - img [ref=e77]
+      - generic [ref=e80]: Search for components
+      - combobox "Search for components" [ref=e82]:
+        - generic:
+          - img
+        - searchbox "Search for components" [ref=e83]
+        - code: ⌃ K
+        - button "Tag filters" [ref=e141] [cursor=pointer]:
+          - img [ref=e142]
+      - generic [ref=e84]:
+        - generic [ref=e144]:
+          - img
+          - generic [ref=e145]:
+            - button "📚 Getting Started" [expanded] [ref=e146] [cursor=pointer]:
+              - img [ref=e148]
+              - text: 📚 Getting Started
+            - button "Collapse" [ref=e150] [cursor=pointer]:
+              - img [ref=e151]
+          - link "Introduction" [ref=e154] [cursor=pointer]:
+            - /url: /?path=/story/📚-getting-started--introduction
+            - img [ref=e156]
+            - text: Introduction
+          - button "Doc Template Example" [ref=e159] [cursor=pointer]:
+            - generic [ref=e160]:
+              - img [ref=e162]
+              - img [ref=e164]
+            - text: Doc Template Example
+          - generic [ref=e166]:
+            - button "Vuexy" [expanded] [ref=e167] [cursor=pointer]:
+              - img [ref=e169]
+              - text: Vuexy
+            - button "Collapse" [ref=e171] [cursor=pointer]:
+              - img [ref=e172]
+          - button "Atoms" [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]:
+              - img [ref=e178]
+              - img [ref=e180]
+            - text: Atoms
+          - button "Foundations" [ref=e183] [cursor=pointer]:
+            - generic [ref=e184]:
+              - img [ref=e186]
+              - img [ref=e188]
+            - text: Foundations
+          - button "Molecules" [ref=e191] [cursor=pointer]:
+            - generic [ref=e192]:
+              - img [ref=e194]
+              - img [ref=e196]
+            - text: Molecules
+          - button "Organisms" [ref=e199] [cursor=pointer]:
+            - generic [ref=e200]:
+              - img [ref=e202]
+              - img [ref=e204]
+            - text: Organisms
+          - button "Templates" [ref=e207] [cursor=pointer]:
+            - generic [ref=e208]:
+              - img [ref=e210]
+              - img [ref=e212]
+            - text: Templates
+          - generic [ref=e214]:
+            - button "Front-office" [expanded] [ref=e215] [cursor=pointer]:
+              - img [ref=e217]
+              - text: Front-office
+            - button "Collapse" [ref=e219] [cursor=pointer]:
+              - img [ref=e220]
+          - button "Modals" [ref=e223] [cursor=pointer]:
+            - generic [ref=e224]:
+              - img [ref=e226]
+              - img [ref=e228]
+            - text: Modals
+          - button "Media" [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]:
+              - img [ref=e234]
+              - img [ref=e236]
+            - text: Media
+          - button "Navigation" [ref=e239] [cursor=pointer]:
+            - generic [ref=e240]:
+              - img [ref=e242]
+              - img [ref=e244]
+            - text: Navigation
+          - button "Feedback" [ref=e247] [cursor=pointer]:
+            - generic [ref=e248]:
+              - img [ref=e250]
+              - img [ref=e252]
+            - text: Feedback
+          - button "BadgeList" [ref=e255] [cursor=pointer]:
+            - generic [ref=e256]:
+              - img [ref=e258]
+              - img [ref=e260]
+            - text: BadgeList
+          - button "Charts" [ref=e263] [cursor=pointer]:
+            - generic [ref=e264]:
+              - img [ref=e266]
+              - img [ref=e268]
+            - text: Charts
+          - button "Forms" [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]:
+              - img [ref=e274]
+              - img [ref=e276]
+            - text: Forms
+          - button "Cards" [ref=e279] [cursor=pointer]:
+            - generic [ref=e280]:
+              - img [ref=e282]
+              - img [ref=e284]
+            - text: Cards
+          - button "Lists" [ref=e287] [cursor=pointer]:
+            - generic [ref=e288]:
+              - img [ref=e290]
+              - img [ref=e292]
+            - text: Lists
+          - button "Badges" [ref=e295] [cursor=pointer]:
+            - generic [ref=e296]:
+              - img [ref=e298]
+              - img [ref=e300]
+            - text: Badges
+          - button "PDF" [ref=e303] [cursor=pointer]:
+            - generic [ref=e304]:
+              - img [ref=e306]
+              - img [ref=e308]
+            - text: PDF
+          - button "Proficiency" [ref=e311] [cursor=pointer]:
+            - generic [ref=e312]:
+              - img [ref=e314]
+              - img [ref=e316]
+            - text: Proficiency
+          - button "Data Display" [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]:
+              - img [ref=e322]
+              - img [ref=e324]
+            - text: Data Display
+          - button "Layout" [ref=e327] [cursor=pointer]:
+            - generic [ref=e328]:
+              - img [ref=e330]
+              - img [ref=e332]
+            - text: Layout
+          - button "Evaluations" [ref=e335] [cursor=pointer]:
+            - generic [ref=e336]:
+              - img [ref=e338]
+              - img [ref=e340]
+            - text: Evaluations
+          - button "Filters" [ref=e343] [cursor=pointer]:
+            - generic [ref=e344]:
+              - img [ref=e346]
+              - img [ref=e348]
+            - text: Filters
+          - button "Mission" [ref=e351] [cursor=pointer]:
+            - generic [ref=e352]:
+              - img [ref=e354]
+              - img [ref=e356]
+            - text: Mission
+          - button "Global" [ref=e359] [cursor=pointer]:
+            - generic [ref=e360]:
+              - img [ref=e362]
+              - img [ref=e364]
+            - text: Global
+          - button "Selects" [ref=e367] [cursor=pointer]:
+            - generic [ref=e368]:
+              - img [ref=e370]
+              - img [ref=e372]
+            - text: Selects
+          - button "Legends" [ref=e375] [cursor=pointer]:
+            - generic [ref=e376]:
+              - img [ref=e378]
+              - img [ref=e380]
+            - text: Legends
+          - button "Tables" [ref=e383] [cursor=pointer]:
+            - generic [ref=e384]:
+              - img [ref=e386]
+              - img [ref=e388]
+            - text: Tables
+          - button "Templates" [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]:
+              - img [ref=e394]
+              - img [ref=e396]
+            - text: Templates
+          - button "Missions" [ref=e399] [cursor=pointer]:
+            - generic [ref=e400]:
+              - img [ref=e402]
+              - img [ref=e404]
+            - text: Missions
+          - button "Content" [ref=e407] [cursor=pointer]:
+            - generic [ref=e408]:
+              - img [ref=e410]
+              - img [ref=e412]
+            - text: Content
+          - button "Overlays" [ref=e415] [cursor=pointer]:
+            - generic [ref=e416]:
+              - img [ref=e418]
+              - img [ref=e420]
+            - text: Overlays
+          - button "ProfilePicture" [ref=e423] [cursor=pointer]:
+            - generic [ref=e424]:
+              - img [ref=e426]
+              - img [ref=e428]
+            - text: ProfilePicture
+          - button "ProgressBarHorizontalV2" [ref=e431] [cursor=pointer]:
+            - generic [ref=e432]:
+              - img [ref=e434]
+              - img [ref=e436]
+            - text: ProgressBarHorizontalV2
+          - button "ProgressBarVertical" [ref=e439] [cursor=pointer]:
+            - generic [ref=e440]:
+              - img [ref=e442]
+              - img [ref=e444]
+            - text: ProgressBarVertical
+          - button "SimpleTab" [ref=e447] [cursor=pointer]:
+            - generic [ref=e448]:
+              - img [ref=e450]
+              - img [ref=e452]
+            - text: SimpleTab
+          - button "StudentAvatar" [ref=e455] [cursor=pointer]:
+            - generic [ref=e456]:
+              - img [ref=e458]
+              - img [ref=e460]
+            - text: StudentAvatar
+          - button "Teachers" [ref=e463] [cursor=pointer]:
+            - generic [ref=e464]:
+              - img [ref=e466]
+              - img [ref=e468]
+            - text: Teachers
+          - button "Subjects" [ref=e471] [cursor=pointer]:
+            - generic [ref=e472]:
+              - img [ref=e474]
+              - img [ref=e476]
+            - text: Subjects
+          - generic [ref=e478]:
+            - button "Educacross Components V2" [expanded] [ref=e479] [cursor=pointer]:
+              - img [ref=e481]
+              - text: Educacross Components V2
+            - button "Collapse" [ref=e483] [cursor=pointer]:
+              - img [ref=e484]
+          - button "Modals" [ref=e487] [cursor=pointer]:
+            - generic [ref=e488]:
+              - img [ref=e490]
+              - img [ref=e492]
+            - text: Modals
+          - generic [ref=e494]:
+            - button "📦 Front-office" [expanded] [ref=e495] [cursor=pointer]:
+              - img [ref=e497]
+              - text: 📦 Front-office
+            - button "Collapse" [ref=e499] [cursor=pointer]:
+              - img [ref=e500]
+          - button "Forms" [ref=e503] [cursor=pointer]:
+            - generic [ref=e504]:
+              - img [ref=e506]
+              - img [ref=e508]
+            - text: Forms
+        - text: / / / / / / / / / / / / / / / / / / / / / / / / /
+  - generic [ref=e110]:
+    - tablist [ref=e112]:
+      - tab "Controls" [ref=e113] [cursor=pointer]:
+        - generic [ref=e116]: Controls
+      - tab "Actions" [ref=e117] [cursor=pointer]:
+        - generic [ref=e120]: Actions
+      - tab "Code" [ref=e121] [cursor=pointer]
+      - tab "Interactions" [ref=e122] [cursor=pointer]:
+        - generic [ref=e125]: Interactions
+    - generic [ref=e128]:
+      - button "Change addon orientation [alt D]" [ref=e129] [cursor=pointer]:
+        - img [ref=e130]
+      - button "Hide addons [alt A]" [ref=e133] [cursor=pointer]:
+        - img [ref=e134]

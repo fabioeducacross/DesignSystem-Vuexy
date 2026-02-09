@@ -1240,7 +1240,7 @@ export const Accessibility = {
       <!-- Keyboard Navigation -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
         <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
-          <i class="bi bi-keyboard" style="color: #6E63E8; font-size: 22px;"></i>
+          <span class="material-symbols-outlined" style="color: #6E63E8; font-size: 24px;">keyboard</span>
           Navegação por Teclado
         </h3>
         <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
@@ -1275,7 +1275,7 @@ export const Accessibility = {
       <!-- ARIA Labels -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
         <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
-          <i class="bi bi-tag" style="color: #6E63E8; font-size: 22px;"></i>
+          <span class="material-symbols-outlined" style="color: #6E63E8; font-size: 24px;">label</span>
           ARIA Labels e Associações
         </h3>
         <p style="margin: 0 0 16px 0; color: #6E6B7B; font-size: 14px;">
@@ -1321,7 +1321,7 @@ export const Accessibility = {
       <!-- Contraste -->
       <div style="margin-bottom: 40px; padding: 20px; background: #F8F9FA; border-radius: 8px;">
         <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
-          <i class="bi bi-palette" style="color: #6E63E8; font-size: 22px;"></i>
+          <span class="material-symbols-outlined" style="color: #6E63E8; font-size: 24px;">palette</span>
           Contraste WCAG AA (Ratios Mínimos)
         </h3>
         <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -1347,7 +1347,7 @@ export const Accessibility = {
       <!-- Screen Readers -->
       <div style="padding: 20px; background: #F8F9FA; border-radius: 8px;">
         <h3 style="margin: 0 0 12px 0; color: #4B465C; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
-          <i class="bi bi-volume-up" style="color: #6E63E8; font-size: 22px;"></i>
+          <span class="material-symbols-outlined" style="color: #6E63E8; font-size: 24px;">volume_up</span>
           Suporte a Screen Readers
         </h3>
         <div style="margin-bottom: 16px;">
