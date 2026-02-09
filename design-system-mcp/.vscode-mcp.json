@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "design-system": {
+      "command": "node",
+      "args": [
+        "C:/Users/Educacross/Documents/Educacross/DesignSystem-Vuexy/design-system-mcp/dist/index.js"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}
