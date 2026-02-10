@@ -6,12 +6,12 @@
  */
 
 import { readdir } from 'fs/promises';
-import { join, basename } from 'path';
-import { Component } from '../types/component.js';
+import { join, basename, dirname } from 'path';
+import { Component, ComponentCategory } from '../types/component.js';
 import { GetStatsOutput } from '../types/mcp.js';
 import { parseStoryFile } from '../parsers/story-parser.js';
 import { parseVueFile } from '../parsers/vue-parser.js';
-import { logger, Timer } from '../utils/logger.js';
+import { logger, startTimer } from '../utils/logger.js';
 import { generateSnippets } from '../utils/snippet-generator.js';
 
 /**
@@ -57,12 +57,14 @@ export class ComponentLoader {
   
   /**
    * Carrega todos os componentes
+   * 
+   * Nova estratégia: Escaneia componentes .vue PRIMEIRO (fonte primária),
+   * depois enriquece com metadados das stories (fonte secundária).
    */
   async loadAll(): Promise<LoadResult> {
-    const timer = new Timer('ComponentLoader.loadAll');
+    const timer = startTimer('ComponentLoader.loadAll');
     
-    logger.info('Loading components', {
-      storiesPath: this.config.storiesPath,
+    logger.info('Loading components from Vue files (primary source)', {
       componentsPath: this.config.componentsPath
     });
     
@@ -70,9 +72,85 @@ export class ComponentLoader {
     const errors: Array<{ file: string; error: string }> = [];
     
     try {
-      // Ler arquivos .stories.js
+      // FASE 1: Carregar componentes .vue (fonte primária)
+      const vueFiles = await this.findVueFiles();
+      logger.info(`Found ${vueFiles.length} Vue component files`);
+      
+      const vueComponentsMap = new Map<string, any>();
+      
+      for (const vueFile of vueFiles) {
+        try {
+          const parsed = await parseVueFile(vueFile);
+          const componentName = this.extractComponentNameFromPath(vueFile);
+          
+          vueComponentsMap.set(componentName, {
+            filepath: vueFile,
+            parsed
+          });
+        } catch (error) {
+          errors.push({
+            file: vueFile,
+            error: String(error)
+          });
+          logger.warn(`Failed to parse Vue file: ${vueFile}`, error);
+        }
+      }
+      
+      logger.info(`Parsed ${vueComponentsMap.size} Vue components`);
+      
+      // FASE 2: Carregar stories (fonte secundária para enriquecimento)
+      logger.info('Loading stories for enrichment', {
+        storiesPath: this.config.storiesPath
+      });
+      
       const storyFiles = await this.findStoryFiles();
       logger.info(`Found ${storyFiles.length} story files`);
+      
+      const storiesMap = new Map<string, any>();
+      
+      for (const storyFile of storyFiles) {
+        try {
+          const storyData = await parseStoryFile(storyFile);
+          if (storyData.default) {
+            const componentName = this.extractComponentName(storyFile);
+            storiesMap.set(componentName, {
+              filepath: storyFile,
+              data: storyData
+            });
+          }
+        } catch (error) {
+          logger.debug(`Skipping story file: ${storyFile}`, error);
+        }
+      }
+      
+      logger.info(`Parsed ${storiesMap.size} story files`);
+      
+      // FASE 3: Combinar componentes Vue com stories
+      for (const [componentName, vueData] of vueComponentsMap) {
+        try {
+          const story = storiesMap.get(componentName);
+          const component = await this.buildComponent(componentName, vueData, story);
+          components.push(component);
+        } catch (error) {
+          const err = error as Error;
+          errors.push({
+            file: vueData.filepath,
+            error: String(error)
+          });
+          logger.warn(`Failed to build component ${componentName}:`, {
+            error: err.message,
+            stack: err.stack?.substring(0, 500),
+            vueData: {
+              hasFilepath: !!vueData?.filepath,
+              hasParsed: !!vueData?.parsed,
+              hasComponent: !!vueData?.parsed?.component,
+              propsCount: vueData?.parsed?.component?.props?.length || 0
+            }
+          });
+        }
+      }
+      
+      logger.info(`Loaded ${components.length} components successfully`);
       
       // Processar cada story file
       for (const storyFile of storyFiles) {
@@ -108,7 +186,7 @@ export class ComponentLoader {
    * Carrega um componente específico
    */
   async loadComponent(storyFilePath: string): Promise<Component | null> {
-    const timer = new Timer(`ComponentLoader.loadComponent(${basename(storyFilePath)})`);
+    const timer = startTimer(`ComponentLoader.loadComponent(${basename(storyFilePath)})`);
     
     // Parse story file
     const storyData = await parseStoryFile(storyFilePath);
@@ -214,6 +292,120 @@ export class ComponentLoader {
   }
   
   /**
+   * Encontra todos os arquivos .vue recursivamente
+   */
+  private async findVueFiles(): Promise<string[]> {
+    const files: string[] = [];
+    
+    const scanDir = async (dir: string): Promise<void> => {
+      try {
+        const entries = await readdir(dir, { withFileTypes: true });
+        
+        for (const entry of entries) {
+          const fullPath = join(dir, entry.name);
+          
+          if (entry.isDirectory()) {
+            // Ignorar node_modules, dist, etc
+            if (!['node_modules', 'dist', '.git', 'coverage'].includes(entry.name)) {
+              await scanDir(fullPath);
+            }
+          } else if (entry.name.endsWith('.vue')) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        logger.warn(`Erro ao escanear diretório ${dir}:`, error);
+      }
+    };
+    
+    await scanDir(this.config.componentsPath);
+    return files;
+  }
+  
+  /**
+   * Extrai nome do componente do path do arquivo .vue
+   * Ex: "/path/to/components/forms/ESelect.vue" → "ESelect"
+   * Ex: "/path/to/components/MediaCard/index.vue" → "MediaCard"
+   */
+  private extractComponentNameFromPath(vueFilePath: string): string {
+    const fileName = basename(vueFilePath, '.vue');
+    
+    // Se o arquivo é index.vue, usar o nome do diretório pai
+    if (fileName === 'index') {
+      const parentDir = basename(dirname(vueFilePath));
+      return parentDir;
+    }
+    
+    return fileName;
+  }
+  
+  /**
+   * Monta objeto Component combinando dados do .vue e story opcional
+   */
+  private async buildComponent(
+    name: string,
+    vueData: any,
+    story?: any
+  ): Promise<Component> {
+    const timer = startTimer(`Build component ${name}`);
+    
+    // Extrair categoria da story ou usar 'Other' como fallback
+    const categoryStr = story 
+      ? this.extractCategory(story.default?.title || '')
+      : 'Other';
+    const category = categoryStr as ComponentCategory;
+    
+    // Acessar dados do parser corretamente:
+    // vueData = { filepath: "...", parsed: { component: {...}, filepath, parsedAt, ... } }
+    const vueComponent = vueData?.parsed?.component || { props: [], events: [], slots: [] };
+    const vuePath = vueData?.filepath || '';
+    
+    // Inferir prioridade usando dados do parser
+    const priority = this.inferPriority(story, vueData?.parsed);
+    
+    // Montar objeto Component seguindo a estrutura correta
+    const component: Component = {
+      name,
+      category,
+      priority,
+      metadata: {
+        title: story?.default?.title || name,
+        description: story ? this.extractDescription(story) : undefined,
+        tags: story?.default?.tags || []
+      },
+      stories: story?.stories?.map((s: any) => ({
+        name: s?.name || 'Unnamed',
+        args: s?.args || {},
+        parameters: s?.parameters || {}
+      })) || [],
+      vue: vueComponent,
+      paths: {
+        story: story?.filePath || '',
+        component: vuePath,
+        storybookUrl: story?.default?.title ? this.buildStorybookUrl(story.default.title) : undefined
+      },
+      stats: {
+        storiesCount: story?.stories?.length || 0,
+        propsCount: vueComponent.props?.length || 0,
+        eventsCount: vueComponent.events?.length || 0,
+        slotsCount: vueComponent.slots?.length || 0
+      },
+      parsedAt: new Date()
+    };
+    
+    // Gerar code snippets multi-framework
+    try {
+      component.snippets = generateSnippets(component);
+    } catch (error) {
+      logger.warn(`Failed to generate snippets for ${name}:`, error);
+      // Continue sem snippets em caso de erro
+    }
+    
+    timer.end();
+    return component;
+  }
+  
+  /**
    * Encontra arquivo .vue correspondente
    */
   private async findVueFile(componentName: string): Promise<string | null> {
@@ -268,7 +460,7 @@ export class ComponentLoader {
    * Extrai descrição do metadata
    */
   private extractDescription(storyData: any): string | undefined {
-    return storyData.default.parameters?.docs?.description?.component;
+    return storyData?.default?.parameters?.docs?.description?.component;
   }
   
   /**
