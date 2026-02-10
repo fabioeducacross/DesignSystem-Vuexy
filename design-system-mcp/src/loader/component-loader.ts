@@ -12,6 +12,7 @@ import { GetStatsOutput } from '../types/mcp.js';
 import { parseStoryFile } from '../parsers/story-parser.js';
 import { parseVueFile } from '../parsers/vue-parser.js';
 import { logger, Timer } from '../utils/logger.js';
+import { generateSnippets } from '../utils/snippet-generator.js';
 
 /**
  * Configuração do loader
@@ -175,6 +176,14 @@ export class ComponentLoader {
       },
       parsedAt: new Date()
     };
+    
+    // Gerar code snippets multi-framework
+    try {
+      component.snippets = generateSnippets(component);
+    } catch (error) {
+      logger.warn(`Failed to generate snippets for ${componentName}:`, error);
+      // Continue sem snippets em caso de erro
+    }
     
     timer.end();
     return component;

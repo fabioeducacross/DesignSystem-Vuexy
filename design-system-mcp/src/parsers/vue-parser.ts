@@ -109,6 +109,44 @@ export function parseVueCode(code: string, filepath: string): ParsedVueFile {
 }
 
 /**
+ * Extrai o conteúdo de defineProps() com suporte a objetos aninhados
+ */
+function extractDefinePropsObject(code: string): string | null {
+  const startMatch = code.match(/defineProps\(\s*\{/);
+  if (!startMatch || startMatch.index === undefined) return null;
+  
+  let startIndex = startMatch.index + startMatch[0].length - 1; // Posição do primeiro {
+  let bracketCount = 1;
+  let current = startIndex + 1;
+  
+  // Contar brackets até fechar o defineProps
+  while (current < code.length && bracketCount > 0) {
+    const char = code[current];
+    
+    // Ignorar caracteres dentro de strings
+    if (char === '"' || char === "'" || char === '`') {
+      const quote = char;
+      current++;
+      while (current < code.length && code[current] !== quote) {
+        if (code[current] === '\\') current++; // Escapar
+        current++;
+      }
+    } else if (char === '{') {
+      bracketCount++;
+    } else if (char === '}') {
+      bracketCount--;
+    }
+    current++;
+  }
+  
+  if (bracketCount === 0) {
+    return code.substring(startIndex + 1, current - 1);
+  }
+  
+  return null;
+}
+
+/**
  * Extrai props de <script setup>
  */
 function extractPropsFromScriptSetup(code: string): {
@@ -154,18 +192,81 @@ function extractPropsFromScriptSetup(code: string): {
       });
     }
   } else {
-    // Buscar defineProps({ ... }) - props runtime
-    const runtimePropsMatch = code.match(/defineProps\(\s*\{([^}]+)\}\s*\)/s);
+    // Buscar defineProps({ ... }) - props runtime com suporte a objetos aninhados
+    const propsObjectCode = extractDefinePropsObject(code);
     
-    if (runtimePropsMatch) {
-      // Simplificado: extrair apenas nomes
-      const propNames = [...runtimePropsMatch[1].matchAll(/(\w+)\s*:/g)];
-      props.push(...propNames.map(m => ({
-        name: m[1],
-        type: 'unknown',
-        required: false,
-        isVModel: m[1] === 'modelValue'
-      })));
+    if (propsObjectCode) {
+      try {
+        // Usar TypeScript AST para parsing robusto
+        const wrappedCode = `const props = {${propsObjectCode}}`;
+        const sourceFile = ts.createSourceFile(
+          'temp.ts',
+          wrappedCode,
+          ts.ScriptTarget.Latest,
+          true
+        );
+        
+        // Percorrer AST procurando por propriedades
+        ts.forEachChild(sourceFile, node => {
+          if (ts.isVariableStatement(node)) {
+            node.declarationList.declarations.forEach(declaration => {
+              if (declaration.initializer && ts.isObjectLiteralExpression(declaration.initializer)) {
+                declaration.initializer.properties.forEach(prop => {
+                  if (ts.isPropertyAssignment(prop) && ts.isIdentifier(prop.name)) {
+                    const propName = prop.name.text;
+                    
+                    // Extrair metadados do prop
+                    let propType = 'any';
+                    let required = false;
+                    let defaultValue: string | undefined;
+                    
+                    if (ts.isObjectLiteralExpression(prop.initializer)) {
+                      prop.initializer.properties.forEach(propAttr => {
+                        if (ts.isPropertyAssignment(propAttr) && ts.isIdentifier(propAttr.name)) {
+                          const attrName = propAttr.name.text;
+                          
+                          if (attrName === 'type') {
+                            propType = propAttr.initializer.getText(sourceFile);
+                          } else if (attrName === 'required' && propAttr.initializer.kind === ts.SyntaxKind.TrueKeyword) {
+                            required = true;
+                          } else if (attrName === 'default') {
+                            defaultValue = propAttr.initializer.getText(sourceFile);
+                          }
+                        }
+                      });
+                    }
+                    
+                    const isVModel = propName === 'modelValue' || propName.startsWith('model');
+                    props.push({ 
+                      name: propName, 
+                      type: propType, 
+                      required, 
+                      default: defaultValue,
+                      isVModel 
+                    });
+                  }
+                });
+              }
+            });
+          }
+        });
+      } catch (error) {
+        warnings.push({
+          message: `Failed to parse runtime props with AST: ${error instanceof Error ? error.message : 'Unknown error'}`,
+          severity: 'warning'
+        });
+        
+        // Fallback: extrair apenas nomes de props como última tentativa
+        const propNames = [...propsObjectCode.matchAll(/(\w+)\s*:/g)];
+        if (propNames.length > 0) {
+          props.push(...propNames.map(m => ({
+            name: m[1],
+            type: 'unknown',
+            required: false,
+            isVModel: m[1] === 'modelValue'
+          })));
+        }
+      }
     }
   }
   

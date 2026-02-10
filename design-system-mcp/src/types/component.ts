@@ -84,6 +84,57 @@ export interface ComponentStats {
 }
 
 /**
+ * Framework para code snippet
+ */
+export type CodeFramework = 'vue3' | 'vue2' | 'react' | 'vanilla';
+
+/**
+ * Code snippet para um framework específico
+ */
+export interface CodeSnippet {
+  /** Framework do snippet */
+  framework: CodeFramework;
+  
+  /** Código completo do exemplo */
+  code: string;
+  
+  /** Título do exemplo (ex: "Basic Usage", "With Options") */
+  title?: string;
+  
+  /** Descrição do exemplo */
+  description?: string;
+  
+  /** Imports necessários */
+  imports?: string[];
+  
+  /** Props usadas no exemplo */
+  usedProps?: string[];
+}
+
+/**
+ * Coleção de snippets para um componente
+ */
+export interface ComponentSnippets {
+  /** Snippet básico (uso mais simples) */
+  basic: {
+    vue3: string;
+    vue2: string;
+    react: string;
+    vanilla: string;
+  };
+  
+  /** Snippets avançados (exemplos mais complexos) */
+  advanced?: CodeSnippet[];
+  
+  /** Template de instalação/setup */
+  setup?: {
+    npm?: string;
+    yarn?: string;
+    imports?: string;
+  };
+}
+
+/**
  * Representação completa de um componente do Design System
  */
 export interface Component {
@@ -113,6 +164,9 @@ export interface Component {
   
   /** Metadados extraídos do .vue SFC */
   vue: VueComponent;
+  
+  /** Code snippets em múltiplos frameworks */
+  snippets?: ComponentSnippets;
   
   /** Estatísticas computadas */
   stats: ComponentStats;
