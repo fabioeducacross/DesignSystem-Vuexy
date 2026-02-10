@@ -6,7 +6,7 @@ import {
 } from './docTemplate.js';
 
 export default {
-  title: '📚 Getting Started/Doc Template Example',
+  title: 'Getting Started/Doc Template Example',
   parameters: {
     previewTabs: {
       canvas: { hidden: true },

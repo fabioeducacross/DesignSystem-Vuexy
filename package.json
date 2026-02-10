@@ -8,6 +8,8 @@
     "build-storybook": "storybook build",
     "serve-storybook": "http-server storybook-static -p 6006",
     "integrate-vuexy": "bash scripts/integrate-vuexy.sh",
+    "check-files": "node check-404s.js",
+    "check-404s": "node check-404s-playwright.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +26,7 @@
     "storybook": "^8.6.15"
   },
   "dependencies": {
+    "feather-icons": "^4.29.2",
     "sortablejs": "^1.15.6"
   }
 }

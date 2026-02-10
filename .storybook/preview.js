@@ -5,6 +5,7 @@ if (typeof window !== 'undefined') {
   const cssFiles = [
     '/vuexy/css/core.css',
     '/vuexy/fonts/bootstrap-icons.css',
+    '/vuexy/fonts/iconify-icons.css', // Tabler Icons + outros ícones
     // Add more CSS files as needed for specific components
   ];
 
@@ -81,7 +82,8 @@ const preview = {
     options: {
       storySort: {
         order: [
-          '📚 Getting Started',
+          'Getting Started',
+          'MCP Setup Guide',
           'Foundations',
           ['Colors', 'Typography', 'Icons', 'Images', 'Spacing'],
           'Atoms',
