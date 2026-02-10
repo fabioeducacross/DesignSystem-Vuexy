@@ -1,0 +1,48 @@
+{
+  "name": "design-system-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server para expor metadados dos 111 componentes do Design System Educacross",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src tests --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+  },
+  "keywords": [
+    "mcp",
+    "design-system",
+    "storybook",
+    "vue",
+    "components"
+  ],
+  "author": "Educacross",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.26.0",
+    "@babel/traverse": "^7.26.0",
+    "@babel/types": "^7.26.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@vue/compiler-sfc": "^3.5.0",
+    "chokidar": "^4.0.0",
+    "dotenv": "^16.4.0",
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.28.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
