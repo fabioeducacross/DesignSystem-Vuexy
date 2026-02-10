@@ -469,7 +469,7 @@ Usado em:
       
       <div class="navbar-column d-flex justify-content-center flex-1">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" />
         </div>
       </div>
       
@@ -539,8 +539,8 @@ Usado em:
       
       <div class="navbar-column d-flex justify-content-center" style="flex: 1 1 auto;">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" class="d-sm-inline d-none" />
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAbCAMAAADS+YZfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAGAUExURQAAAApeXAlbWRCfnwlaWAtbWQiblxBcUQhYWAlnZQmcmQpiXwqcmgmdmgucmwqZmAliYQldWwpZVgqcmgVaWgl1dAleXAhgWAtbWQiamAqcmguZlwmcmQqdmgpralKegQliYAp0cgp+fAplYwmcmgp5duyZS/S6SgiNiwVaVQqGhPq5SwpbWgtZWAmRjwqcmvLu4yAeHgqUkgqDgQqMigp7eQqYlo2vqApqaAp/fdXb0vq4Sn7Fvvm9WeuWTKnCufjGcAqQjgpcWgpycPbTlvbWoAqIhvPn0DgvI9+lRQp3dfbr17jJwPnDZkk7JnuqpEOCeo1rNJu3r/TiwPXcsApjYSduasLVzPfMgyKjoJt1N3W7tUuIhK+DO7i2syeCflq2sWG7tcORPxiHhDQzM+Tn3Zu2r0ScmCiaimGSjXuNV4h+U0SwrBhlYX9hMSeOi+yuR5ycnHJXL9Xk2mGalW+blfzWmWROLL6xXhloZc2UVsWwjm+zrU+Zgsfb0fjFbr7NS4AAAAAvdFJOUwB/XxA/TyAQIN/fn59fQL+7b1DPMNrfII8w75Cv3++Xj7fvz2/vXzB/MO/v70OIRANE/AAAAodJREFUOMuFlGdT20AQhmUj2RY2YJveW3oys6dqyb33gjGdAIFQEiC919+e25MlDAyT/SLdu49Wd+/tHcd1Y8jDOdHH9cS0l7sRPrV/wBkEOOfDwWEIXSe9vKACWLRnpg8mp7vkEAC4brCGplAV+gP3BgMwDMNTnr7JgcAUauB38+MO6BINE2S4I+RiRjXt2vx9+F+M+iz0Mee3vlc0Rb2O6IpmMmk07GL0xLJIR6qxEknVI8+Vnp8ftFBZRymTYz7yqg5gvkkRFqvvbFSJWEp0o0pLLVhLW9CgmN0k3Yi+7FaNOMpGVRfd1i6IOqw7CUJSliOfr5R6VlXYdL1hEZQNphUSlUSekDNE1SjppN/HtkqYWDGKi1jYZeiQe41KvrYvlXe2SAvZM9L5So6lt4kaLiJLVzRG+2JCBQOnUKrsf5Ak6aiTQrZF0r+ix5LUzuOMs7KCdUMTJhirVFjbkzDahTqyuyTGhuWGxS6N07ICdSSHddeOWHKnkIKMQtlEGYfNNE1t0jkYuDq3KJs43xpLliul35nzC/OSpNvI7hVo6jSnz4XRiPFlWf9xgjZUPja/VfJk+zyWvJD/lhLtZnOnwXxQNash/IoiF7+g1Ekn0msk/ioWSyZXLklpq9HIow2nVdCDFiuENNBWbeM3gbF/IO7s2wGoo6LdlEXqfYvpJ3HqwfdY8id9HH5iUoRueo7rNqV3LIMubb+Ixw+38W3+aXKe7TNVdmUdMnLVbR8MweV6pl/1Yj/38AE31NPGQcHN9xy49SUxZ6PsDHtmbVJ7Erx2NkcEr6BoBnbYTPdy8FiVZQj6QjcvCEHkff7FR4NXysCsLGtjcz7u1mXiDXO3YoQf6QX/AScPrDCseT7XAAAAAElFTkSuQmCC" alt="logo" class="d-sm-none" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" class="d-sm-inline d-none" />
+          <img src="/educacross-assets/logo-educacross-small.svg" alt="logo" class="d-sm-none" />
         </div>
       </div>
       
@@ -611,7 +611,7 @@ Usado em:
         Ícone de menu à esquerda + Botão "Visão aluno" + Menu expandido
       </p>
     </div>
-  `};var a,t,o,i,l;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  `};var a,t,o,i,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
   render: () => \`
     \${styles}
     <div class="navbar-container d-flex align-items-center justify-content-between gap-2 bg-white p-50">
@@ -619,7 +619,7 @@ Usado em:
       
       <div class="navbar-column d-flex justify-content-center flex-1">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" />
         </div>
       </div>
       
@@ -679,7 +679,7 @@ Usado em:
       </p>
     </div>
   \`
-}`,...(o=(t=e.parameters)==null?void 0:t.docs)==null?void 0:o.source},description:{story:"Variação padrão do navbar - exatamente como no código real",...(l=(i=e.parameters)==null?void 0:i.docs)==null?void 0:l.description}}};var r,s,d,p,c;n.parameters={...n.parameters,docs:{...(r=n.parameters)==null?void 0:r.docs,source:{originalSource:`{
+}`,...(o=(t=e.parameters)==null?void 0:t.docs)==null?void 0:o.source},description:{story:"Variação padrão do navbar - exatamente como no código real",...(s=(i=e.parameters)==null?void 0:i.docs)==null?void 0:s.description}}};var r,l,d,c,p;n.parameters={...n.parameters,docs:{...(r=n.parameters)==null?void 0:r.docs,source:{originalSource:`{
   render: () => \`
     \${styles}
     <div class="navbar-container d-flex align-items-center justify-content-between Teacher">
@@ -691,8 +691,8 @@ Usado em:
       
       <div class="navbar-column d-flex justify-content-center" style="flex: 1 1 auto;">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" class="d-sm-inline d-none" />
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAbCAMAAADS+YZfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAGAUExURQAAAApeXAlbWRCfnwlaWAtbWQiblxBcUQhYWAlnZQmcmQpiXwqcmgmdmgucmwqZmAliYQldWwpZVgqcmgVaWgl1dAleXAhgWAtbWQiamAqcmguZlwmcmQqdmgpralKegQliYAp0cgp+fAplYwmcmgp5duyZS/S6SgiNiwVaVQqGhPq5SwpbWgtZWAmRjwqcmvLu4yAeHgqUkgqDgQqMigp7eQqYlo2vqApqaAp/fdXb0vq4Sn7Fvvm9WeuWTKnCufjGcAqQjgpcWgpycPbTlvbWoAqIhvPn0DgvI9+lRQp3dfbr17jJwPnDZkk7JnuqpEOCeo1rNJu3r/TiwPXcsApjYSduasLVzPfMgyKjoJt1N3W7tUuIhK+DO7i2syeCflq2sWG7tcORPxiHhDQzM+Tn3Zu2r0ScmCiaimGSjXuNV4h+U0SwrBhlYX9hMSeOi+yuR5ycnHJXL9Xk2mGalW+blfzWmWROLL6xXhloZc2UVsWwjm+zrU+Zgsfb0fjFbr7NS4AAAAAvdFJOUwB/XxA/TyAQIN/fn59fQL+7b1DPMNrfII8w75Cv3++Xj7fvz2/vXzB/MO/v70OIRANE/AAAAodJREFUOMuFlGdT20AQhmUj2RY2YJveW3oys6dqyb33gjGdAIFQEiC919+e25MlDAyT/SLdu49Wd+/tHcd1Y8jDOdHH9cS0l7sRPrV/wBkEOOfDwWEIXSe9vKACWLRnpg8mp7vkEAC4brCGplAV+gP3BgMwDMNTnr7JgcAUauB38+MO6BINE2S4I+RiRjXt2vx9+F+M+iz0Mee3vlc0Rb2O6IpmMmk07GL0xLJIR6qxEknVI8+Vnp8ftFBZRymTYz7yqg5gvkkRFqvvbFSJWEp0o0pLLVhLW9CgmN0k3Yi+7FaNOMpGVRfd1i6IOqw7CUJSliOfr5R6VlXYdL1hEZQNphUSlUSekDNE1SjppN/HtkqYWDGKi1jYZeiQe41KvrYvlXe2SAvZM9L5So6lt4kaLiJLVzRG+2JCBQOnUKrsf5Ak6aiTQrZF0r+ix5LUzuOMs7KCdUMTJhirVFjbkzDahTqyuyTGhuWGxS6N07ICdSSHddeOWHKnkIKMQtlEGYfNNE1t0jkYuDq3KJs43xpLliul35nzC/OSpNvI7hVo6jSnz4XRiPFlWf9xgjZUPja/VfJk+zyWvJD/lhLtZnOnwXxQNash/IoiF7+g1Ekn0msk/ioWSyZXLklpq9HIow2nVdCDFiuENNBWbeM3gbF/IO7s2wGoo6LdlEXqfYvpJ3HqwfdY8id9HH5iUoRueo7rNqV3LIMubb+Ixw+38W3+aXKe7TNVdmUdMnLVbR8MweV6pl/1Yj/38AE31NPGQcHN9xy49SUxZ6PsDHtmbVJ7Erx2NkcEr6BoBnbYTPdy8FiVZQj6QjcvCEHkff7FR4NXysCsLGtjcz7u1mXiDXO3YoQf6QX/AScPrDCseT7XAAAAAElFTkSuQmCC" alt="logo" class="d-sm-none" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" class="d-sm-inline d-none" />
+          <img src="/educacross-assets/logo-educacross-small.svg" alt="logo" class="d-sm-none" />
         </div>
       </div>
       
@@ -764,4 +764,4 @@ Usado em:
       </p>
     </div>
   \`
-}`,...(d=(s=n.parameters)==null?void 0:s.docs)==null?void 0:d.source},description:{story:"Navbar com menu lateral (contexto Professor/Aluno dentro da plataforma)",...(c=(p=n.parameters)==null?void 0:p.docs)==null?void 0:c.description}}};const u=["Default","WithSidebarMenu"];export{e as Default,n as WithSidebarMenu,u as __namedExportsOrder,g as default};
+}`,...(d=(l=n.parameters)==null?void 0:l.docs)==null?void 0:d.source},description:{story:"Navbar com menu lateral (contexto Professor/Aluno dentro da plataforma)",...(p=(c=n.parameters)==null?void 0:c.docs)==null?void 0:p.description}}};const u=["Default","WithSidebarMenu"];export{e as Default,n as WithSidebarMenu,u as __namedExportsOrder,g as default};
