@@ -30,7 +30,7 @@ export const QuickStart = {
         font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
         min-height: 100vh;
-        padding: 40px 20px;
+        padding: 60px 24px;
       }
       
       .container {
@@ -46,7 +46,7 @@ export const QuickStart = {
         text-align: center;
         color: white;
         box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        margin-bottom: 40px;
+        margin-bottom: 48px;
         position: relative;
         overflow: hidden;
       }
@@ -99,8 +99,8 @@ export const QuickStart = {
       .quick-stats {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-bottom: 40px;
+        gap: 24px;
+        margin-bottom: 48px;
       }
       
       .stat-card {
@@ -142,23 +142,23 @@ export const QuickStart = {
         border-radius: 16px;
         padding: 40px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 40px;
+        margin-bottom: 48px;
       }
-      
+
       .step {
         display: grid;
         grid-template-columns: 60px 1fr;
         gap: 24px;
-        margin-bottom: 40px;
+        margin-bottom: 48px;
         position: relative;
       }
-      
+
       .step:not(:last-child)::after {
         content: '';
         position: absolute;
         left: 29px;
         top: 60px;
-        bottom: -40px;
+        bottom: -48px;
         width: 2px;
         background: linear-gradient(to bottom, #667eea, transparent);
         opacity: 0.3;
@@ -194,7 +194,7 @@ export const QuickStart = {
       /* Code Block */
       .code-block {
         position: relative;
-        margin: 16px 0;
+        margin: 24px 0;
         border-radius: 12px;
         overflow: hidden;
         background: #2d2d2d;
@@ -257,9 +257,9 @@ export const QuickStart = {
       
       /* Alert */
       .alert {
-        padding: 16px 20px;
+        padding: 20px;
         border-radius: 12px;
-        margin: 16px 0;
+        margin: 24px 0;
         display: flex;
         align-items: flex-start;
         gap: 12px;
@@ -304,7 +304,7 @@ export const QuickStart = {
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 40px;
+        margin-bottom: 48px;
       }
       
       .accordion-item {
@@ -369,7 +369,7 @@ export const QuickStart = {
       .cta {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border-radius: 16px;
-        padding: 40px;
+        padding: 48px;
         text-align: center;
         color: white;
         box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
@@ -407,6 +407,116 @@ export const QuickStart = {
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       }
+
+      /* Responsive Media Queries */
+      @media (max-width: 768px) {
+        .mcp-setup {
+          padding: 40px 20px;
+        }
+
+        .hero {
+          padding: 40px 24px;
+          margin-bottom: 32px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .quick-stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .steps {
+          padding: 24px;
+          margin-bottom: 32px;
+        }
+
+        .step {
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+
+        .step:not(:last-child)::after {
+          bottom: -32px;
+        }
+
+        .step-number {
+          width: 48px;
+          height: 48px;
+          font-size: 1.25rem;
+        }
+
+        .step-content h3 {
+          font-size: 1.25rem;
+        }
+
+        .code-header {
+          padding: 12px;
+          flex-direction: column;
+          gap: 8px;
+          align-items: flex-start;
+        }
+
+        .copy-btn {
+          align-self: flex-end;
+        }
+
+        pre code {
+          font-size: 0.8rem;
+        }
+
+        .accordion-header {
+          padding: 16px;
+        }
+
+        .accordion-content {
+          padding: 0 16px 16px;
+        }
+
+        .cta {
+          padding: 32px 24px;
+        }
+
+        .cta h2 {
+          font-size: 1.5rem;
+        }
+
+        .cta p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .quick-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .step {
+          grid-template-columns: 40px 1fr;
+          gap: 12px;
+        }
+
+        .step:not(:last-child)::after {
+          left: 19px;
+        }
+
+        .step-number {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
     </style>
     
     <div class="mcp-setup">
@@ -418,7 +528,7 @@ export const QuickStart = {
               <span class="material-symbols-outlined">rocket_launch</span>
               Model Context Protocol
             </div>
-            <h1>🔧 MCP Setup Guide</h1>
+            <h1>MCP Setup Guide</h1>
             <p>
               Configure o servidor MCP para acessar 123 componentes documentados do Design System Educacross
               diretamente no Claude Desktop, Cursor, VSCode, ou qualquer cliente MCP.
@@ -677,7 +787,7 @@ Mostre as estatísticas do Design System</code></pre>
         
         <!-- CTA -->
         <div class="cta">
-          <h2>✅ Tudo Pronto!</h2>
+          <h2>Tudo Pronto!</h2>
           <p>
             Agora você pode explorar todos os 123 componentes do Design System Educacross
             diretamente no Claude Desktop ou qualquer cliente MCP compatível.

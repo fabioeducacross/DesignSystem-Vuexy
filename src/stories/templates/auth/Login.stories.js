@@ -94,12 +94,8 @@ const createLoginPage = ({ withSocial = true, variant = 'card' }) => {
         <!-- Logo/Brand -->
         <div class="app-brand mb-4 text-center">
           <span class="app-brand-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="6" fill="#696cff"/>
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
-            </svg>
+            <img src="/educacross-assets/logo-educacross.svg" alt="Educacross Logo" style="height: 32px; width: auto;">
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
         </div>
         
         <h4 class="mb-1">Welcome to Vuexy! 👋</h4>
