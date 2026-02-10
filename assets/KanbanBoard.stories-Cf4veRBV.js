@@ -1,4 +1,4 @@
-import{_ as U}from"./iframe-CdWuUBe2.js";import{f as M}from"./snippets-m8t1HIl1.js";const V={title:"Vuexy/Organisms/Apps/KanbanBoard",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{_ as U}from"./iframe-CrljW_Uk.js";import{f as M}from"./snippets-m8t1HIl1.js";const V={title:"Vuexy/Organisms/Apps/KanbanBoard",tags:["autodocs"],parameters:{docs:{description:{component:`
 # Kanban Board
 
 Quadro Kanban para visualização e gerenciamento de tarefas.

@@ -1,4 +1,4 @@
-const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0}},viewMode:"docs",layout:"fullscreen"}},e={render:()=>`
+const i={title:"Getting Started/Introduction",parameters:{previewTabs:{canvas:{hidden:!0}},viewMode:"docs",layout:"fullscreen"}},e={render:()=>`
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
     <style>
@@ -355,6 +355,18 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
                 Biblioteca completa de componentes UI baseada no template Vuexy, 
                 organizada com princípios de Atomic Design e documentada para Vue 2.7
               </p>
+              
+              <!-- MCP Setup CTA -->
+              <div style="margin-top: 32px;">
+                <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="font-size: 1.1rem; padding: 16px 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                  <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+                  🔧 Configurar MCP Server
+                </a>
+                <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero" style="margin-left: 12px;">
+                  <span class="material-symbols-outlined btn-icon">widgets</span>
+                  Ver Componentes
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -977,9 +989,13 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
 
           <!-- Action Buttons -->
           <div style="text-align: center; padding: 40px 0;">
-            <a href="https://github.com/fabioeducacross/DesignSystem-Vuexy/tree/main/design-system-mcp" target="_blank" class="btn-hero btn-primary-hero" style="margin: 8px;">
+            <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="margin: 8px; font-size: 1.1rem; padding: 16px 36px; box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);">
+              <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+              🔧 Configurar MCP Server
+            </a>
+            <a href="https://github.com/fabioeducacross/DesignSystem-Vuexy/tree/main/design-system-mcp" target="_blank" class="btn-hero btn-secondary-hero" style="margin: 8px;">
               <span class="material-symbols-outlined btn-icon">description</span>
-              Ver Documentação MCP
+              Ver Documentação
             </a>
             <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero" style="margin: 8px;">
               <span class="material-symbols-outlined btn-icon">widgets</span>
@@ -993,10 +1009,14 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
         <div class="container text-center">
           <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">Pronto para Começar?</h2>
           <p style="font-size: 1.25rem; color: #666; margin-bottom: 32px;">
-            Explore os 233 componentes e construa interfaces incríveis
+            Configure o MCP Server e acesse 123 componentes via Claude Desktop, Cursor ou VSCode
           </p>
-          <div>
-            <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-primary-hero">
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="font-size: 1.1rem;">
+              <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+              🔧 Configurar MCP Server
+            </a>
+            <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero">
               <span class="material-symbols-outlined btn-icon">explore</span>
               Explorar Componentes
             </a>
@@ -1005,7 +1025,7 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
       </section>
 
     </div>
-  `};var a,n,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  `};var a,s,n;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
   render: () => \`
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
@@ -1363,6 +1383,18 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
                 Biblioteca completa de componentes UI baseada no template Vuexy, 
                 organizada com princípios de Atomic Design e documentada para Vue 2.7
               </p>
+              
+              <!-- MCP Setup CTA -->
+              <div style="margin-top: 32px;">
+                <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="font-size: 1.1rem; padding: 16px 36px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                  <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+                  🔧 Configurar MCP Server
+                </a>
+                <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero" style="margin-left: 12px;">
+                  <span class="material-symbols-outlined btn-icon">widgets</span>
+                  Ver Componentes
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1985,9 +2017,13 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
 
           <!-- Action Buttons -->
           <div style="text-align: center; padding: 40px 0;">
-            <a href="https://github.com/fabioeducacross/DesignSystem-Vuexy/tree/main/design-system-mcp" target="_blank" class="btn-hero btn-primary-hero" style="margin: 8px;">
+            <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="margin: 8px; font-size: 1.1rem; padding: 16px 36px; box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);">
+              <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+              🔧 Configurar MCP Server
+            </a>
+            <a href="https://github.com/fabioeducacross/DesignSystem-Vuexy/tree/main/design-system-mcp" target="_blank" class="btn-hero btn-secondary-hero" style="margin: 8px;">
               <span class="material-symbols-outlined btn-icon">description</span>
-              Ver Documentação MCP
+              Ver Documentação
             </a>
             <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero" style="margin: 8px;">
               <span class="material-symbols-outlined btn-icon">widgets</span>
@@ -2001,10 +2037,14 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
         <div class="container text-center">
           <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">Pronto para Começar?</h2>
           <p style="font-size: 1.25rem; color: #666; margin-bottom: 32px;">
-            Explore os 233 componentes e construa interfaces incríveis
+            Configure o MCP Server e acesse 123 componentes via Claude Desktop, Cursor ou VSCode
           </p>
-          <div>
-            <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-primary-hero">
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="?path=/docs/mcp-setup-guide--quick-start" class="btn-hero btn-primary-hero" style="font-size: 1.1rem;">
+              <span class="material-symbols-outlined btn-icon" style="font-size: 24px;">rocket_launch</span>
+              🔧 Configurar MCP Server
+            </a>
+            <a href="?path=/story/educacross-components-v2-navigation-appnavbar--default" class="btn-hero btn-secondary-hero">
               <span class="material-symbols-outlined btn-icon">explore</span>
               Explorar Componentes
             </a>
@@ -2014,4 +2054,4 @@ const i={title:"📚 Getting Started",parameters:{previewTabs:{canvas:{hidden:!0
 
     </div>
   \`
-}`,...(s=(n=e.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const t=["Introduction"];export{e as Introduction,t as __namedExportsOrder,i as default};
+}`,...(n=(s=e.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};const t=["Introduction"];export{e as Introduction,t as __namedExportsOrder,i as default};

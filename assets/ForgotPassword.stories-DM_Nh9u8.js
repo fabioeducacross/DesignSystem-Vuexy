@@ -1,4 +1,4 @@
-import{f as $}from"./snippets-m8t1HIl1.js";const L={title:"Vuexy/Templates/Auth/ForgotPassword",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{f as $}from"./snippets-m8t1HIl1.js";const T={title:"Vuexy/Templates/Auth/ForgotPassword",tags:["autodocs"],parameters:{docs:{description:{component:`
 # Forgot Password Template
 
 Template de página para recuperação/reset de senha.
@@ -35,8 +35,8 @@ Template de página para recuperação/reset de senha.
 - Validação de email
 - Foco visível
 - Mensagens claras
-        `}},layout:"fullscreen"},argTypes:{variant:{control:"select",options:["basic","card","illustration"],description:"Estilo do layout",table:{defaultValue:{summary:"card"}}},showSuccess:{control:"boolean",description:"Mostrar estado de sucesso",table:{defaultValue:{summary:!1}}}}},d=({variant:e="card",showSuccess:r=!1})=>{const i=e==="card",m=e==="illustration";return`<div class="authentication-wrapper authentication-${e} container-p-y">
-  <div class="authentication-inner ${i?"row":""}">
+        `}},layout:"fullscreen"},argTypes:{variant:{control:"select",options:["basic","card","illustration"],description:"Estilo do layout",table:{defaultValue:{summary:"card"}}},showSuccess:{control:"boolean",description:"Mostrar estado de sucesso",table:{defaultValue:{summary:!1}}}}},d=({variant:e="card",showSuccess:r=!1})=>{const l=e==="card",m=e==="illustration";return`<div class="authentication-wrapper authentication-${e} container-p-y">
+  <div class="authentication-inner ${l?"row":""}">
     
     ${m?`
     <div class="d-none d-lg-flex col-lg-7 p-0">
@@ -48,18 +48,14 @@ Template de página para recuperação/reset de senha.
     </div>
     `:""}
     
-    <div class="${m?"col-lg-5":i?"col-12 col-md-8 col-lg-6 col-xl-5":"col-12"} mx-auto ${i?"card":""}">
-      <div class="${i?"card-body":""} p-4 p-sm-5">
+    <div class="${m?"col-lg-5":l?"col-12 col-md-8 col-lg-6 col-xl-5":"col-12"} mx-auto ${l?"card":""}">
+      <div class="${l?"card-body":""} p-4 p-sm-5">
         
         <!-- Logo/Brand -->
         <div class="app-brand mb-4 text-center">
           <span class="app-brand-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="6" fill="#696cff"/>
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
-            </svg>
+            <img src="/educacross-assets/logo-educacross.svg" alt="Educacross Logo" style="height: 32px; width: auto;">
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
         </div>
         
         ${r?`
@@ -184,7 +180,7 @@ Template de página para recuperação/reset de senha.
         </div>
       </div>
     </details>
-  `},l=()=>`
+  `},i=()=>`
   <div class="row g-4" style="background: #f5f5f9; padding: 3rem;">
     <div class="col-md-6">
       <h5 class="mb-3">Initial State</h5>
@@ -262,7 +258,7 @@ Template de página para recuperação/reset de senha.
         </div>
       </div>
     </div>
-  `;var u,p,g;l.parameters={...l.parameters,docs:{...(u=l.parameters)==null?void 0:u.docs,source:{originalSource:`() => \`
+  `;var u,p,g;i.parameters={...i.parameters,docs:{...(u=i.parameters)==null?void 0:u.docs,source:{originalSource:`() => \`
   <div class="row g-4" style="background: #f5f5f9; padding: 3rem;">
     <div class="col-md-6">
       <h5 class="mb-3">Initial State</h5>
@@ -279,7 +275,7 @@ Template de página para recuperação/reset de senha.
 })}
     </div>
   </div>
-\``,...(g=(p=l.parameters)==null?void 0:p.docs)==null?void 0:g.source}}};var v,b,y;a.parameters={...a.parameters,docs:{...(v=a.parameters)==null?void 0:v.docs,source:{originalSource:`args => {
+\``,...(g=(p=i.parameters)==null?void 0:p.docs)==null?void 0:g.source}}};var v,b,y;a.parameters={...a.parameters,docs:{...(v=a.parameters)==null?void 0:v.docs,source:{originalSource:`args => {
   const markup = createForgotPasswordPage(args);
   return \`
     \${markup}
@@ -298,7 +294,7 @@ Template de página para recuperação/reset de senha.
       </div>
     </details>
   \`;
-}`,...(y=(b=a.parameters)==null?void 0:b.docs)==null?void 0:y.source}}};var f,h,x;t.parameters={...t.parameters,docs:{...(f=t.parameters)==null?void 0:f.docs,source:{originalSource:`args => {
+}`,...(y=(b=a.parameters)==null?void 0:b.docs)==null?void 0:y.source}}};var f,h,k;t.parameters={...t.parameters,docs:{...(f=t.parameters)==null?void 0:f.docs,source:{originalSource:`args => {
   const markup = createForgotPasswordPage(args);
   return \`
     \${markup}
@@ -317,7 +313,7 @@ Template de página para recuperação/reset de senha.
       </div>
     </details>
   \`;
-}`,...(x=(h=t.parameters)==null?void 0:h.docs)==null?void 0:x.source}}};var k,w,E;s.parameters={...s.parameters,docs:{...(k=s.parameters)==null?void 0:k.docs,source:{originalSource:`args => {
+}`,...(k=(h=t.parameters)==null?void 0:h.docs)==null?void 0:k.source}}};var x,w,E;s.parameters={...s.parameters,docs:{...(x=s.parameters)==null?void 0:x.docs,source:{originalSource:`args => {
   const markup = createForgotPasswordPage(args);
   return \`
     \${markup}
@@ -355,7 +351,7 @@ Template de página para recuperação/reset de senha.
       </div>
     </details>
   \`;
-}`,...(C=(F=n.parameters)==null?void 0:F.docs)==null?void 0:C.source}}};var P,B,I;o.parameters={...o.parameters,docs:{...(P=o.parameters)==null?void 0:P.docs,source:{originalSource:`() => {
+}`,...(C=(F=n.parameters)==null?void 0:F.docs)==null?void 0:C.source}}};var P,I,B;o.parameters={...o.parameters,docs:{...(P=o.parameters)==null?void 0:P.docs,source:{originalSource:`() => {
   return \`
     <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
       <div class="row justify-content-center">
@@ -424,4 +420,4 @@ Template de página para recuperação/reset de senha.
       </div>
     </div>
   \`;
-}`,...(I=(B=o.parameters)==null?void 0:B.docs)==null?void 0:I.source}}};const H=["Overview","InitialState","SuccessState","WithIllustration","BasicLayout","Interactive"];export{n as BasicLayout,a as InitialState,o as Interactive,l as Overview,t as SuccessState,s as WithIllustration,H as __namedExportsOrder,L as default};
+}`,...(B=(I=o.parameters)==null?void 0:I.docs)==null?void 0:B.source}}};const H=["Overview","InitialState","SuccessState","WithIllustration","BasicLayout","Interactive"];export{n as BasicLayout,a as InitialState,o as Interactive,i as Overview,t as SuccessState,s as WithIllustration,H as __namedExportsOrder,T as default};

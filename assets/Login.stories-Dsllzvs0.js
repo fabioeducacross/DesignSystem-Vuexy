@@ -33,8 +33,8 @@ Template completo de página de autenticação para login.
 - Validação de formulário
 - Foco visível em campos
 - Navegação por teclado
-        `}},layout:"fullscreen"},argTypes:{withSocial:{control:"boolean",description:"Incluir botões de login social",table:{defaultValue:{summary:!0}}},variant:{control:"select",options:["basic","card","illustration"],description:"Estilo do layout",table:{defaultValue:{summary:"card"}}}}},P=({withSocial:c=!0,variant:e="card"})=>{const r=e==="card",d=e==="illustration";return`<div class="authentication-wrapper authentication-${e} container-p-y">
-  <div class="authentication-inner ${r?"row":""}">
+        `}},layout:"fullscreen"},argTypes:{withSocial:{control:"boolean",description:"Incluir botões de login social",table:{defaultValue:{summary:!0}}},variant:{control:"select",options:["basic","card","illustration"],description:"Estilo do layout",table:{defaultValue:{summary:"card"}}}}},P=({withSocial:c=!0,variant:e="card"})=>{const n=e==="card",d=e==="illustration";return`<div class="authentication-wrapper authentication-${e} container-p-y">
+  <div class="authentication-inner ${n?"row":""}">
     
     ${d?`
     <div class="d-none d-lg-flex col-lg-7 p-0">
@@ -46,18 +46,14 @@ Template completo de página de autenticação para login.
     </div>
     `:""}
     
-    <div class="${d?"col-lg-5":r?"col-12 col-md-8 col-lg-6 col-xl-5":"col-12"} mx-auto ${r?"card":""}">
-      <div class="${r?"card-body":""} p-4 p-sm-5">
+    <div class="${d?"col-lg-5":n?"col-12 col-md-8 col-lg-6 col-xl-5":"col-12"} mx-auto ${n?"card":""}">
+      <div class="${n?"card-body":""} p-4 p-sm-5">
         
         <!-- Logo/Brand -->
         <div class="app-brand mb-4 text-center">
           <span class="app-brand-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="6" fill="#696cff"/>
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
-            </svg>
+            <img src="/educacross-assets/logo-educacross.svg" alt="Educacross Logo" style="height: 32px; width: auto;">
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
         </div>
         
         <h4 class="mb-1">Welcome to Vuexy! 👋</h4>
@@ -229,7 +225,7 @@ Template completo de página de autenticação para login.
   <div style="background: #f5f5f9; padding: 3rem;">
     ${P({withSocial:!0,variant:"card"})}
   </div>
-`,a=l.bind({});a.args={withSocial:!0,variant:"card"};const t=l.bind({});t.args={withSocial:!1,variant:"basic"};const s=l.bind({});s.args={withSocial:!0,variant:"illustration"};const n=l.bind({});n.args={withSocial:!1,variant:"card"};const i=()=>`
+`,a=l.bind({});a.args={withSocial:!0,variant:"card"};const t=l.bind({});t.args={withSocial:!1,variant:"basic"};const s=l.bind({});s.args={withSocial:!0,variant:"illustration"};const r=l.bind({});r.args={withSocial:!1,variant:"card"};const i=()=>`
     <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -286,14 +282,14 @@ Template completo de página de autenticação para login.
         </div>
       </div>
     </div>
-  `;var m,p,b;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`() => \`
+  `;var m,p,u;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`() => \`
   <div style="background: #f5f5f9; padding: 3rem;">
     \${createLoginPage({
   withSocial: true,
   variant: 'card'
 })}
   </div>
-\``,...(b=(p=o.parameters)==null?void 0:p.docs)==null?void 0:b.source}}};var u,g,v;a.parameters={...a.parameters,docs:{...(u=a.parameters)==null?void 0:u.docs,source:{originalSource:`args => {
+\``,...(u=(p=o.parameters)==null?void 0:p.docs)==null?void 0:u.source}}};var b,g,v;a.parameters={...a.parameters,docs:{...(b=a.parameters)==null?void 0:b.docs,source:{originalSource:`args => {
   const markup = createLoginPage(args);
   return \`
     \${markup}
@@ -350,7 +346,7 @@ Template completo de página de autenticação para login.
       </div>
     </details>
   \`;
-}`,...(k=(w=s.parameters)==null?void 0:w.docs)==null?void 0:k.source}}};var L,E,S;n.parameters={...n.parameters,docs:{...(L=n.parameters)==null?void 0:L.docs,source:{originalSource:`args => {
+}`,...(k=(w=s.parameters)==null?void 0:w.docs)==null?void 0:k.source}}};var L,E,S;r.parameters={...r.parameters,docs:{...(L=r.parameters)==null?void 0:L.docs,source:{originalSource:`args => {
   const markup = createLoginPage(args);
   return \`
     \${markup}
@@ -369,7 +365,7 @@ Template completo de página de autenticação para login.
       </div>
     </details>
   \`;
-}`,...(S=(E=n.parameters)==null?void 0:E.docs)==null?void 0:S.source}}};var T,C,F;i.parameters={...i.parameters,docs:{...(T=i.parameters)==null?void 0:T.docs,source:{originalSource:`() => {
+}`,...(S=(E=r.parameters)==null?void 0:E.docs)==null?void 0:S.source}}};var T,C,F;i.parameters={...i.parameters,docs:{...(T=i.parameters)==null?void 0:T.docs,source:{originalSource:`() => {
   return \`
     <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
       <div class="row justify-content-center">
@@ -428,4 +424,4 @@ Template completo de página de autenticação para login.
       </div>
     </div>
   \`;
-}`,...(F=(C=i.parameters)==null?void 0:C.docs)==null?void 0:F.source}}};const I=["Overview","CardLayout","BasicLayout","WithIllustration","NoSocialLogin","Interactive"];export{t as BasicLayout,a as CardLayout,i as Interactive,n as NoSocialLogin,o as Overview,s as WithIllustration,I as __namedExportsOrder,H as default};
+}`,...(F=(C=i.parameters)==null?void 0:C.docs)==null?void 0:F.source}}};const I=["Overview","CardLayout","BasicLayout","WithIllustration","NoSocialLogin","Interactive"];export{t as BasicLayout,a as CardLayout,i as Interactive,r as NoSocialLogin,o as Overview,s as WithIllustration,I as __namedExportsOrder,H as default};

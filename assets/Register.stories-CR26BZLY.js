@@ -51,12 +51,8 @@ Template completo de página de registro/criação de conta.
         <!-- Logo/Brand -->
         <div class="app-brand mb-4 text-center">
           <span class="app-brand-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="6" fill="#696cff"/>
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
-            </svg>
+            <img src="/educacross-assets/logo-educacross.svg" alt="Educacross Logo" style="height: 32px; width: auto;">
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
         </div>
         
         <h4 class="mb-1">Adventure starts here 🚀</h4>
@@ -373,7 +369,7 @@ Template completo de página de registro/criação de conta.
       </div>
     </details>
   \`;
-}`,...(C=(S=r.parameters)==null?void 0:S.docs)==null?void 0:C.source}}};var $,T,L;l.parameters={...l.parameters,docs:{...($=l.parameters)==null?void 0:$.docs,source:{originalSource:`() => {
+}`,...(C=(S=r.parameters)==null?void 0:S.docs)==null?void 0:C.source}}};var $,L,T;l.parameters={...l.parameters,docs:{...($=l.parameters)==null?void 0:$.docs,source:{originalSource:`() => {
   return \`
     <div style="background: #f5f5f9; padding: 3rem; min-height: 100vh;">
       <div class="row justify-content-center">
@@ -440,4 +436,4 @@ Template completo de página de registro/criação de conta.
       </div>
     </div>
   \`;
-}`,...(L=(T=l.parameters)==null?void 0:T.docs)==null?void 0:L.source}}};const B=["Overview","CardLayout","BasicLayout","WithIllustration","NoSocialLogin","Interactive"];export{a as BasicLayout,t as CardLayout,l as Interactive,r as NoSocialLogin,o as Overview,s as WithIllustration,B as __namedExportsOrder,A as default};
+}`,...(T=(L=l.parameters)==null?void 0:L.docs)==null?void 0:T.source}}};const F=["Overview","CardLayout","BasicLayout","WithIllustration","NoSocialLogin","Interactive"];export{a as BasicLayout,t as CardLayout,l as Interactive,r as NoSocialLogin,o as Overview,s as WithIllustration,F as __namedExportsOrder,A as default};

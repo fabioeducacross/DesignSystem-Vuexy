@@ -1,4 +1,4 @@
-import{f as U,a as Y}from"./snippets-m8t1HIl1.js";const Z={title:"Vuexy/Organisms/Navigation/Sidebar",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{f as U,a as Y}from"./snippets-m8t1HIl1.js";const P={title:"Vuexy/Organisms/Navigation/Sidebar",tags:["autodocs"],parameters:{docs:{description:{component:`
 # Sidebar
 
 Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
@@ -26,7 +26,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
 - \`aria-expanded\` em submenus
 - \`aria-current="page"\` no item ativo
 - Suporte a navegação por teclado
-        `}}},argTypes:{collapsed:{control:"boolean",description:"Estado colapsado do menu",table:{defaultValue:{summary:!1}}},activeItem:{control:"text",description:"ID do item ativo",table:{defaultValue:{summary:"dashboard"}}},showBadges:{control:"boolean",description:"Mostra badges nos itens",table:{defaultValue:{summary:!0}}},theme:{control:"select",options:["light","dark"],description:"Tema do sidebar",table:{defaultValue:{summary:"light"}}}}},R=[{id:"dashboard",label:"Dashboard",icon:"bx-home-circle",badge:null,children:null},{id:"layouts",label:"Layouts",icon:"bx-layout",badge:null,children:[{id:"collapsed",label:"Collapsed menu",icon:null},{id:"content-navbar",label:"Content navbar",icon:null},{id:"fluid",label:"Fluid",icon:null}]},{id:"pages",label:"Pages",icon:"bx-dock-top",badge:{text:"5",color:"danger"},children:[{id:"account",label:"Account Settings",icon:null},{id:"profile",label:"Profile",icon:null},{id:"faq",label:"FAQ",icon:null},{id:"pricing",label:"Pricing",icon:null},{id:"misc",label:"Misc",icon:null}]},{id:"components",label:"Components",icon:"bx-box",badge:null,children:null},{id:"cards",label:"Cards",icon:"bx-collection",badge:{text:"New",color:"primary"},children:null},{id:"ui",label:"User Interface",icon:"bx-crown",badge:null,children:[{id:"accordion",label:"Accordion",icon:null},{id:"alerts",label:"Alerts",icon:null},{id:"badges",label:"Badges",icon:null},{id:"buttons",label:"Buttons",icon:null},{id:"modals",label:"Modals",icon:null}]},{id:"forms",label:"Forms & Tables",icon:"bx-detail",badge:null,children:[{id:"form-elements",label:"Form Elements",icon:null},{id:"form-layouts",label:"Form Layouts",icon:null},{id:"tables",label:"Tables",icon:null}]},{id:"charts",label:"Charts",icon:"bx-chart",badge:null,children:null}],x=({collapsed:a=!1,activeItem:i="dashboard",showBadges:n=!0,theme:o="light"})=>{const r=a?"layout-menu-collapsed":"",v=o==="dark"?"bg-dark":"bg-menu-theme",h=(e,s=0)=>{const c=e.id===i,b=e.children&&e.children.length>0,l=n&&e.badge?`<span class="badge badge-center rounded-pill bg-${e.badge.color} ms-auto">${e.badge.text}</span>`:"";if(b){const f=e.children.map(N=>h(N,1)).join("");return`
+        `}}},argTypes:{collapsed:{control:"boolean",description:"Estado colapsado do menu",table:{defaultValue:{summary:!1}}},activeItem:{control:"text",description:"ID do item ativo",table:{defaultValue:{summary:"dashboard"}}},showBadges:{control:"boolean",description:"Mostra badges nos itens",table:{defaultValue:{summary:!0}}},theme:{control:"select",options:["light","dark"],description:"Tema do sidebar",table:{defaultValue:{summary:"light"}}}}},F=[{id:"dashboard",label:"Dashboard",icon:"bx-home-circle",badge:null,children:null},{id:"layouts",label:"Layouts",icon:"bx-layout",badge:null,children:[{id:"collapsed",label:"Collapsed menu",icon:null},{id:"content-navbar",label:"Content navbar",icon:null},{id:"fluid",label:"Fluid",icon:null}]},{id:"pages",label:"Pages",icon:"bx-dock-top",badge:{text:"5",color:"danger"},children:[{id:"account",label:"Account Settings",icon:null},{id:"profile",label:"Profile",icon:null},{id:"faq",label:"FAQ",icon:null},{id:"pricing",label:"Pricing",icon:null},{id:"misc",label:"Misc",icon:null}]},{id:"components",label:"Components",icon:"bx-box",badge:null,children:null},{id:"cards",label:"Cards",icon:"bx-collection",badge:{text:"New",color:"primary"},children:null},{id:"ui",label:"User Interface",icon:"bx-crown",badge:null,children:[{id:"accordion",label:"Accordion",icon:null},{id:"alerts",label:"Alerts",icon:null},{id:"badges",label:"Badges",icon:null},{id:"buttons",label:"Buttons",icon:null},{id:"modals",label:"Modals",icon:null}]},{id:"forms",label:"Forms & Tables",icon:"bx-detail",badge:null,children:[{id:"form-elements",label:"Form Elements",icon:null},{id:"form-layouts",label:"Form Layouts",icon:null},{id:"tables",label:"Tables",icon:null}]},{id:"charts",label:"Charts",icon:"bx-chart",badge:null,children:null}],x=({collapsed:a=!1,activeItem:i="dashboard",showBadges:n=!0,theme:o="light"})=>{const d=a?"layout-menu-collapsed":"",v=o==="dark"?"bg-dark":"bg-menu-theme",h=(e,s=0)=>{const c=e.id===i,b=e.children&&e.children.length>0,l=n&&e.badge?`<span class="badge badge-center rounded-pill bg-${e.badge.color} ms-auto">${e.badge.text}</span>`:"";if(b){const y=e.children.map(N=>h(N,1)).join("");return`
         <li class="menu-item ${c?"active open":""}">
           <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx ${e.icon}"></i>
@@ -34,7 +34,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
             ${l}
           </a>
           <ul class="menu-sub">
-            ${f}
+            ${y}
           </ul>
         </li>`}return`
       <li class="menu-item ${c?"active":""}">
@@ -43,18 +43,12 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
           <div data-i18n="${e.label}">${e.label}</div>
           ${l}
         </a>
-      </li>`},d=R.map(e=>h(e)).join("");return`<aside id="layout-menu" class="layout-menu menu-vertical menu ${v} ${r}" data-bg-class="${v}">
+      </li>`},r=F.map(e=>h(e)).join("");return`<aside id="layout-menu" class="layout-menu menu-vertical menu ${v} ${d}" data-bg-class="${v}">
   <div class="app-brand demo">
     <a href="#" class="app-brand-link">
       <span class="app-brand-logo demo">
-        <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0"/>
-          <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616"/>
-          <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0"/>
-        </svg>
+        <img src="/educacross-assets/logo-educacross.svg" alt="Educacross Logo" style="height: 22px; width: auto;">
       </span>
-      <span class="app-brand-text demo menu-text fw-bold ms-2">Vuexy</span>
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto ${a?"":"d-xl-none"}">
@@ -65,7 +59,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
   <div class="menu-inner-shadow"></div>
 
   <ul class="menu-inner py-1" style="${a?"overflow: hidden;":""}">
-    ${d}
+    ${r}
   </ul>
 </aside>`},$=a=>{const i=x(a);return`
     <div style="height: 600px; overflow: hidden; display: flex;">
@@ -104,7 +98,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
         <pre><code>${Y(i,"Sidebar").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</code></pre>
       </div>
     </details>
-  `},y=()=>`
+  `},f=()=>`
   <div class="row g-4">
     <div class="col-12">
       <h5>Expanded (Default)</h5>
@@ -127,7 +121,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </div>
   </div>
-`,t=$.bind({});t.args={collapsed:!1,activeItem:"dashboard",showBadges:!0,theme:"light"};const u=$.bind({});u.args={...t.args,collapsed:!0};const p=$.bind({});p.args={...t.args,activeItem:"profile"};const m=$.bind({});m.args={...t.args,theme:"dark"};const g=()=>{const a="sidebar-interactive-"+Math.random().toString(36).substr(2,9),i=`
+`,t=$.bind({});t.args={collapsed:!1,activeItem:"dashboard",showBadges:!0,theme:"light"};const u=$.bind({});u.args={...t.args,collapsed:!0};const m=$.bind({});m.args={...t.args,activeItem:"profile"};const p=$.bind({});p.args={...t.args,theme:"dark"};const g=()=>{const a="sidebar-interactive-"+Math.random().toString(36).substr(2,9),i=`
     <div id="${a}" style="height: 500px; border: 1px solid #ddd; position: relative;">
       <aside class="menu menu-vertical" style="width: 260px; height: 100%; overflow-y: auto;">
         <div class="app-brand p-3">
@@ -138,7 +132,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
         </div>
         
         <ul class="menu-inner py-1">
-          ${R.map(n=>`
+          ${F.map(n=>`
             <li class="menu-item ${n.id==="dashboard"?"active":""}" data-item-id="${n.id}">
               <a href="javascript:void(0);" class="menu-link ${n.children?"menu-toggle":""}" ${n.children?'data-has-submenu="true"':""}>
                 <i class="menu-icon tf-icons bx ${n.icon}"></i>
@@ -158,7 +152,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
         </ul>
       </aside>
     </div>
-  `;return setTimeout(()=>{const n=document.getElementById(a);if(!n)return;const o=n.querySelector(".menu"),r=n.querySelector('[data-action="toggle"]'),v=n.querySelectorAll(".menu-item"),h=n.querySelectorAll(".menu-link");let d=!1;r&&r.addEventListener("click",()=>{d=!d;const e=r.querySelector("i");d?(o.style.width="80px",e.classList.remove("bx-chevron-left"),e.classList.add("bx-chevron-right"),n.querySelectorAll(".menu-text").forEach(s=>s.style.display="none"),n.querySelectorAll(".badge").forEach(s=>s.style.display="none"),n.querySelectorAll(".menu-sub").forEach(s=>s.style.display="none")):(o.style.width="260px",e.classList.remove("bx-chevron-right"),e.classList.add("bx-chevron-left"),n.querySelectorAll(".menu-text").forEach(s=>s.style.display=""),n.querySelectorAll(".badge").forEach(s=>s.style.display=""))}),h.forEach(e=>{e.addEventListener("click",s=>{const c=e.closest(".menu-item"),b=e.hasAttribute("data-has-submenu");if(b&&!d){s.preventDefault();const l=c.querySelector(".menu-sub");if(l){const f=l.style.display!=="none";l.style.display=f?"none":"block",e.classList.toggle("open",!f)}}else b||(v.forEach(l=>l.classList.remove("active")),c.classList.add("active"))})})},100),`
+  `;return setTimeout(()=>{const n=document.getElementById(a);if(!n)return;const o=n.querySelector(".menu"),d=n.querySelector('[data-action="toggle"]'),v=n.querySelectorAll(".menu-item"),h=n.querySelectorAll(".menu-link");let r=!1;d&&d.addEventListener("click",()=>{r=!r;const e=d.querySelector("i");r?(o.style.width="80px",e.classList.remove("bx-chevron-left"),e.classList.add("bx-chevron-right"),n.querySelectorAll(".menu-text").forEach(s=>s.style.display="none"),n.querySelectorAll(".badge").forEach(s=>s.style.display="none"),n.querySelectorAll(".menu-sub").forEach(s=>s.style.display="none")):(o.style.width="260px",e.classList.remove("bx-chevron-right"),e.classList.add("bx-chevron-left"),n.querySelectorAll(".menu-text").forEach(s=>s.style.display=""),n.querySelectorAll(".badge").forEach(s=>s.style.display=""))}),h.forEach(e=>{e.addEventListener("click",s=>{const c=e.closest(".menu-item"),b=e.hasAttribute("data-has-submenu");if(b&&!r){s.preventDefault();const l=c.querySelector(".menu-sub");if(l){const y=l.style.display!=="none";l.style.display=y?"none":"block",e.classList.toggle("open",!y)}}else b||(v.forEach(l=>l.classList.remove("active")),c.classList.add("active"))})})},100),`
     ${i}
     <div class="alert alert-info mt-3">
       <strong>Interactive demo:</strong> 
@@ -168,7 +162,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
         <li>Click items with submenus to expand/collapse (only when expanded)</li>
       </ul>
     </div>
-  `};g.parameters={docs:{description:{story:"Interactive sidebar demo with toggle, active states, and submenu expansion."}}};var S,k,w;y.parameters={...y.parameters,docs:{...(S=y.parameters)==null?void 0:S.docs,source:{originalSource:`() => \`
+  `};g.parameters={docs:{description:{story:"Interactive sidebar demo with toggle, active states, and submenu expansion."}}};var S,k,w;f.parameters={...f.parameters,docs:{...(S=f.parameters)==null?void 0:S.docs,source:{originalSource:`() => \`
   <div class="row g-4">
     <div class="col-12">
       <h5>Expanded (Default)</h5>
@@ -200,7 +194,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </div>
   </div>
-\``,...(w=(k=y.parameters)==null?void 0:k.docs)==null?void 0:w.source}}};var I,C,L;t.parameters={...t.parameters,docs:{...(I=t.parameters)==null?void 0:I.docs,source:{originalSource:`args => {
+\``,...(w=(k=f.parameters)==null?void 0:k.docs)==null?void 0:w.source}}};var I,C,A;t.parameters={...t.parameters,docs:{...(I=t.parameters)==null?void 0:I.docs,source:{originalSource:`args => {
   const markup = createSidebar(args);
   return \`
     <div style="height: 600px; overflow: hidden; display: flex;">
@@ -240,7 +234,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </details>
   \`;
-}`,...(L=(C=t.parameters)==null?void 0:C.docs)==null?void 0:L.source}}};var A,E,q;u.parameters={...u.parameters,docs:{...(A=u.parameters)==null?void 0:A.docs,source:{originalSource:`args => {
+}`,...(A=(C=t.parameters)==null?void 0:C.docs)==null?void 0:A.source}}};var E,L,q;u.parameters={...u.parameters,docs:{...(E=u.parameters)==null?void 0:E.docs,source:{originalSource:`args => {
   const markup = createSidebar(args);
   return \`
     <div style="height: 600px; overflow: hidden; display: flex;">
@@ -280,7 +274,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </details>
   \`;
-}`,...(q=(E=u.parameters)==null?void 0:E.docs)==null?void 0:q.source}}};var M,B,H;p.parameters={...p.parameters,docs:{...(M=p.parameters)==null?void 0:M.docs,source:{originalSource:`args => {
+}`,...(q=(L=u.parameters)==null?void 0:L.docs)==null?void 0:q.source}}};var B,T,M;m.parameters={...m.parameters,docs:{...(B=m.parameters)==null?void 0:B.docs,source:{originalSource:`args => {
   const markup = createSidebar(args);
   return \`
     <div style="height: 600px; overflow: hidden; display: flex;">
@@ -320,7 +314,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </details>
   \`;
-}`,...(H=(B=p.parameters)==null?void 0:B.docs)==null?void 0:H.source}}};var T,V,O;m.parameters={...m.parameters,docs:{...(T=m.parameters)==null?void 0:T.docs,source:{originalSource:`args => {
+}`,...(M=(T=m.parameters)==null?void 0:T.docs)==null?void 0:M.source}}};var H,O,j;p.parameters={...p.parameters,docs:{...(H=p.parameters)==null?void 0:H.docs,source:{originalSource:`args => {
   const markup = createSidebar(args);
   return \`
     <div style="height: 600px; overflow: hidden; display: flex;">
@@ -360,7 +354,7 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </div>
     </details>
   \`;
-}`,...(O=(V=m.parameters)==null?void 0:V.docs)==null?void 0:O.source}}};var j,D,F;g.parameters={...g.parameters,docs:{...(j=g.parameters)==null?void 0:j.docs,source:{originalSource:`() => {
+}`,...(j=(O=p.parameters)==null?void 0:O.docs)==null?void 0:j.source}}};var D,V,R;g.parameters={...g.parameters,docs:{...(D=g.parameters)==null?void 0:D.docs,source:{originalSource:`() => {
   const containerId = 'sidebar-interactive-' + Math.random().toString(36).substr(2, 9);
   const markup = \`
     <div id="\${containerId}" style="height: 500px; border: 1px solid #ddd; position: relative;">
@@ -458,4 +452,4 @@ Menu lateral de navegação do Vuexy com suporte a multi-níveis e collapse.
       </ul>
     </div>
   \`;
-}`,...(F=(D=g.parameters)==null?void 0:D.docs)==null?void 0:F.source}}};const P=["Overview","Expanded","Collapsed","WithSubmenu","DarkTheme","Interactive"];export{u as Collapsed,m as DarkTheme,t as Expanded,g as Interactive,y as Overview,p as WithSubmenu,P as __namedExportsOrder,Z as default};
+}`,...(R=(V=g.parameters)==null?void 0:V.docs)==null?void 0:R.source}}};const _=["Overview","Expanded","Collapsed","WithSubmenu","DarkTheme","Interactive"];export{u as Collapsed,p as DarkTheme,t as Expanded,g as Interactive,f as Overview,m as WithSubmenu,_ as __namedExportsOrder,P as default};
