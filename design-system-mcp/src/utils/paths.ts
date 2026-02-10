@@ -55,12 +55,12 @@ export function getDirname(importMetaUrl: string): string {
 export function loadPathConfig(): PathConfig {
   const workspaceRoot = path.resolve(
     getDirname(import.meta.url),
-    '../../../..'
+    '../../..'  // dist/utils → DesignSystem-Vuexy (3 níveis)
   );
   
   return {
-    storiesPath: process.env.STORIES_PATH || '../src/stories/educacross-components-v2',
-    componentsPath: process.env.COMPONENTS_PATH || '../educacross-frontoffice/src/components',
+    storiesPath: process.env.STORIES_PATH || 'src/stories/educacross-components-v2',
+    componentsPath: process.env.COMPONENTS_PATH || 'educacross-frontoffice/src/components',
     cacheDir: process.env.CACHE_DIR,
     workspaceRoot
   };

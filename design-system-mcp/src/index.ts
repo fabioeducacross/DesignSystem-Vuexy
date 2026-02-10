@@ -26,8 +26,10 @@ import {
 import { ComponentLoader } from './loader/component-loader.js';
 import { componentCache } from './cache/memory-cache.js';
 import { createCacheInvalidator } from './cache/invalidator.js';
+import { PersistentCache } from './cache/persistent-cache.js';
 import { searchIndex } from './search/index.js';
 import { ComponentFilters } from './types/component.js';
+import { join } from 'path';
 
 /**
  * Estado do sistema
@@ -47,29 +49,58 @@ async function initializeSystem(resolved: any) {
   const timer = new Timer('System initialization');
   logger.info('Initializing system...');
   
-  // Criar loader
-  const loader = new ComponentLoader({
-    storiesPath: resolved.stories,
-    componentsPath: resolved.components,
-    storybookBaseUrl: 'http://localhost:6006'
-  });
+  // Tentar carregar do cache persistente primeiro
+  const cacheDir = join(resolved.root, 'data');  // root já é DesignSystem-Vuexy/design-system-mcp
+  const persistentCache = new PersistentCache(cacheDir);
   
-  // Carregar componentes
-  const result = await loader.loadAll();
+  logger.debug('Checking persistent cache', { cacheDir });
   
-  if (result.errors.length > 0) {
-    logger.warn(`${result.errors.length} errors during loading:`, result.errors);
+  let components: any[] = [];
+  
+  if (await persistentCache.exists()) {
+    logger.info('Loading from persistent cache...');
+    const cachedComponents = await persistentCache.load();
+    
+    if (cachedComponents.length > 0) {
+      components = cachedComponents;
+      logger.info(`Loaded ${components.length} components from cache`);
+    } else {
+      logger.warn('Cached file empty, loading from source');
+    }
   }
   
-  // Popular cache e search index
-  for (const component of result.components) {
+  // Se cache não existir ou estiver vazio, carregar da fonte
+  if (components.length === 0) {
+    logger.info('Loading from source files...');
+    
+    const loader = new ComponentLoader({
+      storiesPath: resolved.stories,
+      componentsPath: resolved.components,
+      storybookBaseUrl: 'http://localhost:6006'
+    });
+    
+    const result = await loader.loadAll();
+    
+    if (result.errors.length > 0) {
+      logger.warn(`${result.errors.length} errors during loading:`, result.errors);
+    }
+    
+    components = result.components;
+    
+    // Salvar cache para próxima vez
+    if (components.length > 0) {
+      await persistentCache.save(components);
+    }
+  }
+  
+  // Popular cache em memória e search index
+  for (const component of components) {
     componentCache.set(component.name, component);
     searchIndex.addComponent(component);
   }
   
   logger.info('System initialized', {
-    components: result.components.length,
-    stats: result.stats,
+    components: components.length,
     elapsed: timer.end()
   });
   

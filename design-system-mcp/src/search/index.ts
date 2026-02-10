@@ -230,30 +230,42 @@ export class SearchIndex {
     this.addTokens(tokens, component.name);
     
     // Categoria
-    this.addTokens(tokens, component.category);
-    
-    // Metadata
-    this.addTokens(tokens, component.metadata.title);
-    if (component.metadata.description) {
-      this.addTokens(tokens, component.metadata.description);
+    if (component.category) {
+      this.addTokens(tokens, component.category);
     }
     
-    // Tags
-    component.metadata.tags.forEach(tag => this.addTokens(tokens, tag));
+    // Metadata - validação defensiva
+    if (component.metadata) {
+      if (component.metadata.title) {
+        this.addTokens(tokens, component.metadata.title);
+      }
+      if (component.metadata.description) {
+        this.addTokens(tokens, component.metadata.description);
+      }
+      if (component.metadata.tags) {
+        component.metadata.tags.forEach(tag => this.addTokens(tokens, tag));
+      }
+    }
     
     // Props (nomes) - validação defensiva
     if (component.vue?.props) {
-      component.vue.props.forEach((prop: any) => this.addTokens(tokens, prop.name));
+      component.vue.props.forEach((prop: any) => {
+        if (prop.name) this.addTokens(tokens, prop.name);
+      });
     }
     
     // Events (nomes) - validação defensiva
     if (component.vue?.events) {
-      component.vue.events.forEach((event: any) => this.addTokens(tokens, event.name));
+      component.vue.events.forEach((event: any) => {
+        if (event.name) this.addTokens(tokens, event.name);
+      });
     }
     
     // Slots (nomes) - validação defensiva
     if (component.vue?.slots) {
-      component.vue.slots.forEach((slot: any) => this.addTokens(tokens, slot.name));
+      component.vue.slots.forEach((slot: any) => {
+        if (slot.name) this.addTokens(tokens, slot.name);
+      });
     }
     
     return tokens;

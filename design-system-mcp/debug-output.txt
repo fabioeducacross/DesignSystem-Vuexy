@@ -1,0 +1,1425 @@
+­ƒöì DEBUG: Cache Loading
+
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\app-collapse\AppCollapse.vue took 17ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\app-collapse\AppCollapseItem.vue took 18ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\app-language-selector\AppLanguageSelector.vue took 7ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\badge\BadgeStatus.vue took 5ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\badge\CellStatus.vue took 5ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\badge\ConditionalValueDisplay.vue took 4ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\card\DynamicMediaCard.vue took 6ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\card\MediaCard.vue took 4ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\card\MediaCardIcon.vue took 2ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\cells\PerformanceCell.vue took 4ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\chart\BarChart.vue took 4ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\chart\DefaultChart.vue took 2ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\chart\PieChart.vue took 3ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\chart\RadialBar.vue took 2ms
+­ƒôØ LOG: [02:50:09] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\chart\RadialBarChart.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\deeplink\BackgroundSpace.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\deeplink\IntermediateRedirectLoginDeepLink.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\deeplink\NewDeepLink.vue took 10ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\descriptors\DescriptorTag.vue took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\divider\Divider.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\divider\VerticalDivider.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\components\QuestionAlternative.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\components\QuestionContent.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\QuestionDetail.vue took 8ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template1.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template10.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template11.vue took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template2.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template3.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template4.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template5.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template6.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template7.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template8.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetail\templates\Template9.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetailV2\components\QuestionAlternative.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetailV2\QuestionDetail.vue took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionDetailV2\templates\TemplateDefault.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionsListDetail\components\QuestionAlternative.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionsListDetail\components\QuestionContent.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionsListDetail\QuestionsListDetail.vue took 9ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\questionsListDetail\templates\TemplateDefault.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\evaluations\shared\EvaluationsHtmlContentRenderer.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\exercise-type\reading-meter\ExerciseType.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\filter\ExpandableFilterArea.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\FixedStickyFooter.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\form\button\ButtonWaitAction.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\form\EFormCheck.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\global\HelpChat.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\legends\LegendBadgesReadingMeter.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\legends\LegendCard.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\legends\LegendEnum.vue took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\legends\LegendEnumPDF.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\locale\SelectLocale.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\locale\SelectLocaleNavbar.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\CancelMission.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\CopyLink.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\DeleteGuide.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\ExpiredMission.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\FeedbackAndSend.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\MissionAndQuestionItem.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\MissionBookDetails.vue took 25ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\MissionDetailsPlus.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\ModalStudentActivityDetails.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\ModalStudentRoundDetails.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\ShareGuide.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\StudentActivityDetail.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\mission-plus\StudentsDetail.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\missions\GuidesLimitAlert.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\missions\MissionDetails.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\missions\MissionVisualization.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\modal\DefaultFAQModal.vue took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\modal\GameDetailsModal.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\modal\StudentGameDetailsModal.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\modal\ZipLoading.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\NPS\NPS.vue took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\Card.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\CardsList.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\certificate\Certificate.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\certificate\CertificateList.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\event\certificate\Certificate.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\event\certificate\CertificateList.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDF.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\event\performance\PerformancePDFList.vue took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\PDFs\PDFRoot.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\player\AlbumCover.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\player\LyricsDisplay.vue took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\player\Player.vue took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\proficiency\ChangeProficiency.vue took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\progessBar\ProgressBarHorizontal.vue took 12ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\progessBar\ProgressBarHorizontalV2.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\progessBar\ProgressBarTopInfo.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\progessBar\ProgressBarVertical.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\progessBar\RainbowProgressBar.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\question\QuestionStatus.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\reading-meter\SidebarProficiencyInfo.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\selects\ESelect.vue took 9ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\selects\InfinityScroll.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\selects\MultipleDropdown.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\selects\SelectInfinityScroll.vue took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\selects\SelectInfinityScrollModelo.vue took 1ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\student-evidence-report\StudentEvidenceReportPDF.vue took 22ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\subjects\SubjectBand.vue took 9ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\subjects\subjects.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\subjects\subjectSelect.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\tab\SimpleTab.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\tab\Tab.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\tab\TabCards.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\tab\TabRouter.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTable.vue took 10ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTableAccess.vue took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTableLocalSorting.vue took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTablePagination.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTableRanking.vue took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTableSelect.vue took 10ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\table\ListTableSelectLocal.vue took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\teacher\listInitialsTeacher.vue took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AcceptOrRejectAccess.stories.js took 26ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AlbumCover.stories.js took 13ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppCollapse.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppCollapseItem.stories.js took 22ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppLanguageSelector.stories.js took 16ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppNavbar.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BackgroundSpace.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BadgeList.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BadgeStatus.stories.js took 9ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BarChart.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ButtonWaitAction.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CancelMission.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Card.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CardsList.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CellStatus.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Certificate.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CertificateList.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ChangeProficiency.stories.js took 10ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ConditionalValueDisplay.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CopyLink.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DefaultChart.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DefaultFAQModal.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DeleteGuide.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DescriptorTag.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Divider.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DynamicMediaCard.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EditProfileStudentNew.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EFormCheck.stories.js took 8ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EInput.stories.js took 15ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ESelect.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ETextarea.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EvaluationsHtmlContentRenderer.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExerciseType.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExpandableFilterArea.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExpiredMission.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FeedbackAndSend.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FilterChip.stories.js took 12ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FixedStickyFooter.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\GameDetailsModal.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\GuidesLimitAlert.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\HelpChat.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\InfinityScroll.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\IntermediateRedirectLoginDeepLink.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendBadgesReadingMeter.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendCard.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendEnum.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendEnumPDF.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\listInitialsTeacher.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTable.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableAccess.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableLocalSorting.stories.js took 16ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTablePagination.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableRanking.stories.js took 12ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableSelect.stories.js took 8ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableSelectLocal.stories.js took 30ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LyricsDisplay.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ManageAccountPage.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MediaCard.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MediaCardIcon.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionAndQuestionItem.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionBookDetails.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionDetails.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionDetailsPlus.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionVisualization.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ModalStudentActivityDetails.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ModalStudentRoundDetails.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MultipleDropdown.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\NewDeepLink.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\NPS.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PDFRoot.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformanceCell.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformancePDF.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformancePDFList.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PieChart.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Player.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProfilePicture.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBar.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarHorizontal.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarHorizontalV2.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarTopInfo.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarVertical.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionAlternative.stories.js took 13ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionContent.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionDetail.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionsListDetail.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionStatus.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\RadialBar.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\RainbowProgressBar.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectInfinityScroll.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectInfinityScrollModelo.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectLocale.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectLocaleNavbar.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ShareGuide.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Sidebar.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SidebarProficiencyInfo.stories.js took 7ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SimpleTab.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentActivityDetail.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentAvatar.stories.js took 5ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentEvidenceReportPDF.stories.js took 6ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentGameDetailsModal.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentsDetail.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SubjectBand.stories.js took 4ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SubjectCard.stories.js took 12ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\subjects.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\subjectSelect.stories.js took 2ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Tab.stories.js took 3ms
+­ƒôØ LOG: [02:50:10] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TabCards.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TabRouter.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template1.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template10.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template11.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template2.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template3.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template4.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template5.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template6.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template7.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template8.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template9.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TemplateDefault.stories.js took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\UserCard.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\VerticalDivider.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ZipLoading.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component AppCollapse took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component AppCollapseItem took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component AppLanguageSelector took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component BadgeStatus took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component CellStatus took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ConditionalValueDisplay took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component DynamicMediaCard took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component MediaCard took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component MediaCardIcon took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component PerformanceCell took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component BarChart took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component DefaultChart took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component PieChart took 0ms
+[02:50:11] [DEBUG] [MCP] Build component RadialBar took 0ms
+[02:50:11] [DEBUG] [MCP] Build component RadialBarChart took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component BackgroundSpace took 0ms
+[02:50:11] [DEBUG] [MCP] Build component IntermediateRedirectLoginDeepLink took 0ms
+[02:50:11] [DEBUG] [MCP] Build component NewDeepLink took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component DescriptorTag took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Divider took 0ms
+[02:50:11] [DEBUG] [MCP] Build component VerticalDivider took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component QuestionAlternative took 0ms
+[02:50:11] [DEBUG] [MCP] Build component QuestionContent took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component QuestionDetail took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template1 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template10 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template11 took 0ms
+[02:50:11] [DEBUG] [MCP] Build component Template2 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template3 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template4 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template5 took 1ms
+[02:50:11] [DEBUG] [MCP] Build component Template6 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template7 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Template8 took 0ms
+[02:50:11] [DEBUG] [MCP] Build component Template9 took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component TemplateDefault took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component QuestionsListDetail took 0ms
+[02:50:11] [DEBUG] [MCP] Build component EvaluationsHtmlContentRenderer took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ExerciseType took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ExpandableFilterArea took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component FixedStickyFooter took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ButtonWaitAction took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component EFormCheck took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component HelpChat took 0ms
+[02:50:11] [DEBUG] [MCP] Build component LegendBadgesReadingMeter took 0ms
+[02:50:11] [DEBUG] [MCP] Build component LegendCard took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component LegendEnum took 0ms
+[02:50:11] [DEBUG] [MCP] Build component LegendEnumPDF took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component SelectLocale took 0ms
+[02:50:11] [DEBUG] [MCP] Build component SelectLocaleNavbar took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component CancelMission took 0ms
+[02:50:11] [DEBUG] [MCP] Build component CopyLink took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component DeleteGuide took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ExpiredMission took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component FeedbackAndSend took 0ms
+[02:50:11] [DEBUG] [MCP] Build component MissionAndQuestionItem took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component MissionBookDetails took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component MissionDetailsPlus took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ModalStudentActivityDetails took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ModalStudentRoundDetails took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ShareGuide took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component StudentActivityDetail took 0ms
+[02:50:11] [DEBUG] [MCP] Build component StudentsDetail took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component GuidesLimitAlert took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component MissionDetails took 0ms
+[02:50:11] [DEBUG] [MCP] Build component MissionVisualization took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component DefaultFAQModal took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component GameDetailsModal took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component StudentGameDetailsModal took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ZipLoading took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component NPS took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Card took 0ms
+[02:50:11] [DEBUG] [MCP] Build component CardsList took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component Certificate took 0ms
+[02:50:11] [DEBUG] [MCP] Build component CertificateList took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component PerformancePDF took 0ms
+[02:50:11] [DEBUG] [MCP] Build component PerformancePDFList took 0ms
+[02:50:11] [DEBUG] [MCP] Build component PDFRoot took 0ms
+[02:50:11] [DEBUG] [MCP] Build component AlbumCover took 0ms
+[02:50:11] [DEBUG] [MCP] Build component LyricsDisplay took 0ms
+[02:50:11] [DEBUG] [MCP] Build component Player took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ChangeProficiency took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ProgressBarHorizontal took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ProgressBarHorizontalV2 took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ProgressBarTopInfo took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ProgressBarVertical took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component RainbowProgressBar took 0ms
+[02:50:11] [DEBUG] [MCP] Build component QuestionStatus took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component SidebarProficiencyInfo took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ESelect took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component InfinityScroll took 0ms
+[02:50:11] [DEBUG] [MCP] Build component MultipleDropdown took 0ms
+[02:50:11] [DEBUG] [MCP] Build component SelectInfinityScroll took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component SelectInfinityScrollModelo took 0ms
+[02:50:11] [DEBUG] [MCP] Build component StudentEvidenceReportPDF took 0ms
+[02:50:11] [DEBUG] [MCP] Build component SubjectBand took 0ms
+[02:50:11] [DEBUG] [MCP] Build component subjects took 0ms
+[02:50:11] [DEBUG] [MCP] Build component subjectSelect took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component SimpleTab took 0ms
+[02:50:11] [DEBUG] [MCP] Build component Tab took 0ms
+[02:50:11] [DEBUG] [MCP] Build component TabCards took 0ms
+[02:50:11] [DEBUG] [MCP] Build component TabRouter took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ListTable took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ListTableAccess took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ListTableLocalSorting took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ListTablePagination took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Build component ListTableRanking took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ListTableSelect took 0ms
+[02:50:11] [DEBUG] [MCP] Build component ListTableSelectLocal took 0ms
+[02:50:11] [DEBUG] [MCP] Build component listInitialsTeacher took 0ms
+[02:50:11] [INFO ] [MCP] Loaded 110 components successfully
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AcceptOrRejectAccess.stories.js took 8ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AcceptOrRejectAccess
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AcceptOrRejectAccess.stories.js) took 10ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AlbumCover.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AlbumCover
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AlbumCover.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppCollapse.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AppCollapse
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AppCollapse.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppCollapseItem.stories.js took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AppCollapseItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AppCollapseItem.stories.js) took 8ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppLanguageSelector.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AppLanguageSelector
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AppLanguageSelector.stories.js) took 9ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\AppNavbar.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for AppNavbar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(AppNavbar.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BackgroundSpace.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for BackgroundSpace
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(BackgroundSpace.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BadgeList.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for BadgeList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(BadgeList.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BadgeStatus.stories.js took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for BadgeStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(BadgeStatus.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\BarChart.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for BarChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(BarChart.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ButtonWaitAction.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ButtonWaitAction
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ButtonWaitAction.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CancelMission.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for CancelMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(CancelMission.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Card.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Card
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Card.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CardsList.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for CardsList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(CardsList.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CellStatus.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for CellStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(CellStatus.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Certificate.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Certificate
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Certificate.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CertificateList.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for CertificateList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(CertificateList.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ChangeProficiency.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ChangeProficiency
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ChangeProficiency.stories.js) took 9ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ConditionalValueDisplay.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ConditionalValueDisplay
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ConditionalValueDisplay.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\CopyLink.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for CopyLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(CopyLink.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DefaultChart.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for DefaultChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(DefaultChart.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DefaultFAQModal.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for DefaultFAQModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(DefaultFAQModal.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DeleteGuide.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for DeleteGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(DeleteGuide.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DescriptorTag.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for DescriptorTag
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(DescriptorTag.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Divider.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\Divider\Divider.vue took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Divider.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\DynamicMediaCard.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for DynamicMediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(DynamicMediaCard.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EditProfileStudentNew.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for EditProfileStudentNew
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(EditProfileStudentNew.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EFormCheck.stories.js took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for EFormCheck
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(EFormCheck.stories.js) took 7ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EInput.stories.js took 12ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for EInput
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(EInput.stories.js) took 13ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ESelect.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ESelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ESelect.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ETextarea.stories.js took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ETextarea
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ETextarea.stories.js) took 7ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\EvaluationsHtmlContentRenderer.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for EvaluationsHtmlContentRenderer
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(EvaluationsHtmlContentRenderer.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExerciseType.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ExerciseType
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ExerciseType.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExpandableFilterArea.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ExpandableFilterArea
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ExpandableFilterArea.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ExpiredMission.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ExpiredMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ExpiredMission.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FeedbackAndSend.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for FeedbackAndSend
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(FeedbackAndSend.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FilterChip.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for FilterChip
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(FilterChip.stories.js) took 11ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\FixedStickyFooter.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\FixedStickyFooter.vue took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(FixedStickyFooter.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\GameDetailsModal.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for GameDetailsModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(GameDetailsModal.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\GuidesLimitAlert.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for GuidesLimitAlert
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(GuidesLimitAlert.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\HelpChat.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for HelpChat
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(HelpChat.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\InfinityScroll.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for InfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(InfinityScroll.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\IntermediateRedirectLoginDeepLink.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for IntermediateRedirectLoginDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(IntermediateRedirectLoginDeepLink.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendBadgesReadingMeter.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for LegendBadgesReadingMeter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(LegendBadgesReadingMeter.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendCard.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for LegendCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(LegendCard.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendEnum.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for LegendEnum
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(LegendEnum.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LegendEnumPDF.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for LegendEnumPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(LegendEnumPDF.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\listInitialsTeacher.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for listInitialsTeacher
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(listInitialsTeacher.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTable.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTable
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTable.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableAccess.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTableAccess
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTableAccess.stories.js) took 11ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableLocalSorting.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTableLocalSorting
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTableLocalSorting.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTablePagination.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTablePagination
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTablePagination.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableRanking.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTableRanking
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTableRanking.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableSelect.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTableSelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTableSelect.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ListTableSelectLocal.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ListTableSelectLocal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ListTableSelectLocal.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\LyricsDisplay.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for LyricsDisplay
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(LyricsDisplay.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ManageAccountPage.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ManageAccountPage
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ManageAccountPage.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MediaCard.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MediaCard.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MediaCardIcon.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MediaCardIcon
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MediaCardIcon.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionAndQuestionItem.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MissionAndQuestionItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MissionAndQuestionItem.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionBookDetails.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MissionBookDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MissionBookDetails.stories.js) took 9ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionDetails.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MissionDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MissionDetails.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionDetailsPlus.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MissionDetailsPlus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MissionDetailsPlus.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MissionVisualization.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MissionVisualization
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MissionVisualization.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ModalStudentActivityDetails.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ModalStudentActivityDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ModalStudentActivityDetails.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ModalStudentRoundDetails.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ModalStudentRoundDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ModalStudentRoundDetails.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\MultipleDropdown.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for MultipleDropdown
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(MultipleDropdown.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\NewDeepLink.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for NewDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(NewDeepLink.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\NPS.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\NPS\NPS.vue took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(NPS.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PDFRoot.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for PDFRoot
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(PDFRoot.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformanceCell.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for PerformanceCell
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(PerformanceCell.stories.js) took 11ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformancePDF.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for PerformancePDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(PerformancePDF.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PerformancePDFList.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for PerformancePDFList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(PerformancePDFList.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\PieChart.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for PieChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(PieChart.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Player.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\Player\Player.vue took 7ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Player.stories.js) took 9ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProfilePicture.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProfilePicture
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProfilePicture.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBar.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProgressBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProgressBar.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarHorizontal.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProgressBarHorizontal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProgressBarHorizontal.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarHorizontalV2.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProgressBarHorizontalV2
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProgressBarHorizontalV2.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarTopInfo.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProgressBarTopInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProgressBarTopInfo.stories.js) took 10ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ProgressBarVertical.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ProgressBarVertical
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ProgressBarVertical.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionAlternative.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for QuestionAlternative
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(QuestionAlternative.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionContent.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for QuestionContent
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(QuestionContent.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionDetail.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for QuestionDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(QuestionDetail.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionsListDetail.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for QuestionsListDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(QuestionsListDetail.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\QuestionStatus.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for QuestionStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(QuestionStatus.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\RadialBar.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for RadialBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(RadialBar.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\RainbowProgressBar.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for RainbowProgressBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(RainbowProgressBar.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectInfinityScroll.stories.js took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SelectInfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SelectInfinityScroll.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectInfinityScrollModelo.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SelectInfinityScrollModelo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SelectInfinityScrollModelo.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectLocale.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SelectLocale
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SelectLocale.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SelectLocaleNavbar.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SelectLocaleNavbar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SelectLocaleNavbar.stories.js) took 9ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ShareGuide.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ShareGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ShareGuide.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Sidebar.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Sidebar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Sidebar.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SidebarProficiencyInfo.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SidebarProficiencyInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SidebarProficiencyInfo.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SimpleTab.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SimpleTab
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SimpleTab.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentActivityDetail.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for StudentActivityDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(StudentActivityDetail.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentAvatar.stories.js took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for StudentAvatar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(StudentAvatar.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentEvidenceReportPDF.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for StudentEvidenceReportPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(StudentEvidenceReportPDF.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentGameDetailsModal.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for StudentGameDetailsModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(StudentGameDetailsModal.stories.js) took 10ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\StudentsDetail.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for StudentsDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(StudentsDetail.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SubjectBand.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SubjectBand
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SubjectBand.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\SubjectCard.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for SubjectCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(SubjectCard.stories.js) took 5ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\subjects.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\subjects\subjects.vue took 0ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(subjects.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\subjectSelect.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for subjectSelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(subjectSelect.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Tab.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse Vue: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\educacross-frontoffice\src\components\Tab\Tab.vue took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Tab.stories.js) took 6ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TabCards.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for TabCards
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(TabCards.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TabRouter.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for TabRouter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(TabRouter.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template1.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template1
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template1.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template10.stories.js took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template10
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template10.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template11.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template11
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template11.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template2.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template2
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template2.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template3.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template3
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template3.stories.js) took 8ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template4.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template4
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template4.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template5.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template5
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template5.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template6.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template6
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template6.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template7.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template7
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template7.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template8.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template8
+[02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template8.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\Template9.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for Template9
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(Template9.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\TemplateDefault.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for TemplateDefault
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(TemplateDefault.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\UserCard.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for UserCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(UserCard.stories.js) took 4ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\VerticalDivider.stories.js took 1ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for VerticalDivider
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(VerticalDivider.stories.js) took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Parse story: C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\src\stories\educacross-components-v2\ZipLoading.stories.js took 2ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Vue file not found for ZipLoading
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadComponent(ZipLoading.stories.js) took 3ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] ComponentLoader.loadAll took 1724ms
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: AppCollapse
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppCollapse (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AppCollapseItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppCollapseItem (11 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: AppLanguageSelector
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppLanguageSelector (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BadgeStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BadgeStatus (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CellStatus
+[02:50:11] [DEBUG] [MCP] Indexed component: CellStatus (7 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ConditionalValueDisplay
+[02:50:11] [DEBUG] [MCP] Indexed component: ConditionalValueDisplay (7 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: DynamicMediaCard
+[02:50:11] [DEBUG] [MCP] Indexed component: DynamicMediaCard (22 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: MediaCard
+[02:50:11] [DEBUG] [MCP] Indexed component: MediaCard (16 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: MediaCardIcon
+[02:50:11] [DEBUG] [MCP] Indexed component: MediaCardIcon (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PerformanceCell
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PerformanceCell (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BarChart
+[02:50:11] [DEBUG] [MCP] Indexed component: BarChart (5 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: DefaultChart
+[02:50:11] [DEBUG] [MCP] Indexed component: DefaultChart (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PieChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PieChart (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: RadialBar
+[02:50:11] [DEBUG] [MCP] Indexed component: RadialBar (5 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: RadialBarChart
+[02:50:11] [DEBUG] [MCP] Indexed component: RadialBarChart (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BackgroundSpace
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BackgroundSpace (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: IntermediateRedirectLoginDeepLink
+[02:50:11] [DEBUG] [MCP] Indexed component: IntermediateRedirectLoginDeepLink (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: NewDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: NewDeepLink (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: DescriptorTag
+[02:50:11] [DEBUG] [MCP] Indexed component: DescriptorTag (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Divider
+[02:50:11] [DEBUG] [MCP] Indexed component: Divider (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: VerticalDivider
+[02:50:11] [DEBUG] [MCP] Indexed component: VerticalDivider (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionAlternative
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionAlternative (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: QuestionContent
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionContent (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionDetail (17 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template1
+[02:50:11] [DEBUG] [MCP] Indexed component: Template1 (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template10
+[02:50:11] [DEBUG] [MCP] Indexed component: Template10 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template11
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template11 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template2
+[02:50:11] [DEBUG] [MCP] Indexed component: Template2 (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template3
+[02:50:11] [DEBUG] [MCP] Indexed component: Template3 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template4
+[02:50:11] [DEBUG] [MCP] Indexed component: Template4 (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template5
+[02:50:11] [DEBUG] [MCP] Indexed component: Template5 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template6
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template6 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template7
+[02:50:11] [DEBUG] [MCP] Indexed component: Template7 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template8
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template8 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template9
+[02:50:11] [DEBUG] [MCP] Indexed component: Template9 (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: TemplateDefault
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: TemplateDefault (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: QuestionsListDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionsListDetail (11 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: EvaluationsHtmlContentRenderer
+[02:50:11] [DEBUG] [MCP] Indexed component: EvaluationsHtmlContentRenderer (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ExerciseType
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ExerciseType (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ExpandableFilterArea
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ExpandableFilterArea (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: FixedStickyFooter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: FixedStickyFooter (2 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ButtonWaitAction
+[02:50:11] [DEBUG] [MCP] Indexed component: ButtonWaitAction (7 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: EFormCheck
+[02:50:11] [DEBUG] [MCP] Indexed component: EFormCheck (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: HelpChat
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: HelpChat (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LegendBadgesReadingMeter
+[02:50:11] [DEBUG] [MCP] Indexed component: LegendBadgesReadingMeter (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: LegendCard
+[02:50:11] [DEBUG] [MCP] Indexed component: LegendCard (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LegendEnum
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LegendEnum (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LegendEnumPDF
+[02:50:11] [DEBUG] [MCP] Indexed component: LegendEnumPDF (5 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: SelectLocale
+[02:50:11] [DEBUG] [MCP] Indexed component: SelectLocale (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectLocaleNavbar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectLocaleNavbar (2 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CancelMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CancelMission (7 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: CopyLink
+[02:50:11] [DEBUG] [MCP] Indexed component: CopyLink (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DeleteGuide
+[02:50:11] [DEBUG] [MCP] Indexed component: DeleteGuide (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ExpiredMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ExpiredMission (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: FeedbackAndSend
+[02:50:11] [DEBUG] [MCP] Indexed component: FeedbackAndSend (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionAndQuestionItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MissionAndQuestionItem (12 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionBookDetails
+[02:50:11] [DEBUG] [MCP] Indexed component: MissionBookDetails (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionDetailsPlus
+[02:50:11] [DEBUG] [MCP] Indexed component: MissionDetailsPlus (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ModalStudentActivityDetails
+[02:50:11] [DEBUG] [MCP] Indexed component: ModalStudentActivityDetails (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ModalStudentRoundDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ModalStudentRoundDetails (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ShareGuide
+[02:50:11] [DEBUG] [MCP] Indexed component: ShareGuide (6 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: StudentActivityDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: StudentActivityDetail (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: StudentsDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentsDetail (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: GuidesLimitAlert
+[02:50:11] [DEBUG] [MCP] Indexed component: GuidesLimitAlert (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MissionDetails (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionVisualization
+[02:50:11] [DEBUG] [MCP] Indexed component: MissionVisualization (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DefaultFAQModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DefaultFAQModal (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: GameDetailsModal
+[02:50:11] [DEBUG] [MCP] Indexed component: GameDetailsModal (5 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: StudentGameDetailsModal
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentGameDetailsModal (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ZipLoading
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ZipLoading (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: NPS
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: NPS (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Card
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Card (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CardsList
+[02:50:11] [DEBUG] [MCP] Indexed component: CardsList (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Certificate
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Certificate (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CertificateList
+[02:50:11] [DEBUG] [MCP] Indexed component: CertificateList (3 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: PerformancePDF
+[02:50:11] [DEBUG] [MCP] Indexed component: PerformancePDF (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PerformancePDFList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PerformancePDFList (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PDFRoot
+[02:50:11] [DEBUG] [MCP] Indexed component: PDFRoot (2 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AlbumCover
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AlbumCover (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LyricsDisplay
+[02:50:11] [DEBUG] [MCP] Indexed component: LyricsDisplay (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Player
+[02:50:11] [DEBUG] [MCP] Indexed component: Player (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ChangeProficiency
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ChangeProficiency (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarHorizontal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarHorizontal (13 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarHorizontalV2
+[02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarHorizontalV2 (13 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarTopInfo
+[02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarTopInfo (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarVertical
+[02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarVertical (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: RainbowProgressBar
+[02:50:11] [DEBUG] [MCP] Indexed component: RainbowProgressBar (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: QuestionStatus
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionStatus (4 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: SidebarProficiencyInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SidebarProficiencyInfo (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ESelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ESelect (38 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: InfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: InfinityScroll (13 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MultipleDropdown
+[02:50:11] [DEBUG] [MCP] Indexed component: MultipleDropdown (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectInfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectInfinityScroll (20 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectInfinityScrollModelo
+[02:50:11] [DEBUG] [MCP] Indexed component: SelectInfinityScrollModelo (2 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: StudentEvidenceReportPDF
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentEvidenceReportPDF (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SubjectBand
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SubjectBand (3 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: subjects
+[02:50:11] [DEBUG] [MCP] Indexed component: subjects (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: subjectSelect
+[02:50:11] [DEBUG] [MCP] Indexed component: subjectSelect (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SimpleTab
+[02:50:11] [DEBUG] [MCP] Indexed component: SimpleTab (4 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Tab
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Tab (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: TabCards
+[02:50:11] [DEBUG] [MCP] Indexed component: TabCards (10 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: TabRouter
+[02:50:11] [DEBUG] [MCP] Indexed component: TabRouter (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTable
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTable (29 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableAccess
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTableAccess (15 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTableLocalSorting
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableLocalSorting (29 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTablePagination
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTablePagination (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableRanking
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTableRanking (2 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTableSelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableSelect (31 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTableSelectLocal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableSelectLocal (29 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: listInitialsTeacher
+[02:50:11] [DEBUG] [MCP] Indexed component: listInitialsTeacher (5 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: AcceptOrRejectAccess
+[02:50:11] [DEBUG] [MCP] Indexed component: AcceptOrRejectAccess (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AlbumCover
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: AlbumCover
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AlbumCover (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: AppCollapse
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: AppCollapse
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppCollapse (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AppCollapseItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: AppCollapseItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppCollapseItem (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AppLanguageSelector
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: AppLanguageSelector
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: AppLanguageSelector (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: AppNavbar
+[02:50:11] [DEBUG] [MCP] Indexed component: AppNavbar (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BackgroundSpace
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: BackgroundSpace
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BackgroundSpace (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BadgeList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BadgeList (19 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BadgeStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: BadgeStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BadgeStatus (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: BarChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: BarChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: BarChart (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ButtonWaitAction
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ButtonWaitAction
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ButtonWaitAction (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CancelMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: CancelMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CancelMission (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Card
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Card
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Card (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CardsList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: CardsList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CardsList (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CellStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: CellStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CellStatus (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Certificate
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Certificate
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Certificate (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: CertificateList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: CertificateList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CertificateList (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ChangeProficiency
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ChangeProficiency
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ChangeProficiency (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ConditionalValueDisplay
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ConditionalValueDisplay
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ConditionalValueDisplay (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: CopyLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: CopyLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: CopyLink (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DefaultChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: DefaultChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DefaultChart (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DefaultFAQModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: DefaultFAQModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DefaultFAQModal (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DeleteGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: DeleteGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DeleteGuide (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DescriptorTag
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: DescriptorTag
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DescriptorTag (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Divider
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Divider
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Divider (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: DynamicMediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: DynamicMediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: DynamicMediaCard (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: EditProfileStudentNew
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: EditProfileStudentNew (5 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: EFormCheck
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: EFormCheck
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: EFormCheck (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: EInput
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: EInput (7 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ESelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ESelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ESelect (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ETextarea
+[02:50:11] [DEBUG] [MCP] Indexed component: ETextarea (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: EvaluationsHtmlContentRenderer
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: EvaluationsHtmlContentRenderer
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: EvaluationsHtmlContentRenderer (25 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ExerciseType
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ExerciseType
+[02:50:11] [DEBUG] [MCP] Indexed component: ExerciseType (9 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ExpandableFilterArea
+[02:50:11] [DEBUG] [MCP] Removed from index: ExpandableFilterArea
+[02:50:11] [DEBUG] [MCP] Indexed component: ExpandableFilterArea (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ExpiredMission
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ExpiredMission
+[02:50:11] [DEBUG] [MCP] Indexed component: ExpiredMission (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: FeedbackAndSend
+[02:50:11] [DEBUG] [MCP] Removed from index: FeedbackAndSend
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: FeedbackAndSend (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: FilterChip
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: FilterChip (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: FixedStickyFooter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: FixedStickyFooter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: FixedStickyFooter (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: GameDetailsModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: GameDetailsModal
+[02:50:11] [DEBUG] [MCP] Indexed component: GameDetailsModal (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: GuidesLimitAlert
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: GuidesLimitAlert
+[02:50:11] [DEBUG] [MCP] Indexed component: GuidesLimitAlert (27 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: HelpChat
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: HelpChat
+[02:50:11] [DEBUG] [MCP] Indexed component: HelpChat (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: InfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: InfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: InfinityScroll (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: IntermediateRedirectLoginDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: IntermediateRedirectLoginDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: IntermediateRedirectLoginDeepLink (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LegendBadgesReadingMeter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: LegendBadgesReadingMeter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LegendBadgesReadingMeter (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: LegendCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: LegendCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LegendCard (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: LegendEnum
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: LegendEnum
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LegendEnum (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: LegendEnumPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: LegendEnumPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LegendEnumPDF (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: listInitialsTeacher
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: listInitialsTeacher
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: listInitialsTeacher (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTable
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ListTable
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTable (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTableAccess
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ListTableAccess
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTableAccess (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableLocalSorting
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ListTableLocalSorting
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableLocalSorting (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ListTablePagination
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ListTablePagination
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTablePagination (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableRanking
+[02:50:11] [DEBUG] [MCP] Removed from index: ListTableRanking
+[02:50:11] [DEBUG] [MCP] Indexed component: ListTableRanking (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableSelect
+[02:50:11] [DEBUG] [MCP] Removed from index: ListTableSelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableSelect (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ListTableSelectLocal
+[02:50:11] [DEBUG] [MCP] Removed from index: ListTableSelectLocal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ListTableSelectLocal (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: LyricsDisplay
+[02:50:11] [DEBUG] [MCP] Removed from index: LyricsDisplay
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: LyricsDisplay (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ManageAccountPage
+[02:50:11] [DEBUG] [MCP] Indexed component: ManageAccountPage (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: MediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: MediaCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MediaCard (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MediaCardIcon
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: MediaCardIcon
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MediaCardIcon (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionAndQuestionItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: MissionAndQuestionItem
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MissionAndQuestionItem (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionBookDetails
+[02:50:11] [DEBUG] [MCP] Removed from index: MissionBookDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MissionBookDetails (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: MissionDetails
+[02:50:11] [DEBUG] [MCP] Indexed component: MissionDetails (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionDetailsPlus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: MissionDetailsPlus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MissionDetailsPlus (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: MissionVisualization
+[02:50:11] [DEBUG] [MCP] Removed from index: MissionVisualization
+[02:50:11] [DEBUG] [MCP] Indexed component: MissionVisualization (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ModalStudentActivityDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ModalStudentActivityDetails
+[02:50:11] [DEBUG] [MCP] Indexed component: ModalStudentActivityDetails (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ModalStudentRoundDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ModalStudentRoundDetails
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ModalStudentRoundDetails (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: MultipleDropdown
+[02:50:11] [DEBUG] [MCP] Removed from index: MultipleDropdown
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: MultipleDropdown (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: NewDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: NewDeepLink
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: NewDeepLink (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: NPS
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: NPS
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: NPS (12 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: PDFRoot
+[02:50:11] [DEBUG] [MCP] Removed from index: PDFRoot
+[02:50:11] [DEBUG] [MCP] Indexed component: PDFRoot (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PerformanceCell
+[02:50:11] [DEBUG] [MCP] Removed from index: PerformanceCell
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PerformanceCell (9 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: PerformancePDF
+[02:50:11] [DEBUG] [MCP] Removed from index: PerformancePDF
+[02:50:11] [DEBUG] [MCP] Indexed component: PerformancePDF (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: PerformancePDFList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: PerformancePDFList
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PerformancePDFList (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: PieChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: PieChart
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: PieChart (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Player
+[02:50:11] [DEBUG] [MCP] Removed from index: Player
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Player (10 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ProfilePicture
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProfilePicture (20 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ProgressBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBar (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarHorizontal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ProgressBarHorizontal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarHorizontal (27 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarHorizontalV2
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ProgressBarHorizontalV2
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarHorizontalV2 (22 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarTopInfo
+[02:50:11] [DEBUG] [MCP] Removed from index: ProgressBarTopInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarTopInfo (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ProgressBarVertical
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ProgressBarVertical
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ProgressBarVertical (22 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionAlternative
+[02:50:11] [DEBUG] [MCP] Removed from index: QuestionAlternative
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: QuestionAlternative (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: QuestionContent
+[02:50:11] [DEBUG] [MCP] Removed from index: QuestionContent
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: QuestionContent (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionDetail
+[02:50:11] [DEBUG] [MCP] Removed from index: QuestionDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: QuestionDetail (24 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionsListDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: QuestionsListDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: QuestionsListDetail (6 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: QuestionStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: QuestionStatus
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: QuestionStatus (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: RadialBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: RadialBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: RadialBar (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: RainbowProgressBar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: RainbowProgressBar
+[02:50:11] [DEBUG] [MCP] Indexed component: RainbowProgressBar (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: SelectInfinityScroll
+[02:50:11] [DEBUG] [MCP] Removed from index: SelectInfinityScroll
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectInfinityScroll (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectInfinityScrollModelo
+[02:50:11] [DEBUG] [MCP] Removed from index: SelectInfinityScrollModelo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectInfinityScrollModelo (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectLocale
+[02:50:11] [DEBUG] [MCP] Removed from index: SelectLocale
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectLocale (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SelectLocaleNavbar
+[02:50:11] [DEBUG] [MCP] Removed from index: SelectLocaleNavbar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SelectLocaleNavbar (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: ShareGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: ShareGuide
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ShareGuide (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Sidebar
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Sidebar (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: SidebarProficiencyInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: SidebarProficiencyInfo
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SidebarProficiencyInfo (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SimpleTab
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: SimpleTab
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SimpleTab (20 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: StudentActivityDetail
+[02:50:11] [DEBUG] [MCP] Removed from index: StudentActivityDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentActivityDetail (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: StudentAvatar
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentAvatar (23 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: StudentEvidenceReportPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: StudentEvidenceReportPDF
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: StudentEvidenceReportPDF (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: StudentGameDetailsModal
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: StudentGameDetailsModal
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentGameDetailsModal (6 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: StudentsDetail
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: StudentsDetail
+[02:50:11] [DEBUG] [MCP] Indexed component: StudentsDetail (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SubjectBand
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: SubjectBand
+[02:50:11] [DEBUG] [MCP] Indexed component: SubjectBand (9 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: SubjectCard
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: SubjectCard (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: subjects
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: subjects
+[02:50:11] [DEBUG] [MCP] Indexed component: subjects (9 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: subjectSelect
+[02:50:11] [DEBUG] [MCP] Removed from index: subjectSelect
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: subjectSelect (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Tab
+[02:50:11] [DEBUG] [MCP] Removed from index: Tab
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Tab (27 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: TabCards
+[02:50:11] [DEBUG] [MCP] Removed from index: TabCards
+[02:50:11] [DEBUG] [MCP] Indexed component: TabCards (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: TabRouter
+[02:50:11] [DEBUG] [MCP] Removed from index: TabRouter
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: TabRouter (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template1
+[02:50:11] [DEBUG] [MCP] Removed from index: Template1
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template1 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template10
+[02:50:11] [DEBUG] [MCP] Removed from index: Template10
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template10 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template11
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Template11
+[02:50:11] [DEBUG] [MCP] Indexed component: Template11 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template2
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Template2
+[02:50:11] [DEBUG] [MCP] Indexed component: Template2 (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template3
+[02:50:11] [DEBUG] [MCP] Removed from index: Template3
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template3 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template4
+[02:50:11] [DEBUG] [MCP] Removed from index: Template4
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: Template4 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template5
+[02:50:11] [DEBUG] [MCP] Removed from index: Template5
+[02:50:11] [DEBUG] [MCP] Indexed component: Template5 (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template6
+[02:50:11] [DEBUG] [MCP] Removed from index: Template6
+[02:50:11] [DEBUG] [MCP] Indexed component: Template6 (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: Template7
+[02:50:11] [DEBUG] [MCP] Removed from index: Template7
+[02:50:11] [DEBUG] [MCP] Indexed component: Template7 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template8
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Template8
+[02:50:11] [DEBUG] [MCP] Indexed component: Template8 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: Template9
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: Template9
+[02:50:11] [DEBUG] [MCP] Indexed component: Template9 (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: TemplateDefault
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: TemplateDefault
+[02:50:11] [DEBUG] [MCP] Indexed component: TemplateDefault (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: UserCard
+[02:50:11] [DEBUG] [MCP] Indexed component: UserCard (8 tokens)
+[02:50:11] [DEBUG] [MCP] Cache SET: VerticalDivider
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Removed from index: VerticalDivider
+[02:50:11] [DEBUG] [MCP] Indexed component: VerticalDivider (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Cache SET: ZipLoading
+[02:50:11] [DEBUG] [MCP] Removed from index: ZipLoading
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] Indexed component: ZipLoading (8 tokens)
+­ƒôØ LOG: [02:50:11] [DEBUG] [MCP] System initialization took 1771ms
+[02:50:11] [INFO ] [MCP] System initialized
+{
+  "components": 233,
+  "elapsed": 1771
+}
+
+­ƒº¬ Testando getStats()...
+
+­ƒôØ LOG: [02:50:13] [DEBUG] [MCP] getStats
+­ƒôØ LOG: [02:50:13] [DEBUG] [MCP] handleGetStats took 3ms
+[02:50:13] [INFO ] [MCP] getStats completed in 3ms
+­ƒôè Stats Response:
+
+{
+  "totalComponents": 124,
+  "totalStories": 967,
+  "categoryCounts": {
+    "Navigation": 12,
+    "Feedback": 14,
+    "Badges": 1,
+    "Cards": 6,
+    "Data Display": 7,
+    "Charts": 4,
+    "Other": 1,
+    "Layout": 3,
+    "Evaluations": 3,
+    "Templates": 13,
+    "Lists": 3,
+    "Filters": 1,
+    "Forms": 7,
+    "Forms ": 2,
+    "Global": 1,
+    "Legends": 3,
+    "Modals": 8,
+    "Mission": 3,
+    "Missions": 3,
+    "Content": 1,
+    "Overlays": 2,
+    "PDF": 5,
+    "Media": 3,
+    "Proficiency": 1,
+    "Educacross Components V2": 6,
+    "Selects": 2,
+    "Subjects": 2,
+    "Tables": 6,
+    "Teachers": 1
+  },
+  "priorityCounts": {
+    "P0": 112,
+    "P1": 8,
+    "P2": 4
+  },
+  "topTags": [
+    {
+      "tag": "autodocs",
+      "count": 116
+    }
+  ],
+  "cache": {
+    "itemsCount": 124,
+    "totalHits": 0,
+    "totalMisses": 0,
+    "hitRate": 0,
+    "memoryUsage": 435390,
+    "topItems": [
+      {
+        "key": "AppCollapse",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.631Z"
+      },
+      {
+        "key": "AppCollapseItem",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.631Z"
+      },
+      {
+        "key": "AppLanguageSelector",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.631Z"
+      },
+      {
+        "key": "BadgeStatus",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.631Z"
+      },
+      {
+        "key": "CellStatus",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.633Z"
+      },
+      {
+        "key": "ConditionalValueDisplay",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.635Z"
+      },
+      {
+        "key": "DynamicMediaCard",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.636Z"
+      },
+      {
+        "key": "MediaCard",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.647Z"
+      },
+      {
+        "key": "MediaCardIcon",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.647Z"
+      },
+      {
+        "key": "PerformanceCell",
+        "hits": 0,
+        "lastAccessed": "2026-02-10T02:50:11.651Z"
+      }
+    ]
+  },
+  "search": {
+    "totalDocuments": 124,
+    "totalTokens": 308,
+    "averageTokensPerDocument": 2.4838709677419355
+  }
+}
+
+Ô£à Sucesso!
+
