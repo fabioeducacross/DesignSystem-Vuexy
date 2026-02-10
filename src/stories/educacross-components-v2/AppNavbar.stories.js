@@ -508,7 +508,7 @@ export const Default = {
       
       <div class="navbar-column d-flex justify-content-center flex-1">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" />
         </div>
       </div>
       
@@ -585,8 +585,8 @@ export const WithSidebarMenu = {
       
       <div class="navbar-column d-flex justify-content-center" style="flex: 1 1 auto;">
         <div class="logo-container">
-          <img src="/educacross-assets/logo-educacross.png" alt="logo" class="d-sm-inline d-none" />
-          <img src="/educacross-assets/logo-educacross-small.png" alt="logo" class="d-sm-none" />
+          <img src="/educacross-assets/logo-educacross.svg" alt="logo" class="d-sm-inline d-none" />
+          <img src="/educacross-assets/logo-educacross-small.svg" alt="logo" class="d-sm-none" />
         </div>
       </div>
       
