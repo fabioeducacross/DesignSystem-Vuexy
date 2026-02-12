@@ -250,4 +250,19 @@
 
 ---
 
-**Última atualização**: 30/01/2026
+## 🆕 Componentes Educacross Adicionais
+
+| Componente | Fonte Original | Status | Arquivo Story |
+|------------|---------------|--------|---------------|
+| **SelectClass** ✅ | `educacross-frontoffice/src/layouts/components/SelectClass.vue` | ✅ CONCLUÍDO | `educacross-components-v2/SelectClass.stories.js` |
+
+### Detalhes SelectClass (10/02/2026)
+- **Tipo**: Dropdown especializado para seleção de turmas
+- **Estados**: Normal, desabilitado, sem alunos, módulo indisponível
+- **Responsividade**: Badge oculto em mobile
+- **Funcionalidades**: Bootstrap dropdown + estados complexos + tooltips
+- **Stories**: 6 variações (Default, EstadosComplexos, Desabilitado, ListaCompleta, LayoutMobile, Interactive)
+
+---
+
+**Última atualização**: 10/02/2026

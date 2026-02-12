@@ -1,8 +1,10 @@
 # Checklist de Tarefas - Storybook + Vuexy
 
-**Última Atualização**: 31 de janeiro de 2026  
-**Status Geral**: 100% Completo (64/64 componentes)  
+**Última Atualização**: 10 de fevereiro de 2026  
+**Status Geral**: 100% Completo (65/65 componentes)  
 **Loaders**: 13/13 (100%) - 6 Bootstrap JS + 7 Vendor Libraries
+
+**➕ Novo Componente Adicionado**: SelectClass (educacross-frontoffice/src/layouts/components/SelectClass.vue)
 
 ---
 
