@@ -1,0 +1,509 @@
+- generic [ref=e3]:
+  - main [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e62]:
+        - button "Remount component" [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+        - button "Zoom in" [ref=e66] [cursor=pointer]:
+          - img [ref=e67]
+        - button "Zoom out" [ref=e70] [cursor=pointer]:
+          - img [ref=e71]
+        - button "Reset zoom" [ref=e74] [cursor=pointer]:
+          - img [ref=e75]
+        - button "Change the background of the preview" [ref=e79] [cursor=pointer]:
+          - img [ref=e80]
+        - button "Apply a grid to the preview" [ref=e83] [cursor=pointer]:
+          - img [ref=e84]
+        - button "Change the size of the preview" [ref=e87] [cursor=pointer]:
+          - img [ref=e88]
+        - button "Enable measure" [ref=e92] [cursor=pointer]:
+          - img [ref=e93]
+        - button "Apply outlines to the preview" [ref=e96] [cursor=pointer]:
+          - img [ref=e97]
+      - generic [ref=e99]:
+        - button "Show addons" [ref=e100] [cursor=pointer]:
+          - img [ref=e101]
+        - button "Go full screen" [ref=e104] [cursor=pointer]:
+          - img [ref=e105]
+        - link "Open canvas in new tab" [ref=e107] [cursor=pointer]:
+          - /url: iframe.html?args=&globals=&id=getting-started-introduction--introduction
+          - img [ref=e108]
+        - button "Copy canvas link" [ref=e111] [cursor=pointer]:
+          - img [ref=e112]
+    - generic [ref=e13]:
+      - link "Skip to sidebar" [ref=e115] [cursor=pointer]:
+        - /url: "#getting-started-introduction--introduction"
+      - iframe [ref=e14]:
+        - generic [ref=f4e5]:
+          - generic [ref=f4e10]:
+            - generic [ref=f4e11]:
+              - generic [ref=f4e12]: palette
+              - generic [ref=f4e13]: Educacross Design System v10.9.0
+            - heading "Design System Educacross Platform" [level=1] [ref=f4e14]:
+              - text: Design System
+              - text: Educacross Platform
+            - paragraph [ref=f4e15]: Biblioteca completa de componentes UI baseada no template Vuexy, organizada com princípios de Atomic Design e documentada para Vue 2.7
+            - generic [ref=f4e16]:
+              - link "rocket_launch 🔧 Configurar MCP Server" [ref=f4e17] [cursor=pointer]:
+                - /url: "?path=/docs/mcp-setup-guide--quick-start"
+                - generic [ref=f4e18]: rocket_launch
+                - text: 🔧 Configurar MCP Server
+              - link "widgets Ver Componentes" [ref=f4e19] [cursor=pointer]:
+                - /url: "?path=/story/educacross-components-v2-navigation-appnavbar--default"
+                - generic [ref=f4e20]: widgets
+                - text: Ver Componentes
+          - generic [ref=f4e23]:
+            - generic [ref=f4e25]:
+              - generic [ref=f4e26]: 220+
+              - generic [ref=f4e27]: Componentes
+            - generic [ref=f4e29]:
+              - generic [ref=f4e30]: "111"
+              - generic [ref=f4e31]: Educacross Real
+            - generic [ref=f4e33]:
+              - generic [ref=f4e34]: 8000+
+              - generic [ref=f4e35]: Ícones
+            - generic [ref=f4e37]:
+              - generic [ref=f4e38]: 100%
+              - generic [ref=f4e39]: Responsive
+          - generic [ref=f4e41]:
+            - generic [ref=f4e42]:
+              - generic [ref=f4e43]:
+                - generic [ref=f4e44]: auto_awesome
+                - generic [ref=f4e45]: Estrutura Dual
+              - heading "Dois Universos de Componentes" [level=2] [ref=f4e46]
+              - paragraph [ref=f4e47]: Design system híbrido com componentes genéricos Vuexy e componentes reais do Educacross Platform
+            - generic [ref=f4e48]:
+              - generic [ref=f4e50]:
+                - generic [ref=f4e52]: dashboard_customize
+                - heading "Vuexy Generic Components" [level=3] [ref=f4e53]
+                - paragraph [ref=f4e54]: Componentes do template Vuexy organizados por Atomic Design (Atoms → Molecules → Organisms → Templates)
+                - list [ref=f4e55]:
+                  - listitem [ref=f4e56]:
+                    - generic [ref=f4e57]: check_circle
+                    - generic [ref=f4e58]: Buttons, Cards, Forms, Tables
+                  - listitem [ref=f4e59]:
+                    - generic [ref=f4e60]: check_circle
+                    - generic [ref=f4e61]: Modals, Dropdowns, Tooltips
+                  - listitem [ref=f4e62]:
+                    - generic [ref=f4e63]: check_circle
+                    - generic [ref=f4e64]: Charts, Invoices, E-commerce
+                  - listitem [ref=f4e65]:
+                    - generic [ref=f4e66]: check_circle
+                    - generic [ref=f4e67]: 220+ componentes base do template
+                  - listitem [ref=f4e68]:
+                    - generic [ref=f4e69]: check_circle
+                    - generic [ref=f4e70]: Documentação de referência
+              - generic [ref=f4e72]:
+                - generic [ref=f4e74]: verified
+                - heading "Educacross Real Components" [level=3] [ref=f4e75]
+                - paragraph [ref=f4e76]: 111 componentes reais extraídos do educacross-frontoffice e documentados no Storybook
+                - list [ref=f4e77]:
+                  - listitem [ref=f4e78]:
+                    - generic [ref=f4e79]: check_circle
+                    - generic [ref=f4e80]: AppNavbar, Sidebar, ManageAccountPage
+                  - listitem [ref=f4e81]:
+                    - generic [ref=f4e82]: check_circle
+                    - generic [ref=f4e83]: EditProfileStudentNew, UserCard
+                  - listitem [ref=f4e84]:
+                    - generic [ref=f4e85]: check_circle
+                    - generic [ref=f4e86]: AcceptOrRejectAccess Modal
+                  - listitem [ref=f4e87]:
+                    - generic [ref=f4e88]: check_circle
+                    - generic [ref=f4e89]: Componentes em produção
+                  - listitem [ref=f4e90]:
+                    - generic [ref=f4e91]: check_circle
+                    - generic [ref=f4e92]: Código Vue 2.7 real
+          - generic [ref=f4e94]:
+            - generic [ref=f4e95]:
+              - generic [ref=f4e96]:
+                - generic [ref=f4e97]: account_tree
+                - generic [ref=f4e98]: Atomic Design
+              - heading "Princípios de Organização" [level=2] [ref=f4e99]
+              - paragraph [ref=f4e100]: Componentes organizados de forma hierárquica do mais simples ao mais complexo
+            - generic [ref=f4e101]:
+              - generic [ref=f4e103]:
+                - generic [ref=f4e106]: scatter_plot
+                - generic [ref=f4e107]:
+                  - heading "Atoms" [level=4] [ref=f4e108]
+                  - paragraph [ref=f4e109]: Elementos mais básicos e indivisíveis
+                  - generic [ref=f4e110]:
+                    - strong [ref=f4e111]: "Exemplos:"
+                    - text: Buttons, Inputs, Labels, Badges, Icons
+              - generic [ref=f4e113]:
+                - generic [ref=f4e116]: category
+                - generic [ref=f4e117]:
+                  - heading "Molecules" [level=4] [ref=f4e118]
+                  - paragraph [ref=f4e119]: Grupos de átomos funcionando juntos
+                  - generic [ref=f4e120]:
+                    - strong [ref=f4e121]: "Exemplos:"
+                    - text: Form Groups, Search Bars, Cards, Alerts
+              - generic [ref=f4e123]:
+                - generic [ref=f4e126]: view_module
+                - generic [ref=f4e127]:
+                  - heading "Organisms" [level=4] [ref=f4e128]
+                  - paragraph [ref=f4e129]: Seções complexas de interface
+                  - generic [ref=f4e130]:
+                    - strong [ref=f4e131]: "Exemplos:"
+                    - text: Headers, Navigation, Data Tables, Forms
+              - generic [ref=f4e133]:
+                - generic [ref=f4e136]: web
+                - generic [ref=f4e137]:
+                  - heading "Templates" [level=4] [ref=f4e138]
+                  - paragraph [ref=f4e139]: Layouts de página completos
+                  - generic [ref=f4e140]:
+                    - strong [ref=f4e141]: "Exemplos:"
+                    - text: Dashboard, Profile, Invoice, E-commerce
+          - generic [ref=f4e143]:
+            - generic [ref=f4e144]:
+              - generic [ref=f4e145]:
+                - generic [ref=f4e146]: code
+                - generic [ref=f4e147]: Stack Tecnológico
+              - heading "Frameworks & Bibliotecas" [level=2] [ref=f4e148]
+              - paragraph [ref=f4e149]: Componentes compatíveis com múltiplos frameworks e bibliotecas modernas
+            - generic [ref=f4e150]:
+              - generic [ref=f4e151]:
+                - generic [ref=f4e152]: language
+                - generic [ref=f4e153]: Vue 2.7
+              - generic [ref=f4e154]:
+                - generic [ref=f4e155]: code
+                - generic [ref=f4e156]: React
+              - generic [ref=f4e157]:
+                - generic [ref=f4e158]: html
+                - generic [ref=f4e159]: HTML5
+              - generic [ref=f4e160]:
+                - generic [ref=f4e161]: view_quilt
+                - generic [ref=f4e162]: Bootstrap 5
+              - generic [ref=f4e163]:
+                - generic [ref=f4e164]: show_chart
+                - generic [ref=f4e165]: ApexCharts
+              - generic [ref=f4e166]:
+                - generic [ref=f4e167]: interests
+                - generic [ref=f4e168]: Tabler Icons
+              - generic [ref=f4e169]:
+                - generic [ref=f4e170]: psychology
+                - generic [ref=f4e171]: Material Symbols
+              - generic [ref=f4e172]:
+                - generic [ref=f4e173]: star
+                - generic [ref=f4e174]: Font Awesome
+          - generic [ref=f4e176]:
+            - generic [ref=f4e177]:
+              - generic [ref=f4e178]:
+                - generic [ref=f4e179]: workspace_premium
+                - generic [ref=f4e180]: Recursos
+              - heading "Tudo que Você Precisa" [level=2] [ref=f4e181]
+              - paragraph [ref=f4e182]: Funcionalidades modernas para desenvolvimento ágil e escalável
+            - generic [ref=f4e183]:
+              - generic [ref=f4e185]:
+                - generic [ref=f4e187]: menu_book
+                - heading "Documentação Completa" [level=4] [ref=f4e188]
+                - paragraph [ref=f4e189]: Cada componente com exemplos de código em HTML, React, Vue 2 e Vue 3
+              - generic [ref=f4e191]:
+                - generic [ref=f4e193]: devices
+                - heading "Responsivo" [level=4] [ref=f4e194]
+                - paragraph [ref=f4e195]: Todos os componentes otimizados para mobile, tablet e desktop
+              - generic [ref=f4e197]:
+                - generic [ref=f4e199]: accessibility_new
+                - heading "Acessível" [level=4] [ref=f4e200]
+                - paragraph [ref=f4e201]: Componentes seguindo padrões WCAG 2.1 e boas práticas de acessibilidade
+              - generic [ref=f4e203]:
+                - generic [ref=f4e205]: tune
+                - heading "Customizável" [level=4] [ref=f4e206]
+                - paragraph [ref=f4e207]: Variáveis CSS e props configuráveis para adaptar ao seu design
+              - generic [ref=f4e209]:
+                - generic [ref=f4e211]: speed
+                - heading "Performance" [level=4] [ref=f4e212]
+                - paragraph [ref=f4e213]: Componentes otimizados com lazy loading e code splitting
+              - generic [ref=f4e215]:
+                - generic [ref=f4e217]: science
+                - heading "Testado" [level=4] [ref=f4e218]
+                - paragraph [ref=f4e219]: Testes visuais automatizados com Playwright para garantir qualidade
+          - generic [ref=f4e221]:
+            - generic [ref=f4e222]:
+              - generic [ref=f4e223]:
+                - generic [ref=f4e224]: smart_toy
+                - generic [ref=f4e225]: AI-Powered Documentation
+              - heading "Acesse o Design System via IA" [level=2] [ref=f4e226]
+              - paragraph [ref=f4e227]: Consulte 233 componentes documentados em qualquer IDE ou plataforma com suporte MCP
+            - generic [ref=f4e228]:
+              - generic [ref=f4e230]:
+                - generic [ref=f4e231]: "233"
+                - generic [ref=f4e232]: Componentes
+              - generic [ref=f4e234]:
+                - generic [ref=f4e235]: 96.7%
+                - generic [ref=f4e236]: Parser Success
+              - generic [ref=f4e238]:
+                - generic [ref=f4e239]: 11ms
+                - generic [ref=f4e240]: Init Time
+              - generic [ref=f4e242]:
+                - generic [ref=f4e243]: "7"
+                - generic [ref=f4e244]: MCP Tools
+            - generic [ref=f4e246]:
+              - generic [ref=f4e248]: integration_instructions
+              - generic [ref=f4e249]:
+                - heading "Documentação Inteligente" [level=3] [ref=f4e250]
+                - paragraph [ref=f4e251]:
+                  - text: Use o
+                  - strong [ref=f4e252]: Model Context Protocol (MCP)
+                  - text: para acessar a documentação dos 233 componentes
+                  - strong [ref=f4e253]: em qualquer IDE ou plataforma
+                  - text: . Seu assistente de IA (GitHub Copilot, Cursor, Windsurf, Cline, etc.) pode consultar props, events, slots e gerar código automaticamente em 4 frameworks (Vue 3, Vue 2, React, Vanilla).
+                  - strong [ref=f4e254]: Funciona onde você trabalha
+                  - text: "- VS Code, WebStorm, Neovim, ou qualquer ferramenta com suporte MCP."
+            - generic [ref=f4e255]:
+              - generic [ref=f4e257]:
+                - generic [ref=f4e259]: devices
+                - heading "IDEs & Editores Suportados" [level=4] [ref=f4e260]
+                - paragraph [ref=f4e261]: "Funciona em qualquer ferramenta com suporte MCP:"
+                - generic [ref=f4e262]:
+                  - generic [ref=f4e263]: VS Code
+                  - generic [ref=f4e264]: Cursor
+                  - generic [ref=f4e265]: Windsurf
+                  - generic [ref=f4e266]: Cline
+                  - generic [ref=f4e267]: WebStorm
+                  - generic [ref=f4e268]: Neovim
+                  - generic [ref=f4e269]: Zed
+                - paragraph [ref=f4e270]: + Qualquer plataforma rodando Claude Desktop, Continue.dev ou cliente MCP customizado
+              - generic [ref=f4e272]:
+                - generic [ref=f4e274]: terminal
+                - heading "Como Configurar" [level=4] [ref=f4e275]
+                - generic [ref=f4e276]:
+                  - paragraph [ref=f4e277]:
+                    - strong [ref=f4e278]: "Opção 1: Servidor Local"
+                  - generic [ref=f4e279]:
+                    - generic [ref=f4e280]: "# Clone o repositório"
+                    - generic [ref=f4e281]: git clone [repo-url]
+                    - generic [ref=f4e282]: "# Configure MCP"
+                    - generic [ref=f4e283]: node design-system-mcp/dist/index.js
+                  - paragraph [ref=f4e284]:
+                    - strong [ref=f4e285]: "Opção 2:"
+                    - text: Use
+                    - code [ref=f4e286]: npx
+                    - text: para rodar diretamente
+            - heading "deployed_code Casos de Uso Reais" [level=3] [ref=f4e287]:
+              - generic [ref=f4e288]: deployed_code
+              - text: Casos de Uso Reais
+            - generic [ref=f4e289]:
+              - generic [ref=f4e291]:
+                - generic [ref=f4e292]: 🎨
+                - heading "Desenvolvendo Nova Feature" [level=4] [ref=f4e293]
+                - generic [ref=f4e294]:
+                  - strong [ref=f4e295]: "Você:"
+                  - text: "\"Preciso criar um formulário com dropdown. Quais componentes usar?\""
+                  - strong [ref=f4e296]: "IA:"
+                  - text: Sugere ESelect (7 props), mostra exemplo Vue 3, lista props required e optional
+              - generic [ref=f4e298]:
+                - generic [ref=f4e299]: 🔍
+                - heading "Explorando Componentes" [level=4] [ref=f4e300]
+                - generic [ref=f4e301]:
+                  - strong [ref=f4e302]: "Você:"
+                  - text: "\"Quais componentes exibem progresso ou loading?\""
+                  - strong [ref=f4e303]: "IA:"
+                  - text: Lista ProgressBar, LoadingSpinner, Skeleton com links para Storybook
+              - generic [ref=f4e305]:
+                - generic [ref=f4e306]: ⚡
+                - heading "Migrando de Vue 2 para Vue 3" [level=4] [ref=f4e307]
+                - generic [ref=f4e308]:
+                  - strong [ref=f4e309]: "Você:"
+                  - text: "\"Como fica MediaCard em Vue 3?\""
+                  - strong [ref=f4e310]: "IA:"
+                  - text: Gera código com Composition API, <script setup>, defineProps
+              - generic [ref=f4e312]:
+                - generic [ref=f4e313]: 🔧
+                - heading "Depurando Problemas" [level=4] [ref=f4e314]
+                - generic [ref=f4e315]:
+                  - strong [ref=f4e316]: "Você:"
+                  - text: "\"Por que meu ESelect não funciona? Quais eventos ele emite?\""
+                  - strong [ref=f4e317]: "IA:"
+                  - text: Lista eventos (change, input, blur), mostra payload esperado
+            - generic [ref=f4e318]:
+              - generic [ref=f4e319]:
+                - generic [ref=f4e321]: integration_instructions
+                - generic [ref=f4e322]:
+                  - heading "Guia de Integração" [level=3] [ref=f4e323]
+                  - paragraph [ref=f4e324]: Use o Design System em seu projeto com ajuda da IA. Funciona em qualquer IDE ou plataforma de desenvolvimento.
+              - generic [ref=f4e325]:
+                - generic [ref=f4e327]:
+                  - heading "📋 Para Desenvolvedores" [level=5] [ref=f4e328]
+                  - generic [ref=f4e329]:
+                    - paragraph [ref=f4e330]:
+                      - strong [ref=f4e331]: "1. Configure seu ambiente:"
+                    - list [ref=f4e332]:
+                      - listitem [ref=f4e333]: Instale extensão MCP na sua IDE (VS Code, Cursor, etc.)
+                      - listitem [ref=f4e334]: Configure o servidor MCP do Design System
+                      - listitem [ref=f4e335]: Recarregue a IDE para ativar
+                    - paragraph [ref=f4e336]:
+                      - strong [ref=f4e337]: "2. Pergunte naturalmente:"
+                    - list [ref=f4e338]:
+                      - listitem [ref=f4e339]: "\"Como criar um formulário com campos de texto e dropdown?\""
+                      - listitem [ref=f4e340]: "\"Preciso exibir uma lista de cards. Qual componente usar?\""
+                      - listitem [ref=f4e341]: "\"Como fazer paginação de tabela?\""
+                - generic [ref=f4e343]:
+                  - heading "🤖 Para Agentes de IA" [level=5] [ref=f4e344]
+                  - paragraph [ref=f4e345]: "Se você é um assistente de IA ajudando desenvolvedores, use estas ferramentas MCP:"
+                  - generic [ref=f4e346]:
+                    - generic [ref=f4e347]:
+                      - generic [ref=f4e348]: listComponents()
+                      - generic [ref=f4e349]: → Lista componentes com filtros
+                    - generic [ref=f4e350]:
+                      - generic [ref=f4e351]: getComponent()
+                      - generic [ref=f4e352]: "→ Detalhes: props, events, slots"
+                    - generic [ref=f4e353]:
+                      - generic [ref=f4e354]: searchComponents()
+                      - generic [ref=f4e355]: → Busca textual com relevância
+                    - generic [ref=f4e356]:
+                      - generic [ref=f4e357]: getStats()
+                      - generic [ref=f4e358]: → 233 componentes, 29 categorias
+            - generic [ref=f4e359]:
+              - generic [ref=f4e361]:
+                - generic [ref=f4e363]: speed
+                - heading "10x Mais Rápido" [level=5] [ref=f4e364]
+                - paragraph [ref=f4e365]: Não procure na documentação. Pergunte e receba código pronto
+              - generic [ref=f4e367]:
+                - generic [ref=f4e369]: check_circle
+                - heading "Sempre Atualizado" [level=5] [ref=f4e370]
+                - paragraph [ref=f4e371]: IA acessa versão mais recente dos 233 componentes
+              - generic [ref=f4e373]:
+                - generic [ref=f4e375]: workspace_premium
+                - heading "Zero Erros" [level=5] [ref=f4e376]
+                - paragraph [ref=f4e377]: Props, events e slots garantidos. Código testado e validado
+            - generic [ref=f4e378]:
+              - link "rocket_launch 🔧 Configurar MCP Server" [ref=f4e379] [cursor=pointer]:
+                - /url: "?path=/docs/mcp-setup-guide--quick-start"
+                - generic [ref=f4e380]: rocket_launch
+                - text: 🔧 Configurar MCP Server
+              - link "description Ver Documentação" [ref=f4e381] [cursor=pointer]:
+                - /url: https://github.com/fabioeducacross/DesignSystem-Vuexy/tree/main/design-system-mcp
+                - generic [ref=f4e382]: description
+                - text: Ver Documentação
+              - link "widgets Ver Componentes" [ref=f4e383] [cursor=pointer]:
+                - /url: "?path=/story/educacross-components-v2-navigation-appnavbar--default"
+                - generic [ref=f4e384]: widgets
+                - text: Ver Componentes
+          - generic [ref=f4e386]:
+            - heading "Pronto para Começar?" [level=2] [ref=f4e387]
+            - paragraph [ref=f4e388]: Configure o MCP Server e acesse 123 componentes via Claude Desktop, Cursor ou VSCode
+            - generic [ref=f4e389]:
+              - link "rocket_launch 🔧 Configurar MCP Server" [ref=f4e390] [cursor=pointer]:
+                - /url: "?path=/docs/mcp-setup-guide--quick-start"
+                - generic [ref=f4e391]: rocket_launch
+                - text: 🔧 Configurar MCP Server
+              - link "explore Explorar Componentes" [ref=f4e392] [cursor=pointer]:
+                - /url: "?path=/story/educacross-components-v2-navigation-appnavbar--default"
+                - generic [ref=f4e393]: explore
+                - text: Explorar Componentes
+  - navigation [ref=e17]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - link "Skip to canvas" [ref=e23] [cursor=pointer]:
+          - /url: "#storybook-preview-wrapper"
+        - link "Storybook" [ref=e25] [cursor=pointer]:
+          - /url: ./
+          - img "Storybook" [ref=e26]
+        - button "Shortcuts" [ref=e32] [cursor=pointer]:
+          - img [ref=e33]
+      - generic [ref=e36]: Search for components
+      - combobox "Search for components" [ref=e38]:
+        - generic:
+          - img
+        - searchbox "Search for components" [ref=e39]
+        - code: ⌃ K
+        - button "Tag filters" [ref=e119] [cursor=pointer]:
+          - img [ref=e120]
+      - generic [ref=e40]:
+        - generic [ref=e122]:
+          - img
+          - generic [ref=e123]:
+            - button "Getting Started" [expanded] [ref=e124] [cursor=pointer]:
+              - img [ref=e126]
+              - text: Getting Started
+            - button "Collapse" [ref=e128] [cursor=pointer]:
+              - img [ref=e129]
+          - generic [ref=e131]:
+            - link "Introduction" [ref=e132] [cursor=pointer]:
+              - /url: /?path=/story/getting-started-introduction--introduction
+              - img [ref=e134]
+              - text: Introduction
+            - link "Skip to canvas" [ref=e136] [cursor=pointer]:
+              - /url: "#storybook-preview-wrapper"
+          - button "Doc Template Example" [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]:
+              - img [ref=e141]
+              - img [ref=e143]
+            - text: Doc Template Example
+          - generic [ref=e145]:
+            - button "MCP Setup Guide" [expanded] [ref=e146] [cursor=pointer]:
+              - img [ref=e148]
+              - text: MCP Setup Guide
+            - button "Collapse" [ref=e150] [cursor=pointer]:
+              - img [ref=e151]
+          - link "Quick Start" [ref=e154] [cursor=pointer]:
+            - /url: /?path=/story/mcp-setup-guide-quick-start--quick-start
+            - img [ref=e156]
+            - text: Quick Start
+          - generic [ref=e158]:
+            - button "Vuexy" [expanded] [ref=e159] [cursor=pointer]:
+              - img [ref=e161]
+              - text: Vuexy
+            - button "Collapse" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]
+          - button "Atoms" [ref=e167] [cursor=pointer]:
+            - generic [ref=e168]:
+              - img [ref=e170]
+              - img [ref=e172]
+            - text: Atoms
+          - button "Foundations" [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]:
+              - img [ref=e178]
+              - img [ref=e180]
+            - text: Foundations
+          - button "Molecules" [ref=e183] [cursor=pointer]:
+            - generic [ref=e184]:
+              - img [ref=e186]
+              - img [ref=e188]
+            - text: Molecules
+          - button "Organisms" [ref=e191] [cursor=pointer]:
+            - generic [ref=e192]:
+              - img [ref=e194]
+              - img [ref=e196]
+            - text: Organisms
+          - button "Templates" [ref=e199] [cursor=pointer]:
+            - generic [ref=e200]:
+              - img [ref=e202]
+              - img [ref=e204]
+            - text: Templates
+          - button "Educacross Components V2" [active] [ref=e207] [cursor=pointer]:
+            - img [ref=e209]
+            - text: Educacross Components V2
+        - text: / / / / / / / / / / / / / / / / / /
+  - generic [ref=e470]:
+    - generic:
+      - generic [ref=e473]:
+        - tablist [ref=e475]:
+          - tab "Controls" [ref=e476] [cursor=pointer]:
+            - generic [ref=e479]: Controls
+          - tab "Actions" [ref=e480] [cursor=pointer]:
+            - generic [ref=e483]: Actions
+          - tab "Interactions" [ref=e484] [cursor=pointer]:
+            - generic [ref=e487]: Interactions
+        - generic [ref=e490]:
+          - button "Change addon orientation [alt D]" [ref=e491] [cursor=pointer]:
+            - img [ref=e492]
+          - button "Hide addons [alt A]" [ref=e495] [cursor=pointer]:
+            - img [ref=e496]
+      - generic [ref=e500]:
+        - generic [ref=e501]:
+          - generic [ref=e502]: Interactive story playground
+          - generic [ref=e503]: Controls give you an easy to use interface to test your components. Set your story args and you'll see controls appearing here automatically.
+        - generic [ref=e504]:
+          - link "Watch 5m video" [ref=e505] [cursor=pointer]:
+            - /url: https://youtu.be/0gOfS6K0x0E
+            - generic [ref=e506]:
+              - img [ref=e507]
+              - text: Watch 5m video
+              - img [ref=e510]
+          - link "Read docs" [ref=e513] [cursor=pointer]:
+            - /url: https://storybook.js.org/docs/essentials/controls
+            - generic [ref=e514]:
+              - img [ref=e515]
+              - text: Read docs
+              - img [ref=e518]

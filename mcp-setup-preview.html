@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Setup Guide - Preview com Correções UI/UX</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap">
+</head>
+<body style="margin: 0; padding: 0;">
+
+<!-- Copiar todo o conteúdo do render() da story aqui -->
+<!-- A partir da linha 520 até a linha ~720 do MCPSetup.stories.js -->
+
+<script>
+// Copy code functionality
+function copyCode(button, codeId) {
+  const code = document.getElementById(codeId).textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    button.classList.add('copied');
+    const originalText = button.innerHTML;
+    button.innerHTML = '<span class="material-symbols-outlined" style="font-size: 16px">check</span> Copiado!';
+
+    setTimeout(() => {
+      button.classList.remove('copied');
+      button.innerHTML = originalText;
+    }, 2000);
+  });
+}
+
+// Accordion functionality
+function toggleAccordion(header) {
+  const item = header.parentElement;
+  const isActive = item.classList.contains('active');
+
+  // Close all items
+  document.querySelectorAll('.accordion-item').forEach(i => {
+    i.classList.remove('active');
+  });
+
+  // Open clicked item if it wasn't active
+  if (!isActive) {
+    item.classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
