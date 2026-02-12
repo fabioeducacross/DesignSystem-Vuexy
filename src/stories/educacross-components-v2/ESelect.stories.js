@@ -1,5 +1,3 @@
-import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/docTemplate.js';
-
 /**
  * ESelect Component - Select Customizado Educacross
  *
@@ -18,6 +16,78 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
 export default {
   title: 'Educacross Components V2/Forms/ESelect',
   tags: ['autodocs'],
+  argTypes: {
+    // Props principais conforme COMPONENTS.md
+    value: {
+      control: 'text',
+      description: 'v-model - Valor selecionado'
+    },
+    options: {
+      control: 'object',
+      description: '**REQUIRED** - Lista de opções { id, name }'
+    },
+    label: {
+      control: 'text',
+      description: 'Campo do objeto usado como label',
+      defaultValue: 'name'
+    },
+    trackBy: {
+      control: 'text',
+      description: 'Campo para comparação (default: usa objeto inteiro)'
+    },
+    loading: {
+      control: 'boolean',
+      description: 'Mostra spinner de loading'
+    },
+    variant: {
+      control: 'select',
+      options: ['primary', 'success', 'warning', 'danger'],
+      description: 'Cor do badge: primary|success|warning|danger'
+    },
+    state: {
+      control: 'select',
+      options: [null, true, false],
+      description: 'Validação: true (válido), false (inválido), null (neutro)'
+    },
+    multiple: {
+      control: 'boolean',
+      description: 'Permite seleção múltipla com checkboxes'
+    },
+    closeOnSelect: {
+      control: 'boolean',
+      description: 'Fecha dropdown após selecionar (false em multiple)'
+    },
+    clearable: {
+      control: 'boolean',
+      description: 'Mostra botão X para limpar seleção'
+    },
+    searchable: {
+      control: 'boolean',
+      description: 'Ativa campo de busca interno'
+    },
+    placeholder: {
+      control: 'text',
+      description: 'Placeholder traduzível (i18n key)',
+      defaultValue: 'Selecione uma opção'
+    },
+    paginated: {
+      control: 'boolean',
+      description: 'Ativa paginação infinita (emit @nextPage)'
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Desabilita o componente'
+    },
+    gender: {
+      control: 'select',
+      options: ['M', 'F'],
+      description: 'Gênero para i18n: M|F'
+    },
+    prefix: {
+      control: 'text',
+      description: 'Prefixo para pluralização (ex: "alunos")'
+    }
+  },
   parameters: {
     docs: {
       description: {
@@ -1007,747 +1077,303 @@ const eSelectStyles = `
  * Representa o estado padrão do componente ao carregar a página.
  * Usuário ainda não interagiu com o campo.
  */
+// Helper function para criar o HTML do ESelect dinamicamente
+function renderESelect(args) {
+  const {
+    value,
+    options = [],
+    placeholder = 'Selecione uma opção',
+    variant = 'primary',
+    multiple = false,
+    disabled = false,
+    loading = false,
+    state = null,
+    searchable = false,
+    clearable = false
+  } = args;
+
+  // CSS variant mapping
+  const variantMap = {
+    'primary': 'var(--primary)',
+    'success': 'var(--success)',
+    'warning': 'var(--warning)', 
+    'danger': 'var(--danger)'
+  };
+
+  const stateClass = state === false ? ' is-invalid' : state === true ? ' is-valid' : '';
+  const disabledClass = disabled ? ' disabled' : '';
+  const multipleClass = multiple ? ' multiple' : '';
+
+  // Render options
+  const optionsHTML = options.map((option, index) => {
+    const isSelected = multiple 
+      ? Array.isArray(value) && value.includes(option.id)
+      : value === option.id;
+    const selectedClass = isSelected ? ' selected' : '';
+    const checkboxHTML = multiple ? `<input type="checkbox" ${isSelected ? 'checked' : ''}>` : '';
+    
+    return `
+      <li role="option" aria-selected="${isSelected}" tabindex="-1" 
+          class="option option-padding-${multiple ? 'multiple' : 'single'}${selectedClass}"
+          data-value="${option.id}">
+        ${checkboxHTML}
+        <span class="option-text">${option.name || option.label}</span>
+      </li>
+    `;
+  }).join('');
+
+  // Display value
+  let displayValue = placeholder;
+  if (value !== null && value !== undefined) {
+    if (multiple && Array.isArray(value)) {
+      const selectedOptions = options.filter(opt => value.includes(opt.id));
+      displayValue = selectedOptions.length > 0 
+        ? `${selectedOptions.length} selecionado(s)`
+        : placeholder;
+    } else {
+      const selectedOption = options.find(opt => opt.id === value);
+      displayValue = selectedOption ? (selectedOption.name || selectedOption.label) : placeholder;
+    }
+  }
+
+  return `
+    ${eSelectStyles}
+    <div class="p-4" style="min-height: 300px;">
+      <label class="form-label" for="select-interactive">Disciplina ${multiple ? '(múltipla seleção)' : ''}</label>
+      <div class="e-select-wrapper${disabledClass}${multipleClass}" 
+           style="--e-select-variant: ${variantMap[variant]};">
+        <div role="combobox" 
+             aria-expanded="false"
+             aria-haspopup="listbox"
+             tabindex="${disabled ? '-1' : '0'}"
+             id="select-interactive"
+             class="e-select-container form-control${stateClass}${disabledClass}"
+             onclick="toggleOptions(this)">
+          ${loading ? '<span class="spinner-border spinner-border-sm me-2"></span>' : ''}
+          <span class="${value ? '' : 'text-muted'}">${displayValue}</span>
+          <div class="icon-container">
+            ${clearable && value ? '<span class="material-symbols-outlined clear-icon" onclick="clearSelection(event)">close</span>' : ''}
+            <span class="material-symbols-outlined drop-icon">expand_more</span>
+          </div>
+        </div>
+        <ul role="listbox" class="options-container" style="display: none;">
+          ${searchable ? `
+            <li class="search-container">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">
+                  <span class="material-symbols-outlined">search</span>
+                </span>
+                <input type="text" class="form-control" placeholder="Buscar..." 
+                       oninput="filterOptions(this)">
+              </div>
+            </li>
+          ` : ''}
+          ${multiple && options.length > 0 ? `
+            <li class="select-all-container">
+              <label class="form-check">
+                <input type="checkbox" class="form-check-input" onchange="toggleSelectAll(this)">
+                <span class="form-check-label">Selecionar todos</span>
+              </label>
+            </li>
+          ` : ''}
+          ${optionsHTML || '<li class="option disabled">Nenhuma opção disponível</li>'}
+        </ul>
+      </div>
+      
+      <!-- Estado Debug (removível em produção) -->
+      <small class="text-muted mt-2 d-block">
+        <strong>Estado atual:</strong> ${JSON.stringify(value)} | 
+        <strong>Opções:</strong> ${options.length} item(s)
+      </small>
+    </div>
+    
+    <script>
+      // Interações básicas do ESelect
+      function toggleOptions(trigger) {
+        const container = trigger.parentNode;
+        const options = container.querySelector('.options-container');
+        const isOpen = options.style.display !== 'none';
+        
+        // Fecha todos os outros selects
+        document.querySelectorAll('.options-container').forEach(opt => opt.style.display = 'none');
+        
+        // Toggle atual
+        options.style.display = isOpen ? 'none' : 'block';
+        trigger.setAttribute('aria-expanded', !isOpen);
+      }
+      
+      function clearSelection(event) {
+        event.stopPropagation();
+        // Simula clear - em produção emitiria evento
+        console.log('ESelect: Clear selection');
+      }
+      
+      function filterOptions(input) {
+        const searchTerm = input.value.toLowerCase();
+        const options = input.closest('.options-container').querySelectorAll('.option:not(.search-container):not(.select-all-container)');
+        
+        options.forEach(option => {
+          const text = option.textContent.toLowerCase();
+          option.style.display = text.includes(searchTerm) ? 'block' : 'none';
+        });
+      }
+      
+      function toggleSelectAll(checkbox) {
+        const container = checkbox.closest('.e-select-wrapper');
+        const optionCheckboxes = container.querySelectorAll('.option input[type="checkbox"]');
+        
+        optionCheckboxes.forEach(cb => {
+          cb.checked = checkbox.checked;
+        });
+        
+        console.log('ESelect: Select all toggled:', checkbox.checked);
+      }
+      
+      // Fecha dropdown quando clica fora
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.e-select-wrapper')) {
+          document.querySelectorAll('.options-container').forEach(opt => opt.style.display = 'none');
+          document.querySelectorAll('[aria-expanded="true"]').forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
+        }
+      });
+    </script>
+  `;
+}
+
 export const Default = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-default">Selecione uma disciplina</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-default"
-             class="e-select-container form-control">
-          <span class="text-muted">Selecione uma opção</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container">
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">Matemática</li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">Português</li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">Ciências</li>
-        </ul>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * Opened - Dropdown aberto mostrando opções
- * 
- * Usuário clicou no campo e o dropdown expandiu mostrando todas as opções disponíveis.
- * Caso de uso: Filtro de disciplinas no dashboard de alunos.
- */
-export const Opened = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 350px;">
-      <label class="form-label" for="select-opened">Disciplina</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="true" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-opened"
-             class="e-select-container form-control">
-          <span class="text-muted">Selecione uma opção</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container opened">
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Matemática
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Português
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Ciências
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            História
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Geografia
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Arte
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Educação Física
-          </li>
-        </ul>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * SingleSelected - Uma opção selecionada (modo single)
- * 
- * Usuário selecionou uma disciplina e o dropdown fechou.
- * O valor selecionado aparece no campo.
- */
-export const SingleSelected = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-single">Disciplina selecionada</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-single"
-             class="e-select-container form-control">
-          <span class="selected-option-single">Matemática</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * MultipleSelected - Múltiplas opções selecionadas com badge de contagem
- * 
- * Coordenador selecionou 3 turmas para comparar no relatório.
- * Badge mostra contagem com i18n (gênero + pluralização).
- */
-export const MultipleSelected = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-multiple">Turmas selecionadas</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-multiple"
-             class="e-select-container form-control">
-          <div class="selected-options-badge cursor-pointer mw-100">
-            <span class="badge badge-primary">
-              <span class="d-flex align-items-center mw-100">
-                <span>3 turmas selecionadas</span>
-                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
-              </span>
-            </span>
-          </div>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * MultipleWithCheckboxes - Dropdown aberto mostrando checkboxes
- * 
- * Modo múltiplo com "Selecionar todas" no topo.
- * Caso de uso: Coordenador filtrando turmas do 5º ano.
- */
-export const MultipleWithCheckboxes = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 380px;">
-      <label class="form-label" for="select-checkboxes">Selecione as turmas</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="true" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-checkboxes"
-             class="e-select-container form-control">
-          <div class="selected-options-badge cursor-pointer mw-100">
-            <span class="badge badge-primary">
-              <span class="d-flex align-items-center mw-100">
-                <span>2 turmas selecionadas</span>
-                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
-              </span>
-            </span>
-          </div>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container opened">
-          <li role="option" 
-              data-testid="select-all-option" 
-              aria-label="Selecionar todas as turmas" 
-              aria-selected="false" 
-              tabindex="-1" 
-              class="option option-padding-multiple">
-            <span class="e-form-check">
-              <input type="checkbox">
-            </span>
-            <span>Selecionar todas</span>
-          </li>
-          <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-multiple selected">
-            <span class="e-form-check">
-              <input type="checkbox" checked>
-            </span>
-            <span>5º Ano A</span>
-          </li>
-          <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-multiple selected">
-            <span class="e-form-check">
-              <input type="checkbox" checked>
-            </span>
-            <span>5º Ano B</span>
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-multiple">
-            <span class="e-form-check">
-              <input type="checkbox">
-            </span>
-            <span>5º Ano C</span>
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-multiple">
-            <span class="e-form-check">
-              <input type="checkbox">
-            </span>
-            <span>6º Ano A</span>
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-multiple">
-            <span class="e-form-check">
-              <input type="checkbox">
-            </span>
-            <span>6º Ano B</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * Searchable - Campo com busca interna
- * 
- * Professor procurando aluno específico em lista grande.
- * Campo de busca com debounce de 500ms.
- */
-export const Searchable = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 380px;">
-      <label class="form-label" for="select-searchable">Buscar aluno</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="true" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-searchable"
-             class="e-select-container form-control">
-          <span class="text-muted">Digite para buscar...</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container opened">
-          <div class="option-searchable">
-            <div class="input-group">
-              <span class="input-group-text">
-                <span class="material-symbols-outlined" style="font-size: 21px;">search</span>
-              </span>
-              <input type="text" 
-                     class="form-control" 
-                     placeholder="Buscar aluno..." 
-                     autocomplete="off"
-                     value="João">
-            </div>
-          </div>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            João Silva Santos
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            João Pedro Oliveira
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            João Lucas Ferreira
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            João Gabriel Costa
-          </li>
-        </ul>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * Loading - Estado de carregamento (spinner)
- * 
- * Componente aguardando resposta da API.
- * Mostra spinner ao invés do ícone de dropdown.
- */
-export const Loading = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-loading">Carregando anos letivos...</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-loading"
-             class="e-select-container form-control">
-          <span class="text-muted">Carregando...</span>
-          <div class="icon-container mr-2">
-            <div class="spinner-border spinner-border-sm text-primary" role="status">
-              <span class="visually-hidden">Carregando...</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * Disabled - Campo desabilitado (não interativo)
- * 
- * Campo bloqueado porque filtro anterior não foi preenchido.
- * Ex: "Turma" desabilitado até selecionar "Escola".
- */
-export const Disabled = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-disabled">Turma (selecione uma escola primeiro)</label>
-      <div class="e-select-wrapper disabled" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             aria-disabled="true"
-             tabindex="0" 
-             id="select-disabled"
-             class="e-select-container form-control">
-          <span class="text-muted">Selecione uma opção</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * Invalid - Estado de erro de validação
- * 
- * Campo obrigatório não preenchido.
- * Mostra mensagem de feedback abaixo do campo.
- */
-export const Invalid = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 140px;">
-      <label class="form-label" for="select-invalid">Disciplina <span style="color: var(--danger);">*</span></label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--danger);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             aria-invalid="true"
-             tabindex="0" 
-             id="select-invalid"
-             class="e-select-container form-control is-invalid">
-          <span class="text-muted">Selecione uma opção</span>
-          <div class="icon-container mr-2">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-      <div class="invalid-feedback d-block">Este campo é obrigatório</div>
-    </div>
-  `,
-};
-
-/**
- * Variants - Diferentes cores de badge (primary, success, warning, danger)
- * 
- * Demonstra as 4 variantes de cor disponíveis.
- * Uso real: Coordenador diferencia tipos de filtro por cor.
- */
-export const Variants = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4">
-      <div class="row g-3">
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="variant-primary">Primary (Padrão)</label>
-          <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-            <div class="e-select-container form-control" id="variant-primary">
-              <div class="selected-options-badge">
-                <span class="badge badge-primary">
-                  <span class="d-flex align-items-center">
-                    <span>3 turmas selecionadas</span>
-                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
-                  </span>
-                </span>
-              </div>
-              <div class="icon-container">
-                <span class="material-symbols-outlined drop-icon">expand_more</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="variant-success">Success (Aprovado)</label>
-          <div class="e-select-wrapper" style="--e-select-variant: var(--success);">
-            <div class="e-select-container form-control" id="variant-success">
-              <div class="selected-options-badge">
-                <span class="badge badge-success">
-                  <span class="d-flex align-items-center">
-                    <span>5 escolas aprovadas</span>
-                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
-                  </span>
-                </span>
-              </div>
-              <div class="icon-container">
-                <span class="material-symbols-outlined drop-icon">expand_more</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="variant-warning">Warning (Atenção)</label>
-          <div class="e-select-wrapper" style="--e-select-variant: var(--warning);">
-            <div class="e-select-container form-control" id="variant-warning">
-              <div class="selected-options-badge">
-                <span class="badge badge-warning">
-                  <span class="d-flex align-items-center">
-                    <span>2 alertas ativos</span>
-                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
-                  </span>
-                </span>
-              </div>
-              <div class="icon-container">
-                <span class="material-symbols-outlined drop-icon">expand_more</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="variant-danger">Danger (Erro)</label>
-          <div class="e-select-wrapper" style="--e-select-variant: var(--danger);">
-            <div class="e-select-container form-control" id="variant-danger">
-              <div class="selected-options-badge">
-                <span class="badge badge-danger">
-                  <span class="d-flex align-items-center">
-                    <span>1 erro crítico</span>
-                    <span class="material-symbols-outlined clear-button ml-1" style="font-size: 14px;">close</span>
-                  </span>
-                </span>
-              </div>
-              <div class="icon-container">
-                <span class="material-symbols-outlined drop-icon">expand_more</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * NoOptions - Sem opções disponíveis (array vazio)
- * 
- * API retornou array vazio ou filtro não encontrou resultados.
- * Slot customizável para mensagem.
- */
-export const NoOptions = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-empty">Escola (nenhuma cadastrada)</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-empty"
-             class="e-select-container form-control">
-          <span>Sem Opções</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * AllSelected - Todas as opções selecionadas (modo múltiplo)
- * 
- * Usuário marcou "Selecionar todas" no checkbox.
- * Badge mostra mensagem especial customizável.
- */
-export const AllSelected = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 120px;">
-      <label class="form-label" for="select-all">Turmas (todas selecionadas)</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="false" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="select-all"
-             class="e-select-container form-control">
-          <div class="selected-options-badge cursor-pointer mw-100">
-            <span class="badge badge-primary">
-              <span class="d-flex align-items-center mw-100">
-                <span>Todas as opções selecionadas</span>
-                <span class="material-symbols-outlined clear-button ml-1 cursor-pointer" style="font-size: 14px;">close</span>
-              </span>
-            </span>
-          </div>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon">expand_more</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * SchoolYearFilter - Caso de uso real: Filtro de Ano Letivo
- * 
- * Componente usado em SchoolsPerformanceFilter.vue
- * Opções dinâmicas carregadas da API + "Todos" no início.
- */
-export const SchoolYearFilter = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 280px;">
-      <label class="form-label" for="school-year">Ano Escolar</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="true" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="school-year"
-             class="e-select-container form-control">
-          <span class="text-muted">Selecione uma opção</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container opened">
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Todos
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            2023
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            2022
-          </li>
-        </ul>
-      </div>
-      <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(110, 99, 232, 0.08); border-radius: 0.357rem; font-size: 0.857rem; color: var(--body-color);">
-        <strong>Contexto:</strong> Dashboard de Performance de Escolas<br>
-        <strong>API:</strong> <code>getSeries()</code> retorna anos disponíveis<br>
-        <strong>Comportamento:</strong> Opção "Todos" sempre no topo
-      </div>
-    </div>
-  `,
-};
-
-/**
- * PeriodFilter - Caso de uso real: Filtro de Período/Mês
- * 
- * Componente usado em Filter.vue (Dashboard de Alunos)
- * Mostra meses do ano + "Todo o período".
- */
-export const PeriodFilter = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 380px;">
-      <label class="form-label" for="period">Período</label>
-      <div class="e-select-wrapper" style="--e-select-variant: var(--primary);">
-        <div role="combobox" 
-             aria-expanded="true" 
-             aria-haspopup="listbox" 
-             tabindex="0" 
-             id="period"
-             class="e-select-container form-control">
-          <span class="selected-option-single">Setembro/2024</span>
-          <div class="icon-container">
-            <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-          </div>
-        </div>
-        <ul role="listbox" class="options-container opened">
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Todo o período
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Janeiro/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Fevereiro/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Março/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Abril/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Maio/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Junho/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Julho/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Agosto/2024
-          </li>
-          <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-single selected">
-            Setembro/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Outubro/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Novembro/2024
-          </li>
-          <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-            Dezembro/2024
-          </li>
-        </ul>
-      </div>
-      <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(40, 199, 111, 0.08); border-radius: 0.357rem; font-size: 0.857rem; color: var(--body-color);">
-        <strong>Contexto:</strong> Dashboard de Alunos<br>
-        <strong>Função:</strong> <code>getMonthList()</code> (utils/date.js)<br>
-        <strong>Props:</strong> <code>clearable: false</code>, <code>searchable: false</code>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * PerPageSelector - Caso de uso real: Paginação de Resultados
- * 
- * Componente usado em RoundsFilter.vue
- * Opções: 5, 10, 25 itens por página.
- */
-export const PerPageSelector = {
-  render: () => `
-    ${eSelectStyles}
-    <div class="p-4" style="min-height: 240px;">
-      <div class="d-flex align-items-center gap-1">
-        <label class="form-label mb-0" for="per-page">Mostrar</label>
-        <div class="e-select-wrapper" style="--e-select-variant: var(--primary); width: 100px;">
-          <div role="combobox" 
-               aria-expanded="true" 
-               aria-haspopup="listbox" 
-               tabindex="0" 
-               id="per-page"
-               class="e-select-container form-control">
-            <span class="selected-option-single">10</span>
-            <div class="icon-container">
-              <span class="material-symbols-outlined drop-icon revert-drop-icon">expand_more</span>
-            </div>
-          </div>
-          <ul role="listbox" class="options-container opened" style="min-width: 100px;">
-            <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-              5
-            </li>
-            <li role="option" aria-selected="true" tabindex="-1" class="option option-padding-single selected">
-              10
-            </li>
-            <li role="option" aria-selected="false" tabindex="-1" class="option option-padding-single">
-              25
-            </li>
-          </ul>
-        </div>
-        <span style="margin-left: 0.5rem;">itens por página</span>
-      </div>
-      <div style="margin-top: 1.5rem; padding: 0.75rem; background: rgba(255, 159, 67, 0.08); border-radius: 0.357rem; font-size: 0.857rem; color: var(--body-color);">
-        <strong>Contexto:</strong> Filtro de Rodadas de Jogos<br>
-        <strong>Opções fixas:</strong> <code>[5, 10, 25]</code><br>
-        <strong>Event:</strong> <code>@input="onPerPageChange"</code> (atualiza tabela)
-      </div>
-    </div>
-  `,
-};
-
-// ============================================================================
-// 📖 DOCUMENTATION - Template 1 (JavaScript Functional)
-// ============================================================================
-
-export const Documentation = {
-  render: () => createDocPage({
-    title: 'ESelect',
-    subtitle: 'Select customizado com busca, múltipla seleção e paginação',
-    badge: 'Forms / Filters',
-    colors: { primary: '#6E63E8', secondary: '#00CFE8' },
-    
-    stats: [
-      { label: 'Baseado em', value: 'vue-select', description: 'Biblioteca robusta e testada' },
-      { label: 'Funcionalidades', value: '4', description: 'busca, múltipla, paginação, validação' },
-      { label: 'Casos de Uso', value: '8+', description: 'turmas, disciplinas, anos, períodos, escolas' },
-      { label: 'Performance', value: 'Lazy Load', description: 'Paginação para grandes listas' }
+  args: {
+    value: null,
+    options: [
+      { id: 1, name: 'Matemática' },
+      { id: 2, name: 'Português' },
+      { id: 3, name: 'Ciências' },
+      { id: 4, name: 'História' },
+      { id: 5, name: 'Geografia' }
     ],
-    
-    content: `
-${createExampleCard({
-  title: 'Select Básico',
-  description: 'Dropdown simples com opções',
-  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Selecione uma Turma</label><select style="width: 100%; height: 38px; padding: 8px 12px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px; color: #4B465C; background-color: white; cursor: pointer;"><option value="">Selecione...</option><option>Turma A - 5º Ano</option><option>Turma B - 6º Ano</option><option>Turma C - 7º Ano</option></select></div>',
-  code: '<ESelect\n  v-model="selectedClass"\n  :options="classes"\n  placeholder="Selecione uma turma"\n  label="name"\n  track-by="id"\n/>'
-})}
+    placeholder: 'Selecione uma disciplina',
+    variant: 'primary',
+    multiple: false,
+    disabled: false,
+    loading: false,
+    searchable: false,
+    clearable: false
+  },
+  render: renderESelect
+};
 
-${createExampleCard({
-  title: 'Múltipla Seleção',
-  description: 'Permite selecionar vários itens',
-  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Selecione Disciplinas</label><div style="display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; border: 1px solid #D8D6DE; border-radius: 6px; min-height: 38px;"><span style="display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background-color: #6E63E8; color: white; border-radius: 4px; font-size: 13px;">Matemática <i class="bi bi-x" style="font-size: 14px; cursor: pointer;"></i></span><span style="display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background-color: #6E63E8; color: white; border-radius: 4px; font-size: 13px;">Português <i class="bi bi-x" style="font-size: 14px; cursor: pointer;"></i></span><input type="text" placeholder="Digite para buscar..." style="flex: 1; min-width: 120px; border: none; outline: none; font-size: 14px;" /></div></div>',
-  code: '<ESelect\n  v-model="selectedSubjects"\n  :options="subjects"\n  :multiple="true"\n  :searchable="true"\n  placeholder="Selecione disciplinas"\n/>'
-})}
-
-${createExampleCard({
-  title: 'Com Busca',
-  description: 'Input de busca integrado para filtrar opções',
-  preview: '<div style="padding: 20px; max-width: 400px;"><label style="display: block; margin-bottom: 8px; color: #5E5873; font-size: 14px; font-weight: 500;">Buscar Aluno</label><div style="position: relative;"><input type="text" placeholder="Digite o nome do aluno..." style="width: 100%; height: 38px; padding: 8px 32px 8px 12px; border: 1px solid #D8D6DE; border-radius: 6px; font-size: 14px;" /><i class="bi bi-search" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #A8AAAE;"></i></div></div>',
-  code: '<ESelect\n  v-model="selectedStudent"\n  :options="students"\n  :searchable="true"\n  placeholder="Digite o nome do aluno..."\n  @search="handleSearch"\n/>'
-})}
-
-${createPropsTable([
-  { name: 'value', type: 'Any', default: 'null', description: 'Valor selecionado (v-model)' },
-  { name: 'options', type: 'Array', default: '[]', description: 'Lista de opções' },
-  { name: 'multiple', type: 'Boolean', default: 'false', description: 'Permite múltipla seleção' },
-  { name: 'searchable', type: 'Boolean', default: 'false', description: 'Habilita busca/filtro' },
-  { name: 'clearable', type: 'Boolean', default: 'true', description: 'Mostra botão X para limpar' },
-  { name: 'loading', type: 'Boolean', default: 'false', description: 'Estado de carregamento' }
-])}
-    `,
-    
-    features: [
-      { icon: 'search', title: 'Busca Integrada', description: 'Filtra opções em tempo real' },
-      { icon: 'stack', title: 'Múltipla Seleção', description: 'Selecione vários itens com chips visuais' },
-      { icon: 'arrow-clockwise', title: 'Paginação', description: 'Lazy loading para grandes listas' },
-      { icon: 'universal-access', title: 'Acessível', description: 'ARIA, keyboard navigation, screen readers' }
+export const MultipleSelection = {
+  args: {
+    value: [1, 3],
+    options: [
+      { id: 1, name: 'Matemática' },
+      { id: 2, name: 'Português' },
+      { id: 3, name: 'Ciências' },
+      { id: 4, name: 'História' },
+      { id: 5, name: 'Geografia' },
+      { id: 6, name: 'Inglês' }
     ],
-    
-    relatedComponents: [
-      { name: 'FilterChip', path: '/story/front-office-forms-filterchip--default' },
-      { name: 'EInput', path: '/story/front-office-forms-einput--default' }
+    placeholder: 'Selecione disciplinas',
+    variant: 'primary',
+    multiple: true,
+    clearable: true
+  },
+  render: renderESelect
+};
+
+export const WithSearch = {
+  args: {
+    value: null,
+    options: [
+      { id: 1, name: 'Ana Silva' },
+      { id: 2, name: 'Bruno Santos' },
+      { id: 3, name: 'Carlos Oliveira' },
+      { id: 4, name: 'Daniela Costa' },
+      { id: 5, name: 'Eduardo Ferreira' },
+      { id: 6, name: 'Fernanda Lima' },
+      { id: 7, name: 'Gabriel Alves' },
+      { id: 8, name: 'Helena Rodrigues' },
+      { id: 9, name: 'Igor Pereira' },
+      { id: 10, name: 'Julia Martins' }
+    ],
+    placeholder: 'Buscar aluno...',
+    variant: 'primary',
+    searchable: true,
+    clearable: true
+  },
+  render: renderESelect
+};
+
+export const LoadingState = {
+  args: {
+    value: null,
+    options: [],
+    placeholder: 'Carregando turmas...',
+    variant: 'primary',
+    loading: true,
+    disabled: true
+  },
+  render: renderESelect
+};
+
+export const ValidationStates = {
+  args: {
+    value: null,
+    options: [
+      { id: 1, name: 'Opção 1' },
+      { id: 2, name: 'Opção 2' }
+    ],
+    placeholder: 'Campo obrigatório',
+    variant: 'danger',
+    state: false
+  },
+  render: (args) => {
+    return `
+      <div class="row">
+        <div class="col-md-4">
+          <h6>Estado Inválido</h6>
+          ${renderESelect({...args, state: false, variant: 'danger'})}
+        </div>
+        <div class="col-md-4">
+          <h6>Estado Válido</h6>
+          ${renderESelect({...args, state: true, variant: 'success', value: 1})}
+        </div>
+        <div class="col-md-4">
+          <h6>Estado Neutro</h6>
+          ${renderESelect({...args, state: null, variant: 'primary'})}
+        </div>
+      </div>
+    `;
+  }
+};
+
+export const AllVariants = {
+  args: {
+    value: 1,
+    options: [
+      { id: 1, name: 'Selecionado' },
+      { id: 2, name: 'Opção 2' }
     ]
-  })
+  },
+  render: (args) => {
+    return `
+      <div class="row">
+        <div class="col-md-3">
+          <h6>Primary</h6>
+          ${renderESelect({...args, variant: 'primary'})}
+        </div>
+        <div class="col-md-3">
+          <h6>Success</h6>
+          ${renderESelect({...args, variant: 'success'})}
+        </div>
+        <div class="col-md-3">
+          <h6>Warning</h6>
+          ${renderESelect({...args, variant: 'warning'})}
+        </div>
+        <div class="col-md-3">
+          <h6>Danger</h6>
+          ${renderESelect({...args, variant: 'danger'})}
+        </div>
+      </div>
+    `;
+  }
 };

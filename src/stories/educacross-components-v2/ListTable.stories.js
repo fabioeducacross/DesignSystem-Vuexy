@@ -56,6 +56,156 @@ Componente extraído diretamente de \`educacross-frontoffice/src/components/tabl
       },
     },
   },
+  argTypes: {
+    perPage: {
+      control: 'select',
+      options: [5, 10, 25, 50],
+      description: 'Número de itens por página',
+      table: { category: 'Pagination' }
+    },
+    totalData: {
+      control: { type: 'number', min: 0, max: 1000, step: 1 },
+      description: 'Total de registros para cálculo da paginação',
+      table: { category: 'Pagination' }
+    },
+    currentPage: {
+      control: { type: 'number', min: 1, max: 20, step: 1 },
+      description: 'Página atual',
+      table: { category: 'Pagination' }
+    },
+    loading: {
+      control: 'boolean',
+      description: 'Estado de carregamento, mostra skeleton',
+      table: { category: 'State' }
+    },
+    showControls: {
+      control: 'boolean',
+      description: 'Exibe controles de per-page e busca',
+      table: { category: 'Controls' }
+    },
+    showSearchQueryInput: {
+      control: 'boolean',
+      description: 'Exibe campo de busca',
+      table: { category: 'Controls' }
+    },
+    showViewSelection: {
+      control: 'boolean',
+      description: 'Toggle list/grid view',
+      table: { category: 'Controls' }
+    },
+    itemView: {
+      control: 'select',
+      options: ['list-view', 'grid-view'],
+      description: 'Modo de visualização',
+      table: { category: 'View' }
+    },
+    exportToExcel: {
+      control: 'boolean',
+      description: 'Habilita botão de exportação',
+      table: { category: 'Features' }
+    },
+    emptyText: {
+      control: 'text',
+      description: 'Texto exibido quando não há dados',
+      table: { category: 'Content' }
+    },
+    stickyHeader: {
+      control: 'boolean',
+      description: 'Header fixo durante scroll',
+      table: { category: 'Layout' }
+    },
+    sortBy: {
+      control: 'select',
+      options: ['', 'nome', 'turma', 'desempenho', 'status'],
+      description: 'Campo de ordenação ativa',
+      table: { category: 'Sort' }
+    },
+    isSortDirDesc: {
+      control: 'boolean',
+      description: 'Ordenação descendente (true) ou ascendente (false)',
+      table: { category: 'Sort' }
+    },
+    border: {
+      control: 'boolean',
+      description: 'Adiciona borda no card container',
+      table: { category: 'Style' }
+    }
+  },
+  argTypes: {
+    perPage: {
+      control: 'select',
+      options: [5, 10, 25, 50],
+      description: 'Número de itens por página',
+      table: { category: 'Pagination' }
+    },
+    totalData: {
+      control: { type: 'number', min: 0, max: 1000, step: 1 },
+      description: 'Total de registros para cálculo da paginação',
+      table: { category: 'Pagination' }
+    },
+    currentPage: {
+      control: { type: 'number', min: 1, max: 20, step: 1 },
+      description: 'Página atual',
+      table: { category: 'Pagination' }
+    },
+    loading: {
+      control: 'boolean',
+      description: 'Estado de carregamento, mostra skeleton',
+      table: { category: 'State' }
+    },
+    showControls: {
+      control: 'boolean',
+      description: 'Exibe controles de per-page e busca',
+      table: { category: 'Controls' }
+    },
+    showSearchQueryInput: {
+      control: 'boolean',
+      description: 'Exibe campo de busca',
+      table: { category: 'Controls' }
+    },
+    showViewSelection: {
+      control: 'boolean',
+      description: 'Toggle list/grid view',
+      table: { category: 'Controls' }
+    },
+    itemView: {
+      control: 'select',
+      options: ['list-view', 'grid-view'],
+      description: 'Modo de visualização',
+      table: { category: 'View' }
+    },
+    exportToExcel: {
+      control: 'boolean',
+      description: 'Habilita botão de exportação',
+      table: { category: 'Features' }
+    },
+    emptyText: {
+      control: 'text',
+      description: 'Texto exibido quando não há dados',
+      table: { category: 'Content' }
+    },
+    stickyHeader: {
+      control: 'boolean',
+      description: 'Header fixo durante scroll',
+      table: { category: 'Layout' }
+    },
+    sortBy: {
+      control: 'select',
+      options: ['', 'nome', 'turma', 'desempenho', 'status'],
+      description: 'Campo de ordenação ativa',
+      table: { category: 'Sort' }
+    },
+    isSortDirDesc: {
+      control: 'boolean',
+      description: 'Ordenação descendente (true) ou ascendente (false)',
+      table: { category: 'Sort' }
+    },
+    border: {
+      control: 'boolean',
+      description: 'Adiciona borda no card container',
+      table: { category: 'Style' }
+    }
+  }
 };
 
 // CSS do ListTable
@@ -308,118 +458,193 @@ const listTableStyles = `
 `;
 
 /**
- * Default - Tabela com dados
+ * Função para gerar dados mock da tabela
  */
-export const Default = {
-  render: () => `
+function generateTableData(count = 5) {
+  const names = ['Ana Silva', 'Bruno Santos', 'Carlos Oliveira', 'Daniel Costa', 'Elena Ferreira', 'Fabio Lima', 'Gabriela Rocha', 'Henrique Souza'];
+  const turmas = ['5º Ano A', '5º Ano B', '6º Ano A', '6º Ano B', '7º Ano A', '7º Ano B'];
+  const performances = [
+    { score: 85, level: 'Proficiente', variant: 'success' },
+    { score: 62, level: 'Adequado', variant: 'warning' },
+    { score: 35, level: 'Abaixo do Básico', variant: 'danger' },
+    { score: 78, level: 'Proficiente', variant: 'success' },
+    { score: 45, level: 'Básico', variant: 'info' }
+  ];
+  
+  return Array.from({ length: count }, (_, i) => ({
+    nome: names[i % names.length],
+    turma: turmas[i % turmas.length],
+    desempenho: performances[i % performances.length]
+  }));
+}
+
+/**
+ * Função de render dinâmica para o ListTable
+ */
+function renderListTable(args) {
+  const {
+    perPage = 10,
+    totalData = 25,
+    currentPage = 1,
+    loading = false,
+    showControls = true,
+    showSearchQueryInput = true,
+    showViewSelection = false,
+    itemView = 'list-view',
+    exportToExcel = false,
+    emptyText = 'Nenhum dado encontrado',
+    stickyHeader = false,
+    sortBy = '',
+    isSortDirDesc = false,
+    border = false
+  } = args;
+
+  const tableData = generateTableData(perPage);
+  console.log('ListTable render with args:', args);
+
+  return `
     ${listTableStyles}
-    <div class="card">
-      <div class="list-table-controls m-2">
-        <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
-            <option>10</option>
-            <option>25</option>
-            <option>50</option>
-          </select>
+    <div class="card${border ? ' border' : ''}">
+      ${showControls ? `
+        <div class="list-table-controls m-2">
+          <div class="d-flex align-items-center">
+            <label class="me-2">Mostrar</label>
+            <select class="form-select per-page-selector" style="width: auto;">
+              <option ${perPage === 5 ? 'selected' : ''}>5</option>
+              <option ${perPage === 10 ? 'selected' : ''}>10</option>
+              <option ${perPage === 25 ? 'selected' : ''}>25</option>
+              <option ${perPage === 50 ? 'selected' : ''}>50</option>
+            </select>
+            ${exportToExcel ? `
+              <button class="btn btn-primary ms-2" onclick="console.log('Export clicked')">
+                <i class="material-symbols-outlined">file_download</i>
+                Exportar
+              </button>
+            ` : ''}
+            ${showViewSelection ? `
+              <div class="btn-group ms-2" role="group">
+                <button type="button" class="btn btn-outline-secondary ${itemView === 'list-view' ? 'active' : ''}">
+                  <i class="material-symbols-outlined">view_list</i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary ${itemView === 'grid-view' ? 'active' : ''}">
+                  <i class="material-symbols-outlined">grid_view</i>
+                </button>
+              </div>
+            ` : ''}
+          </div>
+          ${showSearchQueryInput ? `
+            <div class="search-input-group input-group" style="max-width: 520px;">
+              <span class="input-group-text">
+                <span class="material-symbols-outlined">search</span>
+              </span>
+              <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+          ` : ''}
         </div>
-        <div class="search-input-group input-group" style="max-width: 520px;">
-          <span class="input-group-text">
-            <span class="material-symbols-outlined">search</span>
-          </span>
-          <input type="text" class="form-control" placeholder="Buscar...">
+      ` : ''}
+      
+      ${loading ? `
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><div class="skeleton-item" style="height: 20px; width: 60px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 80px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 100px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 70px;"></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              ${Array.from({length: 5}, () => `
+                <tr>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
         </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>
-                <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
-                  Nome
-                </div>
-              </th>
-              <th>
-                <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
-                  Turma
-                </div>
-              </th>
-              <th>
-                <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
-                  Desempenho
-                  <span class="material-symbols-outlined head-icon-info" style="font-size: 16px;">info</span>
-                </div>
-              </th>
-              <th>
-                <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
-                  Status
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ana Silva</td>
-              <td>5º Ano A</td>
-              <td><span class="badge bg-success">85%</span></td>
-              <td><span class="badge bg-light-success text-success">Proficiente</span></td>
-            </tr>
-            <tr>
-              <td>Bruno Santos</td>
-              <td>5º Ano A</td>
-              <td><span class="badge bg-warning">62%</span></td>
-              <td><span class="badge bg-light-warning text-warning">Básico</span></td>
-            </tr>
-            <tr>
-              <td>Carla Oliveira</td>
-              <td>5º Ano B</td>
-              <td><span class="badge bg-success">91%</span></td>
-              <td><span class="badge bg-light-primary text-primary">Avançado</span></td>
-            </tr>
-            <tr>
-              <td>Daniel Costa</td>
-              <td>5º Ano B</td>
-              <td><span class="badge bg-danger">35%</span></td>
-              <td><span class="badge bg-light-danger text-danger">Abaixo do Básico</span></td>
-            </tr>
-            <tr>
-              <td>Elena Ferreira</td>
-              <td>6º Ano A</td>
-              <td><span class="badge bg-success">78%</span></td>
-              <td><span class="badge bg-light-success text-success">Proficiente</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      ` : `
+        <div class="table-responsive"${stickyHeader ? ' style="max-height: 400px; overflow-y: auto;"' : ''}>
+          <table class="table">
+            <thead${stickyHeader ? ' class="sticky-top"' : ''}>
+              <tr>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Nome
+                    ${sortBy === 'nome' ? `
+                      <span class="material-symbols-outlined" onclick="console.log('Sort nome')">
+                        ${isSortDirDesc ? 'arrow_drop_down' : 'arrow_drop_up'}
+                      </span>
+                    ` : ''}
+                  </div>
+                </th>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Turma
+                    ${sortBy === 'turma' ? `
+                      <span class="material-symbols-outlined">
+                        ${isSortDirDesc ? 'arrow_drop_down' : 'arrow_drop_up'}
+                      </span>
+                    ` : ''}
+                  </div>
+                </th>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Desempenho
+                    <span class="material-symbols-outlined head-icon-info" style="font-size: 16px;">info</span>
+                  </div>
+                </th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tableData.map(row => `
+                <tr>
+                  <td>${row.nome}</td>
+                  <td>${row.turma}</td>
+                  <td><span class="badge bg-${row.desempenho.variant}">${row.desempenho.score}%</span></td>
+                  <td><span class="badge bg-light-${row.desempenho.variant} text-${row.desempenho.variant}">${row.desempenho.level}</span></td>
+                </tr>
+              `).join('')}
+              ${tableData.length === 0 ? `
+                <tr>
+                  <td colspan="4" class="text-center p-4">
+                    <span class="material-symbols-outlined mb-2" style="font-size: 48px; color: var(--text-muted);">inbox</span>
+                    <p class="text-muted">${emptyText}</p>
+                  </td>
+                </tr>
+              ` : ''}
+            </tbody>
+          </table>
+        </div>
+      `}
+      
       <div class="px-2 pt-2 mb-2">
         <div class="pagination-container">
           <div class="pagination-info">
-            Mostrando 1 a 5 de 25 registros
+            Mostrando ${(currentPage - 1) * perPage + 1} a ${Math.min(currentPage * perPage, totalData)} de ${totalData} registros
           </div>
           <nav>
             <ul class="pagination">
-              <li class="page-item disabled">
-                <a class="page-link" href="#">
+              <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Previous page')">
                   <span class="material-symbols-outlined" style="font-size: 18px;">chevron_left</span>
                 </a>
               </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">1</a>
+              <li class="page-item ${currentPage === 1 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 1')">1</a>
+              </li>
+              <li class="page-item ${currentPage === 2 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 2')">2</a>
+              </li>
+              <li class="page-item ${currentPage === 3 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 3')">3</a>
               </li>
               <li class="page-item">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">4</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">5</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">
+                <a class="page-link" href="#" onclick="console.log('Next page')">
                   <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
                 </a>
               </li>
@@ -428,143 +653,188 @@ export const Default = {
         </div>
       </div>
     </div>
-  `,
-};
+  `;
+}
 
 /**
- * Loading - Estado de carregamento com skeleton
- */
-export const Loading = {
-  render: () => `
-    ${listTableStyles}
-    <div class="card">
-      <div class="list-table-controls m-2">
-        <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector" disabled>
-            <option>10</option>
-          </select>
-        </div>
-        <div class="search-input-group input-group" style="max-width: 520px;">
-          <span class="input-group-text">
-            <span class="material-symbols-outlined">search</span>
-          </span>
-          <input type="text" class="form-control" placeholder="Buscar..." disabled>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th style="width: 30%"><div class="skeleton-cell" style="width: 60%;"></div></th>
-              <th style="width: 20%"><div class="skeleton-cell" style="width: 50%;"></div></th>
-              <th style="width: 25%"><div class="skeleton-cell" style="width: 70%;"></div></th>
-              <th style="width: 25%"><div class="skeleton-cell" style="width: 40%;"></div></th>
-            </tr>
-          </thead>
-          <tbody>
-            ${Array(5).fill().map(() => `
-              <tr>
-                <td><div class="skeleton-cell" style="width: ${60 + Math.random() * 30}%;"></div></td>
-                <td><div class="skeleton-cell" style="width: ${40 + Math.random() * 30}%;"></div></td>
-                <td><div class="skeleton-cell" style="width: ${50 + Math.random() * 30}%;"></div></td>
-                <td><div class="skeleton-cell" style="width: ${30 + Math.random() * 40}%;"></div></td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `,
-};
+ * Função log('ListTable render with args:', args);
 
-/**
- * Empty - Sem dados
- */
-export const Empty = {
-  render: () => `
+  return `
     ${listTableStyles}
-    <div class="card">
-      <div class="list-table-controls m-2">
-        <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
-            <option>10</option>
-          </select>
-        </div>
-        <div class="search-input-group input-group" style="max-width: 520px;">
-          <span class="input-group-text">
-            <span class="material-symbols-outlined">search</span>
-          </span>
-          <input type="text" class="form-control" placeholder="Buscar...">
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Turma</th>
-              <th>Desempenho</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="4">
-                <div class="empty-state">
-                  <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#6e63e8" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M8 15s1.5 2 4 2 4-2 4-2"/>
-                    <line x1="9" y1="9" x2="9.01" y2="9"/>
-                    <line x1="15" y1="9" x2="15.01" y2="9"/>
-                  </svg>
-                  <span class="text-primary font-bold">Nenhum dado encontrado</span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `,
-};
-
-/**
- * WithExport - Com botão de exportar Excel
- */
-export const WithExport = {
-  render: () => `
-    ${listTableStyles}
-    <div class="card">
-      <div class="list-table-controls m-2">
-        <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
-            <option>10</option>
-            <option>25</option>
-            <option>50</option>
-          </select>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <div class="search-input-group input-group" style="max-width: 400px;">
-            <span class="input-group-text">
-              <span class="material-symbols-outlined">search</span>
-            </span>
-            <input type="text" class="form-control" placeholder="Buscar...">
+    <div class="card${border ? ' border' : ''}">
+      ${showControls ? `
+        <div class="list-table-controls m-2">
+          <div class="d-flex align-items-center">
+            <label class="me-2">Mostrar</label>
+            <select class="form-select per-page-selector" style="width: auto;">
+              <option ${perPage === 5 ? 'selected' : ''}>5</option>
+              <option ${perPage === 10 ? 'selected' : ''}>10</option>
+              <option ${perPage === 25 ? 'selected' : ''}>25</option>
+              <option ${perPage === 50 ? 'selected' : ''}>50</option>
+            </select>
+            ${exportToExcel ? `
+              <button class="btn btn-primary ms-2" onclick="console.log('Export clicked')">
+                <i class="material-symbols-outlined">file_download</i>
+                Exportar
+              </button>
+            ` : ''}
+            ${showViewSelection ? `
+              <div class="btn-group ms-2" role="group">
+                <button type="button" class="btn btn-outline-secondary ${itemView === 'list-view' ? 'active' : ''}">
+                  <i class="material-symbols-outlined">view_list</i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary ${itemView === 'grid-view' ? 'active' : ''}">
+                  <i class="material-symbols-outlined">grid_view</i>
+                </button>
+              </div>
+            ` : ''}
           </div>
-          <button class="btn btn-outline-primary btn-export">
-            <span class="material-symbols-outlined" style="font-size: 22px;">ios_share</span>
-            <span>Exportar em Excel</span>
-          </button>
+          ${showSearchQueryInput ? `
+            <div class="search-input-group input-group" style="max-width: 520px;">
+              <span class="input-group-text">
+                <span class="material-symbols-outlined">search</span>
+              </span>
+              <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+          ` : ''}
+        </div>
+      ` : ''}
+      
+      ${loading ? `
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><div class="skeleton-item" style="height: 20px; width: 60px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 80px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 100px;"></div></th>
+                <th><div class="skeleton-item" style="height: 20px; width: 70px;"></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              ${Array.from({length: 5}, () => `
+                <tr>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                  <td><div class="skeleton-item" style="height: 16px;"></div></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      ` : `
+        <div class="table-responsive"${stickyHeader ? ' style="max-height: 400px; overflow-y: auto;"' : ''}>
+          <table class="table">
+            <thead${stickyHeader ? ' class="sticky-top"' : ''}>
+              <tr>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Nome
+                    ${sortBy === 'nome' ? `
+                      <span class="material-symbols-outlined" onclick="console.log('Sort nome')">
+                        ${isSortDirDesc ? 'arrow_drop_down' : 'arrow_drop_up'}
+                      </span>
+                    ` : ''}
+                  </div>
+                </th>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Turma
+                    ${sortBy === 'turma' ? `
+                      <span class="material-symbols-outlined">
+                        ${isSortDirDesc ? 'arrow_drop_down' : 'arrow_drop_up'}
+                      </span>
+                    ` : ''}
+                  </div>
+                </th>
+                <th>
+                  <div class="d-inline-flex align-items-center gap-1 font-weight-bolder text-uppercase">
+                    Desempenho
+                    <span class="material-symbols-outlined head-icon-info" style="font-size: 16px;">info</span>
+                  </div>
+                </th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tableData.map(row => `
+                <tr>
+                  <td>${row.nome}</td>
+                  <td>${row.turma}</td>
+                  <td><span class="badge bg-${row.desempenho.variant}">${row.desempenho.score}%</span></td>
+                  <td><span class="badge bg-light-${row.desempenho.variant} text-${row.desempenho.variant}">${row.desempenho.level}</span></td>
+                </tr>
+              `).join('')}
+              ${tableData.length === 0 ? `
+                <tr>
+                  <td colspan="4" class="text-center p-4">
+                    <span class="material-symbols-outlined mb-2" style="font-size: 48px; color: var(--text-muted);">inbox</span>
+                    <p class="text-muted">${emptyText}</p>
+                  </td>
+                </tr>
+              ` : ''}
+            </tbody>
+          </table>
+        </div>
+      `}
+      
+      <div class="px-2 pt-2 mb-2">
+        <div class="pagination-container">
+          <div class="pagination-info">
+            Mostrando ${(currentPage - 1) * perPage + 1} a ${Math.min(currentPage * perPage, totalData)} de ${totalData} registros
+          </div>
+          <nav>
+            <ul class="pagination">
+              <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Previous page')">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">chevron_left</span>
+                </a>
+              </li>
+              <li class="page-item ${currentPage === 1 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 1')">1</a>
+              </li>
+              <li class="page-item ${currentPage === 2 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 2')">2</a>
+              </li>
+              <li class="page-item ${currentPage === 3 ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="console.log('Page 3')">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" onclick="console.log('Next page')">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Turma</th>
+    </div>
+  `;
+}
+
+/**
+ * Default - Tabela com dados interativa
+ */
+export const Default = {
+  args: {
+    perPage: 10,
+    totalData: 25,
+    currentPage: 1,
+    loading: false,
+    showControls: true,
+    showSearchQueryInput: true,
+    showViewSelection: false,
+    itemView: 'list-view',
+    exportToExcel: false,
+    emptyText: 'Nenhum dado encontrado',
+    stickyHeader: false,
+    sortBy: '',
+    isSortDirDesc: false,
+    border: false
+  },
+  render: (args) => renderListTable(args)
+};
               <th>Desempenho</th>
               <th>Status</th>
             </tr>

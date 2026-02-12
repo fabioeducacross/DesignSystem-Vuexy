@@ -82,26 +82,98 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
     
     ${withSidebar ? `
     <!-- Sidebar -->
-    <div class="col-lg-3 col-md-4 app-calendar-sidebar border-end">
+    <div class="col-lg-3 col-md-4 app-calendar-sidebar border-end bg-light">
       <div class="p-4">
-        <button class="btn btn-primary w-100 mb-4" onclick="alert('Add Event - Use Modal component (PERMITIDO) para funcionalidade real')">
+        <!-- Add Event Button -->
+        <button class="btn btn-primary w-100 mb-4" onclick="alert('Add Event - Use Modal component para funcionalidade real')">
           <i class="bx bx-plus me-1"></i>
           Add Event
         </button>
         
-        <h5 class="mb-3">Event Filters</h5>
-        
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" id="selectAll" checked>
-          <label class="form-check-label" for="selectAll">View All</label>
+        <!-- Mini Calendar Navigation -->
+        <div class="mini-calendar bg-white rounded border p-3 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="mb-0">February 2026</h6>
+            <div>
+              <button class="btn btn-sm btn-link p-0 me-1"><i class="bx bx-chevron-left"></i></button>
+              <button class="btn btn-sm btn-link p-0"><i class="bx bx-chevron-right"></i></button>
+            </div>
+          </div>
+          <table class="table table-sm text-center mb-0">
+            <thead>
+              <tr>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Sun</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Mon</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Tue</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Wed</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Thu</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Fri</th>
+                <th class="text-muted fw-normal p-1" style="font-size: 0.75rem;">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">26</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">27</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">28</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">29</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">30</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">31</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">1</span></td>
+              </tr>
+              <tr>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">2</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">3</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">4</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">5</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">6</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">7</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">8</span></td>
+              </tr>
+              <tr>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">9</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">10</span></td>
+                <td class="p-1"><span class="bg-primary text-white rounded-circle d-inline-block" style="font-size: 0.75rem; line-height: 1.5; width: 24px; height: 24px; line-height: 24px;">11</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">12</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">13</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">14</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">15</span></td>
+              </tr>
+              <tr>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">16</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">17</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">18</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">19</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">20</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">21</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">22</span></td>
+              </tr>
+              <tr>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">23</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">24</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">25</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">26</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">27</span></td>
+                <td class="p-1"><span style="font-size: 0.75rem; line-height: 1.5;">28</span></td>
+                <td class="p-1"><span class="text-muted" style="font-size: 0.75rem; line-height: 1.5;">1</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         
-        <hr class="my-3">
+        <!-- Event Filters -->
+        <h6 class="mb-3">Event Filters</h6>
         
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="selectAll" checked>
+          <label class="form-check-label fw-medium" for="selectAll">View All</label>
+        </div>
+        
+        <!-- Filter Categories -->
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="personal" checked>
           <label class="form-check-label d-flex align-items-center" for="personal">
-            <span class="badge badge-dot bg-primary me-2"></span>
+            <span class="badge badge-dot bg-danger me-2"></span>
             Personal
           </label>
         </div>
@@ -109,7 +181,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="business" checked>
           <label class="form-check-label d-flex align-items-center" for="business">
-            <span class="badge badge-dot bg-success me-2"></span>
+            <span class="badge badge-dot bg-primary me-2"></span>
             Business
           </label>
         </div>
@@ -125,7 +197,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="holiday" checked>
           <label class="form-check-label d-flex align-items-center" for="holiday">
-            <span class="badge badge-dot bg-danger me-2"></span>
+            <span class="badge badge-dot bg-success me-2"></span>
             Holiday
           </label>
         </div>
@@ -155,7 +227,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
                 <i class="bx bx-chevron-right"></i>
               </button>
               <button class="btn btn-sm btn-label-secondary me-3">Today</button>
-              <h5 class="d-inline-block mb-0">December 2024</h5>
+              <h5 class="d-inline-block mb-0">February 2026</h5>
             </div>
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-sm ${view === 'month' ? 'btn-primary' : 'btn-outline-primary'}">Month</button>
@@ -456,77 +528,76 @@ Implementação oficial usando FullCalendar do Vuexy:
       if (window.FullCalendar) {
         const calendarEl = document.getElementById('fullcalendar-interactive');
         
-        // Sample events
+        // Sample events (matching Vuexy demo - February 2026)
         const events = [
           {
             id: '1',
-            title: 'Reunião de Projeto',
-            start: new Date(new Date().setHours(10, 0, 0)),
-            end: new Date(new Date().setHours(11, 30, 0)),
+            title: 'Design Review',
+            start: '2026-02-11T11:55:00',
+            end: '2026-02-11T13:00:00',
             backgroundColor: '#7367f0',
             borderColor: '#7367f0',
-            extendedProps: { category: 'Reunião' }
+            extendedProps: { category: 'Business' }
           },
           {
             id: '2',
-            title: 'Almoço com Cliente',
-            start: new Date(new Date().setHours(12, 30, 0)),
-            end: new Date(new Date().setHours(14, 0, 0)),
-            backgroundColor: '#28c76f',
-            borderColor: '#28c76f',
-            extendedProps: { category: 'Cliente' }
+            title: 'Team Meeting',
+            start: '2026-02-13T09:00:00',
+            end: '2026-02-13T10:30:00',
+            backgroundColor: '#7367f0',
+            borderColor: '#7367f0',
+            extendedProps: { category: 'Business' }
           },
           {
             id: '3',
-            title: 'Apresentação Q1',
-            start: new Date(new Date().setDate(new Date().getDate() + 1)),
-            allDay: true,
-            backgroundColor: '#ea5455',
-            borderColor: '#ea5455',
-            extendedProps: { category: 'Importante' }
+            title: 'Client Call',
+            start: '2026-02-17T14:00:00',
+            end: '2026-02-17T15:30:00',
+            backgroundColor: '#28c76f',
+            borderColor: '#28c76f',
+            extendedProps: { category: 'Business' }
           },
           {
             id: '4',
-            title: 'Code Review',
-            start: new Date(new Date().setDate(new Date().getDate() + 2)),
-            start: new Date(new Date(new Date().setDate(new Date().getDate() + 2)).setHours(15, 0, 0)),
-            end: new Date(new Date(new Date().setDate(new Date().getDate() + 2)).setHours(16, 0, 0)),
+            title: 'Family Trip',
+            start: '2026-02-19',
+            allDay: true,
             backgroundColor: '#ff9f43',
             borderColor: '#ff9f43',
-            extendedProps: { category: 'Desenvolvimento' }
+            extendedProps: { category: 'Family' }
           },
           {
             id: '5',
-            title: 'Workshop',
-            start: new Date(new Date().setDate(new Date().getDate() + 3)),
-            allDay: true,
-            backgroundColor: '#00cfe8',
-            borderColor: '#00cfe8',
-            extendedProps: { category: 'Treinamento' }
+            title: 'Doctor Appointment',
+            start: '2026-02-24T10:00:00',
+            end: '2026-02-24T11:00:00',
+            backgroundColor: '#ea5455',
+            borderColor: '#ea5455',
+            extendedProps: { category: 'Personal' }
           },
           {
             id: '6',
-            title: 'Sprint Planning',
-            start: new Date(new Date().setDate(new Date().getDate() + 5)),
-            start: new Date(new Date(new Date().setDate(new Date().getDate() + 5)).setHours(9, 0, 0)),
-            end: new Date(new Date(new Date().setDate(new Date().getDate() + 5)).setHours(11, 0, 0)),
-            backgroundColor: '#7367f0',
-            borderColor: '#7367f0',
-            extendedProps: { category: 'Reunião' }
+            title: 'Workshop',
+            start: '2026-02-26T15:00:00',
+            end: '2026-02-26T17:00:00',
+            backgroundColor: '#00cfe8',
+            borderColor: '#00cfe8',
+            extendedProps: { category: 'ETC' }
           },
           {
             id: '7',
-            title: 'Deploy Produção',
-            start: new Date(new Date().setDate(new Date().getDate() + 7)),
+            title: 'Holiday Event',
+            start: '2026-02-28',
             allDay: true,
-            backgroundColor: '#ea5455',
-            borderColor: '#ea5455',
-            extendedProps: { category: 'Importante' }
+            backgroundColor: '#28c76f',
+            borderColor: '#28c76f',
+            extendedProps: { category: 'Holiday' }
           }
         ];
 
         const calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
+          initialDate: '2026-02-11', // February 2026
           locale: 'pt-br',
           headerToolbar: {
             left: 'prev,next today',
