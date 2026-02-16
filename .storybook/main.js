@@ -14,5 +14,13 @@ const config = {
     '../packages/vuexy_theme/public',
     { from: '../.storybook/public', to: '/' }
   ],
+  // Configuração do Vite para GitHub Pages
+  viteFinal: async (config) => {
+    // Define base path para GitHub Pages (quando STORYBOOK_BASE_PATH está definido)
+    if (process.env.STORYBOOK_BASE_PATH) {
+      config.base = process.env.STORYBOOK_BASE_PATH;
+    }
+    return config;
+  },
 };
 export default config;
