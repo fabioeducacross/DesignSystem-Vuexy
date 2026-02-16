@@ -10,6 +10,7 @@
     "integrate-vuexy": "bash scripts/integrate-vuexy.sh",
     "check-files": "node check-404s.js",
     "check-404s": "node check-404s-playwright.js",
+    "validate-components": "python scripts/validate-components.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

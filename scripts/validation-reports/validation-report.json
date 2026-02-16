@@ -1,0 +1,2013 @@
+{
+  "generated_at": "2026-02-16T15:28:42.410469",
+  "summary": {
+    "total_components": 125,
+    "passed": 69,
+    "warnings": 0,
+    "errors": 0,
+    "not_found": 56
+  },
+  "components": [
+    {
+      "name": "AcceptOrRejectAccess",
+      "story_path": "src\\stories\\educacross-components-v2\\AcceptOrRejectAccess.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "AlbumCover",
+      "story_path": "src\\stories\\educacross-components-v2\\AlbumCover.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\player\\AlbumCover.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, b-img",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "AppCollapse",
+      "story_path": "src\\stories\\educacross-components-v2\\AppCollapse.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\app-collapse\\AppCollapse.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, slot",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "AppCollapseItem",
+      "story_path": "src\\stories\\educacross-components-v2\\AppCollapseItem.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\app-collapse\\AppCollapseItem.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-card, b-card-header, slot, span, b-collapse",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "AppLanguageSelector",
+      "story_path": "src\\stories\\educacross-components-v2\\AppLanguageSelector.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "AppNavbar",
+      "story_path": "src\\stories\\educacross-components-v2\\AppNavbar.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue (linhas 6-68)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "BackgroundSpace",
+      "story_path": "src\\stories\\educacross-components-v2\\BackgroundSpace.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "BadgeList",
+      "story_path": "src\\stories\\educacross-components-v2\\BadgeList.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil de aluno, gamificação)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "BadgeStatus",
+      "story_path": "src\\stories\\educacross-components-v2\\BadgeStatus.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\badge\\BadgeStatus.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'pill' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'pill' é realmente necessário ou se há erro de digitação",
+          "prop_name": "pill"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'label' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'label' é realmente necessário ou se há erro de digitação",
+          "prop_name": "label"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'level' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'level' é realmente necessário ou se há erro de digitação",
+          "prop_name": "level"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: b-badge, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "BarChart",
+      "story_path": "src\\stories\\educacross-components-v2\\BarChart.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, relatórios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ButtonWaitAction",
+      "story_path": "src\\stories\\educacross-components-v2\\ButtonWaitAction.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\form\\button\\ButtonWaitAction.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: b-button, b-spinner, slot",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "CancelMission",
+      "story_path": "src\\stories\\educacross-components-v2\\CancelMission.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (gestão de missões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Card",
+      "story_path": "src\\stories\\educacross-components-v2\\Card.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\Card.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, b-img, span, qrcode-vue, p",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "CardsList",
+      "story_path": "src\\stories\\educacross-components-v2\\CardsList.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (listas de missões, conteúdos)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "CellStatus",
+      "story_path": "src\\stories\\educacross-components-v2\\CellStatus.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\badge\\CellStatus.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: div, b-badge, span, small",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Certificate",
+      "story_path": "src\\stories\\educacross-components-v2\\Certificate.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\event\\certificate\\Certificate.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: div, p, h3, span, br",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "CertificateList",
+      "story_path": "src\\stories\\educacross-components-v2\\CertificateList.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil do aluno, conquistas)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ChangeProficiency",
+      "story_path": "src\\stories\\educacross-components-v2\\ChangeProficiency.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\proficiency\\ChangeProficiency.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 18 elementos HTML principais: section, b-alert, div, h6, b-row",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ConditionalValueDisplay",
+      "story_path": "src\\stories\\educacross-components-v2\\ConditionalValueDisplay.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfis, relatórios, dados opcionais)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "CopyLink",
+      "story_path": "src\\stories\\educacross-components-v2\\CopyLink.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "DefaultChart",
+      "story_path": "src\\stories\\educacross-components-v2\\DefaultChart.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, análises)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "DefaultFAQModal",
+      "story_path": "src\\stories\\educacross-components-v2\\DefaultFAQModal.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (ajuda, suporte)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "DeleteGuide",
+      "story_path": "src\\stories\\educacross-components-v2\\DeleteGuide.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\DeleteGuide.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, b-img-lazy, h1, b-button, b-spinner",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "DescriptorTag",
+      "story_path": "src\\stories\\educacross-components-v2\\DescriptorTag.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Divider",
+      "story_path": "src\\stories\\educacross-components-v2\\Divider.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\divider\\Divider.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, span, slot",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "DynamicMediaCard",
+      "story_path": "src\\stories\\educacross-components-v2\\DynamicMediaCard.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/cards/DynamicMediaCard.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "EditProfileStudentNew",
+      "story_path": "src\\stories\\educacross-components-v2\\EditProfileStudentNew.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil do aluno)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "EFormCheck",
+      "story_path": "src\\stories\\educacross-components-v2\\EFormCheck.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\form\\EFormCheck.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, span, label",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "EInput",
+      "story_path": "src\\stories\\educacross-components-v2\\EInput.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/form/EInput.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ESelect",
+      "story_path": "src\\stories\\educacross-components-v2\\ESelect.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\selects\\ESelect.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 10 elementos HTML principais: div, slot, span, b-badge, b-spinner",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ETextarea",
+      "story_path": "src\\stories\\educacross-components-v2\\ETextarea.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/form/ETextarea.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "EvaluationsHtmlContentRenderer",
+      "story_path": "src\\stories\\educacross-components-v2\\EvaluationsHtmlContentRenderer.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/EvaluationsHtmlContentRenderer.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ExerciseType",
+      "story_path": "src\\stories\\educacross-components-v2\\ExerciseType.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (biblioteca de missões, criação de exercícios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ExpandableFilterArea",
+      "story_path": "src\\stories\\educacross-components-v2\\ExpandableFilterArea.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\filter\\ExpandableFilterArea.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: section, transition, div, slot, button",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ExpiredMission",
+      "story_path": "src\\stories\\educacross-components-v2\\ExpiredMission.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\ExpiredMission.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
+          "prop_name": "missionName"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
+          "prop_name": "loading"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "expirationDate"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, img, h2, p, b-button",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "FeedbackAndSend",
+      "story_path": "src\\stories\\educacross-components-v2\\FeedbackAndSend.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\FeedbackAndSend.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 8 elementos HTML principais: div, h1, span, hr, MissionDetails",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "FilterChip",
+      "story_path": "src\\stories\\educacross-components-v2\\FilterChip.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (filtros em dashboards, relatórios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "FixedStickyFooter",
+      "story_path": "src\\stories\\educacross-components-v2\\FixedStickyFooter.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\FixedStickyFooter.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, HelpChat, portal-target",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "GameDetailsModal",
+      "story_path": "src\\stories\\educacross-components-v2\\GameDetailsModal.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (missões gamificadas)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "GuidesLimitAlert",
+      "story_path": "src\\stories\\educacross-components-v2\\GuidesLimitAlert.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/GuidesLimitAlert.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "HelpChat",
+      "story_path": "src\\stories\\educacross-components-v2\\HelpChat.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\global\\HelpChat.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 9 elementos HTML principais: div, b-collapse, span, p, br",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "InfinityScroll",
+      "story_path": "src\\stories\\educacross-components-v2\\InfinityScroll.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\selects\\InfinityScroll.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: v-select, template",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "IntermediateRedirectLoginDeepLink",
+      "story_path": "src\\stories\\educacross-components-v2\\IntermediateRedirectLoginDeepLink.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\deeplink\\IntermediateRedirectLoginDeepLink.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: BackgroundSpace, div, img, h3, p",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "LegendBadgesReadingMeter",
+      "story_path": "src\\stories\\educacross-components-v2\\LegendBadgesReadingMeter.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\legends\\LegendBadgesReadingMeter.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, b-badge, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "LegendCard",
+      "story_path": "src\\stories\\educacross-components-v2\\LegendCard.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\legends\\LegendCard.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: section, b-card, span, div, MediaCardIcon",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "LegendEnum",
+      "story_path": "src\\stories\\educacross-components-v2\\LegendEnum.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\legends\\LegendEnum.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 8 elementos HTML principais: b-card, div, b-card-body, slot, SemaphoreStatus",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "LegendEnumPDF",
+      "story_path": "src\\stories\\educacross-components-v2\\LegendEnumPDF.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\legends\\LegendEnumPDF.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: div, slot, SemaphoreStatus, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "listInitialsTeacher",
+      "story_path": "src\\stories\\educacross-components-v2\\listInitialsTeacher.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\teacher\\listInitialsTeacher.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: div, b-avatar, b-badge, b-popover, ul",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTable",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTable.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\table\\ListTable.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 11 elementos HTML principais: div, b-card, slot, b-row, b-col",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTableAccess",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableAccess.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTableLocalSorting",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableLocalSorting.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTablePagination",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTablePagination.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (listas de alunos, missões, relatórios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTableRanking",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableRanking.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (rankings de alunos, turmas, disciplinas)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTableSelect",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableSelect.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (seleção de alunos para missões, exportação de dados)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ListTableSelectLocal",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableSelectLocal.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "LyricsDisplay",
+      "story_path": "src\\stories\\educacross-components-v2\\LyricsDisplay.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\player\\LyricsDisplay.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, b-button, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ManageAccount",
+      "story_path": "src\\stories\\educacross-components-v2\\ManageAccountPage.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\views\\pages\\auth-context\\manage-account\\ManageAccount.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 9 elementos HTML principais: div, b-img, b-button, span, b-navbar-nav",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MediaCard",
+      "story_path": "src\\stories\\educacross-components-v2\\MediaCard.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\card\\MediaCard.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: b-card, b-skeleton-wrapper, template, b-skeleton-img",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MediaCardIcon",
+      "story_path": "src\\stories\\educacross-components-v2\\MediaCardIcon.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/cards/MediaCardIcon.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MissionAndQuestionItem",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionAndQuestionItem.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\MissionAndQuestionItem.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-card, div, b-media, template, b-img",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MissionBookDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionBookDetails.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (biblioteca, missões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MissionDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionDetails.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (gestão de missões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MissionDetailsPlus",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionDetailsPlus.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\MissionDetailsPlus.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
+          "prop_name": "missionName"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
+          "prop_name": "loading"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'startDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'startDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "startDate"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
+          "prop_name": "studentsInfo"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'className' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'className' é realmente necessário ou se há erro de digitação",
+          "prop_name": "className"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'endDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'endDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "endDate"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 12 elementos HTML principais: b-overlay, h1, div, b-badge, img",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MissionVisualization",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionVisualization.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (visualização de missões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ModalStudentActivityDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\ModalStudentActivityDetails.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ModalStudentRoundDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\ModalStudentRoundDetails.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "MultipleDropdown",
+      "story_path": "src\\stories\\educacross-components-v2\\MultipleDropdown.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\selects\\MultipleDropdown.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-dropdown, template, div, b-spinner, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "NewDeepLink",
+      "story_path": "src\\stories\\educacross-components-v2\\NewDeepLink.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\deeplink\\NewDeepLink.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-card, b-img, div, b-media, template",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "NPS",
+      "story_path": "src\\stories\\educacross-components-v2\\NPS.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\NPS\\NPS.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 9 elementos HTML principais: div, h3, form, span, b-row",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "PDFRoot",
+      "story_path": "src\\stories\\educacross-components-v2\\PDFRoot.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\PDFRoot.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 8 elementos HTML principais: div, feather-icon, h1, b-button, b-spinner",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "PerformanceCell",
+      "story_path": "src\\stories\\educacross-components-v2\\PerformanceCell.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (uso comum em tabelas de relatórios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "PerformancePDF",
+      "story_path": "src\\stories\\educacross-components-v2\\PerformancePDF.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\event\\performance\\PerformancePDF.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: div, h4, span, h3, h6",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "PerformancePDFList",
+      "story_path": "src\\stories\\educacross-components-v2\\PerformancePDFList.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\event\\performance\\PerformancePDFList.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, PerformancePdf",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "PieChart",
+      "story_path": "src\\stories\\educacross-components-v2\\PieChart.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, relatórios)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Player",
+      "story_path": "src\\stories\\educacross-components-v2\\Player.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\player\\Player.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 9 elementos HTML principais: div, b-card, b-card-body, album-cover, lyrics-display",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProfilePicture",
+      "story_path": "src\\stories\\educacross-components-v2\\ProfilePicture.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProgressBarHorizontal",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBar.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\progessBar\\ProgressBarHorizontal.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: div, b-row, b-col, span, slot",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProgressBarHorizontal",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBarHorizontal.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/ProgressBarHorizontal.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProgressBarHorizontalV2",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBarHorizontalV2.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\progessBar\\ProgressBarHorizontalV2.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: div, b-progress, slot, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProgressBarTopInfo",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBarTopInfo.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\progessBar\\ProgressBarTopInfo.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, span, b-progress",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ProgressBarVertical",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBarVertical.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\progessBar\\ProgressBarVertical.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, span, b-progress",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "QuestionAlternative",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionAlternative.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\components\\QuestionAlternative.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-card, div, b-img, EvaluationsHtmlContentRenderer, b-avatar",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "QuestionContent",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionContent.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "QuestionDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionDetail.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/QuestionDetail.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "QuestionsListDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionsListDetail.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (banco de questões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "QuestionStatus",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionStatus.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (resultado de missões, visualização de questões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "RadialBar",
+      "story_path": "src\\stories\\educacross-components-v2\\RadialBar.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (métricas de desempenho)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "RainbowProgressBar",
+      "story_path": "src\\stories\\educacross-components-v2\\RainbowProgressBar.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\progessBar\\RainbowProgressBar.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, slot",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ResourceCard",
+      "story_path": "src\\stories\\educacross-components-v2\\ResourceCard.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SelectClass",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectClass.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\layouts\\components\\SelectClass.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'selectedSerie' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedSerie' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedSerie"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'selectedClass' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedClass' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedClass"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'sort' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'sort' é realmente necessário ou se há erro de digitação",
+          "prop_name": "sort"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'disabled' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'disabled' é realmente necessário ou se há erro de digitação",
+          "prop_name": "disabled"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'showTooltip' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'showTooltip' é realmente necessário ou se há erro de digitação",
+          "prop_name": "showTooltip"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, b-dropdown, template, span, b-badge",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SelectInfinityScroll",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectInfinityScroll.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\selects\\SelectInfinityScroll.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: v-select, template, b-spinner",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SelectInfinityScrollModelo",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectInfinityScrollModelo.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\selects\\SelectInfinityScrollModelo.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: v-select, template, li",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SelectLocale",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectLocale.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (header, perfil usuário, configurações)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SelectLocaleNavbar",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectLocaleNavbar.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\locale\\SelectLocaleNavbar.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, b-dropdown-item, b-img, span, b-collapse",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ShareGuide",
+      "story_path": "src\\stories\\educacross-components-v2\\ShareGuide.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\ShareGuide.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 8 elementos HTML principais: div, b-img-lazy, h1, p, b-form",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Sidebar",
+      "story_path": "src\\stories\\educacross-components-v2\\Sidebar.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/sidebar/Sidebar.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SidebarProficiencyInfo",
+      "story_path": "src\\stories\\educacross-components-v2\\SidebarProficiencyInfo.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\reading-meter\\SidebarProficiencyInfo.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 15 elementos HTML principais: b-sidebar, template, div, h5, feather-icon",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SimpleTab",
+      "story_path": "src\\stories\\educacross-components-v2\\SimpleTab.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (relatórios, perfis)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "StudentActivityDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentActivityDetail.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "StudentAvatar",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentAvatar.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/student/StudentAvatar.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "StudentEvidenceReportPDF",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentEvidenceReportPDF.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\student-evidence-report\\StudentEvidenceReportPDF.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 18 elementos HTML principais: div, h1, p, b-card, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "StudentGameDetailsModal",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentGameDetailsModal.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (relatórios de missões)",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "StudentsDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentsDetail.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SubjectBand",
+      "story_path": "src\\stories\\educacross-components-v2\\SubjectBand.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\subjects\\SubjectBand.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'subjectsIds' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'subjectsIds' é realmente necessário ou se há erro de digitação",
+          "prop_name": "subjectsIds"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: section, div",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "SubjectCard",
+      "story_path": "src\\stories\\educacross-components-v2\\SubjectCard.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "subjects",
+      "story_path": "src\\stories\\educacross-components-v2\\subjects.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\subjects\\subjects.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, component",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "subjectSelect",
+      "story_path": "src\\stories\\educacross-components-v2\\subjectSelect.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\subjects\\subjectSelect.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: ValidationObserver, b-form, ValidationProvider, b-form-group, b-form-select",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Tab",
+      "story_path": "src\\stories\\educacross-components-v2\\Tab.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/Tab.vue",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "TabCards",
+      "story_path": "src\\stories\\educacross-components-v2\\TabCards.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\tab\\TabCards.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: div, b-skeleton-wrapper, template, b-row, b-col",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "TabRouter",
+      "story_path": "src\\stories\\educacross-components-v2\\TabRouter.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template1",
+      "story_path": "src\\stories\\educacross-components-v2\\Template1.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template1.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template10",
+      "story_path": "src\\stories\\educacross-components-v2\\Template10.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template10.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: section, b-row, b-col, b-card, QuestionContent",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template11",
+      "story_path": "src\\stories\\educacross-components-v2\\Template11.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template11.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: section, b-row, b-col, b-card, QuestionContent",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template2",
+      "story_path": "src\\stories\\educacross-components-v2\\Template2.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template2.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template3",
+      "story_path": "src\\stories\\educacross-components-v2\\Template3.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template3.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template4",
+      "story_path": "src\\stories\\educacross-components-v2\\Template4.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template4.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: section, b-row, b-col, b-card, QuestionContent",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template5",
+      "story_path": "src\\stories\\educacross-components-v2\\Template5.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template5.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template6",
+      "story_path": "src\\stories\\educacross-components-v2\\Template6.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template6.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template7",
+      "story_path": "src\\stories\\educacross-components-v2\\Template7.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template7.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template8",
+      "story_path": "src\\stories\\educacross-components-v2\\Template8.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template8.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: section, b-row, b-col, b-card, QuestionContent",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "Template9",
+      "story_path": "src\\stories\\educacross-components-v2\\Template9.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionDetail\\templates\\Template9.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-row, b-col, b-card, QuestionContent, QuestionAlternative",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "TemplateDefault",
+      "story_path": "src\\stories\\educacross-components-v2\\TemplateDefault.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\evaluations\\questionsListDetail\\templates\\TemplateDefault.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-row, b-col, b-card, div, QuestionContent",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "UserCard",
+      "story_path": "src\\stories\\educacross-components-v2\\UserCard.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\views\\pages\\auth-context\\manage-account\\components\\UserCard.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: b-card, template, div, b-badge, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "VerticalDivider",
+      "story_path": "src\\stories\\educacross-components-v2\\VerticalDivider.stories.js",
+      "vue_path": null,
+      "status": "not_found",
+      "issues": [
+        {
+          "type": "not_found",
+          "severity": "critical",
+          "message": "Componente Vue não encontrado. @source: None",
+          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "prop_name": null
+        }
+      ]
+    },
+    {
+      "name": "ZipLoading",
+      "story_path": "src\\stories\\educacross-components-v2\\ZipLoading.stories.js",
+      "vue_path": "educacross-frontoffice\\src\\components\\modal\\ZipLoading.vue",
+      "status": "passed",
+      "issues": [
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: div, img, p, span, b-progress",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
+          "prop_name": null
+        }
+      ]
+    }
+  ]
+}

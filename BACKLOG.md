@@ -1,25 +1,135 @@
 # 📋 Backlog - Vuexy Storybook Design System
 
-**Última Atualização**: 31 de janeiro de 2026  
-**Status Atual**: 95.3% Completo (61/64 componentes)  
-**Fase**: Bootstrap JS Loaders Implementation
+**Última Atualização**: 16 de fevereiro de 2026  
+**Status Atual**: 95.3% Completo (64/64 componentes Vuexy) + 125 componentes Educacross  
+**Fase**: Component Validation & Quality Assurance
 
 ---
 
 ## 🎯 Objetivo Final
 
-Completar 100% dos componentes com interatividade JavaScript real usando Bootstrap JS e vendor libraries do Vuexy.
+Garantir 100% de fidelidade entre componentes Vue do `educacross-frontoffice` e suas stories no Storybook, além de completar interatividade JavaScript em componentes Vuexy.
 
 ---
 
 ## 📊 Status Overview
 
+### Componentes Vuexy (Template Genérico)
 ```
-✅ Completo:       61/64 componentes (95.3%)
-🔄 Em Progresso:    1/64 componentes (Dropdown)
-📋 Backlog:        15 tarefas organizadas
-⏱️ Tempo Estimado: 8-12 horas
+✅ Completo:       64/64 componentes (100%)
+✅ Interactive:    25 stories com JS real
+✅ Loaders:        13 componentes (Bootstrap + Vendors)
 ```
+
+### Componentes Educacross (Produção)
+```
+📚 Total Stories:  125 componentes documentados
+✅ Aprovados:      69/125 (55.2%) - correspondência 100% com Vue
+🔍 Não Encontrados: 56/125 (44.8%) - falta tag @source ou componente Vue inexistente
+⚠️ Avisos:         0/125 (0.0%)
+❌ Erros:          0/125 (0.0%)
+```
+
+---
+
+## 🆕 Sprint 5: Component Validation (Nova - Em Andamento)
+
+### ✅ Task 5.1: Criar Script de Validação Python
+**Prioridade**: 🔴 Alta | **Status**: ✅ COMPLETO
+
+**Realizado**:
+- ✅ Script `scripts/validate-components.py` criado
+- ✅ Parser para componentes Vue (Composition API + Options API)
+- ✅ Parser para stories Storybook (metadados + argTypes)
+- ✅ Validação de props, HTML structure, dados de exemplo
+- ✅ Geração de relatórios JSON + Markdown
+- ✅ Executado em 125 stories Educacross
+- ✅ Documentação completa: `scripts/COMPONENT_VALIDATION_GUIDE.md`
+- ✅ Script npm adicionado: `npm run validate-components`
+
+**Resultados**:
+- 69 componentes aprovados (55.2%)
+- 56 componentes precisam de correção (tag @source faltando)
+- 0 erros críticos encontrados
+- Relatórios salvos em `scripts/validation-reports/`
+
+---
+
+### 🔄 Task 5.2: Corrigir Tags @source (Em Progresso)
+**Prioridade**: 🔴 Alta | **Estimativa**: 2-3 horas
+
+**Objetivo**: Adicionar tag `@source` em 56 stories que não têm referência ao componente Vue.
+
+**Estratégia**:
+1. Usar relatório `validation-report.json` para listar componentes `not_found`
+2. Para cada story, buscar componente Vue correspondente manualmente
+3. Adicionar tag `@source educacross-frontoffice/src/components/[path]/[Component].vue`
+4. Re-executar validação até chegar a 90%+ de aprovação
+
+**Exemplos de stories a corrigir**:
+- AcceptOrRejectAccess.stories.js
+- AppLanguageSelector.stories.js
+- AppNavbar.stories.js (referencia View, não componente)
+- BackgroundSpace.stories.js
+- BadgeList.stories.js
+- BarChart.stories.js
+- CancelMission.stories.js
+- CardsList.stories.js
+- ...e mais 48 stories
+
+**Critérios de Aceitação**:
+- [ ] 56 stories com tag `@source` corrigida
+- [ ] Re-executar: `npm run validate-components`
+- [ ] Taxa de aprovação > 90%
+- [ ] Commit: `docs: adicionar tags @source em stories Educacross`
+
+---
+
+### 📋 Task 5.3: Completar ArgTypes Faltantes
+**Prioridade**: 🟡 Média | **Estimativa**: 1-2 horas
+
+**Objetivo**: Para componentes aprovados, adicionar argTypes de props que faltam.
+
+**Estratégia**:
+1. Filtrar componentes `status: passed` com issues `type: missing_prop`
+2. Adicionar argTypes correspondentes nas stories
+3. Re-executar validação
+
+**Critérios de Aceitação**:
+- [ ] Todos componentes aprovados têm 100% das props documentadas
+- [ ] Taxa de aprovação > 95%
+- [ ] Commit: `docs: completar argTypes em stories Educacross`
+
+---
+
+### 🧪 Task 5.4: Validação Manual de HTML
+**Prioridade**: 🟢 Baixa | **Estimativa**: 1 hora
+
+**Objetivo**: Validar manualmente amostra de 10 componentes críticos.
+
+**Componentes prioritários**:
+1. ESelect
+2. ProgressBar
+3. ListTable
+4. MediaCard
+5. MissionDetails
+6. QuestionAlternative
+7. AppNavbar
+8. SelectClass
+9. TabRouter
+10. Template1
+
+**Processo**:
+1. Abrir Storybook: `npm run storybook`
+2. Para cada componente, inspecionar HTML no DevTools
+3. Comparar com template Vue do componente original
+4. Documentar divergências encontradas
+
+**Critérios de Aceitação**:
+- [ ] 10 componentes validados manualmente
+- [ ] Divergências documentadas (se houver)
+- [ ] Screenshots de evidência salvos
+- [ ] Commit: `docs: validação manual de HTML dos componentes críticos`
 
 ---
 
