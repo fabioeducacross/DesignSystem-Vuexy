@@ -492,385 +492,466 @@ Implementação oficial usando FullCalendar do Vuexy:
   loaders: [
     async () => {
       if (typeof window !== 'undefined') {
-        // Load CSS
-        if (!document.querySelector('link[href*="fullcalendar.css"]')) {
-          return new Promise((resolve, reject) => {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = '/vuexy/vendors/libs/fullcalendar/fullcalendar.css';
-            link.onload = () => {
-              // Load JS after CSS
-              if (!window.FullCalendar) {
-                const script = document.createElement('script');
-                script.src = '/vuexy/vendors/libs/fullcalendar/fullcalendar.js';
-                script.onload = () => {
-                  console.log('✅ FullCalendar CSS + JS carregados');
-                  resolve({ fullcalendarLoaded: true });
-                };
-                script.onerror = () => reject(new Error('Failed to load FullCalendar JS'));
-                document.head.appendChild(script);
-              } else {
-                resolve({ fullcalendarLoaded: true });
-              }
-            };
-            link.onerror = () => reject(new Error('Failed to load FullCalendar CSS'));
-            document.head.appendChild(link);
-          });
-        }
+        const loadCss = (href) => new Promise((resolve, reject) => {
+          if (document.querySelector(`link[href="${href}"]`)) return resolve();
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          link.onload = resolve;
+          link.onerror = () => reject(new Error(`Failed to load CSS: ${href}`));
+          document.head.appendChild(link);
+        });
+
+        const loadScript = (src, check) => new Promise((resolve, reject) => {
+          if (check()) return resolve();
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = resolve;
+          script.onerror = () => reject(new Error(`Failed to load JS: ${src}`));
+          document.head.appendChild(script);
+        });
+
+        await loadCss('/vuexy/vendors/libs/fullcalendar/fullcalendar.css');
+        await loadCss('/vuexy/vendors/libs/select2/select2.css');
+        await loadCss('/vuexy/vendors/libs/flatpickr/flatpickr.css');
+        await loadCss('/vuexy/vendors/libs/@form-validation/form-validation.css');
+
+        await loadScript('/vuexy/vendors/libs/jquery/jquery.js', () => window.jQuery);
+        await loadScript('/vuexy/vendors/libs/select2/select2.js', () => window.jQuery?.fn?.select2);
+        await loadScript('/vuexy/vendors/libs/flatpickr/flatpickr.js', () => window.flatpickr);
+        await loadScript('/vuexy/vendors/libs/@form-validation/bootstrap5.js', () => window.FormValidation?.plugins?.Bootstrap5);
+        await loadScript('/vuexy/vendors/libs/@form-validation/auto-focus.js', () => window.FormValidation?.plugins?.AutoFocus);
+        await loadScript('/vuexy/js/bootstrap.js', () => window.bootstrap);
+        await loadScript('/vuexy/vendors/libs/fullcalendar/fullcalendar.js', () => window.FullCalendar);
+
         return { fullcalendarLoaded: true };
       }
       return {};
     }
   ],
   render: () => {
-    // Initialize FullCalendar after render
     setTimeout(() => {
-      if (window.FullCalendar) {
-        const calendarEl = document.getElementById('fullcalendar-interactive');
-        
-        // Sample events (matching Vuexy demo - February 2026)
-        const events = [
-          {
-            id: '1',
-            title: 'Design Review',
-            start: '2026-02-11T11:55:00',
-            end: '2026-02-11T13:00:00',
-            backgroundColor: '#7367f0',
-            borderColor: '#7367f0',
-            extendedProps: { category: 'Business' }
-          },
-          {
-            id: '2',
-            title: 'Team Meeting',
-            start: '2026-02-13T09:00:00',
-            end: '2026-02-13T10:30:00',
-            backgroundColor: '#7367f0',
-            borderColor: '#7367f0',
-            extendedProps: { category: 'Business' }
-          },
-          {
-            id: '3',
-            title: 'Client Call',
-            start: '2026-02-17T14:00:00',
-            end: '2026-02-17T15:30:00',
-            backgroundColor: '#28c76f',
-            borderColor: '#28c76f',
-            extendedProps: { category: 'Business' }
-          },
-          {
-            id: '4',
-            title: 'Family Trip',
-            start: '2026-02-19',
-            allDay: true,
-            backgroundColor: '#ff9f43',
-            borderColor: '#ff9f43',
-            extendedProps: { category: 'Family' }
-          },
-          {
-            id: '5',
-            title: 'Doctor Appointment',
-            start: '2026-02-24T10:00:00',
-            end: '2026-02-24T11:00:00',
-            backgroundColor: '#ea5455',
-            borderColor: '#ea5455',
-            extendedProps: { category: 'Personal' }
-          },
-          {
-            id: '6',
-            title: 'Workshop',
-            start: '2026-02-26T15:00:00',
-            end: '2026-02-26T17:00:00',
-            backgroundColor: '#00cfe8',
-            borderColor: '#00cfe8',
-            extendedProps: { category: 'ETC' }
-          },
-          {
-            id: '7',
-            title: 'Holiday Event',
-            start: '2026-02-28',
-            allDay: true,
-            backgroundColor: '#28c76f',
-            borderColor: '#28c76f',
-            extendedProps: { category: 'Holiday' }
-          }
-        ];
+      if (!window.FullCalendar || !window.flatpickr || !window.jQuery) return;
 
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          initialDate: '2026-02-11', // February 2026
-          locale: 'pt-br',
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-          },
-          buttonText: {
-            today: 'Hoje',
-            month: 'Mês',
-            week: 'Semana',
-            day: 'Dia',
-            list: 'Lista'
-          },
-          editable: true,
-          droppable: true,
-          eventResizableFromStart: true,
-          dayMaxEvents: true,
-          navLinks: true,
-          height: 'auto',
-          events: events,
-          
-          // Event click - show details
-          eventClick: function(info) {
-            const event = info.event;
-            const modal = document.getElementById('event-modal');
-            const modalTitle = document.getElementById('modal-event-title');
-            const modalCategory = document.getElementById('modal-event-category');
-            const modalTime = document.getElementById('modal-event-time');
-            const deleteBtn = document.getElementById('modal-delete-btn');
-            
-            modalTitle.textContent = event.title;
-            modalCategory.textContent = event.extendedProps.category || 'Sem categoria';
-            
-            if (event.allDay) {
-              modalTime.textContent = 'Dia inteiro';
-            } else {
-              const start = event.start.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-              const end = event.end ? event.end.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '';
-              modalTime.textContent = end ? (start + ' - ' + end) : start;
-            }
-            
-            deleteBtn.onclick = () => {
-              if (confirm('Deseja excluir este evento?')) {
-                event.remove();
-                modal.style.display = 'none';
-              }
-            };
-            
-            modal.style.display = 'block';
-          },
-          
-          // Date click - create new event
-          dateClick: function(info) {
-            const title = prompt('Título do evento:');
-            if (title) {
-              const colors = ['#7367f0', '#28c76f', '#ea5455', '#ff9f43', '#00cfe8'];
-              const randomColor = colors[Math.floor(Math.random() * colors.length)];
-              
-              calendar.addEvent({
-                title: title,
-                start: info.date,
-                allDay: info.allDay,
-                backgroundColor: randomColor,
-                borderColor: randomColor
-              });
-            }
-          },
-          
-          // Event drag/resize
-          eventDrop: function(info) {
-            console.log('Evento movido:', info.event.title);
-          },
-          
-          eventResize: function(info) {
-            console.log('Evento redimensionado:', info.event.title);
+      const calendarEl = document.getElementById('fullcalendar-interactive');
+      const inlineCalendarEl = document.getElementById('inline-calendar');
+      const eventForm = document.getElementById('eventForm');
+      const addEventBtn = document.getElementById('addEventBtn');
+      const deleteBtn = document.getElementById('btnDeleteEvent');
+      const allDaySwitch = document.getElementById('allDaySwitch');
+      const selectAll = document.getElementById('selectAll');
+      const filterInputs = Array.from(document.querySelectorAll('.input-filter'));
+      const sidebar = document.getElementById('app-calendar-sidebar');
+      const overlay = document.getElementById('app-overlay');
+      const offcanvasEl = document.getElementById('addEventSidebar');
+      const offcanvas = window.bootstrap?.Offcanvas ? new window.bootstrap.Offcanvas(offcanvasEl) : null;
+
+      const calendarColors = {
+        Business: 'primary',
+        Holiday: 'success',
+        Personal: 'danger',
+        Family: 'warning',
+        ETC: 'info'
+      };
+
+      let currentEvents = [
+        { id: '1', title: 'Design Review', start: '2026-02-11T11:55:00', end: '2026-02-11T13:00:00', allDay: false, extendedProps: { calendar: 'Business', description: 'Revisão de telas' } },
+        { id: '2', title: 'Team Meeting', start: '2026-02-13T09:00:00', end: '2026-02-13T10:30:00', allDay: false, extendedProps: { calendar: 'Business', description: 'Weekly sync' } },
+        { id: '3', title: 'Client Call', start: '2026-02-17T14:00:00', end: '2026-02-17T15:30:00', allDay: false, extendedProps: { calendar: 'Business' } },
+        { id: '4', title: 'Family Trip', start: '2026-02-19', end: '2026-02-20', allDay: true, extendedProps: { calendar: 'Family' } },
+        { id: '5', title: 'Doctor Appointment', start: '2026-02-24T10:00:00', end: '2026-02-24T11:00:00', allDay: false, extendedProps: { calendar: 'Personal' } },
+        { id: '6', title: 'Workshop', start: '2026-02-26', allDay: true, extendedProps: { calendar: 'ETC' } },
+        { id: '7', title: 'Holiday Event', start: '2026-02-28', allDay: true, extendedProps: { calendar: 'Holiday' } }
+      ];
+
+      let editingId = null;
+
+      const labelSelect = window.jQuery('#eventLabel');
+      const guestsSelect = window.jQuery('#eventGuests');
+
+      const renderBadge = (option) => {
+        if (!option.id) return option.text;
+        const color = option.element?.getAttribute('data-label') || 'primary';
+        return window.jQuery('<span class="badge rounded-pill bg-label-' + color + '">' + option.text + '</span>');
+      };
+
+      labelSelect.wrap('<div class="position-relative"></div>').select2({
+        placeholder: 'Selecione',
+        dropdownParent: labelSelect.parent(),
+        templateResult: renderBadge,
+        templateSelection: renderBadge,
+        minimumResultsForSearch: -1
+      });
+
+      guestsSelect.wrap('<div class="position-relative"></div>').select2({
+        placeholder: 'Convidados',
+        dropdownParent: guestsSelect.parent(),
+        closeOnSelect: false
+      });
+
+      const startPicker = window.flatpickr('#eventStartDate', {
+        enableTime: true,
+        dateFormat: 'Y-m-d H:i',
+        defaultDate: '2026-02-11 09:00'
+      });
+
+      const endPicker = window.flatpickr('#eventEndDate', {
+        enableTime: true,
+        dateFormat: 'Y-m-d H:i',
+        defaultDate: '2026-02-11 10:00'
+      });
+
+      const inlineCalendar = window.flatpickr(inlineCalendarEl, {
+        inline: true,
+        defaultDate: '2026-02-11',
+        onChange: (dates) => {
+          if (dates[0]) {
+            calendar.gotoDate(dates[0]);
+            sidebar.classList.remove('show');
+            overlay.classList.remove('show');
           }
+        }
+      });
+
+      const fv = window.FormValidation?.formValidation(eventForm, {
+        fields: {
+          eventTitle: { validators: { notEmpty: { message: 'Informe o título' } } },
+          eventStartDate: { validators: { notEmpty: { message: 'Informe a data inicial' } } },
+          eventEndDate: { validators: { notEmpty: { message: 'Informe a data final' } } }
+        },
+        plugins: {
+          trigger: new window.FormValidation.plugins.Trigger(),
+          bootstrap5: new window.FormValidation.plugins.Bootstrap5({ rowSelector: '.mb-3' }),
+          submitButton: new window.FormValidation.plugins.SubmitButton(),
+          autoFocus: new window.FormValidation.plugins.AutoFocus()
+        }
+      });
+
+      const selectedCalendars = () => {
+        const active = filterInputs.filter((item) => item.checked).map((item) => item.getAttribute('data-value'));
+        return active.length ? active : ['Business', 'Holiday', 'Personal', 'Family', 'ETC'];
+      };
+
+      const fetchEvents = (_info, success) => {
+        const allowed = selectedCalendars();
+        const filtered = currentEvents.filter((ev) => allowed.includes(ev.extendedProps.calendar));
+        success(filtered);
+      };
+
+      const calendar = new window.FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        initialDate: '2026-02-11',
+        locale: 'pt-br',
+        headerToolbar: {
+          left: 'sidebarToggle prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+        },
+        customButtons: {
+          sidebarToggle: {
+            text: 'Sidebar',
+            click: () => {
+              sidebar.classList.toggle('show');
+              overlay.classList.toggle('show');
+            }
+          }
+        },
+        buttonText: {
+          today: 'Hoje',
+          month: 'Mês',
+          week: 'Semana',
+          day: 'Dia',
+          list: 'Lista'
+        },
+        editable: true,
+        droppable: true,
+        eventResizableFromStart: true,
+        dayMaxEvents: true,
+        navLinks: true,
+        height: 'auto',
+        events: fetchEvents,
+        eventClassNames: (info) => {
+          const color = calendarColors[info.event.extendedProps.calendar] || 'primary';
+          return ['bg-label-' + color, 'text-dark'];
+        },
+        dateClick: (info) => {
+          editingId = null;
+          eventForm.reset();
+          labelSelect.val('Business').trigger('change');
+          guestsSelect.val(null).trigger('change');
+          allDaySwitch.checked = info.allDay;
+          startPicker.setDate(info.date);
+          endPicker.setDate(info.date);
+          deleteBtn.classList.add('d-none');
+          if (offcanvas) offcanvas.show();
+        },
+        eventClick: (info) => {
+          const ev = info.event;
+          editingId = ev.id;
+          deleteBtn.classList.remove('d-none');
+          document.getElementById('eventTitle').value = ev.title;
+          labelSelect.val(ev.extendedProps.calendar).trigger('change');
+          guestsSelect.val(ev.extendedProps.guests || []).trigger('change');
+          document.getElementById('eventLocation').value = ev.extendedProps.location || '';
+          document.getElementById('eventURL').value = ev.url || '';
+          document.getElementById('eventDescription').value = ev.extendedProps.description || '';
+          allDaySwitch.checked = ev.allDay;
+          startPicker.setDate(ev.start);
+          if (ev.end) endPicker.setDate(ev.end); else endPicker.clear();
+          if (offcanvas) offcanvas.show();
+        },
+        eventDrop: (info) => {
+          const ev = currentEvents.find((e) => e.id === info.event.id);
+          if (!ev) return;
+          ev.start = info.event.start;
+          ev.end = info.event.end;
+        },
+        eventResize: (info) => {
+          const ev = currentEvents.find((e) => e.id === info.event.id);
+          if (!ev) return;
+          ev.end = info.event.end;
+        }
+      });
+
+      calendar.render();
+
+      const closeSidebar = () => {
+        sidebar.classList.remove('show');
+        overlay.classList.remove('show');
+      };
+
+      overlay.addEventListener('click', closeSidebar);
+
+      const syncSelectAll = () => {
+        const allChecked = filterInputs.every((item) => item.checked);
+        selectAll.checked = allChecked;
+      };
+
+      selectAll.addEventListener('change', (e) => {
+        filterInputs.forEach((item) => { item.checked = e.target.checked; });
+        calendar.refetchEvents();
+      });
+
+      filterInputs.forEach((input) => {
+        input.addEventListener('change', () => {
+          syncSelectAll();
+          calendar.refetchEvents();
         });
+      });
 
-        calendar.render();
-        
-        // Modal close handlers
-        document.getElementById('modal-close-btn').onclick = () => {
-          document.getElementById('event-modal').style.display = 'none';
-        };
-        
-        document.getElementById('event-modal').onclick = (e) => {
-          if (e.target.id === 'event-modal') {
-            document.getElementById('event-modal').style.display = 'none';
+      addEventBtn.addEventListener('click', () => {
+        editingId = null;
+        eventForm.reset();
+        labelSelect.val('Business').trigger('change');
+        guestsSelect.val(null).trigger('change');
+        allDaySwitch.checked = false;
+        startPicker.setDate(new Date());
+        endPicker.setDate(new Date());
+        deleteBtn.classList.add('d-none');
+        if (offcanvas) offcanvas.show();
+      });
+
+      const getFormData = () => {
+        const startDate = startPicker.selectedDates[0];
+        const endDate = endPicker.selectedDates[0];
+        return {
+          id: editingId || String(Date.now()),
+          title: document.getElementById('eventTitle').value,
+          start: startDate,
+          end: endDate || startDate,
+          allDay: allDaySwitch.checked,
+          url: document.getElementById('eventURL').value || undefined,
+          extendedProps: {
+            calendar: labelSelect.val(),
+            guests: guestsSelect.val() || [],
+            location: document.getElementById('eventLocation').value,
+            description: document.getElementById('eventDescription').value
           }
         };
-        
-        console.log('✅ FullCalendar inicializado com', events.length, 'eventos');
+      };
+
+      const upsertEvent = (data) => {
+        const existingIndex = currentEvents.findIndex((ev) => ev.id === data.id);
+        if (existingIndex >= 0) currentEvents[existingIndex] = data; else currentEvents.push(data);
+        calendar.refetchEvents();
+      };
+
+      const removeEvent = (id) => {
+        currentEvents = currentEvents.filter((ev) => ev.id !== id);
+        calendar.refetchEvents();
+      };
+
+      const submitHandler = () => {
+        const payload = getFormData();
+        upsertEvent(payload);
+        if (offcanvas) offcanvas.hide();
+      };
+
+      if (fv) {
+        fv.on('core.form.valid', submitHandler);
+      } else {
+        eventForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          submitHandler();
+        });
       }
-    }, 100);
+
+      deleteBtn.addEventListener('click', () => {
+        if (!editingId) return;
+        removeEvent(editingId);
+        if (offcanvas) offcanvas.hide();
+      });
+    }, 50);
 
     return `
       <style>
-        #fullcalendar-interactive {
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-        .fc {
-          font-size: 14px;
-        }
-        .fc-event {
-          cursor: pointer;
-        }
-        #event-modal {
-          display: none;
-          position: fixed;
-          z-index: 9999;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0,0,0,0.4);
-        }
-        #event-modal-content {
-          background-color: #fff;
-          margin: 10% auto;
-          padding: 0;
-          border-radius: 8px;
-          width: 90%;
-          max-width: 500px;
-          box-shadow: 0 4px 24px 0 rgba(34,41,47,0.1);
-        }
+        .app-calendar { background-color: #fff; }
+        .app-calendar-sidebar { background-color: #f8f9fa; min-height: 100%; }
+        .badge-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .sidebar-header { border-bottom: 1px solid #e4e6ef; }
+        .app-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); display: none; z-index: 1040; }
+        .app-overlay.show { display: block; }
       </style>
-      
-      <div style="padding: 30px;">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">
-                <i class="ti tabler-calendar-event me-2 text-primary"></i>
-                Calendar Interativo com FullCalendar
-              </h5>
-              <div class="d-flex gap-2">
-                <span class="badge bg-label-primary">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
-                  Reunião
-                </span>
-                <span class="badge bg-label-success">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
-                  Cliente
-                </span>
-                <span class="badge bg-label-danger">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
-                  Importante
-                </span>
-                <span class="badge bg-label-warning">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
-                  Dev
-                </span>
-                <span class="badge bg-label-info">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
-                  Treinamento
-                </span>
+
+      <div class="container-fluid py-4">
+        <div class="row g-0">
+          <div class="col-lg-3 col-md-4 border-end" id="app-calendar-sidebar">
+            <div class="p-3 sidebar-header d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">Calendário</h6>
+              <button type="button" class="btn btn-sm btn-icon btn-outline-secondary d-lg-none" id="btnCloseSidebar">
+                <i class="ti tabler-x"></i>
+              </button>
+            </div>
+            <div class="p-3">
+              <button class="btn btn-primary w-100 mb-3" id="addEventBtn">
+                <i class="bx bx-plus me-1"></i> Add Event
+              </button>
+
+              <div class="bg-white rounded border p-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h6 class="mb-0">Navegar</h6>
+                </div>
+                <div id="inline-calendar"></div>
+              </div>
+
+              <h6 class="mb-3">Event Filters</h6>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="selectAll" data-value="all" checked>
+                <label class="form-check-label fw-medium" for="selectAll">View All</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input input-filter" type="checkbox" data-value="Personal" id="personal" checked>
+                <label class="form-check-label d-flex align-items-center" for="personal"><span class="badge badge-dot bg-danger me-2"></span>Personal</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input input-filter" type="checkbox" data-value="Business" id="business" checked>
+                <label class="form-check-label d-flex align-items-center" for="business"><span class="badge badge-dot bg-primary me-2"></span>Business</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input input-filter" type="checkbox" data-value="Family" id="family" checked>
+                <label class="form-check-label d-flex align-items-center" for="family"><span class="badge badge-dot bg-warning me-2"></span>Family</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input input-filter" type="checkbox" data-value="Holiday" id="holiday" checked>
+                <label class="form-check-label d-flex align-items-center" for="holiday"><span class="badge badge-dot bg-success me-2"></span>Holiday</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input input-filter" type="checkbox" data-value="ETC" id="etc" checked>
+                <label class="form-check-label d-flex align-items-center" for="etc"><span class="badge badge-dot bg-info me-2"></span>ETC</label>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-body">
-            <div id="fullcalendar-interactive"></div>
-          </div>
-        </div>
-        
-        <div class="alert alert-info mt-4">
-          <strong>💡 Teste a interatividade:</strong>
-          <ul class="mb-0 mt-2">
-            <li><strong>Views:</strong> Alterne entre Mês, Semana, Dia, Lista usando os botões</li>
-            <li><strong>Navegação:</strong> Use setas ← → para navegar entre períodos, "Hoje" para voltar</li>
-            <li><strong>Criar Evento:</strong> Clique em uma data vazia (aparecerá prompt)</li>
-            <li><strong>Ver Detalhes:</strong> Clique em um evento existente (abre modal)</li>
-            <li><strong>Drag & Drop:</strong> Arraste eventos para outras datas/horas</li>
-            <li><strong>Redimensionar:</strong> Nas views Week/Day, arraste as bordas superior/inferior do evento</li>
-            <li><strong>Excluir:</strong> Clique no evento → botão "Excluir Evento"</li>
-            <li><strong>All-day vs Timed:</strong> Eventos no topo (ex: Workshop) são dia inteiro, com hora ficam no grid</li>
-            <li><strong>Cores:</strong> Cada categoria tem cor diferente para fácil identificação</li>
-            <li><strong>Responsive:</strong> Funciona em mobile com touch (arraste com dedo)</li>
-          </ul>
-        </div>
-        
-        <div class="row g-3 mt-2">
-          <div class="col-md-4">
-            <div class="card border-primary">
+
+          <div class="col-lg-9 col-md-8">
+            <div class="card">
               <div class="card-body">
-                <h6 class="text-primary mb-2">
-                  <i class="ti tabler-click me-1"></i>
-                  Interações
-                </h6>
-                <ul class="list-unstyled small mb-0">
-                  <li>• Click em data: criar evento</li>
-                  <li>• Click em evento: detalhes</li>
-                  <li>• Drag: mover evento</li>
-                  <li>• Resize: alterar duração</li>
-                </ul>
+                <div id="fullcalendar-interactive"></div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card border-success">
-              <div class="card-body">
-                <h6 class="text-success mb-2">
-                  <i class="ti tabler-layout me-1"></i>
-                  Views Disponíveis
-                </h6>
-                <ul class="list-unstyled small mb-0">
-                  <li>• Month: visão mensal</li>
-                  <li>• Week: semana com horas</li>
-                  <li>• Day: dia detalhado</li>
-                  <li>• List: lista de eventos</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card border-info">
-              <div class="card-body">
-                <h6 class="text-info mb-2">
-                  <i class="ti tabler-palette me-1"></i>
-                  Categorias
-                </h6>
-                <ul class="list-unstyled small mb-0">
-                  <li>• 🔵 Reunião</li>
-                  <li>• 🟢 Cliente</li>
-                  <li>• 🔴 Importante</li>
-                  <li>• 🟠 Desenvolvimento</li>
-                  <li>• 🔵 Treinamento</li>
-                </ul>
-              </div>
+            <div class="alert alert-info mt-3">
+              <strong>Dicas:</strong> use filtros, arraste eventos, clique para editar.
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Event Details Modal -->
-      <div id="event-modal">
-        <div id="event-modal-content">
-          <div class="card mb-0">
-            <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Detalhes do Evento</h5>
-              <button type="button" class="btn-close" id="modal-close-btn"></button>
+
+      <div class="app-overlay" id="app-overlay"></div>
+
+      <!-- Offcanvas Add/Edit Event -->
+      <div class="offcanvas offcanvas-end event-sidebar" id="addEventSidebar" tabindex="-1">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Add / Edit Event</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="eventForm">
+            <div class="mb-3">
+              <label class="form-label">Title</label>
+              <input type="text" id="eventTitle" name="eventTitle" class="form-control" placeholder="Event title" required>
             </div>
-            <div class="card-body">
-              <h6 id="modal-event-title" class="mb-3"></h6>
-              <div class="mb-2">
-                <small class="text-muted">Categoria:</small>
-                <span id="modal-event-category" class="badge bg-label-primary ms-2"></span>
+
+            <div class="mb-3">
+              <label class="form-label">Calendar</label>
+              <select id="eventLabel" name="eventLabel" class="form-select">
+                <option value="Business" data-label="primary" selected>Business</option>
+                <option value="Holiday" data-label="success">Holiday</option>
+                <option value="Personal" data-label="danger">Personal</option>
+                <option value="Family" data-label="warning">Family</option>
+                <option value="ETC" data-label="info">ETC</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Start Date</label>
+                <input id="eventStartDate" name="eventStartDate" class="form-control" autocomplete="off">
               </div>
-              <div class="mb-3">
-                <small class="text-muted">Horário:</small>
-                <span id="modal-event-time" class="ms-2"></span>
-              </div>
-              <div class="d-flex gap-2">
-                <button class="btn btn-sm btn-outline-primary" id="modal-close-btn-footer">Fechar</button>
-                <button class="btn btn-sm btn-danger" id="modal-delete-btn">Excluir Evento</button>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">End Date</label>
+                <input id="eventEndDate" name="eventEndDate" class="form-control" autocomplete="off">
               </div>
             </div>
-          </div>
+
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="allDaySwitch">
+              <label class="form-check-label" for="allDaySwitch">All Day</label>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Event URL</label>
+              <input type="url" id="eventURL" class="form-control" placeholder="https://">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Guests</label>
+              <select id="eventGuests" class="form-select" multiple>
+                <option value="alice">Alice</option>
+                <option value="bob">Bob</option>
+                <option value="carol">Carol</option>
+                <option value="dave">Dave</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Location</label>
+              <input type="text" id="eventLocation" class="form-control" placeholder="Room 1, Zoom, etc">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea id="eventDescription" class="form-control" rows="3" placeholder="Details"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <button type="button" class="btn btn-outline-danger d-none" id="btnDeleteEvent">Delete</button>
+              <div class="d-flex gap-2 ms-auto">
+                <button type="reset" class="btn btn-label-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     `;
   }
 };
-
-// Footer close button
-setTimeout(() => {
-  const footerCloseBtn = document.getElementById('modal-close-btn-footer');
-  if (footerCloseBtn) {
-    footerCloseBtn.onclick = () => {
-      document.getElementById('event-modal').style.display = 'none';
-    };
-  }
-}, 150);

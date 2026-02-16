@@ -835,29 +835,6 @@ export const Default = {
   },
   render: (args) => renderListTable(args)
 };
-              <th>Desempenho</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ana Silva</td>
-              <td>5º Ano A</td>
-              <td><span class="badge bg-success">85%</span></td>
-              <td><span class="badge bg-light-success text-success">Proficiente</span></td>
-            </tr>
-            <tr>
-              <td>Bruno Santos</td>
-              <td>5º Ano A</td>
-              <td><span class="badge bg-warning">62%</span></td>
-              <td><span class="badge bg-light-warning text-warning">Básico</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `,
-};
 
 /**
  * WithViewToggle - Com toggle list/grid view

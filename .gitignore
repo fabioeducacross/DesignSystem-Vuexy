@@ -47,3 +47,9 @@ test-results/
 vuexy-template-source/html-version/**
 !vuexy-template-source/html-version/.gitkeep
 !vuexy-template-source/README.md
+
+# Windows device files
+nul
+
+# Temporary Claude files
+tmpclaude-*
