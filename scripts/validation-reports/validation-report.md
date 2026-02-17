@@ -1,19 +1,19 @@
 # Relatório de Validação de Componentes Educacross
 
-**Gerado em**: 16/02/2026 15:28:42
+**Gerado em**: 17/02/2026 12:07:41
 
 ## 📊 Sumário Executivo
 
-- ✅ **Aprovados**: 69/125 (55.2%)
+- ✅ **Aprovados**: 83/125 (66.4%)
 - ⚠️  **Avisos**: 0/125 (0.0%)
 - ❌ **Erros**: 0/125 (0.0%)
-- 🔍 **Não Encontrados**: 56/125
+- 🔍 **Não Encontrados**: 42/125
 
 ---
 
-## ✅ Componentes Aprovados (69)
+## ✅ Componentes Aprovados (83)
 
-AlbumCover, AppCollapse, AppCollapseItem, BadgeStatus, ButtonWaitAction, Card, CellStatus, Certificate, ChangeProficiency, DeleteGuide, Divider, EFormCheck, ESelect, ExpandableFilterArea, ExpiredMission, FeedbackAndSend, FixedStickyFooter, HelpChat, InfinityScroll, IntermediateRedirectLoginDeepLink
+AlbumCover, AppCollapse, AppCollapseItem, AppLanguageSelector, BackgroundSpace, BadgeStatus, ButtonWaitAction, Card, CellStatus, Certificate, ChangeProficiency, CopyLink, DeleteGuide, DescriptorTag, Divider, EFormCheck, ESelect, ExpandableFilterArea, ExpiredMission, FeedbackAndSend
 
 
-*...e mais 49 componentes aprovados*
+*...e mais 63 componentes aprovados*

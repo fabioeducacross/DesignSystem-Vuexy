@@ -5,6 +5,7 @@
  * Inclui nota, tempo, questões, timeline, feedback do professor e comparação com turma.
  * 
  * @component StudentActivityDetail
+ * @source educacross-frontoffice/src/components/mission-plus/StudentActivityDetail.vue
  * @category Educacross Components V2
  * @subcategory Feedback
  * @priority P2

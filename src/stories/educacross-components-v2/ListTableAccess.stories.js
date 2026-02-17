@@ -5,6 +5,7 @@
  * Inclui toggle switch para ativar/desativar acessos.
  * 
  * @component ListTableAccess
+ * @source educacross-frontoffice/src/components/table/ListTableAccess.vue
  * @category Educacross Components V2
  * @subcategory Tables
  * @priority P2

@@ -5,6 +5,7 @@
  * Formato padrão: EF05MA08 (Ensino Fundamental, 5º ano, Matemática, habilidade 08).
  * 
  * @component DescriptorTag
+ * @source educacross-frontoffice/src/components/descriptors/DescriptorTag.vue
  * @category Educacross Components V2 / Data Display
  * @subcategory Data Display
  * @priority P1 - Core UI

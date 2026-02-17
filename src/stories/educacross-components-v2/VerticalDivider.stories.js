@@ -5,6 +5,7 @@
  * Customizável via CSS variables (--thickness, --height, --color, --spacing).
  * 
  * @component VerticalDivider
+ * @source educacross-frontoffice/src/components/divider/VerticalDivider.vue
  * @category Educacross Components V2 / Layout
  * @subcategory Layout
  * @priority P1 - Core UI

@@ -1,0 +1,338 @@
+{
+  "suggestions": [
+    {
+      "story": "AppLanguageSelector",
+      "story_path": "src\\stories\\educacross-components-v2\\AppLanguageSelector.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/app-language-selector/AppLanguageSelector.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "BackgroundSpace",
+      "story_path": "src\\stories\\educacross-components-v2\\BackgroundSpace.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/deeplink/BackgroundSpace.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "BarChart",
+      "story_path": "src\\stories\\educacross-components-v2\\BarChart.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/chart/BarChart.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "CancelMission",
+      "story_path": "src\\stories\\educacross-components-v2\\CancelMission.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/CancelMission.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "CardsList",
+      "story_path": "src\\stories\\educacross-components-v2\\CardsList.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/PDFs/CardsList.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "CertificateList",
+      "story_path": "src\\stories\\educacross-components-v2\\CertificateList.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/PDFs/certificate/CertificateList.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "CertificateList",
+      "story_path": "src\\stories\\educacross-components-v2\\CertificateList.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/PDFs/event/certificate/CertificateList.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ConditionalValueDisplay",
+      "story_path": "src\\stories\\educacross-components-v2\\ConditionalValueDisplay.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/badge/ConditionalValueDisplay.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "CopyLink",
+      "story_path": "src\\stories\\educacross-components-v2\\CopyLink.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/CopyLink.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "DefaultChart",
+      "story_path": "src\\stories\\educacross-components-v2\\DefaultChart.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/chart/DefaultChart.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "DefaultFAQModal",
+      "story_path": "src\\stories\\educacross-components-v2\\DefaultFAQModal.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/modal/DefaultFAQModal.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "DescriptorTag",
+      "story_path": "src\\stories\\educacross-components-v2\\DescriptorTag.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/descriptors/DescriptorTag.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "DynamicMediaCard",
+      "story_path": "src\\stories\\educacross-components-v2\\DynamicMediaCard.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/card/DynamicMediaCard.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "EvaluationsHtmlContentRenderer",
+      "story_path": "src\\stories\\educacross-components-v2\\EvaluationsHtmlContentRenderer.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/shared/EvaluationsHtmlContentRenderer.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ExerciseType",
+      "story_path": "src\\stories\\educacross-components-v2\\ExerciseType.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/exercise-type/reading-meter/ExerciseType.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "GameDetailsModal",
+      "story_path": "src\\stories\\educacross-components-v2\\GameDetailsModal.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/modal/GameDetailsModal.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "GuidesLimitAlert",
+      "story_path": "src\\stories\\educacross-components-v2\\GuidesLimitAlert.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/missions/GuidesLimitAlert.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTableAccess",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableAccess.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTableAccess.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTableLocalSorting",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableLocalSorting.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTableLocalSorting.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTablePagination",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTablePagination.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTablePagination.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTableRanking",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableRanking.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTableRanking.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTableSelect",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableSelect.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTableSelect.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ListTableSelectLocal",
+      "story_path": "src\\stories\\educacross-components-v2\\ListTableSelectLocal.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/table/ListTableSelectLocal.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "MediaCardIcon",
+      "story_path": "src\\stories\\educacross-components-v2\\MediaCardIcon.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/card/MediaCardIcon.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "MissionBookDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionBookDetails.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/MissionBookDetails.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "MissionDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionDetails.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/missions/MissionDetails.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "MissionVisualization",
+      "story_path": "src\\stories\\educacross-components-v2\\MissionVisualization.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/missions/MissionVisualization.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ModalStudentActivityDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\ModalStudentActivityDetails.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/ModalStudentActivityDetails.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ModalStudentRoundDetails",
+      "story_path": "src\\stories\\educacross-components-v2\\ModalStudentRoundDetails.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/ModalStudentRoundDetails.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "PerformanceCell",
+      "story_path": "src\\stories\\educacross-components-v2\\PerformanceCell.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/cells/PerformanceCell.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "PieChart",
+      "story_path": "src\\stories\\educacross-components-v2\\PieChart.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/chart/PieChart.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "ProgressBarHorizontal",
+      "story_path": "src\\stories\\educacross-components-v2\\ProgressBarHorizontal.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/progessBar/ProgressBarHorizontal.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionContent",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionContent.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetail/components/QuestionContent.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionContent",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionContent.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/questionsListDetail/components/QuestionContent.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionDetail.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionDetail.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetailV2/QuestionDetail.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionsListDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionsListDetail.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/evaluations/questionsListDetail/QuestionsListDetail.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "QuestionStatus",
+      "story_path": "src\\stories\\educacross-components-v2\\QuestionStatus.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/question/QuestionStatus.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "RadialBar",
+      "story_path": "src\\stories\\educacross-components-v2\\RadialBar.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/chart/RadialBar.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "SelectLocale",
+      "story_path": "src\\stories\\educacross-components-v2\\SelectLocale.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/locale/SelectLocale.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "Sidebar",
+      "story_path": "src\\stories\\educacross-components-v2\\Sidebar.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/reading-meter/SidebarProficiencyInfo.vue",
+      "confidence": "similar"
+    },
+    {
+      "story": "SimpleTab",
+      "story_path": "src\\stories\\educacross-components-v2\\SimpleTab.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/tab/SimpleTab.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "StudentActivityDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentActivityDetail.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/StudentActivityDetail.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "StudentGameDetailsModal",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentGameDetailsModal.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/modal/StudentGameDetailsModal.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "StudentsDetail",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentsDetail.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/mission-plus/StudentsDetail.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "Tab",
+      "story_path": "src\\stories\\educacross-components-v2\\Tab.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/tab/Tab.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "TabRouter",
+      "story_path": "src\\stories\\educacross-components-v2\\TabRouter.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/tab/TabRouter.vue",
+      "confidence": "exact"
+    },
+    {
+      "story": "VerticalDivider",
+      "story_path": "src\\stories\\educacross-components-v2\\VerticalDivider.stories.js",
+      "vue_path": "educacross-frontoffice/src/components/divider/VerticalDivider.vue",
+      "confidence": "exact"
+    }
+  ],
+  "no_match": [
+    {
+      "story": "AcceptOrRejectAccess",
+      "story_path": "src\\stories\\educacross-components-v2\\AcceptOrRejectAccess.stories.js"
+    },
+    {
+      "story": "AppNavbar",
+      "story_path": "src\\stories\\educacross-components-v2\\AppNavbar.stories.js"
+    },
+    {
+      "story": "BadgeList",
+      "story_path": "src\\stories\\educacross-components-v2\\BadgeList.stories.js"
+    },
+    {
+      "story": "EditProfileStudentNew",
+      "story_path": "src\\stories\\educacross-components-v2\\EditProfileStudentNew.stories.js"
+    },
+    {
+      "story": "EInput",
+      "story_path": "src\\stories\\educacross-components-v2\\EInput.stories.js"
+    },
+    {
+      "story": "ETextarea",
+      "story_path": "src\\stories\\educacross-components-v2\\ETextarea.stories.js"
+    },
+    {
+      "story": "FilterChip",
+      "story_path": "src\\stories\\educacross-components-v2\\FilterChip.stories.js"
+    },
+    {
+      "story": "ProfilePicture",
+      "story_path": "src\\stories\\educacross-components-v2\\ProfilePicture.stories.js"
+    },
+    {
+      "story": "ResourceCard",
+      "story_path": "src\\stories\\educacross-components-v2\\ResourceCard.stories.js"
+    },
+    {
+      "story": "StudentAvatar",
+      "story_path": "src\\stories\\educacross-components-v2\\StudentAvatar.stories.js"
+    },
+    {
+      "story": "SubjectCard",
+      "story_path": "src\\stories\\educacross-components-v2\\SubjectCard.stories.js"
+    }
+  ]
+}

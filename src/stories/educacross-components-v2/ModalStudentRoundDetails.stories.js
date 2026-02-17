@@ -5,6 +5,7 @@
  * Usado em relatórios de missão para mostrar desempenho detalhado por rodada com tentativas múltiplas.
  * 
  * @component ModalStudentRoundDetails
+ * @source educacross-frontoffice/src/components/mission-plus/ModalStudentRoundDetails.vue
  * @category Educacross Components V2
  * @subcategory Overlays
  * @priority P2

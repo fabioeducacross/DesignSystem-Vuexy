@@ -5,6 +5,7 @@
  * Suporta múltiplos idiomas com flags, códigos e nomes localizados.
  * 
  * @component AppLanguageSelector
+ * @source educacross-frontoffice/src/components/app-language-selector/AppLanguageSelector.vue
  * @category Educacross Components V2
  * @subcategory Navigation
  * @priority P2

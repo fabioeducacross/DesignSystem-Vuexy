@@ -5,6 +5,7 @@
  * Usado quando não há dados para exibir (missões vazias, alunos, resultados, etc).
  * 
  * @component BackgroundSpace
+ * @source educacross-frontoffice/src/components/deeplink/BackgroundSpace.vue
  * @category Educacross Components V2
  * @subcategory Feedback
  * @priority P2

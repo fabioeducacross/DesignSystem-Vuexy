@@ -5,6 +5,7 @@
  * e múltiplas variantes para diferentes contextos de visualização.
  * 
  * @component ModalStudentActivityDetails
+ * @source educacross-frontoffice/src/components/mission-plus/ModalStudentActivityDetails.vue
  * @category Educacross Components V2
  * @subcategory Overlays
  * @priority P2

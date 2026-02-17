@@ -5,6 +5,7 @@
  * conquistas, progresso em missões e dados de contato.
  * 
  * @component StudentsDetail
+ * @source educacross-frontoffice/src/components/mission-plus/StudentsDetail.vue
  * @category Educacross Components V2
  * @subcategory Feedback
  * @priority P2
