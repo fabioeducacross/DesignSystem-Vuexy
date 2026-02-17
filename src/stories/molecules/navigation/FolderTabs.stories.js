@@ -4,6 +4,8 @@
  * @category Molecules > Navigation
  * @status DONE
  * @source educacross-frontoffice/src/components/tab/Tab.vue
+ * 
+ * Status: ✅ DONE
  */
 
 export default {

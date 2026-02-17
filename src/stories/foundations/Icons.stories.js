@@ -3,6 +3,8 @@
  * @description Sistema de iconografia oficial do Design System Educacross
  * @category Foundations
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 import feather from 'feather-icons';

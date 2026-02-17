@@ -9,6 +9,8 @@
  * @assets /vuexy/css/pages/app-invoice.css
  * @status DESIGN-PATTERN
  * @since 2.0.0
+ * 
+ * Status: ✅ DONE
  */
 
 export default {

@@ -1,3 +1,11 @@
+/**
+ * Getting Started - Documentation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Página de introdução ao Design System.
+ */
+
 export default {
   title: 'Getting Started/Introduction',
   parameters: {

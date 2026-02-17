@@ -1,3 +1,11 @@
+/**
+ * Doc Template Example - Documentation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Exemplo de template de documentação para stories.
+ */
+
 import { 
   createDocPage, 
   createExampleCard, 

@@ -1,3 +1,11 @@
+/**
+ * Spacing - Foundation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Sistema de espaçamento do Design System.
+ */
+
 export default {
   title: 'Vuexy/Foundations/Spacing',
   parameters: {

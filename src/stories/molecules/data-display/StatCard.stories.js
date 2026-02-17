@@ -3,6 +3,8 @@
  * @description Cards de estatísticas para dashboards - valor + ícone + trend
  * @category Molecules > Data Display
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 export default {

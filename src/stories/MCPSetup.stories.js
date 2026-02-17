@@ -1,3 +1,11 @@
+/**
+ * MCP Setup Guide - Documentation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Guia de configuração do Model Context Protocol.
+ */
+
 export default {
   title: 'MCP Setup Guide/Quick Start',
   parameters: {

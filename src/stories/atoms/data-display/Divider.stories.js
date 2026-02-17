@@ -3,6 +3,8 @@
  * @description Separadores visuais - linhas horizontais e divisores
  * @category Atoms > Data Display
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 export default {

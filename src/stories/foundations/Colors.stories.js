@@ -1,3 +1,11 @@
+/**
+ * Colors - Foundation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Sistema de cores do Design System Vuexy.
+ */
+
 export default {
   title: 'Vuexy/Foundations/Colors',
   parameters: {

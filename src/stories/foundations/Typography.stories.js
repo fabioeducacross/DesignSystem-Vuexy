@@ -3,6 +3,8 @@
  * EDUCACROSS DESIGN SYSTEM - TYPOGRAPHY
  * ==============================================
  * 
+ * Status: ✅ DONE
+ * 
  * Sistema tipográfico oficial da Educacross.
  * Baseado na identidade visual institucional.
  * 

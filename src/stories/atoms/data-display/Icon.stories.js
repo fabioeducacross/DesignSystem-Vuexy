@@ -3,6 +3,8 @@
  * @description Biblioteca oficial de ícones do Design System Educacross usando Feather Icons
  * @category Atoms > Data Display
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 import feather from 'feather-icons';

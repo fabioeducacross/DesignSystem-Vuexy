@@ -3,6 +3,8 @@
  * @description Indicadores de progresso circular/gauge para dashboards
  * @category Molecules > Feedback
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 export default {

@@ -1,3 +1,11 @@
+/**
+ * Images - Foundation
+ * 
+ * Status: ✅ DONE
+ * 
+ * Sistema de imagens e placeholders.
+ */
+
 import { 
   AvatarPlaceholder, 
   ThumbnailPlaceholder, 

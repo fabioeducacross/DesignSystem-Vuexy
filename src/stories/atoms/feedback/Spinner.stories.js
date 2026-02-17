@@ -3,6 +3,8 @@
  * @description Loading indicators do Vuexy - spinner-border e spinner-grow
  * @category Atoms > Feedback
  * @status DONE
+ * 
+ * Status: ✅ DONE
  */
 
 export default {
