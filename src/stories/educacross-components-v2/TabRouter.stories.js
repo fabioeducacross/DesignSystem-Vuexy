@@ -5,6 +5,7 @@
  * Variante pills com background colorido ao invés de border-bottom.
  * 
  * @component TabRouter
+ * @source educacross-frontoffice/src/components/tab/TabRouter.vue
  * @category Educacross Components V2
  * @subcategory Navigation
  * @priority P2

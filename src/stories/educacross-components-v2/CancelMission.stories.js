@@ -4,8 +4,8 @@
  * Modal de confirmação para cancelar missão ativa com justificativa
  * 
  * @component CancelMission
+ * @source educacross-frontoffice/src/components/mission-plus/CancelMission.vue
  * @category Educacross Components V2 / Modals
- * @source educacross-frontoffice (gestão de missões)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

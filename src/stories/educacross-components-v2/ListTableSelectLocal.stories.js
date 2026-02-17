@@ -5,6 +5,7 @@
  * Permite seleção individual, "Selecionar Todos" e exibição de resumo de itens selecionados.
  * 
  * @component ListTableSelectLocal
+ * @source educacross-frontoffice/src/components/table/ListTableSelectLocal.vue
  * @category Educacross Components V2
  * @subcategory Tables
  * @priority P2

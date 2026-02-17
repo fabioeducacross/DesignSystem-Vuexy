@@ -1,7 +1,7 @@
 /**
  * @component QuestionDetail
  * @description Modal displaying detailed question analysis with alternatives, results, and completion icons
- * @source educacross-frontoffice/src/components/QuestionDetail.vue
+ * @source educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue
  * @generated 2026-02-03
  */
 

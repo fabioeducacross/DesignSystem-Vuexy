@@ -4,8 +4,8 @@
  * Modal com detalhes completos de jogo educacional ou missão gamificada
  * 
  * @component GameDetailsModal
+ * @source educacross-frontoffice/src/components/modal/GameDetailsModal.vue
  * @category Educacross Components V2 / Modals
- * @source educacross-frontoffice (missões gamificadas)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

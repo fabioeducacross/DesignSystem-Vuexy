@@ -7,7 +7,7 @@
  * 
  * @component MediaCardIcon
  * @category Educacross Components V2
- * @source educacross-frontoffice/src/components/cards/MediaCardIcon.vue
+ * @source educacross-frontoffice/src/components/card/MediaCardIcon.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

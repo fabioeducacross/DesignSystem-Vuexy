@@ -7,7 +7,7 @@
  * 
  * @component GuidesLimitAlert
  * @category Educacross Components V2
- * @source educacross-frontoffice/src/components/GuidesLimitAlert.vue
+ * @source educacross-frontoffice/src/components/missions/GuidesLimitAlert.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

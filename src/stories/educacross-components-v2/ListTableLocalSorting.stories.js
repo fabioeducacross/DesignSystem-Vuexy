@@ -5,6 +5,7 @@
  * Suporta ordenação ascendente/descendente com indicadores visuais (setas).
  * 
  * @component ListTableLocalSorting
+ * @source educacross-frontoffice/src/components/table/ListTableLocalSorting.vue
  * @category Educacross Components V2
  * @subcategory Tables
  * @priority P2

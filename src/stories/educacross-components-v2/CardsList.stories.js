@@ -4,8 +4,8 @@
  * Lista de cards com visualização em grid ou lista (toggle view)
  * 
  * @component CardsList
+ * @source educacross-frontoffice/src/components/PDFs/CardsList.vue
  * @category Educacross Components V2 / Lists
- * @source educacross-frontoffice (listas de missões, conteúdos)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

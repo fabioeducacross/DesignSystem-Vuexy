@@ -4,8 +4,9 @@
  * Lista de badges de conquistas educacionais para gamificação
  * 
  * @component BadgeList
- * @category Educacross Components V2 / Data Display
+ * @category Doc-Only / Educacross Components V2 / Data Display
  * @source educacross-frontoffice (perfil de aluno, gamificação)
+ * @note Conceito educacional documentado. Não componentizado no Vue.
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

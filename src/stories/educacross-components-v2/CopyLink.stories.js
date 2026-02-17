@@ -144,6 +144,7 @@ const copyLinkStyles = `
 `;
 
 /**
+ * @source educacross-frontoffice/src/components/mission-plus/CopyLink.vue
  * CopyLink - Link Copy Component with Clipboard
  * ==============================================
  * 

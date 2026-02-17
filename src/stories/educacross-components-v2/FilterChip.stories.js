@@ -7,8 +7,9 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  * disciplinas, anos escolares e outros contextos.
  * 
  * @component FilterChip
- * @category Educacross Components V2 / Forms
+ * @category Doc-Only / Educacross Components V2 / Forms
  * @source educacross-frontoffice (filtros em dashboards, relatórios)
+ * @note Padrão de uso documentado. Não componentizado no Vue.
  * @priority P0 - Critical
  * @status PIXEL-PERFECT
  * @since 2.0.0

@@ -5,6 +5,7 @@
  * Suporta múltipla escolha, dissertativa, verdadeiro/falso com feedback visual correto/incorreto.
  * 
  * @component QuestionContent
+ * @source educacross-frontoffice/src/components/evaluations/questionDetail/components/QuestionContent.vue
  * @category Educacross Components V2
  * @subcategory Feedback
  * @priority P2

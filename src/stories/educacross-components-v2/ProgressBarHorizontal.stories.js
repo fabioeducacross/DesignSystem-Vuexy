@@ -7,7 +7,7 @@
  * 
  * @component ProgressBarHorizontal
  * @category Educacross Components V2
- * @source educacross-frontoffice/src/components/ProgressBarHorizontal.vue
+ * @source educacross-frontoffice/src/components/progessBar/ProgressBarHorizontal.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

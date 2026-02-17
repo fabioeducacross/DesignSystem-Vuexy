@@ -4,8 +4,8 @@
  * Gráfico circular para distribuição de dados em dashboards
  * 
  * @component PieChart
+ * @source educacross-frontoffice/src/components/chart/PieChart.vue
  * @category Educacross Components V2 / Charts
- * @source educacross-frontoffice (dashboards, relatórios)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

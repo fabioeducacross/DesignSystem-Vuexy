@@ -5,7 +5,7 @@
  * 
  * @component ListTablePagination
  * @category Educacross Components V2 / Tables
- * @source educacross-frontoffice (listas de alunos, missões, relatórios)
+ * @source educacross-frontoffice/src/components/table/ListTablePagination.vue
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

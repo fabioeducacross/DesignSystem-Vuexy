@@ -1,0 +1,130 @@
+{
+  "executed_at": "1771344690.80736",
+  "dry_run": false,
+  "total_corrections": 17,
+  "success": 17,
+  "replaced": 17,
+  "added": 0,
+  "errors": 0,
+  "results": [
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "DynamicMediaCard",
+      "new_source": "educacross-frontoffice/src/components/card/DynamicMediaCard.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "EvaluationsHtmlContentRenderer",
+      "new_source": "educacross-frontoffice/src/components/evaluations/shared/EvaluationsHtmlContentRenderer.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "GuidesLimitAlert",
+      "new_source": "educacross-frontoffice/src/components/missions/GuidesLimitAlert.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "ListTablePagination",
+      "new_source": "educacross-frontoffice/src/components/table/ListTablePagination.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "ListTableRanking",
+      "new_source": "educacross-frontoffice/src/components/table/ListTableRanking.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "ListTableSelect",
+      "new_source": "educacross-frontoffice/src/components/table/ListTableSelect.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "MediaCardIcon",
+      "new_source": "educacross-frontoffice/src/components/card/MediaCardIcon.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "MissionBookDetails",
+      "new_source": "educacross-frontoffice/src/components/mission-plus/MissionBookDetails.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "PerformanceCell",
+      "new_source": "educacross-frontoffice/src/components/cells/PerformanceCell.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "ProgressBarHorizontal",
+      "new_source": "educacross-frontoffice/src/components/progessBar/ProgressBarHorizontal.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "QuestionDetail",
+      "new_source": "educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "QuestionsListDetail",
+      "new_source": "educacross-frontoffice/src/components/evaluations/questionsListDetail/QuestionsListDetail.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "QuestionStatus",
+      "new_source": "educacross-frontoffice/src/components/question/QuestionStatus.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "SelectLocale",
+      "new_source": "educacross-frontoffice/src/components/locale/SelectLocale.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "SimpleTab",
+      "new_source": "educacross-frontoffice/src/components/tab/SimpleTab.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "StudentGameDetailsModal",
+      "new_source": "educacross-frontoffice/src/components/modal/StudentGameDetailsModal.vue",
+      "dry_run": false
+    },
+    {
+      "status": "SUCCESS",
+      "action": "REPLACED",
+      "story": "Tab",
+      "new_source": "educacross-frontoffice/src/components/tab/Tab.vue",
+      "dry_run": false
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "generated_at": "2026-02-17T13:01:19.614532",
+  "total_orphans": 29,
+  "categories": {
+    "orphans_confirmed": 3,
+    "typos_or_wrong_path": 25,
+    "name_mismatch": 1
+  },
+  "components": [
+    {
+      "index": 1,
+      "name": "AcceptOrRejectAccess",
+      "story_file": "AcceptOrRejectAccess.stories.js",
+      "source_tag": "❌ Não encontrado",
+      "similar_components": []
+    },
+    {
+      "index": 2,
+      "name": "AppNavbar",
+      "story_file": "AppNavbar.stories.js",
+      "source_tag": "educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue (linhas 6-68)",
+      "similar_components": []
+    },
+    {
+      "index": 3,
+      "name": "BadgeList",
+      "story_file": "BadgeList.stories.js",
+      "source_tag": "educacross-frontoffice (perfil de aluno, gamificação)",
+      "similar_components": [
+        {
+          "vue_name": "BadgeStatus",
+          "vue_path": "educacross-frontoffice/src/components/badge/BadgeStatus.vue",
+          "similarity": 70.0
+        },
+        {
+          "vue_name": "CardsList",
+          "vue_path": "educacross-frontoffice/src/components/PDFs/CardsList.vue",
+          "similarity": 66.7
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "DynamicMediaCard",
+      "story_file": "DynamicMediaCard.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/cards/DynamicMediaCard.vue",
+      "similar_components": [
+        {
+          "vue_name": "DynamicMediaCard",
+          "vue_path": "educacross-frontoffice/src/components/card/DynamicMediaCard.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "MediaCard",
+          "vue_path": "educacross-frontoffice/src/components/card/MediaCard.vue",
+          "similarity": 72.0
+        },
+        {
+          "vue_name": "MediaCardIcon",
+          "vue_path": "educacross-frontoffice/src/components/card/MediaCardIcon.vue",
+          "similarity": 62.1
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "EditProfileStudentNew",
+      "story_file": "EditProfileStudentNew.stories.js",
+      "source_tag": "educacross-frontoffice (perfil do aluno)",
+      "similar_components": []
+    },
+    {
+      "index": 6,
+      "name": "EInput",
+      "story_file": "EInput.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/form/EInput.vue",
+      "similar_components": []
+    },
+    {
+      "index": 7,
+      "name": "ETextarea",
+      "story_file": "ETextarea.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/form/ETextarea.vue",
+      "similar_components": []
+    },
+    {
+      "index": 8,
+      "name": "EvaluationsHtmlContentRenderer",
+      "story_file": "EvaluationsHtmlContentRenderer.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/EvaluationsHtmlContentRenderer.vue",
+      "similar_components": [
+        {
+          "vue_name": "EvaluationsHtmlContentRenderer",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/shared/EvaluationsHtmlContentRenderer.vue",
+          "similarity": 100.0
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "FilterChip",
+      "story_file": "FilterChip.stories.js",
+      "source_tag": "educacross-frontoffice (filtros em dashboards, relatórios)",
+      "similar_components": []
+    },
+    {
+      "index": 10,
+      "name": "GuidesLimitAlert",
+      "story_file": "GuidesLimitAlert.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/GuidesLimitAlert.vue",
+      "similar_components": [
+        {
+          "vue_name": "GuidesLimitAlert",
+          "vue_path": "educacross-frontoffice/src/components/missions/GuidesLimitAlert.vue",
+          "similarity": 100.0
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "ListTablePagination",
+      "story_file": "ListTablePagination.stories.js",
+      "source_tag": "educacross-frontoffice (listas de alunos, missões, relatórios)",
+      "similar_components": [
+        {
+          "vue_name": "ListTablePagination",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTablePagination.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "ListTableRanking",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableRanking.vue",
+          "similarity": 68.6
+        },
+        {
+          "vue_name": "ListTable",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTable.vue",
+          "similarity": 64.3
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "ListTableRanking",
+      "story_file": "ListTableRanking.stories.js",
+      "source_tag": "educacross-frontoffice (rankings de alunos, turmas, disciplinas)",
+      "similar_components": [
+        {
+          "vue_name": "ListTableRanking",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableRanking.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "ListTable",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTable.vue",
+          "similarity": 72.0
+        },
+        {
+          "vue_name": "ListTableLocalSorting",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableLocalSorting.vue",
+          "similarity": 70.3
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "ListTableSelect",
+      "story_file": "ListTableSelect.stories.js",
+      "source_tag": "educacross-frontoffice (seleção de alunos para missões, exportação de dados)",
+      "similar_components": [
+        {
+          "vue_name": "ListTableSelect",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableSelect.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "ListTableSelectLocal",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableSelectLocal.vue",
+          "similarity": 85.7
+        },
+        {
+          "vue_name": "ListTable",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTable.vue",
+          "similarity": 75.0
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "MediaCardIcon",
+      "story_file": "MediaCardIcon.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/cards/MediaCardIcon.vue",
+      "similar_components": [
+        {
+          "vue_name": "MediaCardIcon",
+          "vue_path": "educacross-frontoffice/src/components/card/MediaCardIcon.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "MediaCard",
+          "vue_path": "educacross-frontoffice/src/components/card/MediaCard.vue",
+          "similarity": 81.8
+        },
+        {
+          "vue_name": "DynamicMediaCard",
+          "vue_path": "educacross-frontoffice/src/components/card/DynamicMediaCard.vue",
+          "similarity": 62.1
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "MissionBookDetails",
+      "story_file": "MissionBookDetails.stories.js",
+      "source_tag": "educacross-frontoffice (biblioteca, missões)",
+      "similar_components": [
+        {
+          "vue_name": "MissionBookDetails",
+          "vue_path": "educacross-frontoffice/src/components/mission-plus/MissionBookDetails.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "MissionDetails",
+          "vue_path": "educacross-frontoffice/src/components/missions/MissionDetails.vue",
+          "similarity": 87.5
+        },
+        {
+          "vue_name": "MissionDetailsPlus",
+          "vue_path": "educacross-frontoffice/src/components/mission-plus/MissionDetailsPlus.vue",
+          "similarity": 77.8
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "name": "PerformanceCell",
+      "story_file": "PerformanceCell.stories.js",
+      "source_tag": "educacross-frontoffice (uso comum em tabelas de relatórios)",
+      "similar_components": [
+        {
+          "vue_name": "PerformanceCell",
+          "vue_path": "educacross-frontoffice/src/components/cells/PerformanceCell.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "PerformancePDF",
+          "vue_path": "educacross-frontoffice/src/components/PDFs/event/performance/PerformancePDF.vue",
+          "similarity": 75.9
+        },
+        {
+          "vue_name": "PerformancePDFList",
+          "vue_path": "educacross-frontoffice/src/components/PDFs/event/performance/PerformancePDFList.vue",
+          "similarity": 72.7
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "name": "ProfilePicture",
+      "story_file": "ProfilePicture.stories.js",
+      "source_tag": "❌ Não encontrado",
+      "similar_components": []
+    },
+    {
+      "index": 18,
+      "name": "ProgressBarHorizontal",
+      "story_file": "ProgressBarHorizontal.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/ProgressBarHorizontal.vue",
+      "similar_components": [
+        {
+          "vue_name": "ProgressBarHorizontal",
+          "vue_path": "educacross-frontoffice/src/components/progessBar/ProgressBarHorizontal.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "ProgressBarHorizontalV2",
+          "vue_path": "educacross-frontoffice/src/components/progessBar/ProgressBarHorizontalV2.vue",
+          "similarity": 95.5
+        },
+        {
+          "vue_name": "ProgressBarVertical",
+          "vue_path": "educacross-frontoffice/src/components/progessBar/ProgressBarVertical.vue",
+          "similarity": 75.0
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "name": "QuestionDetail",
+      "story_file": "QuestionDetail.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/QuestionDetail.vue",
+      "similar_components": [
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetailV2/QuestionDetail.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "QuestionsListDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionsListDetail/QuestionsListDetail.vue",
+          "similarity": 84.8
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "name": "QuestionsListDetail",
+      "story_file": "QuestionsListDetail.stories.js",
+      "source_tag": "educacross-frontoffice (banco de questões)",
+      "similar_components": [
+        {
+          "vue_name": "QuestionsListDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionsListDetail/QuestionsListDetail.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue",
+          "similarity": 84.8
+        },
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetailV2/QuestionDetail.vue",
+          "similarity": 84.8
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "name": "QuestionStatus",
+      "story_file": "QuestionStatus.stories.js",
+      "source_tag": "educacross-frontoffice (resultado de missões, visualização de questões)",
+      "similar_components": [
+        {
+          "vue_name": "QuestionStatus",
+          "vue_path": "educacross-frontoffice/src/components/question/QuestionStatus.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetail/QuestionDetail.vue",
+          "similarity": 71.4
+        },
+        {
+          "vue_name": "QuestionDetail",
+          "vue_path": "educacross-frontoffice/src/components/evaluations/questionDetailV2/QuestionDetail.vue",
+          "similarity": 71.4
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "name": "ResourceCard",
+      "story_file": "ResourceCard.stories.js",
+      "source_tag": "❌ Não encontrado",
+      "similar_components": []
+    },
+    {
+      "index": 23,
+      "name": "SelectLocale",
+      "story_file": "SelectLocale.stories.js",
+      "source_tag": "educacross-frontoffice (header, perfil usuário, configurações)",
+      "similar_components": [
+        {
+          "vue_name": "SelectLocale",
+          "vue_path": "educacross-frontoffice/src/components/locale/SelectLocale.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "SelectLocaleNavbar",
+          "vue_path": "educacross-frontoffice/src/components/locale/SelectLocaleNavbar.vue",
+          "similarity": 80.0
+        },
+        {
+          "vue_name": "ListTableSelectLocal",
+          "vue_path": "educacross-frontoffice/src/components/table/ListTableSelectLocal.vue",
+          "similarity": 68.8
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "name": "Sidebar",
+      "story_file": "Sidebar.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/sidebar/Sidebar.vue",
+      "similar_components": []
+    },
+    {
+      "index": 25,
+      "name": "SimpleTab",
+      "story_file": "SimpleTab.stories.js",
+      "source_tag": "educacross-frontoffice (relatórios, perfis)",
+      "similar_components": [
+        {
+          "vue_name": "SimpleTab",
+          "vue_path": "educacross-frontoffice/src/components/tab/SimpleTab.vue",
+          "similarity": 100.0
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "name": "StudentAvatar",
+      "story_file": "StudentAvatar.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/student/StudentAvatar.vue",
+      "similar_components": [
+        {
+          "vue_name": "StudentsDetail",
+          "vue_path": "educacross-frontoffice/src/components/mission-plus/StudentsDetail.vue",
+          "similarity": 66.7
+        },
+        {
+          "vue_name": "StudentActivityDetail",
+          "vue_path": "educacross-frontoffice/src/components/mission-plus/StudentActivityDetail.vue",
+          "similarity": 64.7
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "name": "StudentGameDetailsModal",
+      "story_file": "StudentGameDetailsModal.stories.js",
+      "source_tag": "educacross-frontoffice (relatórios de missões)",
+      "similar_components": [
+        {
+          "vue_name": "StudentGameDetailsModal",
+          "vue_path": "educacross-frontoffice/src/components/modal/StudentGameDetailsModal.vue",
+          "similarity": 100.0
+        },
+        {
+          "vue_name": "GameDetailsModal",
+          "vue_path": "educacross-frontoffice/src/components/modal/GameDetailsModal.vue",
+          "similarity": 82.1
+        },
+        {
+          "vue_name": "StudentsDetail",
+          "vue_path": "educacross-frontoffice/src/components/mission-plus/StudentsDetail.vue",
+          "similarity": 70.3
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "name": "SubjectCard",
+      "story_file": "SubjectCard.stories.js",
+      "source_tag": "❌ Não encontrado",
+      "similar_components": [
+        {
+          "vue_name": "SubjectBand",
+          "vue_path": "educacross-frontoffice/src/components/subjects/SubjectBand.vue",
+          "similarity": 81.8
+        },
+        {
+          "vue_name": "subjects",
+          "vue_path": "educacross-frontoffice/src/components/subjects/subjects.vue",
+          "similarity": 73.7
+        },
+        {
+          "vue_name": "subjectSelect",
+          "vue_path": "educacross-frontoffice/src/components/subjects/subjectSelect.vue",
+          "similarity": 66.7
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "name": "Tab",
+      "story_file": "Tab.stories.js",
+      "source_tag": "educacross-frontoffice/src/components/Tab.vue",
+      "similar_components": [
+        {
+          "vue_name": "Tab",
+          "vue_path": "educacross-frontoffice/src/components/tab/Tab.vue",
+          "similarity": 100.0
+        }
+      ]
+    }
+  ]
+}
