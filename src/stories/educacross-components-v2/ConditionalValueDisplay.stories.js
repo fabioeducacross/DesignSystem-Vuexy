@@ -4,8 +4,8 @@
  * Componente para exibir conteúdo condicional (disponível, indisponível, loading)
  * 
  * @component ConditionalValueDisplay
+ * @source educacross-frontoffice/src/components/badge/ConditionalValueDisplay.vue
  * @category Educacross Components V2 / Feedback
- * @source educacross-frontoffice (perfis, relatórios, dados opcionais)
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

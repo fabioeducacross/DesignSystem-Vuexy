@@ -4,8 +4,8 @@
  * Modal com lista de FAQ (Frequently Asked Questions)
  * 
  * @component DefaultFAQModal
+ * @source educacross-frontoffice/src/components/modal/DefaultFAQModal.vue
  * @category Educacross Components V2 / Modals
- * @source educacross-frontoffice (ajuda, suporte)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

@@ -4,8 +4,8 @@
  * Tags/badges para classificar tipos de exercícios educacionais
  * 
  * @component ExerciseType
+ * @source educacross-frontoffice/src/components/exercise-type/reading-meter/ExerciseType.vue
  * @category Educacross Components V2 / Data Display
- * @source educacross-frontoffice (biblioteca de missões, criação de exercícios)
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

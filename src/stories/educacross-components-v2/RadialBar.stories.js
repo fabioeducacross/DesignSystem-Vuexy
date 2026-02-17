@@ -4,8 +4,8 @@
  * Gráfico circular tipo "gauge" para percentuais
  * 
  * @component RadialBar
+ * @source educacross-frontoffice/src/components/chart/RadialBar.vue
  * @category Educacross Components V2 / Charts
- * @source educacross-frontoffice (métricas de desempenho)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

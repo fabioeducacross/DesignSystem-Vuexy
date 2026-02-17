@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-02-17T12:07:41.625429",
+  "generated_at": "2026-02-17T12:17:04.527228",
   "summary": {
     "total_components": 125,
-    "passed": 83,
+    "passed": 96,
     "warnings": 0,
     "errors": 0,
-    "not_found": 42
+    "not_found": 29
   },
   "components": [
     {
@@ -137,13 +137,6 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'label' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'label' é realmente necessário ou se há erro de digitação",
-          "prop_name": "label"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
           "message": "ArgType 'level' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'level' é realmente necessário ou se há erro de digitação",
           "prop_name": "level"
@@ -154,6 +147,13 @@
           "message": "ArgType 'pill' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'pill' é realmente necessário ou se há erro de digitação",
           "prop_name": "pill"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'label' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'label' é realmente necessário ou se há erro de digitação",
+          "prop_name": "label"
         },
         {
           "type": "html_structure",
@@ -167,14 +167,14 @@
     {
       "name": "BarChart",
       "story_path": "src\\stories\\educacross-components-v2\\BarChart.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\chart\\BarChart.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, relatórios)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 1 elementos HTML principais: VueApexCharts",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -197,14 +197,28 @@
     {
       "name": "CancelMission",
       "story_path": "src\\stories\\educacross-components-v2\\CancelMission.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\mission-plus\\CancelMission.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (gestão de missões)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'showReason' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'showReason' é realmente necessário ou se há erro de digitação",
+          "prop_name": "showReason"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
+          "prop_name": "variant"
+        },
+        {
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 7 elementos HTML principais: div, img, h2, p, b-button",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -227,14 +241,14 @@
     {
       "name": "CardsList",
       "story_path": "src\\stories\\educacross-components-v2\\CardsList.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\CardsList.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (listas de missões, conteúdos)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: div, b-overlay, span, Card",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -272,14 +286,14 @@
     {
       "name": "CertificateList",
       "story_path": "src\\stories\\educacross-components-v2\\CertificateList.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\PDFs\\certificate\\CertificateList.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil do aluno, conquistas)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, Certificate",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -302,14 +316,14 @@
     {
       "name": "ConditionalValueDisplay",
       "story_path": "src\\stories\\educacross-components-v2\\ConditionalValueDisplay.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\badge\\ConditionalValueDisplay.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfis, relatórios, dados opcionais)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: div, template, b-badge, b-img, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -332,14 +346,14 @@
     {
       "name": "DefaultChart",
       "story_path": "src\\stories\\educacross-components-v2\\DefaultChart.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\chart\\DefaultChart.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, análises)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 1 elementos HTML principais: VueApexCharts",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -347,14 +361,14 @@
     {
       "name": "DefaultFAQModal",
       "story_path": "src\\stories\\educacross-components-v2\\DefaultFAQModal.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\modal\\DefaultFAQModal.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (ajuda, suporte)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 6 elementos HTML principais: b-modal, div, span, p, b-button",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -512,14 +526,14 @@
     {
       "name": "ExerciseType",
       "story_path": "src\\stories\\educacross-components-v2\\ExerciseType.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\exercise-type\\reading-meter\\ExerciseType.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (biblioteca de missões, criação de exercícios)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 3 elementos HTML principais: div, WordList, FullText",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -548,6 +562,13 @@
         {
           "type": "extra_argtype",
           "severity": "info",
+          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
+          "prop_name": "loading"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
           "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
           "prop_name": "missionName"
@@ -558,13 +579,6 @@
           "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
           "prop_name": "expirationDate"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
-          "prop_name": "loading"
         },
         {
           "type": "html_structure",
@@ -623,14 +637,14 @@
     {
       "name": "GameDetailsModal",
       "story_path": "src\\stories\\educacross-components-v2\\GameDetailsModal.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\modal\\GameDetailsModal.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (missões gamificadas)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: b-modal, template, button, span",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -968,14 +982,14 @@
     {
       "name": "MissionDetails",
       "story_path": "src\\stories\\educacross-components-v2\\MissionDetails.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\missions\\MissionDetails.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (gestão de missões)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 12 elementos HTML principais: b-overlay, h1, div, b-badge, ActivityIcon",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -989,16 +1003,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
-          "prop_name": "studentsInfo"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
-          "prop_name": "missionName"
+          "message": "ArgType 'startDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'startDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "startDate"
         },
         {
           "type": "extra_argtype",
@@ -1010,9 +1017,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'className' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'className' é realmente necessário ou se há erro de digitação",
-          "prop_name": "className"
+          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
+          "prop_name": "missionName"
         },
         {
           "type": "extra_argtype",
@@ -1024,9 +1031,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'startDate' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'startDate' é realmente necessário ou se há erro de digitação",
-          "prop_name": "startDate"
+          "message": "ArgType 'className' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'className' é realmente necessário ou se há erro de digitação",
+          "prop_name": "className"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
+          "prop_name": "studentsInfo"
         },
         {
           "type": "html_structure",
@@ -1040,14 +1054,14 @@
     {
       "name": "MissionVisualization",
       "story_path": "src\\stories\\educacross-components-v2\\MissionVisualization.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\missions\\MissionVisualization.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (visualização de missões)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 5 elementos HTML principais: div, span, img, b-img-lazy, h3",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -1190,14 +1204,14 @@
     {
       "name": "PieChart",
       "story_path": "src\\stories\\educacross-components-v2\\PieChart.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\chart\\PieChart.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (dashboards, relatórios)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 4 elementos HTML principais: div, vue-apex-charts, svg, circle",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -1385,14 +1399,14 @@
     {
       "name": "RadialBar",
       "story_path": "src\\stories\\educacross-components-v2\\RadialBar.stories.js",
-      "vue_path": null,
-      "status": "not_found",
+      "vue_path": "educacross-frontoffice\\src\\components\\chart\\RadialBar.vue",
+      "status": "passed",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (métricas de desempenho)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "html_structure",
+          "severity": "info",
+          "message": "Componente Vue usa 2 elementos HTML principais: div, VueApexCharts",
+          "suggestion": "Verificar manualmente se a story renderiza estrutura similar",
           "prop_name": null
         }
       ]
@@ -1436,6 +1450,20 @@
         {
           "type": "extra_argtype",
           "severity": "info",
+          "message": "ArgType 'disabled' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'disabled' é realmente necessário ou se há erro de digitação",
+          "prop_name": "disabled"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'selectedSerie' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedSerie' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedSerie"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
           "message": "ArgType 'sort' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'sort' é realmente necessário ou se há erro de digitação",
           "prop_name": "sort"
@@ -1450,23 +1478,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'selectedSerie' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'selectedSerie' é realmente necessário ou se há erro de digitação",
-          "prop_name": "selectedSerie"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
           "message": "ArgType 'showTooltip' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'showTooltip' é realmente necessário ou se há erro de digitação",
           "prop_name": "showTooltip"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'disabled' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'disabled' é realmente necessário ou se há erro de digitação",
-          "prop_name": "disabled"
         },
         {
           "type": "html_structure",

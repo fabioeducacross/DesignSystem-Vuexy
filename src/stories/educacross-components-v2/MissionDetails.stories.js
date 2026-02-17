@@ -4,8 +4,8 @@
  * Visualização detalhada de missão com objetivos, timeline e recursos
  * 
  * @component MissionDetails
+ * @source educacross-frontoffice/src/components/missions/MissionDetails.vue
  * @category Educacross Components V2 / Missions
- * @source educacross-frontoffice (gestão de missões)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

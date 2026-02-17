@@ -4,8 +4,8 @@
  * Lista de certificados de conclusão de missões/cursos
  * 
  * @component CertificateList
+ * @source educacross-frontoffice/src/components/PDFs/certificate/CertificateList.vue
  * @category Educacross Components V2 / Lists
- * @source educacross-frontoffice (perfil do aluno, conquistas)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

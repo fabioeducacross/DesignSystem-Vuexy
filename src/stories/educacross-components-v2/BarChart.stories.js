@@ -4,8 +4,8 @@
  * Gráfico de barras para dashboards e relatórios educacionais
  * 
  * @component BarChart
+ * @source educacross-frontoffice/src/components/chart/BarChart.vue
  * @category Educacross Components V2 / Charts
- * @source educacross-frontoffice (dashboards, relatórios)
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0
