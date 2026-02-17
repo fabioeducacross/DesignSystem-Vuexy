@@ -5,7 +5,7 @@
  * 
  * @component Tab
  * @category Educacross Components V2 / Navigation
- * @source educacross-frontoffice/src/components/Tab.vue
+ * @source educacross-frontoffice/src/components/tab/Tab.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

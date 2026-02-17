@@ -5,7 +5,7 @@
  * 
  * @component QuestionsListDetail
  * @category Educacross Components V2 / Lists
- * @source educacross-frontoffice (banco de questões)
+ * @source educacross-frontoffice/src/components/evaluations/questionsListDetail/QuestionsListDetail.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

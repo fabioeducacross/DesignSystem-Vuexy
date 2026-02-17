@@ -5,7 +5,7 @@
  * 
  * @component EvaluationsHtmlContentRenderer
  * @category Educacross Components V2 / Content
- * @source educacross-frontoffice/src/components/EvaluationsHtmlContentRenderer.vue
+ * @source educacross-frontoffice/src/components/evaluations/shared/EvaluationsHtmlContentRenderer.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

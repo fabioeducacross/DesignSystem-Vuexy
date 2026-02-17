@@ -5,7 +5,7 @@
  * 
  * @component QuestionStatus
  * @category Educacross Components V2 / Data Display
- * @source educacross-frontoffice (resultado de missões, visualização de questões)
+ * @source educacross-frontoffice/src/components/question/QuestionStatus.vue
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

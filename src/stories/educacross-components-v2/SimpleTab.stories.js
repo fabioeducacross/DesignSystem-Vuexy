@@ -5,7 +5,7 @@
  * 
  * @component SimpleTab
  * @category Educacross Components V2 / Navigation
- * @source educacross-frontoffice (relatórios, perfis)
+ * @source educacross-frontoffice/src/components/tab/SimpleTab.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

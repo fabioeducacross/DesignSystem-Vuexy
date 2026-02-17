@@ -5,7 +5,7 @@
  * 
  * @component StudentGameDetailsModal
  * @category Educacross Components V2 / Modals
- * @source educacross-frontoffice (relatórios de missões)
+ * @source educacross-frontoffice/src/components/modal/StudentGameDetailsModal.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

@@ -5,7 +5,7 @@
  * 
  * @component ListTableRanking
  * @category Educacross Components V2 / Tables
- * @source educacross-frontoffice (rankings de alunos, turmas, disciplinas)
+ * @source educacross-frontoffice/src/components/table/ListTableRanking.vue
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

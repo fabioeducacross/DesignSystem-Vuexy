@@ -5,7 +5,7 @@
  * 
  * @component PerformanceCell
  * @category Educacross Components V2 / Data Display
- * @source educacross-frontoffice (uso comum em tabelas de relatórios)
+ * @source educacross-frontoffice/src/components/cells/PerformanceCell.vue
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0

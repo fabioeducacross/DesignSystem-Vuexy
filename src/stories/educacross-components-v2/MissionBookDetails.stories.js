@@ -5,7 +5,7 @@
  * 
  * @component MissionBookDetails
  * @category Educacross Components V2 / Missions
- * @source educacross-frontoffice (biblioteca, missões)
+ * @source educacross-frontoffice/src/components/mission-plus/MissionBookDetails.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

@@ -7,7 +7,7 @@
  * 
  * @component DynamicMediaCard
  * @category Educacross Components V2
- * @source educacross-frontoffice/src/components/cards/DynamicMediaCard.vue
+ * @source educacross-frontoffice/src/components/card/DynamicMediaCard.vue
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

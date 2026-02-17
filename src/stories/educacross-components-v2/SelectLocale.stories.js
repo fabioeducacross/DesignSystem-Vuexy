@@ -5,7 +5,7 @@
  * 
  * @component SelectLocale
  * @category Educacross Components V2 / Forms
- * @source educacross-frontoffice (header, perfil usuário, configurações)
+ * @source educacross-frontoffice/src/components/locale/SelectLocale.vue
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * @since 2.0.0
