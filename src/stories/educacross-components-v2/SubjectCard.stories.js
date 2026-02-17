@@ -4,7 +4,8 @@
  * Card para exibir disciplinas escolares com progresso e estatísticas
  * 
  * @component SubjectCard
- * @category Cards
+ * @category Doc-Only / Cards
+ * @note Possível variação de SubjectBand. Necessita análise.
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * 

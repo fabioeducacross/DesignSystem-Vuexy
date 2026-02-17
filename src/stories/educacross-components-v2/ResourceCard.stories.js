@@ -5,7 +5,8 @@
  * com suporte a download, preview e reprodução inline.
  * 
  * @component ResourceCard
- * @category Educacross Components V2 / Cards
+ * @category Doc-Only / Educacross Components V2 / Cards
+ * @note Componente foi removido ou substituído por MediaCard.
  * @figma Frame 7801:25016 - "[professor] Ajudas e Materiais"
  * @priority P0 - Critical
  * @status IN_PROGRESS

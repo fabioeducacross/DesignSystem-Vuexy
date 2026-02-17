@@ -5,7 +5,9 @@
  * usada em perfis de professores e configurações.
  * 
  * @component ProfilePicture
+ * @category Doc-Only
  * @usage Perfil de professor, configurações de conta
+ * @note Componente foi removido ou consolidado com outros componentes de avatar.
  */
 
 export default {

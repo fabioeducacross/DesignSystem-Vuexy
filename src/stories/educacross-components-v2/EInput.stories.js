@@ -7,7 +7,9 @@ import { createDocPage, createExampleCard, createPropsTable } from '../_helpers/
  * 
  * @component EInput
  * @source educacross-frontoffice/src/components/form/EInput.vue
- * @category Forms
+ * @note Especificação visual. Componente Vue nunca foi implementado.
+ * @planned educacross-frontoffice/src/components/form/EInput.vue
+ * @category Doc-Only / Forms
  * @priority P1 - Core UI
  * @status PIXEL-PERFECT
  * 

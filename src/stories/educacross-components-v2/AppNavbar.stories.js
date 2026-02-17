@@ -4,8 +4,9 @@
  * Barra de navegação superior com logo, botão "Como Jogar?" e dropdown usuário
  * 
  * @component AppNavbar
- * @category Educacross Components V2 / Navigation
+ * @category Doc-Only / Educacross Components V2 / Navigation
  * @source educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue (linhas 6-68)
+ * @note Documentação de trecho de código de ManageAccount.vue (linhas 6-68). Não é componente reutilizável.
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

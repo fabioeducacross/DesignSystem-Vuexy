@@ -83,6 +83,8 @@ class StorybookStory:
     arg_types: List[StoryArgType] = None
     title: Optional[str] = None
     status: Optional[str] = None
+    doc_only: bool = False  # Se é componente Doc-Only (documentação apenas)
+    doc_only_note: Optional[str] = None  # Nota explicativa do Doc-Only
 
     def __post_init__(self):
         if self.arg_types is None:
@@ -277,6 +279,19 @@ class StorybookParser:
         return None
     
     @staticmethod
+    def is_doc_only(content: str) -> bool:
+        """Verifica se o componente é marcado como Doc-Only"""
+        return bool(re.search(r'@category.*Doc-Only', content, re.IGNORECASE))
+    
+    @staticmethod
+    def extract_doc_only_note(content: str) -> Optional[str]:
+        """Extrai a nota explicativa do Doc-Only"""
+        note_match = re.search(r'@note\s+([^\n]+)', content)
+        if note_match:
+            return note_match.group(1).strip()
+        return None
+    
+    @staticmethod
     def extract_status(content: str) -> Optional[str]:
         """Extrai o status do componente (@status)"""
         status_match = re.search(r'@status\s+([^\n]+)', content)
@@ -349,7 +364,9 @@ class StorybookParser:
             source_path=cls.extract_source_path(content),
             arg_types=cls.extract_arg_types(content),
             title=cls.extract_title(content),
-            status=cls.extract_status(content)
+            status=cls.extract_status(content),
+            doc_only=cls.is_doc_only(content),
+            doc_only_note=cls.extract_doc_only_note(content)
         )
 
 
@@ -473,9 +490,11 @@ class ReportGenerator:
         summary = {
             'total_components': len(validations),
             'passed': sum(1 for v in validations if v.status == 'passed'),
+            'doc_only': sum(1 for v in validations if v.status == 'doc_only'),
             'warnings': sum(1 for v in validations if v.status == 'warning'),
             'errors': sum(1 for v in validations if v.status == 'error'),
-            'not_found': sum(1 for v in validations if v.status == 'not_found')
+            'not_found': sum(1 for v in validations if v.status == 'not_found'),
+            'total_validated': sum(1 for v in validations if v.status in ['passed', 'doc_only'])
         }
         
         report = {
@@ -514,9 +533,11 @@ class ReportGenerator:
         summary = {
             'total': len(validations),
             'passed': sum(1 for v in validations if v.status == 'passed'),
+            'doc_only': sum(1 for v in validations if v.status == 'doc_only'),
             'warnings': sum(1 for v in validations if v.status == 'warning'),
             'errors': sum(1 for v in validations if v.status == 'error'),
-            'not_found': sum(1 for v in validations if v.status == 'not_found')
+            'not_found': sum(1 for v in validations if v.status == 'not_found'),
+            'total_validated': sum(1 for v in validations if v.status in ['passed', 'doc_only'])
         }
         
         lines = [
@@ -647,6 +668,23 @@ def main():
         # Encontrar componente Vue correspondente
         vue_file = find_vue_component(story.source_path) if story.source_path else None
         
+        # Se é Doc-Only, considerar como válido
+        if story.doc_only:
+            validations.append(ComponentValidation(
+                component_name=story.name,
+                story_path=story.path,
+                vue_path=None,
+                status='doc_only',
+                issues=[ValidationIssue(
+                    type='doc_only',
+                    severity='info',
+                    message=f"📚 Doc-Only: {story.doc_only_note or 'Componente de documentação apenas'}",
+                    suggestion="Este componente é documentação/especificação visual, sem arquivo .vue correspondente"
+                )]
+            ))
+            print("📚 DOC-ONLY")
+            continue
+        
         if not vue_file:
             validations.append(ComponentValidation(
                 component_name=story.name,
@@ -678,9 +716,10 @@ def main():
             'passed': '✅',
             'warning': '⚠️ ',
             'error': '❌',
-            'not_found': '🔍'
+            'not_found': '🔍',
+            'doc_only': '📚'
         }
-        print(f"{status_emoji[validation.status]} {validation.status.upper()}")
+        print(f"{status_emoji.get(validation.status, '❓')} {validation.status.upper()}")
     
     print()
     print("=" * 60)
@@ -690,6 +729,7 @@ def main():
     summary = {
         'total': len(validations),
         'passed': sum(1 for v in validations if v.status == 'passed'),
+        'doc_only': sum(1 for v in validations if v.status == 'doc_only'),
         'warnings': sum(1 for v in validations if v.status == 'warning'),
         'errors': sum(1 for v in validations if v.status == 'error'),
         'not_found': sum(1 for v in validations if v.status == 'not_found')
@@ -697,9 +737,12 @@ def main():
     
     print(f"Total de componentes: {summary['total']}")
     print(f"✅ Aprovados: {summary['passed']} ({summary['passed']/summary['total']*100:.1f}%)")
+    print(f"📚 Doc-Only: {summary['doc_only']} ({summary['doc_only']/summary['total']*100:.1f}%)")
     print(f"⚠️  Avisos: {summary['warnings']} ({summary['warnings']/summary['total']*100:.1f}%)")
     print(f"❌ Erros: {summary['errors']} ({summary['errors']/summary['total']*100:.1f}%)")
     print(f"🔍 Não encontrados: {summary['not_found']}")
+    print()
+    print(f"🎯 Total Validados: {summary['passed'] + summary['doc_only']}/{summary['total']} ({(summary['passed'] + summary['doc_only'])/summary['total']*100:.1f}%)")
     print()
     
     # Gerar relatórios

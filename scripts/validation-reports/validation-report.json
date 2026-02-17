@@ -1,24 +1,26 @@
 {
-  "generated_at": "2026-02-17T13:11:59.391023",
+  "generated_at": "2026-02-17T13:37:52.665677",
   "summary": {
     "total_components": 125,
     "passed": 113,
+    "doc_only": 12,
     "warnings": 0,
     "errors": 0,
-    "not_found": 12
+    "not_found": 0,
+    "total_validated": 125
   },
   "components": [
     {
       "name": "AcceptOrRejectAccess",
       "story_path": "src\\stories\\educacross-components-v2\\AcceptOrRejectAccess.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: None",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Lógica específica de página. Não componentizado no Vue.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -87,13 +89,13 @@
       "name": "AppNavbar",
       "story_path": "src\\stories\\educacross-components-v2\\AppNavbar.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/views/pages/auth-context/manage-account/ManageAccount.vue (linhas 6-68)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Documentação de trecho de código de ManageAccount.vue (linhas 6-68). Não é componente reutilizável.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -117,13 +119,13 @@
       "name": "BadgeList",
       "story_path": "src\\stories\\educacross-components-v2\\BadgeList.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil de aluno, gamificação)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Conceito educacional documentado. Não componentizado no Vue.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -203,16 +205,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'showReason' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'showReason' é realmente necessário ou se há erro de digitação",
-          "prop_name": "showReason"
+          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
+          "prop_name": "variant"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
-          "prop_name": "variant"
+          "message": "ArgType 'showReason' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'showReason' é realmente necessário ou se há erro de digitação",
+          "prop_name": "showReason"
         },
         {
           "type": "html_structure",
@@ -427,16 +429,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'format' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'format' é realmente necessário ou se há erro de digitação",
-          "prop_name": "format"
+          "message": "ArgType 'color' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'color' é realmente necessário ou se há erro de digitação",
+          "prop_name": "color"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'color' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'color' é realmente necessário ou se há erro de digitação",
-          "prop_name": "color"
+          "message": "ArgType 'format' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'format' é realmente necessário ou se há erro de digitação",
+          "prop_name": "format"
         },
         {
           "type": "html_structure",
@@ -451,13 +453,13 @@
       "name": "EditProfileStudentNew",
       "story_path": "src\\stories\\educacross-components-v2\\EditProfileStudentNew.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (perfil do aluno)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Especificação de tela. Não componentizado no Vue.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -481,13 +483,13 @@
       "name": "EInput",
       "story_path": "src\\stories\\educacross-components-v2\\EInput.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/form/EInput.vue",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Especificação visual. Componente Vue nunca foi implementado.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -511,13 +513,13 @@
       "name": "ETextarea",
       "story_path": "src\\stories\\educacross-components-v2\\ETextarea.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/form/ETextarea.vue",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Especificação visual. Componente Vue nunca foi implementado.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -576,16 +578,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
-          "prop_name": "missionName"
+          "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "expirationDate"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
-          "prop_name": "expirationDate"
+          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
+          "prop_name": "missionName"
         },
         {
           "type": "extra_argtype",
@@ -622,13 +624,13 @@
       "name": "FilterChip",
       "story_path": "src\\stories\\educacross-components-v2\\FilterChip.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice (filtros em dashboards, relatórios)",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Padrão de uso documentado. Não componentizado no Vue.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -957,16 +959,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'trend' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'trend' é realmente necessário ou se há erro de digitação",
-          "prop_name": "trend"
+          "message": "ArgType 'iconColor' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'iconColor' é realmente necessário ou se há erro de digitação",
+          "prop_name": "iconColor"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'iconColor' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'iconColor' é realmente necessário ou se há erro de digitação",
-          "prop_name": "iconColor"
+          "message": "ArgType 'trend' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'trend' é realmente necessário ou se há erro de digitação",
+          "prop_name": "trend"
         },
         {
           "type": "html_structure",
@@ -1031,9 +1033,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'className' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'className' é realmente necessário ou se há erro de digitação",
-          "prop_name": "className"
+          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
+          "prop_name": "loading"
         },
         {
           "type": "extra_argtype",
@@ -1041,13 +1043,6 @@
           "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
           "prop_name": "studentsInfo"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'endDate' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'endDate' é realmente necessário ou se há erro de digitação",
-          "prop_name": "endDate"
         },
         {
           "type": "extra_argtype",
@@ -1066,9 +1061,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'loading' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'loading' é realmente necessário ou se há erro de digitação",
-          "prop_name": "loading"
+          "message": "ArgType 'endDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'endDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "endDate"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'className' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'className' é realmente necessário ou se há erro de digitação",
+          "prop_name": "className"
         },
         {
           "type": "html_structure",
@@ -1263,13 +1265,13 @@
       "name": "ProfilePicture",
       "story_path": "src\\stories\\educacross-components-v2\\ProfilePicture.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: None",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Componente foi removido ou consolidado com outros componentes de avatar.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -1458,13 +1460,13 @@
       "name": "ResourceCard",
       "story_path": "src\\stories\\educacross-components-v2\\ResourceCard.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: None",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Componente foi removido ou substituído por MediaCard.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -1478,9 +1480,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'sort' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'sort' é realmente necessário ou se há erro de digitação",
-          "prop_name": "sort"
+          "message": "ArgType 'disabled' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'disabled' é realmente necessário ou se há erro de digitação",
+          "prop_name": "disabled"
         },
         {
           "type": "extra_argtype",
@@ -1492,9 +1494,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'disabled' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'disabled' é realmente necessário ou se há erro de digitação",
-          "prop_name": "disabled"
+          "message": "ArgType 'selectedClass' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedClass' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedClass"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'sort' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'sort' é realmente necessário ou se há erro de digitação",
+          "prop_name": "sort"
         },
         {
           "type": "extra_argtype",
@@ -1502,13 +1511,6 @@
           "message": "ArgType 'showTooltip' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'showTooltip' é realmente necessário ou se há erro de digitação",
           "prop_name": "showTooltip"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'selectedClass' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'selectedClass' é realmente necessário ou se há erro de digitação",
-          "prop_name": "selectedClass"
         },
         {
           "type": "html_structure",
@@ -1612,13 +1614,13 @@
       "name": "Sidebar",
       "story_path": "src\\stories\\educacross-components-v2\\Sidebar.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/sidebar/Sidebar.vue",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Conceito arquitetural composto por múltiplos arquivos Vue (VerticalNavMenu, VerticalNavMenuItems, etc.).",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -1647,6 +1649,13 @@
         {
           "type": "extra_argtype",
           "severity": "info",
+          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
+          "prop_name": "variant"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
           "message": "ArgType 'size' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'size' é realmente necessário ou se há erro de digitação",
           "prop_name": "size"
@@ -1657,13 +1666,6 @@
           "message": "ArgType 'orientation' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'orientation' é realmente necessário ou se há erro de digitação",
           "prop_name": "orientation"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
-          "prop_name": "variant"
         },
         {
           "type": "html_structure",
@@ -1693,13 +1695,13 @@
       "name": "StudentAvatar",
       "story_path": "src\\stories\\educacross-components-v2\\StudentAvatar.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: educacross-frontoffice/src/components/student/StudentAvatar.vue",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Componente foi removido ou consolidado com outros componentes de avatar.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]
@@ -1775,13 +1777,13 @@
       "name": "SubjectCard",
       "story_path": "src\\stories\\educacross-components-v2\\SubjectCard.stories.js",
       "vue_path": null,
-      "status": "not_found",
+      "status": "doc_only",
       "issues": [
         {
-          "type": "not_found",
-          "severity": "critical",
-          "message": "Componente Vue não encontrado. @source: None",
-          "suggestion": "Verificar se o caminho @source está correto no header da story",
+          "type": "doc_only",
+          "severity": "info",
+          "message": "📚 Doc-Only: Possível variação de SubjectBand. Necessita análise.",
+          "suggestion": "Este componente é documentação/especificação visual, sem arquivo .vue correspondente",
           "prop_name": null
         }
       ]

@@ -4,8 +4,9 @@
  * Modal para edição de dados do perfil do aluno (nome, avatar, mascote)
  * 
  * @component EditProfileStudentNew
- * @category Educacross Components V2 / Modals
+ * @category Doc-Only / Educacross Components V2 / Modals
  * @source educacross-frontoffice (perfil do aluno)
+ * @note Especificação de tela. Não componentizado no Vue.
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0

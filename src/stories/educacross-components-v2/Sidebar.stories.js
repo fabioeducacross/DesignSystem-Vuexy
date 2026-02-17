@@ -6,8 +6,9 @@
  * Role-based navigation (Teacher, Coordinator, Student) with multi-level hierarchy.
  * 
  * @component Sidebar
- * @category Educacross Components V2
+ * @category Doc-Only / Educacross Components V2
  * @source educacross-frontoffice/src/components/sidebar/Sidebar.vue
+ * @note Conceito arquitetural composto por múltiplos arquivos Vue (VerticalNavMenu, VerticalNavMenuItems, etc.).
  * @priority P2
  * @status PIXEL-PERFECT
  * @since 2.0.0
