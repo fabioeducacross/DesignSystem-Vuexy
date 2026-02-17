@@ -21,6 +21,11 @@ O script `scripts/validate-components.py` realiza três tipos de validação:
 - 🔍 Props obrigatórias sem valor default precisam de exemplos realistas na story
 - 📝 Ajuda a identificar stories com dados de teste inadequados
 
+### 4. **Componentes Doc-Only** 📚
+- Componentes marcados com `@category Doc-Only` são válidos mesmo sem arquivo `.vue`
+- Incluem: protótipos, conceitos arquiteturais, componentes deletados
+- Mantidos para documentação visual e histórico de design
+
 ## 🚀 Como Usar
 
 ### Execução Básica
@@ -74,6 +79,56 @@ Total: 125 stories
 ❌ Erros: 0 (0.0%)
 🔍 Não Encontrados: 56 (44.8%)
 ```
+
+## 📋 Como Manter 100% de Validação
+
+### Ao Adicionar Novo Componente
+
+1. **Criar story Storybook**:
+   ```javascript
+   /**
+    * @component MeuComponente
+    * @source educacross-frontoffice/src/components/path/MeuComponente.vue
+    * @category [categoria]
+    */
+   ```
+
+2. **Documentar todas as props em `argTypes`**:
+   ```javascript
+   argTypes: {
+     propName: {
+       control: 'text',
+       description: 'Descrição clara da prop',
+       defaultValue: 'valor default'
+     }
+   }
+   ```
+
+3. **Validar antes de commit**:
+   ```bash
+   python scripts/validate-components.py
+   ```
+
+### Componentes Doc-Only
+
+**Quando usar**: Specs de design, protótipos, conceitos arquiteturais ou componentes deletados que ainda têm valor educacional.
+
+**Como marcar**:
+```javascript
+/**
+ * @component MeuPrototipo
+ * @category Doc-Only
+ * @note Este é um protótipo de design, não possui implementação Vue correspondente
+ */
+```
+
+**Exemplos válidos**:
+- **Protótipos**: EInput, ETextarea, FilterChip (specs não implementadas)
+- **Conceitos**: Sidebar (composto por múltiplos arquivos)
+- **Deletados**: ProfilePicture, ResourceCard (removidos na refatoração)
+- **Parciais**: AppNavbar (snippet de código, não componente reutilizável)
+
+---
 
 ## 🔍 Problemas Comuns e Soluções
 
