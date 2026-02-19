@@ -1,19 +1,12 @@
 # Relatório de Validação de Componentes Educacross
 
-**Gerado em**: 17/02/2026 13:37:52
+**Gerado em**: 19/02/2026 17:52:01
 
 ## 📊 Sumário Executivo
 
-- ✅ **Aprovados**: 113/125 (90.4%)
+- ✅ **Aprovados**: 0/125 (0.0%)
 - ⚠️  **Avisos**: 0/125 (0.0%)
 - ❌ **Erros**: 0/125 (0.0%)
-- 🔍 **Não Encontrados**: 0/125
+- 🔍 **Não Encontrados**: 113/125
 
 ---
-
-## ✅ Componentes Aprovados (113)
-
-AlbumCover, AppCollapse, AppCollapseItem, AppLanguageSelector, BackgroundSpace, BadgeStatus, BarChart, ButtonWaitAction, CancelMission, Card, CardsList, CellStatus, Certificate, CertificateList, ChangeProficiency, ConditionalValueDisplay, CopyLink, DefaultChart, DefaultFAQModal, DeleteGuide
-
-
-*...e mais 93 componentes aprovados*
