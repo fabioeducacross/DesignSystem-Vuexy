@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T13:37:52.665677",
+  "generated_at": "2026-02-19T16:54:58.897550",
   "summary": {
     "total_components": 125,
     "passed": 113,
@@ -139,16 +139,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'level' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'level' é realmente necessário ou se há erro de digitação",
-          "prop_name": "level"
+          "message": "ArgType 'pill' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'pill' é realmente necessário ou se há erro de digitação",
+          "prop_name": "pill"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'pill' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'pill' é realmente necessário ou se há erro de digitação",
-          "prop_name": "pill"
+          "message": "ArgType 'level' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'level' é realmente necessário ou se há erro de digitação",
+          "prop_name": "level"
         },
         {
           "type": "extra_argtype",
@@ -578,16 +578,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
-          "prop_name": "expirationDate"
+          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
+          "prop_name": "missionName"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
-          "prop_name": "missionName"
+          "message": "ArgType 'expirationDate' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'expirationDate' é realmente necessário ou se há erro de digitação",
+          "prop_name": "expirationDate"
         },
         {
           "type": "extra_argtype",
@@ -959,16 +959,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'iconColor' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'iconColor' é realmente necessário ou se há erro de digitação",
-          "prop_name": "iconColor"
+          "message": "ArgType 'trend' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'trend' é realmente necessário ou se há erro de digitação",
+          "prop_name": "trend"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'trend' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'trend' é realmente necessário ou se há erro de digitação",
-          "prop_name": "trend"
+          "message": "ArgType 'iconColor' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'iconColor' é realmente necessário ou se há erro de digitação",
+          "prop_name": "iconColor"
         },
         {
           "type": "html_structure",
@@ -1040,13 +1040,6 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
-          "prop_name": "studentsInfo"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
           "message": "ArgType 'missionName' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'missionName' é realmente necessário ou se há erro de digitação",
           "prop_name": "missionName"
@@ -1064,6 +1057,13 @@
           "message": "ArgType 'endDate' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'endDate' é realmente necessário ou se há erro de digitação",
           "prop_name": "endDate"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'studentsInfo' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'studentsInfo' é realmente necessário ou se há erro de digitação",
+          "prop_name": "studentsInfo"
         },
         {
           "type": "extra_argtype",
@@ -1487,20 +1487,6 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'selectedSerie' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'selectedSerie' é realmente necessário ou se há erro de digitação",
-          "prop_name": "selectedSerie"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
-          "message": "ArgType 'selectedClass' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'selectedClass' é realmente necessário ou se há erro de digitação",
-          "prop_name": "selectedClass"
-        },
-        {
-          "type": "extra_argtype",
-          "severity": "info",
           "message": "ArgType 'sort' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'sort' é realmente necessário ou se há erro de digitação",
           "prop_name": "sort"
@@ -1511,6 +1497,20 @@
           "message": "ArgType 'showTooltip' existe na story mas não é uma prop do Vue",
           "suggestion": "Verificar se 'showTooltip' é realmente necessário ou se há erro de digitação",
           "prop_name": "showTooltip"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'selectedSerie' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedSerie' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedSerie"
+        },
+        {
+          "type": "extra_argtype",
+          "severity": "info",
+          "message": "ArgType 'selectedClass' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'selectedClass' é realmente necessário ou se há erro de digitação",
+          "prop_name": "selectedClass"
         },
         {
           "type": "html_structure",
@@ -1560,16 +1560,16 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'showFlag' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'showFlag' é realmente necessário ou se há erro de digitação",
-          "prop_name": "showFlag"
+          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
+          "prop_name": "variant"
         },
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
-          "prop_name": "variant"
+          "message": "ArgType 'showFlag' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'showFlag' é realmente necessário ou se há erro de digitação",
+          "prop_name": "showFlag"
         },
         {
           "type": "html_structure",
@@ -1649,9 +1649,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
-          "prop_name": "variant"
+          "message": "ArgType 'orientation' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'orientation' é realmente necessário ou se há erro de digitação",
+          "prop_name": "orientation"
         },
         {
           "type": "extra_argtype",
@@ -1663,9 +1663,9 @@
         {
           "type": "extra_argtype",
           "severity": "info",
-          "message": "ArgType 'orientation' existe na story mas não é uma prop do Vue",
-          "suggestion": "Verificar se 'orientation' é realmente necessário ou se há erro de digitação",
-          "prop_name": "orientation"
+          "message": "ArgType 'variant' existe na story mas não é uma prop do Vue",
+          "suggestion": "Verificar se 'variant' é realmente necessário ou se há erro de digitação",
+          "prop_name": "variant"
         },
         {
           "type": "html_structure",
