@@ -1,0 +1,37 @@
+.rej
+*.rej
+*.orig
+bin/
+dist/
+node_modules/
+temp/
+versions/
+*.zip
+/bin
+# package-lock.json
+docs/.vuepress/dist/
+yarn.lock
+yarn-error.log
+vuexy-shell-scripts
+cert/
+.vs/
+.env
+.idea/
+coverage/
+create_hotfix.sh
+.python-version
+/.DS_Store
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+src/assets/scss/variables/_whitelabel-colors.scss
+
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+
+.venv
+
+# LLM Migration Tool
+llm-migration-tool/.migration_progress.json

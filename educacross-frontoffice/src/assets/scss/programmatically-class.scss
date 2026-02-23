@@ -1,0 +1,52 @@
+@use 'sass:list';
+
+@import '@/assets/scss/variables/_variables.scss';
+
+$variants: (
+  'primary': $primary,
+  'success': $success,
+  'danger': $danger,
+  'warning': $warning,
+  'secondary': $gray-600,
+  'dark': $dark,
+  'grey': $grey,
+  'grey-light': $grey-light,
+  'white': $white,
+  'black': $black,
+);
+
+@each $var, $varColor in $variants {
+  .bg-st-#{$var} {
+    background: rgba($varColor, 0.12);
+  }
+
+  .color-#{$var} {
+    color: $varColor;
+  }
+
+  .shadow-#{$var} {
+    box-shadow: 0 0 10px $varColor;
+  }
+
+  .border-#{$var} {
+    border-color: $varColor;
+  }
+}
+
+@each $var, $varColor in $theme-colors {
+  .bg-st-#{$var} {
+    background: rgba($varColor, 0.12);
+  }
+
+  .color-#{$var} {
+    color: $varColor;
+  }
+
+  .shadow-#{$var} {
+    box-shadow: 0 0 10px $varColor;
+  }
+
+  .border-#{$var} {
+    border-color: $varColor;
+  }
+}

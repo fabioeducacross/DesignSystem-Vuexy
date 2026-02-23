@@ -1,0 +1,1647 @@
+//text color pattern
+@import '@/assets/scss/variables/_variables.scss';
+@import '@core/scss/vue/libs/vue-select.scss';
+
+$color-new-gray: rgba(108, 117, 125, 0.12);
+$content-color: #626262;
+$theme-background: #efefef;
+
+/*========================================================
+        DARK THEME
+=========================================================*/
+
+$sidebar-dark-bg: #10163a;
+$content-dark-bg: #262c49;
+$dark-card-color: #10163a;
+$table-dark-stripe: #212744;
+$table-light-stripe: #262c49;
+$grid-dark-color: #343661;
+
+$theme-light-dark-bg: #262c49;
+$theme-dark-bg: #10163a;
+$theme-dark-secondary-bg: #171e49;
+$theme-dark-text-color: #c2c6dc;
+$theme-dark-heading-color: #ebeefd;
+// $theme-dark-heading-color: #C9CAD2;
+$theme-dark-border-color: #414561;
+$theme-dark-shadow-color: #0c112e;
+
+/*========================================================
+        Color Pattern
+=========================================================*/
+.color-patternOne {
+  color: $color-one !important;
+}
+
+.bgcolor-patternOne {
+  background: $color-one !important;
+}
+
+.color-patternTwo {
+  color: $color-two !important;
+}
+
+.color-patternThree {
+  color: $color-three;
+}
+
+.color-patternFive {
+  color: $color-five !important;
+}
+
+.color-patternSix {
+  color: $color-six !important;
+}
+
+.bgcolor-patternSix {
+  background: $color-six !important;
+}
+
+.color-patternSeven {
+  color: $color-seven !important;
+}
+
+.bgcolor-patternSeven {
+  background: $color-seven !important;
+}
+
+.bgcolor-patternEight {
+  background: $color-eight !important;
+}
+
+.color-patternNine {
+  color: $color-nine !important;
+}
+
+.color-patternSixteen {
+  color: $color-sixteen !important;
+}
+
+.bgcolor-patternTen {
+  background: $color-ten !important;
+}
+
+.color-patternEleven {
+  color: $color-eleven !important;
+}
+
+.bgcolor-patternTwelve {
+  background: $color-twelve !important;
+}
+
+.bgcolor-patternThirteen {
+  background: $color-thirteen !important;
+}
+
+.bgcolor-patternFourteen {
+  background: $color-fourteen !important;
+}
+
+.bgcolor-patternFifteen {
+  background: $color-fifteen !important;
+}
+
+.bgcolor-patternSixteen {
+  background: $color-sixteen !important;
+}
+
+.bgcolor-patterNewGray {
+  background: $color-new-gray !important;
+}
+
+.color-patternSeventeen {
+  color: $color-seventeen !important;
+}
+
+.color-patternEighteen {
+  color: $color-eighteen !important;
+}
+
+.color-patternNineteen {
+  color: $color-nineteen !important;
+}
+
+.color-patternFourteen {
+  color: $color-fourteen !important;
+}
+
+.color-patternFour {
+  color: $color-four !important;
+}
+
+.bgcolor-green60 {
+  background: $color-green-60 !important;
+}
+
+.color-green60 {
+  color: $color-green-60 !important;
+}
+
+.color-gray40 {
+  color: $color-gray-40 !important;
+}
+
+.bgcolor-purpleLDC {
+  background: $color-purple-ldc !important;
+}
+
+.color-purpleLDC {
+  color: $color-purple-ldc !important;
+}
+
+.color-gray100 {
+  color: $color-gray-100 !important;
+}
+
+.color-grayTheme {
+  color: $color-gray-theme !important;
+}
+
+.color-blueBootstrap {
+  color: $color-blue-bootstrap !important;
+}
+
+.bgcolor-petternPrimary {
+  background: rgba($menuFontColor, 0.12) !important;
+}
+
+/*========================================================
+        IMPORTAÇÃO DO MAIN.SCSS
+=========================================================*/
+
+//carousel pagination
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
+@media (max-width: 461px) {
+  .items-per-page-handler {
+    display: none;
+  }
+}
+
+@media (max-width: 341px) {
+  .data-list-btn-container {
+    width: 100%;
+
+    .dd-actions,
+    .btn-add-new {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.customTableSortIcon {
+  padding-left: 6px;
+}
+
+//v-select
+
+.vSelect-WithoutAnimation.vs--open .vs__open-indicator {
+  transform: none;
+}
+
+//Multiselect
+.multiselect {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background: $white;
+  cursor: pointer;
+
+  .multiselect-search {
+    input {
+      cursor: pointer;
+    }
+  }
+
+  .multiselect-tag {
+    background: rgba(var(--primary), 1);
+
+    i:before {
+      color: $color-three;
+      padding: 0 5px;
+      font-size: 19px;
+    }
+
+    i:hover:before {
+      color: $white;
+    }
+
+    white-space: normal;
+  }
+
+  .multiselect-placeholder,
+  .multiselect-no-options,
+  .multiselect-no-results {
+    color: $color-two;
+  }
+
+  .multiselect-options {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .multiselect-options {
+    a:active,
+    a:visited,
+    a:hover,
+    a {
+      color: $color-two;
+    }
+  }
+
+  .multiselect-option.is-pointed {
+    background: rgba(var(--primary), 1);
+    color: $white !important;
+  }
+
+  .multiselect-input,
+  .multiselect-options {
+    font-size: 1rem;
+  }
+
+  .multiselect-input {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  .multiselect-spinner {
+    &::after,
+    &::before {
+      border-color: rgba(var(--primary), 1) transparent transparent;
+    }
+  }
+}
+
+.multiselect.is-disabled {
+  .multiselect-input {
+    cursor: not-allowed;
+  }
+}
+
+//form configuration
+.vs-input--label,
+.vs-select--label {
+  padding-left: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-two;
+}
+
+.input-select-con {
+  ::-webkit-input-placeholder {
+    color: $color-four !important;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: $color-four !important;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color-four !important;
+  }
+
+  :-ms-input-placeholder {
+    color: $color-four !important;
+  }
+}
+
+::-webkit-input-placeholder {
+  font-family: Montserrat !important;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: Montserrat !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: Montserrat !important;
+}
+
+:-ms-input-placeholder {
+  font-family: Montserrat !important;
+}
+
+.con-slot-label {
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-two;
+}
+
+.input-roundedCustom {
+  input {
+    border-radius: 32px;
+  }
+}
+
+input:disabled {
+  background: #f1f1f1; //transparent
+  cursor: not-allowed;
+}
+
+//datepicker
+.vdp-datepicker {
+  input {
+    cursor: pointer;
+  }
+}
+
+//icon form validation danger
+.input-icon-validate-danger .input-icon-validate {
+  background: none;
+}
+
+.con-text-validation .span-text-validation {
+  padding: 0;
+  display: none;
+}
+
+//upload
+.upload-full {
+  .con-input-upload {
+    margin: 0;
+    width: 100%;
+  }
+
+  .con-img-upload {
+    padding: 0;
+  }
+}
+
+//cropper
+.cropper-view-box {
+  outline: 1px solid $color-one !important;
+  outline-color: $color-one !important;
+}
+
+.cropper-line,
+.cropper-point {
+  background-color: $color-one !important;
+}
+
+//transparent collapse
+.collapse-transparentBackground {
+  .con-content--item {
+    background: $theme-background;
+  }
+}
+
+//gray collapse
+.collapse-grayBackground {
+  .con-content--item {
+    background: #f6f6f6;
+  }
+}
+
+.grayBackground {
+  background: #f6f6f6;
+}
+
+//print page
+@media print {
+  .printOcult {
+    display: none !important;
+  }
+
+  .octadesk-octachat-app {
+    display: none !important;
+  }
+}
+
+//info hover color - tooltip
+.infoIconWithTooltipHover {
+  font-size: 21px;
+  margin-left: 0.4rem;
+  cursor: default;
+  display: flex;
+}
+
+.infoIconWithTooltipHover:hover {
+  color: #323232 !important;
+}
+
+//back link
+.back-linkText {
+  text-decoration: underline;
+  float: right;
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  height: 0;
+}
+
+//div with display box
+.display-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+}
+
+//tippy tooltip - popover
+.tippy-backdrop,
+.tippy-popper[x-placement^='left'] .tippy-backdrop,
+.tippy-popper[x-placement^='right'] .tippy-backdrop,
+.tippy-popper[x-placement^='bottom'] .tippy-backdrop,
+.tippy-popper[x-placement^='top'] .tippy-backdrop {
+  border-radius: 0;
+}
+
+.tippy-tooltip.success-theme {
+  background-color: rgba(var(--success), 1);
+  border: 2px solid rgba(var(--success), 1);
+}
+
+.tippy-popper[x-placement^='top'] .tippy-tooltip.success-theme .tippy-arrow {
+  border-top: 8px solid rgba(var(--success), 1);
+}
+
+@media print {
+  #_hj_feedback_container {
+    display: none !important;
+  }
+}
+
+/*=========================================================================================
+  File Name: _customClasses.scss
+  Description: partial- this file containes custom helper classes
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+  Author: Pixinvent
+  Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+// ======================================================================================
+// BUTTON
+// ======================================================================================
+
+.btn-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  button {
+    padding: 1rem 1.25rem !important;
+    width: 100%;
+  }
+
+  :not(:first-child) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  :not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// ======================================================================================
+// BLUR
+// ======================================================================================
+
+.blur-1 {
+  filter: blur(1px);
+}
+
+.blur-2 {
+  filter: blur(2px);
+}
+
+.blur-3 {
+  filter: blur(3px);
+}
+
+// ======================================================================================
+// Z-INDEX
+// ======================================================================================
+
+.z-1 {
+  z-index: 1;
+}
+.z-0 {
+  z-index: 0;
+}
+.z-n1 {
+  z-index: -1;
+}
+
+// ======================================================================================
+// COLORS
+// ======================================================================================
+
+// text classes
+.text-primary {
+  color: rgba(var(--primary), 1) !important;
+}
+
+.text-secundary {
+  color: rgba(var(--secundary), 1) !important;
+}
+
+.text-success {
+  color: rgba(var(--success), 1) !important;
+}
+
+.text-danger {
+  color: rgba(var(--danger), 1) !important;
+}
+
+.text-warning {
+  color: rgba(var(--warning), 1) !important;
+}
+
+.text-dark {
+  color: rgba(var(--dark), 1) !important;
+}
+
+.text-royal-blue {
+  color: rgba(94, 80, 238, 1) !important;
+}
+
+// background classes
+
+.bg-primary {
+  background-color: rgba(var(--primary), 1) !important;
+}
+
+.bg-secundary {
+  background-color: rgba(var(--secundary), 1) !important;
+}
+
+.bg-success {
+  background-color: rgba(var(--success), 1) !important;
+}
+
+.bg-danger {
+  background-color: rgba(var(--danger), 1) !important;
+}
+
+.bg-warning {
+  background-color: rgba(var(--warning), 1) !important;
+}
+
+.bg-dark {
+  background-color: rgba(var(--dark), 1) !important;
+}
+
+.bg-royal-blue {
+  background-color: rgba(94, 80, 238, 1) !important;
+}
+
+.bg-gray {
+  background-color: #b9b9c3 !important;
+}
+
+// border classes
+
+.border-primary {
+  border-color: rgba(var(--primary), 1) !important;
+}
+
+.border-secundary {
+  border-color: rgba(var(--secundary), 1) !important;
+}
+
+.border-success {
+  border-color: rgba(var(--success), 1) !important;
+}
+
+.border-danger {
+  border-color: rgba(var(--danger), 1) !important;
+}
+
+.border-warning {
+  border-color: rgba(var(--warning), 1) !important;
+}
+
+.border-dark {
+  border-color: rgba(var(--dark), 1) !important;
+}
+
+.border-royal-blue {
+  border-color: rgba(94, 80, 238, 1) !important;
+}
+
+.border-gray {
+  border-color: #b9b9c3;
+}
+
+.border-gray-theme {
+  border-color: $color-gray-theme;
+}
+
+// hover background classes
+
+.hover\:bg-primary {
+  &:hover {
+    background-color: rgba(var(--primary), 1) !important;
+  }
+}
+
+.hover\:bg-secundary {
+  &:hover {
+    background-color: rgba(var(--secundary), 1) !important;
+  }
+}
+
+.hover\:bg-success {
+  &:hover {
+    background-color: rgba(var(--success), 1) !important;
+  }
+}
+
+.hover\:bg-danger {
+  &:hover {
+    background-color: var(--danger) !important;
+  }
+}
+
+.hover\:bg-warning {
+  &:hover {
+    background-color: rgba(var(--warning), 1) !important;
+  }
+}
+
+.hover\:bg-dark {
+  &:hover {
+    background-color: rgba(var(--dark), 1) !important;
+  }
+}
+
+.hover\:bg-royal-blue {
+  &:hover {
+    background-color: rgba(94, 80, 238, 1) !important;
+  }
+}
+
+// hover text colors
+.hover\:text-primary {
+  &:hover {
+    color: rgba(var(--primary), 1) !important;
+  }
+}
+
+.hover\:text-secundary {
+  &:hover {
+    color: rgba(var(--secundary), 1) !important;
+  }
+}
+
+.hover\:text-success {
+  &:hover {
+    color: rgba(var(--success), 1) !important;
+  }
+}
+
+.hover\:text-danger {
+  &:hover {
+    color: rgba(var(--danger), 1) !important;
+  }
+}
+
+.hover\:text-warning {
+  &:hover {
+    color: rgba(var(--warning), 1) !important;
+  }
+}
+
+.hover\:text-dark {
+  &:hover {
+    color: rgba(var(--dark), 1) !important;
+  }
+}
+
+.hover\:text-royal-blue {
+  &:hover {
+    color: rgba(94, 80, 238, 1) !important;
+  }
+}
+
+// Gradient colors
+.bg-primary-gradient {
+  background: linear-gradient(
+    118deg,
+    rgba(var(--primary), 1),
+    rgba(var(--primary), 0.7)
+  ) !important;
+}
+
+.bg-secundary-gradient {
+  background: linear-gradient(
+    118deg,
+    rgba(var(--secundary), 1),
+    rgba(var(--secundary), 0.7)
+  ) !important;
+}
+
+.bg-success-gradient {
+  background: linear-gradient(
+    118deg,
+    rgba(var(--success), 1),
+    rgba(var(--success), 0.7)
+  ) !important;
+}
+
+.bg-danger-gradient {
+  background: linear-gradient(118deg, rgba(var(--danger), 1), rgba(var(--danger), 0.7)) !important;
+}
+
+.bg-warning-gradient {
+  background: linear-gradient(
+    118deg,
+    rgba(var(--warning), 1),
+    rgba(var(--warning), 0.7)
+  ) !important;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(118deg, rgba(var(--dark), 1), rgba(var(--dark), 0.7)) !important;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(
+    118deg,
+    rgba(var(94, 80, 238), 1),
+    rgba(var(94, 80, 238), 0.7)
+  ) !important;
+}
+
+// ======================================================================================
+// Grid
+// ======================================================================================
+
+.vx-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  & > .vx-col {
+    padding: 0 1rem;
+  }
+
+  &.match-height > .vx-col {
+    display: flex;
+  }
+
+  &.no-gutter {
+    margin: 0;
+
+    & > .vx-col {
+      padding: 0;
+    }
+  }
+}
+
+// ======================================================================================
+// Sidebar
+// ======================================================================================
+
+.sidebar-spacer {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+}
+
+.sidebar-spacer-with-margin {
+  width: calc(100% - 260px - 2.2rem);
+  margin-left: calc(260px + 2.2rem);
+}
+
+.sidebar-spacer--wide {
+  width: calc(100% - 400px);
+  margin-left: 400px;
+}
+
+// ======================================================================================
+// Theme: Light & Dark
+// ======================================================================================
+
+.d-theme-dark-bg,
+.d-theme-dark-light-bg {
+  background-color: $white;
+}
+
+.d-theme-dark-border {
+  border-color: $white;
+}
+
+.d-theme-border-grey-light {
+  // @apply border-grey-light;
+  border-color: #dae1e7;
+}
+
+.d-theme-text-inverse {
+  color: $white;
+}
+
+.theme-dark {
+  .d-theme-dark-bg {
+    background-color: $theme-dark-bg;
+  }
+
+  .d-theme-input-dark-bg {
+    input {
+      background-color: $theme-dark-bg;
+    }
+  }
+
+  .d-theme-heading-color {
+    color: $headings-color;
+  }
+
+  .d-theme-text-inverse {
+    color: $content-color;
+  }
+
+  .d-theme-border-grey-light,
+  .d-theme-dark-border {
+    border-color: $theme-dark-border-color;
+  }
+}
+
+// ======================================================================================
+// Typography
+// ======================================================================================
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-big {
+  font-size: 4rem;
+}
+
+.text-color-base {
+  color: $content-color;
+}
+
+// ======================================================================================
+// Users List
+// ======================================================================================
+
+.user-list {
+  display: flex;
+
+  & .con-vs-avatar {
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.07);
+      box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2);
+      // transform: translateY(-5px);
+      z-index: 999;
+    }
+  }
+}
+
+// ======================================================================================
+// Uncategorized
+// ======================================================================================
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+ul.bordered-items {
+  & > li:not(:last-of-type):not([class*='shadow']) {
+    border-bottom: 1px solid $grey-light;
+  }
+}
+
+.con-content--item {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+// ======================================================================================
+// Input
+// ======================================================================================
+
+.vs-input--placeholder {
+  top: 0px;
+}
+
+.vs-input--input.hasIcon:not(.icon-after-input) {
+  & + .vs-input--placeholder {
+    padding-left: 3rem !important;
+  }
+
+  &:focus + .vs-placeholder-label {
+    padding-left: 0.7rem !important;
+  }
+}
+
+// Search Box Text
+// .vs-input--input.large.hasIcon {
+//   padding: 1rem .8rem 1rem 3rem;
+// }
+
+// INPUT FORM ELEMENT COMPONENT
+.vs-con-input {
+  .vs-inputx {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .vx-inputx:not(.input-rounded-full) {
+    border-radius: 5px;
+  }
+}
+
+.vs-input--input {
+  &.normal {
+    padding: 0.7rem !important;
+    font-size: 0.9rem !important;
+
+    ~ .vs-input--icon {
+      &.feather {
+        top: 9px;
+      }
+    }
+  }
+
+  &.large {
+    padding: 1rem !important;
+    font-size: 1.2rem !important;
+
+    &.hasIcon {
+      padding: 1rem 0.8rem 1rem 3rem !important;
+    }
+
+    ~ .vs-input--icon {
+      top: 1rem !important;
+      left: 0.8rem !important;
+    }
+  }
+
+  &.small {
+    padding: 0.4rem !important;
+    font-size: 0.8rem !important;
+
+    ~ .vs-input--icon {
+      &.feather {
+        top: 7px !important;
+      }
+    }
+  }
+
+  &.hasIcon {
+    padding: 0.7rem 1rem 0.7rem 3rem !important;
+
+    &.icon-after-input {
+      padding: 0.7rem 3rem 0.7rem 0.7rem !important;
+    }
+  }
+}
+
+.vs-input--placeholder {
+  &.normal {
+    font-size: 1rem !important;
+    padding: 0.7rem !important;
+  }
+
+  &.large {
+    padding: 1rem !important;
+  }
+
+  &.small {
+    padding: 0.2rem 0.6rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+.vs-input--icon {
+  &.feather {
+    // top: 10px;
+    padding: 0.2rem 0.5rem 0rem 0.4rem;
+  }
+}
+
+// Rounded Input
+.vs-input.input-rounded-full {
+  // Fixes input element don't get rounded borders
+  input {
+    border-radius: 20px;
+  }
+
+  .vs-input--input.hasIcon {
+    padding: 0.8rem 1rem 0.8rem 3rem !important;
+  }
+
+  .input-span-placeholder {
+    padding-left: 3rem !important;
+    padding-top: 0.7rem !important;
+  }
+}
+
+// ======================================================================================
+// Select
+// ======================================================================================
+
+.con-select {
+  .vs-select--input {
+    padding: 10px;
+    font-size: 1rem;
+    // border: 1px solid rgba(0, 0, 0, .2); removido pois estava impedindo o estado danger do select
+  }
+}
+
+.vs-select--options {
+  font-size: 1rem;
+  border: 1px solid #eee;
+  z-index: 530001;
+
+  span {
+    color: $content-color;
+    font-size: 1rem;
+  }
+}
+
+// ======================================================================================
+// Upload
+// ======================================================================================
+
+.con-img-upload {
+  overflow: hidden;
+  padding: 0.6rem;
+
+  .img-upload {
+    margin: 15px;
+  }
+}
+
+.view-upload {
+  z-index: 52000;
+}
+
+/*=========================================================================================
+    File Name: _transitions.scss
+    Description: Transition styles
+    ----------------------------------------------------------------------------------------
+    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+      Author: Pixinvent
+    Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+// ///////////////////////////////////////////////
+// Zoom Fade
+// ///////////////////////////////////////////////
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+  transition: transform 0.35s, opacity 0.28s ease-in-out;
+}
+
+.zoom-fade-enter {
+  transform: scale(0.97);
+  opacity: 0;
+}
+
+.zoom-fade-leave-to {
+  transform: scale(1.03);
+  opacity: 0;
+}
+
+// ///////////////////////////////////////////////
+// Fade Regular
+// ///////////////////////////////////////////////
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// ///////////////////////////////////////////////
+// Page Slide
+// ///////////////////////////////////////////////
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.35s, transform 0.4s;
+}
+
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(30%);
+}
+
+// ///////////////////////////////////////////////
+// Zoom Out
+// ///////////////////////////////////////////////
+.zoom-out-enter-active,
+.zoom-out-leave-active {
+  transition: opacity 0.35s ease-in-out, transform 0.45s ease-out;
+}
+
+.zoom-out-enter,
+.zoom-out-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+// ///////////////////////////////////////////////
+// Fade Bottom
+// ///////////////////////////////////////////////
+
+// Speed: 1x
+.fade-bottom-enter-active,
+.fade-bottom-leave-active {
+  transition: opacity 0.3s, transform 0.35s;
+}
+
+.fade-bottom-enter {
+  opacity: 0;
+  transform: translateY(-8%);
+}
+
+.fade-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(8%);
+}
+
+// Speed: 2x
+.fade-bottom-2x-enter-active,
+.fade-bottom-2x-leave-active {
+  transition: opacity 0.2s, transform 0.25s;
+}
+
+.fade-bottom-2x-enter {
+  opacity: 0;
+  transform: translateY(-4%);
+}
+
+.fade-bottom-2x-leave-to {
+  opacity: 0;
+  transform: translateY(4%);
+}
+
+// ///////////////////////////////////////////////
+// Fade Top
+// ///////////////////////////////////////////////
+
+// Speed: 1x
+.fade-top-enter-active,
+.fade-top-leave-active {
+  transition: opacity 0.3s, transform 0.35s;
+}
+
+.fade-top-enter {
+  opacity: 0;
+  transform: translateY(8%);
+}
+
+.fade-top-leave-to {
+  opacity: 0;
+  transform: translateY(-8%);
+}
+
+// Speed: 2x
+.fade-top-2x-enter-active,
+.fade-top-2x-leave-active {
+  transition: opacity 0.2s, transform 0.25s;
+}
+
+.fade-top-2x-enter {
+  opacity: 0;
+  transform: translateY(4%);
+}
+
+.fade-top-2x-leave-to {
+  opacity: 0;
+  transform: translateY(-4%);
+}
+
+///////////////////////////////////////////////////////////
+// transition-group : list;
+///////////////////////////////////////////////////////////
+.list-leave-active {
+  position: absolute;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+///////////////////////////////////////////////////////////
+// transition-group : list-enter-up;
+///////////////////////////////////////////////////////////
+.list-enter-up-leave-active {
+  transition: none !important;
+}
+
+.list-enter-up-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/*=========================================================================================
+    File Name: _misc.scss
+    Description: partial- misc styles
+    ----------------------------------------------------------------------------------------
+    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+      Author: Pixinvent
+    Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+code {
+  font-family: $font-family-sans-serif;
+  background: #eee;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/*:not(.ql-editor) ul,
+:not(.ql-editor) ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}*/
+
+.layout--full-page {
+  .bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .full-page-bg-color {
+    background-color: #eff2f7;
+  }
+}
+
+.single-counter {
+  display: inline-block;
+  position: relative;
+  width: 105px;
+  padding: 18px 10px 10px;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  .timer {
+    font-size: 3rem;
+  }
+}
+
+.chat-card-log {
+  height: 240px;
+}
+
+// ======================================================================================
+// Video.js
+// ======================================================================================
+.vjs-poster {
+  background-size: cover !important;
+  width: 100% !important;
+}
+
+// ======================================================================================
+// Spinner
+// ======================================================================================
+
+// .spinner {
+//   animation: spin 1.5s linear infinite;
+// }
+
+/*! rtl:begin:ignore */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*! rtl:end:ignore */
+
+// ======================================================================================
+// Animation
+// ======================================================================================
+.animated-wiggle {
+  animation-name: animationFrames;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-duration: var(--wiggle-duration, 50s);
+
+  -webkit-animation-name: animationFrames;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-duration: var(--wiggle-duration, 50s);
+}
+@keyframes animationFrames {
+  0% {
+    transform: translate(-46px, -15px) rotate(15deg);
+  }
+
+  11% {
+    transform: translate(42px, -33px) rotate(-15deg);
+  }
+
+  20% {
+    transform: translate(-53px, -48px) rotate(15deg);
+  }
+
+  31% {
+    transform: translate(17px, -37px) rotate(-15deg);
+  }
+
+  40% {
+    transform: translate(-86px, -32px) rotate(15deg);
+  }
+
+  50% {
+    transform: translate(-7px, -21px) rotate(-15deg);
+  }
+
+  60% {
+    transform: translate(-71px, 4px) rotate(15deg);
+  }
+
+  71% {
+    transform: translate(-29px, 10px) rotate(-15deg);
+  }
+
+  80% {
+    transform: translate(5px, 15px) rotate(0deg);
+  }
+
+  90% {
+    transform: translate(54px, -8px) rotate(-19deg);
+  }
+
+  100% {
+    transform: translate(-21px, 13px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-21px, 13px) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    -webkit-transform: translate(-46px, -15px) rotate(15deg);
+  }
+
+  11% {
+    -webkit-transform: translate(42px, -33px) rotate(-15deg);
+  }
+
+  20% {
+    -webkit-transform: translate(-53px, -48px) rotate(15deg);
+  }
+
+  31% {
+    -webkit-transform: translate(17px, -37px) rotate(-15deg);
+  }
+
+  40% {
+    -webkit-transform: translate(-86px, -32px) rotate(15deg);
+  }
+
+  50% {
+    -webkit-transform: translate(-7px, -21px) rotate(-15deg);
+  }
+
+  60% {
+    -webkit-transform: translate(-71px, 4px) rotate(15deg);
+  }
+
+  71% {
+    -webkit-transform: translate(-29px, 10px) rotate(-15deg);
+  }
+
+  80% {
+    -webkit-transform: translate(5px, 15px) rotate(0deg);
+  }
+
+  90% {
+    -webkit-transform: translate(54px, -8px) rotate(-19deg);
+  }
+
+  100% {
+    -webkit-transform: translate(-21px, 13px) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translate(-21px, 13px) rotate(0deg);
+  }
+}
+
+// ======================================================================================
+// Feather - Font Icon
+// ======================================================================================
+
+i.feather {
+  font-weight: 100;
+}
+
+.feather.feather-menu {
+  z-index: 9;
+}
+
+/*=========================================================================================
+    File Name: _footer.scss
+    Description: Footer styles
+    ----------------------------------------------------------------------------------------
+    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+      Author: Pixinvent
+    Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+.footer-sticky {
+  .the-footer {
+    position: fixed;
+    background: $white;
+    bottom: 0;
+    width: calc(100% - 260px);
+    box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.05);
+    z-index: 40000;
+  }
+
+  .content-area-lg {
+    .the-footer {
+      width: calc(100% - 80px);
+    }
+  }
+
+  .content-area-full {
+    .the-footer {
+      width: 100%;
+    }
+  }
+
+  .router-view {
+    padding-bottom: 5rem;
+  }
+}
+
+.footer-hidden {
+  .the-footer {
+    display: none;
+  }
+}
+
+.the-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2.2rem;
+}
+
+@media print {
+  body {
+    background-color: #fff !important;
+  }
+
+  typebot-bubble {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.color-math {
+  color: #00bdb8;
+}
+
+.color-port {
+  color: #ec6300;
+}
+
+.color-liga {
+  color: #56124f;
+}
+
+.color-math-ing {
+  color: #00bdb8;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.font-10 {
+  font-size: 10px;
+}
+
+.font-11 {
+  font-size: 11px;
+}
+
+.font-8 {
+  font-size: 8px;
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+div.input-group-merge > *.is-invalid {
+  & ~ .input-group-append .input-group-text,
+  & ~ .input-group-prepend .input-group-text {
+    border-color: $danger;
+  }
+}
+
+.vs__dropdown-toggle {
+  background: white !important;
+}
+
+@media print {
+  .uwy {
+    display: none;
+  }
+
+  body {
+    border: 1px solid transparent; // corrige muitos problemas do v8
+  }
+}
+
+.border-top-left-radius-0 {
+  border-top-left-radius: 0 !important;
+}
+
+.border-top-right-radius-0 {
+  border-top-right-radius: 0 !important;
+}
+
+.b-form-btn-label-control.form-control {
+  height: 2.714rem !important;
+}
+
+.b-form-btn-label-control.form-control > .form-control {
+  padding: 0.3rem 0 !important;
+}
+
+.opacity-65 {
+  opacity: 0.65 !important;
+}
+
+.card-border {
+  border: 1px solid #d8d6de !important;
+}
+
+/* Make tour modal white */
+.v-step {
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #eee !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Style the header */
+.v-step__header {
+  background-color: white !important;
+}
+
+/* Style the content */
+.v-step__content {
+  color: #333 !important;
+}
+
+/* Style the arrow */
+.v-step__arrow {
+  border-color: white !important;
+
+  &::before {
+    background: white !important;
+  }
+}
+
+@media print {
+  .badge {
+    border: none !important;
+  }
+}

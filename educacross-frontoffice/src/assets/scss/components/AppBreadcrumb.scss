@@ -1,0 +1,31 @@
+@import '../variables/_variables.scss';
+
+.content-header {
+  .breadcrumb {
+    padding: 0;
+    margin-top: 19px;
+
+    .breadcrumb-item {
+      a {
+        color: $color-nine !important;
+        font-weight: 700;
+
+        .feather-home {
+          color: rgb(0, 189, 185) !important;
+        }
+      }
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 648px) {
+  .content-header {
+    .btn-back {
+      display: none;
+    }
+  }
+}

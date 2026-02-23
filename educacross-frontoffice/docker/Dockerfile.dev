@@ -1,0 +1,71 @@
+FROM node:22-alpine as build-stage
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Increase Node memory limit for Vite builds
+ENV NODE_OPTIONS=--max-old-space-size=4096
+
+ENV VITE_APP_BASE_URL_API=https://apimanager-test.educacross.com.br/
+ENV VITE_APP_BLOB_IMAGE=https://blob-tst.educacross.com.br/
+ENV VITE_APP_BLOB=https://blob-tst.educacross.com.br/
+ENV VITE_APP_DEEPLINK_URL=https://account-test.educacross.com.br/
+ENV VITE_APP_GOOGLE_CLIENT_ID=295507299302-2pop4jq6bdrhp8hac7v122q914okpdnt
+ENV VITE_APP_LEX_CLIENT_ID=063bc63267c24eee924262528a46b8aa
+ENV VITE_APP_LEX_LOGIN=https://homolog-api.lex.education/
+ENV VITE_APP_LEX_REDIRECT=https://account-hmg.educacross.com.br/lex
+ENV VITE_APP_LOGIN_LEX_PAGE=https://homolog-sso.lex.education/
+ENV VITE_APP_LEX_MAPLE_CLIENT_ID=46d1077d3ce54acca86c0e70204c4ee2
+ENV VITE_APP_LEX_MAPLE_LOGIN=https://apis.lex.education/
+ENV VITE_APP_LEX_MAPLE_REDIRECT=https://account-test.educacross.com.br/lex-mbg
+ENV VITE_APP_LOGIN_LEX_MAPLE_PAGE=https://accounts.lex.education/
+ENV VITE_APP_LOGIN_SAS_PAGE=https://portal.staging.portalsaseducacao.com.br/login
+ENV VITE_APP_MISSION_SUGGEST_URL=https://dev.empatie.net/
+ENV VITE_APP_WEBGL_PLAY_LINK=https://educacross.link/jogar-webgl-test
+ENV VITE_APP_WHITELABEL=educacross
+ENV VITE_APP_PLURALL_LINK=https://sso.s.plurall.net/
+ENV VITE_APP_PLURALL_REDIRECT=https://account-test.educacross.com.br/plurall
+ENV VITE_APP_PLURALL_CLIENT_ID=NjMxYTIxNzk0NDI2ZmIx
+ENV VITE_APP_LOGIN_PLURALL_PAGE=https://login.s.plurall.net/
+ENV VITE_APP_LOGIN_COC_PAGE=https://portal-homolog.coc.com.br/
+ENV VITE_APP_LOGIN_POSITIVO_PAGE=https://front-hub-digital.hmg.positivoon.com.br/#/login
+ENV VITE_APP_REDIRECT_URI_MICROSOFT=https://account-test.educacross.com.br
+ENV VITE_APP_LAYERS_LINK=https://id.layers.digital
+ENV VITE_APP_LAYERS_REDIRECT=https://account-test.educacross.com.br/layers
+ENV VITE_APP_LAYERS_CLIENT_ID=educacross
+ENV VITE_APP_LOGIN_LAYERS_PAGE=https://layers.education
+ENV VITE_APP_DEVTOOLS=false
+ENV VITE_APP_DEVELOP=false
+ENV EDITOR=code
+ENV VITE_APP_LOGIN_ARCO_SAS_PAGE_REDIRECT=https://app-stg.portalsaseducacao.com.br/entrar/?appendOpaqueToken=true&redirect=https://account-hmg.educacross.com.br/sas?opaquetoken={{PARTNER_API_OPAQUE_TOKEN}}
+ENV VITE_APP_LOGIN_ARCO_SAS_PAGE_REDIRECT_APP=https://app-stg.portalsaseducacao.com.br/entrar/?appendOpaqueToken=true&redirect=https://account-hmg.educacross.com.br/sas/app?opaquetoken={{PARTNER_API_OPAQUE_TOKEN}}
+ENV VITE_APP_LOGIN_ARCO_SAS_PAGE=https://app-stg.portalsaseducacao.com.br
+ENV VITE_APP_LOGIN_ARCO_COC_PAGE=https://app-stg.coc.com.br
+ENV VITE_APP_LOGIN_ARCO_COC_PAGE_REDIRECT=https://jornada-stg.coc.com.br/entrar/?appendOpaqueToken=true&redirect=https://account-hmg.educacross.com.br/coc?opaquetoken={{PARTNER_API_OPAQUE_TOKEN}}
+ENV VITE_APP_WEBGL=5DE7A6BE-B5E0-4EDE-BB71-FE7EB743D4D4
+
+# install and cache app dependencies
+COPY package*.json ./
+
+RUN npm ci
+
+# add app
+COPY . .
+
+# generate build
+RUN npm run prebuild && npm run build
+
+# production environment
+FROM nginx:alpine as production-stage
+
+# Remove default nginx index page
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

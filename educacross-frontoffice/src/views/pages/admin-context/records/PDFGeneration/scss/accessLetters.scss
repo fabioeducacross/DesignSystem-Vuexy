@@ -1,0 +1,112 @@
+.customCardPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: Montserrat;
+  border: 0;
+}
+
+.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #0a9c9a;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+}
+
+.customCardBody {
+  width: 210mm;
+  height: 296mm;
+
+  padding: 50px;
+
+  background: #eff5f5;
+  background-size: cover;
+
+  border: none;
+}
+
+.head {
+  width: 100%;
+
+  .title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    color: #0a9c9a;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.content1 {
+  margin-top: 40px;
+  width: 100%;
+
+  .title {
+    margin-top: 18px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    color: #0a9c9a;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.logoEduca img {
+  margin: 30px auto 0 auto;
+  height: 50px;
+  width: auto;
+}
+
+.content2 {
+  margin-top: 40px;
+
+  .signIn {
+    .title {
+      padding-top: 16px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 30px;
+      color: #0a9c9a;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.content3 {
+  margin-top: 150px;
+
+  .title {
+    font-weight: 700;
+    font-size: 26px;
+    color: #000;
+  }
+}
+
+.page-break {
+  page-break-after: auto;
+  page-break-inside: avoid;
+}

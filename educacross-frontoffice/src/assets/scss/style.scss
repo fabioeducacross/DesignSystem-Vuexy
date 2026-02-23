@@ -1,0 +1,82 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+@import './variables/_variables.scss';
+@import './programmatically-class.scss';
+@import './components/loader.scss';
+
+.popover {
+  box-shadow: none;
+
+  .popover-body {
+    div {
+      padding: 0 !important;
+    }
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.bar-chart {
+  .apexcharts-canvas {
+    .apexcharts-legend-series {
+      margin: 0 16px 0 0 !important;
+    }
+
+    .apexcharts-legend-text {
+      margin-left: 9px;
+    }
+  }
+}
+
+.donut-chart {
+  .apexcharts-legend-series {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .apexcharts-legend-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 8px 8px;
+
+    .title-series {
+      font-size: 14px;
+    }
+
+    .number-series {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.font-49 {
+  font-size: 49px;
+}
+
+.btn .badge {
+  top: 0px;
+}

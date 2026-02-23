@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["src/*"],
+      "@core/*": ["src/@core/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "archive",
+    "wiki",
+    "llm-migration-tool",
+    "public",
+    "src/assets/tailwind",
+    ".git",
+    ".idea",
+    ".vscode"
+  ]
+}

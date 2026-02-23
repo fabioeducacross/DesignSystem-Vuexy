@@ -1,0 +1,100 @@
+@import '../../variables/_variables.scss';
+
+.main-menu.menu-light,
+.navigation {
+  background: var(--menuBackgroundColor) !important;
+  color: var(--menuFontColor);
+
+  // set color stroke for icon
+  i,
+  svg {
+    stroke: var(--menuFontColor);
+    min-width: 11px;
+    min-height: 11px;
+  }
+
+  .navigation > li {
+    a {
+      color: var(--menuFontColor);
+      i,
+      .feather {
+        font-size: 20px;
+      }
+    }
+
+    &.active > a {
+      color: var(--menuActiveFontColor) !important;
+      background: var(--menuActiveBackgroundColorLink) !important;
+      box-shadow: none;
+
+      i,
+      .feather {
+        color: var(--menuActiveFontColor);
+      }
+    }
+
+    &.open:not(.menu-item-closing) > a,
+    &.sidebar-group-active > a {
+      color: var(--menuActiveFontColor);
+      background: var(--menuActiveBackgroundColor) !important;
+
+      i,
+      .feather {
+        color: var(--menuActiveFontColor);
+      }
+    }
+
+    ul {
+      i,
+      .feather {
+        font-size: 11px;
+      }
+      .active {
+        background: var(--menuActiveBackgroundColorLink);
+        color: var(--menuActiveFontColor);
+        box-shadow: none;
+
+        a {
+          color: var(--menuActiveFontColor) !important;
+        }
+
+        i,
+        .feather {
+          color: var(--menuActiveFontColor);
+        }
+      }
+    }
+  }
+
+  .vertical-layout.vertical-menu-modern.menu-collapsed
+    .main-menu:not(.expanded)
+    .navigation
+    li.active
+    a {
+    background: var(--menuActiveBackgroundColorLink);
+    color: var(--menuActiveFontColor);
+  }
+}
+
+// .navbar-container.d-flex.content.align-items-center {
+//   .permissionUser,
+//   .school-icon + p {
+//     color: var(--primary);
+//   }
+// }
+
+// .vertical-layout.vertical-menu-modern .main-menu {
+//   .navigation {
+//     > li {
+//       a {
+//         margin-bottom: 0.36rem;
+//       }
+
+//       .menu-content {
+//         > li {
+//           margin-bottom: 0.36rem;
+//         }
+//       }
+//     }
+//   }
+// }

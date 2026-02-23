@@ -1,0 +1,28 @@
+{
+  "color": ["#4FB8F3", "#6E63E8", "#FFB443", "#8BC728"],
+  "backgroundColor": "rgba(0,0,0,0)",
+  "textStyle": {},
+  "title": {
+    "textStyle": {
+      "color": "#666666"
+    },
+    "subtextStyle": {
+      "color": "#999999"
+    }
+  },
+  "line": {
+    "itemStyle": {
+      "normal": {
+        "borderWidth": "1"
+      }
+    },
+    "lineStyle": {
+      "normal": {
+        "width": "1"
+      }
+    },
+    "symbolSize": "10",
+    "symbol": "emptyCircle",
+    "smooth": false
+  }
+}

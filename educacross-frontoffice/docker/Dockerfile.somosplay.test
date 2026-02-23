@@ -1,0 +1,44 @@
+FROM node:14-alpine as build-stage
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+ENV VUE_APP_BASE_URL_API=https://apimanager-test.educacross.com.br/
+ENV VUE_APP_BLOB_IMAGE=https://blob-tst.educacross.com.br/
+ENV VUE_APP_BLOB=https://blob-tst.educacross.com.br/
+ENV VUE_APP_DEEPLINK_URL=https://somosplay-tst.educacross.com.br/
+ENV VUE_APP_MISSION_SUGGEST_URL=https://dev.empatie.net/
+ENV VUE_APP_WEBGL_PLAY_LINK=https://somosplay-tst.educacross.com.br/jogar
+ENV VUE_APP_WHITELABEL=somosplay
+ENV VUE_APP_LOGIN_URL=https://somosplay-tst.educacross.com.br/somosplay
+ENV VUE_APP_PLURALL_LINK=https://sso.s.plurall.net/
+ENV VUE_APP_PLURALL_REDIRECT=https://somosplay-tst.educacross.com.br/somosplay
+ENV VUE_APP_PLURALL_CLIENT_ID=NjhmNjJkNDI0MGI2ZGMy
+ENV VUE_APP_LOGIN_PLURALL_PAGE=https://login.s.plurall.net/
+ENV VUE_APP_WEBGL=D0A78263-861C-4AA3-8148-EF51360CC197
+
+# install and cache app dependencies
+COPY package*.json ./
+
+RUN npm ci
+
+# add app
+COPY . .
+
+# generate build
+RUN npm run build
+
+# production environment
+FROM nginx:alpine as production-stage
+
+# Remove default nginx index page
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

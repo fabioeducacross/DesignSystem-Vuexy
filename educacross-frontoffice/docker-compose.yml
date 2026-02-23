@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.test
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run serve
+
+  build:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.test
+    ports:
+      - 8080:80
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public

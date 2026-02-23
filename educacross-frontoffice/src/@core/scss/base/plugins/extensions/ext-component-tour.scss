@@ -1,0 +1,101 @@
+@import '../../bootstrap-extended/include'; // Bootstrap includes
+@import '../../components/include'; // Components includes
+
+.shepherd-element {
+  border-radius: 12px;
+  width: 640px;
+  max-width: 90vw;
+  &[data-popper-placement='bottom'] {
+    margin-top: 1rem !important;
+    .shepherd-arrow:before {
+      background-color: #f5f5f5 !important;
+    }
+  }
+  &[data-popper-placement='top'] {
+    margin-bottom: 1rem !important;
+  }
+  &[data-popper-placement='left'] {
+    margin-right: 1rem !important;
+  }
+  &[data-popper-placement='right'] {
+    margin-left: 1rem !important;
+  }
+
+  .shepherd-content {
+    border-radius: 12px;
+    // header
+    .shepherd-header {
+      background-color: #f5f5f5;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px 12px 0 0;
+      .shepherd-title {
+        color: #000;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+      .shepherd-cancel-icon {
+        color: #000;
+        font-size: 1.5rem;
+        opacity: 0.5;
+        font-weight: 300;
+
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    // body or text
+    .shepherd-text {
+      color: #333;
+      padding: 1rem 2.5rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    // footer
+    .shepherd-footer {
+      padding: 1.25rem 1.5rem;
+      justify-content: flex-end;
+      .shepherd-button {
+        padding: 0.625rem 2rem;
+        border-radius: 6px;
+        font-weight: 500;
+      }
+      .shepherd-button-primary {
+        background-color: #5b9cf5;
+        &:hover {
+          background-color: #4a8de3;
+        }
+      }
+      .shepherd-button-secondary {
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    width: 95vw;
+    max-width: 640px;
+  }
+}
+
+// Dark layout
+.dark-layout {
+  .shepherd-element {
+    background-color: $theme-dark-card-bg;
+    &:not([data-popper-placement='bottom']) {
+      .shepherd-arrow:before {
+        background-color: $theme-dark-card-bg;
+      }
+    }
+    .shepherd-content {
+      .shepherd-text {
+        color: $theme-dark-body-color;
+      }
+    }
+  }
+}

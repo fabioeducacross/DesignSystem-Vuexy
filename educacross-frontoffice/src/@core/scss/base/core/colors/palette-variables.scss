@@ -1,0 +1,904 @@
+// Overrides user _variables-components
+@import '../../bootstrap-extended/include';
+
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$white-color: (
+  'base': #ffffff,
+);
+$black-color: (
+  'base': #000000,
+);
+$dark-color: (
+  'base': theme-color('dark'),
+  'darken-1': #343434,
+  'darken-2': #1e1e1e,
+  'darken-3': #626262,
+);
+$light-color: (
+  'base': theme-color('light'),
+);
+
+$primary-color: (
+  'lighten-5': lighten(theme-color('primary'), 25%),
+  'lighten-4': lighten(theme-color('primary'), 20%),
+  'lighten-3': lighten(theme-color('primary'), 15%),
+  'lighten-2': lighten(theme-color('primary'), 10%),
+  'lighten-1': lighten(theme-color('primary'), 5%),
+  'base': theme-color('primary'),
+  'darken-1': darken(theme-color('primary'), 5%),
+  'darken-2': darken(theme-color('primary'), 10%),
+  'darken-3': darken(theme-color('primary'), 15%),
+  'darken-4': darken(theme-color('primary'), 20%),
+  'accent-1': #bdfdff,
+  'accent-2': #8afbff,
+  'accent-3': #57faff,
+  'accent-4': #3df9ff,
+);
+$secondary-color: (
+  'lighten-5': lighten(theme-color('secondary'), 25%),
+  'lighten-4': lighten(theme-color('secondary'), 20%),
+  'lighten-3': lighten(theme-color('secondary'), 15%),
+  'lighten-2': lighten(theme-color('secondary'), 10%),
+  'lighten-1': lighten(theme-color('secondary'), 5%),
+  'base': theme-color('secondary'),
+  'darken-1': darken(theme-color('secondary'), 5%),
+  'darken-2': darken(theme-color('secondary'), 10%),
+  'darken-3': darken(theme-color('secondary'), 15%),
+  'darken-4': darken(theme-color('secondary'), 20%),
+);
+$success-color: (
+  'lighten-5': lighten(theme-color('success'), 25%),
+  'lighten-4': lighten(theme-color('success'), 20%),
+  'lighten-3': lighten(theme-color('success'), 15%),
+  'lighten-2': lighten(theme-color('success'), 10%),
+  'lighten-1': lighten(theme-color('success'), 5%),
+  'base': theme-color('success'),
+  'darken-1': darken(theme-color('success'), 5%),
+  'darken-2': darken(theme-color('success'), 10%),
+  'darken-3': darken(theme-color('success'), 15%),
+  'darken-4': darken(theme-color('success'), 20%),
+  'accent-1': #e1fff1,
+  'accent-2': #aeffd9,
+  'accent-3': #7bffc1,
+  'accent-4': #62ffb5,
+);
+$info-color: (
+  'lighten-5': lighten(theme-color('info'), 25%),
+  'lighten-4': lighten(theme-color('info'), 20%),
+  'lighten-3': lighten(theme-color('info'), 15%),
+  'lighten-2': lighten(theme-color('info'), 10%),
+  'lighten-1': lighten(theme-color('info'), 5%),
+  'base': theme-color('info'),
+  'darken-1': darken(theme-color('info'), 5%),
+  'darken-2': darken(theme-color('info'), 10%),
+  'darken-3': darken(theme-color('info'), 15%),
+  'darken-4': darken(theme-color('info'), 20%),
+  'accent-1': #feffff,
+  'accent-2': #cbf5ff,
+  'accent-3': #98ecff,
+  'accent-4': #7fe7ff,
+);
+$warning-color: (
+  'lighten-5': lighten(theme-color('warning'), 25%),
+  'lighten-4': lighten(theme-color('warning'), 20%),
+  'lighten-3': lighten(theme-color('warning'), 15%),
+  'lighten-2': lighten(theme-color('warning'), 10%),
+  'lighten-1': lighten(theme-color('warning'), 5%),
+  'base': theme-color('warning'),
+  'darken-1': darken(theme-color('warning'), 5%),
+  'darken-2': darken(theme-color('warning'), 10%),
+  'darken-3': darken(theme-color('warning'), 15%),
+  'darken-4': darken(theme-color('warning'), 20%),
+  'accent-1': #fff5ef,
+  'accent-2': #ffe5d8,
+  'accent-3': #fff6f3,
+  'accent-4': #ffe3da,
+);
+$danger-color: (
+  'lighten-5': lighten(theme-color('danger'), 25%),
+  'lighten-4': lighten(theme-color('danger'), 20%),
+  'lighten-3': lighten(theme-color('danger'), 15%),
+  'lighten-2': lighten(theme-color('danger'), 10%),
+  'lighten-1': lighten(theme-color('danger'), 5%),
+  'base': theme-color('danger'),
+  'darken-1': darken(theme-color('danger'), 5%),
+  'darken-2': darken(theme-color('danger'), 10%),
+  'darken-3': darken(theme-color('danger'), 15%),
+  'darken-4': darken(theme-color('danger'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$dark-gray-color: (
+  'lighten-5': lighten(theme-color('dark-gray'), 25%),
+  'lighten-4': lighten(theme-color('dark-gray'), 20%),
+  'lighten-3': lighten(theme-color('dark-gray'), 15%),
+  'lighten-2': lighten(theme-color('dark-gray'), 10%),
+  'lighten-1': lighten(theme-color('dark-gray'), 5%),
+  'base': theme-color('dark-gray'),
+  'darken-1': darken(theme-color('dark-gray'), 5%),
+  'darken-2': darken(theme-color('dark-gray'), 10%),
+  'darken-3': darken(theme-color('dark-gray'), 15%),
+  'darken-4': darken(theme-color('dark-gray'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$light-gray-color: (
+  'lighten-5': lighten(theme-color('gray'), 25%),
+  'lighten-4': lighten(theme-color('gray'), 20%),
+  'lighten-3': lighten(theme-color('gray'), 15%),
+  'lighten-2': lighten(theme-color('gray'), 10%),
+  'lighten-1': lighten(theme-color('gray'), 5%),
+  'base': theme-color('gray'),
+  'darken-1': darken(theme-color('gray'), 5%),
+  'darken-2': darken(theme-color('gray'), 10%),
+  'darken-3': darken(theme-color('gray'), 15%),
+  'darken-4': darken(theme-color('gray'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$orange-color: (
+  'lighten-5': lighten(theme-color('orange'), 25%),
+  'lighten-4': lighten(theme-color('orange'), 20%),
+  'lighten-3': lighten(theme-color('orange'), 15%),
+  'lighten-2': lighten(theme-color('orange'), 10%),
+  'lighten-1': lighten(theme-color('orange'), 5%),
+  'base': theme-color('orange'),
+  'darken-1': darken(theme-color('orange'), 5%),
+  'darken-2': darken(theme-color('orange'), 10%),
+  'darken-3': darken(theme-color('orange'), 15%),
+  'darken-4': darken(theme-color('orange'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$math-color: (
+  'lighten-5': lighten(theme-color('math'), 25%),
+  'lighten-4': lighten(theme-color('math'), 20%),
+  'lighten-3': lighten(theme-color('math'), 15%),
+  'lighten-2': lighten(theme-color('math'), 10%),
+  'lighten-1': lighten(theme-color('math'), 5%),
+  'base': theme-color('math'),
+  'darken-1': darken(theme-color('math'), 5%),
+  'darken-2': darken(theme-color('math'), 10%),
+  'darken-3': darken(theme-color('math'), 15%),
+  'darken-4': darken(theme-color('math'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$successDarken-color: (
+  'lighten-5': lighten(theme-color('successDarken'), 25%),
+  'lighten-4': lighten(theme-color('successDarken'), 20%),
+  'lighten-3': lighten(theme-color('successDarken'), 15%),
+  'lighten-2': lighten(theme-color('successDarken'), 10%),
+  'lighten-1': lighten(theme-color('successDarken'), 5%),
+  'base': theme-color('successDarken'),
+  'darken-1': darken(theme-color('successDarken'), 5%),
+  'darken-2': darken(theme-color('successDarken'), 10%),
+  'darken-3': darken(theme-color('successDarken'), 15%),
+  'darken-4': darken(theme-color('successDarken'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+// Fixed Legend Colors
+$legend-advanced-color: (
+  'lighten-5': lighten(theme-color('legend-advanced'), 25%),
+  'lighten-4': lighten(theme-color('legend-advanced'), 20%),
+  'lighten-3': lighten(theme-color('legend-advanced'), 15%),
+  'lighten-2': lighten(theme-color('legend-advanced'), 10%),
+  'lighten-1': lighten(theme-color('legend-advanced'), 5%),
+  'base': theme-color('legend-advanced'),
+  'darken-1': darken(theme-color('legend-advanced'), 5%),
+  'darken-2': darken(theme-color('legend-advanced'), 10%),
+  'darken-3': darken(theme-color('legend-advanced'), 15%),
+  'darken-4': darken(theme-color('legend-advanced'), 20%),
+);
+
+$legend-proficient-color: (
+  'lighten-5': lighten(theme-color('legend-proficient'), 25%),
+  'lighten-4': lighten(theme-color('legend-proficient'), 20%),
+  'lighten-3': lighten(theme-color('legend-proficient'), 15%),
+  'lighten-2': lighten(theme-color('legend-proficient'), 10%),
+  'lighten-1': lighten(theme-color('legend-proficient'), 5%),
+  'base': theme-color('legend-proficient'),
+  'darken-1': darken(theme-color('legend-proficient'), 5%),
+  'darken-2': darken(theme-color('legend-proficient'), 10%),
+  'darken-3': darken(theme-color('legend-proficient'), 15%),
+  'darken-4': darken(theme-color('legend-proficient'), 20%),
+);
+
+$legend-basic-color: (
+  'lighten-5': lighten(theme-color('legend-basic'), 25%),
+  'lighten-4': lighten(theme-color('legend-basic'), 20%),
+  'lighten-3': lighten(theme-color('legend-basic'), 15%),
+  'lighten-2': lighten(theme-color('legend-basic'), 10%),
+  'lighten-1': lighten(theme-color('legend-basic'), 5%),
+  'base': theme-color('legend-basic'),
+  'darken-1': darken(theme-color('legend-basic'), 5%),
+  'darken-2': darken(theme-color('legend-basic'), 10%),
+  'darken-3': darken(theme-color('legend-basic'), 15%),
+  'darken-4': darken(theme-color('legend-basic'), 20%),
+);
+
+$legend-below-basic-color: (
+  'lighten-5': lighten(theme-color('legend-below-basic'), 25%),
+  'lighten-4': lighten(theme-color('legend-below-basic'), 20%),
+  'lighten-3': lighten(theme-color('legend-below-basic'), 15%),
+  'lighten-2': lighten(theme-color('legend-below-basic'), 10%),
+  'lighten-1': lighten(theme-color('legend-below-basic'), 5%),
+  'base': theme-color('legend-below-basic'),
+  'darken-1': darken(theme-color('legend-below-basic'), 5%),
+  'darken-2': darken(theme-color('legend-below-basic'), 10%),
+  'darken-3': darken(theme-color('legend-below-basic'), 15%),
+  'darken-4': darken(theme-color('legend-below-basic'), 20%),
+);
+
+$legend-not-completed-color: (
+  'lighten-5': lighten(theme-color('legend-not-completed'), 25%),
+  'lighten-4': lighten(theme-color('legend-not-completed'), 20%),
+  'lighten-3': lighten(theme-color('legend-not-completed'), 15%),
+  'lighten-2': lighten(theme-color('legend-not-completed'), 10%),
+  'lighten-1': lighten(theme-color('legend-not-completed'), 5%),
+  'base': theme-color('legend-not-completed'),
+  'darken-1': darken(theme-color('legend-not-completed'), 5%),
+  'darken-2': darken(theme-color('legend-not-completed'), 10%),
+  'darken-3': darken(theme-color('legend-not-completed'), 15%),
+  'darken-4': darken(theme-color('legend-not-completed'), 20%),
+);
+
+$legend-in-progress-color: (
+  'lighten-5': lighten(theme-color('legend-in-progress'), 25%),
+  'lighten-4': lighten(theme-color('legend-in-progress'), 20%),
+  'lighten-3': lighten(theme-color('legend-in-progress'), 15%),
+  'lighten-2': lighten(theme-color('legend-in-progress'), 10%),
+  'lighten-1': lighten(theme-color('legend-in-progress'), 5%),
+  'base': theme-color('legend-in-progress'),
+  'darken-1': darken(theme-color('legend-in-progress'), 5%),
+  'darken-2': darken(theme-color('legend-in-progress'), 10%),
+  'darken-3': darken(theme-color('legend-in-progress'), 15%),
+  'darken-4': darken(theme-color('legend-in-progress'), 20%),
+);
+
+$legend-complete-color: (
+  'lighten-5': lighten(theme-color('legend-complete'), 25%),
+  'lighten-4': lighten(theme-color('legend-complete'), 20%),
+  'lighten-3': lighten(theme-color('legend-complete'), 15%),
+  'lighten-2': lighten(theme-color('legend-complete'), 10%),
+  'lighten-1': lighten(theme-color('legend-complete'), 5%),
+  'base': theme-color('legend-complete'),
+  'darken-1': darken(theme-color('legend-complete'), 5%),
+  'darken-2': darken(theme-color('legend-complete'), 10%),
+  'darken-3': darken(theme-color('legend-complete'), 15%),
+  'darken-4': darken(theme-color('legend-complete'), 20%),
+);
+
+// Writing Phases Legend Colors
+$legend-writing-na-color: (
+  'lighten-5': lighten(theme-color('legend-writing-na'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-na'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-na'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-na'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-na'), 5%),
+  'base': theme-color('legend-writing-na'),
+  'darken-1': darken(theme-color('legend-writing-na'), 5%),
+  'darken-2': darken(theme-color('legend-writing-na'), 10%),
+  'darken-3': darken(theme-color('legend-writing-na'), 15%),
+  'darken-4': darken(theme-color('legend-writing-na'), 20%),
+);
+
+$legend-writing-pre-color: (
+  'lighten-5': lighten(theme-color('legend-writing-pre'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-pre'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-pre'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-pre'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-pre'), 5%),
+  'base': theme-color('legend-writing-pre'),
+  'darken-1': darken(theme-color('legend-writing-pre'), 5%),
+  'darken-2': darken(theme-color('legend-writing-pre'), 10%),
+  'darken-3': darken(theme-color('legend-writing-pre'), 15%),
+  'darken-4': darken(theme-color('legend-writing-pre'), 20%),
+);
+
+$legend-writing-ssv-color: (
+  'lighten-5': lighten(theme-color('legend-writing-ssv'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-ssv'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-ssv'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-ssv'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-ssv'), 5%),
+  'base': theme-color('legend-writing-ssv'),
+  'darken-1': darken(theme-color('legend-writing-ssv'), 5%),
+  'darken-2': darken(theme-color('legend-writing-ssv'), 10%),
+  'darken-3': darken(theme-color('legend-writing-ssv'), 15%),
+  'darken-4': darken(theme-color('legend-writing-ssv'), 20%),
+);
+
+$legend-writing-scv-color: (
+  'lighten-5': lighten(theme-color('legend-writing-scv'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-scv'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-scv'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-scv'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-scv'), 5%),
+  'base': theme-color('legend-writing-scv'),
+  'darken-1': darken(theme-color('legend-writing-scv'), 5%),
+  'darken-2': darken(theme-color('legend-writing-scv'), 10%),
+  'darken-3': darken(theme-color('legend-writing-scv'), 15%),
+  'darken-4': darken(theme-color('legend-writing-scv'), 20%),
+);
+
+$legend-writing-sal-color: (
+  'lighten-5': lighten(theme-color('legend-writing-sal'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-sal'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-sal'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-sal'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-sal'), 5%),
+  'base': theme-color('legend-writing-sal'),
+  'darken-1': darken(theme-color('legend-writing-sal'), 5%),
+  'darken-2': darken(theme-color('legend-writing-sal'), 10%),
+  'darken-3': darken(theme-color('legend-writing-sal'), 15%),
+  'darken-4': darken(theme-color('legend-writing-sal'), 20%),
+);
+
+$legend-writing-alf-color: (
+  'lighten-5': lighten(theme-color('legend-writing-alf'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-alf'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-alf'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-alf'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-alf'), 5%),
+  'base': theme-color('legend-writing-alf'),
+  'darken-1': darken(theme-color('legend-writing-alf'), 5%),
+  'darken-2': darken(theme-color('legend-writing-alf'), 10%),
+  'darken-3': darken(theme-color('legend-writing-alf'), 15%),
+  'darken-4': darken(theme-color('legend-writing-alf'), 20%),
+);
+
+$legend-writing-ort-color: (
+  'lighten-5': lighten(theme-color('legend-writing-ort'), 25%),
+  'lighten-4': lighten(theme-color('legend-writing-ort'), 20%),
+  'lighten-3': lighten(theme-color('legend-writing-ort'), 15%),
+  'lighten-2': lighten(theme-color('legend-writing-ort'), 10%),
+  'lighten-1': lighten(theme-color('legend-writing-ort'), 5%),
+  'base': theme-color('legend-writing-ort'),
+  'darken-1': darken(theme-color('legend-writing-ort'), 5%),
+  'darken-2': darken(theme-color('legend-writing-ort'), 10%),
+  'darken-3': darken(theme-color('legend-writing-ort'), 15%),
+  'darken-4': darken(theme-color('legend-writing-ort'), 20%),
+);
+
+$legend-warning-color: (
+  'lighten-5': lighten(theme-color('legend-warning'), 25%),
+  'lighten-4': lighten(theme-color('legend-warning'), 20%),
+  'lighten-3': lighten(theme-color('legend-warning'), 15%),
+  'lighten-2': lighten(theme-color('legend-warning'), 10%),
+  'lighten-1': lighten(theme-color('legend-warning'), 5%),
+  'base': theme-color('legend-warning'),
+  'darken-1': darken(theme-color('legend-warning'), 5%),
+  'darken-2': darken(theme-color('legend-warning'), 10%),
+  'darken-3': darken(theme-color('legend-warning'), 15%),
+  'darken-4': darken(theme-color('legend-warning'), 20%),
+);
+
+// Status Colors
+$status-canceled-color: (
+  'lighten-5': lighten(theme-color('status-canceled'), 25%),
+  'lighten-4': lighten(theme-color('status-canceled'), 20%),
+  'lighten-3': lighten(theme-color('status-canceled'), 15%),
+  'lighten-2': lighten(theme-color('status-canceled'), 10%),
+  'lighten-1': lighten(theme-color('status-canceled'), 5%),
+  'base': theme-color('status-canceled'),
+  'darken-1': darken(theme-color('status-canceled'), 5%),
+  'darken-2': darken(theme-color('status-canceled'), 10%),
+  'darken-3': darken(theme-color('status-canceled'), 15%),
+  'darken-4': darken(theme-color('status-canceled'), 20%),
+);
+
+$status-paused-color: (
+  'lighten-5': lighten(theme-color('status-paused'), 25%),
+  'lighten-4': lighten(theme-color('status-paused'), 20%),
+  'lighten-3': lighten(theme-color('status-paused'), 15%),
+  'lighten-2': lighten(theme-color('status-paused'), 10%),
+  'lighten-1': lighten(theme-color('status-paused'), 5%),
+  'base': theme-color('status-paused'),
+  'darken-1': darken(theme-color('status-paused'), 5%),
+  'darken-2': darken(theme-color('status-paused'), 10%),
+  'darken-3': darken(theme-color('status-paused'), 15%),
+  'darken-4': darken(theme-color('status-paused'), 20%),
+);
+
+$status-activate-color: (
+  'lighten-5': lighten(theme-color('status-activate'), 25%),
+  'lighten-4': lighten(theme-color('status-activate'), 20%),
+  'lighten-3': lighten(theme-color('status-activate'), 15%),
+  'lighten-2': lighten(theme-color('status-activate'), 10%),
+  'lighten-1': lighten(theme-color('status-activate'), 5%),
+  'base': theme-color('status-activate'),
+  'darken-1': darken(theme-color('status-activate'), 5%),
+  'darken-2': darken(theme-color('status-activate'), 10%),
+  'darken-3': darken(theme-color('status-activate'), 15%),
+  'darken-4': darken(theme-color('status-activate'), 20%),
+);
+
+$status-start-color: (
+  'lighten-5': lighten(theme-color('status-start'), 25%),
+  'lighten-4': lighten(theme-color('status-start'), 20%),
+  'lighten-3': lighten(theme-color('status-start'), 15%),
+  'lighten-2': lighten(theme-color('status-start'), 10%),
+  'lighten-1': lighten(theme-color('status-start'), 5%),
+  'base': theme-color('status-start'),
+  'darken-1': darken(theme-color('status-start'), 5%),
+  'darken-2': darken(theme-color('status-start'), 10%),
+  'darken-3': darken(theme-color('status-start'), 15%),
+  'darken-4': darken(theme-color('status-start'), 20%),
+);
+
+$status-in-progress-color: (
+  'lighten-5': lighten(theme-color('status-in-progress'), 25%),
+  'lighten-4': lighten(theme-color('status-in-progress'), 20%),
+  'lighten-3': lighten(theme-color('status-in-progress'), 15%),
+  'lighten-2': lighten(theme-color('status-in-progress'), 10%),
+  'lighten-1': lighten(theme-color('status-in-progress'), 5%),
+  'base': theme-color('status-in-progress'),
+  'darken-1': darken(theme-color('status-in-progress'), 5%),
+  'darken-2': darken(theme-color('status-in-progress'), 10%),
+  'darken-3': darken(theme-color('status-in-progress'), 15%),
+  'darken-4': darken(theme-color('status-in-progress'), 20%),
+);
+
+$status-finished-color: (
+  'lighten-5': lighten(theme-color('status-finished'), 25%),
+  'lighten-4': lighten(theme-color('status-finished'), 20%),
+  'lighten-3': lighten(theme-color('status-finished'), 15%),
+  'lighten-2': lighten(theme-color('status-finished'), 10%),
+  'lighten-1': lighten(theme-color('status-finished'), 5%),
+  'base': theme-color('status-finished'),
+  'darken-1': darken(theme-color('status-finished'), 5%),
+  'darken-2': darken(theme-color('status-finished'), 10%),
+  'darken-3': darken(theme-color('status-finished'), 15%),
+  'darken-4': darken(theme-color('status-finished'), 20%),
+);
+
+// User Status Colors
+$user-active-color: (
+  'lighten-5': lighten(theme-color('user-active'), 25%),
+  'lighten-4': lighten(theme-color('user-active'), 20%),
+  'lighten-3': lighten(theme-color('user-active'), 15%),
+  'lighten-2': lighten(theme-color('user-active'), 10%),
+  'lighten-1': lighten(theme-color('user-active'), 5%),
+  'base': theme-color('user-active'),
+  'darken-1': darken(theme-color('user-active'), 5%),
+  'darken-2': darken(theme-color('user-active'), 10%),
+  'darken-3': darken(theme-color('user-active'), 15%),
+  'darken-4': darken(theme-color('user-active'), 20%),
+);
+
+$user-pending-color: (
+  'lighten-5': lighten(theme-color('user-pending'), 25%),
+  'lighten-4': lighten(theme-color('user-pending'), 20%),
+  'lighten-3': lighten(theme-color('user-pending'), 15%),
+  'lighten-2': lighten(theme-color('user-pending'), 10%),
+  'lighten-1': lighten(theme-color('user-pending'), 5%),
+  'base': theme-color('user-pending'),
+  'darken-1': darken(theme-color('user-pending'), 5%),
+  'darken-2': darken(theme-color('user-pending'), 10%),
+  'darken-3': darken(theme-color('user-pending'), 15%),
+  'darken-4': darken(theme-color('user-pending'), 20%),
+);
+
+$user-rejected-color: (
+  'lighten-5': lighten(theme-color('user-rejected'), 25%),
+  'lighten-4': lighten(theme-color('user-rejected'), 20%),
+  'lighten-3': lighten(theme-color('user-rejected'), 15%),
+  'lighten-2': lighten(theme-color('user-rejected'), 10%),
+  'lighten-1': lighten(theme-color('user-rejected'), 5%),
+  'base': theme-color('user-rejected'),
+  'darken-1': darken(theme-color('user-rejected'), 5%),
+  'darken-2': darken(theme-color('user-rejected'), 10%),
+  'darken-3': darken(theme-color('user-rejected'), 15%),
+  'darken-4': darken(theme-color('user-rejected'), 20%),
+);
+
+// Activity Type Colors
+$individual-color: (
+  'lighten-5': lighten(theme-color('individual'), 25%),
+  'lighten-4': lighten(theme-color('individual'), 20%),
+  'lighten-3': lighten(theme-color('individual'), 15%),
+  'lighten-2': lighten(theme-color('individual'), 10%),
+  'lighten-1': lighten(theme-color('individual'), 5%),
+  'base': theme-color('individual'),
+  'darken-1': darken(theme-color('individual'), 5%),
+  'darken-2': darken(theme-color('individual'), 10%),
+  'darken-3': darken(theme-color('individual'), 15%),
+  'darken-4': darken(theme-color('individual'), 20%),
+);
+
+$collective-color: (
+  'lighten-5': lighten(theme-color('collective'), 25%),
+  'lighten-4': lighten(theme-color('collective'), 20%),
+  'lighten-3': lighten(theme-color('collective'), 15%),
+  'lighten-2': lighten(theme-color('collective'), 10%),
+  'lighten-1': lighten(theme-color('collective'), 5%),
+  'base': theme-color('collective'),
+  'darken-1': darken(theme-color('collective'), 5%),
+  'darken-2': darken(theme-color('collective'), 10%),
+  'darken-3': darken(theme-color('collective'), 15%),
+  'darken-4': darken(theme-color('collective'), 20%),
+);
+
+$mix-color: (
+  'lighten-5': lighten(theme-color('mix'), 25%),
+  'lighten-4': lighten(theme-color('mix'), 20%),
+  'lighten-3': lighten(theme-color('mix'), 15%),
+  'lighten-2': lighten(theme-color('mix'), 10%),
+  'lighten-1': lighten(theme-color('mix'), 5%),
+  'base': theme-color('mix'),
+  'darken-1': darken(theme-color('mix'), 5%),
+  'darken-2': darken(theme-color('mix'), 10%),
+  'darken-3': darken(theme-color('mix'), 15%),
+  'darken-4': darken(theme-color('mix'), 20%),
+);
+
+// Application Colors
+$applicationSchool-color: (
+  'lighten-5': lighten(theme-color('applicationSchool'), 25%),
+  'lighten-4': lighten(theme-color('applicationSchool'), 20%),
+  'lighten-3': lighten(theme-color('applicationSchool'), 15%),
+  'lighten-2': lighten(theme-color('applicationSchool'), 10%),
+  'lighten-1': lighten(theme-color('applicationSchool'), 5%),
+  'base': theme-color('applicationSchool'),
+  'darken-1': darken(theme-color('applicationSchool'), 5%),
+  'darken-2': darken(theme-color('applicationSchool'), 10%),
+  'darken-3': darken(theme-color('applicationSchool'), 15%),
+  'darken-4': darken(theme-color('applicationSchool'), 20%),
+);
+
+$applicationHouse-color: (
+  'lighten-5': lighten(theme-color('applicationHouse'), 25%),
+  'lighten-4': lighten(theme-color('applicationHouse'), 20%),
+  'lighten-3': lighten(theme-color('applicationHouse'), 15%),
+  'lighten-2': lighten(theme-color('applicationHouse'), 10%),
+  'lighten-1': lighten(theme-color('applicationHouse'), 5%),
+  'base': theme-color('applicationHouse'),
+  'darken-1': darken(theme-color('applicationHouse'), 5%),
+  'darken-2': darken(theme-color('applicationHouse'), 10%),
+  'darken-3': darken(theme-color('applicationHouse'), 15%),
+  'darken-4': darken(theme-color('applicationHouse'), 20%),
+);
+
+// Axis Colors
+$firstAxis-color: (
+  'lighten-5': lighten(theme-color('firstAxis'), 25%),
+  'lighten-4': lighten(theme-color('firstAxis'), 20%),
+  'lighten-3': lighten(theme-color('firstAxis'), 15%),
+  'lighten-2': lighten(theme-color('firstAxis'), 10%),
+  'lighten-1': lighten(theme-color('firstAxis'), 5%),
+  'base': theme-color('firstAxis'),
+  'darken-1': darken(theme-color('firstAxis'), 5%),
+  'darken-2': darken(theme-color('firstAxis'), 10%),
+  'darken-3': darken(theme-color('firstAxis'), 15%),
+  'darken-4': darken(theme-color('firstAxis'), 20%),
+);
+
+$secondAxis-color: (
+  'lighten-5': lighten(theme-color('secondAxis'), 25%),
+  'lighten-4': lighten(theme-color('secondAxis'), 20%),
+  'lighten-3': lighten(theme-color('secondAxis'), 15%),
+  'lighten-2': lighten(theme-color('secondAxis'), 10%),
+  'lighten-1': lighten(theme-color('secondAxis'), 5%),
+  'base': theme-color('secondAxis'),
+  'darken-1': darken(theme-color('secondAxis'), 5%),
+  'darken-2': darken(theme-color('secondAxis'), 10%),
+  'darken-3': darken(theme-color('secondAxis'), 15%),
+  'darken-4': darken(theme-color('secondAxis'), 20%),
+);
+
+$thirdAxis-color: (
+  'lighten-5': lighten(theme-color('thirdAxis'), 25%),
+  'lighten-4': lighten(theme-color('thirdAxis'), 20%),
+  'lighten-3': lighten(theme-color('thirdAxis'), 15%),
+  'lighten-2': lighten(theme-color('thirdAxis'), 10%),
+  'lighten-1': lighten(theme-color('thirdAxis'), 5%),
+  'base': theme-color('thirdAxis'),
+  'darken-1': darken(theme-color('thirdAxis'), 5%),
+  'darken-2': darken(theme-color('thirdAxis'), 10%),
+  'darken-3': darken(theme-color('thirdAxis'), 15%),
+  'darken-4': darken(theme-color('thirdAxis'), 20%),
+);
+
+$fourthAxis-color: (
+  'lighten-5': lighten(theme-color('fourthAxis'), 25%),
+  'lighten-4': lighten(theme-color('fourthAxis'), 20%),
+  'lighten-3': lighten(theme-color('fourthAxis'), 15%),
+  'lighten-2': lighten(theme-color('fourthAxis'), 10%),
+  'lighten-1': lighten(theme-color('fourthAxis'), 5%),
+  'base': theme-color('fourthAxis'),
+  'darken-1': darken(theme-color('fourthAxis'), 5%),
+  'darken-2': darken(theme-color('fourthAxis'), 10%),
+  'darken-3': darken(theme-color('fourthAxis'), 15%),
+  'darken-4': darken(theme-color('fourthAxis'), 20%),
+);
+
+$fifthAxis-color: (
+  'lighten-5': lighten(theme-color('fifthAxis'), 25%),
+  'lighten-4': lighten(theme-color('fifthAxis'), 20%),
+  'lighten-3': lighten(theme-color('fifthAxis'), 15%),
+  'lighten-2': lighten(theme-color('fifthAxis'), 10%),
+  'lighten-1': lighten(theme-color('fifthAxis'), 5%),
+  'base': theme-color('fifthAxis'),
+  'darken-1': darken(theme-color('fifthAxis'), 5%),
+  'darken-2': darken(theme-color('fifthAxis'), 10%),
+  'darken-3': darken(theme-color('fifthAxis'), 15%),
+  'darken-4': darken(theme-color('fifthAxis'), 20%),
+);
+
+// Other Colors
+$rowBackground-color: (
+  'lighten-5': lighten(theme-color('rowBackground'), 25%),
+  'lighten-4': lighten(theme-color('rowBackground'), 20%),
+  'lighten-3': lighten(theme-color('rowBackground'), 15%),
+  'lighten-2': lighten(theme-color('rowBackground'), 10%),
+  'lighten-1': lighten(theme-color('rowBackground'), 5%),
+  'base': theme-color('rowBackground'),
+  'darken-1': darken(theme-color('rowBackground'), 5%),
+  'darken-2': darken(theme-color('rowBackground'), 10%),
+  'darken-3': darken(theme-color('rowBackground'), 15%),
+  'darken-4': darken(theme-color('rowBackground'), 20%),
+);
+
+$gray-color: (
+  'lighten-5': lighten(theme-color('gray'), 25%),
+  'lighten-4': lighten(theme-color('gray'), 20%),
+  'lighten-3': lighten(theme-color('gray'), 15%),
+  'lighten-2': lighten(theme-color('gray'), 10%),
+  'lighten-1': lighten(theme-color('gray'), 5%),
+  'base': theme-color('gray'),
+  'darken-1': darken(theme-color('gray'), 5%),
+  'darken-2': darken(theme-color('gray'), 10%),
+  'darken-3': darken(theme-color('gray'), 15%),
+  'darken-4': darken(theme-color('gray'), 20%),
+);
+
+$pink-color: (
+  'lighten-5': lighten(theme-color('pink'), 25%),
+  'lighten-4': lighten(theme-color('pink'), 20%),
+  'lighten-3': lighten(theme-color('pink'), 15%),
+  'lighten-2': lighten(theme-color('pink'), 10%),
+  'lighten-1': lighten(theme-color('pink'), 5%),
+  'base': theme-color('pink'),
+  'darken-1': darken(theme-color('pink'), 5%),
+  'darken-2': darken(theme-color('pink'), 10%),
+  'darken-3': darken(theme-color('pink'), 15%),
+  'darken-4': darken(theme-color('pink'), 20%),
+);
+
+// Keep old writing phase colors for backward compatibility
+$na-color: (
+  'lighten-5': lighten(theme-color('na'), 25%),
+  'lighten-4': lighten(theme-color('na'), 20%),
+  'lighten-3': lighten(theme-color('na'), 15%),
+  'lighten-2': lighten(theme-color('na'), 10%),
+  'lighten-1': lighten(theme-color('na'), 5%),
+  'base': theme-color('na'),
+  'darken-1': darken(theme-color('na'), 5%),
+  'darken-2': darken(theme-color('na'), 10%),
+  'darken-3': darken(theme-color('na'), 15%),
+  'darken-4': darken(theme-color('na'), 20%),
+);
+
+$pre-color: (
+  'lighten-5': lighten(theme-color('pre'), 25%),
+  'lighten-4': lighten(theme-color('pre'), 20%),
+  'lighten-3': lighten(theme-color('pre'), 15%),
+  'lighten-2': lighten(theme-color('pre'), 10%),
+  'lighten-1': lighten(theme-color('pre'), 5%),
+  'base': theme-color('pre'),
+  'darken-1': darken(theme-color('pre'), 5%),
+  'darken-2': darken(theme-color('pre'), 10%),
+  'darken-3': darken(theme-color('pre'), 15%),
+  'darken-4': darken(theme-color('pre'), 20%),
+);
+
+$ssv-color: (
+  'lighten-5': lighten(theme-color('ssv'), 25%),
+  'lighten-4': lighten(theme-color('ssv'), 20%),
+  'lighten-3': lighten(theme-color('ssv'), 15%),
+  'lighten-2': lighten(theme-color('ssv'), 10%),
+  'lighten-1': lighten(theme-color('ssv'), 5%),
+  'base': theme-color('ssv'),
+  'darken-1': darken(theme-color('ssv'), 5%),
+  'darken-2': darken(theme-color('ssv'), 10%),
+  'darken-3': darken(theme-color('ssv'), 15%),
+  'darken-4': darken(theme-color('ssv'), 20%),
+);
+
+$scv-color: (
+  'lighten-5': lighten(theme-color('scv'), 25%),
+  'lighten-4': lighten(theme-color('scv'), 20%),
+  'lighten-3': lighten(theme-color('scv'), 15%),
+  'lighten-2': lighten(theme-color('scv'), 10%),
+  'lighten-1': lighten(theme-color('scv'), 5%),
+  'base': theme-color('scv'),
+  'darken-1': darken(theme-color('scv'), 5%),
+  'darken-2': darken(theme-color('scv'), 10%),
+  'darken-3': darken(theme-color('scv'), 15%),
+  'darken-4': darken(theme-color('scv'), 20%),
+);
+
+$sal-color: (
+  'lighten-5': lighten(theme-color('sal'), 25%),
+  'lighten-4': lighten(theme-color('sal'), 20%),
+  'lighten-3': lighten(theme-color('sal'), 15%),
+  'lighten-2': lighten(theme-color('sal'), 10%),
+  'lighten-1': lighten(theme-color('sal'), 5%),
+  'base': theme-color('sal'),
+  'darken-1': darken(theme-color('sal'), 5%),
+  'darken-2': darken(theme-color('sal'), 10%),
+  'darken-3': darken(theme-color('sal'), 15%),
+  'darken-4': darken(theme-color('sal'), 20%),
+);
+
+$alf-color: (
+  'lighten-5': lighten(theme-color('alf'), 25%),
+  'lighten-4': lighten(theme-color('alf'), 20%),
+  'lighten-3': lighten(theme-color('alf'), 15%),
+  'lighten-2': lighten(theme-color('alf'), 10%),
+  'lighten-1': lighten(theme-color('alf'), 5%),
+  'base': theme-color('alf'),
+  'darken-1': darken(theme-color('alf'), 5%),
+  'darken-2': darken(theme-color('alf'), 10%),
+  'darken-3': darken(theme-color('alf'), 15%),
+  'darken-4': darken(theme-color('alf'), 20%),
+);
+
+$ort-color: (
+  'lighten-5': lighten(theme-color('ort'), 25%),
+  'lighten-4': lighten(theme-color('ort'), 20%),
+  'lighten-3': lighten(theme-color('ort'), 15%),
+  'lighten-2': lighten(theme-color('ort'), 10%),
+  'lighten-1': lighten(theme-color('ort'), 5%),
+  'base': theme-color('ort'),
+  'darken-1': darken(theme-color('ort'), 5%),
+  'darken-2': darken(theme-color('ort'), 10%),
+  'darken-3': darken(theme-color('ort'), 15%),
+  'darken-4': darken(theme-color('ort'), 20%),
+);
+
+$port-color: (
+  'lighten-5': lighten(theme-color('port'), 25%),
+  'lighten-4': lighten(theme-color('port'), 20%),
+  'lighten-3': lighten(theme-color('port'), 15%),
+  'lighten-2': lighten(theme-color('port'), 10%),
+  'lighten-1': lighten(theme-color('port'), 5%),
+  'base': theme-color('port'),
+  'darken-1': darken(theme-color('port'), 5%),
+  'darken-2': darken(theme-color('port'), 10%),
+  'darken-3': darken(theme-color('port'), 15%),
+  'darken-4': darken(theme-color('port'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$liga-color: (
+  'lighten-5': lighten(theme-color('liga'), 25%),
+  'lighten-4': lighten(theme-color('liga'), 20%),
+  'lighten-3': lighten(theme-color('liga'), 15%),
+  'lighten-2': lighten(theme-color('liga'), 10%),
+  'lighten-1': lighten(theme-color('liga'), 5%),
+  'base': theme-color('liga'),
+  'darken-1': darken(theme-color('liga'), 5%),
+  'darken-2': darken(theme-color('liga'), 10%),
+  'darken-3': darken(theme-color('liga'), 15%),
+  'darken-4': darken(theme-color('liga'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$math-ing-color: (
+  'lighten-5': lighten(theme-color('math-ing'), 25%),
+  'lighten-4': lighten(theme-color('math-ing'), 20%),
+  'lighten-3': lighten(theme-color('math-ing'), 15%),
+  'lighten-2': lighten(theme-color('math-ing'), 10%),
+  'lighten-1': lighten(theme-color('math-ing'), 5%),
+  'base': theme-color('math-ing'),
+  'darken-1': darken(theme-color('math-ing'), 5%),
+  'darken-2': darken(theme-color('math-ing'), 10%),
+  'darken-3': darken(theme-color('math-ing'), 15%),
+  'darken-4': darken(theme-color('math-ing'), 20%),
+  'accent-1': #ffeef1,
+  'accent-2': #ffd6db,
+  'accent-3': #ffecee,
+  'accent-4': #ffd3d7,
+);
+
+$colors: (
+  'white': $white-color,
+  'black': $black-color,
+  'dark': $dark-color,
+  'light': $light-color,
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'success': $success-color,
+  'info': $info-color,
+  'warning': $warning-color,
+  'danger': $danger-color,
+  'dark-gray': $dark-gray-color,
+  'light-gray': $light-gray-color,
+  'gray': $gray-color,
+  'orange': $orange-color,
+  'math': $math-color,
+  'successDarken': $successDarken-color,
+  'pink': $pink-color,
+  // Keep old writing phase colors for backward compatibility
+  'na': $na-color,
+  'pre': $pre-color,
+  'ssv': $ssv-color,
+  'scv': $scv-color,
+  'sal': $sal-color,
+  'alf': $alf-color,
+  'ort': $ort-color,
+  'math-ing': $math-ing-color,
+  'port': $port-color,
+  'liga': $liga-color,
+  // Activity Type Colors
+  'individual': $individual-color,
+  'collective': $collective-color,
+  'mix': $mix-color,
+  // Application Colors
+  'applicationSchool': $applicationSchool-color,
+  'applicationHouse': $applicationHouse-color,
+  // Axis Colors
+  'firstAxis': $firstAxis-color,
+  'secondAxis': $secondAxis-color,
+  'thirdAxis': $thirdAxis-color,
+  'fourthAxis': $fourthAxis-color,
+  'fifthAxis': $fifthAxis-color,
+  // Other Colors
+  'rowBackground': $rowBackground-color,
+  // New fixed legend colors
+  'legend-advanced': $legend-advanced-color,
+  'legend-proficient': $legend-proficient-color,
+  'legend-basic': $legend-basic-color,
+  'legend-below-basic': $legend-below-basic-color,
+  'legend-not-completed': $legend-not-completed-color,
+  'legend-in-progress': $legend-in-progress-color,
+  'legend-complete': $legend-complete-color,
+  'legend-warning': $legend-warning-color,
+  // Writing phases legend colors
+  'legend-writing-na': $legend-writing-na-color,
+  'legend-writing-pre': $legend-writing-pre-color,
+  'legend-writing-ssv': $legend-writing-ssv-color,
+  'legend-writing-scv': $legend-writing-scv-color,
+  'legend-writing-sal': $legend-writing-sal-color,
+  'legend-writing-alf': $legend-writing-alf-color,
+  'legend-writing-ort': $legend-writing-ort-color,
+  // Status Colors
+  'status-canceled': $status-canceled-color,
+  'status-paused': $status-paused-color,
+  'status-activate': $status-activate-color,
+  'status-start': $status-start-color,
+  'status-in-progress': $status-in-progress-color,
+  'status-finished': $status-finished-color,
+  // User Status Colors
+  'user-active': $user-active-color,
+  'user-pending': $user-pending-color,
+  'user-rejected': $user-rejected-color,
+);

@@ -1,0 +1,194 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+// Import whitelabel-specific color overrides FIRST (generated at build time)
+// This ensures whitelabel colors take precedence over default values
+@import './_whitelabel-colors.scss';
+
+// Default values (will be overridden by whitelabel colors if they exist)
+$primary: #6e63e8 !default; // #6e63e8
+$secondary: #b4b7bd !default;
+$success: #28c76f !default;
+$danger: #ea5455 !default;
+$warning: #ffd643 !default;
+$dark: #1e1e1e !default;
+$grey: #b8c2cc;
+$grey-light: #dae1e7;
+$white: #fff;
+$black: #22292f;
+
+//text color pattern
+$color-one: #00bdb8 !default;
+$color-two: #2c2c2c !default;
+$color-three: #000000 !default;
+$color-four: #c6c6c6 !default;
+$color-five: #6d6d6d !default;
+$color-six: #6e63e8 !default; //#7F6CC3
+$color-seven: #979797 !default;
+$color-eight: #51dffe !default;
+$color-nine: #6b6b6b !default;
+$color-ten: #f4f1ff !default;
+$color-eleven: #4fb8f3 !default;
+$color-twelve: #d5f5f4 !default;
+$color-thirteen: #ffeed1 !default;
+$color-fourteen: #e6e0fc !default;
+$color-fifteen: #d3efff !default;
+$color-sixteen: #ec6300 !default;
+$color-seventeen: #4f4f4f !default;
+$color-eighteen: #5c5c5c !default;
+$color-nineteen: #575757 !default;
+$color-green-60: #34c759 !default;
+$color-gray-40: #a8a8a8 !default;
+$color-purple-ldc: #56124f !default;
+$color-gray-100: #202223 !default;
+$color-gray-theme: #5e5873 !default;
+$color-gray-themeBodyText: #6e6b7b !default;
+$color-gray-themeLight: #babfc7 !default;
+$color-gray-mutedPlaceholder: #b9b9c3 !default;
+$color-blue-bootstrap: #0d6efd !default;
+$color-gary-themeligth-border: #e2e2e3 !default;
+$brand-color-primary-medium: #006b7e !default;
+
+// Fixed Legend Colors - These colors are used for legends and don't change with whitelabel
+// They maintain consistent values for data visualization regardless of theme customization
+$legend-advanced: #6e63e8 !default; // Avançado - Primary
+$legend-proficient: #28c76f !default; // Proficiente - Success
+$legend-basic: #ff9f43 !default; // Básico - Warning
+$legend-below-basic: #ea5455 !default; // Abaixo do Básico - Danger
+$legend-not-completed: #b4b7bd !default; // Não fizeram/Não Avaliados - Secondary
+$legend-in-progress: #00cfe8 !default; // Em Andamento - Info
+$legend-complete: #14693a !default; // Completo/100% - Dark Success
+$legend-warning: #ffd643 !default; // Avisos - ?
+
+// Writing Phases specific legend colors
+$legend-writing-na: #b4b7bd !default; // Não Avaliados - Gray
+$legend-writing-pre: #00bdb9 !default; // Pré-Silábica - Teal
+$legend-writing-ssv: #28c76f !default; // Silábica Sem Valor Sonoro - Green
+$legend-writing-scv: #299459 !default; // Silábica Com Valor Sonoro - Medium Green
+$legend-writing-sal: #246541 !default; // Silábica-Alfabética - Dark Green
+$legend-writing-alf: #7367f0 !default; // Alfabética - Indigo
+$legend-writing-ort: #3b2ec2 !default; // Ortográfica - Deep Purple
+
+// Legend Status
+$status-canceled: #ea5455 !default;
+$status-activate: #b4b7bd !default;
+$status-paused: #ffd643 !default;
+$status-start: #00cfe8 !default;
+$status-in-progress: #28c76f !default;
+$status-finished: #6e63e8 !default;
+
+// User Status
+$user-active: #28c76f !default;
+$user-pending: #ffd643 !default;
+$user-rejected: #ea5455 !default;
+
+// Base grayscale colors definitions
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$math: #00bdb8 !default;
+$port: #ec6300 !default;
+$liga: #5a1a46 !default;
+$math-ing: #00bdb8 !default;
+
+// Writing Phase colors (kept for backward compatibility)
+$na: #b4b7bd !default;
+$pre: #00bdb9 !default;
+$ssv: #28c76f !default;
+$scv: #299459 !default;
+$sal: #246541 !default;
+$alf: #7367f0 !default;
+$ort: #3b2ec2 !default;
+
+/*========================================================
+        TYPOGRAPHY
+=========================================================*/
+
+$font-family-sans-serif: 'Montserrat', Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-base: $font-family-sans-serif !default;
+$headings-color: #2c2c2c;
+
+// change col spacing
+$grid-gutter-width: 0.625rem !default;
+
+// change card margin bottom
+$content-padding: 0.625rem !default;
+
+// navbar margin bottom
+$navbar-height: 3.875rem !default;
+
+// menu semidark color
+$theme-dark-card-bg: var(--menuBackgroundColor);
+$theme-colors: (
+  'individual': #fd7e14,
+  'collective': #7367f0,
+  'mix': #28c76f,
+  //application
+  'applicationSchool': #0d6efd,
+  'applicationHouse': #d63384,
+  'orange': #ff9f43,
+  'math': #00bdb9,
+  'port': #ec6300,
+  'liga': #5a1a46,
+  'math-ing': #00bdb8,
+  'rowBackground': #d8d6de,
+  'gray': #b4b7bd,
+  'dark-gray': #6e6b7b,
+  //ColorPalleteEnum
+  'firstAxis': #7cd7d3,
+  'secondAxis': #6e63e8,
+  'thirdAxis': #ea5455,
+  'fourthAxis': #ff9f43,
+  'fifthAxis': #28c76f,
+  'successDarken': #14693a,
+  'pink': #d63384,
+  //Writing Phases (kept for backward compatibility)
+  'na': $na,
+  'pre': $pre,
+  'ssv': $ssv,
+  'scv': $scv,
+  'sal': $sal,
+  'alf': $alf,
+  'ort': $ort,
+  //Fixed Legend Colors (not affected by whitelabel)
+  'legend-advanced': $legend-advanced,
+  'legend-proficient': $legend-proficient,
+  'legend-basic': $legend-basic,
+  'legend-below-basic': $legend-below-basic,
+  'legend-not-completed': $legend-not-completed,
+  'legend-in-progress': $legend-in-progress,
+  'legend-complete': $legend-complete,
+  'legend-warning': $legend-warning,
+  //Fixed Writing Phase Legend Colors
+  'legend-writing-na': $legend-writing-na,
+  'legend-writing-pre': $legend-writing-pre,
+  'legend-writing-ssv': $legend-writing-ssv,
+  'legend-writing-scv': $legend-writing-scv,
+  'legend-writing-sal': $legend-writing-sal,
+  'legend-writing-alf': $legend-writing-alf,
+  'legend-writing-ort': $legend-writing-ort,
+  //Fixed Legend Status
+  'status-canceled': $status-canceled,
+  'status-paused': $status-paused,
+  'status-activate': $status-activate,
+  'status-start': $status-start,
+  'status-in-progress': $status-in-progress,
+  'status-finished': $status-finished,
+  //Fixed User Status
+  'user-active': $user-active,
+  'user-pending': $user-pending,
+  'user-rejected': $user-rejected,
+);
