@@ -12,7 +12,8 @@ const config = {
   },
   staticDirs: [
     '../packages/vuexy_theme/public',
-    { from: '../.storybook/public', to: '/' }
+    { from: '../.storybook/public', to: '/' },
+    { from: '../educacross-frontoffice/src/assets', to: '/educacross-assets' }
   ],
   // Configuração do Vite para GitHub Pages
   viteFinal: async (config) => {

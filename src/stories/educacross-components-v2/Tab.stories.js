@@ -557,7 +557,6 @@ export const Documentation = {
   name: '📖 Documentation',
   parameters: {
     layout: 'fullscreen',
-    docs: { disable: true },
     controls: { disable: true },
   },
   render: () => `
