@@ -178,8 +178,8 @@ const componentStyles = `
   }
 
   .lyrics-control-btn.active {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    background-color: var(--bs-primary, #7367f0);
+    border-color: var(--bs-primary, #7367f0);
     color: white;
   }
 
