@@ -43,7 +43,7 @@ const preview = {
         },
         {
           name: 'primary',
-          value: '#7367f0',
+          value: '#6e63e8',
         },
       ],
     },
