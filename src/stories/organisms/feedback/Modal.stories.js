@@ -562,7 +562,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text-center py-4">
-                <i class="ti tabler-info-circle" style="font-size: 48px; color: var(--bs-info);"></i>
+                <i class="ti tabler-info-circle" style="font-size: 48px; color: var(--bs-info, #00bad1);"></i>
                 <h6 class="mt-3">Modal Centralizado</h6>
                 <p class="mb-0">Este modal está centralizado verticalmente na tela usando .modal-dialog-centered</p>
               </div>
