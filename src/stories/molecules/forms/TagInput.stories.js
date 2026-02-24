@@ -259,7 +259,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-4">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>Interactive Component:</strong> This component requires JavaScript for full functionality (adding/removing tags, validation, etc.).
   </div>
 `;
@@ -337,7 +337,7 @@ export const Interactive = () => {
           updateCount();
         ">🗑️ Clear All Tags</button>
         
-        <button class="btn btn-sm btn-outline-success ms-2" onclick="
+        <button class="btn btn-sm btn-outline-success ml-2" onclick="
           const presets = ['Vue.js', 'TypeScript', 'Node.js'];
           const container = document.getElementById('tag-container');
           const input = document.getElementById('tag-input');

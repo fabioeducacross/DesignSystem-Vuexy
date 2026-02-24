@@ -111,16 +111,16 @@ const createNotification = ({ position = 'top-right', variant = 'success', withA
   return `<div class="toast-container" style="${positionStyles}">
   <div class="toast show align-items-start border-0 bg-${variant}" role="alert" aria-live="assertive">
     <div class="toast-header bg-${variant} text-white border-0">
-      <i class="bx ${icons[variant]} me-2"></i>
-      <strong class="me-auto">${titles[variant]}</strong>
+      <i class="bx ${icons[variant]} mr-2"></i>
+      <strong class="mr-auto">${titles[variant]}</strong>
       <small>just now</small>
-      <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white ml-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
     </div>
     <div class="toast-body text-white">
       Your action has been completed successfully.
       ${withAction ? `
       <div class="mt-2 pt-2 border-top border-white-50">
-        <button type="button" class="btn btn-sm btn-light me-2">View</button>
+        <button type="button" class="btn btn-sm btn-light mr-2">View</button>
         <button type="button" class="btn btn-sm btn-outline-light" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)">Dismiss</button>
       </div>
       ` : ''}
@@ -160,10 +160,10 @@ export const Overview = () => `
       <div class="d-flex flex-wrap gap-3">
         <div class="toast show align-items-start border-0 bg-success" role="alert" style="max-width: 350px;">
           <div class="toast-header bg-success text-white border-0">
-            <i class="bx bx-check-circle me-2"></i>
-            <strong class="me-auto">Success</strong>
+            <i class="bx bx-check-circle mr-2"></i>
+            <strong class="mr-auto">Success</strong>
             <small>2 mins ago</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body text-white">
             Your profile has been updated successfully!
@@ -172,10 +172,10 @@ export const Overview = () => `
         
         <div class="toast show align-items-start border-0 bg-danger" role="alert" style="max-width: 350px;">
           <div class="toast-header bg-danger text-white border-0">
-            <i class="bx bx-x-circle me-2"></i>
-            <strong class="me-auto">Error</strong>
+            <i class="bx bx-x-circle mr-2"></i>
+            <strong class="mr-auto">Error</strong>
             <small>just now</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body text-white">
             Failed to save changes. Please try again.
@@ -184,10 +184,10 @@ export const Overview = () => `
         
         <div class="toast show align-items-start border-0 bg-warning" role="alert" style="max-width: 350px;">
           <div class="toast-header bg-warning text-white border-0">
-            <i class="bx bx-error me-2"></i>
-            <strong class="me-auto">Warning</strong>
+            <i class="bx bx-error mr-2"></i>
+            <strong class="mr-auto">Warning</strong>
             <small>5 mins ago</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body text-white">
             Your session will expire in 5 minutes.
@@ -196,10 +196,10 @@ export const Overview = () => `
         
         <div class="toast show align-items-start border-0 bg-info" role="alert" style="max-width: 350px;">
           <div class="toast-header bg-info text-white border-0">
-            <i class="bx bx-info-circle me-2"></i>
-            <strong class="me-auto">Information</strong>
+            <i class="bx bx-info-circle mr-2"></i>
+            <strong class="mr-auto">Information</strong>
             <small>10 mins ago</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body text-white">
             System maintenance scheduled for tonight.
@@ -212,15 +212,15 @@ export const Overview = () => `
       <h6>With Action Buttons</h6>
       <div class="toast show align-items-start border-0 bg-primary" role="alert">
         <div class="toast-header bg-primary text-white border-0">
-          <i class="bx bx-bell me-2"></i>
-          <strong class="me-auto">New Message</strong>
+          <i class="bx bx-bell mr-2"></i>
+          <strong class="mr-auto">New Message</strong>
           <small>just now</small>
-          <button type="button" class="btn-close btn-close-white ms-2"></button>
+          <button type="button" class="btn-close btn-close-white ml-2"></button>
         </div>
         <div class="toast-body text-white">
           You have a new message from John Doe.
           <div class="mt-2 pt-2 border-top border-white-50">
-            <button type="button" class="btn btn-sm btn-light me-2">View Message</button>
+            <button type="button" class="btn btn-sm btn-light mr-2">View Message</button>
             <button type="button" class="btn btn-sm btn-outline-light">Dismiss</button>
           </div>
         </div>
@@ -231,10 +231,10 @@ export const Overview = () => `
       <h6>Simple Notification</h6>
       <div class="toast show align-items-start" role="alert">
         <div class="toast-header">
-          <i class="bx bx-message-square-dots text-primary me-2"></i>
-          <strong class="me-auto">Notification</strong>
+          <i class="bx bx-message-square-dots text-primary mr-2"></i>
+          <strong class="mr-auto">Notification</strong>
           <small>1 min ago</small>
-          <button type="button" class="btn-close ms-2"></button>
+          <button type="button" class="btn-close ml-2"></button>
         </div>
         <div class="toast-body">
           Your comment has been posted.
@@ -294,27 +294,27 @@ export const Overview = () => `
       <div class="toast-container position-fixed top-0 end-0 p-3" style="position: relative !important;">
         <div class="toast show mb-2" role="alert">
           <div class="toast-header bg-success text-white border-0">
-            <strong class="me-auto">Success</strong>
+            <strong class="mr-auto">Success</strong>
             <small>3 mins ago</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body">File uploaded successfully.</div>
         </div>
         
         <div class="toast show mb-2" role="alert">
           <div class="toast-header bg-info text-white border-0">
-            <strong class="me-auto">Info</strong>
+            <strong class="mr-auto">Info</strong>
             <small>2 mins ago</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body">Processing your request...</div>
         </div>
         
         <div class="toast show" role="alert">
           <div class="toast-header bg-warning text-white border-0">
-            <strong class="me-auto">Warning</strong>
+            <strong class="mr-auto">Warning</strong>
             <small>just now</small>
-            <button type="button" class="btn-close btn-close-white ms-2"></button>
+            <button type="button" class="btn-close btn-close-white ml-2"></button>
           </div>
           <div class="toast-body">Low storage space.</div>
         </div>
@@ -323,7 +323,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-4">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>Bootstrap Toast:</strong> This component uses Bootstrap's toast with custom styling. Auto-hide can be configured with <code>data-bs-delay</code> attribute.
   </div>
 `;
@@ -405,10 +405,10 @@ export const Interactive = {
             notification.innerHTML = 
               '<div class="d-flex">' +
                 '<div class="toast-body">' +
-                  '<i class="' + icons[variant] + ' me-2"></i>' +
+                  '<i class="' + icons[variant] + ' mr-2"></i>' +
                   '<strong>' + title + '</strong> ' + message +
                 '</div>' +
-                '<button type="button" class="btn-close btn-close-white me-2 m-auto" onclick="dismissNotification(\'' + id + '\')" aria-label="Close"></button>' +
+                '<button type="button" class="btn-close btn-close-white mr-2 m-auto" onclick="dismissNotification(\'' + id + '\')" aria-label="Close"></button>' +
               '</div>';
             
             container.appendChild(notification);

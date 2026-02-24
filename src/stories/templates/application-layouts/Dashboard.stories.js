@@ -107,12 +107,12 @@ const createDashboard = ({
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse">
-      <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ms-3">
+      <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ml-3">
         <input type="text" class="form-control search-input" placeholder="Search..." aria-label="Search">
         <i class="bx bx-search"></i>
       </div>
-      <ul class="navbar-nav flex-row align-items-center ms-auto">
-        <li class="nav-item navbar-dropdown dropdown-notifications me-3">
+      <ul class="navbar-nav flex-row align-items-center ml-auto">
+        <li class="nav-item navbar-dropdown dropdown-notifications mr-3">
           <a class="nav-link" href="#" aria-label="Notifications">
             <i class="bx bx-bell bx-sm"></i>
             <span class="badge rounded-pill badge-notifications bg-danger">5</span>
@@ -133,7 +133,7 @@ const createDashboard = ({
   const sidebar = `<aside class="layout-menu menu-vertical menu bg-menu-theme ${sidebarCollapsed ? 'layout-menu-collapsed' : ''}" style="width: ${sidebarCollapsed ? '80px' : '260px'}; height: calc(100vh - 70px); overflow-y: auto;">
   <div class="app-brand demo">
     <a href="#" class="app-brand-link">
-      <span class="app-brand-text demo menu-text fw-bold ms-2">${sidebarCollapsed ? '' : 'Vuexy'}</span>
+      <span class="app-brand-text demo menu-text font-weight-bold ml-2">${sidebarCollapsed ? '' : 'Vuexy'}</span>
     </a>
   </div>
   <ul class="menu-inner py-1">
@@ -153,14 +153,14 @@ const createDashboard = ({
       <a href="#" class="menu-link">
         <i class="menu-icon tf-icons bx bx-box"></i>
         <div>Components</div>
-        <span class="badge badge-center rounded-pill bg-danger ms-auto">5</span>
+        <span class="badge badge-center rounded-pill bg-danger ml-auto">5</span>
       </a>
     </li>
     <li class="menu-item">
       <a href="#" class="menu-link">
         <i class="menu-icon tf-icons bx bx-collection"></i>
         <div>Cards</div>
-        <span class="badge badge-center rounded-pill bg-primary ms-auto">New</span>
+        <span class="badge badge-center rounded-pill bg-primary ml-auto">New</span>
       </a>
     </li>
     <li class="menu-item">
@@ -361,7 +361,7 @@ const createDashboard = ({
               <p class="text-muted mb-0">Welcome back! Here's what's happening with your projects.</p>
             </div>
             <button class="btn btn-primary">
-              <i class="bx bx-plus me-1"></i> Add New
+              <i class="bx bx-plus mr-1"></i> Add New
             </button>
           </div>
           
@@ -376,8 +376,8 @@ const createDashboard = ({
               © 2026 Vuexy. Made with ❤️
             </div>
             <div>
-              <a href="#" class="footer-link me-3">License</a>
-              <a href="#" class="footer-link me-3">Documentation</a>
+              <a href="#" class="footer-link mr-3">License</a>
+              <a href="#" class="footer-link mr-3">Documentation</a>
               <a href="#" class="footer-link">Support</a>
             </div>
           </div>

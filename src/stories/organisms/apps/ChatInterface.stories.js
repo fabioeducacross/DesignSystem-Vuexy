@@ -86,7 +86,7 @@ const createChatInterface = ({ showSidebar = true }) => {
         <!-- Sidebar Header -->
         <div class="p-3 border-bottom">
           <div class="d-flex align-items-center mb-3">
-            <div class="flex-shrink-0 position-relative me-3">
+            <div class="flex-shrink-0 position-relative mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                    alt="Avatar" 
                    class="rounded-circle"
@@ -115,7 +115,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             <!-- Active Chat -->
             <li class="chat-contact-list-item active">
               <div class="d-flex align-items-start p-3">
-                <div class="flex-shrink-0 position-relative me-3">
+                <div class="flex-shrink-0 position-relative mr-3">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
@@ -131,14 +131,14 @@ const createChatInterface = ({ showSidebar = true }) => {
                     That sounds great! Let me check...
                   </p>
                 </div>
-                <span class="badge bg-primary rounded-pill ms-2">3</span>
+                <span class="badge bg-primary rounded-pill ml-2">3</span>
               </div>
             </li>
             
             <!-- Other Chats -->
             <li class="chat-contact-list-item">
               <div class="d-flex align-items-start p-3">
-                <div class="flex-shrink-0 position-relative me-3">
+                <div class="flex-shrink-0 position-relative mr-3">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
@@ -159,7 +159,7 @@ const createChatInterface = ({ showSidebar = true }) => {
             
             <li class="chat-contact-list-item">
               <div class="d-flex align-items-start p-3">
-                <div class="flex-shrink-0 position-relative me-3">
+                <div class="flex-shrink-0 position-relative mr-3">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff4c51'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3ERP%3C/text%3E%3C/svg%3E" 
                        alt="Avatar" 
                        class="rounded-circle"
@@ -175,7 +175,7 @@ const createChatInterface = ({ showSidebar = true }) => {
                     <i class="bx bx-check-double text-primary"></i> See you tomorrow!
                   </p>
                 </div>
-                <span class="badge bg-label-success rounded-pill ms-2">
+                <span class="badge bg-label-success rounded-pill ml-2">
                   <i class="bx bx-check"></i>
                 </span>
               </div>
@@ -192,7 +192,7 @@ const createChatInterface = ({ showSidebar = true }) => {
         <!-- Chat Header -->
         <div class="p-3 border-bottom">
           <div class="d-flex align-items-center">
-            <div class="flex-shrink-0 position-relative me-3">
+            <div class="flex-shrink-0 position-relative mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                    alt="Avatar" 
                    class="rounded-circle"
@@ -232,13 +232,13 @@ const createChatInterface = ({ showSidebar = true }) => {
               <div class="d-flex align-items-start">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
-                     class="rounded-circle me-2"
+                     class="rounded-circle mr-2"
                      style="width: 32px; height: 32px;">
                 <div>
                   <div class="bg-white p-3 rounded shadow-sm" style="max-width: 400px;">
                     <p class="mb-0">Hi! How are you doing today?</p>
                   </div>
-                  <small class="text-muted ms-2">10:28 AM</small>
+                  <small class="text-muted ml-2">10:28 AM</small>
                 </div>
               </div>
             </div>
@@ -250,11 +250,11 @@ const createChatInterface = ({ showSidebar = true }) => {
                   <div class="bg-primary text-white p-3 rounded shadow-sm" style="max-width: 400px;">
                     <p class="mb-0">Hey! I'm doing great, thanks! Working on some new features.</p>
                   </div>
-                  <small class="text-muted me-2">10:29 AM</small>
+                  <small class="text-muted mr-2">10:29 AM</small>
                 </div>
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
-                     class="rounded-circle ms-2"
+                     class="rounded-circle ml-2"
                      style="width: 32px; height: 32px;">
               </div>
             </div>
@@ -264,13 +264,13 @@ const createChatInterface = ({ showSidebar = true }) => {
               <div class="d-flex align-items-start">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
-                     class="rounded-circle me-2"
+                     class="rounded-circle mr-2"
                      style="width: 32px; height: 32px;">
                 <div>
                   <div class="bg-white p-3 rounded shadow-sm" style="max-width: 400px;">
                     <p class="mb-0">That sounds great! Let me check the design files and get back to you.</p>
                   </div>
-                  <small class="text-muted ms-2">10:30 AM</small>
+                  <small class="text-muted ml-2">10:30 AM</small>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ const createChatInterface = ({ showSidebar = true }) => {
               <div class="d-flex align-items-start">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                      alt="Avatar" 
-                     class="rounded-circle me-2"
+                     class="rounded-circle mr-2"
                      style="width: 32px; height: 32px;">
                 <div>
                   <div class="bg-white p-3 rounded shadow-sm">
@@ -428,13 +428,13 @@ export const Interactive = () => {
   return `
     <div id="${containerId}" style="max-width: 600px;">
       <div class="alert alert-info mb-4">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Type a message and click send to see it appear in the chat.
       </div>
       
       <div class="card">
         <div class="card-header d-flex align-items-center">
-          <div class="avatar avatar-sm me-3">
+          <div class="avatar avatar-sm mr-3">
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="User" class="rounded-circle">
           </div>
           <div>
@@ -445,7 +445,7 @@ export const Interactive = () => {
         <div class="card-body" id="chatMessages-${containerId}" style="height: 300px; overflow-y: auto;">
           <div class="mb-3">
             <div class="d-flex">
-              <div class="avatar avatar-sm me-2">
+              <div class="avatar avatar-sm mr-2">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" alt="Me" class="rounded-circle">
               </div>
               <div class="flex-grow-1">
@@ -466,7 +466,7 @@ export const Interactive = () => {
               if (msg) {
                 const chat = document.getElementById('chatMessages-${containerId}');
                 const time = new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
-                const html = '<div class=\'mb-3\'><div class=\'d-flex flex-row-reverse\'><div class=\'avatar avatar-sm ms-2\'><img src=\'data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E\' class=\'rounded-circle\'></div><div class=\'flex-grow-1 text-end\'><div class=\'bg-primary text-white p-2 rounded d-inline-block\' style=\'max-width: 70%\'><p class=\'mb-0\'>' + msg + '</p></div><div><small class=\'text-muted\'>' + time + '</small></div></div></div></div>';
+                const html = '<div class=\'mb-3\'><div class=\'d-flex flex-row-reverse\'><div class=\'avatar avatar-sm ml-2\'><img src=\'data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E\' class=\'rounded-circle\'></div><div class=\'flex-grow-1 text-end\'><div class=\'bg-primary text-white p-2 rounded d-inline-block\' style=\'max-width: 70%\'><p class=\'mb-0\'>' + msg + '</p></div><div><small class=\'text-muted\'>' + time + '</small></div></div></div></div>';
                 chat.insertAdjacentHTML('beforeend', html);
                 chat.scrollTop = chat.scrollHeight;
                 input.value = '';

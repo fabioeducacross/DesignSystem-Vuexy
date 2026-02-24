@@ -125,7 +125,7 @@ export const WithText = {
   <div class="d-flex align-items-center">
     <hr class="flex-grow-1 m-0">
     <span class="px-3 text-muted">
-      <i class="ti ti-star me-1"></i>Destaque
+      <i class="ti ti-star mr-1"></i>Destaque
     </span>
     <hr class="flex-grow-1 m-0">
   </div>

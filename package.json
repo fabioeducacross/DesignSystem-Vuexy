@@ -8,6 +8,8 @@
     "build-storybook": "storybook build",
     "serve-storybook": "http-server storybook-static -p 6006",
     "integrate-vuexy": "bash scripts/integrate-vuexy.sh",
+    "extract-css": "node scripts/extract-production-css.js",
+    "fix-bs5-to-bs4": "node scripts/batch-fix-bs5-to-bs4.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

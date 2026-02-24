@@ -253,7 +253,7 @@ const createDataTable = ({
             <td>${row.id}</td>
             <td>
               <div class="d-flex align-items-center">
-                <div class="avatar avatar-sm me-2">
+                <div class="avatar avatar-sm mr-2">
                   <span class="avatar-initial rounded-circle bg-label-primary">
                     ${row.name.charAt(0)}
                   </span>
@@ -643,7 +643,7 @@ Implementação oficial usando DataTables do Vuexy:
       
       <div style="padding: 30px;">
         <h5 class="mb-4">
-          <i class="ti tabler-table me-2 text-primary"></i>
+          <i class="ti tabler-table mr-2 text-primary"></i>
           DataTable Avançado com jQuery DataTables
         </h5>
         

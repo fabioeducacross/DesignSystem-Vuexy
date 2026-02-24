@@ -145,21 +145,21 @@ export const Overview = () => `
     <div class="col-12 mt-5">
       <h5>Menu Lateral Example</h5>
       <button class="btn btn-label-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-        <i class="bx bx-menu me-2"></i>Open Menu
+        <i class="bx bx-menu mr-2"></i>Open Menu
       </button>
     </div>
     
     <div class="col-12 mt-5">
       <h5>Carrinho de Compras</h5>
       <button class="btn btn-label-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-        <i class="bx bx-cart me-2"></i>Cart <span class="badge bg-primary rounded-pill ms-1">3</span>
+        <i class="bx bx-cart mr-2"></i>Cart <span class="badge bg-primary rounded-pill ml-1">3</span>
       </button>
     </div>
     
     <div class="col-12 mt-5">
       <h5>Filtros</h5>
       <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters">
-        <i class="bx bx-filter-alt me-2"></i>Filters
+        <i class="bx bx-filter-alt mr-2"></i>Filters
       </button>
     </div>
   </div>
@@ -218,27 +218,27 @@ export const Overview = () => `
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <a href="#" class="text-decoration-none">
-            <i class="bx bx-home me-2"></i>Dashboard
+            <i class="bx bx-home mr-2"></i>Dashboard
           </a>
         </li>
         <li class="list-group-item">
           <a href="#" class="text-decoration-none">
-            <i class="bx bx-user me-2"></i>Profile
+            <i class="bx bx-user mr-2"></i>Profile
           </a>
         </li>
         <li class="list-group-item">
           <a href="#" class="text-decoration-none">
-            <i class="bx bx-cog me-2"></i>Settings
+            <i class="bx bx-cog mr-2"></i>Settings
           </a>
         </li>
         <li class="list-group-item">
           <a href="#" class="text-decoration-none">
-            <i class="bx bx-bell me-2"></i>Notifications
+            <i class="bx bx-bell mr-2"></i>Notifications
           </a>
         </li>
         <li class="list-group-item">
           <a href="#" class="text-decoration-none text-danger">
-            <i class="bx bx-power-off me-2"></i>Logout
+            <i class="bx bx-power-off mr-2"></i>Logout
           </a>
         </li>
       </ul>
@@ -253,7 +253,7 @@ export const Overview = () => `
     </div>
     <div class="offcanvas-body">
       <div class="d-flex mb-3 pb-3 border-bottom">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="mr-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
         <div class="flex-grow-1">
           <h6 class="mb-1">Product Name</h6>
           <small class="text-muted">Size: M</small>
@@ -267,7 +267,7 @@ export const Overview = () => `
       </div>
       
       <div class="d-flex mb-3 pb-3 border-bottom">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="me-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" class="mr-3" style="width: 60px; height: 60px; object-fit: cover;" alt="Product">
         <div class="flex-grow-1">
           <h6 class="mb-1">Another Product</h6>
           <small class="text-muted">Color: Blue</small>
@@ -292,7 +292,7 @@ export const Overview = () => `
         <hr>
         <div class="d-flex justify-content-between mb-3">
           <span class="fw-medium">Total:</span>
-          <span class="fw-bold">$84.98</span>
+          <span class="font-weight-bold">$84.98</span>
         </div>
         <button class="btn btn-primary w-100">Checkout</button>
       </div>
@@ -364,7 +364,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-5">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>JavaScript Required:</strong> Offcanvas requires Bootstrap JavaScript. Use data-bs-toggle="offcanvas" to trigger.
   </div>
 `;
@@ -475,25 +475,25 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="row g-3 mb-4">
           <div class="col-md-3">
             <button class="btn btn-primary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart">
-              <i class="ti tabler-arrow-left me-1"></i> Start (Left)
+              <i class="ti tabler-arrow-left mr-1"></i> Start (Left)
             </button>
           </div>
           
           <div class="col-md-3">
             <button class="btn btn-success w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd">
-              <i class="ti tabler-arrow-right me-1"></i> End (Right)
+              <i class="ti tabler-arrow-right mr-1"></i> End (Right)
             </button>
           </div>
           
           <div class="col-md-3">
             <button class="btn btn-info w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
-              <i class="ti tabler-arrow-up me-1"></i> Top
+              <i class="ti tabler-arrow-up mr-1"></i> Top
             </button>
           </div>
           
           <div class="col-md-3">
             <button class="btn btn-warning w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
-              <i class="ti tabler-arrow-down me-1"></i> Bottom
+              <i class="ti tabler-arrow-down mr-1"></i> Bottom
             </button>
           </div>
         </div>
@@ -501,13 +501,13 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="row g-3 mb-4">
           <div class="col-md-6">
             <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-              <i class="ti tabler-shopping-cart me-1"></i> Carrinho de Compras
+              <i class="ti tabler-shopping-cart mr-1"></i> Carrinho de Compras
             </button>
           </div>
           
           <div class="col-md-6">
             <button class="btn btn-outline-primary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters">
-              <i class="ti tabler-filter me-1"></i> Filtros Avançados
+              <i class="ti tabler-filter mr-1"></i> Filtros Avançados
             </button>
           </div>
         </div>
@@ -516,7 +516,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasStartLabel">
-              <i class="ti tabler-menu-2 me-2"></i> Menu Lateral
+              <i class="ti tabler-menu-2 mr-2"></i> Menu Lateral
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -524,10 +524,10 @@ Implementação oficial usando Bootstrap JS do Vuexy:
             <div class="mb-3">
               <h6>Navegação</h6>
               <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-home me-2"></i>Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-users me-2"></i>Usuários</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-settings me-2"></i>Configurações</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-file me-2"></i>Relatórios</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-home mr-2"></i>Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-users mr-2"></i>Usuários</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-settings mr-2"></i>Configurações</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0);"><i class="ti tabler-file mr-2"></i>Relatórios</a></li>
               </ul>
             </div>
             
@@ -536,7 +536,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
             <div>
               <h6>Perfil</h6>
               <div class="d-flex align-items-center mb-2">
-                <div class="avatar me-2">
+                <div class="avatar mr-2">
                   <span class="avatar-initial rounded-circle bg-label-primary">JD</span>
                 </div>
                 <div>
@@ -545,7 +545,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                 </div>
               </div>
               <button class="btn btn-sm btn-label-danger w-100 mt-2">
-                <i class="ti tabler-logout me-1"></i> Sair
+                <i class="ti tabler-logout mr-1"></i> Sair
               </button>
             </div>
           </div>
@@ -555,7 +555,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasEndLabel">
-              <i class="ti tabler-bell me-2"></i> Notificações
+              <i class="ti tabler-bell mr-2"></i> Notificações
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -596,7 +596,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 250px;">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasTopLabel">
-              <i class="ti tabler-info-circle me-2"></i> Informações do Sistema
+              <i class="ti tabler-info-circle mr-2"></i> Informações do Sistema
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -646,7 +646,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: 300px;">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasBottomLabel">
-              <i class="ti tabler-cookie me-2"></i> Política de Cookies
+              <i class="ti tabler-cookie mr-2"></i> Política de Cookies
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -665,7 +665,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel" style="width: 400px;">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasCartLabel">
-              <i class="ti tabler-shopping-cart me-2"></i> Carrinho (3)
+              <i class="ti tabler-shopping-cart mr-2"></i> Carrinho (3)
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -731,7 +731,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
                 <strong class="text-primary" style="font-size: 1.25rem;">R$ 3.297</strong>
               </div>
               <button class="btn btn-primary w-100 mb-2">
-                <i class="ti tabler-credit-card me-1"></i> Finalizar Compra
+                <i class="ti tabler-credit-card mr-1"></i> Finalizar Compra
               </button>
               <button class="btn btn-label-secondary w-100" data-bs-dismiss="offcanvas">
                 Continuar Comprando
@@ -744,7 +744,7 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasFiltersLabel">
-              <i class="ti tabler-filter me-2"></i> Filtros Avançados
+              <i class="ti tabler-filter mr-2"></i> Filtros Avançados
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>

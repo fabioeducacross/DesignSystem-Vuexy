@@ -99,7 +99,7 @@ const createLoginPage = ({ withSocial = true, variant = 'card' }) => {
               <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
             </svg>
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
+          <span class="app-brand-text demo text-body font-weight-bold ml-2">Vuexy</span>
         </div>
         
         <h4 class="mb-1">Welcome to Vuexy! 👋</h4>
@@ -343,7 +343,7 @@ export const Interactive = () => {
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="remember-me">
                 <label class="form-check-label" for="remember-me">Remember me</label>
-                <span class="ms-2 badge bg-success" id="remember-badge" style="display: none;">✓ Enabled</span>
+                <span class="ml-2 badge bg-success" id="remember-badge" style="display: none;">✓ Enabled</span>
               </div>
               
               <button class="btn btn-primary w-100 mb-3" onclick="

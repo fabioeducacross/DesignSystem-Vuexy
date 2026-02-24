@@ -316,8 +316,8 @@ export const Default = {
     <div class="card">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector">
             <option>10</option>
             <option>25</option>
             <option>50</option>
@@ -440,8 +440,8 @@ export const Loading = {
     <div class="card">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector" disabled>
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector" disabled>
             <option>10</option>
           </select>
         </div>
@@ -487,8 +487,8 @@ export const Empty = {
     <div class="card">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector">
             <option>10</option>
           </select>
         </div>
@@ -539,8 +539,8 @@ export const WithExport = {
     <div class="card">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector">
             <option>10</option>
             <option>25</option>
             <option>50</option>
@@ -598,8 +598,8 @@ export const WithViewToggle = {
     <div class="card">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector">
             <option>10</option>
           </select>
         </div>
@@ -658,8 +658,8 @@ export const GridView = {
     <div class="card mb-3">
       <div class="list-table-controls m-2">
         <div class="d-flex align-items-center">
-          <label class="me-2">Mostrar</label>
-          <select class="form-select per-page-selector">
+          <label class="mr-2">Mostrar</label>
+          <select class="custom-select per-page-selector">
             <option>10</option>
           </select>
         </div>
@@ -812,7 +812,7 @@ export const Sortable = {
               <td>5º Ano A</td>
               <td><span class="badge bg-success">85%</span></td>
               <td>
-                <button class="btn btn-sm btn-icon btn-light-primary me-1">
+                <button class="btn btn-sm btn-icon btn-light-primary mr-1">
                   <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span>
                 </button>
                 <button class="btn btn-sm btn-icon btn-light-secondary">
@@ -825,7 +825,7 @@ export const Sortable = {
               <td>5º Ano A</td>
               <td><span class="badge bg-warning">62%</span></td>
               <td>
-                <button class="btn btn-sm btn-icon btn-light-primary me-1">
+                <button class="btn btn-sm btn-icon btn-light-primary mr-1">
                   <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span>
                 </button>
                 <button class="btn btn-sm btn-icon btn-light-secondary">
@@ -838,7 +838,7 @@ export const Sortable = {
               <td>5º Ano B</td>
               <td><span class="badge bg-success">91%</span></td>
               <td>
-                <button class="btn btn-sm btn-icon btn-light-primary me-1">
+                <button class="btn btn-sm btn-icon btn-light-primary mr-1">
                   <span class="material-symbols-outlined" style="font-size: 18px;">visibility</span>
                 </button>
                 <button class="btn btn-sm btn-icon btn-light-secondary">

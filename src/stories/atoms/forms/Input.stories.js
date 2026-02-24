@@ -190,7 +190,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}" style="max-width: 600px;">
       <div class="alert alert-info mb-3">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Type in inputs to see real-time validation and character count.
       </div>
       

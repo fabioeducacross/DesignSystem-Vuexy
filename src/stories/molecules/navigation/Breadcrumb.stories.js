@@ -58,7 +58,7 @@ const createBreadcrumb = ({ items = [], showIcons = false }) => {
   return `<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     ${items.map((item, index) => {
-      const iconHtml = showIcons && item.icon ? `<i class="${item.icon} me-1"></i>` : '';
+      const iconHtml = showIcons && item.icon ? `<i class="${item.icon} mr-1"></i>` : '';
       const linkContent = `${iconHtml}${item.label}`;
       const activeClass = item.active ? 'active' : '';
       const ariaCurrent = item.active ? ' aria-current="page"' : '';

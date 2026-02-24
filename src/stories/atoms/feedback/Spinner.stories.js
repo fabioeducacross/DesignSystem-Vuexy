@@ -158,22 +158,22 @@ export const ButtonsWithSpinner = {
   render: () => `
 <div class="d-flex gap-3 flex-wrap">
   <button class="btn btn-primary" type="button" disabled>
-    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
     Carregando...
   </button>
   
   <button class="btn btn-outline-primary" type="button" disabled>
-    <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+    <span class="spinner-grow spinner-grow-sm mr-2" role="status" aria-hidden="true"></span>
     Processando...
   </button>
   
   <button class="btn btn-success" type="button" disabled>
-    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
     Salvando...
   </button>
   
   <button class="btn btn-danger" type="button" disabled>
-    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
     Excluindo...
   </button>
 </div>
@@ -230,7 +230,7 @@ export const Interactive = {
         const btn = this;
         const originalText = btn.innerHTML;
         btn.disabled = true;
-        btn.innerHTML = '<span class=\\'spinner-border spinner-border-sm me-2\\' role=\\'status\\'></span>Carregando...';
+        btn.innerHTML = '<span class=\\'spinner-border spinner-border-sm mr-2\\' role=\\'status\\'></span>Carregando...';
         
         setTimeout(() => {
           btn.disabled = false;

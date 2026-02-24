@@ -85,7 +85,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
     <div class="col-lg-3 col-md-4 app-calendar-sidebar border-end">
       <div class="p-4">
         <button class="btn btn-primary w-100 mb-4" onclick="alert('Add Event - Use Modal component (PERMITIDO) para funcionalidade real')">
-          <i class="bx bx-plus me-1"></i>
+          <i class="bx bx-plus mr-1"></i>
           Add Event
         </button>
         
@@ -101,7 +101,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="personal" checked>
           <label class="form-check-label d-flex align-items-center" for="personal">
-            <span class="badge badge-dot bg-primary me-2"></span>
+            <span class="badge badge-dot bg-primary mr-2"></span>
             Personal
           </label>
         </div>
@@ -109,7 +109,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="business" checked>
           <label class="form-check-label d-flex align-items-center" for="business">
-            <span class="badge badge-dot bg-success me-2"></span>
+            <span class="badge badge-dot bg-success mr-2"></span>
             Business
           </label>
         </div>
@@ -117,7 +117,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="family" checked>
           <label class="form-check-label d-flex align-items-center" for="family">
-            <span class="badge badge-dot bg-warning me-2"></span>
+            <span class="badge badge-dot bg-warning mr-2"></span>
             Family
           </label>
         </div>
@@ -125,7 +125,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="holiday" checked>
           <label class="form-check-label d-flex align-items-center" for="holiday">
-            <span class="badge badge-dot bg-danger me-2"></span>
+            <span class="badge badge-dot bg-danger mr-2"></span>
             Holiday
           </label>
         </div>
@@ -133,7 +133,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
         <div class="form-check mb-2">
           <input class="form-check-input input-filter" type="checkbox" id="etc" checked>
           <label class="form-check-label d-flex align-items-center" for="etc">
-            <span class="badge badge-dot bg-info me-2"></span>
+            <span class="badge badge-dot bg-info mr-2"></span>
             ETC
           </label>
         </div>
@@ -148,13 +148,13 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
           <!-- Calendar Toolbar -->
           <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <button class="btn btn-sm btn-outline-secondary me-2">
+              <button class="btn btn-sm btn-outline-secondary mr-2">
                 <i class="bx bx-chevron-left"></i>
               </button>
-              <button class="btn btn-sm btn-outline-secondary me-3">
+              <button class="btn btn-sm btn-outline-secondary mr-3">
                 <i class="bx bx-chevron-right"></i>
               </button>
-              <button class="btn btn-sm btn-label-secondary me-3">Today</button>
+              <button class="btn btn-sm btn-label-secondary mr-3">Today</button>
               <h5 class="d-inline-block mb-0">December 2024</h5>
             </div>
             <div class="btn-group" role="group">
@@ -246,7 +246,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
           </div>
           <div class="mb-3">
             <label class="form-label">Calendar</label>
-            <select class="form-select">
+            <select class="custom-select">
               <option>Personal</option>
               <option>Business</option>
               <option>Family</option>
@@ -660,28 +660,28 @@ Implementação oficial usando FullCalendar do Vuexy:
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <h5 class="mb-0">
-                <i class="ti tabler-calendar-event me-2 text-primary"></i>
+                <i class="ti tabler-calendar-event mr-2 text-primary"></i>
                 Calendar Interativo com FullCalendar
               </h5>
               <div class="d-flex gap-2">
                 <span class="badge bg-label-primary">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled mr-1" style="font-size: 8px;"></i>
                   Reunião
                 </span>
                 <span class="badge bg-label-success">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled mr-1" style="font-size: 8px;"></i>
                   Cliente
                 </span>
                 <span class="badge bg-label-danger">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled mr-1" style="font-size: 8px;"></i>
                   Importante
                 </span>
                 <span class="badge bg-label-warning">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled mr-1" style="font-size: 8px;"></i>
                   Dev
                 </span>
                 <span class="badge bg-label-info">
-                  <i class="ti tabler-circle-filled me-1" style="font-size: 8px;"></i>
+                  <i class="ti tabler-circle-filled mr-1" style="font-size: 8px;"></i>
                   Treinamento
                 </span>
               </div>
@@ -716,7 +716,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="text-primary mb-2">
-                  <i class="ti tabler-click me-1"></i>
+                  <i class="ti tabler-click mr-1"></i>
                   Interações
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -732,7 +732,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-success">
               <div class="card-body">
                 <h6 class="text-success mb-2">
-                  <i class="ti tabler-layout me-1"></i>
+                  <i class="ti tabler-layout mr-1"></i>
                   Views Disponíveis
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -748,7 +748,7 @@ Implementação oficial usando FullCalendar do Vuexy:
             <div class="card border-info">
               <div class="card-body">
                 <h6 class="text-info mb-2">
-                  <i class="ti tabler-palette me-1"></i>
+                  <i class="ti tabler-palette mr-1"></i>
                   Categorias
                 </h6>
                 <ul class="list-unstyled small mb-0">
@@ -776,11 +776,11 @@ Implementação oficial usando FullCalendar do Vuexy:
               <h6 id="modal-event-title" class="mb-3"></h6>
               <div class="mb-2">
                 <small class="text-muted">Categoria:</small>
-                <span id="modal-event-category" class="badge bg-label-primary ms-2"></span>
+                <span id="modal-event-category" class="badge bg-label-primary ml-2"></span>
               </div>
               <div class="mb-3">
                 <small class="text-muted">Horário:</small>
-                <span id="modal-event-time" class="ms-2"></span>
+                <span id="modal-event-time" class="ml-2"></span>
               </div>
               <div class="d-flex gap-2">
                 <button class="btn btn-sm btn-outline-primary" id="modal-close-btn-footer">Fechar</button>

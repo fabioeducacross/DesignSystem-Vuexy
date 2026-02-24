@@ -343,7 +343,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}" style="max-width: 600px;">
       <div class="alert alert-info mb-3">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Click buttons to see actions. Count updates on each click.
       </div>
       
@@ -358,13 +358,13 @@ export const Interactive = () => {
               <h6>Primary Actions</h6>
               <div class="d-flex gap-2 flex-wrap">
                 <button type="button" class="btn btn-primary" data-action="save">
-                  <i class="bx bx-save me-1"></i> Save
+                  <i class="bx bx-save mr-1"></i> Save
                 </button>
                 <button type="button" class="btn btn-success" data-action="submit">
-                  <i class="bx bx-check me-1"></i> Submit
+                  <i class="bx bx-check mr-1"></i> Submit
                 </button>
                 <button type="button" class="btn btn-danger" data-action="delete">
-                  <i class="bx bx-trash me-1"></i> Delete
+                  <i class="bx bx-trash mr-1"></i> Delete
                 </button>
               </div>
             </div>
@@ -374,7 +374,7 @@ export const Interactive = () => {
               <h6>Secondary Actions</h6>
               <div class="d-flex gap-2 flex-wrap">
                 <button type="button" class="btn btn-outline-primary" data-action="edit">
-                  <i class="bx bx-edit me-1"></i> Edit
+                  <i class="bx bx-edit mr-1"></i> Edit
                 </button>
                 <button type="button" class="btn btn-outline-secondary" data-action="cancel">
                   Cancel
@@ -386,7 +386,7 @@ export const Interactive = () => {
             <div>
               <h6>Toggle State</h6>
               <button type="button" class="btn btn-outline-info" data-action="toggle" id="toggle-btn-${containerId}">
-                <i class="bx bx-heart me-1"></i> Like
+                <i class="bx bx-heart mr-1"></i> Like
               </button>
             </div>
             
@@ -394,7 +394,7 @@ export const Interactive = () => {
             <div>
               <h6>Disabled State</h6>
               <button type="button" class="btn btn-primary" disabled>
-                <i class="bx bx-loader-alt bx-spin me-1"></i> Loading...
+                <i class="bx bx-loader-alt bx-spin mr-1"></i> Loading...
               </button>
             </div>
           </div>
@@ -466,12 +466,12 @@ export const Interactive = () => {
             if (isLiked) {
               toggleBtn.classList.remove('btn-outline-info');
               toggleBtn.classList.add('btn-info');
-              toggleBtn.innerHTML = '<i class="bx bxs-heart me-1"></i> Liked';
+              toggleBtn.innerHTML = '<i class="bx bxs-heart mr-1"></i> Liked';
               addLog('❤️ Liked', 'success');
             } else {
               toggleBtn.classList.remove('btn-info');
               toggleBtn.classList.add('btn-outline-info');
-              toggleBtn.innerHTML = '<i class="bx bx-heart me-1"></i> Like';
+              toggleBtn.innerHTML = '<i class="bx bx-heart mr-1"></i> Like';
               addLog('🤍 Unliked', 'info');
             }
             break;

@@ -177,28 +177,28 @@ export const Overview = () => `
       <h5>Com Ícones</h5>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bx bx-cog me-2"></i>Settings
+          <i class="bx bx-cog mr-2"></i>Settings
         </button>
         <ul class="dropdown-menu">
           <li>
             <a class="dropdown-item" href="javascript:void(0);">
-              <i class="bx bx-user me-2"></i>Profile
+              <i class="bx bx-user mr-2"></i>Profile
             </a>
           </li>
           <li>
             <a class="dropdown-item" href="javascript:void(0);">
-              <i class="bx bx-bell me-2"></i>Notifications
+              <i class="bx bx-bell mr-2"></i>Notifications
             </a>
           </li>
           <li>
             <a class="dropdown-item" href="javascript:void(0);">
-              <i class="bx bx-cog me-2"></i>Settings
+              <i class="bx bx-cog mr-2"></i>Settings
             </a>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li>
             <a class="dropdown-item text-danger" href="javascript:void(0);">
-              <i class="bx bx-power-off me-2"></i>Logout
+              <i class="bx bx-power-off mr-2"></i>Logout
             </a>
           </li>
         </ul>
@@ -227,7 +227,7 @@ export const Overview = () => `
       <h5>Com Badge</h5>
       <div class="dropdown">
         <button class="btn btn-label-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Notifications <span class="badge rounded-pill bg-danger ms-2">5</span>
+          Notifications <span class="badge rounded-pill bg-danger ml-2">5</span>
         </button>
         <ul class="dropdown-menu">
           <li>
@@ -264,7 +264,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-5">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>Note:</strong> Dropdown functionality requires Bootstrap JavaScript. Make sure to include bootstrap.bundle.js or popper.js + bootstrap.js.
   </div>
 `;
@@ -389,14 +389,14 @@ Esta story carrega o **Bootstrap JS real** do Vuexy para demonstrar a interativi
             <h6>Dropdown com Ícones</h6>
             <div class="dropdown">
               <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="ti tabler-settings me-1"></i> Settings
+                <i class="ti tabler-settings mr-1"></i> Settings
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-user me-2"></i>Profile</a></li>
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-settings me-2"></i>Settings</a></li>
-                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-credit-card me-2"></i>Billing</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-user mr-2"></i>Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-settings mr-2"></i>Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0);"><i class="ti tabler-credit-card mr-2"></i>Billing</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class="ti tabler-logout me-2"></i>Logout</a></li>
+                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class="ti tabler-logout mr-2"></i>Logout</a></li>
               </ul>
             </div>
           </div>

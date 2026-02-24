@@ -88,13 +88,13 @@ const createInvoice = ({ status = 'paid' }) => {
     <div class="invoice-actions d-print-none mb-4">
       <div class="d-flex justify-content-end gap-2">
         <button class="btn btn-label-secondary">
-          <i class="bx bx-send me-1"></i> Send Invoice
+          <i class="bx bx-send mr-1"></i> Send Invoice
         </button>
         <button class="btn btn-label-secondary" onclick="window.print()">
-          <i class="bx bx-printer me-1"></i> Print
+          <i class="bx bx-printer mr-1"></i> Print
         </button>
         <button class="btn btn-primary">
-          <i class="bx bx-download me-1"></i> Download
+          <i class="bx bx-download mr-1"></i> Download
         </button>
       </div>
     </div>
@@ -106,7 +106,7 @@ const createInvoice = ({ status = 'paid' }) => {
         <div class="row mb-4">
           <div class="col-md-6">
             <div class="d-flex align-items-center mb-3">
-              <div class="avatar avatar-lg bg-label-primary rounded me-3">
+              <div class="avatar avatar-lg bg-label-primary rounded mr-3">
                 <span class="avatar-initial">V</span>
               </div>
               <div>
@@ -400,7 +400,7 @@ export const Interactive = () => {
   return `
     <div id="${containerId}" style="max-width: 800px;">
       <div class="alert alert-info mb-4">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Change invoice status using the buttons.
       </div>
       

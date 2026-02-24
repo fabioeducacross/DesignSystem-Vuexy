@@ -228,18 +228,18 @@ export const SupportTrackerStyle = {
         
         <div class="mb-3">
           <div class="d-flex align-items-center mb-2">
-            <i class="ti ti-ticket text-primary me-2"></i>
-            <span class="me-auto">New Tickets</span>
+            <i class="ti ti-ticket text-primary mr-2"></i>
+            <span class="mr-auto">New Tickets</span>
             <strong>142</strong>
           </div>
           <div class="d-flex align-items-center mb-2">
-            <i class="ti ti-circle-check text-success me-2"></i>
-            <span class="me-auto">Open Tickets</span>
+            <i class="ti ti-circle-check text-success mr-2"></i>
+            <span class="mr-auto">Open Tickets</span>
             <strong>28</strong>
           </div>
           <div class="d-flex align-items-center">
-            <i class="ti ti-clock text-warning me-2"></i>
-            <span class="me-auto">Response Time</span>
+            <i class="ti ti-clock text-warning mr-2"></i>
+            <span class="mr-auto">Response Time</span>
             <strong>1 Day</strong>
           </div>
         </div>

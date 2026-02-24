@@ -778,7 +778,7 @@ export const InteractiveQuestion = {
         
         <div style="margin-top: 1.5rem; text-align: center;">
           <button id="submit-btn" class="btn btn-primary" disabled>Enviar Resposta</button>
-          <button id="reset-btn" class="btn btn-secondary ms-2">Resetar</button>
+          <button id="reset-btn" class="btn btn-secondary ml-2">Resetar</button>
         </div>
       </div>
     `;

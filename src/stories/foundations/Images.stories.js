@@ -61,21 +61,21 @@ export const Avatars = {
       <h6 class="mb-3">Exemplo em Lista</h6>
       <ul class="list-group" style="max-width: 400px;">
         <li class="list-group-item d-flex align-items-center">
-          <img src="${AvatarPlaceholder('JD', '#696cff', 40)}" class="rounded-circle me-3" alt="Avatar">
+          <img src="${AvatarPlaceholder('JD', '#696cff', 40)}" class="rounded-circle mr-3" alt="Avatar">
           <div>
             <div class="fw-semibold">John Doe</div>
             <div class="small text-muted">john@example.com</div>
           </div>
         </li>
         <li class="list-group-item d-flex align-items-center">
-          <img src="${AvatarPresets.success('AS', 40)}" class="rounded-circle me-3" alt="Avatar">
+          <img src="${AvatarPresets.success('AS', 40)}" class="rounded-circle mr-3" alt="Avatar">
           <div>
             <div class="fw-semibold">Anna Smith</div>
             <div class="small text-muted">anna@example.com</div>
           </div>
         </li>
         <li class="list-group-item d-flex align-items-center">
-          <img src="${AvatarPresets.warning('BJ', 40)}" class="rounded-circle me-3" alt="Avatar">
+          <img src="${AvatarPresets.warning('BJ', 40)}" class="rounded-circle mr-3" alt="Avatar">
           <div>
             <div class="fw-semibold">Bob Johnson</div>
             <div class="small text-muted">bob@example.com</div>
@@ -189,7 +189,7 @@ export const EmptyStates = {
             <h6>Nenhum item encontrado</h6>
             <p class="text-muted small mb-3">Não há dados para exibir no momento.</p>
             <button class="btn btn-sm btn-primary">
-              <i class="bi bi-plus me-1"></i>
+              <i class="bi bi-plus mr-1"></i>
               Adicionar
             </button>
           </div>
@@ -311,7 +311,7 @@ export const AllPlaceholders = {
 
       <div class="alert alert-info">
         <h6 class="alert-heading">
-          <i class="bi bi-lightbulb me-2"></i>
+          <i class="bi bi-lightbulb mr-2"></i>
           Vantagens
         </h6>
         <ul class="mb-0">
@@ -378,7 +378,7 @@ export const Interactive = {
     return `
       <div class="p-4">
         <h5 class="mb-4">
-          <i class="bi bi-palette text-primary me-2"></i>
+          <i class="bi bi-palette text-primary mr-2"></i>
           Gerador Interativo de Placeholders
         </h5>
         
@@ -389,7 +389,7 @@ export const Interactive = {
                 <form id="placeholder-generator">
                   <div class="mb-3">
                     <label class="form-label">Tipo</label>
-                    <select class="form-select" id="type">
+                    <select class="custom-select" id="type">
                       <option value="avatar">Avatar</option>
                       <option value="empty">Empty State</option>
                     </select>
@@ -411,7 +411,7 @@ export const Interactive = {
                   </div>
 
                   <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-magic me-1"></i>
+                    <i class="bi bi-magic mr-1"></i>
                     Gerar
                   </button>
                 </form>
@@ -436,7 +436,7 @@ export const Interactive = {
         </div>
 
         <div class="alert alert-success mt-4">
-          <i class="bi bi-check-circle me-2"></i>
+          <i class="bi bi-check-circle mr-2"></i>
           <strong>Experimente:</strong> Ajuste os valores e veja o resultado em tempo real!
         </div>
       </div>

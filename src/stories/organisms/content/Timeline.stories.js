@@ -213,7 +213,7 @@ export const Overview = () => `
       <ul class="list-group list-group-timeline">
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="me-3">
+            <div class="mr-3">
               <span class="badge bg-label-primary p-2">
                 <i class="bx bx-cart fs-5"></i>
               </span>
@@ -227,7 +227,7 @@ export const Overview = () => `
         </li>
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="me-3">
+            <div class="mr-3">
               <span class="badge bg-label-success p-2">
                 <i class="bx bx-check fs-5"></i>
               </span>
@@ -241,7 +241,7 @@ export const Overview = () => `
         </li>
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="me-3">
+            <div class="mr-3">
               <span class="badge bg-label-info p-2">
                 <i class="bx bx-package fs-5"></i>
               </span>
@@ -261,7 +261,7 @@ export const Overview = () => `
       <ul class="list-group list-group-timeline list-group-timeline-primary">
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="avatar avatar-sm me-3">
+            <div class="avatar avatar-sm mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
             </div>
             <div class="flex-grow-1">
@@ -278,7 +278,7 @@ export const Overview = () => `
         </li>
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="avatar avatar-sm me-3">
+            <div class="avatar avatar-sm mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
             </div>
             <div class="flex-grow-1">
@@ -289,10 +289,10 @@ export const Overview = () => `
               <p class="mb-0 text-muted">Uploaded 3 files to <a href="#">Marketing</a> folder</p>
               <div class="d-flex gap-2 mt-2">
                 <span class="badge bg-label-secondary">
-                  <i class="bx bx-file me-1"></i>proposal.pdf
+                  <i class="bx bx-file mr-1"></i>proposal.pdf
                 </span>
                 <span class="badge bg-label-secondary">
-                  <i class="bx bx-image me-1"></i>banner.jpg
+                  <i class="bx bx-image mr-1"></i>banner.jpg
                 </span>
               </div>
             </div>
@@ -300,7 +300,7 @@ export const Overview = () => `
         </li>
         <li class="list-group-item">
           <div class="d-flex align-items-start">
-            <div class="avatar avatar-sm me-3">
+            <div class="avatar avatar-sm mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
             </div>
             <div class="flex-grow-1">
@@ -325,7 +325,7 @@ export const Overview = () => `
               <div class="d-flex justify-content-between align-items-start">
                 <div>
                   <span class="fw-medium text-success">
-                    <i class="bx bx-check-circle me-1"></i>Delivered
+                    <i class="bx bx-check-circle mr-1"></i>Delivered
                   </span>
                   <p class="mb-0 text-muted">Package delivered to customer</p>
                   <small class="text-muted">Today, 10:30 AM</small>
@@ -337,7 +337,7 @@ export const Overview = () => `
               <div class="d-flex justify-content-between align-items-start">
                 <div>
                   <span class="fw-medium text-success">
-                    <i class="bx bx-check-circle me-1"></i>Out for Delivery
+                    <i class="bx bx-check-circle mr-1"></i>Out for Delivery
                   </span>
                   <p class="mb-0 text-muted">Driver: John Doe</p>
                   <small class="text-muted">Today, 8:00 AM</small>
@@ -348,7 +348,7 @@ export const Overview = () => `
               <div class="d-flex justify-content-between align-items-start">
                 <div>
                   <span class="fw-medium text-success">
-                    <i class="bx bx-check-circle me-1"></i>In Transit
+                    <i class="bx bx-check-circle mr-1"></i>In Transit
                   </span>
                   <p class="mb-0 text-muted">Arrived at local facility</p>
                   <small class="text-muted">Yesterday, 6:00 PM</small>
@@ -359,7 +359,7 @@ export const Overview = () => `
               <div class="d-flex justify-content-between align-items-start">
                 <div>
                   <span class="fw-medium text-success">
-                    <i class="bx bx-check-circle me-1"></i>Shipped
+                    <i class="bx bx-check-circle mr-1"></i>Shipped
                   </span>
                   <p class="mb-0 text-muted">Package shipped from warehouse</p>
                   <small class="text-muted">2 days ago</small>
@@ -370,7 +370,7 @@ export const Overview = () => `
               <div class="d-flex justify-content-between align-items-start">
                 <div>
                   <span class="fw-medium text-success">
-                    <i class="bx bx-check-circle me-1"></i>Order Placed
+                    <i class="bx bx-check-circle mr-1"></i>Order Placed
                   </span>
                   <p class="mb-0 text-muted">Order confirmed and processing started</p>
                   <small class="text-muted">3 days ago</small>

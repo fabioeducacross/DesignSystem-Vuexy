@@ -1,7 +1,7 @@
 /**
  * Select - Atom (Forms)
  * 
- * Source: packages/vuexy_theme/public/vuexy/css/core.css (.form-select)
+ * Source: packages/vuexy_theme/public/vuexy/css/core.css (.custom-select)
  * Priority: P0 (Critical)
  * Status: ✅ DONE
  */
@@ -64,9 +64,9 @@ Select dropdown estilizado do Vuexy para seleção de opções usando Bootstrap 
 };
 
 const createSelect = ({ size = 'default', disabled = false, multiple = false, state = 'default' }) => {
-  const sizeClass = size === 'sm' ? 'form-select-sm' : size === 'lg' ? 'form-select-lg' : '';
+  const sizeClass = size === 'sm' ? 'custom-select-sm' : size === 'lg' ? 'custom-select-lg' : '';
   const stateClass = state === 'valid' ? 'is-valid' : state === 'invalid' ? 'is-invalid' : '';
-  const classes = ['form-select', sizeClass, stateClass].filter(Boolean).join(' ');
+  const classes = ['custom-select', sizeClass, stateClass].filter(Boolean).join(' ');
   
   return `<select 
   class="${classes}"
@@ -297,7 +297,7 @@ Implementação oficial usando Select2 do Vuexy:
           };
           
           const icon = icons[state.id] || 'ti-code';
-          return $('<span><i class="ti ' + icon + ' me-2"></i>' + state.text + '</span>');
+          return $('<span><i class="ti ' + icon + ' mr-2"></i>' + state.text + '</span>');
         }
         
         $('#select2-template').select2({
@@ -358,12 +358,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-search me-2 text-primary"></i>
+                  <i class="ti tabler-search mr-2 text-primary"></i>
                   Search/Filter
                 </h6>
                 <p class="text-muted small">Digite para filtrar opções</p>
                 <label class="form-label">País</label>
-                <select class="form-select" id="select2-basic" style="width: 100%;">
+                <select class="custom-select" id="select2-basic" style="width: 100%;">
                   <option></option>
                   <option value="br">Brasil</option>
                   <option value="ar">Argentina</option>
@@ -391,12 +391,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-checkbox me-2 text-success"></i>
+                  <i class="ti tabler-checkbox mr-2 text-success"></i>
                   Multi-select
                 </h6>
                 <p class="text-muted small">Selecione múltiplas opções</p>
                 <label class="form-label">Categorias</label>
-                <select class="form-select" id="select2-multi" multiple style="width: 100%;">
+                <select class="custom-select" id="select2-multi" multiple style="width: 100%;">
                   <option value="tech">Tecnologia</option>
                   <option value="business">Negócios</option>
                   <option value="design">Design</option>
@@ -416,12 +416,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-tag me-2 text-info"></i>
+                  <i class="ti tabler-tag mr-2 text-info"></i>
                   Tags Mode
                 </h6>
                 <p class="text-muted small">Crie novas opções dinamicamente</p>
                 <label class="form-label">Habilidades</label>
-                <select class="form-select" id="select2-tags" multiple style="width: 100%;">
+                <select class="custom-select" id="select2-tags" multiple style="width: 100%;">
                   <option value="JavaScript">JavaScript</option>
                   <option value="Python">Python</option>
                   <option value="Java">Java</option>
@@ -437,12 +437,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-folder me-2 text-warning"></i>
+                  <i class="ti tabler-folder mr-2 text-warning"></i>
                   Com Grupos
                 </h6>
                 <p class="text-muted small">Opções organizadas em grupos</p>
                 <label class="form-label">Cidade</label>
-                <select class="form-select" id="select2-optgroup" style="width: 100%;">
+                <select class="custom-select" id="select2-optgroup" style="width: 100%;">
                   <option></option>
                   <optgroup label="Sudeste">
                     <option value="sp">São Paulo</option>
@@ -471,12 +471,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-lock me-2 text-danger"></i>
+                  <i class="ti tabler-lock mr-2 text-danger"></i>
                   Opções Desabilitadas
                 </h6>
                 <p class="text-muted small">Algumas opções não podem ser selecionadas</p>
                 <label class="form-label">Plano</label>
-                <select class="form-select" id="select2-disabled" style="width: 100%;">
+                <select class="custom-select" id="select2-disabled" style="width: 100%;">
                   <option></option>
                   <option value="free">Free (Atual)</option>
                   <option value="basic" disabled>Basic (Em breve)</option>
@@ -493,12 +493,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-palette me-2 text-purple"></i>
+                  <i class="ti tabler-palette mr-2 text-purple"></i>
                   Template Customizado
                 </h6>
                 <p class="text-muted small">Opções com ícones</p>
                 <label class="form-label">Tecnologia</label>
-                <select class="form-select" id="select2-template" multiple style="width: 100%;">
+                <select class="custom-select" id="select2-template" multiple style="width: 100%;">
                   <option value="html">HTML</option>
                   <option value="css">CSS</option>
                   <option value="js">JavaScript</option>
@@ -516,12 +516,12 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-cloud-search me-2 text-primary"></i>
+                  <i class="ti tabler-cloud-search mr-2 text-primary"></i>
                   Ajax Search (Simulado)
                 </h6>
                 <p class="text-muted">Busca usuários conforme você digita</p>
                 <label class="form-label">Buscar Usuário</label>
-                <select class="form-select" id="select2-ajax" style="width: 100%;">
+                <select class="custom-select" id="select2-ajax" style="width: 100%;">
                   <option></option>
                 </select>
                 <small class="text-muted">Digite nome ou email (João, Maria, Pedro, Ana, Carlos). Simula delay de 500ms.</small>
@@ -534,13 +534,13 @@ Implementação oficial usando Select2 do Vuexy:
             <div class="card bg-label-secondary">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-forms me-2"></i>
+                  <i class="ti tabler-forms mr-2"></i>
                   Exemplo: Configuração de Permissões
                 </h6>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label">Usuário</label>
-                    <select class="form-select">
+                    <select class="custom-select">
                       <option>João Silva (Admin)</option>
                       <option>Maria Santos (Editor)</option>
                       <option>Pedro Oliveira (Viewer)</option>
@@ -548,7 +548,7 @@ Implementação oficial usando Select2 do Vuexy:
                   </div>
                   <div class="col-md-6">
                     <label class="form-label">Permissões</label>
-                    <select class="form-select" multiple>
+                    <select class="custom-select" multiple>
                       <option>Read</option>
                       <option>Write</option>
                       <option>Delete</option>
@@ -557,7 +557,7 @@ Implementação oficial usando Select2 do Vuexy:
                   </div>
                   <div class="col-12">
                     <button class="btn btn-primary">
-                      <i class="ti tabler-check me-2"></i>
+                      <i class="ti tabler-check mr-2"></i>
                       Salvar Permissões
                     </button>
                   </div>

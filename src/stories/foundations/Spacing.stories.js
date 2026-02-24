@@ -101,8 +101,8 @@ export const MarginUtilities = {
             </div>
             
             <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
-              <div class="ms-3" style="background: #e3f2fd; padding: 0.5rem; border: 1px solid #2196f3;">
-                .ms-3
+              <div class="ml-3" style="background: #e3f2fd; padding: 0.5rem; border: 1px solid #2196f3;">
+                .ml-3
               </div>
               <div style="margin-top: 0.25rem; font-size: 0.75rem; color: #6c757d;">
                 margin-start (left)
@@ -110,8 +110,8 @@ export const MarginUtilities = {
             </div>
             
             <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
-              <div class="me-3" style="background: #e3f2fd; padding: 0.5rem; border: 1px solid #2196f3;">
-                .me-3
+              <div class="mr-3" style="background: #e3f2fd; padding: 0.5rem; border: 1px solid #2196f3;">
+                .mr-3
               </div>
               <div style="margin-top: 0.25rem; font-size: 0.75rem; color: #6c757d;">
                 margin-end (right)
@@ -203,8 +203,8 @@ export const PaddingUtilities = {
             </div>
             
             <div style="background: #f8f9fa; border-radius: 8px; overflow: hidden;">
-              <div class="ps-3" style="background: #e3f2fd; border: 1px solid #2196f3;">
-                .ps-3
+              <div class="pl-3" style="background: #e3f2fd; border: 1px solid #2196f3;">
+                .pl-3
               </div>
               <div style="padding: 0.5rem; font-size: 0.75rem; color: #6c757d;">
                 padding-start (left)
@@ -212,8 +212,8 @@ export const PaddingUtilities = {
             </div>
             
             <div style="background: #f8f9fa; border-radius: 8px; overflow: hidden;">
-              <div class="pe-3" style="background: #e3f2fd; border: 1px solid #2196f3;">
-                .pe-3
+              <div class="pr-3" style="background: #e3f2fd; border: 1px solid #2196f3;">
+                .pr-3
               </div>
               <div style="padding: 0.5rem; font-size: 0.75rem; color: #6c757d;">
                 padding-end (right)
@@ -454,7 +454,7 @@ export const Interactive = {
       <div class="alert alert-info mt-4">
         <strong>Current Classes:</strong>
         <code id="padding-code">.p-3</code>
-        <code id="margin-code" class="ms-2">.m-3</code>
+        <code id="margin-code" class="ml-2">.m-3</code>
       </div>
       
       <div class="mt-4">

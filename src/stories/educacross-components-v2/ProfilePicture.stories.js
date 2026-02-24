@@ -499,7 +499,7 @@ export const ConfiguracoesConta = {
         </div>
         
         <div class="text-end">
-          <button class="btn btn-secondary me-2">Cancelar</button>
+          <button class="btn btn-secondary mr-2">Cancelar</button>
           <button class="btn btn-primary">Salvar Alterações</button>
         </div>
       </div>

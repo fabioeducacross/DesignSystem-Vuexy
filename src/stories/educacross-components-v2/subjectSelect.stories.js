@@ -48,7 +48,7 @@ Componente de **formulário para seleção de disciplina** com validação e aç
 ## Características
 
 - **ValidationProvider**: Validação obrigatória (rules="required")
-- **Form select**: Bootstrap b-form-select com options
+- **Form select**: Bootstrap b-custom-select com options
 - **Error state**: Exibe mensagem de erro quando inválido
 - **Submit/Cancel**: Botões primário e outline-secondary
 - **Events**: @submit, @cancel, @update:value
@@ -134,7 +134,7 @@ const subjectSelectStyles = `
     display: block;
   }
   
-  .form-select {
+  .custom-select {
     width: 100%;
     padding: 10px 16px;
     border: 1px solid #DBDADE;
@@ -150,17 +150,17 @@ const subjectSelectStyles = `
     transition: border-color 0.2s;
   }
   
-  .form-select:focus {
+  .custom-select:focus {
     outline: none;
     border-color: #6E63E8;
     box-shadow: 0 0 0 3px rgba(110, 99, 232, 0.1);
   }
   
-  .form-select.is-invalid {
+  .custom-select.is-invalid {
     border-color: #EA5455;
   }
   
-  .form-select.is-valid {
+  .custom-select.is-valid {
     border-color: #28C76F;
   }
   
@@ -239,7 +239,7 @@ export const Default = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select">
+          <select class="custom-select">
             <option value="">Selecione uma disciplina...</option>
             <option value="matematica">📐 Matemática</option>
             <option value="portugues">📖 Português</option>
@@ -273,7 +273,7 @@ export const WithError = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select is-invalid">
+          <select class="custom-select is-invalid">
             <option value="">Selecione uma disciplina...</option>
             <option value="matematica">📐 Matemática</option>
             <option value="portugues">📖 Português</option>
@@ -308,7 +308,7 @@ export const WithSelection = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select is-valid">
+          <select class="custom-select is-valid">
             <option value="">Selecione uma disciplina...</option>
             <option value="matematica" selected>📐 Matemática</option>
             <option value="portugues">📖 Português</option>
@@ -348,7 +348,7 @@ export const AllSubjects = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select">
+          <select class="custom-select">
             <option value="">Selecione uma disciplina...</option>
             <optgroup label="Básicas">
               <option value="matematica">📐 Matemática</option>
@@ -437,7 +437,7 @@ export const InModal = {
                 Disciplina
                 <span class="required-indicator">*</span>
               </label>
-              <select class="form-select">
+              <select class="custom-select">
                 <option value="">Selecione...</option>
                 <option value="matematica">📐 Matemática</option>
                 <option value="portugues">📖 Português</option>
@@ -508,7 +508,7 @@ export const InCard = {
               Disciplina
               <span class="required-indicator">*</span>
             </label>
-            <select class="form-select">
+            <select class="custom-select">
               <option value="">Selecione a disciplina...</option>
               <option value="matematica">📐 Matemática</option>
               <option value="portugues">📖 Português</option>
@@ -549,7 +549,7 @@ export const ValidationStates = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select">
+          <select class="custom-select">
             <option value="">Selecione...</option>
             <option value="mat">Matemática</option>
           </select>
@@ -565,7 +565,7 @@ export const ValidationStates = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select is-invalid">
+          <select class="custom-select is-invalid">
             <option value="">Selecione...</option>
             <option value="mat">Matemática</option>
           </select>
@@ -585,7 +585,7 @@ export const ValidationStates = {
             Disciplina
             <span class="required-indicator">*</span>
           </label>
-          <select class="form-select is-valid">
+          <select class="custom-select is-valid">
             <option value="">Selecione...</option>
             <option value="mat" selected>Matemática</option>
           </select>
@@ -623,7 +623,7 @@ export const Responsive = {
                 Disciplina
                 <span class="required-indicator">*</span>
               </label>
-              <select class="form-select">
+              <select class="custom-select">
                 <option value="">Selecione...</option>
                 <option value="mat">Matemática</option>
                 <option value="port">Português</option>
@@ -648,7 +648,7 @@ export const Responsive = {
                 Disciplina
                 <span class="required-indicator">*</span>
               </label>
-              <select class="form-select">
+              <select class="custom-select">
                 <option value="">Selecione...</option>
                 <option value="mat">Matemática</option>
                 <option value="port">Português</option>

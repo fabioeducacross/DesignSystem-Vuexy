@@ -320,16 +320,16 @@ export const WithButtons = {
   render: () => `
 <div class="d-flex gap-3 flex-wrap">
   <button class="btn btn-primary">
-    <i class="ti ti-plus me-2"></i>Adicionar
+    <i class="ti ti-plus mr-2"></i>Adicionar
   </button>
   <button class="btn btn-success">
-    <i class="ti ti-check me-2"></i>Salvar
+    <i class="ti ti-check mr-2"></i>Salvar
   </button>
   <button class="btn btn-danger">
-    <i class="ti ti-trash me-2"></i>Excluir
+    <i class="ti ti-trash mr-2"></i>Excluir
   </button>
   <button class="btn btn-outline-primary">
-    <i class="ti ti-download me-2"></i>Download
+    <i class="ti ti-download mr-2"></i>Download
   </button>
   <button class="btn btn-icon btn-primary">
     <i class="ti ti-settings"></i>
@@ -372,7 +372,7 @@ export const Interactive = {
     </div>
     
     <p class="text-muted mt-3 small">
-      <i class="ti ti-info-circle me-1"></i>
+      <i class="ti ti-info-circle mr-1"></i>
       Clique em um ícone para copiar a classe. 
       <a href="https://tabler-icons.io/" target="_blank">Ver todos os ícones →</a>
     </p>
