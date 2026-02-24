@@ -130,7 +130,7 @@ const createModal = ({
         
         <div class="alert alert-info" role="alert">
           <div class="alert-body">
-            <i class="bx bx-info-circle me-2"></i>
+            <i class="bx bx-info-circle mr-2"></i>
             Modal content can include any components: forms, cards, alerts, etc.
           </div>
         </div>
@@ -278,7 +278,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}">
       <button class="btn btn-primary" data-action="open-modal">
-        <i class="bx bx-plus me-1"></i> Open Modal
+        <i class="bx bx-plus mr-1"></i> Open Modal
       </button>
       
       <!-- Modal -->
@@ -299,7 +299,7 @@ export const Interactive = () => {
               </ul>
               <div class="alert alert-primary mt-3" role="alert">
                 <div class="alert-body">
-                  <i class="bx bx-info-circle me-2"></i>
+                  <i class="bx bx-info-circle mr-2"></i>
                   All interactions are handled via Storybook state without external scripts.
                 </div>
               </div>
@@ -442,37 +442,37 @@ Implementação oficial usando Bootstrap JS do Vuexy:
         <div class="row g-3 mb-4">
           <div class="col-md-4">
             <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalBasic">
-              <i class="ti tabler-square me-1"></i> Default Modal
+              <i class="ti tabler-square mr-1"></i> Default Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalLarge">
-              <i class="ti tabler-square me-1"></i> Large Modal
+              <i class="ti tabler-square mr-1"></i> Large Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-warning w-100" data-bs-toggle="modal" data-bs-target="#modalSmall">
-              <i class="ti tabler-square me-1"></i> Small Modal
+              <i class="ti tabler-square mr-1"></i> Small Modal
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-info w-100" data-bs-toggle="modal" data-bs-target="#modalCentered">
-              <i class="ti tabler-align-center me-1"></i> Centered
+              <i class="ti tabler-align-center mr-1"></i> Centered
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#modalScrollable">
-              <i class="ti tabler-scroll me-1"></i> Scrollable
+              <i class="ti tabler-scroll mr-1"></i> Scrollable
             </button>
           </div>
           
           <div class="col-md-4">
             <button type="button" class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalFullscreen">
-              <i class="ti tabler-maximize me-1"></i> Fullscreen
+              <i class="ti tabler-maximize mr-1"></i> Fullscreen
             </button>
           </div>
         </div>

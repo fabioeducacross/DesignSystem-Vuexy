@@ -172,16 +172,16 @@ const createPricingTable = ({ columns = 3, period = 'monthly' }) => {
               <p class="text-muted mb-4">${plan.description}</p>
               
               <div class="mb-4">
-                <sup class="h5 text-muted fw-normal">$</sup>
-                <span class="display-3 fw-bold">${plan.price}</span>
-                <sub class="h5 text-muted fw-normal">/month</sub>
+                <sup class="h5 text-muted font-weight-normal">$</sup>
+                <span class="display-3 font-weight-bold">${plan.price}</span>
+                <sub class="h5 text-muted font-weight-normal">/month</sub>
               </div>
             </div>
             
             <ul class="list-unstyled mb-4">
               ${plan.features.map(feature => `
               <li class="mb-3">
-                <i class="bx bx-check text-${feature.included ? 'success' : 'muted'} me-2"></i>
+                <i class="bx bx-check text-${feature.included ? 'success' : 'muted'} mr-2"></i>
                 <span class="${!feature.included ? 'text-muted' : ''}">${feature.text}</span>
               </li>
               `).join('')}
@@ -281,7 +281,7 @@ export const Interactive = () => {
   return `
     <div id="${containerId}" style="max-width: 1200px;">
       <div class="alert alert-info mb-4">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Click on "Select Plan" buttons to see selection feedback.
       </div>
       
@@ -294,9 +294,9 @@ export const Interactive = () => {
                 <h2 class="mb-0">$9<small class="text-muted">/mo</small></h2>
               </div>
               <ul class="list-unstyled text-start mb-4">
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>10 Projects</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>5GB Storage</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Email Support</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>10 Projects</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>5GB Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Email Support</li>
               </ul>
               <button class="btn btn-outline-primary w-100" onclick="
                 document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));
@@ -318,10 +318,10 @@ export const Interactive = () => {
                 <h2 class="mb-0">$29<small class="text-muted">/mo</small></h2>
               </div>
               <ul class="list-unstyled text-start mb-4">
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Unlimited Projects</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>50GB Storage</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Priority Support</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Advanced Features</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Unlimited Projects</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>50GB Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Priority Support</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Advanced Features</li>
               </ul>
               <button class="btn btn-primary w-100" onclick="
                 document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));
@@ -342,10 +342,10 @@ export const Interactive = () => {
                 <h2 class="mb-0">$99<small class="text-muted">/mo</small></h2>
               </div>
               <ul class="list-unstyled text-start mb-4">
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Everything in Pro</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Unlimited Storage</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>24/7 Support</li>
-                <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Custom Solutions</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Everything in Pro</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Unlimited Storage</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>24/7 Support</li>
+                <li class="mb-2"><i class="bx bx-check text-success mr-2"></i>Custom Solutions</li>
               </ul>
               <button class="btn btn-outline-primary w-100" onclick="
                 document.querySelectorAll('[id*=\"pricing-interactive\"] .card').forEach(c => c.classList.remove('border-primary'));

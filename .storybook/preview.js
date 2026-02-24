@@ -1,9 +1,9 @@
 /** @type { import('@storybook/html').Preview } */
 
-// Load Vuexy CSS - Real template assets integrated!
+// Load Vuexy CSS - Production CSS with Educacross Brand System
 if (typeof window !== 'undefined') {
   const cssFiles = [
-    '/vuexy/css/core.css',
+    '/vuexy/css/educacross-production.css', // Combined: core.css + educacross-brand.css
     '/vuexy/fonts/bootstrap-icons.css',
     // Add more CSS files as needed for specific components
   ];

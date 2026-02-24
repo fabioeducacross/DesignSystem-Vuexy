@@ -226,7 +226,7 @@ export const AllIcons = {
 
         <div class="alert alert-info mt-4">
           <h6 class="alert-heading">
-            <i class="bi bi-info-circle me-2"></i>
+            <i class="bi bi-info-circle mr-2"></i>
             Como usar
           </h6>
           <p class="mb-2">Clique em qualquer ícone para copiar o código HTML.</p>
@@ -252,19 +252,19 @@ export const InButtons = {
       
       <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-primary">
-          <i class="ti tabler-plus me-1"></i>
+          <i class="ti tabler-plus mr-1"></i>
           Adicionar
         </button>
         <button class="btn btn-success">
-          <i class="ti tabler-check me-1"></i>
+          <i class="ti tabler-check mr-1"></i>
           Confirmar
         </button>
         <button class="btn btn-danger">
-          <i class="ti tabler-trash me-1"></i>
+          <i class="ti tabler-trash mr-1"></i>
           Deletar
         </button>
         <button class="btn btn-secondary">
-          <i class="ti tabler-download me-1"></i>
+          <i class="ti tabler-download mr-1"></i>
           Download
         </button>
       </div>
@@ -288,7 +288,7 @@ export const InButtons = {
       <div class="alert alert-secondary">
         <strong>Código:</strong>
         <pre class="mb-0 mt-2"><code>&lt;button class="btn btn-primary"&gt;
-  &lt;i class="ti tabler-plus me-1"&gt;&lt;/i&gt;
+  &lt;i class="ti tabler-plus mr-1"&gt;&lt;/i&gt;
   Adicionar
 &lt;/button&gt;</code></pre>
       </div>
@@ -298,7 +298,7 @@ export const InButtons = {
     docs: {
       source: {
         code: `<button class="btn btn-primary">
-  <i class="ti tabler-plus me-1"></i>
+  <i class="ti tabler-plus mr-1"></i>
   Adicionar
 </button>
 
@@ -368,19 +368,19 @@ export const InNavigation = {
       
       <nav class="nav nav-pills flex-column mb-4" style="max-width: 250px;">
         <a class="nav-link active" href="#">
-          <i class="bi bi-house me-2"></i>
+          <i class="bi bi-house mr-2"></i>
           Dashboard
         </a>
         <a class="nav-link" href="#">
-          <i class="bi bi-people me-2"></i>
+          <i class="bi bi-people mr-2"></i>
           Usuários
         </a>
         <a class="nav-link" href="#">
-          <i class="bi bi-gear me-2"></i>
+          <i class="bi bi-gear mr-2"></i>
           Configurações
         </a>
         <a class="nav-link" href="#">
-          <i class="bi bi-box-arrow-right me-2"></i>
+          <i class="bi bi-box-arrow-right mr-2"></i>
           Sair
         </a>
       </nav>
@@ -393,12 +393,12 @@ export const InNavigation = {
           </li>
           <li class="breadcrumb-item">
             <a href="#">
-              <i class="bi bi-folder me-1"></i>
+              <i class="bi bi-folder mr-1"></i>
               Projetos
             </a>
           </li>
           <li class="breadcrumb-item active">
-            <i class="bi bi-file-earmark me-1"></i>
+            <i class="bi bi-file-earmark mr-1"></i>
             Detalhes
           </li>
         </ol>
@@ -407,7 +407,7 @@ export const InNavigation = {
       <div class="alert alert-secondary mt-4">
         <strong>Código:</strong>
         <pre class="mb-0 mt-2"><code>&lt;a class="nav-link" href="#"&gt;
-  &lt;i class="bi bi-house me-2"&gt;&lt;/i&gt;
+  &lt;i class="bi bi-house mr-2"&gt;&lt;/i&gt;
   Dashboard
 &lt;/a&gt;</code></pre>
       </div>
@@ -438,7 +438,7 @@ export const Interactive = {
     return `
       <div class="p-4">
         <h5 class="mb-4">
-          <i class="bi bi-stars text-primary me-2"></i>
+          <i class="bi bi-stars text-primary mr-2"></i>
           Playground Interativo de Ícones
         </h5>
         
@@ -457,14 +457,14 @@ export const Interactive = {
         </div>
 
         <div class="alert alert-success">
-          <i class="bi bi-lightbulb me-2"></i>
+          <i class="bi bi-lightbulb mr-2"></i>
           <strong>Dica:</strong> Clique em qualquer ícone para copiar o código HTML!
         </div>
 
         <div class="card">
           <div class="card-header">
             <h6 class="mb-0">
-              <i class="bi bi-code-square me-2"></i>
+              <i class="bi bi-code-square mr-2"></i>
               Referência Rápida
             </h6>
           </div>

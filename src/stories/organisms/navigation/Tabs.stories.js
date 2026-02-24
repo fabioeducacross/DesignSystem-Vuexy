@@ -158,7 +158,7 @@ const createTabs = ({ activeTab = 'home', style = 'tabs', alignment = 'top' }) =
                 role="tab" 
                 aria-controls="${tab.id}" 
                 aria-selected="${isActive}">
-          <i class="bx ${tab.icon} me-1"></i> ${tab.label}
+          <i class="bx ${tab.icon} mr-1"></i> ${tab.label}
         </button>
       </li>`;
   }).join('');
@@ -285,8 +285,8 @@ export const Interactive = () => {
                     type="button" 
                     role="tab"
                     ${tab.id === 'settings' ? 'disabled' : ''}>
-              <i class="bx ${tab.icon} me-1"></i> ${tab.label}
-              ${tab.id === 'settings' ? '<small class="ms-1 text-muted">(disabled)</small>' : ''}
+              <i class="bx ${tab.icon} mr-1"></i> ${tab.label}
+              ${tab.id === 'settings' ? '<small class="ml-1 text-muted">(disabled)</small>' : ''}
             </button>
           </li>`).join('')}
       </ul>

@@ -144,7 +144,7 @@ const createFormValidation = ({
       if (useFloatingLabels) {
         return `
           <div class="form-floating mb-3">
-            <select class="form-select ${stateClass}" id="${name}" ${field.required ? 'required' : ''}>
+            <select class="custom-select ${stateClass}" id="${name}" ${field.required ? 'required' : ''}>
               ${options}
             </select>
             <label for="${name}">${field.label}</label>
@@ -156,7 +156,7 @@ const createFormValidation = ({
       return `
         <div class="mb-3">
           <label for="${name}" class="form-label">${field.label}</label>
-          <select class="form-select ${stateClass}" id="${name}" ${field.required ? 'required' : ''}>
+          <select class="custom-select ${stateClass}" id="${name}" ${field.required ? 'required' : ''}>
             ${options}
           </select>
           ${invalidFeedback}
@@ -368,7 +368,7 @@ export const Interactive = () => {
               
               <div class="col-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-label-secondary ms-2" data-action="reset">Reset</button>
+                <button type="button" class="btn btn-label-secondary ml-2" data-action="reset">Reset</button>
               </div>
             </div>
           </div>
@@ -426,10 +426,10 @@ export const Interactive = () => {
       
       if (isValid) {
         statusMessage.className = 'alert alert-success mt-3';
-        statusMessage.innerHTML = '<i class="bx bx-check-circle me-2"></i><strong>Success!</strong> All fields are valid. Form would be submitted.';
+        statusMessage.innerHTML = '<i class="bx bx-check-circle mr-2"></i><strong>Success!</strong> All fields are valid. Form would be submitted.';
       } else {
         statusMessage.className = 'alert alert-danger mt-3';
-        statusMessage.innerHTML = '<i class="bx bx-error-circle me-2"></i><strong>Error!</strong> Please fix the invalid fields above.';
+        statusMessage.innerHTML = '<i class="bx bx-error-circle mr-2"></i><strong>Error!</strong> Please fix the invalid fields above.';
       }
     });
     

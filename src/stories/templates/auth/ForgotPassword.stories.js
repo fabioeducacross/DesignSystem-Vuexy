@@ -101,7 +101,7 @@ const createForgotPasswordPage = ({ variant = 'card', showSuccess = false }) => 
               <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-weight="bold">V</text>
             </svg>
           </span>
-          <span class="app-brand-text demo text-body fw-bold ms-2">Vuexy</span>
+          <span class="app-brand-text demo text-body font-weight-bold ml-2">Vuexy</span>
         </div>
         
         ${!showSuccess ? `

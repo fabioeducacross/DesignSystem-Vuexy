@@ -48,7 +48,7 @@ export const Default = {
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              <i class="bi bi-person-circle me-2"></i>
+              <i class="bi bi-person-circle mr-2"></i>
               Editar Perfil do Estudante
             </h5>
             <button type="button" class="btn-close"></button>
@@ -205,7 +205,7 @@ export const Complete = {
         <div class="modal-content">
           <div class="modal-header bg-primary bg-opacity-10">
             <h5 class="modal-title text-primary">
-              <i class="bi bi-person-circle me-2"></i>
+              <i class="bi bi-person-circle mr-2"></i>
               Editar Perfil Completo
             </h5>
             <button type="button" class="btn-close"></button>
@@ -297,7 +297,7 @@ export const Complete = {
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary">Cancelar</button>
             <button type="button" class="btn btn-primary">
-              <i class="bi bi-check-circle me-1"></i>
+              <i class="bi bi-check-circle mr-1"></i>
               Salvar Alterações
             </button>
           </div>

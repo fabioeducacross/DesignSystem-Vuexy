@@ -120,7 +120,7 @@ const createAlert = ({ variant = 'primary', title = '', message = '', dismissibl
   const dismissClass = dismissible ? 'alert-dismissible fade show' : '';
   const classes = ['alert', alertClass, dismissClass].filter(Boolean).join(' ');
   
-  const iconHtml = icon ? `<i class="${icon} me-2"></i>` : '';
+  const iconHtml = icon ? `<i class="${icon} mr-2"></i>` : '';
   const titleHtml = title ? `<h5 class="alert-heading mb-1">${title}</h5>` : '';
   const closeBtn = dismissible
     ? '<button type="button" class="btn-close" onclick="this.parentElement.remove()" aria-label="Close"></button>'
@@ -223,7 +223,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}" style="max-width: 800px;">
       <div class="alert alert-info mb-3">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Click buttons to trigger different alerts. Dismissible alerts can be closed.
       </div>
       
@@ -233,19 +233,19 @@ export const Interactive = () => {
           
           <div class="d-flex flex-wrap gap-2 mb-4">
             <button class="btn btn-success btn-sm" data-alert="success">
-              <i class="bx bx-check me-1"></i> Show Success
+              <i class="bx bx-check mr-1"></i> Show Success
             </button>
             <button class="btn btn-danger btn-sm" data-alert="error">
-              <i class="bx bx-x me-1"></i> Show Error
+              <i class="bx bx-x mr-1"></i> Show Error
             </button>
             <button class="btn btn-warning btn-sm" data-alert="warning">
-              <i class="bx bx-error me-1"></i> Show Warning
+              <i class="bx bx-error mr-1"></i> Show Warning
             </button>
             <button class="btn btn-info btn-sm" data-alert="info">
-              <i class="bx bx-info-circle me-1"></i> Show Info
+              <i class="bx bx-info-circle mr-1"></i> Show Info
             </button>
             <button class="btn btn-secondary btn-sm" data-alert="auto">
-              <i class="bx bx-time me-1"></i> Auto-close (3s)
+              <i class="bx bx-time mr-1"></i> Auto-close (3s)
             </button>
           </div>
           
@@ -289,7 +289,7 @@ export const Interactive = () => {
       alert.setAttribute('role', 'alert');
       
       alert.innerHTML = `
-        <i class="bx ${icons[variant]} me-2"></i>
+        <i class="bx ${icons[variant]} mr-2"></i>
         <strong>${title}</strong> ${message}
         ${dismissible ? '<button type="button" class="btn-close" onclick="this.parentElement.remove()" aria-label="Close"></button>' : ''}
       `;

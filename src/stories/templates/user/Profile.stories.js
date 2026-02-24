@@ -82,7 +82,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
       ${viewMode === 'edit' ? `
       <div class="position-absolute top-0 end-0 p-3">
         <button class="btn btn-sm btn-primary">
-          <i class="bx bx-camera me-1"></i> Change Cover
+          <i class="bx bx-camera mr-1"></i> Change Cover
         </button>
       </div>
       ` : ''}
@@ -109,25 +109,25 @@ const createProfilePage = ({ viewMode = 'view' }) => {
             <div>
               <h4 class="mb-1">John Doe</h4>
               <p class="text-muted mb-0">
-                <i class="bx bx-briefcase me-1"></i> Senior Developer
+                <i class="bx bx-briefcase mr-1"></i> Senior Developer
               </p>
               <p class="text-muted">
-                <i class="bx bx-map me-1"></i> San Francisco, CA
+                <i class="bx bx-map mr-1"></i> San Francisco, CA
               </p>
             </div>
             ${viewMode === 'view' ? `
             <div>
-              <button class="btn btn-primary me-2">
-                <i class="bx bx-user-plus me-1"></i> Follow
+              <button class="btn btn-primary mr-2">
+                <i class="bx bx-user-plus mr-1"></i> Follow
               </button>
               <button class="btn btn-outline-secondary">
-                <i class="bx bx-envelope me-1"></i> Message
+                <i class="bx bx-envelope mr-1"></i> Message
               </button>
             </div>
             ` : `
             <div>
               <button class="btn btn-primary">
-                <i class="bx bx-save me-1"></i> Save Changes
+                <i class="bx bx-save mr-1"></i> Save Changes
               </button>
             </div>
             `}
@@ -169,28 +169,28 @@ const createProfilePage = ({ viewMode = 'view' }) => {
           
           <div class="mb-3">
             <h6 class="mb-2">
-              <i class="bx bx-user me-2"></i> Full Name
+              <i class="bx bx-user mr-2"></i> Full Name
             </h6>
             <p class="text-muted">John Doe</p>
           </div>
           
           <div class="mb-3">
             <h6 class="mb-2">
-              <i class="bx bx-envelope me-2"></i> Email
+              <i class="bx bx-envelope mr-2"></i> Email
             </h6>
             <p class="text-muted">john.doe@example.com</p>
           </div>
           
           <div class="mb-3">
             <h6 class="mb-2">
-              <i class="bx bx-phone me-2"></i> Phone
+              <i class="bx bx-phone mr-2"></i> Phone
             </h6>
             <p class="text-muted">+1 (234) 567-8900</p>
           </div>
           
           <div class="mb-3">
             <h6 class="mb-2">
-              <i class="bx bx-globe me-2"></i> Website
+              <i class="bx bx-globe mr-2"></i> Website
             </h6>
             <p class="text-muted">www.johndoe.com</p>
           </div>
@@ -274,7 +274,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
             document.getElementById('activity').classList.add('show', 'active');
           ">
-            <i class="bx bx-rss me-1"></i> Activity
+            <i class="bx bx-rss mr-1"></i> Activity
           </button>
         </li>
         <li class="nav-item">
@@ -284,7 +284,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
             document.getElementById('posts').classList.add('show', 'active');
           ">
-            <i class="bx bx-file me-1"></i> Posts
+            <i class="bx bx-file mr-1"></i> Posts
           </button>
         </li>
         <li class="nav-item">
@@ -294,7 +294,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('show', 'active'));
             document.getElementById('connections').classList.add('show', 'active');
           ">
-            <i class="bx bx-user me-1"></i> Connections
+            <i class="bx bx-user mr-1"></i> Connections
           </button>
         </li>
       </ul>
@@ -310,7 +310,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                   <div class="d-flex align-items-start">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
-                         class="rounded-circle me-3"
+                         class="rounded-circle mr-3"
                          style="width: 40px; height: 40px;">
                     <div class="flex-grow-1">
                       <h6 class="mb-1">Updated profile picture</h6>
@@ -323,7 +323,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                   <div class="d-flex align-items-start">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
-                         class="rounded-circle me-3"
+                         class="rounded-circle mr-3"
                          style="width: 40px; height: 40px;">
                     <div class="flex-grow-1">
                       <h6 class="mb-1">Published a new post</h6>
@@ -341,7 +341,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                   <div class="d-flex align-items-start">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
-                         class="rounded-circle me-3"
+                         class="rounded-circle mr-3"
                          style="width: 40px; height: 40px;">
                     <div class="flex-grow-1">
                       <h6 class="mb-1">Joined 3 new groups</h6>
@@ -378,7 +378,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                   <div class="d-flex align-items-center">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
-                         class="rounded-circle me-3"
+                         class="rounded-circle mr-3"
                          style="width: 50px; height: 50px;">
                     <div class="flex-grow-1">
                       <h6 class="mb-0">Jane Smith</h6>
@@ -392,7 +392,7 @@ const createProfilePage = ({ viewMode = 'view' }) => {
                   <div class="d-flex align-items-center">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                          alt="avatar" 
-                         class="rounded-circle me-3"
+                         class="rounded-circle mr-3"
                          style="width: 50px; height: 50px;">
                     <div class="flex-grow-1">
                       <h6 class="mb-0">Bob Johnson</h6>
@@ -490,7 +490,7 @@ export const Interactive = () => {
         <div class="card-body">
           <div class="d-flex align-items-center mb-4">
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
-                 class="rounded-circle me-3" width="80" height="80" alt="avatar">
+                 class="rounded-circle mr-3" width="80" height="80" alt="avatar">
             <div class="flex-grow-1">
               <h4 class="mb-1">John Doe</h4>
               <p class="text-muted mb-0">Full Stack Developer</p>

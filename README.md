@@ -70,6 +70,45 @@ npm run integrate-vuexy /path/to/vuexy-admin-v10.9.0/html-version
 npm run build-storybook
 ```
 
+### CSS Management
+
+The project uses a production CSS file that combines Vuexy core styles with the Educacross brand system:
+
+```bash
+# Extract/regenerate production CSS from source files
+npm run extract-css
+```
+
+This creates `educacross-production.css` by combining:
+1. `vuexy/css/core.css` - Vuexy core theme (Bootstrap 4 based)
+2. `vuexy/css/educacross-brand.css` - Educacross brand colors, typography, and components
+
+**When to regenerate CSS:**
+- After updating Vuexy template assets
+- After modifying educacross-brand.css
+- When integrating new theme features
+
+### Bootstrap 5 → Bootstrap 4 Migration
+
+The project includes a utility to convert Bootstrap 5 utility classes to Bootstrap 4 equivalents:
+
+```bash
+# Apply BS5→BS4 class conversions to story files
+npm run fix-bs5-to-bs4
+
+# Test conversions without modifying files
+npm run fix-bs5-to-bs4 -- --dry-run
+```
+
+**Conversions applied:**
+- `me-{n}` → `mr-{n}` (margin-end → margin-right)
+- `ms-{n}` → `ml-{n}` (margin-start → margin-left)
+- `pe-{n}` → `pr-{n}` (padding-end → padding-right)
+- `ps-{n}` → `pl-{n}` (padding-start → padding-left)
+- `form-select` → `custom-select`
+- `fw-bold` → `font-weight-bold`
+- `fw-bolder` → `font-weight-bolder`
+
 ## 📦 Components
 
 Currently available components:

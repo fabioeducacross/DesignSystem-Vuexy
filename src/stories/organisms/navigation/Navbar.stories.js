@@ -80,7 +80,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
     : '';
   
   const searchHtml = showSearch ? `
-    <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ms-3">
+    <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ml-3">
       <input type="text" class="form-control search-input" placeholder="Search..." aria-label="Search">
       <i class="bx bx-search"></i>
     </div>` : '';
@@ -96,7 +96,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
         <li>
           <a class="dropdown-item" href="#">
             <div class="d-flex">
-              <div class="flex-shrink-0 me-3">
+              <div class="flex-shrink-0 mr-3">
                 <div class="avatar avatar-online">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="${userName}" class="w-px-40 h-auto rounded-circle">
                 </div>
@@ -109,10 +109,10 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
           </a>
         </li>
         <li><div class="dropdown-divider"></div></li>
-        <li><a class="dropdown-item" href="#"><i class="bx bx-user me-2"></i> My Profile</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bx bx-cog me-2"></i> Settings</a></li>
+        <li><a class="dropdown-item" href="#"><i class="bx bx-user mr-2"></i> My Profile</a></li>
+        <li><a class="dropdown-item" href="#"><i class="bx bx-cog mr-2"></i> Settings</a></li>
         <li><div class="dropdown-divider"></div></li>
-        <li><a class="dropdown-item" href="#"><i class="bx bx-power-off me-2"></i> Log Out</a></li>
+        <li><a class="dropdown-item" href="#"><i class="bx bx-power-off mr-2"></i> Log Out</a></li>
       </ul>
     </li>` : '';
 
@@ -127,8 +127,8 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
     <div class="collapse navbar-collapse" id="navbarNav">
       ${searchHtml}
       
-      <ul class="navbar-nav flex-row align-items-center ms-auto">
-        <li class="nav-item navbar-dropdown dropdown-notifications me-3">
+      <ul class="navbar-nav flex-row align-items-center ml-auto">
+        <li class="nav-item navbar-dropdown dropdown-notifications mr-3">
           <a class="nav-link dropdown-toggle hide-arrow" href="#" onclick="this.nextElementSibling.classList.toggle('show'); return false;" aria-label="Notifications">
             <i class="bx bx-bell bx-sm"></i>
             ${notificationBadge}
@@ -136,7 +136,7 @@ const createNavbar = ({ brandText = 'Vuexy', showSearch = true, showUserMenu = t
           <ul class="dropdown-menu dropdown-menu-end">
             <li class="dropdown-header"><span>Notifications</span></li>
             <li><div class="dropdown-divider"></div></li>
-            <li><a class="dropdown-item" href="#"><i class="bx bx-info-circle me-2"></i> You have ${notificationCount || 'no'} notifications</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bx bx-info-circle mr-2"></i> You have ${notificationCount || 'no'} notifications</a></li>
           </ul>
         </li>
         
@@ -230,13 +230,13 @@ export const Interactive = () => {
         <a class="navbar-brand" href="javascript:void(0)">Vuexy</a>
         
         <!-- Search -->
-        <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ms-3">
+        <div class="navbar-search-wrapper search-input-wrapper d-none d-md-block ml-3">
           <input type="text" class="form-control search-input" placeholder="Search..." aria-label="Search">
           <i class="bx bx-search"></i>
         </div>
         
         <!-- Spacer -->
-        <div class="navbar-nav-right d-flex align-items-center ms-auto" id="navbar-collapse">
+        <div class="navbar-nav-right d-flex align-items-center ml-auto" id="navbar-collapse">
           <ul class="navbar-nav flex-row align-items-center">
             
             <!-- Notifications -->
@@ -248,7 +248,7 @@ export const Interactive = () => {
               <ul class="dropdown-menu dropdown-menu-end" data-menu="notifications">
                 <li>
                   <div class="dropdown-header d-flex align-items-center py-3">
-                    <h5 class="text-body mb-0 me-auto">Notifications</h5>
+                    <h5 class="text-body mb-0 mr-auto">Notifications</h5>
                     <a href="javascript:void(0)" class="dropdown-notifications-all text-body"><i class="bx fs-4 bx-envelope-open"></i></a>
                   </div>
                 </li>
@@ -256,7 +256,7 @@ export const Interactive = () => {
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item list-group-item-action">
                       <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
+                        <div class="flex-shrink-0 mr-3">
                           <div class="avatar">
                             <span class="avatar-initial rounded-circle bg-label-primary"><i class="bx bx-cart"></i></span>
                           </div>
@@ -270,7 +270,7 @@ export const Interactive = () => {
                     </li>
                     <li class="list-group-item list-group-item-action">
                       <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
+                        <div class="flex-shrink-0 mr-3">
                           <div class="avatar">
                             <span class="avatar-initial rounded-circle bg-label-success"><i class="bx bx-user"></i></span>
                           </div>
@@ -298,7 +298,7 @@ export const Interactive = () => {
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)">
                     <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
+                      <div class="flex-shrink-0 mr-3">
                         <div class="avatar avatar-online">
                           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="John Doe" class="w-px-40 h-auto rounded-circle">
                         </div>
@@ -313,20 +313,20 @@ export const Interactive = () => {
                 <li><div class="dropdown-divider"></div></li>
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)">
-                    <i class="bx bx-user me-2"></i>
+                    <i class="bx bx-user mr-2"></i>
                     <span class="align-middle">My Profile</span>
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)">
-                    <i class="bx bx-cog me-2"></i>
+                    <i class="bx bx-cog mr-2"></i>
                     <span class="align-middle">Settings</span>
                   </a>
                 </li>
                 <li><div class="dropdown-divider"></div></li>
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)">
-                    <i class="bx bx-power-off me-2"></i>
+                    <i class="bx bx-power-off mr-2"></i>
                     <span class="align-middle">Log Out</span>
                   </a>
                 </li>

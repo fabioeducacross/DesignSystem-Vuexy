@@ -170,7 +170,7 @@ Sempre usado dentro de \`<AppCollapse>\` (wrapper container):
     >
       <template #header>
         <div class="d-flex align-items-center">
-          <i class="bi bi-question-circle me-2"></i>
+          <i class="bi bi-question-circle mr-2"></i>
           <h5 class="mb-0">{{ faq.question }}</h5>
         </div>
       </template>
@@ -555,13 +555,13 @@ export const WithIcon = {
     const collapse = createInteractiveCollapse();
     collapse.addListeners();
     return styles + collapse.render(
-      '<i class="bi bi-file-earmark-pdf me-2" style="color: #ea5455;"></i> Guia de Avaliação Diagnóstica (PDF)',
+      '<i class="bi bi-file-earmark-pdf mr-2" style="color: #ea5455;"></i> Guia de Avaliação Diagnóstica (PDF)',
       `
         <p><strong>Documento:</strong> guia-avaliacao-diagnostica.pdf</p>
         <p><strong>Tamanho:</strong> 2.4 MB</p>
         <p><strong>Páginas:</strong> 12</p>
         <button class="btn btn-primary btn-sm mt-2">
-          <i class="bi bi-download me-1"></i> Download
+          <i class="bi bi-download mr-1"></i> Download
         </button>
       `,
       false
@@ -574,7 +574,7 @@ export const Multiple = {
   render: () => {
     const items = [
       { title: 'Tutoriais em Vídeo', content: '<iframe src="https://player.vimeo.com/video/123456789?color=655CD6" width="100%" height="200" frameborder="0" allowfullscreen></iframe><p class="mt-2"><strong>Como criar missões personalizadas</strong></p>' },
-      { title: 'Documentos para Download', content: '<div class="d-flex align-items-center"><img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'45\' height=\'45\'%3E%3Crect fill=\'%23ea5455\' width=\'45\' height=\'45\' rx=\'5\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-size=\'16\' font-family=\'Arial\' font-weight=\'bold\'%3EPDF%3C/text%3E%3C/svg%3E" alt="PDF" style="width:45px;height:45px;border-radius:5px;"><div class="ms-3"><p class="mb-1"><strong>Manual do Professor</strong></p><button class="btn btn-outline-primary btn-sm"><i class="bi bi-download me-1"></i> Download</button></div></div>' },
+      { title: 'Documentos para Download', content: '<div class="d-flex align-items-center"><img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'45\' height=\'45\'%3E%3Crect fill=\'%23ea5455\' width=\'45\' height=\'45\' rx=\'5\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-size=\'16\' font-family=\'Arial\' font-weight=\'bold\'%3EPDF%3C/text%3E%3C/svg%3E" alt="PDF" style="width:45px;height:45px;border-radius:5px;"><div class="ml-3"><p class="mb-1"><strong>Manual do Professor</strong></p><button class="btn btn-outline-primary btn-sm"><i class="bi bi-download mr-1"></i> Download</button></div></div>' },
       { title: 'Imagens e Infográficos', content: '<p>Recursos visuais para apoio pedagógico:</p><ul><li>Infográfico: Taxonomia de Bloom</li><li>Poster: Níveis de Proficiência</li><li>Tabela: Habilidades BNCC EF</li></ul>' }
     ];
 
@@ -592,9 +592,9 @@ export const FAQ = {
   name: 'FAQ Pattern',
   render: () => {
     const faqs = [
-      { q: '<i class="bi bi-question-circle me-2" style="color:#6e63e8;"></i> Como redefinir minha senha?', a: '<p>Clique em <strong>Esqueci minha senha</strong> na tela de login. Insira seu e-mail cadastrado e siga as instruções enviadas para sua caixa de entrada.</p><p><em>Caso não receba o e-mail, verifique a pasta de spam.</em></p>' },
-      { q: '<i class="bi bi-question-circle me-2" style="color:#6e63e8;"></i> Posso usar a plataforma offline?', a: '<p>A plataforma Educacross requer conexão com a internet para funcionar. Porém, é possível baixar materiais em PDF para consulta offline.</p>' },
-      { q: '<i class="bi bi-question-circle me-2" style="color:#6e63e8;"></i> Como adicionar alunos à minha turma?', a: '<ol><li>Acesse <strong>Minha Turma</strong> no menu principal</li><li>Clique em <strong>Adicionar Alunos</strong></li><li>Importe via planilha ou adicione manualmente</li><li>Confirme e salve as alterações</li></ol><p><strong>Formatos aceitos:</strong> XLSX, CSV</p>' }
+      { q: '<i class="bi bi-question-circle mr-2" style="color:#6e63e8;"></i> Como redefinir minha senha?', a: '<p>Clique em <strong>Esqueci minha senha</strong> na tela de login. Insira seu e-mail cadastrado e siga as instruções enviadas para sua caixa de entrada.</p><p><em>Caso não receba o e-mail, verifique a pasta de spam.</em></p>' },
+      { q: '<i class="bi bi-question-circle mr-2" style="color:#6e63e8;"></i> Posso usar a plataforma offline?', a: '<p>A plataforma Educacross requer conexão com a internet para funcionar. Porém, é possível baixar materiais em PDF para consulta offline.</p>' },
+      { q: '<i class="bi bi-question-circle mr-2" style="color:#6e63e8;"></i> Como adicionar alunos à minha turma?', a: '<ol><li>Acesse <strong>Minha Turma</strong> no menu principal</li><li>Clique em <strong>Adicionar Alunos</strong></li><li>Importe via planilha ou adicione manualmente</li><li>Confirme e salve as alterações</li></ol><p><strong>Formatos aceitos:</strong> XLSX, CSV</p>' }
     ];
 
     const html = faqs.map((faq, idx) => {
@@ -841,7 +841,7 @@ export const Interactive = {
               data-accordion="${accordionId}"
               tabindex="0"
             >
-              <span class="collapse-title"><i class="bi bi-gear me-2"></i> Configurações da Conta</span>
+              <span class="collapse-title"><i class="bi bi-gear mr-2"></i> Configurações da Conta</span>
             </div>
             <div id="demo-1" class="collapse show" role="tabpanel">
               <div class="card-body">
@@ -869,7 +869,7 @@ export const Interactive = {
               data-accordion="${accordionId}"
               tabindex="0"
             >
-              <span class="collapse-title"><i class="bi bi-bell me-2"></i> Notificações</span>
+              <span class="collapse-title"><i class="bi bi-bell mr-2"></i> Notificações</span>
             </div>
             <div id="demo-2" class="collapse" role="tabpanel">
               <div class="card-body">
@@ -898,7 +898,7 @@ export const Interactive = {
               data-accordion="${accordionId}"
               tabindex="0"
             >
-              <span class="collapse-title"><i class="bi bi-shield-check me-2"></i> Privacidade e Segurança</span>
+              <span class="collapse-title"><i class="bi bi-shield-check mr-2"></i> Privacidade e Segurança</span>
             </div>
             <div id="demo-3" class="collapse" role="tabpanel">
               <div class="card-body">

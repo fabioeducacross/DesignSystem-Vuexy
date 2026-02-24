@@ -315,7 +315,7 @@ export const Interactive = {
       
       <div id="color-toast" style="position: fixed; top: 20px; right: 20px; display: none; z-index: 9999;">
         <div class="alert alert-success" style="box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-          <i class="bx bx-check-circle me-2"></i>
+          <i class="bx bx-check-circle mr-2"></i>
           <span id="toast-text"></span>
         </div>
       </div>

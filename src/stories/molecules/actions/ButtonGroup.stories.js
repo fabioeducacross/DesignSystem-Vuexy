@@ -155,13 +155,13 @@ export const Overview = () => `
       <h5>View Switcher</h5>
       <div class="btn-group" role="group" aria-label="View mode">
         <button type="button" class="btn btn-primary active">
-          <i class="bx bx-list-ul me-1"></i>List
+          <i class="bx bx-list-ul mr-1"></i>List
         </button>
         <button type="button" class="btn btn-outline-primary">
-          <i class="bx bx-grid-alt me-1"></i>Grid
+          <i class="bx bx-grid-alt mr-1"></i>Grid
         </button>
         <button type="button" class="btn btn-outline-primary">
-          <i class="bx bx-map me-1"></i>Map
+          <i class="bx bx-map mr-1"></i>Map
         </button>
       </div>
     </div>
@@ -169,7 +169,7 @@ export const Overview = () => `
     <div class="col-12 mt-5">
       <h5>Button Toolbar</h5>
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group me-2" role="group" aria-label="Edit group">
+        <div class="btn-group mr-2" role="group" aria-label="Edit group">
           <button type="button" class="btn btn-outline-secondary">
             <i class="bx bx-copy"></i>
           </button>
@@ -180,7 +180,7 @@ export const Overview = () => `
             <i class="bx bx-paste"></i>
           </button>
         </div>
-        <div class="btn-group me-2" role="group" aria-label="Text align">
+        <div class="btn-group mr-2" role="group" aria-label="Text align">
           <button type="button" class="btn btn-outline-secondary">
             <i class="bx bx-align-left"></i>
           </button>

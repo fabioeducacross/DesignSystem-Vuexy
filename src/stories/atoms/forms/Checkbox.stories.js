@@ -170,7 +170,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}" style="max-width: 600px;">
       <div class="alert alert-info mb-3">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Select/deselect checkboxes to see real-time updates.
       </div>
       
@@ -231,11 +231,11 @@ export const Interactive = () => {
             <h6>Select All (Indeterminate State)</h6>
             <div class="form-check mb-2">
               <input class="form-check-input" type="checkbox" id="select-all-${containerId}" data-checkbox="select-all">
-              <label class="form-check-label fw-bold" for="select-all-${containerId}">
+              <label class="form-check-label font-weight-bold" for="select-all-${containerId}">
                 Select All Tasks
               </label>
             </div>
-            <div class="ms-4 d-flex flex-column gap-2">
+            <div class="ml-4 d-flex flex-column gap-2">
               <div class="form-check">
                 <input class="form-check-input task-checkbox" type="checkbox" id="task-1-${containerId}" data-task="task">
                 <label class="form-check-label" for="task-1-${containerId}">

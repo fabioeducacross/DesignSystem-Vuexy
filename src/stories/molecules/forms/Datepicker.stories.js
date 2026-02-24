@@ -274,7 +274,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-4">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>Flatpickr Library Required:</strong> This component requires the Flatpickr library. Include the CSS and JS files, then initialize with <code>flatpickr(selector, options)</code>.
   </div>
 `;
@@ -532,7 +532,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar me-2 text-primary"></i>
+                  <i class="ti tabler-calendar mr-2 text-primary"></i>
                   Date Picker Básico
                 </h6>
                 <p class="text-muted small">Seleção de data única</p>
@@ -556,7 +556,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar-event me-2 text-success"></i>
+                  <i class="ti tabler-calendar-event mr-2 text-success"></i>
                   Range Picker
                 </h6>
                 <p class="text-muted small">Selecione período (início e fim)</p>
@@ -580,7 +580,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-clock me-2 text-info"></i>
+                  <i class="ti tabler-clock mr-2 text-info"></i>
                   Time Picker
                 </h6>
                 <p class="text-muted small">Seleção de hora</p>
@@ -604,7 +604,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar-time me-2 text-warning"></i>
+                  <i class="ti tabler-calendar-time mr-2 text-warning"></i>
                   DateTime Picker
                 </h6>
                 <p class="text-muted small">Data + hora juntos</p>
@@ -628,7 +628,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar-month me-2 text-danger"></i>
+                  <i class="ti tabler-calendar-month mr-2 text-danger"></i>
                   Inline Calendar
                 </h6>
                 <p class="text-muted small">Calendário sempre visível</p>
@@ -645,7 +645,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar-check me-2 text-purple"></i>
+                  <i class="ti tabler-calendar-check mr-2 text-purple"></i>
                   Com Restrições
                 </h6>
                 <p class="text-muted small">Apenas próximos 3 meses</p>
@@ -669,7 +669,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-calendar-minus me-2 text-secondary"></i>
+                  <i class="ti tabler-calendar-minus mr-2 text-secondary"></i>
                   Sem Fins de Semana
                 </h6>
                 <p class="text-muted small">Apenas dias úteis</p>
@@ -693,7 +693,7 @@ Implementação oficial usando Flatpickr do Vuexy:
             <div class="card border-primary">
               <div class="card-body">
                 <h6 class="card-title">
-                  <i class="ti tabler-forms me-2 text-primary"></i>
+                  <i class="ti tabler-forms mr-2 text-primary"></i>
                   Exemplo: Formulário de Reserva de Hotel
                 </h6>
                 <div class="row g-3">
@@ -719,7 +719,7 @@ Implementação oficial usando Flatpickr do Vuexy:
                   </div>
                   <div class="col-md-4">
                     <label class="form-label">Hóspedes</label>
-                    <select class="form-select">
+                    <select class="custom-select">
                       <option>1 pessoa</option>
                       <option>2 pessoas</option>
                       <option>3 pessoas</option>
@@ -728,7 +728,7 @@ Implementação oficial usando Flatpickr do Vuexy:
                   </div>
                   <div class="col-12">
                     <button class="btn btn-primary">
-                      <i class="ti tabler-search me-2"></i>
+                      <i class="ti tabler-search mr-2"></i>
                       Buscar Disponibilidade
                     </button>
                   </div>

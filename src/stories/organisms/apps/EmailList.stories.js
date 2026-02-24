@@ -93,14 +93,14 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
     <div class="col-lg-3 col-xl-2 email-sidebar border-end">
       <div class="p-3">
         <button class="btn btn-primary w-100 mb-4">
-          <i class="bx bx-plus me-1"></i> Compose
+          <i class="bx bx-plus mr-1"></i> Compose
         </button>
         
         <ul class="list-unstyled mb-0">
           ${folders.map(folder => `
           <li class="mb-1">
             <a href="#" class="d-flex align-items-center text-decoration-none p-2 rounded ${selectedFolder === folder.id ? 'active' : ''}">
-              <i class="bx ${folder.icon} me-2"></i>
+              <i class="bx ${folder.icon} mr-2"></i>
               <span class="flex-grow-1">${folder.label}</span>
               ${folder.count > 0 ? `<span class="badge bg-label-primary rounded-pill">${folder.count}</span>` : ''}
             </a>
@@ -114,19 +114,19 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
         <ul class="list-unstyled mb-0">
           <li class="mb-1">
             <a href="#" class="d-flex align-items-center text-decoration-none p-2 rounded">
-              <span class="badge bg-danger me-2" style="width: 8px; height: 8px; padding: 0;"></span>
+              <span class="badge bg-danger mr-2" style="width: 8px; height: 8px; padding: 0;"></span>
               <span>Personal</span>
             </a>
           </li>
           <li class="mb-1">
             <a href="#" class="d-flex align-items-center text-decoration-none p-2 rounded">
-              <span class="badge bg-primary me-2" style="width: 8px; height: 8px; padding: 0;"></span>
+              <span class="badge bg-primary mr-2" style="width: 8px; height: 8px; padding: 0;"></span>
               <span>Work</span>
             </a>
           </li>
           <li class="mb-1">
             <a href="#" class="d-flex align-items-center text-decoration-none p-2 rounded">
-              <span class="badge bg-success me-2" style="width: 8px; height: 8px; padding: 0;"></span>
+              <span class="badge bg-success mr-2" style="width: 8px; height: 8px; padding: 0;"></span>
               <span>Important</span>
             </a>
           </li>
@@ -153,7 +153,7 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
             <i class="bx bx-envelope-open"></i>
           </button>
           
-          <div class="ms-auto d-flex gap-2">
+          <div class="ml-auto d-flex gap-2">
             <div class="input-group" style="width: 250px;">
               <input type="text" class="form-control form-control-sm" placeholder="Search emails...">
               <button class="btn btn-sm btn-label-secondary" type="button">
@@ -178,23 +178,23 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
         <!-- Email 1 - Unread -->
         <div class="email-item unread">
           <div class="d-flex align-items-center p-3">
-            <div class="form-check me-3">
+            <div class="form-check mr-3">
               <input class="form-check-input" type="checkbox">
             </div>
             
-            <button class="btn btn-sm btn-icon me-3 star-btn">
+            <button class="btn btn-sm btn-icon mr-3 star-btn">
               <i class="bx bx-star"></i>
             </button>
             
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
-                 class="rounded-circle me-3"
+                 class="rounded-circle mr-3"
                  style="width: 40px; height: 40px;">
             
             <div class="flex-grow-1 overflow-hidden">
               <div class="d-flex align-items-center mb-1">
-                <h6 class="mb-0 me-2">Sarah Johnson</h6>
-                <span class="badge bg-danger me-2">Personal</span>
+                <h6 class="mb-0 mr-2">Sarah Johnson</h6>
+                <span class="badge bg-danger mr-2">Personal</span>
                 ${selectedFolder === 'inbox' ? '<i class="bx bx-paperclip text-muted"></i>' : ''}
               </div>
               <div class="email-subject mb-1">Project Update - Q1 Review Meeting</div>
@@ -212,23 +212,23 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
         <!-- Email 2 - Read with Star -->
         <div class="email-item">
           <div class="d-flex align-items-center p-3">
-            <div class="form-check me-3">
+            <div class="form-check mr-3">
               <input class="form-check-input" type="checkbox">
             </div>
             
-            <button class="btn btn-sm btn-icon me-3 star-btn starred">
+            <button class="btn btn-sm btn-icon mr-3 star-btn starred">
               <i class="bx bxs-star text-warning"></i>
             </button>
             
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
-                 class="rounded-circle me-3"
+                 class="rounded-circle mr-3"
                  style="width: 40px; height: 40px;">
             
             <div class="flex-grow-1 overflow-hidden">
               <div class="d-flex align-items-center mb-1">
-                <h6 class="mb-0 me-2">Mike Wilson</h6>
-                <span class="badge bg-primary me-2">Work</span>
+                <h6 class="mb-0 mr-2">Mike Wilson</h6>
+                <span class="badge bg-primary mr-2">Work</span>
               </div>
               <div class="email-subject mb-1">Re: Design System Documentation</div>
               <p class="email-preview text-muted mb-0">
@@ -245,23 +245,23 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
         <!-- Email 3 - Read -->
         <div class="email-item">
           <div class="d-flex align-items-center p-3">
-            <div class="form-check me-3">
+            <div class="form-check mr-3">
               <input class="form-check-input" type="checkbox">
             </div>
             
-            <button class="btn btn-sm btn-icon me-3 star-btn">
+            <button class="btn btn-sm btn-icon mr-3 star-btn">
               <i class="bx bx-star"></i>
             </button>
             
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ffb400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EMB%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
-                 class="rounded-circle me-3"
+                 class="rounded-circle mr-3"
                  style="width: 40px; height: 40px;">
             
             <div class="flex-grow-1 overflow-hidden">
               <div class="d-flex align-items-center mb-1">
-                <h6 class="mb-0 me-2">Emily Chen</h6>
-                <span class="badge bg-success me-2">Important</span>
+                <h6 class="mb-0 mr-2">Emily Chen</h6>
+                <span class="badge bg-success mr-2">Important</span>
                 <i class="bx bx-paperclip text-muted"></i>
               </div>
               <div class="email-subject mb-1">Budget Approval Required</div>
@@ -279,22 +279,22 @@ const createEmailList = ({ selectedFolder = 'inbox' }) => {
         <!-- Email 4 - Read -->
         <div class="email-item">
           <div class="d-flex align-items-center p-3">
-            <div class="form-check me-3">
+            <div class="form-check mr-3">
               <input class="form-check-input" type="checkbox">
             </div>
             
-            <button class="btn btn-sm btn-icon me-3 star-btn">
+            <button class="btn btn-sm btn-icon mr-3 star-btn">
               <i class="bx bx-star"></i>
             </button>
             
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff4c51'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3ERP%3C/text%3E%3C/svg%3E" 
                  alt="Avatar" 
-                 class="rounded-circle me-3"
+                 class="rounded-circle mr-3"
                  style="width: 40px; height: 40px;">
             
             <div class="flex-grow-1 overflow-hidden">
               <div class="d-flex align-items-center mb-1">
-                <h6 class="mb-0 me-2">David Lee</h6>
+                <h6 class="mb-0 mr-2">David Lee</h6>
               </div>
               <div class="email-subject mb-1">Weekly Team Sync Notes</div>
               <p class="email-preview text-muted mb-0">
@@ -468,7 +468,7 @@ export const Interactive = () => {
   return `
     <div id="${containerId}" style="max-width: 800px;">
       <div class="alert alert-info mb-4">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Click on emails to mark as read/unread.
       </div>
       
@@ -479,7 +479,7 @@ export const Interactive = () => {
         <div class="list-group list-group-flush">
           <a href="javascript:void(0)" class="list-group-item list-group-item-action" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
             <div class="d-flex align-items-center">
-              <span class="badge bg-primary me-2">New</span>
+              <span class="badge bg-primary mr-2">New</span>
               <div class="flex-grow-1">
                 <div class="d-flex justify-content-between">
                   <h6 class="mb-1">Project Update</h6>
@@ -491,7 +491,7 @@ export const Interactive = () => {
           </a>
           <a href="javascript:void(0)" class="list-group-item list-group-item-action" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
             <div class="d-flex align-items-center">
-              <span class="badge bg-primary me-2">New</span>
+              <span class="badge bg-primary mr-2">New</span>
               <div class="flex-grow-1">
                 <div class="d-flex justify-content-between">
                   <h6 class="mb-1">Meeting Reminder</h6>
@@ -503,7 +503,7 @@ export const Interactive = () => {
           </a>
           <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-light" onclick="this.classList.toggle('bg-light'); this.querySelector('.badge').classList.toggle('d-none');">
             <div class="d-flex align-items-center">
-              <span class="badge bg-primary me-2 d-none">New</span>
+              <span class="badge bg-primary mr-2 d-none">New</span>
               <div class="flex-grow-1">
                 <div class="d-flex justify-content-between">
                   <h6 class="mb-1">Weekly Report</h6>

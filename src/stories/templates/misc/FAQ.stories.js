@@ -145,7 +145,7 @@ const createFAQPage = ({ withSearch = true }) => {
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h3 class="mb-4" id="getting-started">
-          <i class="bx bx-rocket me-2"></i> Getting Started
+          <i class="bx bx-rocket mr-2"></i> Getting Started
         </h3>
         
         <div class="accordion mb-5" id="faqAccordionGettingStarted">
@@ -205,7 +205,7 @@ const createFAQPage = ({ withSearch = true }) => {
         </div>
         
         <h3 class="mb-4" id="account">
-          <i class="bx bx-user me-2"></i> Account & Billing
+          <i class="bx bx-user mr-2"></i> Account & Billing
         </h3>
         
         <div class="accordion mb-5" id="faqAccordionAccount">
@@ -260,7 +260,7 @@ const createFAQPage = ({ withSearch = true }) => {
         </div>
         
         <h3 class="mb-4" id="security">
-          <i class="bx bx-shield me-2"></i> Security & Privacy
+          <i class="bx bx-shield mr-2"></i> Security & Privacy
         </h3>
         
         <div class="accordion mb-5" id="faqAccordionSecurity">
@@ -320,10 +320,10 @@ const createFAQPage = ({ withSearch = true }) => {
               </p>
               <div class="d-flex flex-wrap gap-3 justify-content-center">
                 <a href="/contact" class="btn btn-primary">
-                  <i class="bx bx-envelope me-1"></i> Contact Support
+                  <i class="bx bx-envelope mr-1"></i> Contact Support
                 </a>
                 <a href="/community" class="btn btn-outline-secondary">
-                  <i class="bx bx-chat me-1"></i> Join Community
+                  <i class="bx bx-chat mr-1"></i> Join Community
                 </a>
               </div>
             </div>

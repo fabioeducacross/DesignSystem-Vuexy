@@ -62,7 +62,7 @@ Texto auxiliar para fornecer contexto adicional em campos de formulário.
 
 const createHelpText = ({ text = 'Help text goes here', muted = true, icon = '' }) => {
   const mutedClass = muted ? 'text-muted' : '';
-  const iconHtml = icon ? `<i class="bx ${icon} me-1"></i>` : '';
+  const iconHtml = icon ? `<i class="bx ${icon} mr-1"></i>` : '';
   
   return `<div class="form-text ${mutedClass}">
   ${iconHtml}${text}
@@ -168,19 +168,19 @@ export const Interactive = () => {
   return `
     <div id="${containerId}" style="max-width: 500px;">
       <div class="alert alert-info mb-4">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Select help text type to see different variations.
       </div>
       
       <div class="card mb-4">
         <div class="card-body">
           <label class="form-label">Help Text Type:</label>
-          <select class="form-select" onchange="
+          <select class="custom-select" onchange="
             const helpTexts = {
-              info: '<div class=\\'form-text text-muted\\'><i class=\\'bx bx-info-circle me-1\\'></i>Use format: name@example.com</div>',
-              warning: '<div class=\\'form-text text-warning\\'><i class=\\'bx bx-error me-1\\'></i>Password must be at least 8 characters</div>',
-              success: '<div class=\\'form-text text-success\\'><i class=\\'bx bx-check-circle me-1\\'></i>Valid format!</div>',
-              error: '<div class=\\'form-text text-danger\\'><i class=\\'bx bx-x-circle me-1\\'></i>This field is required</div>'
+              info: '<div class=\\'form-text text-muted\\'><i class=\\'bx bx-info-circle mr-1\\'></i>Use format: name@example.com</div>',
+              warning: '<div class=\\'form-text text-warning\\'><i class=\\'bx bx-error mr-1\\'></i>Password must be at least 8 characters</div>',
+              success: '<div class=\\'form-text text-success\\'><i class=\\'bx bx-check-circle mr-1\\'></i>Valid format!</div>',
+              error: '<div class=\\'form-text text-danger\\'><i class=\\'bx bx-x-circle mr-1\\'></i>This field is required</div>'
             };
             document.getElementById('helpDemo-${containerId}').innerHTML = helpTexts[this.value];
           ">
@@ -197,7 +197,7 @@ export const Interactive = () => {
           <label class="form-label">Email Address</label>
           <input type="email" class="form-control" placeholder="Enter email">
           <div id="helpDemo-${containerId}" class="form-text text-muted">
-            <i class="bx bx-info-circle me-1"></i>Use format: name@example.com
+            <i class="bx bx-info-circle mr-1"></i>Use format: name@example.com
           </div>
         </div>
       </div>

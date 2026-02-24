@@ -75,7 +75,7 @@ const createStatCard = ({
         ${subtitle ? `<small class="text-muted">${subtitle}</small>` : ''}
         ${trend ? `
         <span class="badge bg-label-${trendColor}">
-          <i class="ti ti-${trendIcon} ti-xs me-1"></i>${trend}
+          <i class="ti ti-${trendIcon} ti-xs mr-1"></i>${trend}
         </span>
         ` : ''}
       </div>
@@ -198,7 +198,7 @@ export const CompactStyle = {
     <div class="card">
       <div class="card-body py-3">
         <div class="d-flex align-items-center">
-          <div class="avatar avatar-sm me-3">
+          <div class="avatar avatar-sm mr-3">
             <span class="avatar-initial rounded bg-label-primary">
               <i class="ti ti-shopping-cart ti-sm"></i>
             </span>
@@ -215,7 +215,7 @@ export const CompactStyle = {
     <div class="card">
       <div class="card-body py-3">
         <div class="d-flex align-items-center">
-          <div class="avatar avatar-sm me-3">
+          <div class="avatar avatar-sm mr-3">
             <span class="avatar-initial rounded bg-label-success">
               <i class="ti ti-check ti-sm"></i>
             </span>
@@ -232,7 +232,7 @@ export const CompactStyle = {
     <div class="card">
       <div class="card-body py-3">
         <div class="d-flex align-items-center">
-          <div class="avatar avatar-sm me-3">
+          <div class="avatar avatar-sm mr-3">
             <span class="avatar-initial rounded bg-label-warning">
               <i class="ti ti-users ti-sm"></i>
             </span>
@@ -249,7 +249,7 @@ export const CompactStyle = {
     <div class="card">
       <div class="card-body py-3">
         <div class="d-flex align-items-center">
-          <div class="avatar avatar-sm me-3">
+          <div class="avatar avatar-sm mr-3">
             <span class="avatar-initial rounded bg-label-info">
               <i class="ti ti-clock ti-sm"></i>
             </span>
@@ -283,7 +283,7 @@ export const SalesOverview = {
     
     <div class="d-flex justify-content-between align-items-center mb-3">
       <div class="d-flex align-items-center">
-        <div class="avatar avatar-sm me-2">
+        <div class="avatar avatar-sm mr-2">
           <span class="avatar-initial rounded bg-label-primary">
             <i class="ti ti-shopping-cart ti-xs"></i>
           </span>
@@ -298,7 +298,7 @@ export const SalesOverview = {
     
     <div class="d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center">
-        <div class="avatar avatar-sm me-2">
+        <div class="avatar avatar-sm mr-2">
           <span class="avatar-initial rounded bg-label-info">
             <i class="ti ti-link ti-xs"></i>
           </span>
@@ -338,7 +338,7 @@ export const EarningsReport = {
     </div>
     
     <div class="d-flex align-items-center mb-4">
-      <h2 class="mb-0 me-2">$468</h2>
+      <h2 class="mb-0 mr-2">$468</h2>
       <span class="badge bg-label-success">+4.2%</span>
     </div>
     
@@ -380,7 +380,7 @@ export const EarningsReport = {
     
     <div class="d-flex justify-content-between">
       <div class="d-flex align-items-center">
-        <div class="avatar avatar-sm me-2">
+        <div class="avatar avatar-sm mr-2">
           <span class="avatar-initial rounded bg-label-primary">
             <i class="ti ti-currency-dollar ti-xs"></i>
           </span>
@@ -391,7 +391,7 @@ export const EarningsReport = {
         </div>
       </div>
       <div class="d-flex align-items-center">
-        <div class="avatar avatar-sm me-2">
+        <div class="avatar avatar-sm mr-2">
           <span class="avatar-initial rounded bg-label-success">
             <i class="ti ti-chart-pie ti-xs"></i>
           </span>
@@ -402,7 +402,7 @@ export const EarningsReport = {
         </div>
       </div>
       <div class="d-flex align-items-center">
-        <div class="avatar avatar-sm me-2">
+        <div class="avatar avatar-sm mr-2">
           <span class="avatar-initial rounded bg-label-danger">
             <i class="ti ti-receipt ti-xs"></i>
           </span>
@@ -441,7 +441,7 @@ export const SupportTracker = {
         <p class="text-muted mb-3">Total Tickets</p>
         
         <div class="d-flex align-items-center mb-2">
-          <div class="avatar avatar-xs me-2">
+          <div class="avatar avatar-xs mr-2">
             <span class="avatar-initial rounded bg-label-primary">
               <i class="ti ti-ticket" style="font-size: 10px;"></i>
             </span>
@@ -453,7 +453,7 @@ export const SupportTracker = {
         </div>
         
         <div class="d-flex align-items-center mb-2">
-          <div class="avatar avatar-xs me-2">
+          <div class="avatar avatar-xs mr-2">
             <span class="avatar-initial rounded bg-label-success">
               <i class="ti ti-check" style="font-size: 10px;"></i>
             </span>
@@ -465,7 +465,7 @@ export const SupportTracker = {
         </div>
         
         <div class="d-flex align-items-center">
-          <div class="avatar avatar-xs me-2">
+          <div class="avatar avatar-xs mr-2">
             <span class="avatar-initial rounded bg-label-warning">
               <i class="ti ti-clock" style="font-size: 10px;"></i>
             </span>
@@ -529,7 +529,7 @@ export const Interactive = {
                 <p class='text-muted mb-1'>\${title}</p>
                 <h3 class='mb-1'>\${value}</h3>
                 <span class='badge bg-label-success'>
-                  <i class='ti ti-trending-up ti-xs me-1'></i>\${trend}
+                  <i class='ti ti-trending-up ti-xs mr-1'></i>\${trend}
                 </span>
               </div>
               <div class='avatar'>
@@ -565,7 +565,7 @@ export const Interactive = {
       </div>
       <div class="col-md-6">
         <label class="form-label">Cor</label>
-        <select class="form-select" id="stat-color">
+        <select class="custom-select" id="stat-color">
           <option value="primary" selected>Primary</option>
           <option value="success">Success</option>
           <option value="warning">Warning</option>

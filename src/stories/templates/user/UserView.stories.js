@@ -95,19 +95,19 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
                     <h4 class="mb-1">John Doe</h4>
                     <div class="mb-2">
                       ${statusBadge[userStatus]}
-                      <span class="badge bg-label-primary ms-2">Customer</span>
+                      <span class="badge bg-label-primary ml-2">Customer</span>
                     </div>
                     <div class="d-flex gap-3 text-muted">
-                      <span><i class="bx bx-calendar-alt me-1"></i> Joined Jan 2024</span>
-                      <span><i class="bx bx-map me-1"></i> San Francisco, CA</span>
+                      <span><i class="bx bx-calendar-alt mr-1"></i> Joined Jan 2024</span>
+                      <span><i class="bx bx-map mr-1"></i> San Francisco, CA</span>
                     </div>
                   </div>
                   <div class="d-flex gap-2">
                     <button class="btn btn-primary">
-                      <i class="bx bx-edit me-1"></i> Edit
+                      <i class="bx bx-edit mr-1"></i> Edit
                     </button>
                     <button class="btn btn-label-danger">
-                      <i class="bx bx-trash me-1"></i> Delete
+                      <i class="bx bx-trash mr-1"></i> Delete
                     </button>
                   </div>
                 </div>
@@ -129,39 +129,39 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
           </div>
           <div class="card-body">
             <div class="mb-3">
-              <span class="fw-semibold me-1">Username:</span>
+              <span class="fw-semibold mr-1">Username:</span>
               <span>johndoe</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Email:</span>
+              <span class="fw-semibold mr-1">Email:</span>
               <span>john.doe@example.com</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Status:</span>
+              <span class="fw-semibold mr-1">Status:</span>
               ${statusBadge[userStatus]}
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Role:</span>
+              <span class="fw-semibold mr-1">Role:</span>
               <span>Customer</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Tax ID:</span>
+              <span class="fw-semibold mr-1">Tax ID:</span>
               <span>Tax-8965</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Contact:</span>
+              <span class="fw-semibold mr-1">Contact:</span>
               <span>+1 (234) 567-8900</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Language:</span>
+              <span class="fw-semibold mr-1">Language:</span>
               <span>English</span>
             </div>
             <div class="mb-3">
-              <span class="fw-semibold me-1">Country:</span>
+              <span class="fw-semibold mr-1">Country:</span>
               <span>United States</span>
             </div>
             <div>
-              <span class="fw-semibold me-1">2FA:</span>
+              <span class="fw-semibold mr-1">2FA:</span>
               <span class="badge bg-label-success">Enabled</span>
             </div>
           </div>
@@ -215,7 +215,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-center">
-                  <div class="avatar flex-shrink-0 me-3">
+                  <div class="avatar flex-shrink-0 mr-3">
                     <div class="avatar-initial bg-label-primary rounded">
                       <i class="bx bx-dollar"></i>
                     </div>
@@ -233,7 +233,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-center">
-                  <div class="avatar flex-shrink-0 me-3">
+                  <div class="avatar flex-shrink-0 mr-3">
                     <div class="avatar-initial bg-label-success rounded">
                       <i class="bx bx-shopping-bag"></i>
                     </div>
@@ -251,7 +251,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-center">
-                  <div class="avatar flex-shrink-0 me-3">
+                  <div class="avatar flex-shrink-0 mr-3">
                     <div class="avatar-initial bg-label-warning rounded">
                       <i class="bx bx-file"></i>
                     </div>
@@ -269,7 +269,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-center">
-                  <div class="avatar flex-shrink-0 me-3">
+                  <div class="avatar flex-shrink-0 mr-3">
                     <div class="avatar-initial bg-label-info rounded">
                       <i class="bx bx-star"></i>
                     </div>
@@ -297,7 +297,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
                   <div class="timeline-icon bg-label-primary">
                     <i class="bx bx-check"></i>
                   </div>
-                  <div class="flex-grow-1 ms-3">
+                  <div class="flex-grow-1 ml-3">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                       <h6 class="mb-0">Completed purchase</h6>
                       <small class="text-muted">2 hours ago</small>
@@ -312,7 +312,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
                   <div class="timeline-icon bg-label-success">
                     <i class="bx bx-user-check"></i>
                   </div>
-                  <div class="flex-grow-1 ms-3">
+                  <div class="flex-grow-1 ml-3">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                       <h6 class="mb-0">Profile updated</h6>
                       <small class="text-muted">5 hours ago</small>
@@ -327,7 +327,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
                   <div class="timeline-icon bg-label-info">
                     <i class="bx bx-envelope"></i>
                   </div>
-                  <div class="flex-grow-1 ms-3">
+                  <div class="flex-grow-1 ml-3">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                       <h6 class="mb-0">Email verified</h6>
                       <small class="text-muted">1 day ago</small>
@@ -342,7 +342,7 @@ const createUserViewPage = ({ userStatus = 'active' }) => {
                   <div class="timeline-icon bg-label-warning">
                     <i class="bx bx-user-plus"></i>
                   </div>
-                  <div class="flex-grow-1 ms-3">
+                  <div class="flex-grow-1 ml-3">
                     <div class="d-flex justify-content-between align-items-center mb-1">
                       <h6 class="mb-0">Account created</h6>
                       <small class="text-muted">Jan 15, 2024</small>
@@ -544,10 +544,10 @@ export const Interactive = () => {
               document.querySelector('.tab-activity').style.display = 'none';
               document.querySelector('.tab-security').style.display = 'block';
             " class="user-tab">🔒 Security</button>
-            <button class="btn btn-sm btn-success ms-auto" onclick="
+            <button class="btn btn-sm btn-success ml-auto" onclick="
               const isEdit = this.textContent.includes('Cancel');
               this.textContent = isEdit ? '✏️ Edit User' : '❌ Cancel';
-              this.className = isEdit ? 'btn btn-sm btn-success ms-auto' : 'btn btn-sm btn-danger ms-auto';
+              this.className = isEdit ? 'btn btn-sm btn-success ml-auto' : 'btn btn-sm btn-danger ml-auto';
               const inputs = document.querySelectorAll('.editable-input');
               inputs.forEach(i => {
                 i.disabled = isEdit;
@@ -562,7 +562,7 @@ export const Interactive = () => {
             <div class="flex-grow-1">
               <h4 class="mb-1">John Doe</h4>
               <span class="badge bg-success">Active</span>
-              <span class="badge bg-label-primary ms-2">Customer</span>
+              <span class="badge bg-label-primary ml-2">Customer</span>
             </div>
           </div>
         </div>

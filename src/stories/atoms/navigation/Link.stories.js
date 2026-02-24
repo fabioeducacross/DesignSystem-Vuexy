@@ -35,7 +35,7 @@ export const Interactive = {
         
         <div class="mb-3">
           <a href="#" class="link-primary" id="interactiveLink" onclick="event.preventDefault();">Visit this link</a>
-          <span class="badge bg-secondary ms-2" id="visitBadge">Not visited</span>
+          <span class="badge bg-secondary ml-2" id="visitBadge">Not visited</span>
         </div>
         
         <button class="btn btn-outline-primary btn-sm" onclick="
@@ -44,11 +44,11 @@ export const Interactive = {
           if (link.classList.contains('visited')) {
             link.classList.remove('visited');
             badge.textContent = 'Not visited';
-            badge.className = 'badge bg-secondary ms-2';
+            badge.className = 'badge bg-secondary ml-2';
           } else {
             link.classList.add('visited');
             badge.textContent = 'Visited';
-            badge.className = 'badge bg-success ms-2';
+            badge.className = 'badge bg-success ml-2';
           }
         ">Toggle Visited State</button>
         

@@ -160,7 +160,7 @@ const createSidebar = ({ collapsed = false, activeItem = 'dashboard', showBadges
     const isActive = item.id === activeItem;
     const hasChildren = item.children && item.children.length > 0;
     const badgeHtml = showBadges && item.badge 
-      ? `<span class="badge badge-center rounded-pill bg-${item.badge.color} ms-auto">${item.badge.text}</span>` 
+      ? `<span class="badge badge-center rounded-pill bg-${item.badge.color} ml-auto">${item.badge.text}</span>` 
       : '';
     
     if (hasChildren) {
@@ -202,10 +202,10 @@ const createSidebar = ({ collapsed = false, activeItem = 'dashboard', showBadges
           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0"/>
         </svg>
       </span>
-      <span class="app-brand-text demo menu-text fw-bold ms-2">Vuexy</span>
+      <span class="app-brand-text demo menu-text font-weight-bold ml-2">Vuexy</span>
     </a>
 
-    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto ${collapsed ? '' : 'd-xl-none'}">
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ml-auto ${collapsed ? '' : 'd-xl-none'}">
       <i class="bx bx-chevron-left bx-sm align-middle"></i>
     </a>
   </div>
@@ -320,8 +320,8 @@ export const Interactive = () => {
     <div id="${containerId}" style="height: 500px; border: 1px solid #ddd; position: relative;">
       <aside class="menu menu-vertical" style="width: 260px; height: 100%; overflow-y: auto;">
         <div class="app-brand p-3">
-          <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
-          <button class="btn btn-sm btn-icon ms-auto" data-action="toggle" style="position: absolute; right: 10px;">
+          <span class="app-brand-text demo menu-text font-weight-bold">Vuexy</span>
+          <button class="btn btn-sm btn-icon ml-auto" data-action="toggle" style="position: absolute; right: 10px;">
             <i class="bx bx-chevron-left"></i>
           </button>
         </div>
@@ -332,7 +332,7 @@ export const Interactive = () => {
               <a href="javascript:void(0);" class="menu-link ${item.children ? 'menu-toggle' : ''}" ${item.children ? 'data-has-submenu="true"' : ''}>
                 <i class="menu-icon tf-icons bx ${item.icon}"></i>
                 <div class="menu-text">${item.label}</div>
-                ${item.badge ? `<div class="badge bg-${item.badge.color} rounded-pill ms-auto">${item.badge.text}</div>` : ''}
+                ${item.badge ? `<div class="badge bg-${item.badge.color} rounded-pill ml-auto">${item.badge.text}</div>` : ''}
               </a>
               ${item.children ? `
                 <ul class="menu-sub" style="display: none;">

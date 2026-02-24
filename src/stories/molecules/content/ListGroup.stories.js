@@ -179,16 +179,16 @@ export const Overview = () => `
       <h5>Com Ícones</h5>
       <ul class="list-group">
         <li class="list-group-item">
-          <i class="bx bx-home me-2"></i>Dashboard
+          <i class="bx bx-home mr-2"></i>Dashboard
         </li>
         <li class="list-group-item">
-          <i class="bx bx-user me-2"></i>Profile
+          <i class="bx bx-user mr-2"></i>Profile
         </li>
         <li class="list-group-item">
-          <i class="bx bx-cog me-2"></i>Settings
+          <i class="bx bx-cog mr-2"></i>Settings
         </li>
         <li class="list-group-item">
-          <i class="bx bx-bell me-2"></i>Notifications
+          <i class="bx bx-bell mr-2"></i>Notifications
         </li>
       </ul>
     </div>
@@ -248,7 +248,7 @@ export const Overview = () => `
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex align-items-start">
-            <div class="avatar avatar-sm me-3">
+            <div class="avatar avatar-sm mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23696cff'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJD%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
             </div>
             <div class="flex-grow-1">
@@ -262,7 +262,7 @@ export const Overview = () => `
         </a>
         <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex align-items-start">
-            <div class="avatar avatar-sm me-3">
+            <div class="avatar avatar-sm mr-3">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2356ca00'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='white' text-anchor='middle' dy='.35em'%3EJS%3C/text%3E%3C/svg%3E" alt="Avatar" class="rounded-circle">
             </div>
             <div class="flex-grow-1">
@@ -314,25 +314,25 @@ export const Interactive = {
         <div class="list-group" id="listGroup">
           <button type="button" class="list-group-item list-group-item-action active" onclick="toggleActive(this)">
             <div class="d-flex justify-content-between align-items-center">
-              <span><i class="bx bx-home me-2"></i>Dashboard</span>
+              <span><i class="bx bx-home mr-2"></i>Dashboard</span>
               <span class="badge bg-primary rounded-pill">5</span>
             </div>
           </button>
           <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
             <div class="d-flex justify-content-between align-items-center">
-              <span><i class="bx bx-inbox me-2"></i>Inbox</span>
+              <span><i class="bx bx-inbox mr-2"></i>Inbox</span>
               <span class="badge bg-primary rounded-pill">12</span>
             </div>
           </button>
           <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
             <div class="d-flex justify-content-between align-items-center">
-              <span><i class="bx bx-user me-2"></i>Profile</span>
+              <span><i class="bx bx-user mr-2"></i>Profile</span>
               <span class="badge bg-primary rounded-pill">3</span>
             </div>
           </button>
           <button type="button" class="list-group-item list-group-item-action" onclick="toggleActive(this)">
             <div class="d-flex justify-content-between align-items-center">
-              <span><i class="bx bx-cog me-2"></i>Settings</span>
+              <span><i class="bx bx-cog mr-2"></i>Settings</span>
             </div>
           </button>
         </div>
@@ -362,19 +362,19 @@ export const Interactive = {
         code: `<div class="list-group">
   <button type="button" class="list-group-item list-group-item-action active">
     <div class="d-flex justify-content-between align-items-center">
-      <span><i class="bx bx-home me-2"></i>Dashboard</span>
+      <span><i class="bx bx-home mr-2"></i>Dashboard</span>
       <span class="badge bg-primary rounded-pill">5</span>
     </div>
   </button>
   <button type="button" class="list-group-item list-group-item-action">
     <div class="d-flex justify-content-between align-items-center">
-      <span><i class="bx bx-inbox me-2"></i>Inbox</span>
+      <span><i class="bx bx-inbox mr-2"></i>Inbox</span>
       <span class="badge bg-primary rounded-pill">12</span>
     </div>
   </button>
   <button type="button" class="list-group-item list-group-item-action">
     <div class="d-flex justify-content-between align-items-center">
-      <span><i class="bx bx-user me-2"></i>Profile</span>
+      <span><i class="bx bx-user mr-2"></i>Profile</span>
       <span class="badge bg-primary rounded-pill">3</span>
     </div>
   </button>

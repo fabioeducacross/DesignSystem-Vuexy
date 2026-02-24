@@ -406,7 +406,7 @@ Contraste de cores todos acima de 4.5:1. Navegação por teclado através de tod
         />
       </div>
       <div class="col-md-3">
-        <select v-model="statusFilter" class="form-select">
+        <select v-model="statusFilter" class="custom-select">
           <option value="">All Status</option>
           <option value="paid">Paid</option>
           <option value="pending">Pending</option>
@@ -545,7 +545,7 @@ export const ImprovedList = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Total</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">120</h3>
+                <h3 class="mb-0 mr-2">120</h3>
               </div>
               <small class="text-primary fw-semibold">
                 <i class="bx bx-right-arrow-alt"></i> Ver Todas
@@ -569,7 +569,7 @@ export const ImprovedList = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Paid</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">86</h3>
+                <h3 class="mb-0 mr-2">86</h3>
               </div>
               <small class="text-success fw-semibold">
                 <i class="bx bx-download"></i> Exportar
@@ -593,7 +593,7 @@ export const ImprovedList = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Pending</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">24</h3>
+                <h3 class="mb-0 mr-2">24</h3>
               </div>
               <small class="text-warning fw-semibold">
                 <i class="bx bx-check-double"></i> Aprovar
@@ -617,7 +617,7 @@ export const ImprovedList = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Overdue</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">10</h3>
+                <h3 class="mb-0 mr-2">10</h3>
               </div>
               <small class="text-danger fw-semibold">
                 <i class="bx bx-bell"></i> Lembrar
@@ -654,7 +654,7 @@ export const ImprovedList = {
         
         <!-- Status Filter (22% width) -->
         <div class="col-md-3">
-          <select class="form-select" aria-label="Filter by status">
+          <select class="custom-select" aria-label="Filter by status">
             <option value="">All Status</option>
             <option value="paid">Paid</option>
             <option value="pending">Pending</option>
@@ -742,23 +742,23 @@ export const ImprovedList = {
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                     <a class="dropdown-item" href="javascript:void(0);">
-                      <i class="bx bx-show me-2"></i> View Details
+                      <i class="bx bx-show mr-2"></i> View Details
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="javascript:void(0);">
-                      <i class="bx bx-download me-2"></i> Download PDF
+                      <i class="bx bx-download mr-2"></i> Download PDF
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="javascript:void(0);">
-                      <i class="bx bx-send me-2"></i> Send Email
+                      <i class="bx bx-send mr-2"></i> Send Email
                     </a>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item text-danger" href="javascript:void(0);">
-                      <i class="bx bx-trash me-2"></i> Delete
+                      <i class="bx bx-trash mr-2"></i> Delete
                     </a>
                   </li>
                 </ul>
@@ -914,7 +914,7 @@ export const BeforeAfterComparison = {
                 <td>
                   <!-- ❌ REDUNDÂNCIA: Ícone + Badge -->
                   <i class="bx bx-trending-up text-success"></i>
-                  <span class="badge bg-label-success ms-1">Paid</span>
+                  <span class="badge bg-label-success ml-1">Paid</span>
                 </td>
                 <td>
                   <!-- ❌ REDUNDÂNCIA: 3 botões quando um menu seria suficiente -->
@@ -938,7 +938,7 @@ export const BeforeAfterComparison = {
                 </td>
                 <td>
                   <i class="bx bx-trending-up text-success"></i>
-                  <span class="badge bg-label-success ms-1">Paid</span>
+                  <span class="badge bg-label-success ml-1">Paid</span>
                 </td>
                 <td>
                   <button class="btn btn-sm btn-icon btn-label-secondary">
@@ -1005,10 +1005,10 @@ export const BeforeAfterComparison = {
                       <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#"><i class="bx bx-show me-2"></i> View</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="bx bx-download me-2"></i> Download</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bx bx-show mr-2"></i> View</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bx bx-download mr-2"></i> Download</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-danger" href="#"><i class="bx bx-trash me-2"></i> Delete</a></li>
+                      <li><a class="dropdown-item text-danger" href="#"><i class="bx bx-trash mr-2"></i> Delete</a></li>
                     </ul>
                   </div>
                 </td>
@@ -1031,10 +1031,10 @@ export const BeforeAfterComparison = {
                       <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#"><i class="bx bx-show me-2"></i> View</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="bx bx-download me-2"></i> Download</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bx bx-show mr-2"></i> View</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bx bx-download mr-2"></i> Download</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item text-danger" href="#"><i class="bx bx-trash me-2"></i> Delete</a></li>
+                      <li><a class="dropdown-item text-danger" href="#"><i class="bx bx-trash mr-2"></i> Delete</a></li>
                     </ul>
                   </div>
                 </td>
@@ -1098,7 +1098,7 @@ export const ActionableMetrics = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Total Invoices</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">120</h3>
+                <h3 class="mb-0 mr-2">120</h3>
                 <small class="text-muted">(+12 this month)</small>
               </div>
               <!-- CTA Contextual -->
@@ -1124,7 +1124,7 @@ export const ActionableMetrics = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Pending Invoices</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">24</h3>
+                <h3 class="mb-0 mr-2">24</h3>
                 <small class="text-warning">(Needs approval)</small>
               </div>
               <!-- CTA Contextual -->
@@ -1150,7 +1150,7 @@ export const ActionableMetrics = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Overdue Invoices</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">10</h3>
+                <h3 class="mb-0 mr-2">10</h3>
                 <small class="text-danger">(Action required)</small>
               </div>
               <!-- CTA Contextual -->
@@ -1176,7 +1176,7 @@ export const ActionableMetrics = {
             <div class="content-left">
               <span class="text-muted d-block mb-1">Paid Invoices</span>
               <div class="d-flex align-items-center my-1">
-                <h3 class="mb-0 me-2">86</h3>
+                <h3 class="mb-0 mr-2">86</h3>
                 <small class="text-success">(71.6% success rate)</small>
               </div>
               <!-- CTA Contextual -->

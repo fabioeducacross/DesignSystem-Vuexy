@@ -367,7 +367,7 @@ export const Overview = () => {
   </div>
   
   <div class="alert alert-info mt-5">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>State-Controlled Carousel:</strong> This carousel uses onclick handlers and classes toggle (no Bootstrap JS). All navigation is controlled via JavaScript state management.
   </div>
 `;
@@ -441,10 +441,10 @@ export const Interactive = {
               </div>
               
               <!-- Controls -->
-              <button class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-2" onclick="prevSlide()" style="z-index: 10;">
+              <button class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ml-2" onclick="prevSlide()" style="z-index: 10;">
                 <i class="ri-arrow-left-s-line"></i>
               </button>
-              <button class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-2" onclick="nextSlide()" style="z-index: 10;">
+              <button class="btn btn-dark position-absolute top-50 end-0 translate-middle-y mr-2" onclick="nextSlide()" style="z-index: 10;">
                 <i class="ri-arrow-right-s-line"></i>
               </button>
               

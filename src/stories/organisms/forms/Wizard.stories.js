@@ -118,7 +118,7 @@ const createWizard = ({ currentStep = 1 }) => {
                 <div class="d-flex align-items-center border rounded p-3">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" 
                        alt="Product" 
-                       class="me-3"
+                       class="mr-3"
                        style="width: 80px; height: 80px; object-fit: cover;">
                   <div class="flex-grow-1">
                     <h6 class="mb-1">Wireless Headphones</h6>
@@ -129,7 +129,7 @@ const createWizard = ({ currentStep = 1 }) => {
                         <input type="text" class="form-control text-center" value="1" readonly>
                         <button class="btn btn-outline-secondary" type="button">+</button>
                       </div>
-                      <button class="btn btn-sm btn-label-danger ms-3">
+                      <button class="btn btn-sm btn-label-danger ml-3">
                         <i class="bx bx-trash"></i>
                       </button>
                     </div>
@@ -144,7 +144,7 @@ const createWizard = ({ currentStep = 1 }) => {
                 <div class="d-flex align-items-center border rounded p-3">
                   <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f5f5f9'/%3E%3Cpath d='M40,33 L60,33 L60,53 L53,67 L47,67 L40,53 Z' fill='%23dbdade'/%3E%3Ccircle cx='50' cy='40' r='5' fill='%23696cff'/%3E%3C/svg%3E" 
                        alt="Product" 
-                       class="me-3"
+                       class="mr-3"
                        style="width: 80px; height: 80px; object-fit: cover;">
                   <div class="flex-grow-1">
                     <h6 class="mb-1">Smart Watch</h6>
@@ -155,7 +155,7 @@ const createWizard = ({ currentStep = 1 }) => {
                         <input type="text" class="form-control text-center" value="2" readonly>
                         <button class="btn btn-outline-secondary" type="button">+</button>
                       </div>
-                      <button class="btn btn-sm btn-label-danger ms-3">
+                      <button class="btn btn-sm btn-label-danger ml-3">
                         <i class="bx bx-trash"></i>
                       </button>
                     </div>
@@ -214,7 +214,7 @@ const createWizard = ({ currentStep = 1 }) => {
               </div>
               <div class="col-md-3">
                 <label class="form-label">State</label>
-                <select class="form-select">
+                <select class="custom-select">
                   <option>CA</option>
                   <option>NY</option>
                   <option>TX</option>
@@ -316,7 +316,7 @@ const createWizard = ({ currentStep = 1 }) => {
                   <div class="card-body">
                     <h6 class="mb-3">Payment Method</h6>
                     <div class="d-flex align-items-center">
-                      <i class="bx bx-credit-card me-2" style="font-size: 24px;"></i>
+                      <i class="bx bx-credit-card mr-2" style="font-size: 24px;"></i>
                       <div>
                         <p class="mb-0">Credit Card</p>
                         <p class="mb-0 text-muted">**** **** **** 3456</p>
@@ -365,11 +365,11 @@ const createWizard = ({ currentStep = 1 }) => {
           <!-- Navigation Buttons -->
           <div class="d-flex justify-content-between mt-4">
             <button class="btn btn-label-secondary" ${currentStep === 1 ? 'disabled' : ''}>
-              <i class="bx bx-chevron-left me-1"></i> Previous
+              <i class="bx bx-chevron-left mr-1"></i> Previous
             </button>
             ${currentStep < 4 
-              ? '<button class="btn btn-primary">Next <i class="bx bx-chevron-right ms-1"></i></button>'
-              : '<button class="btn btn-success"><i class="bx bx-check me-1"></i> Place Order</button>'
+              ? '<button class="btn btn-primary">Next <i class="bx bx-chevron-right ml-1"></i></button>'
+              : '<button class="btn btn-success"><i class="bx bx-check mr-1"></i> Place Order</button>'
             }
           </div>
         </div>
@@ -570,7 +570,7 @@ export const Interactive = () => {
         <div class="bs-stepper-header mb-4">
           <div id="step-indicator-1" class="step active d-flex align-items-center">
             <button class="btn btn-sm btn-primary rounded-circle" style="width: 40px; height: 40px;">1</button>
-            <div class="ms-2">
+            <div class="ml-2">
               <strong>Cart</strong>
               <small class="d-block text-muted">Review items</small>
             </div>
@@ -578,7 +578,7 @@ export const Interactive = () => {
           <div class="mx-3">—</div>
           <div id="step-indicator-2" class="step d-flex align-items-center">
             <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">2</button>
-            <div class="ms-2">
+            <div class="ml-2">
               <strong>Address</strong>
               <small class="d-block text-muted">Delivery</small>
             </div>
@@ -586,7 +586,7 @@ export const Interactive = () => {
           <div class="mx-3">—</div>
           <div id="step-indicator-3" class="step d-flex align-items-center">
             <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">3</button>
-            <div class="ms-2">
+            <div class="ml-2">
               <strong>Payment</strong>
               <small class="d-block text-muted">Method</small>
             </div>
@@ -594,7 +594,7 @@ export const Interactive = () => {
           <div class="mx-3">—</div>
           <div id="step-indicator-4" class="step d-flex align-items-center">
             <button class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 40px; height: 40px;">4</button>
-            <div class="ms-2">
+            <div class="ml-2">
               <strong>Review</strong>
               <small class="d-block text-muted">Confirm</small>
             </div>

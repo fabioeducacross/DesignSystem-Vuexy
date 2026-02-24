@@ -48,7 +48,7 @@ export const Default = {
         <div class="modal-content">
           <div class="modal-header bg-${args.variant} bg-opacity-10">
             <h5 class="modal-title text-${args.variant}">
-              <i class="bi bi-exclamation-triangle me-2"></i>
+              <i class="bi bi-exclamation-triangle mr-2"></i>
               Cancelar Missão
             </h5>
             <button type="button" class="btn-close"></button>
@@ -140,7 +140,7 @@ export const WithMissionInfo = {
         <div class="modal-content">
           <div class="modal-header bg-${args.variant} bg-opacity-10">
             <h5 class="modal-title text-${args.variant}">
-              <i class="bi bi-exclamation-triangle me-2"></i>
+              <i class="bi bi-exclamation-triangle mr-2"></i>
               Cancelar Missão
             </h5>
             <button type="button" class="btn-close"></button>
@@ -150,9 +150,9 @@ export const WithMissionInfo = {
               <div class="card-body p-3">
                 <h6 class="card-title mb-2">Missão: Leitura Dinâmica</h6>
                 <div class="small text-muted">
-                  <div class="mb-1"><i class="bi bi-book me-1"></i> 5 exercícios pendentes</div>
-                  <div class="mb-1"><i class="bi bi-clock me-1"></i> Prazo: 15/02/2026</div>
-                  <div><i class="bi bi-award me-1"></i> 250 pontos possíveis</div>
+                  <div class="mb-1"><i class="bi bi-book mr-1"></i> 5 exercícios pendentes</div>
+                  <div class="mb-1"><i class="bi bi-clock mr-1"></i> Prazo: 15/02/2026</div>
+                  <div><i class="bi bi-award mr-1"></i> 250 pontos possíveis</div>
                 </div>
               </div>
             </div>

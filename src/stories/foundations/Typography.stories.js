@@ -667,11 +667,11 @@ export const FontWeights = {
           <div style="display: flex; flex-direction: column; gap: 0.75rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #F8F6EF; border-radius: 8px;">
               <span style="font-weight: 300;">Light text example</span>
-              <code style="font-size: 0.75rem; color: #0C5257;">.fw-light</code>
+              <code style="font-size: 0.75rem; color: #0C5257;">.font-weight-light</code>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #F8F6EF; border-radius: 8px;">
               <span style="font-weight: 400;">Normal text example</span>
-              <code style="font-size: 0.75rem; color: #0C5257;">.fw-normal</code>
+              <code style="font-size: 0.75rem; color: #0C5257;">.font-weight-normal</code>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #F8F6EF; border-radius: 8px;">
               <span style="font-weight: 500;">Medium text example</span>
@@ -683,7 +683,7 @@ export const FontWeights = {
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #F8F6EF; border-radius: 8px;">
               <span style="font-weight: 700;">Bold text example</span>
-              <code style="font-size: 0.75rem; color: #0C5257;">.fw-bold</code>
+              <code style="font-size: 0.75rem; color: #0C5257;">.font-weight-bold</code>
             </div>
           </div>
         </div>
@@ -970,7 +970,7 @@ export const Interactive = {
                   Tamanho Base
                 </label>
                 <select 
-                  class="form-select" 
+                  class="custom-select" 
                   onchange="document.getElementById('demoContent-${containerId}').style.fontSize = this.value;"
                   style="border-color: #E0DDD4;"
                 >
@@ -986,7 +986,7 @@ export const Interactive = {
                   Peso da Fonte
                 </label>
                 <select 
-                  class="form-select" 
+                  class="custom-select" 
                   onchange="document.getElementById('demoContent-${containerId}').style.fontWeight = this.value;"
                   style="border-color: #E0DDD4;"
                 >
@@ -1003,7 +1003,7 @@ export const Interactive = {
                   Line Height
                 </label>
                 <select 
-                  class="form-select" 
+                  class="custom-select" 
                   onchange="document.getElementById('demoContent-${containerId}').style.lineHeight = this.value;"
                   style="border-color: #E0DDD4;"
                 >

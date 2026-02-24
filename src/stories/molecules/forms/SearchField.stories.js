@@ -305,7 +305,7 @@ export const InNavbar = {
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Logo</a>
-          <div class="d-flex ms-auto" style="width: 300px;">
+          <div class="d-flex ml-auto" style="width: 300px;">
             ${createSearchField({ 
               placeholder: 'Search in navbar...', 
               size: 'sm',

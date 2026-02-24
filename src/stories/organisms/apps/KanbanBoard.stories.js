@@ -310,7 +310,7 @@ const createKanbanBoard = ({ columns = 4 }) => {
         
         <!-- Add New Card Button -->
         <button class="btn btn-outline-secondary w-100 mt-3">
-          <i class="bx bx-plus me-1"></i> Add Task
+          <i class="bx bx-plus mr-1"></i> Add Task
         </button>
       </div>
     </div>

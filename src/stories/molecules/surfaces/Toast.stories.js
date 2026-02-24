@@ -70,14 +70,14 @@ Notificação flutuante temporária do Vuexy para feedback instantâneo de açõ
 const createToast = ({ variant = 'success', title = 'Notification', message = '', icon = '', show = true }) => {
   const variantClass = `bg-${variant} text-white`;
   const showClass = show ? 'show' : '';
-  const iconHtml = icon ? `<i class="${icon} me-2"></i>` : '';
+  const iconHtml = icon ? `<i class="${icon} mr-2"></i>` : '';
 
   return `<div class="toast ${showClass}" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header ${variantClass}">
     ${iconHtml}
-    <strong class="me-auto">${title}</strong>
+    <strong class="mr-auto">${title}</strong>
     <small class="text-white-50">just now</small>
-    <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white ml-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
   </div>
   <div class="toast-body">
     ${message}
@@ -149,7 +149,7 @@ export const Interactive = () => {
   const markup = `
     <div id="${containerId}">
       <div class="alert alert-info mb-3" style="max-width: 600px;">
-        <i class="bx bx-info-circle me-2"></i>
+        <i class="bx bx-info-circle mr-2"></i>
         <strong>Interactive Demo:</strong> Click buttons to show toasts in different positions.
       </div>
       
@@ -161,23 +161,23 @@ export const Interactive = () => {
             <h6>Trigger Toasts</h6>
             <div class="d-flex flex-wrap gap-2">
               <button class="btn btn-success btn-sm" data-toast="success">
-                <i class="bx bx-check me-1"></i> Success
+                <i class="bx bx-check mr-1"></i> Success
               </button>
               <button class="btn btn-danger btn-sm" data-toast="error">
-                <i class="bx bx-x me-1"></i> Error
+                <i class="bx bx-x mr-1"></i> Error
               </button>
               <button class="btn btn-warning btn-sm" data-toast="warning">
-                <i class="bx bx-error me-1"></i> Warning
+                <i class="bx bx-error mr-1"></i> Warning
               </button>
               <button class="btn btn-info btn-sm" data-toast="info">
-                <i class="bx bx-info-circle me-1"></i> Info
+                <i class="bx bx-info-circle mr-1"></i> Info
               </button>
             </div>
           </div>
           
           <div class="mb-3">
             <h6>Position</h6>
-            <select class="form-select form-select-sm" id="position-${containerId}" style="max-width: 200px;">
+            <select class="custom-select custom-select-sm" id="position-${containerId}" style="max-width: 200px;">
               <option value="top-right">Top Right</option>
               <option value="top-left">Top Left</option>
               <option value="bottom-right">Bottom Right</option>
@@ -230,10 +230,10 @@ export const Interactive = () => {
       
       toast.innerHTML = `
         <div class="toast-header ${variantClass}">
-          <i class="${icon} me-2"></i>
-          <strong class="me-auto">${title}</strong>
+          <i class="${icon} mr-2"></i>
+          <strong class="mr-auto">${title}</strong>
           <small class="text-white-50">just now</small>
-          <button type="button" class="btn-close btn-close-white ms-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white ml-2" onclick="this.closest('.toast').style.opacity='0'; setTimeout(() => this.closest('.toast').remove(), 300)" aria-label="Close"></button>
         </div>
         <div class="toast-body ${variantClass}">
           ${message}

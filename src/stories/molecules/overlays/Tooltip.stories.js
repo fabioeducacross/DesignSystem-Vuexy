@@ -176,7 +176,7 @@ export const Overview = () => `
   </div>
   
   <div class="alert alert-info mt-5">
-    <i class="bx bx-info-circle me-2"></i>
+    <i class="bx bx-info-circle mr-2"></i>
     <strong>JavaScript Required:</strong> Tooltips require Bootstrap JavaScript and Popper.js. Initialize tooltips with:
     <pre class="mt-2 mb-0"><code>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));</code></pre>

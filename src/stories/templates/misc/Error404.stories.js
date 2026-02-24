@@ -99,7 +99,7 @@ const createError404Page = ({ withSearch = false }) => {
       
       <!-- Back to Home Button -->
       <a href="/" class="btn btn-primary mb-4">
-        <i class="bx bx-home-alt me-1"></i>
+        <i class="bx bx-home-alt mr-1"></i>
         Back to Home
       </a>
       
