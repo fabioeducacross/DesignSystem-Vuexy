@@ -472,8 +472,8 @@ function createInteractiveCollapse() {
             role="tab"
             aria-expanded="${isOpen}"
             aria-controls="${id}"
-            data-bs-toggle="collapse"
-            data-bs-target="#${id}"
+            data-toggle="collapse"
+            data-target="#${id}"
             tabindex="0"
           >
             <span class="collapse-title">${title}</span>
@@ -699,8 +699,8 @@ export const LeftIcon = {
             role="tab"
             aria-expanded="false"
             aria-controls="left-collapse"
-            data-bs-toggle="collapse"
-            data-bs-target="#left-collapse"
+            data-toggle="collapse"
+            data-target="#left-collapse"
             tabindex="0"
           >
             <span class="collapse-title">Ícone de seta à esquerda</span>
