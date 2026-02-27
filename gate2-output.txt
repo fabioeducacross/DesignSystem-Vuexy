@@ -1,0 +1,398 @@
+
+Running 4080 tests using 4 workers
+
+[1A[2K[1/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Aceitar Perfil
+[1A[2K[2/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Documentation
+[1A[2K[3/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Recusar Perfil
+[1A[2K[4/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Recusar Perfil (Loading)
+[1A[2K[5/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Aceitar Perfil (Termos Aceitos)
+[1A[2K[6/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Aceitar Perfil (Loading)
+[1A[2K[7/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - ­ƒÄ¿ Playground
+[1A[2K[8/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - Todos os Perfis
+[1A[2K[9/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - ­ƒÆ╝ Use Cases
+[1A[2K[10/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/AcceptOrRejectAccess - ÔÖ┐ Accessibility
+[1A[2K[11/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Default
+[1A[2K[12/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Placeholder
+[1A[2K[13/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Loading
+[1A[2K[14/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Error
+[1A[2K[15/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Fullscreen Mode
+[1A[2K[16/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - With Real Image
+[1A[2K[17/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Educational Content
+[1A[2K[18/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Responsive Sizes
+[1A[2K[19/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Audio Player Integration
+[1A[2K[20/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - Interactive
+[1A[2K[21/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - ­ƒôû Documentation
+[1A[2K[22/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - ­ƒÄ¿ Playground
+[1A[2K[23/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - ­ƒÆ╝ Use Cases
+[1A[2K[24/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Media/AlbumCover - ÔÖ┐ Accessibility
+[1A[2K[25/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - Default
+[1A[2K[26/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - Border
+[1A[2K[27/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - Shadow
+[1A[2K[28/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - Margin
+[1A[2K[29/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - Icon Left
+[1A[2K[30/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - ­ƒôû Documentation
+[1A[2K[31/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - With Custom Content
+[1A[2K[32/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - ­ƒÄ¿ Playground
+[1A[2K[33/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - ­ƒÆ╝ Use Cases
+[1A[2K[34/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapse - ÔÖ┐ Accessibility
+[1A[2K[35/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Closed (Default State)
+[1A[2K[36/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Opened (Expanded)
+[1A[2K[37/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - With Custom Icon
+[1A[2K[38/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Multiple Items (Accordion)
+[1A[2K[39/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - FAQ Pattern
+[1A[2K[40/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Skill Report Pattern
+[1A[2K[41/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Left Icon Position
+[1A[2K[42/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Responsive Behavior
+[1A[2K[43/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Loading Skeleton
+[1A[2K[44/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - Interactive Demo
+[1A[2K[45/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - ­ƒôû Documentation
+[1A[2K[46/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - ­ƒÄ¿ Playground
+[1A[2K[47/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - ­ƒÆ╝ Use Cases
+[1A[2K[48/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppCollapseItem - ÔÖ┐ Accessibility
+[1A[2K[49/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Default
+[1A[2K[50/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - In Navbar
+[1A[2K[51/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Opened
+[1A[2K[52/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - All Variants
+[1A[2K[53/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Configuracoes De Conta
+[1A[2K[54/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Interactive
+[1A[2K[55/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Keyboard Navigation
+[1A[2K[56/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ­ƒôû Documentation
+[1A[2K[57/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - Footer Integration
+[1A[2K[58/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ­ƒÄ¿ Playground
+[1A[2K[59/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ­ƒÆ╝ Use Cases
+[1A[2K[60/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ÔÖ┐ Accessibility
+[1A[2K[61/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - Default
+[1A[2K[62/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - With Sidebar Menu
+[1A[2K[63/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - Production Ready
+[1A[2K[64/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - ­ƒôû Documentation
+[1A[2K[65/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - ­ƒÄ¿ Playground
+[1A[2K[66/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - ­ƒÆ╝ Use Cases
+[1A[2K[67/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppNavbar - ÔÖ┐ Accessibility
+[1A[2K[68/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Default
+[1A[2K[69/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Sem Missoes
+[1A[2K[70/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Sem Alunos
+[1A[2K[71/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ­ƒÆ╝ Use Cases (retry #1)
+[1A[2K[72/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Sem Resultados
+[1A[2K[73/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Sem Atividades
+[1A[2K[74/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Compact Variant
+[1A[2K[75/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Pagina Nao Encontrada
+[1A[2K[76/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Default (retry #1)
+[1A[2K[77/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Erro Conexao
+[1A[2K[78/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - All Icons
+[1A[2K[79/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - ­ƒôû Documentation
+[1A[2K[80/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - ­ƒÄ¿ Playground
+[1A[2K  1) [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Navigation/AppLanguageSelector - ­ƒÆ╝ Use Cases 
+
+    TimeoutError: page.goto: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:6006/iframe.html?id=educacross-components-v2-navigation-applanguageselector--use-cases&viewMode=story", waiting until "networkidle"[22m
+
+
+      127 |  */
+      128 | async function goToStory(page, storyId) {
+    > 129 |   await page.goto(STORY_FRAME_URL(storyId), { 
+          |              ^
+      130 |     waitUntil: 'networkidle',
+      131 |     timeout: COMPONENT_LOAD_TIMEOUT 
+      132 |   });
+        at goToStory (C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:129:14)
+        at C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:176:13
+
+    Retry #1 ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    TimeoutError: page.goto: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:6006/iframe.html?id=educacross-components-v2-navigation-applanguageselector--use-cases&viewMode=story", waiting until "networkidle"[22m
+
+
+      127 |  */
+      128 | async function goToStory(page, storyId) {
+    > 129 |   await page.goto(STORY_FRAME_URL(storyId), { 
+          |              ^
+      130 |     waitUntil: 'networkidle',
+      131 |     timeout: COMPONENT_LOAD_TIMEOUT 
+      132 |   });
+        at goToStory (C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:129:14)
+        at C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:176:13
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\educacross-pixel-perfect-R-8b628-uageSelector---­ƒÆ╝-Use-Cases-chromium-retry1\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    attachment #2: video (video/webm) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\educacross-pixel-perfect-R-8b628-uageSelector---­ƒÆ╝-Use-Cases-chromium-retry1\video.webm
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\educacross-pixel-perfect-R-8b628-uageSelector---­ƒÆ╝-Use-Cases-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\educacross-pixel-perfect-R-8b628-uageSelector---­ƒÆ╝-Use-Cases-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\educacross-pixel-perfect-R-8b628-uageSelector---­ƒÆ╝-Use-Cases-chromium-retry1\trace.zip
+
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+
+[1A[2K[81/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - ÔÖ┐ Accessibility
+[1A[2K[82/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Default
+[1A[2K[83/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - ­ƒÆ╝ Use Cases
+[1A[2K[84/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Empty
+[1A[2K[85/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Loading
+[1A[2K[86/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - All Variants
+[1A[2K[87/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Compact
+[1A[2K[88/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Overflow
+[1A[2K  2) [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BackgroundSpace - Default 
+
+    TimeoutError: page.goto: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:6006/iframe.html?id=educacross-components-v2-feedback-backgroundspace--default&viewMode=story", waiting until "networkidle"[22m
+
+
+      127 |  */
+      128 | async function goToStory(page, storyId) {
+    > 129 |   await page.goto(STORY_FRAME_URL(storyId), { 
+          |              ^
+      130 |     waitUntil: 'networkidle',
+      131 |     timeout: COMPONENT_LOAD_TIMEOUT 
+      132 |   });
+        at goToStory (C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:129:14)
+        at C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:176:13
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\educacross-pixel-perfect-R-c44f1-k-BackgroundSpace---Default-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+
+[1A[2K[89/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Com Progresso
+[1A[2K[90/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Perfil Do Aluno
+[1A[2K[91/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Com Categorias
+[1A[2K[92/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Raridadesex
+[1A[2K[93/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - Bloqueadas
+[1A[2K[94/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - ­ƒôû Documentation
+[1A[2K[95/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - ­ƒÄ¿ Playground
+[1A[2K[96/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - ­ƒÆ╝ Use Cases
+[1A[2K[97/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/BadgeList - ÔÖ┐ Accessibility
+[1A[2K[98/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Default
+[1A[2K[99/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - All Levels
+[1A[2K[100/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Pill Vs Square
+[1A[2K[101/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Compact Mode
+[1A[2K[102/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - With Icon
+[1A[2K[103/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Professor Dashboard
+[1A[2K[104/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Coordinator Report
+[1A[2K[105/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Student View
+[1A[2K[106/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Responsive Demo
+[1A[2K[107/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Interactive Demo
+[1A[2K[108/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - Dark Mode Concept
+[1A[2K[109/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - ­ƒôû Documentation
+[1A[2K[110/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - ­ƒÄ¿ Playground
+[1A[2K[111/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - ­ƒÆ╝ Use Cases
+[1A[2K[112/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/BadgeStatus - ÔÖ┐ Accessibility
+[1A[2K[113/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Default
+[1A[2K[114/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Comparacao Turmas
+[1A[2K[115/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Evolucao Mensal
+[1A[2K[116/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Frequencia Por Dia
+[1A[2K[117/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Missoes Completas
+[1A[2K[118/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Horizontal Ranking
+[1A[2K[119/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Compacto
+[1A[2K[120/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - Vazio
+[1A[2K[121/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - ­ƒôû Documentation
+[1A[2K[122/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - ­ƒÆ╝ Use Cases
+[1A[2K[123/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - ­ƒÄ¿ Playground
+[1A[2K[124/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/BarChart - ÔÖ┐ Accessibility
+[1A[2K[125/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - Default
+[1A[2K[126/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - Loading
+[1A[2K[127/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - Disabled
+[1A[2K[128/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - Outline Variants
+[1A[2K[129/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - Sizes
+[1A[2K[130/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - With Icons
+[1A[2K[131/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - In Context
+[1A[2K[132/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - ­ƒôû Documentation
+[1A[2K[133/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - ­ƒÄ¿ Playground
+[1A[2K[134/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - ­ƒÆ╝ Use Cases
+[1A[2K[135/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ButtonWaitAction - ÔÖ┐ Accessibility
+[1A[2K[136/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Default
+[1A[2K[137/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Loading
+[1A[2K[138/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Cancelled State
+[1A[2K[139/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Compact
+[1A[2K[140/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - With Mission Info
+[1A[2K[141/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Overview
+[1A[2K[142/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - Overview A
+[1A[2K[143/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - ­ƒôû Documentation
+[1A[2K[144/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - ­ƒÄ¿ Playground
+[1A[2K[145/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - ­ƒÆ╝ Use Cases
+[1A[2K[146/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CancelMission - ÔÖ┐ Accessibility
+[1A[2K[147/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - Default
+[1A[2K[148/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - With Student Data
+[1A[2K[149/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - Print Ready
+[1A[2K[150/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - ­ƒôû Documentation
+[1A[2K[151/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - ­ƒÄ¿ Playground
+[1A[2K[152/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - ­ƒÆ╝ Use Cases
+[1A[2K[153/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/Card - ÔÖ┐ Accessibility
+[1A[2K[154/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Default
+[1A[2K[155/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Lista De Alunos
+[1A[2K[156/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Layout Lista
+[1A[2K[157/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Com Filtros
+[1A[2K[158/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Turmas Grid
+[1A[2K[159/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Recursos Educacionais
+[1A[2K[160/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Conquistas Aluno
+[1A[2K[161/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - Vazio
+[1A[2K[162/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - ­ƒôû Documentation
+[1A[2K[163/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - ­ƒÄ¿ Playground
+[1A[2K[164/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - ­ƒÆ╝ Use Cases
+[1A[2K[165/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CardsList - ÔÖ┐ Accessibility
+[1A[2K[166/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Default
+[1A[2K[167/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Reviewing
+[1A[2K[168/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Completed
+[1A[2K[169/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Pending
+[1A[2K[170/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Error
+[1A[2K[171/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - With Pace
+[1A[2K[172/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - In Table
+[1A[2K[173/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - Responsive
+[1A[2K[174/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - ­ƒôû Documentation
+[1A[2K[175/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - ­ƒÄ¿ Playground
+[1A[2K[176/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - ­ƒÆ╝ Use Cases
+[1A[2K[177/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Badges/CellStatus - ÔÖ┐ Accessibility
+[1A[2K[178/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Default
+[1A[2K[179/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Event
+[1A[2K[180/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - With Logos
+[1A[2K[181/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Completion
+[1A[2K[182/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Multiple Students
+[1A[2K[183/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Print Optimized
+[1A[2K[184/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Landscape
+[1A[2K[185/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - Interactive
+[1A[2K[186/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - ­ƒôû Documentation
+[1A[2K[187/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - ­ƒÄ¿ Playground
+[1A[2K[188/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - ­ƒÆ╝ Use Cases
+[1A[2K[189/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/PDF/Certificate - ÔÖ┐ Accessibility
+[1A[2K[190/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Default
+[1A[2K[191/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Por Aluno
+[1A[2K[192/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Por Evento
+[1A[2K[193/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Em Lote
+[1A[2K[194/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Com Modelos
+[1A[2K[195/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Historico
+[1A[2K[196/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Compacto
+[1A[2K[197/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - Vazio
+[1A[2K[198/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - ­ƒôû Documentation
+[1A[2K[199/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - ­ƒÄ¿ Playground
+[1A[2K[200/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - ­ƒÆ╝ Use Cases
+[1A[2K[201/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Lists/CertificateList - ÔÖ┐ Accessibility
+[1A[2K[202/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Default
+[1A[2K[203/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Com Justificativa
+[1A[2K[204/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Reportar Inconsistencia
+[1A[2K[205/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Selecionar Escala
+[1A[2K[206/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Historico Compacto
+[1A[2K[207/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Banner Inline
+[1A[2K[208/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Processo Em Andamento
+[1A[2K[209/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - Estado Vazio
+[1A[2K[210/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - ­ƒÆ╝ Use Cases
+[1A[2K[211/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - ­ƒôû Documentation
+[1A[2K[212/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - ­ƒÄ¿ Playground
+[1A[2K[213/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Proficiency/ChangeProficiency - ÔÖ┐ Accessibility
+[1A[2K[214/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Default
+[1A[2K[215/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Com Valor
+[1A[2K[216/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Sem Valor
+[1A[2K[217/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Perfil Do Aluno
+[1A[2K[218/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Relatorio Com Dados Pendentes
+[1A[2K[219/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Dashboard Com Metricas
+[1A[2K[220/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - ­ƒôû Documentation
+[1A[2K[221/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - ­ƒÄ¿ Playground
+[1A[2K[222/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - ­ƒÆ╝ Use Cases
+[1A[2K[223/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - ÔÖ┐ Accessibility
+[1A[2K[224/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Documentation
+[1A[2K[225/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Default
+[1A[2K[226/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - With Toast
+[1A[2K[227/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Guide Link
+[1A[2K[228/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Short Link
+[1A[2K[229/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - With QR Code
+[1A[2K[230/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Sem Valor (retry #1)
+[1A[2K[231/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Mobile View
+[1A[2K[232/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Multiple Links
+[1A[2K[233/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - Interactive
+[1A[2K[234/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - ­ƒÄ¿ Playground
+[1A[2K[235/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - ­ƒÆ╝ Use Cases
+[1A[2K[236/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/CopyLink - ÔÖ┐ Accessibility
+[1A[2K[237/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Default
+[1A[2K[238/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Frequencia Semanal
+[1A[2K[239/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Comparacao Trimestral
+[1A[2K[240/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Progresso Missoes
+[1A[2K[241/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Engajamento Aluno
+[1A[2K[242/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Com Filtros
+[1A[2K  3) [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Feedback/ConditionalValueDisplay - Sem Valor 
+
+    TimeoutError: page.goto: Timeout 10000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:6006/iframe.html?id=educacross-components-v2-feedback-conditionalvaluedisplay--sem-valor&viewMode=story", waiting until "networkidle"[22m
+
+
+      127 |  */
+      128 | async function goToStory(page, storyId) {
+    > 129 |   await page.goto(STORY_FRAME_URL(storyId), { 
+          |              ^
+      130 |     waitUntil: 'networkidle',
+      131 |     timeout: COMPONENT_LOAD_TIMEOUT 
+      132 |   });
+        at goToStory (C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:129:14)
+        at C:\Users\Educacross\Documents\Educacross\DesignSystem-Vuexy\tests\educacross-pixel-perfect.spec.js:176:13
+
+
+[1A[2K[243/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Multiple Lines
+[1A[2K[244/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - Compacto
+[1A[2K[245/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - ­ƒôû Documentation
+[1A[2K[246/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - ­ƒÄ¿ Playground
+[1A[2K[247/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - ­ƒÆ╝ Use Cases
+[1A[2K[248/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Charts/DefaultChart - ÔÖ┐ Accessibility
+[1A[2K[249/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/DeleteGuide - Default
+[1A[2K[250/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/DeleteGuide - Loading
+[1A[2K[251/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/DeleteGuide - Overview
+[1A[2K[252/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Modals/DeleteGuide - ­ƒôû Documentation
+[1A[2K[253/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Default
+[1A[2K[254/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - With Label
+[1A[2K[255/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - All Variants
+[1A[2K[256/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Clickable
+[1A[2K[257/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Multiple Descriptors
+[1A[2K[258/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Cabecalho Avaliacao
+[1A[2K[259/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Relatorio Cobertura
+[1A[2K[260/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - Small Size
+[1A[2K[261/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - All Subjects
+[1A[2K[262/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - ­ƒôû Documentation
+[1A[2K[263/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - ­ƒÄ¿ Playground
+[1A[2K[264/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - ­ƒÆ╝ Use Cases
+[1A[2K[265/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - Default
+[1A[2K[266/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Data Display/DescriptorTag - ÔÖ┐ Accessibility
+[1A[2K[267/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - Color Variants
+[1A[2K[268/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - With Text
+[1A[2K[269/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - Dashed And Dotted
+[1A[2K[270/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - Vertical Divider
+[1A[2K[271/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - Vertical Variants
+[1A[2K[272/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - In Context
+[1A[2K[273/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - ­ƒôû Documentation
+[1A[2K[274/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - ­ƒÄ¿ Playground
+[1A[2K[275/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - ­ƒÆ╝ Use Cases
+[1A[2K[276/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Layout/Divider - ÔÖ┐ Accessibility
+[1A[2K[277/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Number Animation
+[1A[2K[278/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Default
+[1A[2K[279/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Percentage Animation
+[1A[2K[280/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Currency Animation
+[1A[2K[281/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Decrease Animation
+[1A[2K[282/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Dashboard Real Time
+[1A[2K[283/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Comparacao Mensal
+[1A[2K[284/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Loading State
+[1A[2K[285/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - All Formats
+[1A[2K[286/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - Interactive
+[1A[2K[287/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - ­ƒôû Documentation
+[1A[2K[288/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - ­ƒÄ¿ Playground
+[1A[2K[289/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - ­ƒÆ╝ Use Cases
+[1A[2K[290/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Cards/DynamicMediaCard - ÔÖ┐ Accessibility
+[1A[2K[291/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EFormCheck - ­ƒôû Documentation
+[1A[2K[292/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EFormCheck - ­ƒÄ¿ Playground
+[1A[2K[293/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EFormCheck - ­ƒÆ╝ Use Cases
+[1A[2K[294/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EFormCheck - ÔÖ┐ Accessibility
+[1A[2K[295/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EInput - ­ƒôû Documentation
+[1A[2K[296/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EInput - ­ƒÄ¿ Playground
+[1A[2K[297/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EInput - ­ƒÄ¡ Use Cases
+[1A[2K[298/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms / EInput - ÔÖ┐ Accessibility
+[1A[2K[299/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ESelect - Default
+[1A[2K[300/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ESelect - Multiple Selection
+[1A[2K[301/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ESelect - With Search
+[1A[2K[302/4080] [chromium] ÔÇ║ tests\educacross-pixel-perfect.spec.js:175:9 ÔÇ║ Renderiza├º├úo - Educacross V2 ÔÇ║ Educacross Components V2/Forms/ESelect - Loading State

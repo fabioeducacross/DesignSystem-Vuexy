@@ -1,0 +1,11 @@
+{
+  "passed": 2642,
+  "failed": 0,
+  "timedOut": 0,
+  "skipped": 1438,
+  "flaky": 0,
+  "total": 4080,
+  "duration": 3952.916,
+  "failures": [],
+  "exitCode": "passed"
+}
