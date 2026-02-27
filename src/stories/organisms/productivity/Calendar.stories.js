@@ -391,7 +391,7 @@ const createCalendar = ({ view = 'month', withSidebar = true }) => {
 
 const Template = (args) => {
   const markup = createCalendar(args);
-  
+
   return `
     ${markup}
     
@@ -522,7 +522,7 @@ Implementação oficial usando FullCalendar do Vuexy:
         await loadScript('/vuexy/vendors/libs/@form-validation/bootstrap5.js', () => window.FormValidation?.plugins?.Bootstrap5);
         await loadScript('/vuexy/vendors/libs/@form-validation/auto-focus.js', () => window.FormValidation?.plugins?.AutoFocus);
         await loadScript('/vuexy/js/bootstrap.js', () => window.bootstrap);
-        await loadScript('/vuexy/vendors/libs/fullcalendar/fullcalendar.js', () => window.FullCalendar);
+        await loadScript('/vuexy/vendors/libs/fullcalendar/fullcalendar.js', () => window.Calendar);
 
         return { fullcalendarLoaded: true };
       }
@@ -531,7 +531,7 @@ Implementação oficial usando FullCalendar do Vuexy:
   ],
   render: () => {
     setTimeout(() => {
-      if (!window.FullCalendar || !window.flatpickr || !window.jQuery) return;
+      if (!window.Calendar || !window.flatpickr || !window.jQuery) return;
 
       const calendarEl = document.getElementById('fullcalendar-interactive');
       const inlineCalendarEl = document.getElementById('inline-calendar');
@@ -638,7 +638,13 @@ Implementação oficial usando FullCalendar do Vuexy:
         success(filtered);
       };
 
-      const calendar = new window.FullCalendar.Calendar(calendarEl, {
+      const calendar = new window.Calendar(calendarEl, {
+        plugins: [
+          window.dayGridPlugin,
+          window.timegridPlugin,
+          window.interactionPlugin,
+          window.listPlugin
+        ].filter(Boolean),
         initialView: 'dayGridMonth',
         initialDate: '2026-02-11',
         locale: 'pt-br',
@@ -686,6 +692,7 @@ Implementação oficial usando FullCalendar do Vuexy:
           if (offcanvas) offcanvas.show();
         },
         eventClick: (info) => {
+          info.jsEvent.preventDefault(); // evita navegação quando evento tem url (mesmo href=undefined)
           const ev = info.event;
           editingId = ev.id;
           deleteBtn.classList.remove('d-none');
@@ -760,7 +767,7 @@ Implementação oficial usando FullCalendar do Vuexy:
           start: startDate,
           end: endDate || startDate,
           allDay: allDaySwitch.checked,
-          url: document.getElementById('eventURL').value || undefined,
+          url: document.getElementById('eventURL').value || '', // string vazia evita href='undefined' no FullCalendar
           extendedProps: {
             calendar: labelSelect.val(),
             guests: guestsSelect.val() || [],

@@ -3,7 +3,7 @@
 // Load Vuexy CSS - Real template assets integrated!
 if (typeof window !== 'undefined') {
   const cssFiles = [
-    '/vuexy/css/core.css',
+    '/vuexy/css/educacross-production.css',
     '/vuexy/fonts/bootstrap-icons.css',
     '/vuexy/fonts/iconify-icons.css', // Tabler Icons + outros ícones
     // Add more CSS files as needed for specific components
@@ -99,33 +99,33 @@ const preview = {
   decorators: [
     (Story, context) => {
       const wrapper = document.createElement('div');
-      
+
       // Não aplicar decorator em páginas/templates completos ou stories de documentação
-      const isFullPage = context.title.includes('Templates') || 
-                         context.title.includes('Pages') ||
-                         context.name === 'Interactive' ||
-                         context.name === 'Documentation' ||
-                         context.viewMode === 'docs';
-      
+      const isFullPage = context.title.includes('Templates') ||
+        context.title.includes('Pages') ||
+        context.name === 'Interactive' ||
+        context.name === 'Documentation' ||
+        context.viewMode === 'docs';
+
       if (isFullPage) {
         // Para páginas completas, retorna sem wrapper
         const story = Story();
         if (typeof story === 'string') {
           const container = document.createElement('div');
           container.innerHTML = story;
-          
+
           // Detecta se é uma doc-page para aplicar classe no body
           if (container.querySelector('.doc-page')) {
             setTimeout(() => {
               document.body?.classList.add('sb-doc-page-active');
             }, 0);
           }
-          
+
           return container;
         }
         return story;
       }
-      
+
       // Para componentes, adiciona container estilizado
       wrapper.style.cssText = `
         min-height: 400px;
@@ -137,7 +137,7 @@ const preview = {
         border-radius: 8px;
       `;
       wrapper.className = 'storybook-component-wrapper';
-      
+
       // Container interno para o componente
       const innerContainer = document.createElement('div');
       innerContainer.style.cssText = `
@@ -148,14 +148,14 @@ const preview = {
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       `;
-      
+
       const story = Story();
       if (typeof story === 'string') {
         innerContainer.innerHTML = story;
       } else {
         innerContainer.appendChild(story);
       }
-      
+
       wrapper.appendChild(innerContainer);
       return wrapper;
     },

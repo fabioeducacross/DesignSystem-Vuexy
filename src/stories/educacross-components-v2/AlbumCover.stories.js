@@ -510,7 +510,9 @@ export const FullscreenMode = {
 export const WithRealImage = {
   args: {
     isFullscreen: false,
-    imageSrc: 'https://picsum.photos/600/600?random=music',
+    // Imagem local estática para testes pixel-perfect determinísticos
+    // (substituída de https://picsum.photos que é não-determinística)
+    imageSrc: `data:image/svg+xml,${encodeURIComponent('<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="600" fill="#7367f0"/><circle cx="300" cy="240" r="120" fill="#928feb"/><rect x="260" y="350" width="80" height="160" rx="10" fill="#928feb"/><circle cx="300" cy="300" r="60" fill="#5e50ee"/><text x="300" y="490" text-anchor="middle" fill="white" font-size="32" font-family="sans-serif">♪ Música</text></svg>')}`,
     state: 'default'
   },
   render: (args) => `
@@ -520,7 +522,6 @@ export const WithRealImage = {
         src="${args.imageSrc}" 
         alt="Album cover with real image" 
         class="album-cover-image"
-        loading="lazy"
       />
     </div>
   `
@@ -743,15 +744,15 @@ export const AudioPlayerIntegration = {
 export const Interactive = {
   render: () => {
     let isFullscreen = false;
-    
+
     setTimeout(() => {
       const coverContainer = document.getElementById('interactive-cover');
       const toggleBtn = document.getElementById('toggle-fullscreen-btn');
-      
+
       if (coverContainer && toggleBtn) {
         toggleBtn.addEventListener('click', () => {
           isFullscreen = !isFullscreen;
-          
+
           if (isFullscreen) {
             coverContainer.className = 'fullscreen-image-container';
             coverContainer.querySelector('img').className = 'fullscreen-image';
@@ -763,7 +764,7 @@ export const Interactive = {
             toggleBtn.textContent = '⛶ Abrir Fullscreen';
           }
         });
-        
+
         // ESC key to close fullscreen
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && isFullscreen) {
@@ -776,7 +777,7 @@ export const Interactive = {
         });
       }
     }, 100);
-    
+
     return `
       <style>
         ${componentStyles}

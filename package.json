@@ -4,6 +4,7 @@
   "description": "Design System based on Vuexy theme with Storybook",
   "main": "index.js",
   "scripts": {
+    "extract-css": "node scripts/extract-production-css.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "serve-storybook": "http-server storybook-static -p 6006",
