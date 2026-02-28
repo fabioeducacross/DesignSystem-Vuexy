@@ -3,9 +3,7 @@ import {
   createExampleCard, 
   createPropsTable, 
   createUsageSection 
- * @category Doc-Only
 } from '../_helpers/docTemplate.js';
- * @note Lógica específica de página. Não componentizado no Vue.
 
 export default {
   title: 'Educacross Components V2/Modals/AcceptOrRejectAccess',

@@ -399,11 +399,11 @@ export const Interactive = {
                onmouseout="this.style.borderColor=''; this.style.backgroundColor='';"
                onclick="
                  navigator.clipboard.writeText('${iconName}');
-                 const toast = document.createElement('div');
-                 toast.innerHTML = '${feather.icons.check.toSvg({ width: 16, height: 16 })} Copiado: <strong>${iconName}</strong>';
-                 toast.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 12px 24px; border-radius: 4px; z-index: 9999; display: flex; align-items: center; gap: 8px;';
-                 document.body.appendChild(toast);
-                 setTimeout(() => toast.remove(), 2000);
+                 var t = document.createElement('div');
+                 t.textContent = 'Copiado: ${iconName}';
+                 t.style.cssText = 'position:fixed;top:20px;right:20px;background:#28a745;color:white;padding:12px 24px;border-radius:4px;z-index:9999;';
+                 document.body.appendChild(t);
+                 setTimeout(function(){ t.remove(); }, 2000);
                ">
             ${svg}
             <small class="text-muted text-center mt-1" style="font-size: 9px; word-break: break-all;">${iconName}</small>

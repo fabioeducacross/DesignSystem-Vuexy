@@ -3,9 +3,11 @@
  * 
  * Source: packages/vuexy_theme/public/vuexy/css/core.css (.form-text)
  * Priority: P1 (Important)
- * Status: ✅ DONE
+ * Status: ⚠️ PADRÃO BOOTSTRAP — sem componente Vue dedicado
  * 
  * Texto auxiliar para explicar campos de formulário.
+ * NÃO existe um componente HelpText.vue na produção — é uso direto da
+ * classe Bootstrap .form-text incluída no core.css do Vuexy.
  */
 
 import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
@@ -19,7 +21,16 @@ export default {
         component: `
 # Help Text
 
+> ⚠️ **Não é um componente dedicado.** Este padrão usa diretamente a classe Bootstrap \`.form-text\` disponível no \`core.css\` do Vuexy. Não há um \`HelpText.vue\` para importar — o markup deve ser escrito manualmente.
+
 Texto auxiliar para fornecer contexto adicional em campos de formulário.
+
+## Como usar
+
+\`\`\`html
+<input type="text" class="form-control" id="email" aria-describedby="emailHelp">
+<div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail.</div>
+\`\`\`
 
 ## Quando usar
 - Explicar formato esperado (ex: "Use formato DD/MM/YYYY")
@@ -28,13 +39,12 @@ Texto auxiliar para fornecer contexto adicional em campos de formulário.
 - Exibir contador de caracteres
 
 ## Características
-- Classe Bootstrap: \`.form-text\`
-- Cor suave (muted)
-- Fonte menor que o campo
+- Classe Bootstrap: \`.form-text\` (nativa do \`core.css\`)
+- Cor suave (muted), fonte menor que o campo
 - Associado via \`aria-describedby\`
 
 ## Acessibilidade
-- Vinculado ao input via ID
+- Vinculado ao input via ID + \`aria-describedby\`
 - Anunciado por screen readers
 - Não substitui o label obrigatório
         `

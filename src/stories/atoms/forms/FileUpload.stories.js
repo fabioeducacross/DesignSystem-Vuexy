@@ -1,14 +1,47 @@
 /**
  * FileUpload - Atom (Forms)
  * 
- * Source: packages/vuexy_theme/public/vuexy/css/core.css (.form-control)
+ * Source: packages/vuexy_theme/public/vuexy/js/forms-file-upload.js
+ * Library: Dropzone.js (produção)
  * Priority: P1 (Important)
  * Status: ✅ DONE
- * 
- * Input de upload de arquivos.
  */
 
-import { formatHtmlSnippet, formatReactSnippet, formatVue2Snippet, formatVue3Snippet } from '../../_helpers/snippets';
+// previewTemplate idêntico ao usado em produção (forms-file-upload.js)
+const previewTemplate = `<div class="dz-preview dz-file-preview">
+  <div class="dz-details">
+    <div class="dz-thumbnail">
+      <img data-dz-thumbnail>
+      <span class="dz-nopreview">No preview</span>
+      <div class="dz-success-mark"></div>
+      <div class="dz-error-mark"></div>
+      <div class="dz-error-message"><span data-dz-errormessage></span></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+      </div>
+    </div>
+    <div class="dz-filename" data-dz-name></div>
+    <div class="dz-size" data-dz-size></div>
+  </div>
+</div>`;
+
+// Inicializa Dropzone num elemento pelo ID (aguarda Dropzone estar disponível)
+function initDropzone(id, options = {}) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  // Evita dupla inicialização
+  if (el.dropzone) { el.dropzone.destroy(); }
+  // Dropzone desabilita submit automático — aqui usamos url fictícia para demo
+  new window.Dropzone(el, {
+    url: '/upload',
+    previewTemplate,
+    parallelUploads: options.parallelUploads ?? 1,
+    maxFilesize: options.maxFilesize ?? 5,
+    addRemoveLinks: options.addRemoveLinks ?? true,
+    maxFiles: options.maxFiles ?? null,
+    autoProcessQueue: false, // não tenta fazer upload real no demo
+  });
+}
 
 export default {
   title: 'Vuexy/Atoms/Forms/FileUpload',
@@ -17,272 +50,210 @@ export default {
     docs: {
       description: {
         component: `
-# File Upload
+# File Upload — Dropzone.js
 
-Input para seleção e upload de arquivos.
+Upload de arquivos usando **Dropzone.js**, exatamente como implementado na produção (\`forms-file-upload.js\`).
 
-## Quando usar
-- Upload de documentos
-- Upload de imagens/avatares
-- Anexos de formulários
-- Importação de dados
+## Implementação em produção
 
-## Características
-- Classe Bootstrap: \`.form-control\`
-- Atributos: accept, multiple
-- Tamanho customizável: \`.form-control-sm\`, \`.form-control-lg\`
-- Suporta drag & drop (via JS)
+\`\`\`js
+// forms-file-upload.js
+const previewTemplate = \`<div class="dz-preview dz-file-preview">
+  <div class="dz-details">
+    <div class="dz-thumbnail">
+      <img data-dz-thumbnail>
+      <span class="dz-nopreview">No preview</span>
+      <div class="dz-success-mark"></div>
+      <div class="dz-error-mark"></div>
+      <div class="dz-error-message"><span data-dz-errormessage></span></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-primary" role="progressbar"
+          aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+      </div>
+    </div>
+    <div class="dz-filename" data-dz-name></div>
+    <div class="dz-size" data-dz-size></div>
+  </div>
+</div>\`;
 
-## Acessibilidade
-- Label descritivo obrigatório
-- Tipo MIME via \`accept\`
-- Estado disabled
-- Mensagens de erro associadas
+// Basic (1 arquivo, 5MB)
+new Dropzone('#dropzone-basic', {
+  previewTemplate,
+  parallelUploads: 1,
+  maxFilesize: 5,
+  addRemoveLinks: true,
+  maxFiles: 1
+});
+
+// Multiple (vários arquivos, 5MB cada)
+new Dropzone('#dropzone-multi', {
+  previewTemplate,
+  parallelUploads: 1,
+  maxFilesize: 5,
+  addRemoveLinks: true
+});
+\`\`\`
+
+## Props / Configuração
+
+| Opção | Basic | Multiple | Descrição |
+|-------|-------|----------|-----------|
+| \`maxFiles\` | 1 | ilimitado | Número máximo de arquivos |
+| \`maxFilesize\` | 5 | 5 | Tamanho máximo em MB |
+| \`addRemoveLinks\` | true | true | Exibe link para remover arquivo |
+| \`parallelUploads\` | 1 | 1 | Uploads simultâneos |
+| \`previewTemplate\` | custom | custom | Template com thumbnail + progress bar |
         `
       }
-    }
-  },
-  argTypes: {
-    size: {
-      control: { type: 'select' },
-      options: ['default', 'sm', 'lg'],
-      description: 'Tamanho do input',
-      table: { defaultValue: { summary: 'default' } }
-    },
-    multiple: {
-      control: 'boolean',
-      description: 'Permite múltiplos arquivos',
-      table: { defaultValue: { summary: false } }
-    },
-    accept: {
-      control: 'text',
-      description: 'Tipos de arquivo aceitos',
-      table: { defaultValue: { summary: '' } }
-    },
-    disabled: {
-      control: 'boolean',
-      description: 'Estado desabilitado',
-      table: { defaultValue: { summary: false } }
     }
   }
 };
 
-const createFileUpload = ({ 
-  size = 'default', 
-  multiple = false, 
-  accept = '', 
-  disabled = false 
-}) => {
-  const sizeClass = size === 'sm' ? 'form-control-sm' : size === 'lg' ? 'form-control-lg' : '';
-  const multipleAttr = multiple ? 'multiple' : '';
-  const acceptAttr = accept ? `accept="${accept}"` : '';
-  const disabledAttr = disabled ? 'disabled' : '';
-  
-  return `<input type="file" class="form-control ${sizeClass}" ${multipleAttr} ${acceptAttr} ${disabledAttr}>`;
-};
-
-const Template = (args) => {
-  const markup = createFileUpload(args);
-  
-  return `
-    <div style="max-width: 500px;">
-      <label for="fileInput" class="form-label">Choose file</label>
-      ${markup}
-      <div class="form-text">Maximum file size: 5MB</div>
-    </div>
-    
-    <hr class="my-5" />
-    
-    <details>
-      <summary><strong>Code Snippets</strong></summary>
-      <div class="mt-3">
-        <h6>HTML</h6>
-        <pre><code>${formatHtmlSnippet(markup).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-        <h6>React</h6>
-        <pre><code>${formatReactSnippet(markup, 'FileUpload').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
-      </div>
-    </details>
-  `;
-};
-
-export const Overview = () => `
-  <div class="row g-4">
-    <div class="col-md-6">
-      <h5>Default</h5>
-      <label class="form-label">Upload document</label>
-      ${createFileUpload({})}
-      <div class="form-text">Supported formats: PDF, DOC, DOCX</div>
-    </div>
-    
-    <div class="col-md-6">
-      <h5>Image Upload</h5>
-      <label class="form-label">Upload avatar</label>
-      ${createFileUpload({ accept: 'image/*' })}
-      <div class="form-text">PNG, JPG, GIF up to 2MB</div>
-    </div>
-    
-    <div class="col-md-6">
-      <h5>Multiple Files</h5>
-      <label class="form-label">Upload attachments</label>
-      ${createFileUpload({ multiple: true })}
-      <div class="form-text">You can select multiple files</div>
-    </div>
-    
-    <div class="col-md-6">
-      <h5>Small Size</h5>
-      <label class="form-label">Quick upload</label>
-      ${createFileUpload({ size: 'sm' })}
-    </div>
-    
-    <div class="col-md-6">
-      <h5>Large Size</h5>
-      <label class="form-label">Upload file</label>
-      ${createFileUpload({ size: 'lg' })}
-    </div>
-    
-    <div class="col-md-6">
-      <h5>Disabled</h5>
-      <label class="form-label">Upload locked</label>
-      ${createFileUpload({ disabled: true })}
-    </div>
-    
-    <div class="col-12 mt-5">
-      <h5>With Preview Card</h5>
-      <div class="card">
-        <div class="card-body">
-          <div class="mb-3">
-            <label class="form-label">Profile Picture</label>
-            ${createFileUpload({ accept: 'image/*' })}
-            <div class="form-text">Upload JPG, PNG or GIF (max 5MB)</div>
+// ─── Basic Dropzone (produção: #dropzone-basic) ────────────────────────────
+export const Basic = {
+  name: 'Basic (1 arquivo)',
+  render: () => `
+    <div class="card">
+      <div class="card-header"><h5 class="card-title mb-0">Upload de Arquivo (básico)</h5></div>
+      <div class="card-body">
+        <p class="text-muted small mb-3">Máximo: 1 arquivo · 5MB</p>
+        <form id="dropzone-basic-story" class="dropzone needsclick" action="/upload">
+          <div class="dz-message needsclick">
+            <span class="note needsclick">
+              <span class="d-block fw-semibold mb-1">Arraste arquivos aqui ou clique para selecionar</span>
+              <span class="text-muted small">Máximo 5MB por arquivo</span>
+            </span>
           </div>
-          <div class="d-flex align-items-center gap-3 p-3 border rounded">
-            <div class="avatar avatar-lg bg-label-secondary">
-              <i class="bx bx-image fs-3"></i>
-            </div>
-            <div>
-              <p class="mb-0 fw-medium">No file selected</p>
-              <small class="text-muted">Click "Choose file" to upload</small>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-    
-    <div class="col-12 mt-4">
-      <h5>Drag & Drop Zone (Markup Example)</h5>
-      <div class="card border-dashed" style="border: 2px dashed #d9dee3;">
-        <div class="card-body text-center py-5">
-          <div class="mb-3">
-            <i class="bx bx-cloud-upload display-4 text-muted"></i>
-          </div>
-          <h5 class="mb-2">Drop files here or click to upload</h5>
-          <p class="text-muted mb-4">Maximum file size: 10MB</p>
-          ${createFileUpload({ multiple: true })}
-        </div>
-      </div>
-      <small class="text-muted">Note: Drag & drop functionality requires JavaScript implementation</small>
-    </div>
+  `,
+  play: async ({ canvasElement }) => {
+    await new Promise(r => setTimeout(r, 100));
+    if (window.Dropzone) {
+      window.Dropzone.autoDiscover = false;
+      initDropzone('dropzone-basic-story', { maxFiles: 1, maxFilesize: 5 });
+    }
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<!-- HTML -->
+<form id="dropzone-basic" class="dropzone needsclick" action="/upload">
+  <div class="dz-message needsclick">
+    Arraste arquivos aqui ou clique para selecionar
   </div>
-`;
+</form>
 
-export const Default = Template.bind({});
-Default.args = {
-  size: 'default',
-  multiple: false,
-  accept: '',
-  disabled: false
+<!-- JS (forms-file-upload.js) -->
+<script>
+new Dropzone('#dropzone-basic', {
+  previewTemplate: previewTemplate,
+  parallelUploads: 1,
+  maxFilesize: 5,
+  addRemoveLinks: true,
+  maxFiles: 1
+});
+</script>`
+      },
+      description: { story: 'Upload básico com 1 arquivo e 5MB máximo — configuração exata da produção.' }
+    }
+  }
 };
 
-export const ImageOnly = Template.bind({});
-ImageOnly.args = {
-  ...Default.args,
-  accept: 'image/*'
+// ─── Multiple Dropzone (produção: #dropzone-multi) ─────────────────────────
+export const Multiple = {
+  name: 'Multiple (vários arquivos)',
+  render: () => `
+    <div class="card">
+      <div class="card-header"><h5 class="card-title mb-0">Upload Múltiplo</h5></div>
+      <div class="card-body">
+        <p class="text-muted small mb-3">Múltiplos arquivos · 5MB cada</p>
+        <form id="dropzone-multi-story" class="dropzone needsclick" action="/upload">
+          <div class="dz-message needsclick">
+            <span class="note needsclick">
+              <span class="d-block fw-semibold mb-1">Arraste arquivos aqui ou clique para selecionar</span>
+              <span class="text-muted small">Máximo 5MB por arquivo · Sem limite de quantidade</span>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  `,
+  play: async ({ canvasElement }) => {
+    await new Promise(r => setTimeout(r, 100));
+    if (window.Dropzone) {
+      window.Dropzone.autoDiscover = false;
+      initDropzone('dropzone-multi-story', { maxFilesize: 5 });
+    }
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<!-- HTML -->
+<form id="dropzone-multi" class="dropzone needsclick" action="/upload">
+  <div class="dz-message needsclick">
+    Arraste arquivos aqui ou clique para selecionar
+  </div>
+</form>
+
+<!-- JS (forms-file-upload.js) -->
+<script>
+new Dropzone('#dropzone-multi', {
+  previewTemplate: previewTemplate,
+  parallelUploads: 1,
+  maxFilesize: 5,
+  addRemoveLinks: true
+});
+</script>`
+      },
+      description: { story: 'Upload múltiplo sem limite de arquivos, 5MB cada — configuração exata da produção.' }
+    }
+  }
 };
 
-export const Multiple = Template.bind({});
-Multiple.args = {
-  ...Default.args,
-  multiple: true
-};
-
-export const SmallSize = Template.bind({});
-SmallSize.args = {
-  ...Default.args,
-  size: 'sm'
-};
-
-export const LargeSize = Template.bind({});
-LargeSize.args = {
-  ...Default.args,
-  size: 'lg'
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  ...Default.args,
-  disabled: true
-};
-
-export const Interactive = {
-  render: () => {
-    return `
-      <div class="p-4" style="max-width: 500px;">
-        <h5>Interactive File Upload Demo</h5>
-        <p class="text-muted">Simulate file selection</p>
-        
-        <label class="form-label" for="fileInput">Choose file</label>
-        <input type="file" class="form-control" id="fileInput" accept="image/*">
-        
-        <div class="mt-3 p-3 border rounded" id="preview" style="display:none;">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-2">
-              <i class="bx bx-file fs-4 text-primary"></i>
-              <div>
-                <div class="fw-medium" id="fileName">No file</div>
-                <small class="text-muted" id="fileSize">0 KB</small>
+// ─── Ambos lado a lado (visão geral) ───────────────────────────────────────
+export const Overview = {
+  name: 'Overview (Basic + Multiple)',
+  render: () => `
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header"><h5 class="card-title mb-0">Basic — 1 arquivo</h5></div>
+          <div class="card-body">
+            <form id="dz-overview-basic" class="dropzone needsclick" action="/upload">
+              <div class="dz-message needsclick">
+                <span class="note needsclick">Clique ou arraste (máx 1 arquivo · 5MB)</span>
               </div>
-            </div>
-            <button class="btn btn-sm btn-outline-danger" onclick="clearFile()">
-              <i class="bx bx-x"></i>
-            </button>
+            </form>
           </div>
         </div>
-        
-        <button class="btn btn-primary btn-sm mt-3" onclick="simulateFile()">
-          Simulate File Selection
-        </button>
-        
-        <script>
-          const input = document.getElementById('fileInput');
-          const preview = document.getElementById('preview');
-          const fileName = document.getElementById('fileName');
-          const fileSize = document.getElementById('fileSize');
-          
-          input.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) {
-              const file = e.target.files[0];
-              fileName.textContent = file.name;
-              fileSize.textContent = (file.size / 1024).toFixed(2) + ' KB';
-              preview.style.display = 'block';
-            }
-          });
-          
-          function simulateFile() {
-            fileName.textContent = 'example-image.jpg';
-            fileSize.textContent = '245.67 KB';
-            preview.style.display = 'block';
-          }
-          
-          function clearFile() {
-            input.value = '';
-            preview.style.display = 'none';
-            fileName.textContent = 'No file';
-            fileSize.textContent = '0 KB';
-          }
-        </script>
-        
-        <small class="d-block mt-3 text-muted">Interactive demo via controlled state</small>
       </div>
-    `;
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-header"><h5 class="card-title mb-0">Multiple — vários arquivos</h5></div>
+          <div class="card-body">
+            <form id="dz-overview-multi" class="dropzone needsclick" action="/upload">
+              <div class="dz-message needsclick">
+                <span class="note needsclick">Clique ou arraste (5MB cada)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  play: async () => {
+    await new Promise(r => setTimeout(r, 100));
+    if (window.Dropzone) {
+      window.Dropzone.autoDiscover = false;
+      initDropzone('dz-overview-basic', { maxFiles: 1, maxFilesize: 5 });
+      initDropzone('dz-overview-multi', { maxFilesize: 5 });
+    }
+  },
+  parameters: {
+    docs: {
+      description: { story: 'Os dois modos de Dropzone usados na produção, lado a lado.' }
+    }
   }
 };
